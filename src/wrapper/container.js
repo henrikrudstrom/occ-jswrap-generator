@@ -1,4 +1,7 @@
 const createRegexp = require('./../util.js').createRegexp;
+const DeclarationConfiguration = require('./declaration.js').configuration;
+const DeclarationDefinition = require('./declaration.js').definition;
+const definitions = require('./definitions.js');
 
 function matchDeclByKey(exp) {
   return decl => decl.getKeys().every(k => exp.test(k));
@@ -12,14 +15,14 @@ function not(fn) {
   return decl => !fn(decl);
 }
 
-class WrappedDeclaration {
-  constructor(parent, name) {
-    this.parent = parent;
-    this.name = name;
+class ContainerDefinition extends DeclarationDefinition {
+  constructor(wrapperAPI, parent, def) {
+    super(wrapperAPI, parent, def);
+    this.declarations = def.declarations.map(decl => definitions.create(wrapperAPI, this, decl));
   }
 }
 
-class WrappedContainer extends WrappedDeclaration {
+class ContainerConfiguration extends DeclarationConfiguration {
   constructor(parent, name) {
     super(parent, name);
     this.declarations = [];
@@ -69,5 +72,6 @@ class WrappedContainer extends WrappedDeclaration {
 }
 
 module.exports = {
-  WrappedDeclaration, WrappedContainer
+  configuration: ContainerConfiguration,
+  definition: ContainerDefinition
 };

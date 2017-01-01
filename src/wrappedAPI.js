@@ -1,8 +1,9 @@
 const nativeAPI = require('./nativeAPI');
+const definitions = require('./wrapper/definitions.js');
 
 class WrappedAPI {
   constructor(modules) {
-    this.modules = modules;
+    this.modules = modules.map(mod => definitions.create(this, null, mod));
     this.wrapped = {};
     this.native = {};
     this.types = {};
