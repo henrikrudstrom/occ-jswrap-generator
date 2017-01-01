@@ -17,6 +17,10 @@ class WrappedAPI {
     });
   }
 
+  getWrapper(name){
+    return this.types[name];
+  }
+
   getWrappedType(key) {
     return this.types[this.wrapped[key]];
   }

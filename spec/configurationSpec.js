@@ -53,8 +53,8 @@ describe('Wrapper configuration', () => {
   it('can define many wrapped methods at once', () => {
     configure((mod) => {
       var cls = mod.wrapClass('gp_Pnt', 'Point')
-        .wrapMethods('Set*', util.renameMember);
-      expect(cls.declarations.length).to.equal(6);
+        .wrapMethod('Set*', util.renameMember);
+      expect(cls.declarations.length).to.equal(5);
       expect(cls.getMemberByName('setX').name).to.equal('setX');
     });
   });
@@ -62,21 +62,59 @@ describe('Wrapper configuration', () => {
   it('can override specific methods', () => {
     configure((mod) => {
       var cls = mod.wrapClass('gp_Pnt', 'Point')
-        .wrapMethods('Set*', util.renameMember)
+        .wrapMethod('Set*', util.renameMember)
         .rename('setX', 'specialName');
       expect(cls.getMemberByName('specialName').name).to.equal('specialName');
       expect(cls.getMemberByName('setX')).to.equal(undefined);
-      expect(cls.declarations.length).to.equal(6);
+      expect(cls.declarations.length).to.equal(5);
     });
   });
 
   it('can exclude wrapped methods', () => {
     configure((mod) => {
       var cls = mod.wrapClass('gp_Pnt', 'Point')
-        .wrapMethods('Set*', util.renameMember)
+        .wrapMethod('Set*', util.renameMember)
         .excludeByName('setX');
-      expect(cls.declarations.length).to.equal(5);
+      expect(cls.declarations.length).to.equal(4);
       expect(cls.getMemberByName('setX')).to.equal(undefined);
+    });
+  });
+
+  it('can define overloaded methods', () => {
+    configure((mod) => {
+      var cls = mod.wrapClass('gp_Pln', 'Plane')
+        .wrapMethod('Distance', 'distance');
+      expect(cls.declarations.length).to.equal(1);
+      expect(cls.declarations[0].overloads.length).to.equal(3);
+    });
+  });
+
+  it('can distinguish if a class is derived from Standard_Transient or not', () => {
+    configure((mod) => {
+      var pln = mod.wrapClass('gp_Pln', 'Pln');
+      expect(pln.hasHandle).to.equal(false);
+      var plane = mod.wrapClass('Geom_Plane', 'Plane');
+      expect(plane.hasHandle).to.equal(true);
+    });
+  });
+
+  it('can define wrapped properties', () => {
+    configure((mod) => {
+      var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
+        .wrapProperty('X', 'SetX', 'x');
+      expect(pnt.getMemberByName('x').declType).to.equal('property');
+    });
+  });
+
+  it('can define wrapped properties', () => {
+    configure((mod) => {
+      var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
+        .wrapMethod('*', util.renameMember)
+        .wrapProperty('X', 'SetX', 'x');
+      expect(pnt.declarations.length).to.equal(25);
+      expect(pnt.getMemberByName('x').declType).to.equal('property');
+      expect(pnt.getMemberByName('setX')).to.equal(undefined);
+
     });
   });
 });

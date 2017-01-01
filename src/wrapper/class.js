@@ -6,10 +6,23 @@ const nativeAPI = require('../nativeAPI.js');
 const definitions = require('./definitions.js');
 
 class ClassDefinition extends ContainerDefinition {
-  constructor(wrappedAPI, parent, conf) {
-    super(wrappedAPI, parent, conf);
+  constructor(wrapperAPI, parent, conf) {
+    super(wrapperAPI, parent, conf);
     this.classKey = conf.classKey;
     this.declType = 'class';
+    this.hasHandle = conf.hasHandle;
+    this.qualifiedName = `${this.parent.name}::${this.name}`;
+    this.dotOrArrow = this.hasHandle ? '->' : '.';
+    this.nativeClass = nativeAPI.get(this.classKey);
+  }
+
+  getNativeBaseClass() {
+    if (this.nativeClass.bases.length < 1) return undefined;
+    return this.nativeClass.bases[0].name;
+  }
+
+  getBaseClass() {
+    return this.wrapperAPI.getWrappedType(this.getNativeBaseClass());
   }
 
   getKeys() {
@@ -19,14 +32,24 @@ class ClassDefinition extends ContainerDefinition {
 
 definitions.register('class', ClassDefinition);
 
+function hasHandle(nativeCls) {
+  if (nativeCls === undefined) return false;
+  if (nativeCls.bases === undefined) return false;
+  if (nativeCls.bases.length < 1) return false;
+  if (nativeCls.bases[0].name === 'Standard_Transient') return true;
+  return hasHandle(nativeAPI.get(nativeCls.bases[0].name));
+}
+
 class ClassConfiguration extends ContainerConfiguration {
   constructor(parent, name, key) {
     super(parent, name);
     this.classKey = key;
     this.declType = 'class';
+    this.hasHandle = hasHandle(nativeAPI.get(key));
+
   }
 
-  wrapMethod(key, name) {
+  $wrapMethod(key, name) {
     var newMethod = new MethodConfiguration(this, name, key);
     var existingMember = this.getMemberByName(name);
     if (existingMember !== undefined) {
@@ -37,17 +60,29 @@ class ClassConfiguration extends ContainerConfiguration {
     return this;
   }
 
-  wrapMethods(query, renameFunc) {
+  wrapMethod(query, renameFunc) {
+    var rename = renameFunc;
+    if (typeof (renameFunc) === 'string')
+      rename = name => renameFunc;
+
     query = `${this.classKey}.${query}`;
     var methods = nativeAPI.get(query);
-    this.declarations = this.declarations.concat(
-      methods.map(method => new MethodConfiguration(this, renameFunc(method.name), method.key))
-    );
+    methods.forEach(method => this.$wrapMethod(method.key, rename(method.name)));
     return this;
   }
 
   wrapProperty(getterKey, setterKey, name) {
-    this.declarations.push(new PropertyConfiguration(this, name, getterKey, setterKey));
+    console.log(getterKey, setterKey)
+    var getterQuery = `${this.classKey}.${getterKey}`;
+    var getters = nativeAPI.get(getterQuery);
+    if (getters.length > 1) throw new Error('multiple getters found');
+    var setterQuery = `${this.classKey}.${setterKey}`;
+    var setters = nativeAPI.get(setterQuery);
+    console.log(setterQuery)
+    if (setters.length > 1) throw new Error('multiple setters found');
+    this.excludeByKey(getters[0].key);
+    this.excludeByKey(setters[0].key);
+    this.declarations.push(new PropertyConfiguration(this, name, getters[0].key, setters[0].key));
     return this;
   }
 

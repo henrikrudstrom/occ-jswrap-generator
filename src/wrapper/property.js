@@ -1,6 +1,7 @@
 const DeclarationConfiguration = require('./declaration.js').configuration;
 const DeclarationDefinition = require('./declaration.js').definition;
 const definitions = require('./definitions.js');
+const nativeAPI = require('../nativeAPI');
 
 class PropertyDefinition extends DeclarationDefinition {
   constructor(wrapperAPI, parent, conf) {
@@ -8,6 +9,14 @@ class PropertyDefinition extends DeclarationDefinition {
     this.getterKey = conf.getterKey;
     this.setterKey = conf.setterKey;
     this.declType = conf.declType;
+    this.nativeGetter = nativeAPI.get(this.getterKey);
+    this.nativeSetter = nativeAPI.get(this.setterKey);
+    this.cppGetterName = this.nativeGetter.name;
+    this.cppSetterName = this.nativeSetter.name;
+  }
+
+  getType() {
+    return nativeAPI.get(this.getterKey).returnType;
   }
 
   getKeys() {
@@ -15,7 +24,7 @@ class PropertyDefinition extends DeclarationDefinition {
   }
 }
 
-definitions.register('class', PropertyDefinition);
+definitions.register('property', PropertyDefinition);
 
 class PropertyConfiguration extends DeclarationConfiguration {
   constructor(parent, name, getterKey, setterKey) {
