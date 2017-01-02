@@ -1,5 +1,8 @@
-var expect = require('chai').expect;
+const chai = require('chai');
 const configure = require('../src/configure.js');
+
+const expect = chai.expect;
+chai.use(require('chai-things'));
 
 describe('Wrapper configuration', () => {
   it('can define specific classes to be wrapped', () => {

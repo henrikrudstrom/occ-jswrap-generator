@@ -1,6 +1,9 @@
-var expect = require('chai').expect;
+const chai = require('chai');
 const configure = require('../src/configure.js');
 const util = require('../src/util.js');
+
+const expect = chai.expect;
+chai.use(require('chai-things'));
 
 describe('Wrapper configuration', () => {
   it('can define specific classes to be wrapped', () => {
@@ -121,9 +124,39 @@ describe('Wrapper configuration', () => {
       var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
         .wrapMethod('*', util.renameMember)
         .wrapProperty('X', 'SetX', 'x');
+
       expect(pnt.declarations.length).to.equal(24);
       expect(pnt.getMemberByName('x').declType).to.equal('property');
       expect(pnt.getMemberByName('setX')).to.equal(undefined);
+    });
+  });
+
+  it('can wrap specific constructors', () => {
+    configure((mod) => {
+      var point = mod.wrapClass('Geom_CartesianPoint', 'Point')
+        .wrapConstructor('gp_Pnt');
+      var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
+        .wrapConstructor('Standard_Real, Standard_Real, Standard_Real')
+        .wrapConstructor('');
+
+      var pointCtor = point.getMemberByName('Point');
+      expect(pointCtor.declType).to.equal('constructor');
+      expect(pointCtor.overloads.length).to.equal(1);
+
+      var pntCtor = pnt.getMemberByName('Pnt');
+      expect(pntCtor.declType).to.equal('constructor');
+      expect(pntCtor.overloads.length).to.equal(2);
+    });
+  });
+
+  it('can wrap all constructors of a class and exclude copy-constructors', () => {
+    configure((mod) => {
+      var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
+        .wrapConstructor('*');
+
+      var pntCtor = pnt.getMemberByName('Pnt');
+      expect(pntCtor.declType).to.equal('constructor');
+      expect(pntCtor.overloads.length).to.equal(3);
     });
   });
 });

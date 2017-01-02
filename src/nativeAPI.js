@@ -28,10 +28,10 @@ function load() {
   loaded = true;
 }
 
-function get(key) {
+function find(key, declType) {
   var result = lookup[key];
   if (result !== undefined)
-    return result;
+    return [result];
   var res = [];
   var exp = createRegexp(key);
   for (var k in lookup) {
@@ -39,11 +39,22 @@ function get(key) {
       if (exp.test(k) || exp.test(k.split('(')[0]))
         res.push(lookup[k]);
   }
-  if (res.length > 0)
-    return res;
-  return undefined;
+  if (res.length === 0)
+    return undefined;
+
+  if (declType)
+    return res.filter(decl => decl.declType === declType);
+
+  return res;
+}
+
+function get(key, declType) {
+  var result = find(key, declType);
+  if (result === undefined) return result;
+  if (result.length > 1) throw new Error('Excepted one result, got multiple');
+  return result[0];
 }
 
 load();
 
-module.exports = { get };
+module.exports = { get, find };

@@ -148,7 +148,7 @@ def w_member_function(cd, parent):
         name=clean_name(cd.name),
         key=parent.name + '::' + cd.name + "(" + ", ".join([a['type'] for a in args]) + ")",
         parent=parent.name,
-        declType="memfun",
+        declType="method",
         arguments=args,
         returnType=str(cd.return_type) if cd.return_type else ""
 

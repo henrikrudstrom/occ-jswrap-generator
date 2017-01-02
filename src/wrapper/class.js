@@ -1,11 +1,11 @@
-const ContainerConfiguration = require('./container.js').configuration;
-const ContainerDefinition = require('./container.js').definition;
-const MethodConfiguration = require('./method.js').configuration;
-const PropertyConfiguration = require('./property.js').configuration;
+const Container = require('./container.js');
+const Method = require('./method.js');
+const Property = require('./property.js');
+const Constructor = require('./constructor.js');
 const nativeAPI = require('../nativeAPI.js');
 const definitions = require('./definitions.js');
 
-class ClassDefinition extends ContainerDefinition {
+class ClassDefinition extends Container.Definition {
   constructor(wrapperAPI, parent, conf) {
     super(wrapperAPI, parent, conf);
     this.classKey = conf.classKey;
@@ -50,7 +50,7 @@ function hasHandle(nativeCls) {
   return hasHandle(nativeAPI.get(nativeCls.bases[0].name));
 }
 
-class ClassConfiguration extends ContainerConfiguration {
+class ClassConfiguration extends Container.Configuration {
   constructor(name, key) {
     super(name);
     this.classKey = key;
@@ -58,14 +58,12 @@ class ClassConfiguration extends ContainerConfiguration {
     this.hasHandle = hasHandle(nativeAPI.get(key));
   }
 
-  $wrapMethod(key, name) {
-    if (name === undefined) throw new Error('wrapper name cannot be undefined');
-    var newMethod = new MethodConfiguration(name, key);
-    var existingMember = this.getMemberByName(name);
+  $wrapMethod(methodConf) {
+    var existingMember = this.getMemberByName(methodConf.name);
     if (existingMember !== undefined) {
-      existingMember.overload(key);
+      existingMember.overload(methodConf);
     } else
-      this.declarations.push(newMethod);
+      this.declarations.push(methodConf);
 
     return this;
   }
@@ -76,8 +74,9 @@ class ClassConfiguration extends ContainerConfiguration {
       rename = () => renameFunc;
 
     query = `${this.classKey}::${query}`;
-    var methods = nativeAPI.get(query);
-    methods.forEach(method => this.$wrapMethod(method.key, rename(method.name)));
+    var methods = nativeAPI.find(query, 'method');
+    methods.forEach(method =>
+      this.$wrapMethod(new Method.Configuration(rename(method.name), method.key)));
     return this;
   }
 
@@ -89,20 +88,29 @@ class ClassConfiguration extends ContainerConfiguration {
     }
 
     var getterQuery = `${this.classKey}::${getterKey}`;
-    var getters = nativeAPI.get(getterQuery);
+    var getters = nativeAPI.find(getterQuery, 'method');
     if (getters.length > 1) throw new Error('multiple getters found');
     getterKey = getters[0].key;
     this.excludeByKey(getterKey);
 
     if (setterKey !== undefined) {
       var setterQuery = `${this.classKey}::${setterKey}`;
-      var setters = nativeAPI.get(setterQuery);
+      var setters = nativeAPI.find(setterQuery, 'method');
       if (setters.length > 1) throw new Error('multiple setters found');
       setterKey = setters[0].key;
       this.excludeByKey(setters[0].key);
     }
 
-    this.declarations.push(new PropertyConfiguration(name, getterKey, setterKey));
+    this.declarations.push(new Property.Configuration(name, getterKey, setterKey));
+    return this;
+  }
+
+  wrapConstructor(signature) {
+    var ctorQuery = `${this.classKey}::${this.classKey}(${signature})`;
+    var ctors = nativeAPI.find(ctorQuery, 'constructor')
+      .filter(ctor => ctor.copyConstructor !== true);
+    ctors.forEach(method =>
+      this.$wrapMethod(new Constructor.Configuration(this.name, method.key)));
     return this;
   }
 
@@ -112,6 +120,6 @@ class ClassConfiguration extends ContainerConfiguration {
 }
 
 module.exports = {
-  configuration: ClassConfiguration,
-  definition: ClassDefinition
+  Configuration: ClassConfiguration,
+  Definition: ClassDefinition
 };

@@ -1,4 +1,4 @@
-const ModuleConfiguration = require('./wrapper/module.js').configuration;
+const Module = require('./wrapper/module.js');
 const WrappedAPI = require('./wrappedAPI.js');
 const settings = require('./settings.js');
 const path = require('path');
@@ -19,7 +19,7 @@ function configure(configurations) {
     configurations = getConfigurations();
   if (!Array.isArray(configurations)) configurations = [configurations];
   var modules = configurations.map((fn) => {
-    var mod = new ModuleConfiguration();
+    var mod = new Module.Configuration();
     fn(mod);
     return mod;
   });

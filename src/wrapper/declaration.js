@@ -9,11 +9,12 @@ class DeclarationDefinition {
 
 class DeclarationConfiguration {
   constructor(name) {
+    if (name === undefined) throw new Error('Declaration name cannot be undefined');
     this.name = name;
   }
 }
 
 module.exports = {
-  configuration: DeclarationConfiguration,
-  definition: DeclarationDefinition
+  Configuration: DeclarationConfiguration,
+  Definition: DeclarationDefinition
 };

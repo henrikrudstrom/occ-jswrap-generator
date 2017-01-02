@@ -1,9 +1,8 @@
-const DeclarationConfiguration = require('./declaration.js').configuration;
-const DeclarationDefinition = require('./declaration.js').definition;
+const Declaration = require('./declaration.js');
 const definitions = require('./definitions.js');
 const nativeAPI = require('../nativeAPI');
 
-class PropertyDefinition extends DeclarationDefinition {
+class PropertyDefinition extends Declaration.Definition {
   constructor(wrapperAPI, parent, conf) {
     super(wrapperAPI, parent, conf);
     this.getterKey = conf.getterKey;
@@ -40,7 +39,7 @@ class PropertyDefinition extends DeclarationDefinition {
 
 definitions.register('property', PropertyDefinition);
 
-class PropertyConfiguration extends DeclarationConfiguration {
+class PropertyConfiguration extends Declaration.Configuration {
   constructor(name, getterKey, setterKey) {
     super(name);
     this.getterKey = getterKey;
@@ -55,6 +54,6 @@ class PropertyConfiguration extends DeclarationConfiguration {
 }
 
 module.exports = {
-  configuration: PropertyConfiguration,
-  definition: PropertyDefinition
+  Configuration: PropertyConfiguration,
+  Definition: PropertyDefinition
 };

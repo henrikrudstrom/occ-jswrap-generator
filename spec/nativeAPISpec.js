@@ -1,5 +1,9 @@
-var expect = require('chai').expect;
+const chai = require('chai');
 const nativeAPI = require('../src/nativeAPI.js');
+
+const expect = chai.expect;
+chai.use(require('chai-things'));
+
 
 describe('nativeAPI', () => {
   it('can retrieve a specific class declaration', () => {
@@ -11,10 +15,15 @@ describe('nativeAPI', () => {
   });
 
   it('can retrieve several overloaded member declarations', () => {
-    expect(nativeAPI.get('gp_Mat::gp_Mat').length).to.equal(4);
+    expect(nativeAPI.find('gp_Mat::gp_Mat').length).to.equal(4);
   });
 
   it('can query class declarations by name', () => {
-    expect(nativeAPI.get('gp_*').length).to.equal(41);
+    expect(nativeAPI.find('gp_*').length).to.equal(41);
+  });
+
+  it('can query class declarations by decl type', () => {
+    var declTypes = nativeAPI.find('gp_Pnt::*', 'method').map(decl => decl.declType);
+    expect(declTypes).all.to.equal('method');
   });
 });

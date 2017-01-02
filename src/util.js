@@ -14,7 +14,7 @@ var replaceAll = function(target, search, replacement) {
 module.exports.createRegexp = function createRegexp(exp) {
   exp = exp.replace('(', '\\(');
   exp = exp.replace(')', '\\)');
-  
-  exp = replaceAll(exp, '*', '[a-zA-Z0-9]*');
+
+  exp = replaceAll(exp, '*', '[a-zA-Z0-9,_ ]*');
   return new RegExp('^' + exp + '$');
 };

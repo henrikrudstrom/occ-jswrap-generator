@@ -1,10 +1,10 @@
-const ContainerConfiguration = require('./container.js').configuration;
-const ContainerDefinition = require('./container.js').definition;
-const ClassConfiguration = require('./class.js').configuration;
+const Container = require('./container.js');
+const Class = require('./class.js');
+
 const nativeAPI = require('../nativeAPI.js');
 const definitions = require('./definitions.js');
 
-class ModuleDefinition extends ContainerDefinition {
+class ModuleDefinition extends Container.Definition {
   constructor(wrapperAPI, parent, conf) {
     super(wrapperAPI, parent, conf);
     this.declType = conf.declType;
@@ -13,7 +13,7 @@ class ModuleDefinition extends ContainerDefinition {
 
 definitions.register('module', ModuleDefinition);
 
-class ModuleConfiguration extends ContainerConfiguration {
+class ModuleConfiguration extends Container.Configuration {
   constructor() {
     super('unnamed-module');
     this.declType = 'module';
@@ -24,18 +24,18 @@ class ModuleConfiguration extends ContainerConfiguration {
     if (cls !== undefined) {
       throw new Error(`Class '${clsKey} has already been wrapped'`);
     }
-    cls = new ClassConfiguration(name, clsKey);
+    cls = new Class.Configuration(name, clsKey);
     this.declarations.push(cls);
     return cls;
   }
 
   wrapClasses(query, fn) {
-    var res = nativeAPI.get(query);
+    var res = nativeAPI.find(query);
     res.forEach(decl => this.wrapClass(decl.name, fn(decl.name)));
   }
 }
 
 module.exports = {
-  configuration: ModuleConfiguration,
-  definition: ModuleDefinition
+  Configuration: ModuleConfiguration,
+  Definition: ModuleDefinition
 };
