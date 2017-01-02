@@ -26,14 +26,14 @@ class PropertyDefinition extends Declaration.Definition {
   }
 
   getWrappedDependencies() {
-    var type = this.wrapperAPI.getWrappedType(this.nativeGetter.returnType);
-    if (type === 'double' || type === 'bool' || type === 'int32_t')
+    if (this.wrapperAPI.isBuiltIn(this.nativeGetter.returnType))
       return [];
+    var type = this.wrapperAPI.getWrappedType(this.nativeGetter.returnType);
     return [type];
   }
 
   canBeWrapped() {
-    return this.wrapperAPI.isValidType(this.nativeGetter.returnType);
+    return this.getWrappedDependencies().every(dep => Boolean(dep));
   }
 }
 

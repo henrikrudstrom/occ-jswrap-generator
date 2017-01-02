@@ -1,5 +1,8 @@
 const nativeAPI = require('./nativeAPI');
+const Module = require('./wrapper/module.js');
 const definitions = require('./wrapper/definitions.js');
+
+
 
 class WrappedAPI {
   constructor(moduleConfigurations) {
@@ -16,6 +19,23 @@ class WrappedAPI {
         this.types[cls.name] = cls;
       });
     });
+
+    this.builtins = [
+      { name: 'double', classKey: 'Standard_Real' },
+      { name: 'int', classKey: 'Standard_Integer' },
+      { name: 'bool', classKey: 'Standard_Boolean' }
+    ];
+    this.builtins.forEach((builtin) => {
+      this.wrapped[builtin.classKey] = builtin.name;
+      this.native[builtin.name] = builtin.classKey;
+      this.types[builtin.name] = builtin;
+    });
+  }
+
+  isBuiltIn(type) {
+    if (type.name) type = type.name;
+    return this.builtins.map(b => b.name).indexOf(type) !== -1 ||
+           this.builtins.map(b => b.classKey).indexOf(type) !== -1;
   }
 
   getWrapper(name) {
@@ -23,14 +43,14 @@ class WrappedAPI {
   }
 
   getWrappedType(key) {
-    switch (key) {
-      case 'Standard_Boolean': return 'bool';
-      case 'Standard_Integer': return 'int32_t';
-      case 'Standard_Real': return 'double';
-      default:
-        var typeName = this.wrapped[key];
-        return this.types[typeName];
-    }
+    // switch (key) {
+    //   case 'Standard_Boolean': return 'bool';
+    //   case 'Standard_Integer': return 'int32_t';
+    //   case 'Standard_Real': return 'double';
+    //   default:
+    var typeName = this.wrapped[key];
+    return this.types[typeName];
+    //}
   }
 
   getNativeType(key) {

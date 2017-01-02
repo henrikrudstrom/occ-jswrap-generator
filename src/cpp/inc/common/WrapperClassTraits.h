@@ -12,6 +12,6 @@ struct wrapped_type;
 // template<> struct wrapped_type<Pnt>{
 //     typedef gp_Pnt;
 // };
-#define CREATE_WRAPPER_TRAITS(TYPE, WRAPPER_TYPE) \
-template<> struct wrapper_for_type<TYPE> { typedef WRAPPER_TYPE type; }; \
-template<> struct wrapped_type<WRAPPER_TYPE> { typedef TYPE type; }; 
+// #define CREATE_WRAPPER_TRAITS(TYPE, WRAPPER_TYPE) \
+// template<> struct wrapper_for_type<TYPE> { typedef WRAPPER_TYPE type; }; \
+// template<> struct wrapped_type<WRAPPER_TYPE> { typedef TYPE type; };

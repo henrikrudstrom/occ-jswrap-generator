@@ -47,7 +47,6 @@ describe('Wrapper definition', () => {
     var pointClass = wrapperAPI.getWrapper('CartesianPoint');
     var propX = pointClass.getMemberByName('x');
     var propPnt = pointClass.getMemberByName('pnt');
-
     expect(propX.canBeWrapped()).to.equal(true);
     expect(propPnt.canBeWrapped()).to.equal(false);
   });
@@ -68,5 +67,6 @@ describe('Wrapper definition', () => {
     expect(deps).to.include('Pnt');
     expect(deps).to.include('Point');
     expect(deps).to.include('Trsf');
+    expect(deps).not.to.include('double');
   });
 });

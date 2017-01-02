@@ -18,9 +18,11 @@ class MethodOverloadDefinition {
       this.wrappedDependenciesCache = this.nativeMethod.arguments
         .map(arg => arg.type)
         .concat(this.nativeMethod.returnType === '' ? [this.nativeMethod.returnType] : [])
-        .map(type => this.wrapperAPI.getWrappedType(type))
-        .filter(t => t !== 'double' && t !== 'bool' && t !== 'int32_t');
+        .filter(type => !this.wrapperAPI.isBuiltIn(type))
+        .map(type => this.wrapperAPI.getWrappedType(type));
     }
+    //console.log('overload');
+    //console.log(this.wrappedDependenciesCache.map(dep => dep ? dep.name : dep))
     return this.wrappedDependenciesCache;
   }
 

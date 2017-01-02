@@ -4,18 +4,19 @@ function renderClassHeader(wrapperAPI, cls) {
   var base = cls.getBaseClass();
 
   var wrappedType = cls.hasHandle ? `opencascade::handle<${cls.classKey}>` : cls.classKey;
-
   var includes = cls.getWrappedDependencies()
     .map(dep => `#include <${dep.parent.name}/${dep.name}.h>`)
     .join('\n');
 
   var methodDeclarations = cls.declarations
     .filter(decl => decl.declType === 'method')
+    .filter(decl => decl.canBeWrapped())
     .map(decl => `static NAN_METHOD(${decl.cppName});`)
     .join('\n    ');
 
   var propertyGetters = cls.declarations
     .filter(decl => decl.declType === 'property')
+    .filter(decl => decl.canBeWrapped())
     .map(decl => `static NAN_GETTER(${decl.cppGetterName});`)
     .join('\n    ');
 
@@ -62,13 +63,15 @@ namespace ${cls.parent.name} {
 
     ${propertySetters}
 
+    ${methodDeclarations}
 
   };
 
 
 }
 
-CREATE_WRAPPER_TRAITS(${cls.classKey}, ${cls.parent.name}::${cls.name})
+template<> struct wrapper_for_type<${cls.classKey}> { typedef ${cls.parent.name}::${cls.name} type; };
+template<> struct wrapped_type<${cls.parent.name}::${cls.name}> { typedef ${cls.classKey} type; };
 
 #endif //${cls.name.toUpperCase()}_H`;
 }

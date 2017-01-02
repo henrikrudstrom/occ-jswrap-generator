@@ -6,7 +6,10 @@ module.exports = function(mod) {
     .wrapMethod('*', camelCase)
     .wrapProperty('X', 'SetX', 'x')
     .wrapProperty('Y', 'SetY', 'y')
-    .wrapProperty('Z', 'SetZ', 'z');
+    .wrapProperty('Z', 'SetZ', 'z')
+    .excludeByName('coord')
+    .excludeByName('Xyz')
+    .excludeByName('changeCoord');
   mod.wrapClass('Geom_Geometry', 'Geometry');
   mod.wrapClass('Geom_Point', 'Point');
   mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint')

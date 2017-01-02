@@ -125,7 +125,7 @@ describe('Wrapper configuration', () => {
         .wrapMethod('*', util.renameMember)
         .wrapProperty('X', 'SetX', 'x');
 
-      expect(pnt.declarations.length).to.equal(24);
+      expect(pnt.declarations.length).to.equal(22);
       expect(pnt.getMemberByName('x').declType).to.equal('property');
       expect(pnt.getMemberByName('setX')).to.equal(undefined);
     });

@@ -6,6 +6,14 @@ const createRegexp = require('./util.js').createRegexp;
 var modules = [];
 var lookup = {};
 var loaded = false;
+
+function ignoreReferenceTypesForNow(decl) {
+  if (decl.returnType && decl.returnType.indexOf('&') !== -1){
+    return false;
+  }
+  return true;
+}
+
 function load() {
   if (loaded) return;
 
@@ -18,7 +26,7 @@ function load() {
       if (decl.key)
         lookup[decl.key] = decl;
       if (!decl.declarations) return;
-      decl.declarations.forEach((mem) => {
+      decl.declarations.filter(ignoreReferenceTypesForNow).forEach((mem) => {
         if (mem.key)
           lookup[mem.key] = mem;
       });

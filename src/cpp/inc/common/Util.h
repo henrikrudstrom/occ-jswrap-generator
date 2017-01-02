@@ -11,7 +11,7 @@ using namespace std;
 
 namespace Util {
 template<class T>
-static T* CheckedUnWrap(v8::Handle<v8::Value> value){
+T* CheckedUnWrap(v8::Handle<v8::Value> value){
         if(!value->IsObject()) {
                 Nan::ThrowError("Argument is not an object");
                 return NULL;
@@ -47,56 +47,31 @@ static T* CheckedUnWrap(v8::Handle<v8::Value> value){
         }
         return Nan::ObjectWrap::Unwrap<T>(handle);
 }
-
-
+//
+//
 // template<typename T>
 // static bool ConvertNativeValue(v8::Handle<v8::Value> value, T & result);
-//
-// template <>
-// static bool ConvertNativeValue<double>(v8::Handle<v8::Value> value, double & result){
-//         if(!value->IsNumber()) {
-//                 Nan::ThrowError("Argument is not a double.");
-//                 return false;
-//         }
-//
-//         auto maybe = Nan::To<double>(value);
-//         if(!maybe.IsJust()){
-//                 Nan::ThrowError("Argument double is not Just.");
-//                 return false;
-//         }
-//         result = Nan::To<double>(value).FromJust();
-//         return true;
-// }
-//
-// template <>
-// static bool ConvertNativeValue<int>(v8::Handle<v8::Value> value, int & result){
-//         if(!value->IsNumber()) {
-//                 Nan::ThrowError("Argument is not a double.");
-//                 return false;
-//         }
-//
-//         auto maybe = Nan::To<double>(value);
-//         if(!maybe.IsJust()){
-//                 Nan::ThrowError("Argument double is not Just.");
-//                 return false;
-//         }
-//         result = Nan::To<int32_t>(value).FromJust();
-//         return true;
-// }
+
 
 template<class T>
-static bool ConvertWrappedValue(v8::Handle<v8::Value> value, T & result){
+bool ConvertWrappedValue(v8::Handle<v8::Value> value, T & result){
         auto wrapper = Util::CheckedUnWrap<typename wrapper_for_type<T>::type>(value);
         if(wrapper == NULL) return false;
-        result = wrapper->wrapObj;
+        result = wrapper->wrappedObject;
         return true;
 }
+template<>
+bool ConvertWrappedValue<double>(v8::Handle<v8::Value> value, double & result);
+template<>
+bool ConvertWrappedValue<int>(v8::Handle<v8::Value> value, int & result);
+
+
 
 template<class T>
-static bool ConvertWrappedTransientValue(v8::Handle<v8::Value> value, opencascade::handle<T> &result){
+bool ConvertWrappedTransientValue(v8::Handle<v8::Value> value, opencascade::handle<T> &result){
         auto wrapper = Util::CheckedUnWrap<typename wrapper_for_type<T>::type>(value);
         if(wrapper == NULL) return false;
-        result = opencascade::handle<T>::DownCast(wrapper->wrapObj);
+        result = opencascade::handle<T>::DownCast(wrapper->wrappedObject);
         return true;
 }
 }

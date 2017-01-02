@@ -14,8 +14,8 @@ class ModuleDefinition extends Container.Definition {
 definitions.register('module', ModuleDefinition);
 
 class ModuleConfiguration extends Container.Configuration {
-  constructor() {
-    super('unnamed-module');
+  constructor(name) {
+    super(name || 'unnamed-module');
     this.declType = 'module';
   }
 
