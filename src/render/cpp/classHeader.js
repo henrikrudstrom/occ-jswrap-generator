@@ -4,8 +4,6 @@ function renderClassHeader(wrapperAPI, cls) {
   var base = cls.getBaseClass();
 
   var wrappedType = cls.hasHandle ? `opencascade::handle<${cls.classKey}>` : cls.classKey;
-  console.log("DEPS")
-  console.log(cls.getWrappedDependencies())
 
   var includes = cls.getWrappedDependencies()
     .map(dep => `#include <${dep.parent.name}/${dep.name}.h>`)

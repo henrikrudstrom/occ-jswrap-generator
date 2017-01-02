@@ -124,7 +124,6 @@ describe('Wrapper configuration', () => {
       expect(pnt.declarations.length).to.equal(24);
       expect(pnt.getMemberByName('x').declType).to.equal('property');
       expect(pnt.getMemberByName('setX')).to.equal(undefined);
-
     });
   });
 });

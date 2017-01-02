@@ -34,7 +34,7 @@ describe('Wrapper definition', () => {
     expect(methodTransform.canBeWrapped()).to.equal(false);
   });
 
-  it('knows if property dependencies are wrapped', () => {
+  it('can determine if property dependencies are wrapped', () => {
     var wrapperAPI = configure((mod) => {
       mod.name = 'moduleA';
       mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint')
@@ -47,5 +47,23 @@ describe('Wrapper definition', () => {
 
     expect(propX.canBeWrapped()).to.equal(true);
     expect(propPnt.canBeWrapped()).to.equal(false);
+  });
+
+  it('can determine which wrapper classes needs to be included', () => {
+    var wrapperAPI = configure((mod) => {
+      mod.name = 'moduleA';
+      mod.wrapClass('gp_Pnt', 'Pnt');
+      mod.wrapClass('gp_Trsf', 'Trsf');
+      mod.wrapClass('Geom_Point', 'Point');
+      mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint')
+        .wrapProperty('X', 'SetX', 'x')
+        .wrapProperty('Pnt', 'pnt')
+        .wrapMethod('Transform', 'transform');
+    });
+    var pointClass = wrapperAPI.getWrapper('CartesianPoint');
+    var deps = pointClass.getWrappedDependencies().map(dep => dep.name);
+    expect(deps).to.include('Pnt');
+    expect(deps).to.include('Point');
+    expect(deps).to.include('Trsf');
   });
 });

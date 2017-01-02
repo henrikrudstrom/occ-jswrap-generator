@@ -2,6 +2,7 @@ const render = require('../src/render.js');
 const configure = require('../src/configure.js');
 const settings = require('../src/settings.js');
 const clean = require('gulp-clean');
+
 module.exports = function(gulp) {
   require('../src/parse/parse.js')(gulp);
   require('./generator-tests.js');

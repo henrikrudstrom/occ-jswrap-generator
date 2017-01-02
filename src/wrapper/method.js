@@ -17,10 +17,10 @@ class MethodOverloadDefinition {
   }
 
   getWrappedDependencies() {
-    if (!this.wrappedDependenciesCache){
+    if (!this.wrappedDependenciesCache) {
       this.wrappedDependenciesCache = this.nativeMethod.arguments
         .map(arg => arg.type)
-        .concat([this.nativeMethod.returnType])
+        .concat(this.nativeMethod.returnType === '' ? [this.nativeMethod.returnType] : [])
         .map(type => this.wrapperAPI.getWrappedType(type))
         .filter(t => t !== 'double' && t !== 'bool' && t !== 'int32_t');
     }
@@ -64,8 +64,8 @@ definitions.register('method', MethodDefinition);
 
 
 class MethodConfiguration extends DeclarationConfiguration {
-  constructor(parent, name, methodKey) {
-    super(parent, name);
+  constructor(name, methodKey) {
+    super(name);
     this.overloads = [new MethodOverloadConfiguration(methodKey)];
     this.declType = 'method';
   }

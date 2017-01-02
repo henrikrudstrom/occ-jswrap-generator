@@ -41,8 +41,8 @@ class PropertyDefinition extends DeclarationDefinition {
 definitions.register('property', PropertyDefinition);
 
 class PropertyConfiguration extends DeclarationConfiguration {
-  constructor(parent, name, getterKey, setterKey) {
-    super(parent, name);
+  constructor(name, getterKey, setterKey) {
+    super(name);
     this.getterKey = getterKey;
     this.setterKey = setterKey;
     this.declType = 'property';

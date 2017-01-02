@@ -51,17 +51,16 @@ function hasHandle(nativeCls) {
 }
 
 class ClassConfiguration extends ContainerConfiguration {
-  constructor(parent, name, key) {
-    super(parent, name);
+  constructor(name, key) {
+    super(name);
     this.classKey = key;
     this.declType = 'class';
     this.hasHandle = hasHandle(nativeAPI.get(key));
-
   }
 
   $wrapMethod(key, name) {
     if (name === undefined) throw new Error('wrapper name cannot be undefined');
-    var newMethod = new MethodConfiguration(this, name, key);
+    var newMethod = new MethodConfiguration(name, key);
     var existingMember = this.getMemberByName(name);
     if (existingMember !== undefined) {
       existingMember.overload(key);
@@ -74,7 +73,7 @@ class ClassConfiguration extends ContainerConfiguration {
   wrapMethod(query, renameFunc) {
     var rename = renameFunc;
     if (typeof (renameFunc) === 'string')
-      rename = name => renameFunc;
+      rename = () => renameFunc;
 
     query = `${this.classKey}::${query}`;
     var methods = nativeAPI.get(query);
@@ -103,7 +102,7 @@ class ClassConfiguration extends ContainerConfiguration {
       this.excludeByKey(setters[0].key);
     }
 
-    this.declarations.push(new PropertyConfiguration(this, name, getterKey, setterKey));
+    this.declarations.push(new PropertyConfiguration(name, getterKey, setterKey));
     return this;
   }
 

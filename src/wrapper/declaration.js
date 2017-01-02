@@ -8,8 +8,7 @@ class DeclarationDefinition {
 }
 
 class DeclarationConfiguration {
-  constructor(parent, name) {
-    this.parent = parent;
+  constructor(name) {
     this.name = name;
   }
 }

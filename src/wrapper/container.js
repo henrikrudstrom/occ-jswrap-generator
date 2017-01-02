@@ -35,8 +35,8 @@ class ContainerDefinition extends DeclarationDefinition {
 }
 
 class ContainerConfiguration extends DeclarationConfiguration {
-  constructor(parent, name) {
-    super(parent, name);
+  constructor(name) {
+    super(name);
     this.declarations = [];
   }
 

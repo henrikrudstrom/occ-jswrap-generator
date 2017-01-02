@@ -14,7 +14,7 @@ gulp.task('pre-test', function () {
     .pipe(istanbul.hookRequire());
 });
 
-function getSources(){
+function getSources() {
   var specSources = ['spec/*Spec.js'];
   var arg = yargs.argv.spec;
   if (arg)

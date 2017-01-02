@@ -14,8 +14,8 @@ class ModuleDefinition extends ContainerDefinition {
 definitions.register('module', ModuleDefinition);
 
 class ModuleConfiguration extends ContainerConfiguration {
-  constructor(parent) {
-    super(undefined, 'unnamed-module');
+  constructor() {
+    super('unnamed-module');
     this.declType = 'module';
   }
 
@@ -24,7 +24,7 @@ class ModuleConfiguration extends ContainerConfiguration {
     if (cls !== undefined) {
       throw new Error(`Class '${clsKey} has already been wrapped'`);
     }
-    cls = new ClassConfiguration(this, name, clsKey);
+    cls = new ClassConfiguration(name, clsKey);
     this.declarations.push(cls);
     return cls;
   }
@@ -32,10 +32,6 @@ class ModuleConfiguration extends ContainerConfiguration {
   wrapClasses(query, fn) {
     var res = nativeAPI.get(query);
     res.forEach(decl => this.wrapClass(decl.name, fn(decl.name)));
-  }
-
-  toDefinition(wrapperAPI, parent) {
-    return new ModuleDefinition(wrapperAPI, parent, this);
   }
 }
 
