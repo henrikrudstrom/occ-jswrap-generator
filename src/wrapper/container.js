@@ -20,6 +20,18 @@ class ContainerDefinition extends DeclarationDefinition {
     super(wrapperAPI, parent, def);
     this.declarations = def.declarations.map(decl => definitions.create(wrapperAPI, this, decl));
   }
+
+  getMembersByName(name) {
+    var exp = createRegexp(name);
+    return this.declarations.filter(matchDeclByName(exp));
+  }
+
+  getMemberByName(name) {
+    var res = this.getMembersByName(name);
+    if (res.length > 1) throw new Error(`Found multiple members matching name '${name}' in ${this.name}, found ${res.map(d => d.name)}`);
+    if (res.length === 0) return undefined;
+    return res[0];
+  }
 }
 
 class ContainerConfiguration extends DeclarationConfiguration {

@@ -16,6 +16,20 @@ class MethodOverloadDefinition {
     this.wrapperAPI = wrapperAPI;
   }
 
+  getWrappedDependencies() {
+    if (!this.wrappedDependenciesCache){
+      this.wrappedDependenciesCache = this.nativeMethod.arguments
+        .map(arg => arg.type)
+        .concat([this.nativeMethod.returnType])
+        .map(type => this.wrapperAPI.getWrappedType(type))
+        .filter(t => t !== 'double' && t !== 'bool' && t !== 'int32_t');
+    }
+    return this.wrappedDependenciesCache;
+  }
+
+  canBeWrapped() {
+    return this.getWrappedDependencies().every(dep => Boolean(dep));
+  }
 
 }
 
@@ -27,6 +41,18 @@ class MethodDefinition extends DeclarationDefinition {
     );
     this.declType = conf.declType;
     this.cppName = this.overloads[0].nativeMethod.name;
+  }
+
+  getWrappedDependencies() {
+    return this.overloads
+      .filter(overload => overload.canBeWrapped())
+      .map(overload => overload.getWrappedDependencies())
+      .reduce((a, b) => a.concat(b), [])
+      .filter((t, index, array) => array.indexOf(t) === index);
+  }
+
+  canBeWrapped() {
+    return this.overloads.every(overload => overload.canBeWrapped());
   }
 
   getKeys() {

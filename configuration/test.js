@@ -7,4 +7,10 @@ module.exports = function(mod) {
     .wrapProperty('X', 'SetX', 'x')
     .wrapProperty('Y', 'SetY', 'y')
     .wrapProperty('Z', 'SetZ', 'z');
+  mod.wrapClass('Geom_Geometry', 'Geometry');
+  mod.wrapClass('Geom_Point', 'Point');
+  mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint')
+    .wrapProperty('X', 'SetX', 'x')
+    .wrapProperty('Y', 'SetY', 'y')
+    .wrapProperty('Z', 'SetZ', 'z');
 };

@@ -103,15 +103,25 @@ describe('Wrapper configuration', () => {
       var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
         .wrapProperty('X', 'SetX', 'x');
       expect(pnt.getMemberByName('x').declType).to.equal('property');
+      expect(pnt.getMemberByName('x').readOnly).to.equal(false);
     });
   });
 
-  it('can define wrapped properties', () => {
+  it('can define wrapped read-only properties', () => {
+    configure((mod) => {
+      var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
+        .wrapProperty('X', 'x');
+      expect(pnt.getMemberByName('x').declType).to.equal('property');
+      expect(pnt.getMemberByName('x').readOnly).to.equal(true);
+    });
+  });
+
+  it('removes methods that are accessors to property', () => {
     configure((mod) => {
       var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
         .wrapMethod('*', util.renameMember)
         .wrapProperty('X', 'SetX', 'x');
-      expect(pnt.declarations.length).to.equal(25);
+      expect(pnt.declarations.length).to.equal(24);
       expect(pnt.getMemberByName('x').declType).to.equal('property');
       expect(pnt.getMemberByName('setX')).to.equal(undefined);
 

@@ -14,15 +14,22 @@ gulp.task('pre-test', function () {
     .pipe(istanbul.hookRequire());
 });
 
-
-gulp.task('test', ['pre-test'], function() {
-
+function getSources(){
   var specSources = ['spec/*Spec.js'];
   var arg = yargs.argv.spec;
   if (arg)
     specSources = `spec/${arg}Spec.js`;
-  gulp.src(specSources)
-    .pipe(mocha({reporter: 'spec'}))
+  return specSources;
+}
+
+gulp.task('test', function() {
+  gulp.src(getSources())
+    .pipe(mocha({ reporter: 'spec' }));
+});
+
+gulp.task('test-cover', ['pre-test'], function() {
+  gulp.src(getSources())
+    .pipe(mocha({ reporter: 'spec' }))
     .pipe(istanbul.writeReports());
     // Enforce a coverage of at least 90%
     // .pipe(istanbul.enforceThresholds());

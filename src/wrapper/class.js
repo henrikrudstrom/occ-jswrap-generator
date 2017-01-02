@@ -16,6 +16,16 @@ class ClassDefinition extends ContainerDefinition {
     this.nativeClass = nativeAPI.get(this.classKey);
   }
 
+  getWrappedDependencies() {
+    return this.declarations
+      .filter(decl => decl.canBeWrapped())
+      .map(decl => decl.getWrappedDependencies())
+      .concat(this.getBaseClass() ? [this.getBaseClass()] : [])
+      .reduce((a, b) => a.concat(b), [])
+      .filter((t, index, array) => array.indexOf(t) === index)
+      .filter(t => t.qualifiedName !== this.qualifiedName);
+  }
+
   getNativeBaseClass() {
     if (this.nativeClass.bases.length < 1) return undefined;
     return this.nativeClass.bases[0].name;
@@ -50,6 +60,7 @@ class ClassConfiguration extends ContainerConfiguration {
   }
 
   $wrapMethod(key, name) {
+    if (name === undefined) throw new Error('wrapper name cannot be undefined');
     var newMethod = new MethodConfiguration(this, name, key);
     var existingMember = this.getMemberByName(name);
     if (existingMember !== undefined) {
@@ -65,24 +76,34 @@ class ClassConfiguration extends ContainerConfiguration {
     if (typeof (renameFunc) === 'string')
       rename = name => renameFunc;
 
-    query = `${this.classKey}.${query}`;
+    query = `${this.classKey}::${query}`;
     var methods = nativeAPI.get(query);
     methods.forEach(method => this.$wrapMethod(method.key, rename(method.name)));
     return this;
   }
 
   wrapProperty(getterKey, setterKey, name) {
-    console.log(getterKey, setterKey)
-    var getterQuery = `${this.classKey}.${getterKey}`;
+    if (name === undefined && setterKey === undefined) throw new Error('wrapper name cannot be undefined');
+    if (name === undefined) {
+      name = setterKey;
+      setterKey = undefined;
+    }
+
+    var getterQuery = `${this.classKey}::${getterKey}`;
     var getters = nativeAPI.get(getterQuery);
     if (getters.length > 1) throw new Error('multiple getters found');
-    var setterQuery = `${this.classKey}.${setterKey}`;
-    var setters = nativeAPI.get(setterQuery);
-    console.log(setterQuery)
-    if (setters.length > 1) throw new Error('multiple setters found');
-    this.excludeByKey(getters[0].key);
-    this.excludeByKey(setters[0].key);
-    this.declarations.push(new PropertyConfiguration(this, name, getters[0].key, setters[0].key));
+    getterKey = getters[0].key;
+    this.excludeByKey(getterKey);
+
+    if (setterKey !== undefined) {
+      var setterQuery = `${this.classKey}::${setterKey}`;
+      var setters = nativeAPI.get(setterQuery);
+      if (setters.length > 1) throw new Error('multiple setters found');
+      setterKey = setters[0].key;
+      this.excludeByKey(setters[0].key);
+    }
+
+    this.declarations.push(new PropertyConfiguration(this, name, getterKey, setterKey));
     return this;
   }
 

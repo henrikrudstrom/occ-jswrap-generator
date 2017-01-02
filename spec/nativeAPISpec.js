@@ -7,11 +7,11 @@ describe('nativeAPI', () => {
   });
 
   it('can retrieve a specific member declaration', () => {
-    expect(nativeAPI.get('gp_Pnt.SetX(Standard_Real)').name).to.equal('SetX');
+    expect(nativeAPI.get('gp_Pnt::SetX(Standard_Real)').name).to.equal('SetX');
   });
 
   it('can retrieve several overloaded member declarations', () => {
-    expect(nativeAPI.get('gp_Mat.gp_Mat').length).to.equal(4);
+    expect(nativeAPI.get('gp_Mat::gp_Mat').length).to.equal(4);
   });
 
   it('can query class declarations by name', () => {

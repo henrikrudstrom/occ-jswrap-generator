@@ -9,10 +9,13 @@ class PropertyDefinition extends DeclarationDefinition {
     this.getterKey = conf.getterKey;
     this.setterKey = conf.setterKey;
     this.declType = conf.declType;
+    this.readOnly = conf.readOnly;
     this.nativeGetter = nativeAPI.get(this.getterKey);
-    this.nativeSetter = nativeAPI.get(this.setterKey);
     this.cppGetterName = this.nativeGetter.name;
-    this.cppSetterName = this.nativeSetter.name;
+    if (!this.readOnly) {
+      this.nativeSetter = nativeAPI.get(this.setterKey);
+      this.cppSetterName = this.nativeSetter.name;
+    }
   }
 
   getType() {
@@ -21,6 +24,17 @@ class PropertyDefinition extends DeclarationDefinition {
 
   getKeys() {
     return [this.setterKey, this.getterKey];
+  }
+
+  getWrappedDependencies() {
+    var type = this.wrapperAPI.getWrappedType(this.nativeGetter.returnType);
+    if (type === 'double' || type === 'bool' || type === 'int32_t')
+      return [];
+    return [type];
+  }
+
+  canBeWrapped() {
+    return this.wrapperAPI.isValidType(this.nativeGetter.returnType);
   }
 }
 
@@ -32,6 +46,7 @@ class PropertyConfiguration extends DeclarationConfiguration {
     this.getterKey = getterKey;
     this.setterKey = setterKey;
     this.declType = 'property';
+    this.readOnly = !this.setterKey;
   }
 
   getKeys() {

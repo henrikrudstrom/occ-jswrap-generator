@@ -146,7 +146,7 @@ def w_member_function(cd, parent):
     args = list(iter(cd.arguments, w_arg))
     d = Dict(
         name=clean_name(cd.name),
-        key=parent.name + '.' + cd.name + "(" + ", ".join([a['type'] for a in args]) + ")",
+        key=parent.name + '::' + cd.name + "(" + ", ".join([a['type'] for a in args]) + ")",
         parent=parent.name,
         declType="memfun",
         arguments=args,

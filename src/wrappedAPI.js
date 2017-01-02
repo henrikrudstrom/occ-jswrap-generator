@@ -2,8 +2,9 @@ const nativeAPI = require('./nativeAPI');
 const definitions = require('./wrapper/definitions.js');
 
 class WrappedAPI {
-  constructor(modules) {
-    this.modules = modules.map(mod => definitions.create(this, null, mod));
+  constructor(moduleConfigurations) {
+    this.modules = moduleConfigurations.map(mod => definitions.create(this, null, mod));
+
     this.wrapped = {};
     this.native = {};
     this.types = {};
@@ -17,16 +18,27 @@ class WrappedAPI {
     });
   }
 
-  getWrapper(name){
+  getWrapper(name) {
     return this.types[name];
   }
 
   getWrappedType(key) {
-    return this.types[this.wrapped[key]];
+    switch (key) {
+      case 'Standard_Boolean': return 'bool';
+      case 'Standard_Integer': return 'int32_t';
+      case 'Standard_Real': return 'double';
+      default:
+        var typeName = this.wrapped[key];
+        return this.types[typeName];
+    }
   }
 
   getNativeType(key) {
     return nativeAPI.get(this.native[key]);
+  }
+
+  isValidType(typename) {
+    return Boolean(this.getWrappedType(typename));
   }
 }
 
