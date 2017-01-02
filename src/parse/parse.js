@@ -1,13 +1,12 @@
+const fs = require('fs');
+const path = require('path');
+const mkdirp = require('mkdirp');
+const run = require('gulp-run');
+const gutil = require('gulp-util');
+const settings = require('../settings.js');
+
 module.exports = function(gulp) {
-  const fs = require('fs');
-  const path = require('path');
-  const mkdirp = require('mkdirp');
-  const yargs = require('yargs');
   const runSequence = require('run-sequence').use(gulp);
-  const run = require('gulp-run');
-  const gutil = require('gulp-util');
-  const settings = require('../settings.js');
-  //const common = require('./lib/common.js');
 
   const parseScript = path.join(__dirname, 'parse_headers.py');
 
@@ -15,25 +14,24 @@ module.exports = function(gulp) {
     return `${settings.paths.headerCache}/${moduleName}.json`;
   }
 
-  function parseHeaders(moduleName, done){
-      mkdirp.sync(settings.paths.headerCache);
-      var args = [
-        moduleName,
-        settings.oce.include,
-        settings.paths.data,
-        cacheFile(moduleName)
-      ].join(' ');
+  function parseHeaders(moduleName, done) {
+    mkdirp.sync(settings.paths.headerCache);
+    var args = [
+      moduleName,
+      settings.oce.include,
+      settings.paths.data,
+      cacheFile(moduleName)
+    ].join(' ');
 
-      var cmd = `python ${parseScript} ${args}`;
-      console.log(cmd);
-      return run(cmd).exec(done);
+    var cmd = `python ${parseScript} ${args}`;
+    return run(cmd).exec(done);
   }
 
-  function groupBy(arr, fn){
+  function groupBy(arr, fn) {
     var grouped = [];
-    function add(value, group){
-      if(grouped[group] === undefined)
-        grouped[group] = []
+    function add(value, group) {
+      if (grouped[group] === undefined)
+        grouped[group] = [];
       grouped[group].push(value);
     }
     arr.forEach((value, index) => add(value, fn(value, index)));
@@ -48,16 +46,16 @@ module.exports = function(gulp) {
   });
 
   // Parse all headers
-  gulp.task('parse-headers', function(done) {
+  gulp.task('parse-headers', (done) => {
     // only parse missing modules, or if forced.
     var parseModules = settings.oce.modules.filter(
-      (mod) => !fs.existsSync(cacheFile(mod))
+      mod => !fs.existsSync(cacheFile(mod))
     );
-    if (parseModules.length < 1){
+    if (parseModules.length < 1) {
       gutil.log('Header cache up to date');
       return done();
     }
-    var groups = groupBy(parseModules.map(mod => 'parse-headers:'+mod), (name, index) => Math.round(index / 8));
-    runSequence.apply(this, groups.concat([done]));
+    var groups = groupBy(parseModules.map(mod => 'parse-headers:' + mod), (name, index) => Math.round(index / 8));
+    return runSequence.apply(this, groups.concat([done]));
   });
 };

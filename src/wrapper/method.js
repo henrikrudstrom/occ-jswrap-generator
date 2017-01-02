@@ -24,7 +24,7 @@ class MethodDefinition extends Declaration.Definition {
   }
 
   canBeWrapped() {
-    return this.overloads.every(overload => overload.canBeWrapped());
+    return this.overloads.some(overload => overload.canBeWrapped());
   }
 
   getKeys() {

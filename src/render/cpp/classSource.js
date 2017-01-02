@@ -72,12 +72,81 @@ bool ${method.name}Overload${index}(const Nan::FunctionCallbackInfo<v8::Value>& 
 }`;
 }
 
+function renderConstructorOverload(wrapperAPI, cls, overload, index) {
+  var nativeMethod = overload.nativeMethod;
+
+  var argValues = nativeMethod.arguments.map((arg, i) =>
+    fromJsValue(wrapperAPI, arg.type, 'arg' + i, `info[${i}]`, 'return NULL;')
+  ).join('\n  ');
+
+  var argNames = nativeMethod.arguments.map((arg, i) => 'arg' + i).join(', ');
+
+  return `\
+${cls.classKey} * ${cls.qualifiedName.replace('::', '_')}_ConstructorOverload${index}(const Nan::FunctionCallbackInfo<v8::Value>& info){
+  if(info.Length() != ${nativeMethod.arguments.length}) return NULL;
+
+  ${argValues}
+
+  return new ${cls.classKey}(${argNames});
+}`;
+}
+
+
+function renderConstructor(wrapperAPI, cls) {
+  var ctor = cls.getConstructor();
+  if (ctor === undefined)
+    return `NAN_METHOD(${cls.qualifiedName}::New) { }`;
+
+  var overloadFunctions = ctor.overloads
+    .filter(overload => overload.canBeWrapped())
+    .map((overload, index) =>
+      renderConstructorOverload(wrapperAPI, cls, overload, index)
+    ).join('\n\n');
+
+  var overloadCalls = ctor.overloads
+    .filter(overload => overload.canBeWrapped())
+    .map((overload, index) =>
+      `res = ${cls.qualifiedName.replace('::', '_')}_ConstructorOverload${index}(info);
+       if(res != NULL) {
+        auto wrapper = new ${cls.name}(res);
+        wrapper->Wrap(info.This());
+        return;
+      }`
+    ).join('\n ');
+
+  return `\
+${overloadFunctions}
+bool ${cls.qualifiedName}::firstCall = true;
+NAN_METHOD(${cls.qualifiedName}::New) {
+  if (!info.IsConstructCall()) {
+    // [NOTE] generic recursive call with 'new'
+    std::vector<v8::Local<v8::Value> > args(info.Length());
+    for (std::size_t i = 0; i < args.size(); ++i) args[i] = info[i];
+    auto inst = Nan::NewInstance(info.Callee(), args.size(), args.data());
+    if (!inst.IsEmpty()) info.GetReturnValue().Set(inst.ToLocalChecked());
+    return;
+  }
+  if(firstCall){
+      auto wrapper = new ${cls.name}();
+      wrapper->Wrap(info.This());
+      firstCall = false;
+      return;
+  }
+
+  ${cls.classKey} * res;
+
+  ${overloadCalls}
+}`;
+}
+
 
 function renderMethod(wrapperAPI, cls, method) {
   if (!method.canBeWrapped()) return `// method ${method.name} cannot be wrapped`;
-  var overloadFunctions = method.overloads.map((overload, index) =>
+  var overloadFunctions = method.overloads
+    .filter(overload => overload.canBeWrapped())
+    .map((overload, index) =>
       renderOverload(wrapperAPI, cls, method, overload, index)
-  ).join('\n\n');
+    ).join('\n\n');
 
   var overloadCalls = method.overloads
     .filter(overload => overload.canBeWrapped())
@@ -175,14 +244,32 @@ function renderClassSource(wrapperAPI, cls) {
     .map(decl => renderMethod(wrapperAPI, cls, decl))
     .join('\n\n');
 
+  var base = cls.getBaseClass();
+  var ctorName = `${cls.qualifiedName}::${cls.name}`;
+
+  var emptyCtor = `${ctorName}() {}`;
+
+  var ptrCtorArgs = `${cls.classKey} * wrapObj`;
+  var ptrCtorInit = `${base ? base.name : 'wrappedObject'}(${!cls.hasHandle && !cls.hasHandle ? '*' : ''}wrapObj)`;
+  var ptrCtor = `${ctorName}(${ptrCtorArgs}) : ${ptrCtorInit} { }`;
+
+  var valueCtorInit = `${base ? base.name : 'wrappedObject'}(wrapObj)`;
+  var valueCtor = `${ctorName}(${cls.classKey} wrapObj) : ${valueCtorInit} { }`;
+  if (cls.hasHandle) {
+    valueCtor = `${ctorName}(opencascade::handle<${cls.classKey}> wrapObj) : ${valueCtorInit} { }`;
+  }
+
   return `\
 #include <${cls.parent.name}/${cls.name}.h>
 
 Nan::Persistent<v8::FunctionTemplate> ${cls.qualifiedName}::constructor;
 Nan::Persistent<v8::Object> ${cls.qualifiedName}::prototype;
 
-NAN_METHOD(${cls.qualifiedName}::New) {
-}
+${emptyCtor}
+${ptrCtor}
+${valueCtor}
+
+${renderConstructor(wrapperAPI, cls)}
 
 v8::Local<v8::Object> ${cls.qualifiedName}::BuildWrapper(void * res){
   auto obj = new ${cls.name}(*static_cast<${nativeClassType} *>(res));

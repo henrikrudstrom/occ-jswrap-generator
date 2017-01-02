@@ -34,8 +34,7 @@ class WrappedAPI {
 
   isBuiltIn(type) {
     if (type.name) type = type.name;
-    return this.builtins.map(b => b.name).indexOf(type) !== -1 ||
-           this.builtins.map(b => b.classKey).indexOf(type) !== -1;
+    return this.builtins.some(b => b.name === type || b.classKey === type);
   }
 
   getWrapper(name) {
@@ -43,14 +42,8 @@ class WrappedAPI {
   }
 
   getWrappedType(key) {
-    // switch (key) {
-    //   case 'Standard_Boolean': return 'bool';
-    //   case 'Standard_Integer': return 'int32_t';
-    //   case 'Standard_Real': return 'double';
-    //   default:
     var typeName = this.wrapped[key];
     return this.types[typeName];
-    //}
   }
 
   getNativeType(key) {

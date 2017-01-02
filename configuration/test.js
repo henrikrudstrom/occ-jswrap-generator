@@ -9,11 +9,15 @@ module.exports = function(mod) {
     .wrapProperty('Z', 'SetZ', 'z')
     .excludeByName('coord')
     .excludeByName('Xyz')
-    .excludeByName('changeCoord');
-  mod.wrapClass('Geom_Geometry', 'Geometry');
-  mod.wrapClass('Geom_Point', 'Point');
+    .excludeByName('changeCoord')
+    .wrapConstructor('*');
+  mod.wrapClass('Geom_Geometry', 'Geometry')
+    .wrapMethod('Mirrored', 'mirrored');
+  mod.wrapClass('Geom_Point', 'Point')
+    .wrapMethod('Distance', 'distance');
   mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint')
     .wrapProperty('X', 'SetX', 'x')
     .wrapProperty('Y', 'SetY', 'y')
-    .wrapProperty('Z', 'SetZ', 'z');
+    .wrapProperty('Z', 'SetZ', 'z')
+    .wrapConstructor('*');
 };

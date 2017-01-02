@@ -10,6 +10,7 @@ class MethodOverloadDefinition {
   constructor(wrapperAPI, conf) {
     this.methodKey = conf.methodKey;
     this.nativeMethod = nativeAPI.get(this.methodKey);
+    if (this.nativeMethod === undefined) throw new Error('Could not find native method ' + this.methodKey);
     this.wrapperAPI = wrapperAPI;
   }
 
@@ -17,19 +18,17 @@ class MethodOverloadDefinition {
     if (!this.wrappedDependenciesCache) {
       this.wrappedDependenciesCache = this.nativeMethod.arguments
         .map(arg => arg.type)
-        .concat(this.nativeMethod.returnType === '' ? [this.nativeMethod.returnType] : [])
+        .concat(this.nativeMethod.returnType ? [this.nativeMethod.returnType] : [])
         .filter(type => !this.wrapperAPI.isBuiltIn(type))
+        .filter(type => type !== 'void')
         .map(type => this.wrapperAPI.getWrappedType(type));
     }
-    //console.log('overload');
-    //console.log(this.wrappedDependenciesCache.map(dep => dep ? dep.name : dep))
     return this.wrappedDependenciesCache;
   }
 
   canBeWrapped() {
     return this.getWrappedDependencies().every(dep => Boolean(dep));
   }
-
 }
 
 module.exports = {

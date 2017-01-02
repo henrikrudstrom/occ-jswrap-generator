@@ -25,7 +25,12 @@ function renderClassHeader(wrapperAPI, cls) {
     .map(decl => `static NAN_SETTER(${decl.cppSetterName});`)
     .join('\n    ');
 
-
+  var emptyCtor = `${cls.name}();`;
+  var ptrCtor = `${cls.name}(${cls.classKey} * wrapObj);`;
+  var valueCtor = `${cls.name}(${cls.classKey} wrapObj);`;
+  if (cls.hasHandle) {
+    valueCtor = `${cls.name}(opencascade::handle<${cls.classKey}> wrapObj);`;
+  }
 
   return `
 // Class ${cls.name}
@@ -50,13 +55,12 @@ namespace ${cls.parent.name} {
     static v8::Local<v8::Object> BuildWrapper(void * res);
     ${base ? '' : `${wrappedType} wrappedObject;`}
   protected:
-    // Wrap constructor
-    ${cls.name}(${wrappedType} wrapObj);
-
-    // Inheritance constructor
-    ${cls.name}(${cls.classKey} * wrapObj);
+    ${emptyCtor}
+    ${ptrCtor}
+    ${valueCtor}
 
   private:
+    static bool firstCall;
     static NAN_METHOD(New);
 
     ${propertyGetters}

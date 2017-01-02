@@ -5,6 +5,7 @@ const clean = require('gulp-clean');
 const glob = require('glob');
 const fs = require('fs');
 const run = require('gulp-run');
+const runSequence = require('run-sequence');
 
 module.exports = function(gulp) {
   require('../src/parse/parse.js')(gulp);
@@ -14,19 +15,23 @@ module.exports = function(gulp) {
 
   });
 
-  gulp.task('render-wrapper', ['copy-headers'], () => {
+  gulp.task('render', (done) => {
+    runSequence('clean-wrapper', 'copy-headers', 'render-wrapper', 'format-cpp', done);
+  });
+
+  gulp.task('render-wrapper', () => {
     var definition = configure();
     render.wrapper(definition);
   });
 
-  gulp.task('beautify-cpp', function(done) {
+  gulp.task('format-cpp', function(done) {
     var sources = glob.sync(`${settings.paths.src}/**/*.*`);
     var headers = glob.sync(`${settings.paths.inc}/**/*.*`);
     var files = headers.concat(sources).join(' ');
     run(`clang-format -style="{BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 110}" -i ${files}`).exec(done)
   });
 
-  gulp.task('copy-headers', ['clean-wrapper'], function() {
+  gulp.task('copy-headers', function() {
     return gulp.src([
       'src/cpp/inc/**/*.h', 'src/cpp/src/**/*.cc'
     ], { base: 'src/cpp' })

@@ -14,12 +14,7 @@ function not(fn) {
   return decl => !fn(decl);
 }
 
-class ContainerDefinition extends Declaration.Definition {
-  constructor(wrapperAPI, parent, def) {
-    super(wrapperAPI, parent, def);
-    this.declarations = def.declarations.map(decl => definitions.create(wrapperAPI, this, decl));
-  }
-
+var containerMixin = Base => class extends Base {
   getMembersByName(name) {
     var exp = createRegexp(name);
     return this.declarations.filter(matchDeclByName(exp));
@@ -31,9 +26,28 @@ class ContainerDefinition extends Declaration.Definition {
     if (res.length === 0) return undefined;
     return res[0];
   }
+
+  getMembersByKey(key) {
+    var exp = createRegexp(key);
+    return this.declarations.filter(matchDeclByKey(exp));
+  }
+
+  getMemberByKey(key) {
+    var res = this.getMembersByKey(key);
+    if (res.length > 1) throw new Error(`Found multiple members matching name '${key}' in  ${this.name}, found ${res.map(d => d.getKeys())}`);
+    if (res.length === 0) return undefined;
+    return res[0];
+  }
+};
+
+class ContainerDefinition extends containerMixin(Declaration.Definition) {
+  constructor(wrapperAPI, parent, def) {
+    super(wrapperAPI, parent, def);
+    this.declarations = def.declarations.map(decl => definitions.create(wrapperAPI, this, decl));
+  }
 }
 
-class ContainerConfiguration extends Declaration.Configuration {
+class ContainerConfiguration extends containerMixin(Declaration.Configuration) {
   constructor(name) {
     super(name);
     this.declarations = [];
@@ -55,30 +69,6 @@ class ContainerConfiguration extends Declaration.Configuration {
     var decl = this.getMemberByName(name);
     decl.name = newName;
     return this;
-  }
-
-  getMembersByName(name) {
-    var exp = createRegexp(name);
-    return this.declarations.filter(matchDeclByName(exp));
-  }
-
-  getMemberByName(name) {
-    var res = this.getMembersByName(name);
-    if (res.length > 1) throw new Error(`Found multiple members matching name '${name}' in ${this.name}, found ${res.map(d => d.name)}`);
-    if (res.length === 0) return undefined;
-    return res[0];
-  }
-
-  getMembersByKey(key) {
-    var exp = createRegexp(key);
-    return this.declarations.filter(matchDeclByKey(exp));
-  }
-
-  getMemberByKey(key) {
-    var res = this.getMembersByKey(key);
-    if (res.length > 1) throw new Error(`ound multiple members matching name '${key}' in  ${this.name}, found ${res.map(d => d.getKeys())}`);
-    if (res.length === 0) return undefined;
-    return res[0];
   }
 }
 

@@ -1,4 +1,5 @@
 const Method = require('./method.js');
+const definitions = require('./definitions.js');
 
 class ConstructorDefinition extends Method.Definition {
 
@@ -10,6 +11,8 @@ class ConstructorConfiguration extends Method.Configuration {
     this.declType = 'constructor';
   }
 }
+
+definitions.register('constructor', ConstructorDefinition);
 
 module.exports = {
   Configuration: ConstructorConfiguration,

@@ -38,6 +38,10 @@ class ClassDefinition extends Container.Definition {
   getKeys() {
     return [this.classKey];
   }
+
+  getConstructor() {
+    return this.declarations.filter(decl => decl.declType === 'constructor')[0];
+  }
 }
 
 definitions.register('class', ClassDefinition);
