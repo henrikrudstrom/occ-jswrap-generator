@@ -9,6 +9,11 @@ class Renderer {
       .filter(rend => typeof (rend[fnName]) === 'function')
       .map(rend => rend[fnName](context));
   }
+
+  renderMain(parent, files) {
+    if (!this.renderers) return;
+    this.renderers.forEach(renderer => renderer.renderMain(this));
+  }
 }
 
 module.exports = Renderer;

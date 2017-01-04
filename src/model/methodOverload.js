@@ -1,16 +1,17 @@
-'use strict'
 const nativeAPI = require('../nativeAPI');
+const Declaration = require('./declaration.js');
+const factory = require('../factory.js');
 
-
-class MethodOverloadConfiguration {
-  constructor(methodKey) {
+class MethodOverloadConfiguration extends Declaration.Configuration {
+  constructor(name, methodKey) {
+    super(name, 'methodOverload');
     this.methodKey = methodKey;
-    this.declType = 'methodOverload';
   }
 }
 
-class MethodOverloadDefinition {
-  constructor(wrapperAPI, conf) {
+class MethodOverloadDefinition extends Declaration.Definition {
+  constructor(wrapperAPI, parent, conf) {
+    super(wrapperAPI, parent, conf);
     this.methodKey = conf.methodKey;
     this.nativeMethod = nativeAPI.get(this.methodKey);
     if (this.nativeMethod === undefined) throw new Error('Could not find native method ' + this.methodKey);
@@ -33,6 +34,8 @@ class MethodOverloadDefinition {
     return this.getWrappedDependencies().every(dep => Boolean(dep));
   }
 }
+
+factory.registerDefinition('methodOverload', MethodOverloadDefinition);
 
 module.exports = {
   Configuration: MethodOverloadConfiguration,

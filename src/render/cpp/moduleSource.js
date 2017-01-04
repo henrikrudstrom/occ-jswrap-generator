@@ -1,9 +1,9 @@
 function renderModuleSource(wrapperAPI, mod) {
-  var includes = mod.declarations
+  var includes = mod.members
     .map(cls => `#include <${mod.name}/${cls.name}.h>`)
     .join('\n');
 
-  var inits = mod.declarations
+  var inits = mod.members
     .map(cls => `  ${cls.qualifiedName}::Init(target);`)
     .join('\n  ');
 

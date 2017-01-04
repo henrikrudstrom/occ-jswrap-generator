@@ -1,4 +1,3 @@
-'use strict'
 const Declaration = require('./declaration.js');
 const MethodOverload = require('./methodOverload.js');
 const factory = require('../factory.js');
@@ -8,7 +7,7 @@ class MethodDefinition extends Declaration.Definition {
   constructor(wrapperAPI, parent, conf) {
     super(wrapperAPI, parent, conf);
     this.overloads = conf.overloads.map(
-      overload => new MethodOverload.Definition(wrapperAPI, overload)
+      overload => factory.createDefinition(wrapperAPI, this, overload)
     );
     this.declType = conf.declType;
     this.cppName = this.overloads[0].nativeMethod.name;
@@ -36,9 +35,8 @@ factory.registerDefinition('method', MethodDefinition);
 
 class MethodConfiguration extends Declaration.Configuration {
   constructor(name, methodKey) {
-    super(name);
-    this.overloads = [new MethodOverload.Configuration(methodKey)];
-    this.declType = 'method';
+    super(name, 'method');
+    this.overloads = [new MethodOverload.Configuration(name, methodKey)];
   }
 
   overload(methodConf) {

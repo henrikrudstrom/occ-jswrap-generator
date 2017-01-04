@@ -8,19 +8,19 @@ function renderClassHeader(wrapperAPI, cls) {
     .map(dep => `#include <${dep.parent.name}/${dep.name}.h>`)
     .join('\n');
 
-  var methodDeclarations = cls.declarations
+  var methodDeclarations = cls.members
     .filter(decl => decl.declType === 'method')
     .filter(decl => decl.canBeWrapped())
     .map(decl => `static NAN_METHOD(${decl.cppName});`)
     .join('\n    ');
 
-  var propertyGetters = cls.declarations
+  var propertyGetters = cls.members
     .filter(decl => decl.declType === 'property')
     .filter(decl => decl.canBeWrapped())
     .map(decl => `static NAN_GETTER(${decl.cppGetterName});`)
     .join('\n    ');
 
-  var propertySetters = cls.declarations
+  var propertySetters = cls.members
     .filter(decl => decl.declType === 'property')
     .map(decl => `static NAN_SETTER(${decl.cppSetterName});`)
     .join('\n    ');

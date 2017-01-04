@@ -1,4 +1,3 @@
-'use strict'
 const Container = require('./container.js');
 const Class = require('./class.js');
 const nativeAPI = require('../nativeAPI.js');
@@ -8,7 +7,6 @@ const factory = require('../factory.js');
 class ModuleDefinition extends Container.Definition {
   constructor(wrapperAPI, parent, conf) {
     super(wrapperAPI, parent, conf);
-    this.declType = conf.declType;
   }
 }
 
@@ -16,8 +14,7 @@ factory.registerDefinition('module', ModuleDefinition);
 
 class ModuleConfiguration extends Container.Configuration {
   constructor(name) {
-    super(name || 'unnamed-module');
-    this.declType = 'module';
+    super(name || 'unnamed-module', 'module');
   }
 
   wrapClass(clsKey, name) {
@@ -26,7 +23,7 @@ class ModuleConfiguration extends Container.Configuration {
       throw new Error(`Class '${clsKey} has already been wrapped'`);
     }
     cls = new Class.Configuration(name, clsKey);
-    this.declarations.push(cls);
+    this.members.push(cls);
     return cls;
   }
 

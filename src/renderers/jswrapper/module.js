@@ -5,7 +5,7 @@ class ModuleRenderer extends Renderer {
   constructor(def) {
     super();
     this.definition = def;
-    this.renderers = def.declarations.map(decl => factory.createRenderer(decl));
+    this.renderers = def.members.map(decl => factory.createRenderer(decl));
   }
 
   renderModuleImpl() {

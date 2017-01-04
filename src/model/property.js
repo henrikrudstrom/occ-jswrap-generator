@@ -1,4 +1,3 @@
-'use strict'
 const Declaration = require('./declaration.js');
 const factory = require('../factory.js');
 const nativeAPI = require('../nativeAPI');
@@ -9,7 +8,6 @@ class PropertyDefinition extends Declaration.Definition {
     super(wrapperAPI, parent, conf);
     this.getterKey = conf.getterKey;
     this.setterKey = conf.setterKey;
-    this.declType = conf.declType;
     this.readOnly = conf.readOnly;
     this.nativeGetter = nativeAPI.get(this.getterKey);
     this.cppGetterName = this.nativeGetter.name;
@@ -43,10 +41,9 @@ factory.registerDefinition('property', PropertyDefinition);
 
 class PropertyConfiguration extends Declaration.Configuration {
   constructor(name, getterKey, setterKey) {
-    super(name);
+    super(name, 'property');
     this.getterKey = getterKey;
     this.setterKey = setterKey;
-    this.declType = 'property';
     this.readOnly = !this.setterKey;
   }
 

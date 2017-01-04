@@ -25,7 +25,7 @@ function renderWrapper(wrapperAPI) {
   var sourceFiles = {};
   wrapperAPI.modules.forEach((mod) => {
     writeSource(mod.name, mod.name + '.cc', renderModuleSource(wrapperAPI, mod));
-    mod.declarations.forEach((cls) => {
+    mod.members.forEach((cls) => {
       writeHeader(mod.name, cls.name + '.h', renderClassHeader(wrapperAPI, cls));
       writeSource(mod.name, cls.name + '.cc', renderClassSource(wrapperAPI, cls));
     });

@@ -1,20 +1,17 @@
-'use strict'
 const nativeAPI = require('./nativeAPI');
 const Module = require('./model/module.js');
 const factory = require('./factory.js');
 
-
-
 class WrappedAPI {
-  constructor(moduleConfigurations) {
-    this.modules = moduleConfigurations.map(mod => factory.createDefinition(this, null, mod));
+  constructor(conf) {
+    this.modules = conf.members.map(mod => factory.createDefinition(this, null, mod));
 
     this.wrapped = {};
     this.native = {};
     this.types = {};
 
     this.modules.forEach((mod) => {
-      mod.declarations.forEach((cls) => {
+      mod.members.forEach((cls) => {
         this.wrapped[cls.getKeys()[0]] = cls.name;
         this.native[cls.name] = cls.getKeys()[0];
         this.types[cls.name] = cls;

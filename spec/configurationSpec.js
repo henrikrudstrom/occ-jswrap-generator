@@ -10,7 +10,7 @@ describe('Wrapper configuration', () => {
     configure((mod) => {
       var cls = mod.wrapClass('gp_Pnt', 'Pnt');
       expect(cls.name).to.equal('Pnt');
-      expect(mod.declarations.length).to.equal(1);
+      expect(mod.members.length).to.equal(1);
       expect(mod.getMemberByKey('gp_Pnt')).to.not.equal(undefined);
       expect(mod.getMemberByName('Pnt')).to.not.equal(undefined);
     });
@@ -20,7 +20,7 @@ describe('Wrapper configuration', () => {
     configure((mod) => {
       mod.wrapClasses('gp_*', util.renameClass);
       expect(mod.getMemberByKey('gp_Pnt').name).to.equal('Pnt');
-      expect(mod.declarations.length).to.equal(41);
+      expect(mod.members.length).to.equal(41);
     });
   });
 
@@ -28,7 +28,7 @@ describe('Wrapper configuration', () => {
     configure((mod) => {
       mod.wrapClasses('gp_*', util.renameClass);
       mod.excludeByKey('gp_XYZ');
-      expect(mod.declarations.length).to.equal(40);
+      expect(mod.members.length).to.equal(40);
       expect(mod.getMemberByKey('gp_XYZ')).to.equal(undefined);
     });
   });
@@ -37,7 +37,7 @@ describe('Wrapper configuration', () => {
     configure((mod) => {
       mod.wrapClasses('gp_*', util.renameClass);
       mod.rename('Pnt', 'Point');
-      expect(mod.declarations.length).to.equal(41);
+      expect(mod.members.length).to.equal(41);
       expect(mod.getMemberByKey('gp_Pnt').name).to.equal('Point');
     });
   });
@@ -48,8 +48,8 @@ describe('Wrapper configuration', () => {
         .wrapMethod('Distance', 'distance')
         .wrapMethod('X', 'x');
 
-      expect(cls.declarations.length).to.equal(2);
-      expect(cls.declarations[0].name).to.equal('distance');
+      expect(cls.members.length).to.equal(2);
+      expect(cls.members[0].name).to.equal('distance');
     });
   });
 
@@ -57,7 +57,7 @@ describe('Wrapper configuration', () => {
     configure((mod) => {
       var cls = mod.wrapClass('gp_Pnt', 'Point')
         .wrapMethod('Set*', util.renameMember);
-      expect(cls.declarations.length).to.equal(5);
+      expect(cls.members.length).to.equal(5);
       expect(cls.getMemberByName('setX').name).to.equal('setX');
     });
   });
@@ -69,7 +69,7 @@ describe('Wrapper configuration', () => {
         .rename('setX', 'specialName');
       expect(cls.getMemberByName('specialName').name).to.equal('specialName');
       expect(cls.getMemberByName('setX')).to.equal(undefined);
-      expect(cls.declarations.length).to.equal(5);
+      expect(cls.members.length).to.equal(5);
     });
   });
 
@@ -78,7 +78,7 @@ describe('Wrapper configuration', () => {
       var cls = mod.wrapClass('gp_Pnt', 'Point')
         .wrapMethod('Set*', util.renameMember)
         .excludeByName('setX');
-      expect(cls.declarations.length).to.equal(4);
+      expect(cls.members.length).to.equal(4);
       expect(cls.getMemberByName('setX')).to.equal(undefined);
     });
   });
@@ -87,8 +87,8 @@ describe('Wrapper configuration', () => {
     configure((mod) => {
       var cls = mod.wrapClass('gp_Pln', 'Plane')
         .wrapMethod('Distance', 'distance');
-      expect(cls.declarations.length).to.equal(1);
-      expect(cls.declarations[0].overloads.length).to.equal(3);
+      expect(cls.members.length).to.equal(1);
+      expect(cls.members[0].overloads.length).to.equal(3);
     });
   });
 
@@ -116,7 +116,7 @@ describe('Wrapper configuration', () => {
         .wrapMethod('*', util.renameMember)
         .wrapProperty('X', 'SetX', 'x');
 
-      expect(pnt.declarations.length).to.equal(22);
+      expect(pnt.members.length).to.equal(22);
       expect(pnt.getMemberByName('x').declType).to.equal('property');
       expect(pnt.getMemberByName('setX')).to.equal(undefined);
     });

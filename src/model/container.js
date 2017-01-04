@@ -19,7 +19,7 @@ function not(fn) {
 var containerMixin = Base => class extends Base {
   getMembersByName(name) {
     var exp = createRegexp(name);
-    return this.declarations.filter(matchDeclByName(exp));
+    return this.members.filter(matchDeclByName(exp));
   }
 
   getMemberByName(name) {
@@ -31,7 +31,7 @@ var containerMixin = Base => class extends Base {
 
   getMembersByKey(key) {
     var exp = createRegexp(key);
-    return this.declarations.filter(matchDeclByKey(exp));
+    return this.members.filter(matchDeclByKey(exp));
   }
 
   getMemberByKey(key) {
@@ -45,25 +45,26 @@ var containerMixin = Base => class extends Base {
 class ContainerDefinition extends containerMixin(Declaration.Definition) {
   constructor(wrapperAPI, parent, def) {
     super(wrapperAPI, parent, def);
-    this.declarations = def.declarations.map(decl => factory.createDefinition(wrapperAPI, this, decl));
+    this.members = def.members.map(decl =>
+      factory.createDefinition(wrapperAPI, this, decl));
   }
 }
 
 class ContainerConfiguration extends containerMixin(Declaration.Configuration) {
-  constructor(name) {
-    super(name);
-    this.declarations = [];
+  constructor(name, declType) {
+    super(name, declType);
+    this.members = [];
   }
 
   excludeByKey(key) {
     var exp = createRegexp(key);
-    this.declarations = this.declarations.filter(not(matchDeclByKey(exp)));
+    this.members = this.members.filter(not(matchDeclByKey(exp)));
     return this;
   }
 
   excludeByName(key) {
     var exp = createRegexp(key);
-    this.declarations = this.declarations.filter(not(matchDeclByName(exp)));
+    this.members = this.members.filter(not(matchDeclByName(exp)));
     return this;
   }
 

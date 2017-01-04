@@ -11,7 +11,6 @@ class ClassDefinition extends Container.Definition {
   constructor(wrapperAPI, parent, conf) {
     super(wrapperAPI, parent, conf);
     this.classKey = conf.classKey;
-    this.declType = 'class';
     this.qualifiedName = `${this.parent.name}::${this.name}`;
     this.dotOrArrow = this.hasHandle ? '->' : '.';
     this.nativeClass = nativeAPI.get(this.classKey);
@@ -27,7 +26,7 @@ class ClassDefinition extends Container.Definition {
   }
 
   getWrappedDependencies() {
-    return this.declarations
+    return this.members
       .filter(decl => decl.canBeWrapped())
       .map(decl => decl.getWrappedDependencies())
       .concat(this.getBaseClass() ? [this.getBaseClass()] : [])
@@ -50,7 +49,7 @@ class ClassDefinition extends Container.Definition {
   }
 
   getConstructor() {
-    return this.declarations.filter(decl => decl.declType === 'constructor')[0];
+    return this.members.filter(decl => decl.declType === 'constructor')[0];
   }
 }
 
@@ -58,9 +57,8 @@ factory.registerDefinition('class', ClassDefinition);
 
 class ClassConfiguration extends Container.Configuration {
   constructor(name, key) {
-    super(name);
+    super(name, 'class');
     this.classKey = key;
-    this.declType = 'class';
   }
 
   $wrapMethod(methodConf) {
@@ -68,7 +66,7 @@ class ClassConfiguration extends Container.Configuration {
     if (existingMember !== undefined) {
       existingMember.overload(methodConf);
     } else
-      this.declarations.push(methodConf);
+      this.members.push(methodConf);
 
     return this;
   }
@@ -106,7 +104,7 @@ class ClassConfiguration extends Container.Configuration {
       this.excludeByKey(setters[0].key);
     }
 
-    this.declarations.push(new Property.Configuration(name, getterKey, setterKey));
+    this.members.push(new Property.Configuration(name, getterKey, setterKey));
     return this;
   }
 

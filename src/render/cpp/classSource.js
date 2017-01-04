@@ -187,13 +187,13 @@ function renderInit(wrapperAPI, cls) {
   var baseClass = cls.getBaseClass();
   var inherit = baseClass ? `ctor->Inherit(Nan::New(${baseClass.qualifiedName}::constructor));` : '';
 
-  var properties = cls.declarations
+  var properties = cls.members
     .filter(decl => decl.declType === 'property')
     .filter(decl => decl.canBeWrapped())
     .map(prop => `Nan::SetAccessor(ctorInst, Nan::New("${prop.name}").ToLocalChecked(), ${prop.cppGetterName}, ${prop.cppSetterName});`)
     .join('\n  ');
 
-  var methods = cls.declarations
+  var methods = cls.members
     .filter(decl => decl.declType === 'method')
     .filter(decl => decl.canBeWrapped())
     .map(decl => `Nan::SetPrototypeMethod(ctor, "${decl.name}", ${decl.cppName});`)
@@ -229,17 +229,17 @@ NAN_MODULE_INIT(${cls.qualifiedName}::Init) {
 function renderClassSource(wrapperAPI, cls) {
   var nativeClassType = cls.hasHandle ? `opencascade::handle<${cls.classKey}>` : cls.classKey;
 
-  var getters = cls.declarations
+  var getters = cls.members
     .filter(decl => decl.declType === 'property')
     .map(decl => renderGetter(wrapperAPI, cls, decl))
     .join('\n\n');
 
-  var setters = cls.declarations
+  var setters = cls.members
     .filter(decl => decl.declType === 'property')
     .map(decl => renderSetter(wrapperAPI, cls, decl))
     .join('\n\n');
 
-  var methods = cls.declarations
+  var methods = cls.members
     .filter(decl => decl.declType === 'method')
     .map(decl => renderMethod(wrapperAPI, cls, decl))
     .join('\n\n');
