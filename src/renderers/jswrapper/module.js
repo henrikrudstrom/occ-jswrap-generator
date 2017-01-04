@@ -1,3 +1,4 @@
+'use strict'
 const Renderer = require('../renderer.js');
 
 class ModuleRenderer extends Renderer {

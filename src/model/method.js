@@ -1,3 +1,4 @@
+'use strict'
 const Declaration = require('./declaration.js');
 const MethodOverload = require('./methodOverload.js');
 const factory = require('../factory.js');

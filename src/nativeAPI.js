@@ -65,4 +65,4 @@ function get(key, declType) {
 
 load();
 
-module.exports = { get, find };
+module.exports = { 'get': get, 'find': find };

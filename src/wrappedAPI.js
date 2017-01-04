@@ -1,3 +1,4 @@
+'use strict'
 const nativeAPI = require('./nativeAPI');
 const Module = require('./model/module.js');
 const factory = require('./factory.js');

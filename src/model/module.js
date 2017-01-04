@@ -1,3 +1,4 @@
+'use strict'
 const Container = require('./container.js');
 const Class = require('./class.js');
 const nativeAPI = require('../nativeAPI.js');

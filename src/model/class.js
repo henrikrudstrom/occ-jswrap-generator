@@ -1,3 +1,4 @@
+'use strict'
 const Container = require('./container.js');
 const Method = require('./method.js');
 const Property = require('./property.js');

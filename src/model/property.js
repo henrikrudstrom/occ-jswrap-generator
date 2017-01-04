@@ -1,3 +1,4 @@
+'use strict'
 const Declaration = require('./declaration.js');
 const factory = require('../factory.js');
 const nativeAPI = require('../nativeAPI');

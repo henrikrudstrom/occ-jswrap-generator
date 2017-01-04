@@ -1,3 +1,4 @@
+'use strict'
 const createRegexp = require('./../util.js').createRegexp;
 const Declaration = require('./declaration.js');
 const factory = require('../factory.js');

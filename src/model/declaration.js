@@ -1,3 +1,4 @@
+'use strict'
 class DeclarationDefinition {
   constructor(wrapperAPI, parent, def) {
     this.wrapperAPI = wrapperAPI;

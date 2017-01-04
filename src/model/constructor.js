@@ -1,3 +1,4 @@
+'use strict'
 const Method = require('./method.js');
 const factory = require('../factory.js');
 
