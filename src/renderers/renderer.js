@@ -7,12 +7,12 @@ class Renderer {
     var fnName = `render${upperCamelCase(part)}`;
     return this.renderers
       .filter(rend => typeof (rend[fnName]) === 'function')
-      .map(rend => rend[fnName](context));
+      .map(rend => rend[fnName](this, context));
   }
 
   renderMain(parent, files) {
     if (!this.renderers) return;
-    this.renderers.forEach(renderer => renderer.renderMain(this));
+    this.renderers.forEach(renderer => renderer.renderMain(this, files));
   }
 }
 
