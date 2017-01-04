@@ -1,0 +1,1896 @@
+{
+  "headers": [
+    "GProp_CelGProps.hxx", 
+    "GProp_ValueType.hxx", 
+    "GProp_PEquation.hxx", 
+    "GProp_SelGProps.hxx", 
+    "GProp_PrincipalProps.hxx", 
+    "GProp_VelGProps.hxx", 
+    "GProp_EquaType.hxx", 
+    "GProp_GProps.hxx", 
+    "GProp_UndefinedAxis.hxx", 
+    "GProp_PGProps.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "GProp_PrincipalProps", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GProp_PrincipalProps", 
+          "parent": "GProp_PrincipalProps", 
+          "arguments": [], 
+          "key": "GProp_PrincipalProps::GProp_PrincipalProps()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_PrincipalProps", 
+          "parent": "GProp_PrincipalProps", 
+          "arguments": [
+            {
+              "decl": "const GProp_PrincipalProps &", 
+              "type": "GProp_PrincipalProps", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GProp_PrincipalProps::GProp_PrincipalProps(GProp_PrincipalProps)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasSymmetryAxis", 
+          "parent": "GProp_PrincipalProps", 
+          "arguments": [], 
+          "key": "GProp_PrincipalProps::HasSymmetryAxis()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasSymmetryAxis", 
+          "parent": "GProp_PrincipalProps", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "aTol"
+            }
+          ], 
+          "key": "GProp_PrincipalProps::HasSymmetryAxis(Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasSymmetryPoint", 
+          "parent": "GProp_PrincipalProps", 
+          "arguments": [], 
+          "key": "GProp_PrincipalProps::HasSymmetryPoint()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasSymmetryPoint", 
+          "parent": "GProp_PrincipalProps", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "aTol"
+            }
+          ], 
+          "key": "GProp_PrincipalProps::HasSymmetryPoint(Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Moments", 
+          "parent": "GProp_PrincipalProps", 
+          "arguments": [
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Ixx"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Iyy"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Izz"
+            }
+          ], 
+          "key": "GProp_PrincipalProps::Moments(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstAxisOfInertia", 
+          "parent": "GProp_PrincipalProps", 
+          "arguments": [], 
+          "key": "GProp_PrincipalProps::FirstAxisOfInertia()", 
+          "returnType": "gp_Vec const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SecondAxisOfInertia", 
+          "parent": "GProp_PrincipalProps", 
+          "arguments": [], 
+          "key": "GProp_PrincipalProps::SecondAxisOfInertia()", 
+          "returnType": "gp_Vec const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ThirdAxisOfInertia", 
+          "parent": "GProp_PrincipalProps", 
+          "arguments": [], 
+          "key": "GProp_PrincipalProps::ThirdAxisOfInertia()", 
+          "returnType": "gp_Vec const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RadiusOfGyration", 
+          "parent": "GProp_PrincipalProps", 
+          "arguments": [
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Rxx"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Ryy"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Rzz"
+            }
+          ], 
+          "key": "GProp_PrincipalProps::RadiusOfGyration(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GProp_PrincipalProps.hxx", 
+        53
+      ], 
+      "key": "GProp_PrincipalProps"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GProp_GProps", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GProp_GProps", 
+          "parent": "GProp_GProps", 
+          "arguments": [], 
+          "key": "GProp_GProps::GProp_GProps()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_GProps", 
+          "parent": "GProp_GProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "SystemLocation"
+            }
+          ], 
+          "key": "GProp_GProps::GProp_GProps(gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_GProps", 
+          "parent": "GProp_GProps", 
+          "arguments": [
+            {
+              "decl": "const GProp_GProps &", 
+              "type": "GProp_GProps", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GProp_GProps::GProp_GProps(GProp_GProps)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "PrincipalProperties", 
+          "parent": "GProp_GProps", 
+          "arguments": [], 
+          "key": "GProp_GProps::PrincipalProperties()", 
+          "returnType": "GProp_PrincipalProps", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "GProp_GProps", 
+          "arguments": [
+            {
+              "decl": "const GProp_GProps &", 
+              "type": "GProp_GProps", 
+              "name": "Item"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Density", 
+              "default": "1."
+            }
+          ], 
+          "key": "GProp_GProps::Add(GProp_GProps, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Mass", 
+          "parent": "GProp_GProps", 
+          "arguments": [], 
+          "key": "GProp_GProps::Mass()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CentreOfMass", 
+          "parent": "GProp_GProps", 
+          "arguments": [], 
+          "key": "GProp_GProps::CentreOfMass()", 
+          "returnType": "gp_Pnt", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MatrixOfInertia", 
+          "parent": "GProp_GProps", 
+          "arguments": [], 
+          "key": "GProp_GProps::MatrixOfInertia()", 
+          "returnType": "gp_Mat", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "StaticMoments", 
+          "parent": "GProp_GProps", 
+          "arguments": [
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Ix"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Iy"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Iz"
+            }
+          ], 
+          "key": "GProp_GProps::StaticMoments(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MomentOfInertia", 
+          "parent": "GProp_GProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax1 &", 
+              "type": "gp_Ax1", 
+              "name": "A"
+            }
+          ], 
+          "key": "GProp_GProps::MomentOfInertia(gp_Ax1)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RadiusOfGyration", 
+          "parent": "GProp_GProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax1 &", 
+              "type": "gp_Ax1", 
+              "name": "A"
+            }
+          ], 
+          "key": "GProp_GProps::RadiusOfGyration(gp_Ax1)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GProp_GProps.hxx", 
+        104
+      ], 
+      "key": "GProp_GProps"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GProp_CelGProps", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GProp_CelGProps", 
+          "parent": "GProp_CelGProps", 
+          "arguments": [], 
+          "key": "GProp_CelGProps::GProp_CelGProps()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_CelGProps", 
+          "parent": "GProp_CelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "CLocation"
+            }
+          ], 
+          "key": "GProp_CelGProps::GProp_CelGProps(gp_Circ, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_CelGProps", 
+          "parent": "GProp_CelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "CLocation"
+            }
+          ], 
+          "key": "GProp_CelGProps::GProp_CelGProps(gp_Circ, Standard_Real, Standard_Real, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_CelGProps", 
+          "parent": "GProp_CelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "CLocation"
+            }
+          ], 
+          "key": "GProp_CelGProps::GProp_CelGProps(gp_Lin, Standard_Real, Standard_Real, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_CelGProps", 
+          "parent": "GProp_CelGProps", 
+          "arguments": [
+            {
+              "decl": "const GProp_CelGProps &", 
+              "type": "GProp_CelGProps", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GProp_CelGProps::GProp_CelGProps(GProp_CelGProps)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetLocation", 
+          "parent": "GProp_CelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "CLocation"
+            }
+          ], 
+          "key": "GProp_CelGProps::SetLocation(gp_Pnt)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "GProp_CelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }
+          ], 
+          "key": "GProp_CelGProps::Perform(gp_Circ, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "GProp_CelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }
+          ], 
+          "key": "GProp_CelGProps::Perform(gp_Lin, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GProp_GProps"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GProp_CelGProps.hxx", 
+        36
+      ], 
+      "key": "GProp_CelGProps"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GProp_PEquation", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GProp_PEquation", 
+          "parent": "GProp_PEquation", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array1OfPnt &", 
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Pnts"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "GProp_PEquation::GProp_PEquation(TColgp_Array1OfPnt, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_PEquation", 
+          "parent": "GProp_PEquation", 
+          "arguments": [
+            {
+              "decl": "const GProp_PEquation &", 
+              "type": "GProp_PEquation", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GProp_PEquation::GProp_PEquation(GProp_PEquation)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsPlanar", 
+          "parent": "GProp_PEquation", 
+          "arguments": [], 
+          "key": "GProp_PEquation::IsPlanar()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsLinear", 
+          "parent": "GProp_PEquation", 
+          "arguments": [], 
+          "key": "GProp_PEquation::IsLinear()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsPoint", 
+          "parent": "GProp_PEquation", 
+          "arguments": [], 
+          "key": "GProp_PEquation::IsPoint()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsSpace", 
+          "parent": "GProp_PEquation", 
+          "arguments": [], 
+          "key": "GProp_PEquation::IsSpace()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Plane", 
+          "parent": "GProp_PEquation", 
+          "arguments": [], 
+          "key": "GProp_PEquation::Plane()", 
+          "returnType": "gp_Pln", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Line", 
+          "parent": "GProp_PEquation", 
+          "arguments": [], 
+          "key": "GProp_PEquation::Line()", 
+          "returnType": "gp_Lin", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Point", 
+          "parent": "GProp_PEquation", 
+          "arguments": [], 
+          "key": "GProp_PEquation::Point()", 
+          "returnType": "gp_Pnt", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Box", 
+          "parent": "GProp_PEquation", 
+          "arguments": [
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V2"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V3"
+            }
+          ], 
+          "key": "GProp_PEquation::Box(gp_Pnt, gp_Vec, gp_Vec, gp_Vec)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GProp_PEquation.hxx", 
+        43
+      ], 
+      "key": "GProp_PEquation"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GProp_SelGProps", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GProp_SelGProps", 
+          "parent": "GProp_SelGProps", 
+          "arguments": [], 
+          "key": "GProp_SelGProps::GProp_SelGProps()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_SelGProps", 
+          "parent": "GProp_SelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z2"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "SLocation"
+            }
+          ], 
+          "key": "GProp_SelGProps::GProp_SelGProps(gp_Cylinder, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_SelGProps", 
+          "parent": "GProp_SelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z2"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "SLocation"
+            }
+          ], 
+          "key": "GProp_SelGProps::GProp_SelGProps(gp_Cone, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_SelGProps", 
+          "parent": "GProp_SelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Teta1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Teta2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha2"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "SLocation"
+            }
+          ], 
+          "key": "GProp_SelGProps::GProp_SelGProps(gp_Sphere, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_SelGProps", 
+          "parent": "GProp_SelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Teta1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Teta2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha2"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "SLocation"
+            }
+          ], 
+          "key": "GProp_SelGProps::GProp_SelGProps(gp_Torus, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_SelGProps", 
+          "parent": "GProp_SelGProps", 
+          "arguments": [
+            {
+              "decl": "const GProp_SelGProps &", 
+              "type": "GProp_SelGProps", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GProp_SelGProps::GProp_SelGProps(GProp_SelGProps)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetLocation", 
+          "parent": "GProp_SelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "SLocation"
+            }
+          ], 
+          "key": "GProp_SelGProps::SetLocation(gp_Pnt)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "GProp_SelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z2"
+            }
+          ], 
+          "key": "GProp_SelGProps::Perform(gp_Cylinder, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "GProp_SelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z2"
+            }
+          ], 
+          "key": "GProp_SelGProps::Perform(gp_Cone, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "GProp_SelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Teta1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Teta2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha2"
+            }
+          ], 
+          "key": "GProp_SelGProps::Perform(gp_Sphere, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "GProp_SelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Teta1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Teta2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha2"
+            }
+          ], 
+          "key": "GProp_SelGProps::Perform(gp_Torus, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GProp_GProps"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GProp_SelGProps.hxx", 
+        36
+      ], 
+      "key": "GProp_SelGProps"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GProp_UndefinedAxis", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GProp_UndefinedAxis", 
+          "parent": "GProp_UndefinedAxis", 
+          "arguments": [], 
+          "key": "GProp_UndefinedAxis::GProp_UndefinedAxis()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_UndefinedAxis", 
+          "parent": "GProp_UndefinedAxis", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "GProp_UndefinedAxis::GProp_UndefinedAxis(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_UndefinedAxis", 
+          "parent": "GProp_UndefinedAxis", 
+          "arguments": [
+            {
+              "decl": "const GProp_UndefinedAxis &", 
+              "type": "GProp_UndefinedAxis", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GProp_UndefinedAxis::GProp_UndefinedAxis(GProp_UndefinedAxis)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "GProp_UndefinedAxis", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "GProp_UndefinedAxis::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "GProp_UndefinedAxis", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "GProp_UndefinedAxis::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "GProp_UndefinedAxis", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "GProp_UndefinedAxis::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<GProp_UndefinedAxis>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "GProp_UndefinedAxis", 
+          "arguments": [], 
+          "key": "GProp_UndefinedAxis::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "GProp_UndefinedAxis", 
+          "arguments": [], 
+          "key": "GProp_UndefinedAxis::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "GProp_UndefinedAxis", 
+          "arguments": [], 
+          "key": "GProp_UndefinedAxis::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_DomainError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GProp_UndefinedAxis.hxx", 
+        38
+      ], 
+      "key": "GProp_UndefinedAxis"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GProp_VelGProps", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GProp_VelGProps", 
+          "parent": "GProp_VelGProps", 
+          "arguments": [], 
+          "key": "GProp_VelGProps::GProp_VelGProps()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_VelGProps", 
+          "parent": "GProp_VelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z2"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "VLocation"
+            }
+          ], 
+          "key": "GProp_VelGProps::GProp_VelGProps(gp_Cylinder, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_VelGProps", 
+          "parent": "GProp_VelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z2"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "VLocation"
+            }
+          ], 
+          "key": "GProp_VelGProps::GProp_VelGProps(gp_Cone, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_VelGProps", 
+          "parent": "GProp_VelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Teta1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Teta2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha2"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "VLocation"
+            }
+          ], 
+          "key": "GProp_VelGProps::GProp_VelGProps(gp_Sphere, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_VelGProps", 
+          "parent": "GProp_VelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Teta1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Teta2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha2"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "VLocation"
+            }
+          ], 
+          "key": "GProp_VelGProps::GProp_VelGProps(gp_Torus, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_VelGProps", 
+          "parent": "GProp_VelGProps", 
+          "arguments": [
+            {
+              "decl": "const GProp_VelGProps &", 
+              "type": "GProp_VelGProps", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GProp_VelGProps::GProp_VelGProps(GProp_VelGProps)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetLocation", 
+          "parent": "GProp_VelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "VLocation"
+            }
+          ], 
+          "key": "GProp_VelGProps::SetLocation(gp_Pnt)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "GProp_VelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z2"
+            }
+          ], 
+          "key": "GProp_VelGProps::Perform(gp_Cylinder, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "GProp_VelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z2"
+            }
+          ], 
+          "key": "GProp_VelGProps::Perform(gp_Cone, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "GProp_VelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Teta1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Teta2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha2"
+            }
+          ], 
+          "key": "GProp_VelGProps::Perform(gp_Sphere, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "GProp_VelGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Teta1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Teta2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Alpha2"
+            }
+          ], 
+          "key": "GProp_VelGProps::Perform(gp_Torus, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GProp_GProps"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GProp_VelGProps.hxx", 
+        37
+      ], 
+      "key": "GProp_VelGProps"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GProp_PGProps", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GProp_PGProps", 
+          "parent": "GProp_PGProps", 
+          "arguments": [], 
+          "key": "GProp_PGProps::GProp_PGProps()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_PGProps", 
+          "parent": "GProp_PGProps", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array1OfPnt &", 
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Pnts"
+            }
+          ], 
+          "key": "GProp_PGProps::GProp_PGProps(TColgp_Array1OfPnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_PGProps", 
+          "parent": "GProp_PGProps", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array2OfPnt &", 
+              "type": "TColgp_Array2OfPnt", 
+              "name": "Pnts"
+            }
+          ], 
+          "key": "GProp_PGProps::GProp_PGProps(TColgp_Array2OfPnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_PGProps", 
+          "parent": "GProp_PGProps", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array1OfPnt &", 
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Pnts"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Density"
+            }
+          ], 
+          "key": "GProp_PGProps::GProp_PGProps(TColgp_Array1OfPnt, TColStd_Array1OfReal)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_PGProps", 
+          "parent": "GProp_PGProps", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array2OfPnt &", 
+              "type": "TColgp_Array2OfPnt", 
+              "name": "Pnts"
+            }, 
+            {
+              "decl": "const TColStd_Array2OfReal &", 
+              "type": "TColStd_Array2OfReal", 
+              "name": "Density"
+            }
+          ], 
+          "key": "GProp_PGProps::GProp_PGProps(TColgp_Array2OfPnt, TColStd_Array2OfReal)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GProp_PGProps", 
+          "parent": "GProp_PGProps", 
+          "arguments": [
+            {
+              "decl": "const GProp_PGProps &", 
+              "type": "GProp_PGProps", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GProp_PGProps::GProp_PGProps(GProp_PGProps)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AddPoint", 
+          "parent": "GProp_PGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }
+          ], 
+          "key": "GProp_PGProps::AddPoint(gp_Pnt)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AddPoint", 
+          "parent": "GProp_PGProps", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Density"
+            }
+          ], 
+          "key": "GProp_PGProps::AddPoint(gp_Pnt, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Barycentre", 
+          "parent": "GProp_PGProps", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array1OfPnt &", 
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Pnts"
+            }
+          ], 
+          "key": "GProp_PGProps::Barycentre(TColgp_Array1OfPnt)", 
+          "returnType": "gp_Pnt", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Barycentre", 
+          "parent": "GProp_PGProps", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array2OfPnt &", 
+              "type": "TColgp_Array2OfPnt", 
+              "name": "Pnts"
+            }
+          ], 
+          "key": "GProp_PGProps::Barycentre(TColgp_Array2OfPnt)", 
+          "returnType": "gp_Pnt", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Barycentre", 
+          "parent": "GProp_PGProps", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array1OfPnt &", 
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Pnts"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Density"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Mass"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "G"
+            }
+          ], 
+          "key": "GProp_PGProps::Barycentre(TColgp_Array1OfPnt, TColStd_Array1OfReal, Standard_Real, gp_Pnt)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Barycentre", 
+          "parent": "GProp_PGProps", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array2OfPnt &", 
+              "type": "TColgp_Array2OfPnt", 
+              "name": "Pnts"
+            }, 
+            {
+              "decl": "const TColStd_Array2OfReal &", 
+              "type": "TColStd_Array2OfReal", 
+              "name": "Density"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Mass"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "G"
+            }
+          ], 
+          "key": "GProp_PGProps::Barycentre(TColgp_Array2OfPnt, TColStd_Array2OfReal, Standard_Real, gp_Pnt)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GProp_GProps"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GProp_PGProps.hxx", 
+        54
+      ], 
+      "key": "GProp_PGProps"
+    }, 
+    {
+      "type": "opencascade::handle<GProp_UndefinedAxis>", 
+      "declType": "typedef", 
+      "name": "Handle_GProp_UndefinedAxis", 
+      "key": "Handle_GProp_UndefinedAxis"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "GProp_Mass", 
+          0
+        ], 
+        [
+          "GProp_CenterMassX", 
+          1
+        ], 
+        [
+          "GProp_CenterMassY", 
+          2
+        ], 
+        [
+          "GProp_CenterMassZ", 
+          3
+        ], 
+        [
+          "GProp_InertiaXX", 
+          4
+        ], 
+        [
+          "GProp_InertiaYY", 
+          5
+        ], 
+        [
+          "GProp_InertiaZZ", 
+          6
+        ], 
+        [
+          "GProp_InertiaXY", 
+          7
+        ], 
+        [
+          "GProp_InertiaXZ", 
+          8
+        ], 
+        [
+          "GProp_InertiaYZ", 
+          9
+        ], 
+        [
+          "GProp_Unknown", 
+          10
+        ]
+      ], 
+      "name": "GProp_ValueType", 
+      "key": "GProp_ValueType"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "GProp_Plane", 
+          0
+        ], 
+        [
+          "GProp_Line", 
+          1
+        ], 
+        [
+          "GProp_Point", 
+          2
+        ], 
+        [
+          "GProp_Space", 
+          3
+        ], 
+        [
+          "GProp_None", 
+          4
+        ]
+      ], 
+      "name": "GProp_EquaType", 
+      "key": "GProp_EquaType"
+    }
+  ], 
+  "name": "GProp"
+}

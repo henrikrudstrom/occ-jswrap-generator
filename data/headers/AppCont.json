@@ -1,0 +1,289 @@
+{
+  "headers": [
+    "AppCont_ContMatrices.hxx", 
+    "AppCont_Function.hxx", 
+    "AppCont_LeastSquare.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "AppCont_Function", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "declType": "method", 
+          "name": "GetNumberOfPoints", 
+          "parent": "AppCont_Function", 
+          "arguments": [
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "theNbPnt"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "theNbPnt2d"
+            }
+          ], 
+          "key": "AppCont_Function::GetNumberOfPoints(Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetNbOf3dPoints", 
+          "parent": "AppCont_Function", 
+          "arguments": [], 
+          "key": "AppCont_Function::GetNbOf3dPoints()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetNbOf2dPoints", 
+          "parent": "AppCont_Function", 
+          "arguments": [], 
+          "key": "AppCont_Function::GetNbOf2dPoints()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstParameter", 
+          "parent": "AppCont_Function", 
+          "arguments": [], 
+          "key": "AppCont_Function::FirstParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastParameter", 
+          "parent": "AppCont_Function", 
+          "arguments": [], 
+          "key": "AppCont_Function::LastParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "AppCont_Function", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theU"
+            }, 
+            {
+              "decl": "NCollection_Array1<gp_Pnt2d> &", 
+              "type": "NCollection_Array1<gp_Pnt2d>", 
+              "name": "thePnt2d"
+            }, 
+            {
+              "decl": "NCollection_Array1<gp_Pnt> &", 
+              "type": "NCollection_Array1<gp_Pnt>", 
+              "name": "thePnt"
+            }
+          ], 
+          "key": "AppCont_Function::Value(Standard_Real, NCollection_Array1<gp_Pnt2d>, NCollection_Array1<gp_Pnt>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "AppCont_Function", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theU"
+            }, 
+            {
+              "decl": "NCollection_Array1<gp_Vec2d> &", 
+              "type": "NCollection_Array1<gp_Vec2d>", 
+              "name": "theVec2d"
+            }, 
+            {
+              "decl": "NCollection_Array1<gp_Vec> &", 
+              "type": "NCollection_Array1<gp_Vec>", 
+              "name": "theVec"
+            }
+          ], 
+          "key": "AppCont_Function::D1(Standard_Real, NCollection_Array1<gp_Vec2d>, NCollection_Array1<gp_Vec>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "PeriodInformation", 
+          "parent": "AppCont_Function", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "arg0"
+            }, 
+            {
+              "decl": "Standard_Boolean &", 
+              "type": "Standard_Boolean", 
+              "name": "IsPeriodic"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "thePeriod"
+            }
+          ], 
+          "key": "AppCont_Function::PeriodInformation(Standard_Integer, Standard_Boolean, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/AppCont_Function.hxx", 
+        27
+      ], 
+      "key": "AppCont_Function"
+    }, 
+    {
+      "declType": "class", 
+      "name": "AppCont_LeastSquare", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "AppCont_LeastSquare", 
+          "parent": "AppCont_LeastSquare", 
+          "arguments": [
+            {
+              "decl": "const AppCont_Function &", 
+              "type": "AppCont_Function", 
+              "name": "SSP"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U0"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const AppParCurves_Constraint", 
+              "type": "AppParCurves_Constraint", 
+              "name": "FirstCons"
+            }, 
+            {
+              "decl": "const AppParCurves_Constraint", 
+              "type": "AppParCurves_Constraint", 
+              "name": "LastCons"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Deg"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NbPoints"
+            }
+          ], 
+          "key": "AppCont_LeastSquare::AppCont_LeastSquare(AppCont_Function, Standard_Real, Standard_Real, AppParCurves_Constraint, AppParCurves_Constraint, Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AppCont_LeastSquare", 
+          "parent": "AppCont_LeastSquare", 
+          "arguments": [
+            {
+              "decl": "const AppCont_LeastSquare &", 
+              "type": "AppCont_LeastSquare", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AppCont_LeastSquare::AppCont_LeastSquare(AppCont_LeastSquare)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "AppCont_LeastSquare", 
+          "arguments": [], 
+          "key": "AppCont_LeastSquare::Value()", 
+          "returnType": "AppParCurves_MultiCurve const &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Error", 
+          "parent": "AppCont_LeastSquare", 
+          "arguments": [
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "F"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "MaxE3d"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "MaxE2d"
+            }
+          ], 
+          "key": "AppCont_LeastSquare::Error(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "AppCont_LeastSquare", 
+          "arguments": [], 
+          "key": "AppCont_LeastSquare::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/AppCont_LeastSquare.hxx", 
+        34
+      ], 
+      "key": "AppCont_LeastSquare"
+    }
+  ], 
+  "name": "AppCont"
+}

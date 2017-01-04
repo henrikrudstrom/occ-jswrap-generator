@@ -1,0 +1,4265 @@
+{
+  "headers": [
+    "ProjLib_Sphere.hxx", 
+    "ProjLib_HSequenceOfHSequenceOfPnt.hxx", 
+    "ProjLib_ComputeApprox.hxx", 
+    "ProjLib_PrjFunc.hxx", 
+    "ProjLib_Cylinder.hxx", 
+    "ProjLib_ProjectedCurve.hxx", 
+    "ProjLib_Projector.hxx", 
+    "ProjLib_ProjectOnPlane.hxx", 
+    "ProjLib_Plane.hxx", 
+    "ProjLib_Cone.hxx", 
+    "ProjLib_HProjectedCurve.hxx", 
+    "ProjLib_ProjectOnSurface.hxx", 
+    "ProjLib_CompProjectedCurve.hxx", 
+    "ProjLib_Torus.hxx", 
+    "ProjLib_HCompProjectedCurve.hxx", 
+    "ProjLib_ComputeApproxOnPolarSurface.hxx", 
+    "ProjLib_PrjResolve.hxx", 
+    "ProjLib_SequenceOfHSequenceOfPnt.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "ProjLib_Projector", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Projector", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [], 
+          "key": "ProjLib_Projector::ProjLib_Projector()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Projector", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_Projector &", 
+              "type": "ProjLib_Projector", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_Projector::ProjLib_Projector(ProjLib_Projector)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [], 
+          "key": "ProjLib_Projector::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Done", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [], 
+          "key": "ProjLib_Projector::Done()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetType", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [], 
+          "key": "ProjLib_Projector::GetType()", 
+          "returnType": "GeomAbs_CurveType", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetBSpline", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_BSplineCurve> &", 
+              "type": "opencascade::handle<Geom2d_BSplineCurve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_Projector::SetBSpline(opencascade::handle<Geom2d_BSplineCurve>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetBezier", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_BezierCurve> &", 
+              "type": "opencascade::handle<Geom2d_BezierCurve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_Projector::SetBezier(opencascade::handle<Geom2d_BezierCurve>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetType", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_CurveType", 
+              "type": "GeomAbs_CurveType", 
+              "name": "Type"
+            }
+          ], 
+          "key": "ProjLib_Projector::SetType(GeomAbs_CurveType)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsPeriodic", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [], 
+          "key": "ProjLib_Projector::IsPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetPeriodic", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [], 
+          "key": "ProjLib_Projector::SetPeriodic()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Line", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [], 
+          "key": "ProjLib_Projector::Line()", 
+          "returnType": "gp_Lin2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Circle", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [], 
+          "key": "ProjLib_Projector::Circle()", 
+          "returnType": "gp_Circ2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Ellipse", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [], 
+          "key": "ProjLib_Projector::Ellipse()", 
+          "returnType": "gp_Elips2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Hyperbola", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [], 
+          "key": "ProjLib_Projector::Hyperbola()", 
+          "returnType": "gp_Hypr2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parabola", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [], 
+          "key": "ProjLib_Projector::Parabola()", 
+          "returnType": "gp_Parab2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Bezier", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [], 
+          "key": "ProjLib_Projector::Bezier()", 
+          "returnType": "opencascade::handle<Geom2d_BezierCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "BSpline", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [], 
+          "key": "ProjLib_Projector::BSpline()", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "L"
+            }
+          ], 
+          "key": "ProjLib_Projector::Project(gp_Lin)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_Projector::Project(gp_Circ)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [
+            {
+              "decl": "const gp_Elips &", 
+              "type": "gp_Elips", 
+              "name": "E"
+            }
+          ], 
+          "key": "ProjLib_Projector::Project(gp_Elips)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [
+            {
+              "decl": "const gp_Parab &", 
+              "type": "gp_Parab", 
+              "name": "P"
+            }
+          ], 
+          "key": "ProjLib_Projector::Project(gp_Parab)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [
+            {
+              "decl": "const gp_Hypr &", 
+              "type": "gp_Hypr", 
+              "name": "H"
+            }
+          ], 
+          "key": "ProjLib_Projector::Project(gp_Hypr)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UFrame", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "CFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "CLast"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "UFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Period"
+            }
+          ], 
+          "key": "ProjLib_Projector::UFrame(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VFrame", 
+          "parent": "ProjLib_Projector", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "CFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "CLast"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "VFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Period"
+            }
+          ], 
+          "key": "ProjLib_Projector::VFrame(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_Projector.hxx", 
+        49
+      ], 
+      "key": "ProjLib_Projector"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ProjLib_Sphere", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Sphere", 
+          "parent": "ProjLib_Sphere", 
+          "arguments": [], 
+          "key": "ProjLib_Sphere::ProjLib_Sphere()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Sphere", 
+          "parent": "ProjLib_Sphere", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sp"
+            }
+          ], 
+          "key": "ProjLib_Sphere::ProjLib_Sphere(gp_Sphere)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Sphere", 
+          "parent": "ProjLib_Sphere", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sp"
+            }, 
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_Sphere::ProjLib_Sphere(gp_Sphere, gp_Circ)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Sphere", 
+          "parent": "ProjLib_Sphere", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_Sphere &", 
+              "type": "ProjLib_Sphere", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_Sphere::ProjLib_Sphere(ProjLib_Sphere)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "ProjLib_Sphere", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sp"
+            }
+          ], 
+          "key": "ProjLib_Sphere::Init(gp_Sphere)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Sphere", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "L"
+            }
+          ], 
+          "key": "ProjLib_Sphere::Project(gp_Lin)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Sphere", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_Sphere::Project(gp_Circ)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Sphere", 
+          "arguments": [
+            {
+              "decl": "const gp_Elips &", 
+              "type": "gp_Elips", 
+              "name": "E"
+            }
+          ], 
+          "key": "ProjLib_Sphere::Project(gp_Elips)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Sphere", 
+          "arguments": [
+            {
+              "decl": "const gp_Parab &", 
+              "type": "gp_Parab", 
+              "name": "P"
+            }
+          ], 
+          "key": "ProjLib_Sphere::Project(gp_Parab)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Sphere", 
+          "arguments": [
+            {
+              "decl": "const gp_Hypr &", 
+              "type": "gp_Hypr", 
+              "name": "H"
+            }
+          ], 
+          "key": "ProjLib_Sphere::Project(gp_Hypr)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetInBounds", 
+          "parent": "ProjLib_Sphere", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }
+          ], 
+          "key": "ProjLib_Sphere::SetInBounds(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "ProjLib_Projector"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_Sphere.hxx", 
+        37
+      ], 
+      "key": "ProjLib_Sphere"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ProjLib_HSequenceOfHSequenceOfPnt", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_HSequenceOfHSequenceOfPnt", 
+          "parent": "ProjLib_HSequenceOfHSequenceOfPnt", 
+          "arguments": [], 
+          "key": "ProjLib_HSequenceOfHSequenceOfPnt::ProjLib_HSequenceOfHSequenceOfPnt()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_HSequenceOfHSequenceOfPnt", 
+          "parent": "ProjLib_HSequenceOfHSequenceOfPnt", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_SequenceOfHSequenceOfPnt &", 
+              "type": "ProjLib_SequenceOfHSequenceOfPnt", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "ProjLib_HSequenceOfHSequenceOfPnt::ProjLib_HSequenceOfHSequenceOfPnt(ProjLib_SequenceOfHSequenceOfPnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_HSequenceOfHSequenceOfPnt", 
+          "parent": "ProjLib_HSequenceOfHSequenceOfPnt", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_HSequenceOfHSequenceOfPnt &", 
+              "type": "ProjLib_HSequenceOfHSequenceOfPnt", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_HSequenceOfHSequenceOfPnt::ProjLib_HSequenceOfHSequenceOfPnt(ProjLib_HSequenceOfHSequenceOfPnt)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Sequence", 
+          "parent": "ProjLib_HSequenceOfHSequenceOfPnt", 
+          "arguments": [], 
+          "key": "ProjLib_HSequenceOfHSequenceOfPnt::Sequence()", 
+          "returnType": "ProjLib_SequenceOfHSequenceOfPnt const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Append", 
+          "parent": "ProjLib_HSequenceOfHSequenceOfPnt", 
+          "arguments": [
+            {
+              "decl": "const NCollection_Sequence<opencascade::handle<TColgp_HSequenceOfPnt> >::value_type &", 
+              "type": "NCollection_Sequence<opencascade::handle<TColgp_HSequenceOfPnt> >::value_type", 
+              "name": "theItem"
+            }
+          ], 
+          "key": "ProjLib_HSequenceOfHSequenceOfPnt::Append(NCollection_Sequence<opencascade::handle<TColgp_HSequenceOfPnt> >::value_type)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Append", 
+          "parent": "ProjLib_HSequenceOfHSequenceOfPnt", 
+          "arguments": [
+            {
+              "decl": "ProjLib_SequenceOfHSequenceOfPnt &", 
+              "type": "ProjLib_SequenceOfHSequenceOfPnt", 
+              "name": "theSequence"
+            }
+          ], 
+          "key": "ProjLib_HSequenceOfHSequenceOfPnt::Append(ProjLib_SequenceOfHSequenceOfPnt)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeSequence", 
+          "parent": "ProjLib_HSequenceOfHSequenceOfPnt", 
+          "arguments": [], 
+          "key": "ProjLib_HSequenceOfHSequenceOfPnt::ChangeSequence()", 
+          "returnType": "ProjLib_SequenceOfHSequenceOfPnt &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "ProjLib_HSequenceOfHSequenceOfPnt", 
+          "arguments": [], 
+          "key": "ProjLib_HSequenceOfHSequenceOfPnt::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "ProjLib_HSequenceOfHSequenceOfPnt", 
+          "arguments": [], 
+          "key": "ProjLib_HSequenceOfHSequenceOfPnt::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "ProjLib_HSequenceOfHSequenceOfPnt", 
+          "arguments": [], 
+          "key": "ProjLib_HSequenceOfHSequenceOfPnt::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Sequence<opencascade::handle<TColgp_HSequenceOfPnt> >"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_HSequenceOfHSequenceOfPnt.hxx", 
+        24
+      ], 
+      "key": "ProjLib_HSequenceOfHSequenceOfPnt"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ProjLib_ComputeApprox", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ComputeApprox", 
+          "parent": "ProjLib_ComputeApprox", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "ProjLib_ComputeApprox::ProjLib_ComputeApprox(opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor3d_HSurface>, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ComputeApprox", 
+          "parent": "ProjLib_ComputeApprox", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_ComputeApprox &", 
+              "type": "ProjLib_ComputeApprox", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_ComputeApprox::ProjLib_ComputeApprox(ProjLib_ComputeApprox)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "BSpline", 
+          "parent": "ProjLib_ComputeApprox", 
+          "arguments": [], 
+          "key": "ProjLib_ComputeApprox::BSpline()", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Bezier", 
+          "parent": "ProjLib_ComputeApprox", 
+          "arguments": [], 
+          "key": "ProjLib_ComputeApprox::Bezier()", 
+          "returnType": "opencascade::handle<Geom2d_BezierCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Tolerance", 
+          "parent": "ProjLib_ComputeApprox", 
+          "arguments": [], 
+          "key": "ProjLib_ComputeApprox::Tolerance()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_ComputeApprox.hxx", 
+        34
+      ], 
+      "key": "ProjLib_ComputeApprox"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ProjLib_PrjFunc", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_PrjFunc", 
+          "parent": "ProjLib_PrjFunc", 
+          "arguments": [
+            {
+              "decl": "const Adaptor3d_CurvePtr &", 
+              "type": "Adaptor3d_CurvePtr", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "FixVal"
+            }, 
+            {
+              "decl": "const Adaptor3d_SurfacePtr &", 
+              "type": "Adaptor3d_SurfacePtr", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Fix"
+            }
+          ], 
+          "key": "ProjLib_PrjFunc::ProjLib_PrjFunc(Adaptor3d_CurvePtr, Standard_Real, Adaptor3d_SurfacePtr, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_PrjFunc", 
+          "parent": "ProjLib_PrjFunc", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_PrjFunc &", 
+              "type": "ProjLib_PrjFunc", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_PrjFunc::ProjLib_PrjFunc(ProjLib_PrjFunc)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbVariables", 
+          "parent": "ProjLib_PrjFunc", 
+          "arguments": [], 
+          "key": "ProjLib_PrjFunc::NbVariables()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbEquations", 
+          "parent": "ProjLib_PrjFunc", 
+          "arguments": [], 
+          "key": "ProjLib_PrjFunc::NbEquations()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "ProjLib_PrjFunc", 
+          "arguments": [
+            {
+              "decl": "const math_Vector &", 
+              "type": "math_Vector", 
+              "name": "X"
+            }, 
+            {
+              "decl": "math_Vector &", 
+              "type": "math_Vector", 
+              "name": "F"
+            }
+          ], 
+          "key": "ProjLib_PrjFunc::Value(math_Vector, math_Vector)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Derivatives", 
+          "parent": "ProjLib_PrjFunc", 
+          "arguments": [
+            {
+              "decl": "const math_Vector &", 
+              "type": "math_Vector", 
+              "name": "X"
+            }, 
+            {
+              "decl": "math_Matrix &", 
+              "type": "math_Matrix", 
+              "name": "D"
+            }
+          ], 
+          "key": "ProjLib_PrjFunc::Derivatives(math_Vector, math_Matrix)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Values", 
+          "parent": "ProjLib_PrjFunc", 
+          "arguments": [
+            {
+              "decl": "const math_Vector &", 
+              "type": "math_Vector", 
+              "name": "X"
+            }, 
+            {
+              "decl": "math_Vector &", 
+              "type": "math_Vector", 
+              "name": "F"
+            }, 
+            {
+              "decl": "math_Matrix &", 
+              "type": "math_Matrix", 
+              "name": "D"
+            }
+          ], 
+          "key": "ProjLib_PrjFunc::Values(math_Vector, math_Vector, math_Matrix)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Solution", 
+          "parent": "ProjLib_PrjFunc", 
+          "arguments": [], 
+          "key": "ProjLib_PrjFunc::Solution()", 
+          "returnType": "gp_Pnt2d", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionSetWithDerivatives"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_PrjFunc.hxx", 
+        37
+      ], 
+      "key": "ProjLib_PrjFunc"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ProjLib_Cylinder", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Cylinder", 
+          "parent": "ProjLib_Cylinder", 
+          "arguments": [], 
+          "key": "ProjLib_Cylinder::ProjLib_Cylinder()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Cylinder", 
+          "parent": "ProjLib_Cylinder", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }
+          ], 
+          "key": "ProjLib_Cylinder::ProjLib_Cylinder(gp_Cylinder)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Cylinder", 
+          "parent": "ProjLib_Cylinder", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }, 
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "L"
+            }
+          ], 
+          "key": "ProjLib_Cylinder::ProjLib_Cylinder(gp_Cylinder, gp_Lin)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Cylinder", 
+          "parent": "ProjLib_Cylinder", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }, 
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_Cylinder::ProjLib_Cylinder(gp_Cylinder, gp_Circ)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Cylinder", 
+          "parent": "ProjLib_Cylinder", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }, 
+            {
+              "decl": "const gp_Elips &", 
+              "type": "gp_Elips", 
+              "name": "E"
+            }
+          ], 
+          "key": "ProjLib_Cylinder::ProjLib_Cylinder(gp_Cylinder, gp_Elips)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Cylinder", 
+          "parent": "ProjLib_Cylinder", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_Cylinder &", 
+              "type": "ProjLib_Cylinder", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_Cylinder::ProjLib_Cylinder(ProjLib_Cylinder)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "ProjLib_Cylinder", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }
+          ], 
+          "key": "ProjLib_Cylinder::Init(gp_Cylinder)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Cylinder", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "L"
+            }
+          ], 
+          "key": "ProjLib_Cylinder::Project(gp_Lin)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Cylinder", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_Cylinder::Project(gp_Circ)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Cylinder", 
+          "arguments": [
+            {
+              "decl": "const gp_Elips &", 
+              "type": "gp_Elips", 
+              "name": "E"
+            }
+          ], 
+          "key": "ProjLib_Cylinder::Project(gp_Elips)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Cylinder", 
+          "arguments": [
+            {
+              "decl": "const gp_Parab &", 
+              "type": "gp_Parab", 
+              "name": "P"
+            }
+          ], 
+          "key": "ProjLib_Cylinder::Project(gp_Parab)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Cylinder", 
+          "arguments": [
+            {
+              "decl": "const gp_Hypr &", 
+              "type": "gp_Hypr", 
+              "name": "H"
+            }
+          ], 
+          "key": "ProjLib_Cylinder::Project(gp_Hypr)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "ProjLib_Projector"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_Cylinder.hxx", 
+        36
+      ], 
+      "key": "ProjLib_Cylinder"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ProjLib_ProjectedCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ProjectedCurve", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::ProjLib_ProjectedCurve()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ProjectedCurve", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::ProjLib_ProjectedCurve(opencascade::handle<Adaptor3d_HSurface>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ProjectedCurve", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::ProjLib_ProjectedCurve(opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor3d_HCurve>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ProjectedCurve", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::ProjLib_ProjectedCurve(opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor3d_HCurve>, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ProjectedCurve", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_ProjectedCurve &", 
+              "type": "ProjLib_ProjectedCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::ProjLib_ProjectedCurve(ProjLib_ProjectedCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::Load(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::Load(opencascade::handle<Adaptor3d_HSurface>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::Load(opencascade::handle<Adaptor3d_HCurve>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetSurface", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::GetSurface()", 
+          "returnType": "opencascade::handle<Adaptor3d_HSurface> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetCurve", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::GetCurve()", 
+          "returnType": "opencascade::handle<Adaptor3d_HCurve> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetTolerance", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::GetTolerance()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstParameter", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::FirstParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastParameter", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::LastParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Continuity", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::Continuity()", 
+          "returnType": "GeomAbs_Shape", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbIntervals", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::NbIntervals(GeomAbs_Shape)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Intervals", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Trim", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::Trim(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "opencascade::handle<Adaptor2d_HCurve2d>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsClosed", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::IsClosed()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsPeriodic", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::IsPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Period", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::Period()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::Value(Standard_Real)", 
+          "returnType": "gp_Pnt2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D0", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::D0(Standard_Real, gp_Pnt2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::D1(Standard_Real, gp_Pnt2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V2"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::D2(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D3", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V2"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V3"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::D3(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "DN", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::DN(Standard_Real, Standard_Integer)", 
+          "returnType": "gp_Vec2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Resolution", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "R3d"
+            }
+          ], 
+          "key": "ProjLib_ProjectedCurve::Resolution(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetType", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::GetType()", 
+          "returnType": "GeomAbs_CurveType", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Line", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::Line()", 
+          "returnType": "gp_Lin2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Circle", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::Circle()", 
+          "returnType": "gp_Circ2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Ellipse", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::Ellipse()", 
+          "returnType": "gp_Elips2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Hyperbola", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::Hyperbola()", 
+          "returnType": "gp_Hypr2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parabola", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::Parabola()", 
+          "returnType": "gp_Parab2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Degree", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::Degree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsRational", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::IsRational()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPoles", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::NbPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbKnots", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::NbKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Bezier", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::Bezier()", 
+          "returnType": "opencascade::handle<Geom2d_BezierCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "BSpline", 
+          "parent": "ProjLib_ProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectedCurve::BSpline()", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor2d_Curve2d"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_ProjectedCurve.hxx", 
+        53
+      ], 
+      "key": "ProjLib_ProjectedCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ProjLib_ProjectOnPlane", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ProjectOnPlane", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::ProjLib_ProjectOnPlane()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ProjectOnPlane", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax3 &", 
+              "type": "gp_Ax3", 
+              "name": "Pl"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnPlane::ProjLib_ProjectOnPlane(gp_Ax3)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ProjectOnPlane", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax3 &", 
+              "type": "gp_Ax3", 
+              "name": "Pl"
+            }, 
+            {
+              "decl": "const gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "D"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnPlane::ProjLib_ProjectOnPlane(gp_Ax3, gp_Dir)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ProjectOnPlane", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_ProjectOnPlane &", 
+              "type": "ProjLib_ProjectOnPlane", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnPlane::ProjLib_ProjectOnPlane(ProjLib_ProjectOnPlane)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "KeepParametrization", 
+              "default": "true"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnPlane::Load(opencascade::handle<Adaptor3d_HCurve>, Standard_Real, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetPlane", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::GetPlane()", 
+          "returnType": "gp_Ax3 const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetDirection", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::GetDirection()", 
+          "returnType": "gp_Dir const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetCurve", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::GetCurve()", 
+          "returnType": "opencascade::handle<Adaptor3d_HCurve> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstParameter", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::FirstParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastParameter", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::LastParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Continuity", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::Continuity()", 
+          "returnType": "GeomAbs_Shape", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbIntervals", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnPlane::NbIntervals(GeomAbs_Shape)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Intervals", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnPlane::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Trim", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnPlane::Trim(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "opencascade::handle<Adaptor3d_HCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsClosed", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::IsClosed()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsPeriodic", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::IsPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Period", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::Period()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnPlane::Value(Standard_Real)", 
+          "returnType": "gp_Pnt", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D0", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnPlane::D0(Standard_Real, gp_Pnt)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnPlane::D1(Standard_Real, gp_Pnt, gp_Vec)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V2"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnPlane::D2(Standard_Real, gp_Pnt, gp_Vec, gp_Vec)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D3", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V2"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V3"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnPlane::D3(Standard_Real, gp_Pnt, gp_Vec, gp_Vec, gp_Vec)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "DN", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnPlane::DN(Standard_Real, Standard_Integer)", 
+          "returnType": "gp_Vec", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Resolution", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "R3d"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnPlane::Resolution(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetType", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::GetType()", 
+          "returnType": "GeomAbs_CurveType", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Line", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::Line()", 
+          "returnType": "gp_Lin", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Circle", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::Circle()", 
+          "returnType": "gp_Circ", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Ellipse", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::Ellipse()", 
+          "returnType": "gp_Elips", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Hyperbola", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::Hyperbola()", 
+          "returnType": "gp_Hypr", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parabola", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::Parabola()", 
+          "returnType": "gp_Parab", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Degree", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::Degree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsRational", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::IsRational()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPoles", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::NbPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbKnots", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::NbKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Bezier", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::Bezier()", 
+          "returnType": "opencascade::handle<Geom_BezierCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "BSpline", 
+          "parent": "ProjLib_ProjectOnPlane", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnPlane::BSpline()", 
+          "returnType": "opencascade::handle<Geom_BSplineCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor3d_Curve"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_ProjectOnPlane.hxx", 
+        61
+      ], 
+      "key": "ProjLib_ProjectOnPlane"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ProjLib_Plane", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Plane", 
+          "parent": "ProjLib_Plane", 
+          "arguments": [], 
+          "key": "ProjLib_Plane::ProjLib_Plane()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Plane", 
+          "parent": "ProjLib_Plane", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "Pl"
+            }
+          ], 
+          "key": "ProjLib_Plane::ProjLib_Plane(gp_Pln)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Plane", 
+          "parent": "ProjLib_Plane", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "Pl"
+            }, 
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "L"
+            }
+          ], 
+          "key": "ProjLib_Plane::ProjLib_Plane(gp_Pln, gp_Lin)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Plane", 
+          "parent": "ProjLib_Plane", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "Pl"
+            }, 
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_Plane::ProjLib_Plane(gp_Pln, gp_Circ)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Plane", 
+          "parent": "ProjLib_Plane", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "Pl"
+            }, 
+            {
+              "decl": "const gp_Elips &", 
+              "type": "gp_Elips", 
+              "name": "E"
+            }
+          ], 
+          "key": "ProjLib_Plane::ProjLib_Plane(gp_Pln, gp_Elips)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Plane", 
+          "parent": "ProjLib_Plane", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "Pl"
+            }, 
+            {
+              "decl": "const gp_Parab &", 
+              "type": "gp_Parab", 
+              "name": "P"
+            }
+          ], 
+          "key": "ProjLib_Plane::ProjLib_Plane(gp_Pln, gp_Parab)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Plane", 
+          "parent": "ProjLib_Plane", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "Pl"
+            }, 
+            {
+              "decl": "const gp_Hypr &", 
+              "type": "gp_Hypr", 
+              "name": "H"
+            }
+          ], 
+          "key": "ProjLib_Plane::ProjLib_Plane(gp_Pln, gp_Hypr)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Plane", 
+          "parent": "ProjLib_Plane", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_Plane &", 
+              "type": "ProjLib_Plane", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_Plane::ProjLib_Plane(ProjLib_Plane)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "ProjLib_Plane", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "Pl"
+            }
+          ], 
+          "key": "ProjLib_Plane::Init(gp_Pln)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Plane", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "L"
+            }
+          ], 
+          "key": "ProjLib_Plane::Project(gp_Lin)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Plane", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_Plane::Project(gp_Circ)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Plane", 
+          "arguments": [
+            {
+              "decl": "const gp_Elips &", 
+              "type": "gp_Elips", 
+              "name": "E"
+            }
+          ], 
+          "key": "ProjLib_Plane::Project(gp_Elips)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Plane", 
+          "arguments": [
+            {
+              "decl": "const gp_Parab &", 
+              "type": "gp_Parab", 
+              "name": "P"
+            }
+          ], 
+          "key": "ProjLib_Plane::Project(gp_Parab)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Plane", 
+          "arguments": [
+            {
+              "decl": "const gp_Hypr &", 
+              "type": "gp_Hypr", 
+              "name": "H"
+            }
+          ], 
+          "key": "ProjLib_Plane::Project(gp_Hypr)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "ProjLib_Projector"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_Plane.hxx", 
+        36
+      ], 
+      "key": "ProjLib_Plane"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ProjLib_Cone", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Cone", 
+          "parent": "ProjLib_Cone", 
+          "arguments": [], 
+          "key": "ProjLib_Cone::ProjLib_Cone()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Cone", 
+          "parent": "ProjLib_Cone", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Co"
+            }
+          ], 
+          "key": "ProjLib_Cone::ProjLib_Cone(gp_Cone)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Cone", 
+          "parent": "ProjLib_Cone", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Co"
+            }, 
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "L"
+            }
+          ], 
+          "key": "ProjLib_Cone::ProjLib_Cone(gp_Cone, gp_Lin)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Cone", 
+          "parent": "ProjLib_Cone", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Co"
+            }, 
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_Cone::ProjLib_Cone(gp_Cone, gp_Circ)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Cone", 
+          "parent": "ProjLib_Cone", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_Cone &", 
+              "type": "ProjLib_Cone", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_Cone::ProjLib_Cone(ProjLib_Cone)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "ProjLib_Cone", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Co"
+            }
+          ], 
+          "key": "ProjLib_Cone::Init(gp_Cone)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Cone", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "L"
+            }
+          ], 
+          "key": "ProjLib_Cone::Project(gp_Lin)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Cone", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_Cone::Project(gp_Circ)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Cone", 
+          "arguments": [
+            {
+              "decl": "const gp_Elips &", 
+              "type": "gp_Elips", 
+              "name": "E"
+            }
+          ], 
+          "key": "ProjLib_Cone::Project(gp_Elips)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Cone", 
+          "arguments": [
+            {
+              "decl": "const gp_Parab &", 
+              "type": "gp_Parab", 
+              "name": "P"
+            }
+          ], 
+          "key": "ProjLib_Cone::Project(gp_Parab)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Cone", 
+          "arguments": [
+            {
+              "decl": "const gp_Hypr &", 
+              "type": "gp_Hypr", 
+              "name": "H"
+            }
+          ], 
+          "key": "ProjLib_Cone::Project(gp_Hypr)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "ProjLib_Projector"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_Cone.hxx", 
+        36
+      ], 
+      "key": "ProjLib_Cone"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ProjLib_HProjectedCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_HProjectedCurve", 
+          "parent": "ProjLib_HProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_HProjectedCurve::ProjLib_HProjectedCurve()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_HProjectedCurve", 
+          "parent": "ProjLib_HProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_ProjectedCurve &", 
+              "type": "ProjLib_ProjectedCurve", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_HProjectedCurve::ProjLib_HProjectedCurve(ProjLib_ProjectedCurve)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_HProjectedCurve", 
+          "parent": "ProjLib_HProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_HProjectedCurve &", 
+              "type": "ProjLib_HProjectedCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_HProjectedCurve::ProjLib_HProjectedCurve(ProjLib_HProjectedCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "ProjLib_HProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_ProjectedCurve &", 
+              "type": "ProjLib_ProjectedCurve", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_HProjectedCurve::Set(ProjLib_ProjectedCurve)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve2d", 
+          "parent": "ProjLib_HProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_HProjectedCurve::Curve2d()", 
+          "returnType": "Adaptor2d_Curve2d const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeCurve2d", 
+          "parent": "ProjLib_HProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_HProjectedCurve::ChangeCurve2d()", 
+          "returnType": "ProjLib_ProjectedCurve &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "ProjLib_HProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_HProjectedCurve::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "ProjLib_HProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_HProjectedCurve::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "ProjLib_HProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_HProjectedCurve::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor2d_HCurve2d"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_HProjectedCurve.hxx", 
+        36
+      ], 
+      "key": "ProjLib_HProjectedCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ProjLib_ProjectOnSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ProjectOnSurface", 
+          "parent": "ProjLib_ProjectOnSurface", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnSurface::ProjLib_ProjectOnSurface()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ProjectOnSurface", 
+          "parent": "ProjLib_ProjectOnSurface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnSurface::ProjLib_ProjectOnSurface(opencascade::handle<Adaptor3d_HSurface>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ProjectOnSurface", 
+          "parent": "ProjLib_ProjectOnSurface", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_ProjectOnSurface &", 
+              "type": "ProjLib_ProjectOnSurface", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnSurface::ProjLib_ProjectOnSurface(ProjLib_ProjectOnSurface)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "ProjLib_ProjectOnSurface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnSurface::Load(opencascade::handle<Adaptor3d_HSurface>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "ProjLib_ProjectOnSurface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance"
+            }
+          ], 
+          "key": "ProjLib_ProjectOnSurface::Load(opencascade::handle<Adaptor3d_HCurve>, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "ProjLib_ProjectOnSurface", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnSurface::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "BSpline", 
+          "parent": "ProjLib_ProjectOnSurface", 
+          "arguments": [], 
+          "key": "ProjLib_ProjectOnSurface::BSpline()", 
+          "returnType": "opencascade::handle<Geom_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_ProjectOnSurface.hxx", 
+        33
+      ], 
+      "key": "ProjLib_ProjectOnSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ProjLib_CompProjectedCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_CompProjectedCurve", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_CompProjectedCurve::ProjLib_CompProjectedCurve()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_CompProjectedCurve", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "TolU"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "TolV"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::ProjLib_CompProjectedCurve(opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor3d_HCurve>, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_CompProjectedCurve", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "TolU"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "TolV"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "MaxDist"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::ProjLib_CompProjectedCurve(opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor3d_HCurve>, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_CompProjectedCurve", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_CompProjectedCurve &", 
+              "type": "ProjLib_CompProjectedCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::ProjLib_CompProjectedCurve(ProjLib_CompProjectedCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_CompProjectedCurve::Init()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::Load(opencascade::handle<Adaptor3d_HSurface>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::Load(opencascade::handle<Adaptor3d_HCurve>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetSurface", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_CompProjectedCurve::GetSurface()", 
+          "returnType": "opencascade::handle<Adaptor3d_HSurface> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetCurve", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_CompProjectedCurve::GetCurve()", 
+          "returnType": "opencascade::handle<Adaptor3d_HCurve> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetTolerance", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "TolU"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "TolV"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::GetTolerance(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbCurves", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_CompProjectedCurve::NbCurves()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Bounds", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Udeb"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Ufin"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::Bounds(Standard_Integer, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsSinglePnt", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::IsSinglePnt(Standard_Integer, gp_Pnt2d)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsUIso", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::IsUIso(Standard_Integer, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVIso", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::IsVIso(Standard_Integer, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::Value(Standard_Real)", 
+          "returnType": "gp_Pnt2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D0", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::D0(Standard_Real, gp_Pnt2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::D1(Standard_Real, gp_Pnt2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V2"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::D2(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "DN", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::DN(Standard_Real, Standard_Integer)", 
+          "returnType": "gp_Vec2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstParameter", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_CompProjectedCurve::FirstParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastParameter", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_CompProjectedCurve::LastParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbIntervals", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::NbIntervals(GeomAbs_Shape)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Trim", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "FirstParam"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "LastParam"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::Trim(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "opencascade::handle<Adaptor2d_HCurve2d>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Intervals", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxDistance", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "ProjLib_CompProjectedCurve::MaxDistance(Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetSequence", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_CompProjectedCurve::GetSequence()", 
+          "returnType": "opencascade::handle<ProjLib_HSequenceOfHSequenceOfPnt> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetType", 
+          "parent": "ProjLib_CompProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_CompProjectedCurve::GetType()", 
+          "returnType": "GeomAbs_CurveType", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor2d_Curve2d"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_CompProjectedCurve.hxx", 
+        46
+      ], 
+      "key": "ProjLib_CompProjectedCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ProjLib_Torus", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Torus", 
+          "parent": "ProjLib_Torus", 
+          "arguments": [], 
+          "key": "ProjLib_Torus::ProjLib_Torus()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Torus", 
+          "parent": "ProjLib_Torus", 
+          "arguments": [
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "To"
+            }
+          ], 
+          "key": "ProjLib_Torus::ProjLib_Torus(gp_Torus)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Torus", 
+          "parent": "ProjLib_Torus", 
+          "arguments": [
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "To"
+            }, 
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_Torus::ProjLib_Torus(gp_Torus, gp_Circ)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_Torus", 
+          "parent": "ProjLib_Torus", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_Torus &", 
+              "type": "ProjLib_Torus", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_Torus::ProjLib_Torus(ProjLib_Torus)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "ProjLib_Torus", 
+          "arguments": [
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "To"
+            }
+          ], 
+          "key": "ProjLib_Torus::Init(gp_Torus)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Torus", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "L"
+            }
+          ], 
+          "key": "ProjLib_Torus::Project(gp_Lin)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Torus", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_Torus::Project(gp_Circ)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Torus", 
+          "arguments": [
+            {
+              "decl": "const gp_Elips &", 
+              "type": "gp_Elips", 
+              "name": "E"
+            }
+          ], 
+          "key": "ProjLib_Torus::Project(gp_Elips)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Torus", 
+          "arguments": [
+            {
+              "decl": "const gp_Parab &", 
+              "type": "gp_Parab", 
+              "name": "P"
+            }
+          ], 
+          "key": "ProjLib_Torus::Project(gp_Parab)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "ProjLib_Torus", 
+          "arguments": [
+            {
+              "decl": "const gp_Hypr &", 
+              "type": "gp_Hypr", 
+              "name": "H"
+            }
+          ], 
+          "key": "ProjLib_Torus::Project(gp_Hypr)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "ProjLib_Projector"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_Torus.hxx", 
+        36
+      ], 
+      "key": "ProjLib_Torus"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ProjLib_HCompProjectedCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_HCompProjectedCurve", 
+          "parent": "ProjLib_HCompProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_HCompProjectedCurve::ProjLib_HCompProjectedCurve()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_HCompProjectedCurve", 
+          "parent": "ProjLib_HCompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_CompProjectedCurve &", 
+              "type": "ProjLib_CompProjectedCurve", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_HCompProjectedCurve::ProjLib_HCompProjectedCurve(ProjLib_CompProjectedCurve)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_HCompProjectedCurve", 
+          "parent": "ProjLib_HCompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_HCompProjectedCurve &", 
+              "type": "ProjLib_HCompProjectedCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_HCompProjectedCurve::ProjLib_HCompProjectedCurve(ProjLib_HCompProjectedCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "ProjLib_HCompProjectedCurve", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_CompProjectedCurve &", 
+              "type": "ProjLib_CompProjectedCurve", 
+              "name": "C"
+            }
+          ], 
+          "key": "ProjLib_HCompProjectedCurve::Set(ProjLib_CompProjectedCurve)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve2d", 
+          "parent": "ProjLib_HCompProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_HCompProjectedCurve::Curve2d()", 
+          "returnType": "Adaptor2d_Curve2d const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeCurve2d", 
+          "parent": "ProjLib_HCompProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_HCompProjectedCurve::ChangeCurve2d()", 
+          "returnType": "ProjLib_CompProjectedCurve &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "ProjLib_HCompProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_HCompProjectedCurve::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "ProjLib_HCompProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_HCompProjectedCurve::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "ProjLib_HCompProjectedCurve", 
+          "arguments": [], 
+          "key": "ProjLib_HCompProjectedCurve::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor2d_HCurve2d"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_HCompProjectedCurve.hxx", 
+        36
+      ], 
+      "key": "ProjLib_HCompProjectedCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ProjLib_ComputeApproxOnPolarSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ComputeApproxOnPolarSurface", 
+          "parent": "ProjLib_ComputeApproxOnPolarSurface", 
+          "arguments": [], 
+          "key": "ProjLib_ComputeApproxOnPolarSurface::ProjLib_ComputeApproxOnPolarSurface()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ComputeApproxOnPolarSurface", 
+          "parent": "ProjLib_ComputeApproxOnPolarSurface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "default": "1.0E-4"
+            }
+          ], 
+          "key": "ProjLib_ComputeApproxOnPolarSurface::ProjLib_ComputeApproxOnPolarSurface(opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor3d_HSurface>, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ComputeApproxOnPolarSurface", 
+          "parent": "ProjLib_ComputeApproxOnPolarSurface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "InitCurve2d"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "ProjLib_ComputeApproxOnPolarSurface::ProjLib_ComputeApproxOnPolarSurface(opencascade::handle<Adaptor2d_HCurve2d>, opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor3d_HSurface>, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ComputeApproxOnPolarSurface", 
+          "parent": "ProjLib_ComputeApproxOnPolarSurface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "InitCurve2d"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "InitCurve2dBis"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "ProjLib_ComputeApproxOnPolarSurface::ProjLib_ComputeApproxOnPolarSurface(opencascade::handle<Adaptor2d_HCurve2d>, opencascade::handle<Adaptor2d_HCurve2d>, opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor3d_HSurface>, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_ComputeApproxOnPolarSurface", 
+          "parent": "ProjLib_ComputeApproxOnPolarSurface", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_ComputeApproxOnPolarSurface &", 
+              "type": "ProjLib_ComputeApproxOnPolarSurface", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_ComputeApproxOnPolarSurface::ProjLib_ComputeApproxOnPolarSurface(ProjLib_ComputeApproxOnPolarSurface)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "ProjLib_ComputeApproxOnPolarSurface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "InitCurve2d"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }
+          ], 
+          "key": "ProjLib_ComputeApproxOnPolarSurface::Perform(opencascade::handle<Adaptor2d_HCurve2d>, opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor3d_HSurface>)", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "BuildInitialCurve2d", 
+          "parent": "ProjLib_ComputeApproxOnPolarSurface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "Curve"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }
+          ], 
+          "key": "ProjLib_ComputeApproxOnPolarSurface::BuildInitialCurve2d(opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor3d_HSurface>)", 
+          "returnType": "opencascade::handle<Adaptor2d_HCurve2d>", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ProjectUsingInitialCurve2d", 
+          "parent": "ProjLib_ComputeApproxOnPolarSurface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "Curve"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "InitCurve2d"
+            }
+          ], 
+          "key": "ProjLib_ComputeApproxOnPolarSurface::ProjectUsingInitialCurve2d(opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor2d_HCurve2d>)", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "BSpline", 
+          "parent": "ProjLib_ComputeApproxOnPolarSurface", 
+          "arguments": [], 
+          "key": "ProjLib_ComputeApproxOnPolarSurface::BSpline()", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve2d", 
+          "parent": "ProjLib_ComputeApproxOnPolarSurface", 
+          "arguments": [], 
+          "key": "ProjLib_ComputeApproxOnPolarSurface::Curve2d()", 
+          "returnType": "opencascade::handle<Geom2d_Curve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "ProjLib_ComputeApproxOnPolarSurface", 
+          "arguments": [], 
+          "key": "ProjLib_ComputeApproxOnPolarSurface::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_ComputeApproxOnPolarSurface.hxx", 
+        38
+      ], 
+      "key": "ProjLib_ComputeApproxOnPolarSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ProjLib_PrjResolve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_PrjResolve", 
+          "parent": "ProjLib_PrjResolve", 
+          "arguments": [
+            {
+              "decl": "const Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Adaptor3d_Surface &", 
+              "type": "Adaptor3d_Surface", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Fix"
+            }
+          ], 
+          "key": "ProjLib_PrjResolve::ProjLib_PrjResolve(Adaptor3d_Curve, Adaptor3d_Surface, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "ProjLib_PrjResolve", 
+          "parent": "ProjLib_PrjResolve", 
+          "arguments": [
+            {
+              "decl": "const ProjLib_PrjResolve &", 
+              "type": "ProjLib_PrjResolve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "ProjLib_PrjResolve::ProjLib_PrjResolve(ProjLib_PrjResolve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "ProjLib_PrjResolve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "t"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Tol"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Inf"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Sup"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "FTol", 
+              "default": "-1"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "StrictInside", 
+              "default": "false"
+            }
+          ], 
+          "key": "ProjLib_PrjResolve::Perform(Standard_Real, Standard_Real, Standard_Real, gp_Pnt2d, gp_Pnt2d, gp_Pnt2d, Standard_Real, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "ProjLib_PrjResolve", 
+          "arguments": [], 
+          "key": "ProjLib_PrjResolve::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Solution", 
+          "parent": "ProjLib_PrjResolve", 
+          "arguments": [], 
+          "key": "ProjLib_PrjResolve::Solution()", 
+          "returnType": "gp_Pnt2d", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ProjLib_PrjResolve.hxx", 
+        39
+      ], 
+      "key": "ProjLib_PrjResolve"
+    }, 
+    {
+      "type": "NCollection_Sequence<opencascade::handle<TColgp_HSequenceOfPnt> >", 
+      "declType": "typedef", 
+      "name": "ProjLib_SequenceOfHSequenceOfPnt", 
+      "key": "ProjLib_SequenceOfHSequenceOfPnt"
+    }, 
+    {
+      "type": "opencascade::handle<ProjLib_HSequenceOfHSequenceOfPnt>", 
+      "declType": "typedef", 
+      "name": "Handle_ProjLib_HSequenceOfHSequenceOfPnt", 
+      "key": "Handle_ProjLib_HSequenceOfHSequenceOfPnt"
+    }, 
+    {
+      "type": "opencascade::handle<ProjLib_HProjectedCurve>", 
+      "declType": "typedef", 
+      "name": "Handle_ProjLib_HProjectedCurve", 
+      "key": "Handle_ProjLib_HProjectedCurve"
+    }, 
+    {
+      "type": "opencascade::handle<ProjLib_HCompProjectedCurve>", 
+      "declType": "typedef", 
+      "name": "Handle_ProjLib_HCompProjectedCurve", 
+      "key": "Handle_ProjLib_HCompProjectedCurve"
+    }
+  ], 
+  "name": "ProjLib"
+}

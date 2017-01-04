@@ -1,0 +1,393 @@
+{
+  "headers": [
+    "CSLib_DerivativeStatus.hxx", 
+    "CSLib_Class2d.hxx", 
+    "CSLib_NormalPolyDef.hxx", 
+    "CSLib_NormalStatus.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "CSLib_Class2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "CSLib_Class2d", 
+          "parent": "CSLib_Class2d", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array1OfPnt2d &", 
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "TP"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "aTolu"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "aTolv"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "umin"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "vmin"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "umax"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "vmax"
+            }
+          ], 
+          "key": "CSLib_Class2d::CSLib_Class2d(TColgp_Array1OfPnt2d, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "CSLib_Class2d", 
+          "parent": "CSLib_Class2d", 
+          "arguments": [
+            {
+              "decl": "const CSLib_Class2d &", 
+              "type": "CSLib_Class2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "CSLib_Class2d::CSLib_Class2d(CSLib_Class2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SiDans", 
+          "parent": "CSLib_Class2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }
+          ], 
+          "key": "CSLib_Class2d::SiDans(gp_Pnt2d)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SiDans_OnMode", 
+          "parent": "CSLib_Class2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "CSLib_Class2d::SiDans_OnMode(gp_Pnt2d, Standard_Real)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "InternalSiDans", 
+          "parent": "CSLib_Class2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Y"
+            }
+          ], 
+          "key": "CSLib_Class2d::InternalSiDans(Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "InternalSiDansOuOn", 
+          "parent": "CSLib_Class2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Y"
+            }
+          ], 
+          "key": "CSLib_Class2d::InternalSiDansOuOn(Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Copy", 
+          "parent": "CSLib_Class2d", 
+          "arguments": [
+            {
+              "decl": "const CSLib_Class2d &", 
+              "type": "CSLib_Class2d", 
+              "name": "Other"
+            }
+          ], 
+          "key": "CSLib_Class2d::Copy(CSLib_Class2d)", 
+          "returnType": "CSLib_Class2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Destroy", 
+          "parent": "CSLib_Class2d", 
+          "arguments": [], 
+          "key": "CSLib_Class2d::Destroy()", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/CSLib_Class2d.hxx", 
+        34
+      ], 
+      "key": "CSLib_Class2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "CSLib_NormalPolyDef", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "CSLib_NormalPolyDef", 
+          "parent": "CSLib_NormalPolyDef", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "k0"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "li"
+            }
+          ], 
+          "key": "CSLib_NormalPolyDef::CSLib_NormalPolyDef(Standard_Integer, TColStd_Array1OfReal)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "CSLib_NormalPolyDef", 
+          "parent": "CSLib_NormalPolyDef", 
+          "arguments": [
+            {
+              "decl": "const CSLib_NormalPolyDef &", 
+              "type": "CSLib_NormalPolyDef", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "CSLib_NormalPolyDef::CSLib_NormalPolyDef(CSLib_NormalPolyDef)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "CSLib_NormalPolyDef", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "F"
+            }
+          ], 
+          "key": "CSLib_NormalPolyDef::Value(Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Derivative", 
+          "parent": "CSLib_NormalPolyDef", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "D"
+            }
+          ], 
+          "key": "CSLib_NormalPolyDef::Derivative(Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Values", 
+          "parent": "CSLib_NormalPolyDef", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "F"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "D"
+            }
+          ], 
+          "key": "CSLib_NormalPolyDef::Values(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionWithDerivative"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/CSLib_NormalPolyDef.hxx", 
+        32
+      ], 
+      "key": "CSLib_NormalPolyDef"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "CSLib_Done", 
+          0
+        ], 
+        [
+          "CSLib_D1uIsNull", 
+          1
+        ], 
+        [
+          "CSLib_D1vIsNull", 
+          2
+        ], 
+        [
+          "CSLib_D1IsNull", 
+          3
+        ], 
+        [
+          "CSLib_D1uD1vRatioIsNull", 
+          4
+        ], 
+        [
+          "CSLib_D1vD1uRatioIsNull", 
+          5
+        ], 
+        [
+          "CSLib_D1uIsParallelD1v", 
+          6
+        ]
+      ], 
+      "name": "CSLib_DerivativeStatus", 
+      "key": "CSLib_DerivativeStatus"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "CSLib_Singular", 
+          0
+        ], 
+        [
+          "CSLib_Defined", 
+          1
+        ], 
+        [
+          "CSLib_InfinityOfSolutions", 
+          2
+        ], 
+        [
+          "CSLib_D1NuIsNull", 
+          3
+        ], 
+        [
+          "CSLib_D1NvIsNull", 
+          4
+        ], 
+        [
+          "CSLib_D1NIsNull", 
+          5
+        ], 
+        [
+          "CSLib_D1NuNvRatioIsNull", 
+          6
+        ], 
+        [
+          "CSLib_D1NvNuRatioIsNull", 
+          7
+        ], 
+        [
+          "CSLib_D1NuIsParallelD1Nv", 
+          8
+        ]
+      ], 
+      "name": "CSLib_NormalStatus", 
+      "key": "CSLib_NormalStatus"
+    }
+  ], 
+  "name": "CSLib"
+}

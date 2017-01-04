@@ -1,0 +1,2428 @@
+{
+  "headers": [
+    "Adaptor2d_Line2d.hxx", 
+    "Adaptor2d_Curve2d.hxx", 
+    "Adaptor2d_Curve2dPtr.hxx", 
+    "Adaptor2d_OffsetCurve.hxx", 
+    "Adaptor2d_HLine2d.hxx", 
+    "Adaptor2d_HOffsetCurve.hxx", 
+    "Adaptor2d_HCurve2d.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Adaptor2d_HCurve2d", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "declType": "method", 
+          "name": "Curve2d", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::Curve2d()", 
+          "returnType": "Adaptor2d_Curve2d const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstParameter", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::FirstParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastParameter", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::LastParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Continuity", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::Continuity()", 
+          "returnType": "GeomAbs_Shape", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbIntervals", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "Adaptor2d_HCurve2d::NbIntervals(GeomAbs_Shape)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Intervals", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "Adaptor2d_HCurve2d::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Trim", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "Adaptor2d_HCurve2d::Trim(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "opencascade::handle<Adaptor2d_HCurve2d>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsClosed", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::IsClosed()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsPeriodic", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::IsPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Period", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::Period()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }
+          ], 
+          "key": "Adaptor2d_HCurve2d::Value(Standard_Real)", 
+          "returnType": "gp_Pnt2d", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D0", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }
+          ], 
+          "key": "Adaptor2d_HCurve2d::D0(Standard_Real, gp_Pnt2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V"
+            }
+          ], 
+          "key": "Adaptor2d_HCurve2d::D1(Standard_Real, gp_Pnt2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V2"
+            }
+          ], 
+          "key": "Adaptor2d_HCurve2d::D2(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D3", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V2"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V3"
+            }
+          ], 
+          "key": "Adaptor2d_HCurve2d::D3(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DN", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }
+          ], 
+          "key": "Adaptor2d_HCurve2d::DN(Standard_Real, Standard_Integer)", 
+          "returnType": "gp_Vec2d", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Resolution", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "R3d"
+            }
+          ], 
+          "key": "Adaptor2d_HCurve2d::Resolution(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetType", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::GetType()", 
+          "returnType": "GeomAbs_CurveType", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Line", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::Line()", 
+          "returnType": "gp_Lin2d", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Circle", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::Circle()", 
+          "returnType": "gp_Circ2d", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Ellipse", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::Ellipse()", 
+          "returnType": "gp_Elips2d", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Hyperbola", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::Hyperbola()", 
+          "returnType": "gp_Hypr2d", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parabola", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::Parabola()", 
+          "returnType": "gp_Parab2d", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Degree", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::Degree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsRational", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::IsRational()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPoles", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::NbPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbKnots", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::NbKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Bezier", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::Bezier()", 
+          "returnType": "opencascade::handle<Geom2d_BezierCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "BSpline", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::BSpline()", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Adaptor2d_HCurve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HCurve2d::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Adaptor2d_HCurve2d.hxx", 
+        55
+      ], 
+      "key": "Adaptor2d_HCurve2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Adaptor2d_Curve2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Adaptor2d_Curve2d", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Curve2d &", 
+              "type": "Adaptor2d_Curve2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Adaptor2d_Curve2d::Adaptor2d_Curve2d(Adaptor2d_Curve2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Adaptor2d_Curve2d", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::Adaptor2d_Curve2d()", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstParameter", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::FirstParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastParameter", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::LastParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Continuity", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::Continuity()", 
+          "returnType": "GeomAbs_Shape", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbIntervals", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "Adaptor2d_Curve2d::NbIntervals(GeomAbs_Shape)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Intervals", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "Adaptor2d_Curve2d::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Trim", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "Adaptor2d_Curve2d::Trim(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "opencascade::handle<Adaptor2d_HCurve2d>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsClosed", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::IsClosed()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsPeriodic", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::IsPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Period", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::Period()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }
+          ], 
+          "key": "Adaptor2d_Curve2d::Value(Standard_Real)", 
+          "returnType": "gp_Pnt2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D0", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }
+          ], 
+          "key": "Adaptor2d_Curve2d::D0(Standard_Real, gp_Pnt2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V"
+            }
+          ], 
+          "key": "Adaptor2d_Curve2d::D1(Standard_Real, gp_Pnt2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V2"
+            }
+          ], 
+          "key": "Adaptor2d_Curve2d::D2(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D3", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V2"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V3"
+            }
+          ], 
+          "key": "Adaptor2d_Curve2d::D3(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "DN", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }
+          ], 
+          "key": "Adaptor2d_Curve2d::DN(Standard_Real, Standard_Integer)", 
+          "returnType": "gp_Vec2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Resolution", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "R3d"
+            }
+          ], 
+          "key": "Adaptor2d_Curve2d::Resolution(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetType", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::GetType()", 
+          "returnType": "GeomAbs_CurveType", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Line", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::Line()", 
+          "returnType": "gp_Lin2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Circle", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::Circle()", 
+          "returnType": "gp_Circ2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Ellipse", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::Ellipse()", 
+          "returnType": "gp_Elips2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Hyperbola", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::Hyperbola()", 
+          "returnType": "gp_Hypr2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parabola", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::Parabola()", 
+          "returnType": "gp_Parab2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Degree", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::Degree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsRational", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::IsRational()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPoles", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::NbPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbKnots", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::NbKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbSamples", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::NbSamples()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Bezier", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::Bezier()", 
+          "returnType": "opencascade::handle<Geom2d_BezierCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "BSpline", 
+          "parent": "Adaptor2d_Curve2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Curve2d::BSpline()", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Adaptor2d_Curve2d.hxx", 
+        56
+      ], 
+      "key": "Adaptor2d_Curve2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Adaptor2d_Line2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Adaptor2d_Line2d", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::Adaptor2d_Line2d()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Adaptor2d_Line2d", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const gp_Dir2d &", 
+              "type": "gp_Dir2d", 
+              "name": "D"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "UFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "ULast"
+            }
+          ], 
+          "key": "Adaptor2d_Line2d::Adaptor2d_Line2d(gp_Pnt2d, gp_Dir2d, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Adaptor2d_Line2d", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Line2d &", 
+              "type": "Adaptor2d_Line2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Adaptor2d_Line2d::Adaptor2d_Line2d(Adaptor2d_Line2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin2d &", 
+              "type": "gp_Lin2d", 
+              "name": "L"
+            }
+          ], 
+          "key": "Adaptor2d_Line2d::Load(gp_Lin2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin2d &", 
+              "type": "gp_Lin2d", 
+              "name": "L"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "UFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "ULast"
+            }
+          ], 
+          "key": "Adaptor2d_Line2d::Load(gp_Lin2d, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstParameter", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::FirstParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastParameter", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::LastParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Continuity", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::Continuity()", 
+          "returnType": "GeomAbs_Shape", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbIntervals", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "Adaptor2d_Line2d::NbIntervals(GeomAbs_Shape)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Intervals", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "Adaptor2d_Line2d::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Trim", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "Adaptor2d_Line2d::Trim(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "opencascade::handle<Adaptor2d_HCurve2d>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsClosed", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::IsClosed()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsPeriodic", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::IsPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Period", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::Period()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }
+          ], 
+          "key": "Adaptor2d_Line2d::Value(Standard_Real)", 
+          "returnType": "gp_Pnt2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D0", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }
+          ], 
+          "key": "Adaptor2d_Line2d::D0(Standard_Real, gp_Pnt2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V"
+            }
+          ], 
+          "key": "Adaptor2d_Line2d::D1(Standard_Real, gp_Pnt2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V2"
+            }
+          ], 
+          "key": "Adaptor2d_Line2d::D2(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D3", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V2"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V3"
+            }
+          ], 
+          "key": "Adaptor2d_Line2d::D3(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "DN", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }
+          ], 
+          "key": "Adaptor2d_Line2d::DN(Standard_Real, Standard_Integer)", 
+          "returnType": "gp_Vec2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Resolution", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "R3d"
+            }
+          ], 
+          "key": "Adaptor2d_Line2d::Resolution(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetType", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::GetType()", 
+          "returnType": "GeomAbs_CurveType", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Line", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::Line()", 
+          "returnType": "gp_Lin2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Circle", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::Circle()", 
+          "returnType": "gp_Circ2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Ellipse", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::Ellipse()", 
+          "returnType": "gp_Elips2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Hyperbola", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::Hyperbola()", 
+          "returnType": "gp_Hypr2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parabola", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::Parabola()", 
+          "returnType": "gp_Parab2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Degree", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::Degree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsRational", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::IsRational()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPoles", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::NbPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbKnots", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::NbKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Bezier", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::Bezier()", 
+          "returnType": "opencascade::handle<Geom2d_BezierCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "BSpline", 
+          "parent": "Adaptor2d_Line2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_Line2d::BSpline()", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor2d_Curve2d"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Adaptor2d_Line2d.hxx", 
+        49
+      ], 
+      "key": "Adaptor2d_Line2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Adaptor2d_OffsetCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Adaptor2d_OffsetCurve", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::Adaptor2d_OffsetCurve()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Adaptor2d_OffsetCurve", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "C"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::Adaptor2d_OffsetCurve(opencascade::handle<Adaptor2d_HCurve2d>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Adaptor2d_OffsetCurve", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Offset"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::Adaptor2d_OffsetCurve(opencascade::handle<Adaptor2d_HCurve2d>, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Adaptor2d_OffsetCurve", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Offset"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "WFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "WLast"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::Adaptor2d_OffsetCurve(opencascade::handle<Adaptor2d_HCurve2d>, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Adaptor2d_OffsetCurve", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_OffsetCurve &", 
+              "type": "Adaptor2d_OffsetCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::Adaptor2d_OffsetCurve(Adaptor2d_OffsetCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "S"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::Load(opencascade::handle<Adaptor2d_HCurve2d>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Offset"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::Load(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Offset"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "WFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "WLast"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::Load(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::Curve()", 
+          "returnType": "opencascade::handle<Adaptor2d_HCurve2d> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Offset", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::Offset()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstParameter", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::FirstParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastParameter", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::LastParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Continuity", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::Continuity()", 
+          "returnType": "GeomAbs_Shape", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbIntervals", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::NbIntervals(GeomAbs_Shape)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Intervals", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Trim", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::Trim(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "opencascade::handle<Adaptor2d_HCurve2d>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsClosed", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::IsClosed()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsPeriodic", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::IsPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Period", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::Period()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::Value(Standard_Real)", 
+          "returnType": "gp_Pnt2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D0", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::D0(Standard_Real, gp_Pnt2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::D1(Standard_Real, gp_Pnt2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V2"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::D2(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D3", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V2"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V3"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::D3(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "DN", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::DN(Standard_Real, Standard_Integer)", 
+          "returnType": "gp_Vec2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Resolution", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "R3d"
+            }
+          ], 
+          "key": "Adaptor2d_OffsetCurve::Resolution(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetType", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::GetType()", 
+          "returnType": "GeomAbs_CurveType", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Line", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::Line()", 
+          "returnType": "gp_Lin2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Circle", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::Circle()", 
+          "returnType": "gp_Circ2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Ellipse", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::Ellipse()", 
+          "returnType": "gp_Elips2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Hyperbola", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::Hyperbola()", 
+          "returnType": "gp_Hypr2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parabola", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::Parabola()", 
+          "returnType": "gp_Parab2d", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Degree", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::Degree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsRational", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::IsRational()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPoles", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::NbPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbKnots", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::NbKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Bezier", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::Bezier()", 
+          "returnType": "opencascade::handle<Geom2d_BezierCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "BSpline", 
+          "parent": "Adaptor2d_OffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_OffsetCurve::BSpline()", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor2d_Curve2d"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Adaptor2d_OffsetCurve.hxx", 
+        48
+      ], 
+      "key": "Adaptor2d_OffsetCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Adaptor2d_HLine2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Adaptor2d_HLine2d", 
+          "parent": "Adaptor2d_HLine2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HLine2d::Adaptor2d_HLine2d()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Adaptor2d_HLine2d", 
+          "parent": "Adaptor2d_HLine2d", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Line2d &", 
+              "type": "Adaptor2d_Line2d", 
+              "name": "C"
+            }
+          ], 
+          "key": "Adaptor2d_HLine2d::Adaptor2d_HLine2d(Adaptor2d_Line2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Adaptor2d_HLine2d", 
+          "parent": "Adaptor2d_HLine2d", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_HLine2d &", 
+              "type": "Adaptor2d_HLine2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Adaptor2d_HLine2d::Adaptor2d_HLine2d(Adaptor2d_HLine2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "Adaptor2d_HLine2d", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Line2d &", 
+              "type": "Adaptor2d_Line2d", 
+              "name": "C"
+            }
+          ], 
+          "key": "Adaptor2d_HLine2d::Set(Adaptor2d_Line2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve2d", 
+          "parent": "Adaptor2d_HLine2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HLine2d::Curve2d()", 
+          "returnType": "Adaptor2d_Curve2d const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeCurve2d", 
+          "parent": "Adaptor2d_HLine2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HLine2d::ChangeCurve2d()", 
+          "returnType": "Adaptor2d_Line2d &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Adaptor2d_HLine2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HLine2d::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Adaptor2d_HLine2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HLine2d::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Adaptor2d_HLine2d", 
+          "arguments": [], 
+          "key": "Adaptor2d_HLine2d::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor2d_HCurve2d"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Adaptor2d_HLine2d.hxx", 
+        36
+      ], 
+      "key": "Adaptor2d_HLine2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Adaptor2d_HOffsetCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Adaptor2d_HOffsetCurve", 
+          "parent": "Adaptor2d_HOffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_HOffsetCurve::Adaptor2d_HOffsetCurve()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Adaptor2d_HOffsetCurve", 
+          "parent": "Adaptor2d_HOffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_OffsetCurve &", 
+              "type": "Adaptor2d_OffsetCurve", 
+              "name": "C"
+            }
+          ], 
+          "key": "Adaptor2d_HOffsetCurve::Adaptor2d_HOffsetCurve(Adaptor2d_OffsetCurve)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Adaptor2d_HOffsetCurve", 
+          "parent": "Adaptor2d_HOffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_HOffsetCurve &", 
+              "type": "Adaptor2d_HOffsetCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Adaptor2d_HOffsetCurve::Adaptor2d_HOffsetCurve(Adaptor2d_HOffsetCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "Adaptor2d_HOffsetCurve", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_OffsetCurve &", 
+              "type": "Adaptor2d_OffsetCurve", 
+              "name": "C"
+            }
+          ], 
+          "key": "Adaptor2d_HOffsetCurve::Set(Adaptor2d_OffsetCurve)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve2d", 
+          "parent": "Adaptor2d_HOffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_HOffsetCurve::Curve2d()", 
+          "returnType": "Adaptor2d_Curve2d const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeCurve2d", 
+          "parent": "Adaptor2d_HOffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_HOffsetCurve::ChangeCurve2d()", 
+          "returnType": "Adaptor2d_OffsetCurve &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Adaptor2d_HOffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_HOffsetCurve::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Adaptor2d_HOffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_HOffsetCurve::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Adaptor2d_HOffsetCurve", 
+          "arguments": [], 
+          "key": "Adaptor2d_HOffsetCurve::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor2d_HCurve2d"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Adaptor2d_HOffsetCurve.hxx", 
+        36
+      ], 
+      "key": "Adaptor2d_HOffsetCurve"
+    }, 
+    {
+      "type": "Adaptor2d_Curve2d *", 
+      "declType": "typedef", 
+      "name": "Adaptor2d_Curve2dPtr", 
+      "key": "Adaptor2d_Curve2dPtr"
+    }, 
+    {
+      "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+      "declType": "typedef", 
+      "name": "Handle_Adaptor2d_HCurve2d", 
+      "key": "Handle_Adaptor2d_HCurve2d"
+    }, 
+    {
+      "type": "opencascade::handle<Adaptor2d_HLine2d>", 
+      "declType": "typedef", 
+      "name": "Handle_Adaptor2d_HLine2d", 
+      "key": "Handle_Adaptor2d_HLine2d"
+    }, 
+    {
+      "type": "opencascade::handle<Adaptor2d_HOffsetCurve>", 
+      "declType": "typedef", 
+      "name": "Handle_Adaptor2d_HOffsetCurve", 
+      "key": "Handle_Adaptor2d_HOffsetCurve"
+    }
+  ], 
+  "name": "Adaptor2d"
+}

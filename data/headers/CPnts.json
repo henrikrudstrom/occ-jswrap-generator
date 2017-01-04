@@ -1,0 +1,1313 @@
+{
+  "headers": [
+    "CPnts_RealFunction.hxx", 
+    "CPnts_AbscissaPoint.hxx", 
+    "CPnts_MyGaussFunction.hxx", 
+    "CPnts_UniformDeflection.hxx", 
+    "CPnts_MyRootFunction.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "CPnts_MyGaussFunction", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "CPnts_MyGaussFunction", 
+          "parent": "CPnts_MyGaussFunction", 
+          "arguments": [], 
+          "key": "CPnts_MyGaussFunction::CPnts_MyGaussFunction()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "CPnts_MyGaussFunction", 
+          "parent": "CPnts_MyGaussFunction", 
+          "arguments": [
+            {
+              "decl": "const CPnts_MyGaussFunction &", 
+              "type": "CPnts_MyGaussFunction", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "CPnts_MyGaussFunction::CPnts_MyGaussFunction(CPnts_MyGaussFunction)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "CPnts_MyGaussFunction", 
+          "arguments": [
+            {
+              "decl": "const CPnts_RealFunction &", 
+              "type": "CPnts_RealFunction", 
+              "name": "F"
+            }, 
+            {
+              "decl": "const Standard_Address", 
+              "type": "Standard_Address", 
+              "name": "D"
+            }
+          ], 
+          "key": "CPnts_MyGaussFunction::Init(CPnts_RealFunction, Standard_Address)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "CPnts_MyGaussFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "F"
+            }
+          ], 
+          "key": "CPnts_MyGaussFunction::Value(Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_Function"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/CPnts_MyGaussFunction.hxx", 
+        32
+      ], 
+      "key": "CPnts_MyGaussFunction"
+    }, 
+    {
+      "declType": "class", 
+      "name": "CPnts_MyRootFunction", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "CPnts_MyRootFunction", 
+          "parent": "CPnts_MyRootFunction", 
+          "arguments": [], 
+          "key": "CPnts_MyRootFunction::CPnts_MyRootFunction()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "CPnts_MyRootFunction", 
+          "parent": "CPnts_MyRootFunction", 
+          "arguments": [
+            {
+              "decl": "const CPnts_MyRootFunction &", 
+              "type": "CPnts_MyRootFunction", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "CPnts_MyRootFunction::CPnts_MyRootFunction(CPnts_MyRootFunction)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "CPnts_MyRootFunction", 
+          "arguments": [
+            {
+              "decl": "const CPnts_RealFunction &", 
+              "type": "CPnts_RealFunction", 
+              "name": "F"
+            }, 
+            {
+              "decl": "const Standard_Address", 
+              "type": "Standard_Address", 
+              "name": "D"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Order"
+            }
+          ], 
+          "key": "CPnts_MyRootFunction::Init(CPnts_RealFunction, Standard_Address, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "CPnts_MyRootFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X0"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "L"
+            }
+          ], 
+          "key": "CPnts_MyRootFunction::Init(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "CPnts_MyRootFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X0"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "L"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "CPnts_MyRootFunction::Init(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "CPnts_MyRootFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "F"
+            }
+          ], 
+          "key": "CPnts_MyRootFunction::Value(Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Derivative", 
+          "parent": "CPnts_MyRootFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Df"
+            }
+          ], 
+          "key": "CPnts_MyRootFunction::Derivative(Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Values", 
+          "parent": "CPnts_MyRootFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "F"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Df"
+            }
+          ], 
+          "key": "CPnts_MyRootFunction::Values(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionWithDerivative"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/CPnts_MyRootFunction.hxx", 
+        36
+      ], 
+      "key": "CPnts_MyRootFunction"
+    }, 
+    {
+      "declType": "class", 
+      "name": "CPnts_AbscissaPoint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "CPnts_AbscissaPoint", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [], 
+          "key": "CPnts_AbscissaPoint::CPnts_AbscissaPoint()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "CPnts_AbscissaPoint", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Abscissa"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U0"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::CPnts_AbscissaPoint(Adaptor3d_Curve, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "CPnts_AbscissaPoint", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Curve2d &", 
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Abscissa"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U0"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::CPnts_AbscissaPoint(Adaptor2d_Curve2d, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "CPnts_AbscissaPoint", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Abscissa"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U0"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Ui"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::CPnts_AbscissaPoint(Adaptor3d_Curve, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "CPnts_AbscissaPoint", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Curve2d &", 
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Abscissa"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U0"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Ui"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::CPnts_AbscissaPoint(Adaptor2d_Curve2d, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "CPnts_AbscissaPoint", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const CPnts_AbscissaPoint &", 
+              "type": "CPnts_AbscissaPoint", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::CPnts_AbscissaPoint(CPnts_AbscissaPoint)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Length(Adaptor3d_Curve)", 
+          "returnType": "Standard_Real", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Curve2d &", 
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Length(Adaptor2d_Curve2d)", 
+          "returnType": "Standard_Real", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Length(Adaptor3d_Curve, Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Curve2d &", 
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Length(Adaptor2d_Curve2d, Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Length(Adaptor3d_Curve, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Curve2d &", 
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Length(Adaptor2d_Curve2d, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Length(Adaptor3d_Curve, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Curve2d &", 
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Length(Adaptor2d_Curve2d, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Init(Adaptor3d_Curve)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Curve2d &", 
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Init(Adaptor2d_Curve2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Init(Adaptor3d_Curve, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Curve2d &", 
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Init(Adaptor2d_Curve2d, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Init(Adaptor3d_Curve, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Curve2d &", 
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Init(Adaptor2d_Curve2d, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Init(Adaptor3d_Curve, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Curve2d &", 
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Init(Adaptor2d_Curve2d, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Abscissa"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U0"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Perform(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Abscissa"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U0"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Ui"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::Perform(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AdvPerform", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Abscissa"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U0"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Ui"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::AdvPerform(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [], 
+          "key": "CPnts_AbscissaPoint::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parameter", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [], 
+          "key": "CPnts_AbscissaPoint::Parameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetParameter", 
+          "parent": "CPnts_AbscissaPoint", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "P"
+            }
+          ], 
+          "key": "CPnts_AbscissaPoint::SetParameter(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/CPnts_AbscissaPoint.hxx", 
+        41
+      ], 
+      "key": "CPnts_AbscissaPoint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "CPnts_UniformDeflection", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "CPnts_UniformDeflection", 
+          "parent": "CPnts_UniformDeflection", 
+          "arguments": [], 
+          "key": "CPnts_UniformDeflection::CPnts_UniformDeflection()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "CPnts_UniformDeflection", 
+          "parent": "CPnts_UniformDeflection", 
+          "arguments": [
+            {
+              "decl": "const Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Deflection"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "WithControl"
+            }
+          ], 
+          "key": "CPnts_UniformDeflection::CPnts_UniformDeflection(Adaptor3d_Curve, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "CPnts_UniformDeflection", 
+          "parent": "CPnts_UniformDeflection", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Curve2d &", 
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Deflection"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "WithControl"
+            }
+          ], 
+          "key": "CPnts_UniformDeflection::CPnts_UniformDeflection(Adaptor2d_Curve2d, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "CPnts_UniformDeflection", 
+          "parent": "CPnts_UniformDeflection", 
+          "arguments": [
+            {
+              "decl": "const Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Deflection"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "WithControl"
+            }
+          ], 
+          "key": "CPnts_UniformDeflection::CPnts_UniformDeflection(Adaptor3d_Curve, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "CPnts_UniformDeflection", 
+          "parent": "CPnts_UniformDeflection", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Curve2d &", 
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Deflection"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "WithControl"
+            }
+          ], 
+          "key": "CPnts_UniformDeflection::CPnts_UniformDeflection(Adaptor2d_Curve2d, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "CPnts_UniformDeflection", 
+          "parent": "CPnts_UniformDeflection", 
+          "arguments": [
+            {
+              "decl": "const CPnts_UniformDeflection &", 
+              "type": "CPnts_UniformDeflection", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "CPnts_UniformDeflection::CPnts_UniformDeflection(CPnts_UniformDeflection)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Initialize", 
+          "parent": "CPnts_UniformDeflection", 
+          "arguments": [
+            {
+              "decl": "const Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Deflection"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "WithControl"
+            }
+          ], 
+          "key": "CPnts_UniformDeflection::Initialize(Adaptor3d_Curve, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Initialize", 
+          "parent": "CPnts_UniformDeflection", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Curve2d &", 
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Deflection"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "WithControl"
+            }
+          ], 
+          "key": "CPnts_UniformDeflection::Initialize(Adaptor2d_Curve2d, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Initialize", 
+          "parent": "CPnts_UniformDeflection", 
+          "arguments": [
+            {
+              "decl": "const Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Deflection"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "WithControl"
+            }
+          ], 
+          "key": "CPnts_UniformDeflection::Initialize(Adaptor3d_Curve, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Initialize", 
+          "parent": "CPnts_UniformDeflection", 
+          "arguments": [
+            {
+              "decl": "const Adaptor2d_Curve2d &", 
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Deflection"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "WithControl"
+            }
+          ], 
+          "key": "CPnts_UniformDeflection::Initialize(Adaptor2d_Curve2d, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsAllDone", 
+          "parent": "CPnts_UniformDeflection", 
+          "arguments": [], 
+          "key": "CPnts_UniformDeflection::IsAllDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Next", 
+          "parent": "CPnts_UniformDeflection", 
+          "arguments": [], 
+          "key": "CPnts_UniformDeflection::Next()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "More", 
+          "parent": "CPnts_UniformDeflection", 
+          "arguments": [], 
+          "key": "CPnts_UniformDeflection::More()", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "CPnts_UniformDeflection", 
+          "arguments": [], 
+          "key": "CPnts_UniformDeflection::Value()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Point", 
+          "parent": "CPnts_UniformDeflection", 
+          "arguments": [], 
+          "key": "CPnts_UniformDeflection::Point()", 
+          "returnType": "gp_Pnt", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/CPnts_UniformDeflection.hxx", 
+        60
+      ], 
+      "key": "CPnts_UniformDeflection"
+    }, 
+    {
+      "type": "Standard_Real (*)( ::Standard_Real const,::Standard_Address const )", 
+      "declType": "typedef", 
+      "name": "CPnts_RealFunction", 
+      "key": "CPnts_RealFunction"
+    }
+  ], 
+  "name": "CPnts"
+}

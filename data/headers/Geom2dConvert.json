@@ -1,0 +1,506 @@
+{
+  "headers": [
+    "Geom2dConvert_BSplineCurveKnotSplitting.hxx", 
+    "Geom2dConvert_BSplineCurveToBezierCurve.hxx", 
+    "Geom2dConvert_CompCurveToBSplineCurve.hxx", 
+    "Geom2dConvert_ApproxCurve.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Geom2dConvert_BSplineCurveKnotSplitting", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Geom2dConvert_BSplineCurveKnotSplitting", 
+          "parent": "Geom2dConvert_BSplineCurveKnotSplitting", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_BSplineCurve> &", 
+              "type": "opencascade::handle<Geom2d_BSplineCurve>", 
+              "name": "BasisCurve"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ContinuityRange"
+            }
+          ], 
+          "key": "Geom2dConvert_BSplineCurveKnotSplitting::Geom2dConvert_BSplineCurveKnotSplitting(opencascade::handle<Geom2d_BSplineCurve>, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Geom2dConvert_BSplineCurveKnotSplitting", 
+          "parent": "Geom2dConvert_BSplineCurveKnotSplitting", 
+          "arguments": [
+            {
+              "decl": "const Geom2dConvert_BSplineCurveKnotSplitting &", 
+              "type": "Geom2dConvert_BSplineCurveKnotSplitting", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Geom2dConvert_BSplineCurveKnotSplitting::Geom2dConvert_BSplineCurveKnotSplitting(Geom2dConvert_BSplineCurveKnotSplitting)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbSplits", 
+          "parent": "Geom2dConvert_BSplineCurveKnotSplitting", 
+          "arguments": [], 
+          "key": "Geom2dConvert_BSplineCurveKnotSplitting::NbSplits()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Splitting", 
+          "parent": "Geom2dConvert_BSplineCurveKnotSplitting", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfInteger &", 
+              "type": "TColStd_Array1OfInteger", 
+              "name": "SplitValues"
+            }
+          ], 
+          "key": "Geom2dConvert_BSplineCurveKnotSplitting::Splitting(TColStd_Array1OfInteger)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SplitValue", 
+          "parent": "Geom2dConvert_BSplineCurveKnotSplitting", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "Geom2dConvert_BSplineCurveKnotSplitting::SplitValue(Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dConvert_BSplineCurveKnotSplitting.hxx", 
+        50
+      ], 
+      "key": "Geom2dConvert_BSplineCurveKnotSplitting"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dConvert_BSplineCurveToBezierCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Geom2dConvert_BSplineCurveToBezierCurve", 
+          "parent": "Geom2dConvert_BSplineCurveToBezierCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_BSplineCurve> &", 
+              "type": "opencascade::handle<Geom2d_BSplineCurve>", 
+              "name": "BasisCurve"
+            }
+          ], 
+          "key": "Geom2dConvert_BSplineCurveToBezierCurve::Geom2dConvert_BSplineCurveToBezierCurve(opencascade::handle<Geom2d_BSplineCurve>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Geom2dConvert_BSplineCurveToBezierCurve", 
+          "parent": "Geom2dConvert_BSplineCurveToBezierCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_BSplineCurve> &", 
+              "type": "opencascade::handle<Geom2d_BSplineCurve>", 
+              "name": "BasisCurve"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "ParametricTolerance"
+            }
+          ], 
+          "key": "Geom2dConvert_BSplineCurveToBezierCurve::Geom2dConvert_BSplineCurveToBezierCurve(opencascade::handle<Geom2d_BSplineCurve>, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Geom2dConvert_BSplineCurveToBezierCurve", 
+          "parent": "Geom2dConvert_BSplineCurveToBezierCurve", 
+          "arguments": [
+            {
+              "decl": "const Geom2dConvert_BSplineCurveToBezierCurve &", 
+              "type": "Geom2dConvert_BSplineCurveToBezierCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Geom2dConvert_BSplineCurveToBezierCurve::Geom2dConvert_BSplineCurveToBezierCurve(Geom2dConvert_BSplineCurveToBezierCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Arc", 
+          "parent": "Geom2dConvert_BSplineCurveToBezierCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "Geom2dConvert_BSplineCurveToBezierCurve::Arc(Standard_Integer)", 
+          "returnType": "opencascade::handle<Geom2d_BezierCurve>", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Arcs", 
+          "parent": "Geom2dConvert_BSplineCurveToBezierCurve", 
+          "arguments": [
+            {
+              "decl": "TColGeom2d_Array1OfBezierCurve &", 
+              "type": "TColGeom2d_Array1OfBezierCurve", 
+              "name": "Curves"
+            }
+          ], 
+          "key": "Geom2dConvert_BSplineCurveToBezierCurve::Arcs(TColGeom2d_Array1OfBezierCurve)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Knots", 
+          "parent": "Geom2dConvert_BSplineCurveToBezierCurve", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "TKnots"
+            }
+          ], 
+          "key": "Geom2dConvert_BSplineCurveToBezierCurve::Knots(TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbArcs", 
+          "parent": "Geom2dConvert_BSplineCurveToBezierCurve", 
+          "arguments": [], 
+          "key": "Geom2dConvert_BSplineCurveToBezierCurve::NbArcs()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dConvert_BSplineCurveToBezierCurve.hxx", 
+        44
+      ], 
+      "key": "Geom2dConvert_BSplineCurveToBezierCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dConvert_CompCurveToBSplineCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Geom2dConvert_CompCurveToBSplineCurve", 
+          "parent": "Geom2dConvert_CompCurveToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Convert_ParameterisationType", 
+              "type": "Convert_ParameterisationType", 
+              "name": "Parameterisation", 
+              "default": "::Convert_ParameterisationType::Convert_TgtThetaOver2"
+            }
+          ], 
+          "key": "Geom2dConvert_CompCurveToBSplineCurve::Geom2dConvert_CompCurveToBSplineCurve(Convert_ParameterisationType)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Geom2dConvert_CompCurveToBSplineCurve", 
+          "parent": "Geom2dConvert_CompCurveToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_BoundedCurve> &", 
+              "type": "opencascade::handle<Geom2d_BoundedCurve>", 
+              "name": "BasisCurve"
+            }, 
+            {
+              "decl": "const Convert_ParameterisationType", 
+              "type": "Convert_ParameterisationType", 
+              "name": "Parameterisation", 
+              "default": "::Convert_ParameterisationType::Convert_TgtThetaOver2"
+            }
+          ], 
+          "key": "Geom2dConvert_CompCurveToBSplineCurve::Geom2dConvert_CompCurveToBSplineCurve(opencascade::handle<Geom2d_BoundedCurve>, Convert_ParameterisationType)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Geom2dConvert_CompCurveToBSplineCurve", 
+          "parent": "Geom2dConvert_CompCurveToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Geom2dConvert_CompCurveToBSplineCurve &", 
+              "type": "Geom2dConvert_CompCurveToBSplineCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Geom2dConvert_CompCurveToBSplineCurve::Geom2dConvert_CompCurveToBSplineCurve(Geom2dConvert_CompCurveToBSplineCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Geom2dConvert_CompCurveToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_BoundedCurve> &", 
+              "type": "opencascade::handle<Geom2d_BoundedCurve>", 
+              "name": "NewCurve"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "After", 
+              "default": "false"
+            }
+          ], 
+          "key": "Geom2dConvert_CompCurveToBSplineCurve::Add(opencascade::handle<Geom2d_BoundedCurve>, Standard_Real, Standard_Boolean)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "BSplineCurve", 
+          "parent": "Geom2dConvert_CompCurveToBSplineCurve", 
+          "arguments": [], 
+          "key": "Geom2dConvert_CompCurveToBSplineCurve::BSplineCurve()", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Clear", 
+          "parent": "Geom2dConvert_CompCurveToBSplineCurve", 
+          "arguments": [], 
+          "key": "Geom2dConvert_CompCurveToBSplineCurve::Clear()", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dConvert_CompCurveToBSplineCurve.hxx", 
+        32
+      ], 
+      "key": "Geom2dConvert_CompCurveToBSplineCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dConvert_ApproxCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Geom2dConvert_ApproxCurve", 
+          "parent": "Geom2dConvert_ApproxCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Curve"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol2d"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "Order"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxSegments"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegree"
+            }
+          ], 
+          "key": "Geom2dConvert_ApproxCurve::Geom2dConvert_ApproxCurve(opencascade::handle<Geom2d_Curve>, Standard_Real, GeomAbs_Shape, Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Geom2dConvert_ApproxCurve", 
+          "parent": "Geom2dConvert_ApproxCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "Curve"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol2d"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "Order"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxSegments"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegree"
+            }
+          ], 
+          "key": "Geom2dConvert_ApproxCurve::Geom2dConvert_ApproxCurve(opencascade::handle<Adaptor2d_HCurve2d>, Standard_Real, GeomAbs_Shape, Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Geom2dConvert_ApproxCurve", 
+          "parent": "Geom2dConvert_ApproxCurve", 
+          "arguments": [
+            {
+              "decl": "const Geom2dConvert_ApproxCurve &", 
+              "type": "Geom2dConvert_ApproxCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Geom2dConvert_ApproxCurve::Geom2dConvert_ApproxCurve(Geom2dConvert_ApproxCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve", 
+          "parent": "Geom2dConvert_ApproxCurve", 
+          "arguments": [], 
+          "key": "Geom2dConvert_ApproxCurve::Curve()", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "Geom2dConvert_ApproxCurve", 
+          "arguments": [], 
+          "key": "Geom2dConvert_ApproxCurve::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasResult", 
+          "parent": "Geom2dConvert_ApproxCurve", 
+          "arguments": [], 
+          "key": "Geom2dConvert_ApproxCurve::HasResult()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError", 
+          "parent": "Geom2dConvert_ApproxCurve", 
+          "arguments": [], 
+          "key": "Geom2dConvert_ApproxCurve::MaxError()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Geom2dConvert_ApproxCurve", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "o"
+            }
+          ], 
+          "key": "Geom2dConvert_ApproxCurve::Dump(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dConvert_ApproxCurve.hxx", 
+        37
+      ], 
+      "key": "Geom2dConvert_ApproxCurve"
+    }
+  ], 
+  "name": "Geom2dConvert"
+}

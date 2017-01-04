@@ -1,0 +1,3546 @@
+{
+  "headers": [
+    "Units_UnitsLexicon.hxx", 
+    "Units_Lexicon.hxx", 
+    "Units_Explorer.hxx", 
+    "Units_UnitSentence.hxx", 
+    "Units_UtsSequence.hxx", 
+    "Units_UnitsDictionary.hxx", 
+    "Units_Token.hxx", 
+    "Units_QuantitiesSequence.hxx", 
+    "Units_ShiftedUnit.hxx", 
+    "Units_UnitsSequence.hxx", 
+    "Units_MathSentence.hxx", 
+    "Units_TksSequence.hxx", 
+    "Units_QtsSequence.hxx", 
+    "Units_NoSuchUnit.hxx", 
+    "Units_Unit.hxx", 
+    "Units_Measurement.hxx", 
+    "Units_Operators.hxx", 
+    "Units_TokensSequence.hxx", 
+    "Units_NoSuchType.hxx", 
+    "Units_UnitsSystem.hxx", 
+    "Units_Sentence.hxx", 
+    "Units_ShiftedToken.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Units_Token", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_Token", 
+          "parent": "Units_Token", 
+          "arguments": [], 
+          "key": "Units_Token::Units_Token()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Token", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aword"
+            }
+          ], 
+          "key": "Units_Token::Units_Token(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Token", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_Token> &", 
+              "type": "opencascade::handle<Units_Token>", 
+              "name": "atoken"
+            }
+          ], 
+          "key": "Units_Token::Units_Token(opencascade::handle<Units_Token>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Token", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aword"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "amean"
+            }
+          ], 
+          "key": "Units_Token::Units_Token(Standard_CString, Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Token", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aword"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "amean"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }
+          ], 
+          "key": "Units_Token::Units_Token(Standard_CString, Standard_CString, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Token", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aword"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "amean"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }, 
+            {
+              "decl": "const opencascade::handle<Units_Dimensions> &", 
+              "type": "opencascade::handle<Units_Dimensions>", 
+              "name": "adimension"
+            }
+          ], 
+          "key": "Units_Token::Units_Token(Standard_CString, Standard_CString, Standard_Real, opencascade::handle<Units_Dimensions>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Token", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Units_Token &", 
+              "type": "Units_Token", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_Token::Units_Token(Units_Token)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Creates", 
+          "parent": "Units_Token", 
+          "arguments": [], 
+          "key": "Units_Token::Creates()", 
+          "returnType": "opencascade::handle<Units_Token>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "Units_Token", 
+          "arguments": [], 
+          "key": "Units_Token::Length()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Word", 
+          "parent": "Units_Token", 
+          "arguments": [], 
+          "key": "Units_Token::Word()", 
+          "returnType": "TCollection_AsciiString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Word", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aword"
+            }
+          ], 
+          "key": "Units_Token::Word(Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Mean", 
+          "parent": "Units_Token", 
+          "arguments": [], 
+          "key": "Units_Token::Mean()", 
+          "returnType": "TCollection_AsciiString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Mean", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "amean"
+            }
+          ], 
+          "key": "Units_Token::Mean(Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Units_Token", 
+          "arguments": [], 
+          "key": "Units_Token::Value()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }
+          ], 
+          "key": "Units_Token::Value(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dimensions", 
+          "parent": "Units_Token", 
+          "arguments": [], 
+          "key": "Units_Token::Dimensions()", 
+          "returnType": "opencascade::handle<Units_Dimensions>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dimensions", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_Dimensions> &", 
+              "type": "opencascade::handle<Units_Dimensions>", 
+              "name": "adimensions"
+            }
+          ], 
+          "key": "Units_Token::Dimensions(opencascade::handle<Units_Dimensions>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Update", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "amean"
+            }
+          ], 
+          "key": "Units_Token::Update(Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "aninteger"
+            }
+          ], 
+          "key": "Units_Token::Add(Standard_Integer)", 
+          "returnType": "opencascade::handle<Units_Token>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_Token> &", 
+              "type": "opencascade::handle<Units_Token>", 
+              "name": "atoken"
+            }
+          ], 
+          "key": "Units_Token::Add(opencascade::handle<Units_Token>)", 
+          "returnType": "opencascade::handle<Units_Token>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Subtract", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_Token> &", 
+              "type": "opencascade::handle<Units_Token>", 
+              "name": "atoken"
+            }
+          ], 
+          "key": "Units_Token::Subtract(opencascade::handle<Units_Token>)", 
+          "returnType": "opencascade::handle<Units_Token>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Multiply", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_Token> &", 
+              "type": "opencascade::handle<Units_Token>", 
+              "name": "atoken"
+            }
+          ], 
+          "key": "Units_Token::Multiply(opencascade::handle<Units_Token>)", 
+          "returnType": "opencascade::handle<Units_Token>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Multiplied", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }
+          ], 
+          "key": "Units_Token::Multiplied(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Divide", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_Token> &", 
+              "type": "opencascade::handle<Units_Token>", 
+              "name": "atoken"
+            }
+          ], 
+          "key": "Units_Token::Divide(opencascade::handle<Units_Token>)", 
+          "returnType": "opencascade::handle<Units_Token>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Divided", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }
+          ], 
+          "key": "Units_Token::Divided(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Power", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_Token> &", 
+              "type": "opencascade::handle<Units_Token>", 
+              "name": "atoken"
+            }
+          ], 
+          "key": "Units_Token::Power(opencascade::handle<Units_Token>)", 
+          "returnType": "opencascade::handle<Units_Token>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Power", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "anexponent"
+            }
+          ], 
+          "key": "Units_Token::Power(Standard_Real)", 
+          "returnType": "opencascade::handle<Units_Token>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEqual", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "astring"
+            }
+          ], 
+          "key": "Units_Token::IsEqual(Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEqual", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_Token> &", 
+              "type": "opencascade::handle<Units_Token>", 
+              "name": "atoken"
+            }
+          ], 
+          "key": "Units_Token::IsEqual(opencascade::handle<Units_Token>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsNotEqual", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "astring"
+            }
+          ], 
+          "key": "Units_Token::IsNotEqual(Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsNotEqual", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_Token> &", 
+              "type": "opencascade::handle<Units_Token>", 
+              "name": "atoken"
+            }
+          ], 
+          "key": "Units_Token::IsNotEqual(opencascade::handle<Units_Token>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsLessOrEqual", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "astring"
+            }
+          ], 
+          "key": "Units_Token::IsLessOrEqual(Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsGreater", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "astring"
+            }
+          ], 
+          "key": "Units_Token::IsGreater(Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsGreater", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_Token> &", 
+              "type": "opencascade::handle<Units_Token>", 
+              "name": "atoken"
+            }
+          ], 
+          "key": "Units_Token::IsGreater(opencascade::handle<Units_Token>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsGreaterOrEqual", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_Token> &", 
+              "type": "opencascade::handle<Units_Token>", 
+              "name": "atoken"
+            }
+          ], 
+          "key": "Units_Token::IsGreaterOrEqual(opencascade::handle<Units_Token>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Units_Token", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ashift"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "alevel"
+            }
+          ], 
+          "key": "Units_Token::Dump(Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Units_Token", 
+          "arguments": [], 
+          "key": "Units_Token::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Units_Token", 
+          "arguments": [], 
+          "key": "Units_Token::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Units_Token", 
+          "arguments": [], 
+          "key": "Units_Token::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Units_Token.hxx", 
+        37
+      ], 
+      "key": "Units_Token"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_TokensSequence", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_TokensSequence", 
+          "parent": "Units_TokensSequence", 
+          "arguments": [], 
+          "key": "Units_TokensSequence::Units_TokensSequence()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_TokensSequence", 
+          "parent": "Units_TokensSequence", 
+          "arguments": [
+            {
+              "decl": "const Units_TksSequence &", 
+              "type": "Units_TksSequence", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Units_TokensSequence::Units_TokensSequence(Units_TksSequence)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_TokensSequence", 
+          "parent": "Units_TokensSequence", 
+          "arguments": [
+            {
+              "decl": "const Units_TokensSequence &", 
+              "type": "Units_TokensSequence", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_TokensSequence::Units_TokensSequence(Units_TokensSequence)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Sequence", 
+          "parent": "Units_TokensSequence", 
+          "arguments": [], 
+          "key": "Units_TokensSequence::Sequence()", 
+          "returnType": "Units_TksSequence const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Append", 
+          "parent": "Units_TokensSequence", 
+          "arguments": [
+            {
+              "decl": "const NCollection_Sequence<opencascade::handle<Units_Token> >::value_type &", 
+              "type": "NCollection_Sequence<opencascade::handle<Units_Token> >::value_type", 
+              "name": "theItem"
+            }
+          ], 
+          "key": "Units_TokensSequence::Append(NCollection_Sequence<opencascade::handle<Units_Token> >::value_type)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Append", 
+          "parent": "Units_TokensSequence", 
+          "arguments": [
+            {
+              "decl": "Units_TksSequence &", 
+              "type": "Units_TksSequence", 
+              "name": "theSequence"
+            }
+          ], 
+          "key": "Units_TokensSequence::Append(Units_TksSequence)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeSequence", 
+          "parent": "Units_TokensSequence", 
+          "arguments": [], 
+          "key": "Units_TokensSequence::ChangeSequence()", 
+          "returnType": "Units_TksSequence &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Units_TokensSequence", 
+          "arguments": [], 
+          "key": "Units_TokensSequence::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Units_TokensSequence", 
+          "arguments": [], 
+          "key": "Units_TokensSequence::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Units_TokensSequence", 
+          "arguments": [], 
+          "key": "Units_TokensSequence::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Sequence<opencascade::handle<Units_Token> >"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Units_TokensSequence.hxx", 
+        24
+      ], 
+      "key": "Units_TokensSequence"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_Lexicon", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_Lexicon", 
+          "parent": "Units_Lexicon", 
+          "arguments": [], 
+          "key": "Units_Lexicon::Units_Lexicon()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Lexicon", 
+          "parent": "Units_Lexicon", 
+          "arguments": [
+            {
+              "decl": "const Units_Lexicon &", 
+              "type": "Units_Lexicon", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_Lexicon::Units_Lexicon(Units_Lexicon)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Creates", 
+          "parent": "Units_Lexicon", 
+          "arguments": [], 
+          "key": "Units_Lexicon::Creates()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Sequence", 
+          "parent": "Units_Lexicon", 
+          "arguments": [], 
+          "key": "Units_Lexicon::Sequence()", 
+          "returnType": "opencascade::handle<Units_TokensSequence>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AddToken", 
+          "parent": "Units_Lexicon", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aword"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "amean"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }
+          ], 
+          "key": "Units_Lexicon::AddToken(Standard_CString, Standard_CString, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Units_Lexicon", 
+          "arguments": [], 
+          "key": "Units_Lexicon::Dump()", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Units_Lexicon", 
+          "arguments": [], 
+          "key": "Units_Lexicon::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Units_Lexicon", 
+          "arguments": [], 
+          "key": "Units_Lexicon::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Units_Lexicon", 
+          "arguments": [], 
+          "key": "Units_Lexicon::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Units_Lexicon.hxx", 
+        40
+      ], 
+      "key": "Units_Lexicon"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_UnitsLexicon", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_UnitsLexicon", 
+          "parent": "Units_UnitsLexicon", 
+          "arguments": [], 
+          "key": "Units_UnitsLexicon::Units_UnitsLexicon()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_UnitsLexicon", 
+          "parent": "Units_UnitsLexicon", 
+          "arguments": [
+            {
+              "decl": "const Units_UnitsLexicon &", 
+              "type": "Units_UnitsLexicon", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_UnitsLexicon::Units_UnitsLexicon(Units_UnitsLexicon)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Creates", 
+          "parent": "Units_UnitsLexicon", 
+          "arguments": [
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "amode", 
+              "default": "true"
+            }
+          ], 
+          "key": "Units_UnitsLexicon::Creates(Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Units_UnitsLexicon", 
+          "arguments": [], 
+          "key": "Units_UnitsLexicon::Dump()", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Units_UnitsLexicon", 
+          "arguments": [], 
+          "key": "Units_UnitsLexicon::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Units_UnitsLexicon", 
+          "arguments": [], 
+          "key": "Units_UnitsLexicon::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Units_UnitsLexicon", 
+          "arguments": [], 
+          "key": "Units_UnitsLexicon::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Units_Lexicon"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Units_UnitsLexicon.hxx", 
+        38
+      ], 
+      "key": "Units_UnitsLexicon"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_Unit", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_Unit", 
+          "parent": "Units_Unit", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aname"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "asymbol"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }, 
+            {
+              "decl": "const opencascade::handle<Units_Quantity> &", 
+              "type": "opencascade::handle<Units_Quantity>", 
+              "name": "aquantity"
+            }
+          ], 
+          "key": "Units_Unit::Units_Unit(Standard_CString, Standard_CString, Standard_Real, opencascade::handle<Units_Quantity>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Unit", 
+          "parent": "Units_Unit", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aname"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "asymbol"
+            }
+          ], 
+          "key": "Units_Unit::Units_Unit(Standard_CString, Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Unit", 
+          "parent": "Units_Unit", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aname"
+            }
+          ], 
+          "key": "Units_Unit::Units_Unit(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Unit", 
+          "parent": "Units_Unit", 
+          "arguments": [
+            {
+              "decl": "const Units_Unit &", 
+              "type": "Units_Unit", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_Unit::Units_Unit(Units_Unit)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Name", 
+          "parent": "Units_Unit", 
+          "arguments": [], 
+          "key": "Units_Unit::Name()", 
+          "returnType": "TCollection_AsciiString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Symbol", 
+          "parent": "Units_Unit", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "asymbol"
+            }
+          ], 
+          "key": "Units_Unit::Symbol(Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Units_Unit", 
+          "arguments": [], 
+          "key": "Units_Unit::Value()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Quantity", 
+          "parent": "Units_Unit", 
+          "arguments": [], 
+          "key": "Units_Unit::Quantity()", 
+          "returnType": "opencascade::handle<Units_Quantity>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SymbolsSequence", 
+          "parent": "Units_Unit", 
+          "arguments": [], 
+          "key": "Units_Unit::SymbolsSequence()", 
+          "returnType": "opencascade::handle<TColStd_HSequenceOfHAsciiString>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Units_Unit", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }
+          ], 
+          "key": "Units_Unit::Value(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Quantity", 
+          "parent": "Units_Unit", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_Quantity> &", 
+              "type": "opencascade::handle<Units_Quantity>", 
+              "name": "aquantity"
+            }
+          ], 
+          "key": "Units_Unit::Quantity(opencascade::handle<Units_Quantity>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Token", 
+          "parent": "Units_Unit", 
+          "arguments": [], 
+          "key": "Units_Unit::Token()", 
+          "returnType": "opencascade::handle<Units_Token>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEqual", 
+          "parent": "Units_Unit", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "astring"
+            }
+          ], 
+          "key": "Units_Unit::IsEqual(Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Units_Unit", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ashift"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "alevel"
+            }
+          ], 
+          "key": "Units_Unit::Dump(Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Units_Unit", 
+          "arguments": [], 
+          "key": "Units_Unit::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Units_Unit", 
+          "arguments": [], 
+          "key": "Units_Unit::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Units_Unit", 
+          "arguments": [], 
+          "key": "Units_Unit::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Units_Unit.hxx", 
+        40
+      ], 
+      "key": "Units_Unit"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_UnitsSequence", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_UnitsSequence", 
+          "parent": "Units_UnitsSequence", 
+          "arguments": [], 
+          "key": "Units_UnitsSequence::Units_UnitsSequence()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_UnitsSequence", 
+          "parent": "Units_UnitsSequence", 
+          "arguments": [
+            {
+              "decl": "const Units_UtsSequence &", 
+              "type": "Units_UtsSequence", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Units_UnitsSequence::Units_UnitsSequence(Units_UtsSequence)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_UnitsSequence", 
+          "parent": "Units_UnitsSequence", 
+          "arguments": [
+            {
+              "decl": "const Units_UnitsSequence &", 
+              "type": "Units_UnitsSequence", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_UnitsSequence::Units_UnitsSequence(Units_UnitsSequence)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Sequence", 
+          "parent": "Units_UnitsSequence", 
+          "arguments": [], 
+          "key": "Units_UnitsSequence::Sequence()", 
+          "returnType": "Units_UtsSequence const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Append", 
+          "parent": "Units_UnitsSequence", 
+          "arguments": [
+            {
+              "decl": "const NCollection_Sequence<opencascade::handle<Units_Unit> >::value_type &", 
+              "type": "NCollection_Sequence<opencascade::handle<Units_Unit> >::value_type", 
+              "name": "theItem"
+            }
+          ], 
+          "key": "Units_UnitsSequence::Append(NCollection_Sequence<opencascade::handle<Units_Unit> >::value_type)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Append", 
+          "parent": "Units_UnitsSequence", 
+          "arguments": [
+            {
+              "decl": "Units_UtsSequence &", 
+              "type": "Units_UtsSequence", 
+              "name": "theSequence"
+            }
+          ], 
+          "key": "Units_UnitsSequence::Append(Units_UtsSequence)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeSequence", 
+          "parent": "Units_UnitsSequence", 
+          "arguments": [], 
+          "key": "Units_UnitsSequence::ChangeSequence()", 
+          "returnType": "Units_UtsSequence &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Units_UnitsSequence", 
+          "arguments": [], 
+          "key": "Units_UnitsSequence::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Units_UnitsSequence", 
+          "arguments": [], 
+          "key": "Units_UnitsSequence::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Units_UnitsSequence", 
+          "arguments": [], 
+          "key": "Units_UnitsSequence::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Sequence<opencascade::handle<Units_Unit> >"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Units_UnitsSequence.hxx", 
+        24
+      ], 
+      "key": "Units_UnitsSequence"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_QuantitiesSequence", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_QuantitiesSequence", 
+          "parent": "Units_QuantitiesSequence", 
+          "arguments": [], 
+          "key": "Units_QuantitiesSequence::Units_QuantitiesSequence()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_QuantitiesSequence", 
+          "parent": "Units_QuantitiesSequence", 
+          "arguments": [
+            {
+              "decl": "const Units_QtsSequence &", 
+              "type": "Units_QtsSequence", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Units_QuantitiesSequence::Units_QuantitiesSequence(Units_QtsSequence)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_QuantitiesSequence", 
+          "parent": "Units_QuantitiesSequence", 
+          "arguments": [
+            {
+              "decl": "const Units_QuantitiesSequence &", 
+              "type": "Units_QuantitiesSequence", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_QuantitiesSequence::Units_QuantitiesSequence(Units_QuantitiesSequence)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Sequence", 
+          "parent": "Units_QuantitiesSequence", 
+          "arguments": [], 
+          "key": "Units_QuantitiesSequence::Sequence()", 
+          "returnType": "Units_QtsSequence const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Append", 
+          "parent": "Units_QuantitiesSequence", 
+          "arguments": [
+            {
+              "decl": "const NCollection_Sequence<opencascade::handle<Units_Quantity> >::value_type &", 
+              "type": "NCollection_Sequence<opencascade::handle<Units_Quantity> >::value_type", 
+              "name": "theItem"
+            }
+          ], 
+          "key": "Units_QuantitiesSequence::Append(NCollection_Sequence<opencascade::handle<Units_Quantity> >::value_type)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Append", 
+          "parent": "Units_QuantitiesSequence", 
+          "arguments": [
+            {
+              "decl": "Units_QtsSequence &", 
+              "type": "Units_QtsSequence", 
+              "name": "theSequence"
+            }
+          ], 
+          "key": "Units_QuantitiesSequence::Append(Units_QtsSequence)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeSequence", 
+          "parent": "Units_QuantitiesSequence", 
+          "arguments": [], 
+          "key": "Units_QuantitiesSequence::ChangeSequence()", 
+          "returnType": "Units_QtsSequence &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Units_QuantitiesSequence", 
+          "arguments": [], 
+          "key": "Units_QuantitiesSequence::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Units_QuantitiesSequence", 
+          "arguments": [], 
+          "key": "Units_QuantitiesSequence::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Units_QuantitiesSequence", 
+          "arguments": [], 
+          "key": "Units_QuantitiesSequence::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Sequence<opencascade::handle<Units_Quantity> >"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Units_QuantitiesSequence.hxx", 
+        24
+      ], 
+      "key": "Units_QuantitiesSequence"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_UnitsSystem", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_UnitsSystem", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [], 
+          "key": "Units_UnitsSystem::Units_UnitsSystem()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_UnitsSystem", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aName"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "Verbose", 
+              "default": "false"
+            }
+          ], 
+          "key": "Units_UnitsSystem::Units_UnitsSystem(Standard_CString, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_UnitsSystem", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [
+            {
+              "decl": "const Units_UnitsSystem &", 
+              "type": "Units_UnitsSystem", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_UnitsSystem::Units_UnitsSystem(Units_UnitsSystem)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "QuantitiesSequence", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [], 
+          "key": "Units_UnitsSystem::QuantitiesSequence()", 
+          "returnType": "opencascade::handle<Units_QuantitiesSequence>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ActiveUnitsSequence", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [], 
+          "key": "Units_UnitsSystem::ActiveUnitsSequence()", 
+          "returnType": "opencascade::handle<TColStd_HSequenceOfInteger>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Specify", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aquantity"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aunit"
+            }
+          ], 
+          "key": "Units_UnitsSystem::Specify(Standard_CString, Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Remove", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aquantity"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aunit"
+            }
+          ], 
+          "key": "Units_UnitsSystem::Remove(Standard_CString, Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Activate", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aquantity"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aunit"
+            }
+          ], 
+          "key": "Units_UnitsSystem::Activate(Standard_CString, Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Activates", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [], 
+          "key": "Units_UnitsSystem::Activates()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ActiveUnit", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aquantity"
+            }
+          ], 
+          "key": "Units_UnitsSystem::ActiveUnit(Standard_CString)", 
+          "returnType": "TCollection_AsciiString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ConvertValueToUserSystem", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aquantity"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aunit"
+            }
+          ], 
+          "key": "Units_UnitsSystem::ConvertValueToUserSystem(Standard_CString, Standard_Real, Standard_CString)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ConvertSIValueToUserSystem", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aquantity"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }
+          ], 
+          "key": "Units_UnitsSystem::ConvertSIValueToUserSystem(Standard_CString, Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ConvertUserSystemValueToSI", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aquantity"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }
+          ], 
+          "key": "Units_UnitsSystem::ConvertUserSystemValueToSI(Standard_CString, Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [], 
+          "key": "Units_UnitsSystem::Dump()", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEmpty", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [], 
+          "key": "Units_UnitsSystem::IsEmpty()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [], 
+          "key": "Units_UnitsSystem::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [], 
+          "key": "Units_UnitsSystem::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Units_UnitsSystem", 
+          "arguments": [], 
+          "key": "Units_UnitsSystem::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Units_UnitsSystem.hxx", 
+        39
+      ], 
+      "key": "Units_UnitsSystem"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_UnitsDictionary", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_UnitsDictionary", 
+          "parent": "Units_UnitsDictionary", 
+          "arguments": [], 
+          "key": "Units_UnitsDictionary::Units_UnitsDictionary()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_UnitsDictionary", 
+          "parent": "Units_UnitsDictionary", 
+          "arguments": [
+            {
+              "decl": "const Units_UnitsDictionary &", 
+              "type": "Units_UnitsDictionary", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_UnitsDictionary::Units_UnitsDictionary(Units_UnitsDictionary)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Creates", 
+          "parent": "Units_UnitsDictionary", 
+          "arguments": [], 
+          "key": "Units_UnitsDictionary::Creates()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Sequence", 
+          "parent": "Units_UnitsDictionary", 
+          "arguments": [], 
+          "key": "Units_UnitsDictionary::Sequence()", 
+          "returnType": "opencascade::handle<Units_QuantitiesSequence>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ActiveUnit", 
+          "parent": "Units_UnitsDictionary", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aquantity"
+            }
+          ], 
+          "key": "Units_UnitsDictionary::ActiveUnit(Standard_CString)", 
+          "returnType": "TCollection_AsciiString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Units_UnitsDictionary", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "alevel"
+            }
+          ], 
+          "key": "Units_UnitsDictionary::Dump(Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Units_UnitsDictionary", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_Dimensions> &", 
+              "type": "opencascade::handle<Units_Dimensions>", 
+              "name": "adimensions"
+            }
+          ], 
+          "key": "Units_UnitsDictionary::Dump(opencascade::handle<Units_Dimensions>)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Units_UnitsDictionary", 
+          "arguments": [], 
+          "key": "Units_UnitsDictionary::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Units_UnitsDictionary", 
+          "arguments": [], 
+          "key": "Units_UnitsDictionary::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Units_UnitsDictionary", 
+          "arguments": [], 
+          "key": "Units_UnitsDictionary::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Units_UnitsDictionary.hxx", 
+        39
+      ], 
+      "key": "Units_UnitsDictionary"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_Explorer", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_Explorer", 
+          "parent": "Units_Explorer", 
+          "arguments": [], 
+          "key": "Units_Explorer::Units_Explorer()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Explorer", 
+          "parent": "Units_Explorer", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_UnitsSystem> &", 
+              "type": "opencascade::handle<Units_UnitsSystem>", 
+              "name": "aunitssystem"
+            }
+          ], 
+          "key": "Units_Explorer::Units_Explorer(opencascade::handle<Units_UnitsSystem>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Explorer", 
+          "parent": "Units_Explorer", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_UnitsDictionary> &", 
+              "type": "opencascade::handle<Units_UnitsDictionary>", 
+              "name": "aunitsdictionary"
+            }
+          ], 
+          "key": "Units_Explorer::Units_Explorer(opencascade::handle<Units_UnitsDictionary>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Explorer", 
+          "parent": "Units_Explorer", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_UnitsSystem> &", 
+              "type": "opencascade::handle<Units_UnitsSystem>", 
+              "name": "aunitssystem"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aquantity"
+            }
+          ], 
+          "key": "Units_Explorer::Units_Explorer(opencascade::handle<Units_UnitsSystem>, Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Explorer", 
+          "parent": "Units_Explorer", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_UnitsDictionary> &", 
+              "type": "opencascade::handle<Units_UnitsDictionary>", 
+              "name": "aunitsdictionary"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aquantity"
+            }
+          ], 
+          "key": "Units_Explorer::Units_Explorer(opencascade::handle<Units_UnitsDictionary>, Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Explorer", 
+          "parent": "Units_Explorer", 
+          "arguments": [
+            {
+              "decl": "const Units_Explorer &", 
+              "type": "Units_Explorer", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_Explorer::Units_Explorer(Units_Explorer)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "Units_Explorer", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_UnitsSystem> &", 
+              "type": "opencascade::handle<Units_UnitsSystem>", 
+              "name": "aunitssystem"
+            }
+          ], 
+          "key": "Units_Explorer::Init(opencascade::handle<Units_UnitsSystem>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "Units_Explorer", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_UnitsDictionary> &", 
+              "type": "opencascade::handle<Units_UnitsDictionary>", 
+              "name": "aunitsdictionary"
+            }
+          ], 
+          "key": "Units_Explorer::Init(opencascade::handle<Units_UnitsDictionary>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "Units_Explorer", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_UnitsSystem> &", 
+              "type": "opencascade::handle<Units_UnitsSystem>", 
+              "name": "aunitssystem"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aquantity"
+            }
+          ], 
+          "key": "Units_Explorer::Init(opencascade::handle<Units_UnitsSystem>, Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "Units_Explorer", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_UnitsDictionary> &", 
+              "type": "opencascade::handle<Units_UnitsDictionary>", 
+              "name": "aunitsdictionary"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aquantity"
+            }
+          ], 
+          "key": "Units_Explorer::Init(opencascade::handle<Units_UnitsDictionary>, Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MoreQuantity", 
+          "parent": "Units_Explorer", 
+          "arguments": [], 
+          "key": "Units_Explorer::MoreQuantity()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NextQuantity", 
+          "parent": "Units_Explorer", 
+          "arguments": [], 
+          "key": "Units_Explorer::NextQuantity()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Quantity", 
+          "parent": "Units_Explorer", 
+          "arguments": [], 
+          "key": "Units_Explorer::Quantity()", 
+          "returnType": "TCollection_AsciiString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MoreUnit", 
+          "parent": "Units_Explorer", 
+          "arguments": [], 
+          "key": "Units_Explorer::MoreUnit()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NextUnit", 
+          "parent": "Units_Explorer", 
+          "arguments": [], 
+          "key": "Units_Explorer::NextUnit()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Unit", 
+          "parent": "Units_Explorer", 
+          "arguments": [], 
+          "key": "Units_Explorer::Unit()", 
+          "returnType": "TCollection_AsciiString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsActive", 
+          "parent": "Units_Explorer", 
+          "arguments": [], 
+          "key": "Units_Explorer::IsActive()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Units_Explorer.hxx", 
+        37
+      ], 
+      "key": "Units_Explorer"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_Sentence", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_Sentence", 
+          "parent": "Units_Sentence", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_Lexicon> &", 
+              "type": "opencascade::handle<Units_Lexicon>", 
+              "name": "alexicon"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "astring"
+            }
+          ], 
+          "key": "Units_Sentence::Units_Sentence(opencascade::handle<Units_Lexicon>, Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Sentence", 
+          "parent": "Units_Sentence", 
+          "arguments": [
+            {
+              "decl": "const Units_Sentence &", 
+              "type": "Units_Sentence", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_Sentence::Units_Sentence(Units_Sentence)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetConstants", 
+          "parent": "Units_Sentence", 
+          "arguments": [], 
+          "key": "Units_Sentence::SetConstants()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Sequence", 
+          "parent": "Units_Sentence", 
+          "arguments": [], 
+          "key": "Units_Sentence::Sequence()", 
+          "returnType": "opencascade::handle<Units_TokensSequence>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Sequence", 
+          "parent": "Units_Sentence", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_TokensSequence> &", 
+              "type": "opencascade::handle<Units_TokensSequence>", 
+              "name": "asequenceoftokens"
+            }
+          ], 
+          "key": "Units_Sentence::Sequence(opencascade::handle<Units_TokensSequence>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Evaluate", 
+          "parent": "Units_Sentence", 
+          "arguments": [], 
+          "key": "Units_Sentence::Evaluate()", 
+          "returnType": "opencascade::handle<Units_Token>", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "Units_Sentence", 
+          "arguments": [], 
+          "key": "Units_Sentence::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Units_Sentence", 
+          "arguments": [], 
+          "key": "Units_Sentence::Dump()", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Units_Sentence.hxx", 
+        33
+      ], 
+      "key": "Units_Sentence"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_UnitSentence", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_UnitSentence", 
+          "parent": "Units_UnitSentence", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "astring"
+            }
+          ], 
+          "key": "Units_UnitSentence::Units_UnitSentence(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_UnitSentence", 
+          "parent": "Units_UnitSentence", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "astring"
+            }, 
+            {
+              "decl": "const opencascade::handle<Units_QuantitiesSequence> &", 
+              "type": "opencascade::handle<Units_QuantitiesSequence>", 
+              "name": "aquantitiessequence"
+            }
+          ], 
+          "key": "Units_UnitSentence::Units_UnitSentence(Standard_CString, opencascade::handle<Units_QuantitiesSequence>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_UnitSentence", 
+          "parent": "Units_UnitSentence", 
+          "arguments": [
+            {
+              "decl": "const Units_UnitSentence &", 
+              "type": "Units_UnitSentence", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_UnitSentence::Units_UnitSentence(Units_UnitSentence)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Analyse", 
+          "parent": "Units_UnitSentence", 
+          "arguments": [], 
+          "key": "Units_UnitSentence::Analyse()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetUnits", 
+          "parent": "Units_UnitSentence", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Units_QuantitiesSequence> &", 
+              "type": "opencascade::handle<Units_QuantitiesSequence>", 
+              "name": "aquantitiessequence"
+            }
+          ], 
+          "key": "Units_UnitSentence::SetUnits(opencascade::handle<Units_QuantitiesSequence>)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Units_Sentence"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Units_UnitSentence.hxx", 
+        32
+      ], 
+      "key": "Units_UnitSentence"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_ShiftedUnit", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_ShiftedUnit", 
+          "parent": "Units_ShiftedUnit", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aname"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "asymbol"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "amove"
+            }, 
+            {
+              "decl": "const opencascade::handle<Units_Quantity> &", 
+              "type": "opencascade::handle<Units_Quantity>", 
+              "name": "aquantity"
+            }
+          ], 
+          "key": "Units_ShiftedUnit::Units_ShiftedUnit(Standard_CString, Standard_CString, Standard_Real, Standard_Real, opencascade::handle<Units_Quantity>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_ShiftedUnit", 
+          "parent": "Units_ShiftedUnit", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aname"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "asymbol"
+            }
+          ], 
+          "key": "Units_ShiftedUnit::Units_ShiftedUnit(Standard_CString, Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_ShiftedUnit", 
+          "parent": "Units_ShiftedUnit", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aname"
+            }
+          ], 
+          "key": "Units_ShiftedUnit::Units_ShiftedUnit(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_ShiftedUnit", 
+          "parent": "Units_ShiftedUnit", 
+          "arguments": [
+            {
+              "decl": "const Units_ShiftedUnit &", 
+              "type": "Units_ShiftedUnit", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_ShiftedUnit::Units_ShiftedUnit(Units_ShiftedUnit)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Move", 
+          "parent": "Units_ShiftedUnit", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "amove"
+            }
+          ], 
+          "key": "Units_ShiftedUnit::Move(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Move", 
+          "parent": "Units_ShiftedUnit", 
+          "arguments": [], 
+          "key": "Units_ShiftedUnit::Move()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Token", 
+          "parent": "Units_ShiftedUnit", 
+          "arguments": [], 
+          "key": "Units_ShiftedUnit::Token()", 
+          "returnType": "opencascade::handle<Units_Token>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Units_ShiftedUnit", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ashift"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "alevel"
+            }
+          ], 
+          "key": "Units_ShiftedUnit::Dump(Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Units_ShiftedUnit", 
+          "arguments": [], 
+          "key": "Units_ShiftedUnit::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Units_ShiftedUnit", 
+          "arguments": [], 
+          "key": "Units_ShiftedUnit::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Units_ShiftedUnit", 
+          "arguments": [], 
+          "key": "Units_ShiftedUnit::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Units_Unit"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Units_ShiftedUnit.hxx", 
+        39
+      ], 
+      "key": "Units_ShiftedUnit"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_MathSentence", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_MathSentence", 
+          "parent": "Units_MathSentence", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "astring"
+            }
+          ], 
+          "key": "Units_MathSentence::Units_MathSentence(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_MathSentence", 
+          "parent": "Units_MathSentence", 
+          "arguments": [
+            {
+              "decl": "const Units_MathSentence &", 
+              "type": "Units_MathSentence", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_MathSentence::Units_MathSentence(Units_MathSentence)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Units_Sentence"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Units_MathSentence.hxx", 
+        30
+      ], 
+      "key": "Units_MathSentence"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_NoSuchUnit", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_NoSuchUnit", 
+          "parent": "Units_NoSuchUnit", 
+          "arguments": [], 
+          "key": "Units_NoSuchUnit::Units_NoSuchUnit()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_NoSuchUnit", 
+          "parent": "Units_NoSuchUnit", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Units_NoSuchUnit::Units_NoSuchUnit(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_NoSuchUnit", 
+          "parent": "Units_NoSuchUnit", 
+          "arguments": [
+            {
+              "decl": "const Units_NoSuchUnit &", 
+              "type": "Units_NoSuchUnit", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_NoSuchUnit::Units_NoSuchUnit(Units_NoSuchUnit)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Units_NoSuchUnit", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Units_NoSuchUnit::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Units_NoSuchUnit", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Units_NoSuchUnit::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Units_NoSuchUnit", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Units_NoSuchUnit::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Units_NoSuchUnit>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Units_NoSuchUnit", 
+          "arguments": [], 
+          "key": "Units_NoSuchUnit::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Units_NoSuchUnit", 
+          "arguments": [], 
+          "key": "Units_NoSuchUnit::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Units_NoSuchUnit", 
+          "arguments": [], 
+          "key": "Units_NoSuchUnit::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_NoSuchObject"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Units_NoSuchUnit.hxx", 
+        35
+      ], 
+      "key": "Units_NoSuchUnit"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_Measurement", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_Measurement", 
+          "parent": "Units_Measurement", 
+          "arguments": [], 
+          "key": "Units_Measurement::Units_Measurement()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Measurement", 
+          "parent": "Units_Measurement", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }, 
+            {
+              "decl": "const opencascade::handle<Units_Token> &", 
+              "type": "opencascade::handle<Units_Token>", 
+              "name": "atoken"
+            }
+          ], 
+          "key": "Units_Measurement::Units_Measurement(Standard_Real, opencascade::handle<Units_Token>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Measurement", 
+          "parent": "Units_Measurement", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aunit"
+            }
+          ], 
+          "key": "Units_Measurement::Units_Measurement(Standard_Real, Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_Measurement", 
+          "parent": "Units_Measurement", 
+          "arguments": [
+            {
+              "decl": "const Units_Measurement &", 
+              "type": "Units_Measurement", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_Measurement::Units_Measurement(Units_Measurement)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Convert", 
+          "parent": "Units_Measurement", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aunit"
+            }
+          ], 
+          "key": "Units_Measurement::Convert(Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Integer", 
+          "parent": "Units_Measurement", 
+          "arguments": [], 
+          "key": "Units_Measurement::Integer()", 
+          "returnType": "Units_Measurement", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Fractional", 
+          "parent": "Units_Measurement", 
+          "arguments": [], 
+          "key": "Units_Measurement::Fractional()", 
+          "returnType": "Units_Measurement", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Measurement", 
+          "parent": "Units_Measurement", 
+          "arguments": [], 
+          "key": "Units_Measurement::Measurement()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Token", 
+          "parent": "Units_Measurement", 
+          "arguments": [], 
+          "key": "Units_Measurement::Token()", 
+          "returnType": "opencascade::handle<Units_Token>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Units_Measurement", 
+          "arguments": [
+            {
+              "decl": "const Units_Measurement &", 
+              "type": "Units_Measurement", 
+              "name": "ameasurement"
+            }
+          ], 
+          "key": "Units_Measurement::Add(Units_Measurement)", 
+          "returnType": "Units_Measurement", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Subtract", 
+          "parent": "Units_Measurement", 
+          "arguments": [
+            {
+              "decl": "const Units_Measurement &", 
+              "type": "Units_Measurement", 
+              "name": "ameasurement"
+            }
+          ], 
+          "key": "Units_Measurement::Subtract(Units_Measurement)", 
+          "returnType": "Units_Measurement", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Multiply", 
+          "parent": "Units_Measurement", 
+          "arguments": [
+            {
+              "decl": "const Units_Measurement &", 
+              "type": "Units_Measurement", 
+              "name": "ameasurement"
+            }
+          ], 
+          "key": "Units_Measurement::Multiply(Units_Measurement)", 
+          "returnType": "Units_Measurement", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Multiply", 
+          "parent": "Units_Measurement", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }
+          ], 
+          "key": "Units_Measurement::Multiply(Standard_Real)", 
+          "returnType": "Units_Measurement", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Divide", 
+          "parent": "Units_Measurement", 
+          "arguments": [
+            {
+              "decl": "const Units_Measurement &", 
+              "type": "Units_Measurement", 
+              "name": "ameasurement"
+            }
+          ], 
+          "key": "Units_Measurement::Divide(Units_Measurement)", 
+          "returnType": "Units_Measurement", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Divide", 
+          "parent": "Units_Measurement", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }
+          ], 
+          "key": "Units_Measurement::Divide(Standard_Real)", 
+          "returnType": "Units_Measurement", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Power", 
+          "parent": "Units_Measurement", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "anexponent"
+            }
+          ], 
+          "key": "Units_Measurement::Power(Standard_Real)", 
+          "returnType": "Units_Measurement", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasToken", 
+          "parent": "Units_Measurement", 
+          "arguments": [], 
+          "key": "Units_Measurement::HasToken()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Units_Measurement", 
+          "arguments": [], 
+          "key": "Units_Measurement::Dump()", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Units_Measurement.hxx", 
+        32
+      ], 
+      "key": "Units_Measurement"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_NoSuchType", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_NoSuchType", 
+          "parent": "Units_NoSuchType", 
+          "arguments": [], 
+          "key": "Units_NoSuchType::Units_NoSuchType()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_NoSuchType", 
+          "parent": "Units_NoSuchType", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Units_NoSuchType::Units_NoSuchType(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_NoSuchType", 
+          "parent": "Units_NoSuchType", 
+          "arguments": [
+            {
+              "decl": "const Units_NoSuchType &", 
+              "type": "Units_NoSuchType", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_NoSuchType::Units_NoSuchType(Units_NoSuchType)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Units_NoSuchType", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Units_NoSuchType::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Units_NoSuchType", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Units_NoSuchType::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Units_NoSuchType", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Units_NoSuchType::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Units_NoSuchType>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Units_NoSuchType", 
+          "arguments": [], 
+          "key": "Units_NoSuchType::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Units_NoSuchType", 
+          "arguments": [], 
+          "key": "Units_NoSuchType::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Units_NoSuchType", 
+          "arguments": [], 
+          "key": "Units_NoSuchType::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_NoSuchObject"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Units_NoSuchType.hxx", 
+        35
+      ], 
+      "key": "Units_NoSuchType"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Units_ShiftedToken", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Units_ShiftedToken", 
+          "parent": "Units_ShiftedToken", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aword"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "amean"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "amove"
+            }, 
+            {
+              "decl": "const opencascade::handle<Units_Dimensions> &", 
+              "type": "opencascade::handle<Units_Dimensions>", 
+              "name": "adimensions"
+            }
+          ], 
+          "key": "Units_ShiftedToken::Units_ShiftedToken(Standard_CString, Standard_CString, Standard_Real, Standard_Real, opencascade::handle<Units_Dimensions>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Units_ShiftedToken", 
+          "parent": "Units_ShiftedToken", 
+          "arguments": [
+            {
+              "decl": "const Units_ShiftedToken &", 
+              "type": "Units_ShiftedToken", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Units_ShiftedToken::Units_ShiftedToken(Units_ShiftedToken)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Creates", 
+          "parent": "Units_ShiftedToken", 
+          "arguments": [], 
+          "key": "Units_ShiftedToken::Creates()", 
+          "returnType": "opencascade::handle<Units_Token>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Move", 
+          "parent": "Units_ShiftedToken", 
+          "arguments": [], 
+          "key": "Units_ShiftedToken::Move()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Multiplied", 
+          "parent": "Units_ShiftedToken", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }
+          ], 
+          "key": "Units_ShiftedToken::Multiplied(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Divided", 
+          "parent": "Units_ShiftedToken", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "avalue"
+            }
+          ], 
+          "key": "Units_ShiftedToken::Divided(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Units_ShiftedToken", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ashift"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "alevel"
+            }
+          ], 
+          "key": "Units_ShiftedToken::Dump(Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Units_ShiftedToken", 
+          "arguments": [], 
+          "key": "Units_ShiftedToken::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Units_ShiftedToken", 
+          "arguments": [], 
+          "key": "Units_ShiftedToken::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Units_ShiftedToken", 
+          "arguments": [], 
+          "key": "Units_ShiftedToken::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Units_Token"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Units_ShiftedToken.hxx", 
+        48
+      ], 
+      "key": "Units_ShiftedToken"
+    }, 
+    {
+      "type": "opencascade::handle<Units_Token>", 
+      "declType": "typedef", 
+      "name": "Handle_Units_Token", 
+      "key": "Handle_Units_Token"
+    }, 
+    {
+      "type": "opencascade::handle<Units_Dimensions>", 
+      "declType": "typedef", 
+      "name": "Handle_Units_Dimensions", 
+      "key": "Handle_Units_Dimensions"
+    }, 
+    {
+      "type": "NCollection_Sequence<opencascade::handle<Units_Token> >", 
+      "declType": "typedef", 
+      "name": "Units_TksSequence", 
+      "key": "Units_TksSequence"
+    }, 
+    {
+      "type": "opencascade::handle<Units_TokensSequence>", 
+      "declType": "typedef", 
+      "name": "Handle_Units_TokensSequence", 
+      "key": "Handle_Units_TokensSequence"
+    }, 
+    {
+      "type": "opencascade::handle<Units_Lexicon>", 
+      "declType": "typedef", 
+      "name": "Handle_Units_Lexicon", 
+      "key": "Handle_Units_Lexicon"
+    }, 
+    {
+      "type": "opencascade::handle<Units_UnitsLexicon>", 
+      "declType": "typedef", 
+      "name": "Handle_Units_UnitsLexicon", 
+      "key": "Handle_Units_UnitsLexicon"
+    }, 
+    {
+      "type": "opencascade::handle<Units_Unit>", 
+      "declType": "typedef", 
+      "name": "Handle_Units_Unit", 
+      "key": "Handle_Units_Unit"
+    }, 
+    {
+      "type": "NCollection_Sequence<opencascade::handle<Units_Unit> >", 
+      "declType": "typedef", 
+      "name": "Units_UtsSequence", 
+      "key": "Units_UtsSequence"
+    }, 
+    {
+      "type": "opencascade::handle<Units_UnitsSequence>", 
+      "declType": "typedef", 
+      "name": "Handle_Units_UnitsSequence", 
+      "key": "Handle_Units_UnitsSequence"
+    }, 
+    {
+      "type": "opencascade::handle<Units_Quantity>", 
+      "declType": "typedef", 
+      "name": "Handle_Units_Quantity", 
+      "key": "Handle_Units_Quantity"
+    }, 
+    {
+      "type": "NCollection_Sequence<opencascade::handle<Units_Quantity> >", 
+      "declType": "typedef", 
+      "name": "Units_QtsSequence", 
+      "key": "Units_QtsSequence"
+    }, 
+    {
+      "type": "opencascade::handle<Units_QuantitiesSequence>", 
+      "declType": "typedef", 
+      "name": "Handle_Units_QuantitiesSequence", 
+      "key": "Handle_Units_QuantitiesSequence"
+    }, 
+    {
+      "type": "opencascade::handle<Units_UnitsDictionary>", 
+      "declType": "typedef", 
+      "name": "Handle_Units_UnitsDictionary", 
+      "key": "Handle_Units_UnitsDictionary"
+    }, 
+    {
+      "type": "opencascade::handle<Units_ShiftedUnit>", 
+      "declType": "typedef", 
+      "name": "Handle_Units_ShiftedUnit", 
+      "key": "Handle_Units_ShiftedUnit"
+    }, 
+    {
+      "type": "opencascade::handle<Units_NoSuchUnit>", 
+      "declType": "typedef", 
+      "name": "Handle_Units_NoSuchUnit", 
+      "key": "Handle_Units_NoSuchUnit"
+    }, 
+    {
+      "type": "opencascade::handle<Units_NoSuchType>", 
+      "declType": "typedef", 
+      "name": "Handle_Units_NoSuchType", 
+      "key": "Handle_Units_NoSuchType"
+    }, 
+    {
+      "type": "opencascade::handle<Units_UnitsSystem>", 
+      "declType": "typedef", 
+      "name": "Handle_Units_UnitsSystem", 
+      "key": "Handle_Units_UnitsSystem"
+    }, 
+    {
+      "type": "opencascade::handle<Units_ShiftedToken>", 
+      "declType": "typedef", 
+      "name": "Handle_Units_ShiftedToken", 
+      "key": "Handle_Units_ShiftedToken"
+    }
+  ], 
+  "name": "Units"
+}

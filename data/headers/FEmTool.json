@@ -1,0 +1,2059 @@
+{
+  "headers": [
+    "FEmTool_Assembly.hxx", 
+    "FEmTool_ProfileMatrix.hxx", 
+    "FEmTool_Curve.hxx", 
+    "FEmTool_SeqOfLinConstr.hxx", 
+    "FEmTool_HAssemblyTable.hxx", 
+    "FEmTool_LinearTension.hxx", 
+    "FEmTool_ListOfVectors.hxx", 
+    "FEmTool_LinearFlexion.hxx", 
+    "FEmTool_ElementaryCriterion.hxx", 
+    "FEmTool_ElementsOfRefMatrix.hxx", 
+    "FEmTool_LinearJerk.hxx", 
+    "FEmTool_SparseMatrix.hxx", 
+    "FEmTool_AssemblyTable.hxx", 
+    "FEmTool_ListIteratorOfListOfVectors.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "FEmTool_HAssemblyTable", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_HAssemblyTable", 
+          "parent": "FEmTool_HAssemblyTable", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theRowLow"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theRowUpp"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theColLow"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theColUpp"
+            }
+          ], 
+          "key": "FEmTool_HAssemblyTable::FEmTool_HAssemblyTable(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_HAssemblyTable", 
+          "parent": "FEmTool_HAssemblyTable", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theRowLow"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theRowUpp"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theColLow"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theColUpp"
+            }, 
+            {
+              "decl": "const NCollection_Array2<opencascade::handle<TColStd_HArray1OfInteger> >::value_type &", 
+              "type": "NCollection_Array2<opencascade::handle<TColStd_HArray1OfInteger> >::value_type", 
+              "name": "theValue"
+            }
+          ], 
+          "key": "FEmTool_HAssemblyTable::FEmTool_HAssemblyTable(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, NCollection_Array2<opencascade::handle<TColStd_HArray1OfInteger> >::value_type)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_HAssemblyTable", 
+          "parent": "FEmTool_HAssemblyTable", 
+          "arguments": [
+            {
+              "decl": "const FEmTool_AssemblyTable &", 
+              "type": "FEmTool_AssemblyTable", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "FEmTool_HAssemblyTable::FEmTool_HAssemblyTable(FEmTool_AssemblyTable)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_HAssemblyTable", 
+          "parent": "FEmTool_HAssemblyTable", 
+          "arguments": [
+            {
+              "decl": "const FEmTool_HAssemblyTable &", 
+              "type": "FEmTool_HAssemblyTable", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "FEmTool_HAssemblyTable::FEmTool_HAssemblyTable(FEmTool_HAssemblyTable)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Array2", 
+          "parent": "FEmTool_HAssemblyTable", 
+          "arguments": [], 
+          "key": "FEmTool_HAssemblyTable::Array2()", 
+          "returnType": "FEmTool_AssemblyTable const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeArray2", 
+          "parent": "FEmTool_HAssemblyTable", 
+          "arguments": [], 
+          "key": "FEmTool_HAssemblyTable::ChangeArray2()", 
+          "returnType": "FEmTool_AssemblyTable &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "FEmTool_HAssemblyTable", 
+          "arguments": [], 
+          "key": "FEmTool_HAssemblyTable::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "FEmTool_HAssemblyTable", 
+          "arguments": [], 
+          "key": "FEmTool_HAssemblyTable::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "FEmTool_HAssemblyTable", 
+          "arguments": [], 
+          "key": "FEmTool_HAssemblyTable::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Array2<opencascade::handle<TColStd_HArray1OfInteger> >"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FEmTool_HAssemblyTable.hxx", 
+        24
+      ], 
+      "key": "FEmTool_HAssemblyTable"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FEmTool_ProfileMatrix", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_ProfileMatrix", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [
+            {
+              "decl": "const TColStd_Array1OfInteger &", 
+              "type": "TColStd_Array1OfInteger", 
+              "name": "FirstIndexes"
+            }
+          ], 
+          "key": "FEmTool_ProfileMatrix::FEmTool_ProfileMatrix(TColStd_Array1OfInteger)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_ProfileMatrix", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [
+            {
+              "decl": "const FEmTool_ProfileMatrix &", 
+              "type": "FEmTool_ProfileMatrix", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "FEmTool_ProfileMatrix::FEmTool_ProfileMatrix(FEmTool_ProfileMatrix)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Value"
+            }
+          ], 
+          "key": "FEmTool_ProfileMatrix::Init(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeValue", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "I"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "J"
+            }
+          ], 
+          "key": "FEmTool_ProfileMatrix::ChangeValue(Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Real &", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Decompose", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_ProfileMatrix::Decompose()", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Solve", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [
+            {
+              "decl": "const math_Vector &", 
+              "type": "math_Vector", 
+              "name": "B"
+            }, 
+            {
+              "decl": "math_Vector &", 
+              "type": "math_Vector", 
+              "name": "X"
+            }
+          ], 
+          "key": "FEmTool_ProfileMatrix::Solve(math_Vector, math_Vector)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Prepare", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_ProfileMatrix::Prepare()", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Solve", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [
+            {
+              "decl": "const math_Vector &", 
+              "type": "math_Vector", 
+              "name": "B"
+            }, 
+            {
+              "decl": "const math_Vector &", 
+              "type": "math_Vector", 
+              "name": "Init"
+            }, 
+            {
+              "decl": "math_Vector &", 
+              "type": "math_Vector", 
+              "name": "X"
+            }, 
+            {
+              "decl": "math_Vector &", 
+              "type": "math_Vector", 
+              "name": "Residual"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "default": "1.0E-8"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NbIterations", 
+              "default": "50"
+            }
+          ], 
+          "key": "FEmTool_ProfileMatrix::Solve(math_Vector, math_Vector, math_Vector, math_Vector, Standard_Real, Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Multiplied", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [
+            {
+              "decl": "const math_Vector &", 
+              "type": "math_Vector", 
+              "name": "X"
+            }, 
+            {
+              "decl": "math_Vector &", 
+              "type": "math_Vector", 
+              "name": "MX"
+            }
+          ], 
+          "key": "FEmTool_ProfileMatrix::Multiplied(math_Vector, math_Vector)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "RowNumber", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_ProfileMatrix::RowNumber()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "ColNumber", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_ProfileMatrix::ColNumber()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsInProfile", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "i"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "j"
+            }
+          ], 
+          "key": "FEmTool_ProfileMatrix::IsInProfile(Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "OutM", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_ProfileMatrix::OutM()", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "OutS", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_ProfileMatrix::OutS()", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_ProfileMatrix::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_ProfileMatrix::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "FEmTool_ProfileMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_ProfileMatrix::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "FEmTool_SparseMatrix"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FEmTool_ProfileMatrix.hxx", 
+        42
+      ], 
+      "key": "FEmTool_ProfileMatrix"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FEmTool_Assembly", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_Assembly", 
+          "parent": "FEmTool_Assembly", 
+          "arguments": [
+            {
+              "decl": "const TColStd_Array2OfInteger &", 
+              "type": "TColStd_Array2OfInteger", 
+              "name": "Dependence"
+            }, 
+            {
+              "decl": "const opencascade::handle<FEmTool_HAssemblyTable> &", 
+              "type": "opencascade::handle<FEmTool_HAssemblyTable>", 
+              "name": "Table"
+            }
+          ], 
+          "key": "FEmTool_Assembly::FEmTool_Assembly(TColStd_Array2OfInteger, opencascade::handle<FEmTool_HAssemblyTable>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_Assembly", 
+          "parent": "FEmTool_Assembly", 
+          "arguments": [
+            {
+              "decl": "const FEmTool_Assembly &", 
+              "type": "FEmTool_Assembly", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "FEmTool_Assembly::FEmTool_Assembly(FEmTool_Assembly)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NullifyMatrix", 
+          "parent": "FEmTool_Assembly", 
+          "arguments": [], 
+          "key": "FEmTool_Assembly::NullifyMatrix()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AddMatrix", 
+          "parent": "FEmTool_Assembly", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Element"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension1"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension2"
+            }, 
+            {
+              "decl": "const math_Matrix &", 
+              "type": "math_Matrix", 
+              "name": "Mat"
+            }
+          ], 
+          "key": "FEmTool_Assembly::AddMatrix(Standard_Integer, Standard_Integer, Standard_Integer, math_Matrix)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NullifyVector", 
+          "parent": "FEmTool_Assembly", 
+          "arguments": [], 
+          "key": "FEmTool_Assembly::NullifyVector()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AddVector", 
+          "parent": "FEmTool_Assembly", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Element"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const math_Vector &", 
+              "type": "math_Vector", 
+              "name": "Vec"
+            }
+          ], 
+          "key": "FEmTool_Assembly::AddVector(Standard_Integer, Standard_Integer, math_Vector)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ResetConstraint", 
+          "parent": "FEmTool_Assembly", 
+          "arguments": [], 
+          "key": "FEmTool_Assembly::ResetConstraint()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NullifyConstraint", 
+          "parent": "FEmTool_Assembly", 
+          "arguments": [], 
+          "key": "FEmTool_Assembly::NullifyConstraint()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AddConstraint", 
+          "parent": "FEmTool_Assembly", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexofConstraint"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Element"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const math_Vector &", 
+              "type": "math_Vector", 
+              "name": "LinearForm"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Value"
+            }
+          ], 
+          "key": "FEmTool_Assembly::AddConstraint(Standard_Integer, Standard_Integer, Standard_Integer, math_Vector, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Solve", 
+          "parent": "FEmTool_Assembly", 
+          "arguments": [], 
+          "key": "FEmTool_Assembly::Solve()", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Solution", 
+          "parent": "FEmTool_Assembly", 
+          "arguments": [
+            {
+              "decl": "math_Vector &", 
+              "type": "math_Vector", 
+              "name": "Solution"
+            }
+          ], 
+          "key": "FEmTool_Assembly::Solution(math_Vector)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbGlobVar", 
+          "parent": "FEmTool_Assembly", 
+          "arguments": [], 
+          "key": "FEmTool_Assembly::NbGlobVar()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetAssemblyTable", 
+          "parent": "FEmTool_Assembly", 
+          "arguments": [
+            {
+              "decl": "opencascade::handle<FEmTool_HAssemblyTable> &", 
+              "type": "opencascade::handle<FEmTool_HAssemblyTable>", 
+              "name": "AssTable"
+            }
+          ], 
+          "key": "FEmTool_Assembly::GetAssemblyTable(opencascade::handle<FEmTool_HAssemblyTable>)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/FEmTool_Assembly.hxx", 
+        40
+      ], 
+      "key": "FEmTool_Assembly"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FEmTool_SparseMatrix", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "FEmTool_SparseMatrix", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Value"
+            }
+          ], 
+          "key": "FEmTool_SparseMatrix::Init(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeValue", 
+          "parent": "FEmTool_SparseMatrix", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "I"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "J"
+            }
+          ], 
+          "key": "FEmTool_SparseMatrix::ChangeValue(Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Real &", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Decompose", 
+          "parent": "FEmTool_SparseMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_SparseMatrix::Decompose()", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Solve", 
+          "parent": "FEmTool_SparseMatrix", 
+          "arguments": [
+            {
+              "decl": "const math_Vector &", 
+              "type": "math_Vector", 
+              "name": "B"
+            }, 
+            {
+              "decl": "math_Vector &", 
+              "type": "math_Vector", 
+              "name": "X"
+            }
+          ], 
+          "key": "FEmTool_SparseMatrix::Solve(math_Vector, math_Vector)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Prepare", 
+          "parent": "FEmTool_SparseMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_SparseMatrix::Prepare()", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Solve", 
+          "parent": "FEmTool_SparseMatrix", 
+          "arguments": [
+            {
+              "decl": "const math_Vector &", 
+              "type": "math_Vector", 
+              "name": "B"
+            }, 
+            {
+              "decl": "const math_Vector &", 
+              "type": "math_Vector", 
+              "name": "Init"
+            }, 
+            {
+              "decl": "math_Vector &", 
+              "type": "math_Vector", 
+              "name": "X"
+            }, 
+            {
+              "decl": "math_Vector &", 
+              "type": "math_Vector", 
+              "name": "Residual"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "default": "1.0E-8"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NbIterations", 
+              "default": "50"
+            }
+          ], 
+          "key": "FEmTool_SparseMatrix::Solve(math_Vector, math_Vector, math_Vector, math_Vector, Standard_Real, Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Multiplied", 
+          "parent": "FEmTool_SparseMatrix", 
+          "arguments": [
+            {
+              "decl": "const math_Vector &", 
+              "type": "math_Vector", 
+              "name": "X"
+            }, 
+            {
+              "decl": "math_Vector &", 
+              "type": "math_Vector", 
+              "name": "MX"
+            }
+          ], 
+          "key": "FEmTool_SparseMatrix::Multiplied(math_Vector, math_Vector)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "RowNumber", 
+          "parent": "FEmTool_SparseMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_SparseMatrix::RowNumber()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "ColNumber", 
+          "parent": "FEmTool_SparseMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_SparseMatrix::ColNumber()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "FEmTool_SparseMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_SparseMatrix::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "FEmTool_SparseMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_SparseMatrix::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "FEmTool_SparseMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_SparseMatrix::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FEmTool_SparseMatrix.hxx", 
+        35
+      ], 
+      "key": "FEmTool_SparseMatrix"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FEmTool_Curve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_Curve", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NbElements"
+            }, 
+            {
+              "decl": "const opencascade::handle<PLib_Base> &", 
+              "type": "opencascade::handle<PLib_Base>", 
+              "name": "TheBase"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance"
+            }
+          ], 
+          "key": "FEmTool_Curve::FEmTool_Curve(Standard_Integer, Standard_Integer, opencascade::handle<PLib_Base>, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_Curve", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [
+            {
+              "decl": "const FEmTool_Curve &", 
+              "type": "FEmTool_Curve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "FEmTool_Curve::FEmTool_Curve(FEmTool_Curve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Knots", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [], 
+          "key": "FEmTool_Curve::Knots()", 
+          "returnType": "TColStd_Array1OfReal &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetElement", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexOfElement"
+            }, 
+            {
+              "decl": "const TColStd_Array2OfReal &", 
+              "type": "TColStd_Array2OfReal", 
+              "name": "Coeffs"
+            }
+          ], 
+          "key": "FEmTool_Curve::SetElement(Standard_Integer, TColStd_Array2OfReal)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D0", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Pnt"
+            }
+          ], 
+          "key": "FEmTool_Curve::D0(Standard_Real, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Vec"
+            }
+          ], 
+          "key": "FEmTool_Curve::D1(Standard_Real, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Vec"
+            }
+          ], 
+          "key": "FEmTool_Curve::D2(Standard_Real, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "FirstU"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "LastU"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Length"
+            }
+          ], 
+          "key": "FEmTool_Curve::Length(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetElement", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexOfElement"
+            }, 
+            {
+              "decl": "TColStd_Array2OfReal &", 
+              "type": "TColStd_Array2OfReal", 
+              "name": "Coeffs"
+            }
+          ], 
+          "key": "FEmTool_Curve::GetElement(Standard_Integer, TColStd_Array2OfReal)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetPolynom", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Coeffs"
+            }
+          ], 
+          "key": "FEmTool_Curve::GetPolynom(TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbElements", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [], 
+          "key": "FEmTool_Curve::NbElements()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dimension", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [], 
+          "key": "FEmTool_Curve::Dimension()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Base", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [], 
+          "key": "FEmTool_Curve::Base()", 
+          "returnType": "opencascade::handle<PLib_Base>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Degree", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexOfElement"
+            }
+          ], 
+          "key": "FEmTool_Curve::Degree(Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetDegree", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexOfElement"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Degree"
+            }
+          ], 
+          "key": "FEmTool_Curve::SetDegree(Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ReduceDegree", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexOfElement"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "NewDegree"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "MaxError"
+            }
+          ], 
+          "key": "FEmTool_Curve::ReduceDegree(Standard_Integer, Standard_Real, Standard_Integer, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [], 
+          "key": "FEmTool_Curve::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [], 
+          "key": "FEmTool_Curve::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "FEmTool_Curve", 
+          "arguments": [], 
+          "key": "FEmTool_Curve::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FEmTool_Curve.hxx", 
+        38
+      ], 
+      "key": "FEmTool_Curve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FEmTool_ElementaryCriterion", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "FEmTool_ElementaryCriterion", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TColStd_HArray2OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray2OfReal>", 
+              "name": "Coeff"
+            }
+          ], 
+          "key": "FEmTool_ElementaryCriterion::Set(opencascade::handle<TColStd_HArray2OfReal>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "FEmTool_ElementaryCriterion", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "FirstKnot"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "LastKnot"
+            }
+          ], 
+          "key": "FEmTool_ElementaryCriterion::Set(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "DependenceTable", 
+          "parent": "FEmTool_ElementaryCriterion", 
+          "arguments": [], 
+          "key": "FEmTool_ElementaryCriterion::DependenceTable()", 
+          "returnType": "opencascade::handle<TColStd_HArray2OfInteger>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "FEmTool_ElementaryCriterion", 
+          "arguments": [], 
+          "key": "FEmTool_ElementaryCriterion::Value()", 
+          "returnType": "Standard_Real", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Hessian", 
+          "parent": "FEmTool_ElementaryCriterion", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dim1"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dim2"
+            }, 
+            {
+              "decl": "math_Matrix &", 
+              "type": "math_Matrix", 
+              "name": "H"
+            }
+          ], 
+          "key": "FEmTool_ElementaryCriterion::Hessian(Standard_Integer, Standard_Integer, math_Matrix)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Gradient", 
+          "parent": "FEmTool_ElementaryCriterion", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dim"
+            }, 
+            {
+              "decl": "math_Vector &", 
+              "type": "math_Vector", 
+              "name": "G"
+            }
+          ], 
+          "key": "FEmTool_ElementaryCriterion::Gradient(Standard_Integer, math_Vector)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "FEmTool_ElementaryCriterion", 
+          "arguments": [], 
+          "key": "FEmTool_ElementaryCriterion::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "FEmTool_ElementaryCriterion", 
+          "arguments": [], 
+          "key": "FEmTool_ElementaryCriterion::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "FEmTool_ElementaryCriterion", 
+          "arguments": [], 
+          "key": "FEmTool_ElementaryCriterion::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FEmTool_ElementaryCriterion.hxx", 
+        38
+      ], 
+      "key": "FEmTool_ElementaryCriterion"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FEmTool_LinearTension", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_LinearTension", 
+          "parent": "FEmTool_LinearTension", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "WorkDegree"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "ConstraintOrder"
+            }
+          ], 
+          "key": "FEmTool_LinearTension::FEmTool_LinearTension(Standard_Integer, GeomAbs_Shape)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_LinearTension", 
+          "parent": "FEmTool_LinearTension", 
+          "arguments": [
+            {
+              "decl": "const FEmTool_LinearTension &", 
+              "type": "FEmTool_LinearTension", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "FEmTool_LinearTension::FEmTool_LinearTension(FEmTool_LinearTension)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DependenceTable", 
+          "parent": "FEmTool_LinearTension", 
+          "arguments": [], 
+          "key": "FEmTool_LinearTension::DependenceTable()", 
+          "returnType": "opencascade::handle<TColStd_HArray2OfInteger>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "FEmTool_LinearTension", 
+          "arguments": [], 
+          "key": "FEmTool_LinearTension::Value()", 
+          "returnType": "Standard_Real", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Hessian", 
+          "parent": "FEmTool_LinearTension", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension1"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension2"
+            }, 
+            {
+              "decl": "math_Matrix &", 
+              "type": "math_Matrix", 
+              "name": "H"
+            }
+          ], 
+          "key": "FEmTool_LinearTension::Hessian(Standard_Integer, Standard_Integer, math_Matrix)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Gradient", 
+          "parent": "FEmTool_LinearTension", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "math_Vector &", 
+              "type": "math_Vector", 
+              "name": "G"
+            }
+          ], 
+          "key": "FEmTool_LinearTension::Gradient(Standard_Integer, math_Vector)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "FEmTool_LinearTension", 
+          "arguments": [], 
+          "key": "FEmTool_LinearTension::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "FEmTool_LinearTension", 
+          "arguments": [], 
+          "key": "FEmTool_LinearTension::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "FEmTool_LinearTension", 
+          "arguments": [], 
+          "key": "FEmTool_LinearTension::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "FEmTool_ElementaryCriterion"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FEmTool_LinearTension.hxx", 
+        39
+      ], 
+      "key": "FEmTool_LinearTension"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FEmTool_LinearFlexion", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_LinearFlexion", 
+          "parent": "FEmTool_LinearFlexion", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "WorkDegree"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "ConstraintOrder"
+            }
+          ], 
+          "key": "FEmTool_LinearFlexion::FEmTool_LinearFlexion(Standard_Integer, GeomAbs_Shape)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_LinearFlexion", 
+          "parent": "FEmTool_LinearFlexion", 
+          "arguments": [
+            {
+              "decl": "const FEmTool_LinearFlexion &", 
+              "type": "FEmTool_LinearFlexion", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "FEmTool_LinearFlexion::FEmTool_LinearFlexion(FEmTool_LinearFlexion)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DependenceTable", 
+          "parent": "FEmTool_LinearFlexion", 
+          "arguments": [], 
+          "key": "FEmTool_LinearFlexion::DependenceTable()", 
+          "returnType": "opencascade::handle<TColStd_HArray2OfInteger>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "FEmTool_LinearFlexion", 
+          "arguments": [], 
+          "key": "FEmTool_LinearFlexion::Value()", 
+          "returnType": "Standard_Real", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Hessian", 
+          "parent": "FEmTool_LinearFlexion", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension1"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension2"
+            }, 
+            {
+              "decl": "math_Matrix &", 
+              "type": "math_Matrix", 
+              "name": "H"
+            }
+          ], 
+          "key": "FEmTool_LinearFlexion::Hessian(Standard_Integer, Standard_Integer, math_Matrix)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Gradient", 
+          "parent": "FEmTool_LinearFlexion", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "math_Vector &", 
+              "type": "math_Vector", 
+              "name": "G"
+            }
+          ], 
+          "key": "FEmTool_LinearFlexion::Gradient(Standard_Integer, math_Vector)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "FEmTool_LinearFlexion", 
+          "arguments": [], 
+          "key": "FEmTool_LinearFlexion::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "FEmTool_LinearFlexion", 
+          "arguments": [], 
+          "key": "FEmTool_LinearFlexion::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "FEmTool_LinearFlexion", 
+          "arguments": [], 
+          "key": "FEmTool_LinearFlexion::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "FEmTool_ElementaryCriterion"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FEmTool_LinearFlexion.hxx", 
+        39
+      ], 
+      "key": "FEmTool_LinearFlexion"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FEmTool_ElementsOfRefMatrix", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_ElementsOfRefMatrix", 
+          "parent": "FEmTool_ElementsOfRefMatrix", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<PLib_Base> &", 
+              "type": "opencascade::handle<PLib_Base>", 
+              "name": "TheBase"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "DerOrder"
+            }
+          ], 
+          "key": "FEmTool_ElementsOfRefMatrix::FEmTool_ElementsOfRefMatrix(opencascade::handle<PLib_Base>, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_ElementsOfRefMatrix", 
+          "parent": "FEmTool_ElementsOfRefMatrix", 
+          "arguments": [
+            {
+              "decl": "const FEmTool_ElementsOfRefMatrix &", 
+              "type": "FEmTool_ElementsOfRefMatrix", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "FEmTool_ElementsOfRefMatrix::FEmTool_ElementsOfRefMatrix(FEmTool_ElementsOfRefMatrix)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbVariables", 
+          "parent": "FEmTool_ElementsOfRefMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_ElementsOfRefMatrix::NbVariables()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbEquations", 
+          "parent": "FEmTool_ElementsOfRefMatrix", 
+          "arguments": [], 
+          "key": "FEmTool_ElementsOfRefMatrix::NbEquations()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "FEmTool_ElementsOfRefMatrix", 
+          "arguments": [
+            {
+              "decl": "const math_Vector &", 
+              "type": "math_Vector", 
+              "name": "X"
+            }, 
+            {
+              "decl": "math_Vector &", 
+              "type": "math_Vector", 
+              "name": "F"
+            }
+          ], 
+          "key": "FEmTool_ElementsOfRefMatrix::Value(math_Vector, math_Vector)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionSet"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FEmTool_ElementsOfRefMatrix.hxx", 
+        39
+      ], 
+      "key": "FEmTool_ElementsOfRefMatrix"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FEmTool_LinearJerk", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_LinearJerk", 
+          "parent": "FEmTool_LinearJerk", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "WorkDegree"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "ConstraintOrder"
+            }
+          ], 
+          "key": "FEmTool_LinearJerk::FEmTool_LinearJerk(Standard_Integer, GeomAbs_Shape)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "FEmTool_LinearJerk", 
+          "parent": "FEmTool_LinearJerk", 
+          "arguments": [
+            {
+              "decl": "const FEmTool_LinearJerk &", 
+              "type": "FEmTool_LinearJerk", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "FEmTool_LinearJerk::FEmTool_LinearJerk(FEmTool_LinearJerk)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DependenceTable", 
+          "parent": "FEmTool_LinearJerk", 
+          "arguments": [], 
+          "key": "FEmTool_LinearJerk::DependenceTable()", 
+          "returnType": "opencascade::handle<TColStd_HArray2OfInteger>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "FEmTool_LinearJerk", 
+          "arguments": [], 
+          "key": "FEmTool_LinearJerk::Value()", 
+          "returnType": "Standard_Real", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Hessian", 
+          "parent": "FEmTool_LinearJerk", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension1"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension2"
+            }, 
+            {
+              "decl": "math_Matrix &", 
+              "type": "math_Matrix", 
+              "name": "H"
+            }
+          ], 
+          "key": "FEmTool_LinearJerk::Hessian(Standard_Integer, Standard_Integer, math_Matrix)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Gradient", 
+          "parent": "FEmTool_LinearJerk", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "math_Vector &", 
+              "type": "math_Vector", 
+              "name": "G"
+            }
+          ], 
+          "key": "FEmTool_LinearJerk::Gradient(Standard_Integer, math_Vector)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "FEmTool_LinearJerk", 
+          "arguments": [], 
+          "key": "FEmTool_LinearJerk::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "FEmTool_LinearJerk", 
+          "arguments": [], 
+          "key": "FEmTool_LinearJerk::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "FEmTool_LinearJerk", 
+          "arguments": [], 
+          "key": "FEmTool_LinearJerk::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "FEmTool_ElementaryCriterion"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FEmTool_LinearJerk.hxx", 
+        39
+      ], 
+      "key": "FEmTool_LinearJerk"
+    }, 
+    {
+      "type": "NCollection_Array2<opencascade::handle<TColStd_HArray1OfInteger> >", 
+      "declType": "typedef", 
+      "name": "FEmTool_AssemblyTable", 
+      "key": "FEmTool_AssemblyTable"
+    }, 
+    {
+      "type": "opencascade::handle<FEmTool_HAssemblyTable>", 
+      "declType": "typedef", 
+      "name": "Handle_FEmTool_HAssemblyTable", 
+      "key": "Handle_FEmTool_HAssemblyTable"
+    }, 
+    {
+      "type": "NCollection_List<opencascade::handle<TColStd_HArray1OfReal> >", 
+      "declType": "typedef", 
+      "name": "FEmTool_ListOfVectors", 
+      "key": "FEmTool_ListOfVectors"
+    }, 
+    {
+      "type": "NCollection_List<opencascade::handle<TColStd_HArray1OfReal> >::Iterator", 
+      "declType": "typedef", 
+      "name": "FEmTool_ListIteratorOfListOfVectors", 
+      "key": "FEmTool_ListIteratorOfListOfVectors"
+    }, 
+    {
+      "type": "NCollection_Sequence<NCollection_List<opencascade::handle<TColStd_HArray1OfReal> > >", 
+      "declType": "typedef", 
+      "name": "FEmTool_SeqOfLinConstr", 
+      "key": "FEmTool_SeqOfLinConstr"
+    }, 
+    {
+      "type": "opencascade::handle<FEmTool_SparseMatrix>", 
+      "declType": "typedef", 
+      "name": "Handle_FEmTool_SparseMatrix", 
+      "key": "Handle_FEmTool_SparseMatrix"
+    }, 
+    {
+      "type": "opencascade::handle<FEmTool_ProfileMatrix>", 
+      "declType": "typedef", 
+      "name": "Handle_FEmTool_ProfileMatrix", 
+      "key": "Handle_FEmTool_ProfileMatrix"
+    }, 
+    {
+      "type": "opencascade::handle<FEmTool_Curve>", 
+      "declType": "typedef", 
+      "name": "Handle_FEmTool_Curve", 
+      "key": "Handle_FEmTool_Curve"
+    }, 
+    {
+      "type": "opencascade::handle<FEmTool_ElementaryCriterion>", 
+      "declType": "typedef", 
+      "name": "Handle_FEmTool_ElementaryCriterion", 
+      "key": "Handle_FEmTool_ElementaryCriterion"
+    }, 
+    {
+      "type": "opencascade::handle<FEmTool_LinearTension>", 
+      "declType": "typedef", 
+      "name": "Handle_FEmTool_LinearTension", 
+      "key": "Handle_FEmTool_LinearTension"
+    }, 
+    {
+      "type": "opencascade::handle<FEmTool_LinearFlexion>", 
+      "declType": "typedef", 
+      "name": "Handle_FEmTool_LinearFlexion", 
+      "key": "Handle_FEmTool_LinearFlexion"
+    }, 
+    {
+      "type": "opencascade::handle<FEmTool_LinearJerk>", 
+      "declType": "typedef", 
+      "name": "Handle_FEmTool_LinearJerk", 
+      "key": "Handle_FEmTool_LinearJerk"
+    }
+  ], 
+  "name": "FEmTool"
+}

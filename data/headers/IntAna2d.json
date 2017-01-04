@@ -1,0 +1,895 @@
+{
+  "headers": [
+    "IntAna2d_AnaIntersection.hxx", 
+    "IntAna2d_Outils.hxx", 
+    "IntAna2d_Conic.hxx", 
+    "IntAna2d_IntPoint.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "IntAna2d_IntPoint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_IntPoint", 
+          "parent": "IntAna2d_IntPoint", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Y"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }
+          ], 
+          "key": "IntAna2d_IntPoint::IntAna2d_IntPoint(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_IntPoint", 
+          "parent": "IntAna2d_IntPoint", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Y"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }
+          ], 
+          "key": "IntAna2d_IntPoint::IntAna2d_IntPoint(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_IntPoint", 
+          "parent": "IntAna2d_IntPoint", 
+          "arguments": [], 
+          "key": "IntAna2d_IntPoint::IntAna2d_IntPoint()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_IntPoint", 
+          "parent": "IntAna2d_IntPoint", 
+          "arguments": [
+            {
+              "decl": "const IntAna2d_IntPoint &", 
+              "type": "IntAna2d_IntPoint", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "IntAna2d_IntPoint::IntAna2d_IntPoint(IntAna2d_IntPoint)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetValue", 
+          "parent": "IntAna2d_IntPoint", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Y"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }
+          ], 
+          "key": "IntAna2d_IntPoint::SetValue(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetValue", 
+          "parent": "IntAna2d_IntPoint", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Y"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }
+          ], 
+          "key": "IntAna2d_IntPoint::SetValue(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "IntAna2d_IntPoint", 
+          "arguments": [], 
+          "key": "IntAna2d_IntPoint::Value()", 
+          "returnType": "gp_Pnt2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SecondIsImplicit", 
+          "parent": "IntAna2d_IntPoint", 
+          "arguments": [], 
+          "key": "IntAna2d_IntPoint::SecondIsImplicit()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ParamOnFirst", 
+          "parent": "IntAna2d_IntPoint", 
+          "arguments": [], 
+          "key": "IntAna2d_IntPoint::ParamOnFirst()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ParamOnSecond", 
+          "parent": "IntAna2d_IntPoint", 
+          "arguments": [], 
+          "key": "IntAna2d_IntPoint::ParamOnSecond()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntAna2d_IntPoint.hxx", 
+        32
+      ], 
+      "key": "IntAna2d_IntPoint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntAna2d_Conic", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_Conic", 
+          "parent": "IntAna2d_Conic", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ2d &", 
+              "type": "gp_Circ2d", 
+              "name": "C"
+            }
+          ], 
+          "key": "IntAna2d_Conic::IntAna2d_Conic(gp_Circ2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_Conic", 
+          "parent": "IntAna2d_Conic", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin2d &", 
+              "type": "gp_Lin2d", 
+              "name": "C"
+            }
+          ], 
+          "key": "IntAna2d_Conic::IntAna2d_Conic(gp_Lin2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_Conic", 
+          "parent": "IntAna2d_Conic", 
+          "arguments": [
+            {
+              "decl": "const gp_Parab2d &", 
+              "type": "gp_Parab2d", 
+              "name": "C"
+            }
+          ], 
+          "key": "IntAna2d_Conic::IntAna2d_Conic(gp_Parab2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_Conic", 
+          "parent": "IntAna2d_Conic", 
+          "arguments": [
+            {
+              "decl": "const gp_Hypr2d &", 
+              "type": "gp_Hypr2d", 
+              "name": "C"
+            }
+          ], 
+          "key": "IntAna2d_Conic::IntAna2d_Conic(gp_Hypr2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_Conic", 
+          "parent": "IntAna2d_Conic", 
+          "arguments": [
+            {
+              "decl": "const gp_Elips2d &", 
+              "type": "gp_Elips2d", 
+              "name": "C"
+            }
+          ], 
+          "key": "IntAna2d_Conic::IntAna2d_Conic(gp_Elips2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_Conic", 
+          "parent": "IntAna2d_Conic", 
+          "arguments": [
+            {
+              "decl": "const IntAna2d_Conic &", 
+              "type": "IntAna2d_Conic", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "IntAna2d_Conic::IntAna2d_Conic(IntAna2d_Conic)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "IntAna2d_Conic", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Y"
+            }
+          ], 
+          "key": "IntAna2d_Conic::Value(Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Grad", 
+          "parent": "IntAna2d_Conic", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Y"
+            }
+          ], 
+          "key": "IntAna2d_Conic::Grad(Standard_Real, Standard_Real)", 
+          "returnType": "gp_XY", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ValAndGrad", 
+          "parent": "IntAna2d_Conic", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Y"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Val"
+            }, 
+            {
+              "decl": "gp_XY &", 
+              "type": "gp_XY", 
+              "name": "Grd"
+            }
+          ], 
+          "key": "IntAna2d_Conic::ValAndGrad(Standard_Real, Standard_Real, Standard_Real, gp_XY)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Coefficients", 
+          "parent": "IntAna2d_Conic", 
+          "arguments": [
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "A"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "B"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "C"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "D"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "E"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "F"
+            }
+          ], 
+          "key": "IntAna2d_Conic::Coefficients(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewCoefficients", 
+          "parent": "IntAna2d_Conic", 
+          "arguments": [
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "A"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "B"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "C"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "D"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "E"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "F"
+            }, 
+            {
+              "decl": "const gp_Ax2d &", 
+              "type": "gp_Ax2d", 
+              "name": "Axis"
+            }
+          ], 
+          "key": "IntAna2d_Conic::NewCoefficients(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Ax2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntAna2d_Conic.hxx", 
+        36
+      ], 
+      "key": "IntAna2d_Conic"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntAna2d_AnaIntersection", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_AnaIntersection", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [], 
+          "key": "IntAna2d_AnaIntersection::IntAna2d_AnaIntersection()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_AnaIntersection", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin2d &", 
+              "type": "gp_Lin2d", 
+              "name": "L1"
+            }, 
+            {
+              "decl": "const gp_Lin2d &", 
+              "type": "gp_Lin2d", 
+              "name": "L2"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::IntAna2d_AnaIntersection(gp_Lin2d, gp_Lin2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_AnaIntersection", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ2d &", 
+              "type": "gp_Circ2d", 
+              "name": "C1"
+            }, 
+            {
+              "decl": "const gp_Circ2d &", 
+              "type": "gp_Circ2d", 
+              "name": "C2"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::IntAna2d_AnaIntersection(gp_Circ2d, gp_Circ2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_AnaIntersection", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin2d &", 
+              "type": "gp_Lin2d", 
+              "name": "L"
+            }, 
+            {
+              "decl": "const gp_Circ2d &", 
+              "type": "gp_Circ2d", 
+              "name": "C"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::IntAna2d_AnaIntersection(gp_Lin2d, gp_Circ2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_AnaIntersection", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin2d &", 
+              "type": "gp_Lin2d", 
+              "name": "L"
+            }, 
+            {
+              "decl": "const IntAna2d_Conic &", 
+              "type": "IntAna2d_Conic", 
+              "name": "C"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::IntAna2d_AnaIntersection(gp_Lin2d, IntAna2d_Conic)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_AnaIntersection", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ2d &", 
+              "type": "gp_Circ2d", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const IntAna2d_Conic &", 
+              "type": "IntAna2d_Conic", 
+              "name": "Co"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::IntAna2d_AnaIntersection(gp_Circ2d, IntAna2d_Conic)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_AnaIntersection", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const gp_Elips2d &", 
+              "type": "gp_Elips2d", 
+              "name": "E"
+            }, 
+            {
+              "decl": "const IntAna2d_Conic &", 
+              "type": "IntAna2d_Conic", 
+              "name": "C"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::IntAna2d_AnaIntersection(gp_Elips2d, IntAna2d_Conic)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_AnaIntersection", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const gp_Parab2d &", 
+              "type": "gp_Parab2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const IntAna2d_Conic &", 
+              "type": "IntAna2d_Conic", 
+              "name": "C"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::IntAna2d_AnaIntersection(gp_Parab2d, IntAna2d_Conic)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_AnaIntersection", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const gp_Hypr2d &", 
+              "type": "gp_Hypr2d", 
+              "name": "H"
+            }, 
+            {
+              "decl": "const IntAna2d_Conic &", 
+              "type": "IntAna2d_Conic", 
+              "name": "C"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::IntAna2d_AnaIntersection(gp_Hypr2d, IntAna2d_Conic)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna2d_AnaIntersection", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const IntAna2d_AnaIntersection &", 
+              "type": "IntAna2d_AnaIntersection", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::IntAna2d_AnaIntersection(IntAna2d_AnaIntersection)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin2d &", 
+              "type": "gp_Lin2d", 
+              "name": "L1"
+            }, 
+            {
+              "decl": "const gp_Lin2d &", 
+              "type": "gp_Lin2d", 
+              "name": "L2"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::Perform(gp_Lin2d, gp_Lin2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ2d &", 
+              "type": "gp_Circ2d", 
+              "name": "C1"
+            }, 
+            {
+              "decl": "const gp_Circ2d &", 
+              "type": "gp_Circ2d", 
+              "name": "C2"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::Perform(gp_Circ2d, gp_Circ2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin2d &", 
+              "type": "gp_Lin2d", 
+              "name": "L"
+            }, 
+            {
+              "decl": "const gp_Circ2d &", 
+              "type": "gp_Circ2d", 
+              "name": "C"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::Perform(gp_Lin2d, gp_Circ2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin2d &", 
+              "type": "gp_Lin2d", 
+              "name": "L"
+            }, 
+            {
+              "decl": "const IntAna2d_Conic &", 
+              "type": "IntAna2d_Conic", 
+              "name": "C"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::Perform(gp_Lin2d, IntAna2d_Conic)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ2d &", 
+              "type": "gp_Circ2d", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const IntAna2d_Conic &", 
+              "type": "IntAna2d_Conic", 
+              "name": "Co"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::Perform(gp_Circ2d, IntAna2d_Conic)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const gp_Elips2d &", 
+              "type": "gp_Elips2d", 
+              "name": "E"
+            }, 
+            {
+              "decl": "const IntAna2d_Conic &", 
+              "type": "IntAna2d_Conic", 
+              "name": "C"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::Perform(gp_Elips2d, IntAna2d_Conic)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const gp_Parab2d &", 
+              "type": "gp_Parab2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const IntAna2d_Conic &", 
+              "type": "IntAna2d_Conic", 
+              "name": "C"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::Perform(gp_Parab2d, IntAna2d_Conic)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const gp_Hypr2d &", 
+              "type": "gp_Hypr2d", 
+              "name": "H"
+            }, 
+            {
+              "decl": "const IntAna2d_Conic &", 
+              "type": "IntAna2d_Conic", 
+              "name": "C"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::Perform(gp_Hypr2d, IntAna2d_Conic)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [], 
+          "key": "IntAna2d_AnaIntersection::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEmpty", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [], 
+          "key": "IntAna2d_AnaIntersection::IsEmpty()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IdenticalElements", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [], 
+          "key": "IntAna2d_AnaIntersection::IdenticalElements()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ParallelElements", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [], 
+          "key": "IntAna2d_AnaIntersection::ParallelElements()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPoints", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [], 
+          "key": "IntAna2d_AnaIntersection::NbPoints()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Point", 
+          "parent": "IntAna2d_AnaIntersection", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }
+          ], 
+          "key": "IntAna2d_AnaIntersection::Point(Standard_Integer)", 
+          "returnType": "IntAna2d_IntPoint const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntAna2d_AnaIntersection.hxx", 
+        46
+      ], 
+      "key": "IntAna2d_AnaIntersection"
+    }
+  ], 
+  "name": "IntAna2d"
+}

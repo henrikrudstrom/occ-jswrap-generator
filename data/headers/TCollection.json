@@ -1,0 +1,4347 @@
+{
+  "headers": [
+    "TCollection_SeqNode.hxx", 
+    "TCollection_MapNodePtr.hxx", 
+    "TCollection_HAsciiString.hxx", 
+    "TCollection_AsciiString.hxx", 
+    "TCollection_BasicMap.hxx", 
+    "TCollection_MapNode.hxx", 
+    "TCollection_HExtendedString.hxx", 
+    "TCollection_ExtendedString.hxx", 
+    "TCollection_SeqNodePtr.hxx", 
+    "TCollection_BasicMapIterator.hxx", 
+    "TCollection_Side.hxx", 
+    "TCollection_BaseSequence.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "TCollection_SeqNode", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "TCollection_SeqNode", 
+          "parent": "TCollection_SeqNode", 
+          "arguments": [
+            {
+              "decl": "const TCollection_SeqNodePtr &", 
+              "type": "TCollection_SeqNodePtr", 
+              "name": "n"
+            }, 
+            {
+              "decl": "const TCollection_SeqNodePtr &", 
+              "type": "TCollection_SeqNodePtr", 
+              "name": "p"
+            }
+          ], 
+          "key": "TCollection_SeqNode::TCollection_SeqNode(TCollection_SeqNodePtr, TCollection_SeqNodePtr)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_SeqNode", 
+          "parent": "TCollection_SeqNode", 
+          "arguments": [
+            {
+              "decl": "const TCollection_SeqNode &", 
+              "type": "TCollection_SeqNode", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "TCollection_SeqNode::TCollection_SeqNode(TCollection_SeqNode)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Next", 
+          "parent": "TCollection_SeqNode", 
+          "arguments": [], 
+          "key": "TCollection_SeqNode::Next()", 
+          "returnType": "TCollection_SeqNodePtr &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Previous", 
+          "parent": "TCollection_SeqNode", 
+          "arguments": [], 
+          "key": "TCollection_SeqNode::Previous()", 
+          "returnType": "TCollection_SeqNodePtr &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "TCollection_SeqNode", 
+          "arguments": [], 
+          "key": "TCollection_SeqNode::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "TCollection_SeqNode", 
+          "arguments": [], 
+          "key": "TCollection_SeqNode::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "TCollection_SeqNode", 
+          "arguments": [], 
+          "key": "TCollection_SeqNode::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TCollection_SeqNode.hxx", 
+        31
+      ], 
+      "key": "TCollection_SeqNode"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TCollection_MapNode", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "TCollection_MapNode", 
+          "parent": "TCollection_MapNode", 
+          "arguments": [
+            {
+              "decl": "const TCollection_MapNodePtr &", 
+              "type": "TCollection_MapNodePtr", 
+              "name": "n"
+            }
+          ], 
+          "key": "TCollection_MapNode::TCollection_MapNode(TCollection_MapNodePtr)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_MapNode", 
+          "parent": "TCollection_MapNode", 
+          "arguments": [
+            {
+              "decl": "const TCollection_MapNode &", 
+              "type": "TCollection_MapNode", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "TCollection_MapNode::TCollection_MapNode(TCollection_MapNode)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Next", 
+          "parent": "TCollection_MapNode", 
+          "arguments": [], 
+          "key": "TCollection_MapNode::Next()", 
+          "returnType": "TCollection_MapNodePtr &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "TCollection_MapNode", 
+          "arguments": [], 
+          "key": "TCollection_MapNode::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "TCollection_MapNode", 
+          "arguments": [], 
+          "key": "TCollection_MapNode::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "TCollection_MapNode", 
+          "arguments": [], 
+          "key": "TCollection_MapNode::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TCollection_MapNode.hxx", 
+        31
+      ], 
+      "key": "TCollection_MapNode"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TCollection_HAsciiString", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HAsciiString", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::TCollection_HAsciiString()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HAsciiString", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "message"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::TCollection_HAsciiString(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HAsciiString", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "aChar"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::TCollection_HAsciiString(char)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HAsciiString", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "length"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "filler"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::TCollection_HAsciiString(Standard_Integer, char)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HAsciiString", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "value"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::TCollection_HAsciiString(Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HAsciiString", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "value"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::TCollection_HAsciiString(Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HAsciiString", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "aString"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::TCollection_HAsciiString(TCollection_AsciiString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HAsciiString", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "aString"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::TCollection_HAsciiString(opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HAsciiString", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HExtendedString> &", 
+              "type": "opencascade::handle<TCollection_HExtendedString>", 
+              "name": "aString"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "replaceNonAscii"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::TCollection_HAsciiString(opencascade::handle<TCollection_HExtendedString>, char)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HAsciiString", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_HAsciiString &", 
+              "type": "TCollection_HAsciiString", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::TCollection_HAsciiString(TCollection_HAsciiString)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AssignCat", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::AssignCat(Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AssignCat", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::AssignCat(opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Capitalize", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::Capitalize()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Cat", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Cat(Standard_CString)", 
+          "returnType": "opencascade::handle<TCollection_HAsciiString>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Cat", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Cat(opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "opencascade::handle<TCollection_HAsciiString>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Center", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Width"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "Filler"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Center(Standard_Integer, char)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeAll", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "aChar"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "NewChar"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "CaseSensitive", 
+              "default": "true"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::ChangeAll(char, char, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Clear", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::Clear()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstLocationInSet", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "Set"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "FromIndex"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ToIndex"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::FirstLocationInSet(opencascade::handle<TCollection_HAsciiString>, Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstLocationNotInSet", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "Set"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "FromIndex"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ToIndex"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::FirstLocationNotInSet(opencascade::handle<TCollection_HAsciiString>, Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Insert", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Insert(Standard_Integer, char)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Insert", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Insert(Standard_Integer, Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Insert", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Insert(Standard_Integer, opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "InsertAfter", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::InsertAfter(Standard_Integer, opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "InsertBefore", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::InsertBefore(Standard_Integer, opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEmpty", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::IsEmpty()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsLess", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::IsLess(opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsGreater", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::IsGreater(opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IntegerValue", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::IntegerValue()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsIntegerValue", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::IsIntegerValue()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsRealValue", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::IsRealValue()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsAscii", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::IsAscii()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDifferent", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "S"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::IsDifferent(opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsSameString", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "S"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::IsSameString(opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsSameString", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "CaseSensitive"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::IsSameString(opencascade::handle<TCollection_HAsciiString>, Standard_Boolean)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LeftAdjust", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::LeftAdjust()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LeftJustify", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Width"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "Filler"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::LeftJustify(Standard_Integer, char)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::Length()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Location", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "other"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "FromIndex"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ToIndex"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Location(opencascade::handle<TCollection_HAsciiString>, Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Location", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "FromIndex"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ToIndex"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Location(Standard_Integer, char, Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LowerCase", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::LowerCase()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Prepend", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Prepend(opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Print", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "astream"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Print(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RealValue", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::RealValue()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RemoveAll", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "CaseSensitive"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::RemoveAll(char, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RemoveAll", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::RemoveAll(char)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Remove", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ahowmany", 
+              "default": "1"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Remove(Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RightAdjust", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::RightAdjust()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RightJustify", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Width"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "Filler"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::RightJustify(Standard_Integer, char)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Search", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Search(Standard_CString)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Search", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Search(opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SearchFromEnd", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::SearchFromEnd(Standard_CString)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SearchFromEnd", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::SearchFromEnd(opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetValue", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::SetValue(Standard_Integer, char)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetValue", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::SetValue(Standard_Integer, Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetValue", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::SetValue(Standard_Integer, opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Split", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Split(Standard_Integer)", 
+          "returnType": "opencascade::handle<TCollection_HAsciiString>", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SubString", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "FromIndex"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ToIndex"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::SubString(Standard_Integer, Standard_Integer)", 
+          "returnType": "opencascade::handle<TCollection_HAsciiString>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ToCString", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::ToCString()", 
+          "returnType": "Standard_CString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Token", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "separators", 
+              "default": "\" \\t\""
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "whichone", 
+              "default": "1"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Token(Standard_CString, Standard_Integer)", 
+          "returnType": "opencascade::handle<TCollection_HAsciiString>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Trunc", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ahowmany"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Trunc(Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UpperCase", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::UpperCase()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UsefullLength", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::UsefullLength()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::Value(Standard_Integer)", 
+          "returnType": "Standard_Character", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "String", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::String()", 
+          "returnType": "TCollection_AsciiString const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsSameState", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_HAsciiString::IsSameState(opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "TCollection_HAsciiString", 
+          "arguments": [], 
+          "key": "TCollection_HAsciiString::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TCollection_HAsciiString.hxx", 
+        50
+      ], 
+      "key": "TCollection_HAsciiString"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TCollection_ExtendedString", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "TCollection_ExtendedString", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_ExtendedString::TCollection_ExtendedString()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_ExtendedString", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "astring"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "isMultiByte", 
+              "default": "false"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::TCollection_ExtendedString(Standard_CString, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_ExtendedString", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_ExtString", 
+              "type": "Standard_ExtString", 
+              "name": "astring"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::TCollection_ExtendedString(Standard_ExtString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_ExtendedString", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_WideChar *", 
+              "type": "Standard_WideChar", 
+              "name": "theStringUtf"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::TCollection_ExtendedString(Standard_WideChar)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_ExtendedString", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "aChar"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::TCollection_ExtendedString(char)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_ExtendedString", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "aChar"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::TCollection_ExtendedString(?unknown?)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_ExtendedString", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "length"
+            }, 
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "filler"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::TCollection_ExtendedString(Standard_Integer, ?unknown?)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_ExtendedString", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "value"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::TCollection_ExtendedString(Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_ExtendedString", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "value"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::TCollection_ExtendedString(Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_ExtendedString", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "astring"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::TCollection_ExtendedString(TCollection_ExtendedString)", 
+          "returnType": "", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_ExtendedString", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "astring"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::TCollection_ExtendedString(TCollection_AsciiString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AssignCat", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::AssignCat(TCollection_ExtendedString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Cat", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::Cat(TCollection_ExtendedString)", 
+          "returnType": "TCollection_ExtendedString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeAll", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "aChar"
+            }, 
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "NewChar"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::ChangeAll(?unknown?, ?unknown?)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Clear", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_ExtendedString::Clear()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Copy", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "fromwhere"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::Copy(TCollection_ExtendedString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Insert", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::Insert(Standard_Integer, ?unknown?)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Insert", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::Insert(Standard_Integer, TCollection_ExtendedString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEmpty", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_ExtendedString::IsEmpty()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEqual", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_ExtString", 
+              "type": "Standard_ExtString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::IsEqual(Standard_ExtString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEqual", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::IsEqual(TCollection_ExtendedString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDifferent", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_ExtString", 
+              "type": "Standard_ExtString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::IsDifferent(Standard_ExtString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDifferent", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::IsDifferent(TCollection_ExtendedString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsLess", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_ExtString", 
+              "type": "Standard_ExtString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::IsLess(Standard_ExtString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsLess", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::IsLess(TCollection_ExtendedString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsGreater", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_ExtString", 
+              "type": "Standard_ExtString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::IsGreater(Standard_ExtString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsGreater", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::IsGreater(TCollection_ExtendedString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "StartsWith", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "theStartString"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::StartsWith(TCollection_ExtendedString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "EndsWith", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "theEndString"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::EndsWith(TCollection_ExtendedString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsAscii", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_ExtendedString::IsAscii()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_ExtendedString::Length()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Print", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "astream"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::Print(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RemoveAll", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::RemoveAll(?unknown?)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Remove", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ahowmany", 
+              "default": "1"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::Remove(Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Search", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::Search(TCollection_ExtendedString)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SearchFromEnd", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::SearchFromEnd(TCollection_ExtendedString)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetValue", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::SetValue(Standard_Integer, ?unknown?)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetValue", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::SetValue(Standard_Integer, TCollection_ExtendedString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Split", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::Split(Standard_Integer)", 
+          "returnType": "TCollection_ExtendedString", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Token", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_ExtString", 
+              "type": "Standard_ExtString", 
+              "name": "separators"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "whichone", 
+              "default": "1"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::Token(Standard_ExtString, Standard_Integer)", 
+          "returnType": "TCollection_ExtendedString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ToExtString", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_ExtendedString::ToExtString()", 
+          "returnType": "Standard_ExtString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Trunc", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ahowmany"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::Trunc(Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::Value(Standard_Integer)", 
+          "returnType": "Standard_ExtCharacter", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HashCode", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "theString"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theUpper"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::HashCode(TCollection_ExtendedString, Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEqual", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "theString1"
+            }, 
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "theString2"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::IsEqual(TCollection_ExtendedString, TCollection_ExtendedString)", 
+          "returnType": "Standard_Boolean", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ToUTF8CString", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [
+            {
+              "decl": "Standard_PCharacter &", 
+              "type": "Standard_PCharacter", 
+              "name": "theCString"
+            }
+          ], 
+          "key": "TCollection_ExtendedString::ToUTF8CString(Standard_PCharacter)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LengthOfCString", 
+          "parent": "TCollection_ExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_ExtendedString::LengthOfCString()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/TCollection_ExtendedString.hxx", 
+        56
+      ], 
+      "key": "TCollection_ExtendedString"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TCollection_AsciiString", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "TCollection_AsciiString", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [], 
+          "key": "TCollection_AsciiString::TCollection_AsciiString()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_AsciiString", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "message"
+            }
+          ], 
+          "key": "TCollection_AsciiString::TCollection_AsciiString(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_AsciiString", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "message"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "aLen"
+            }
+          ], 
+          "key": "TCollection_AsciiString::TCollection_AsciiString(Standard_CString, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_AsciiString", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "aChar"
+            }
+          ], 
+          "key": "TCollection_AsciiString::TCollection_AsciiString(char)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_AsciiString", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "length"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "filler"
+            }
+          ], 
+          "key": "TCollection_AsciiString::TCollection_AsciiString(Standard_Integer, char)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_AsciiString", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "value"
+            }
+          ], 
+          "key": "TCollection_AsciiString::TCollection_AsciiString(Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_AsciiString", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "value"
+            }
+          ], 
+          "key": "TCollection_AsciiString::TCollection_AsciiString(Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_AsciiString", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "astring"
+            }
+          ], 
+          "key": "TCollection_AsciiString::TCollection_AsciiString(TCollection_AsciiString)", 
+          "returnType": "", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_AsciiString", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "astring"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "message"
+            }
+          ], 
+          "key": "TCollection_AsciiString::TCollection_AsciiString(TCollection_AsciiString, char)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_AsciiString", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "astring"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "message"
+            }
+          ], 
+          "key": "TCollection_AsciiString::TCollection_AsciiString(TCollection_AsciiString, Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_AsciiString", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "astring"
+            }, 
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "message"
+            }
+          ], 
+          "key": "TCollection_AsciiString::TCollection_AsciiString(TCollection_AsciiString, TCollection_AsciiString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_AsciiString", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "astring"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "replaceNonAscii", 
+              "default": "0"
+            }
+          ], 
+          "key": "TCollection_AsciiString::TCollection_AsciiString(TCollection_ExtendedString, char)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_AsciiString", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_WideChar *", 
+              "type": "Standard_WideChar", 
+              "name": "theStringUtf"
+            }
+          ], 
+          "key": "TCollection_AsciiString::TCollection_AsciiString(Standard_WideChar)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AssignCat", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::AssignCat(char)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AssignCat", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::AssignCat(Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AssignCat", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::AssignCat(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AssignCat", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::AssignCat(Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AssignCat", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::AssignCat(TCollection_AsciiString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Capitalize", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [], 
+          "key": "TCollection_AsciiString::Capitalize()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Cat", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Cat(char)", 
+          "returnType": "TCollection_AsciiString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Cat", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Cat(Standard_Integer)", 
+          "returnType": "TCollection_AsciiString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Cat", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Cat(Standard_Real)", 
+          "returnType": "TCollection_AsciiString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Cat", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Cat(Standard_CString)", 
+          "returnType": "TCollection_AsciiString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Cat", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Cat(TCollection_AsciiString)", 
+          "returnType": "TCollection_AsciiString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Center", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Width"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "Filler"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Center(Standard_Integer, char)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeAll", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "aChar"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "NewChar"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "CaseSensitive", 
+              "default": "true"
+            }
+          ], 
+          "key": "TCollection_AsciiString::ChangeAll(char, char, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Clear", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [], 
+          "key": "TCollection_AsciiString::Clear()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Copy", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "fromwhere"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Copy(Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Copy", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "fromwhere"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Copy(TCollection_AsciiString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstLocationInSet", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "Set"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "FromIndex"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ToIndex"
+            }
+          ], 
+          "key": "TCollection_AsciiString::FirstLocationInSet(TCollection_AsciiString, Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstLocationNotInSet", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "Set"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "FromIndex"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ToIndex"
+            }
+          ], 
+          "key": "TCollection_AsciiString::FirstLocationNotInSet(TCollection_AsciiString, Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Insert", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Insert(Standard_Integer, char)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Insert", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Insert(Standard_Integer, Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Insert", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Insert(Standard_Integer, TCollection_AsciiString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "InsertAfter", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::InsertAfter(Standard_Integer, TCollection_AsciiString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "InsertBefore", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::InsertBefore(Standard_Integer, TCollection_AsciiString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEmpty", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [], 
+          "key": "TCollection_AsciiString::IsEmpty()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEqual", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::IsEqual(Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEqual", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::IsEqual(TCollection_AsciiString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDifferent", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::IsDifferent(Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDifferent", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::IsDifferent(TCollection_AsciiString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsLess", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::IsLess(Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsLess", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::IsLess(TCollection_AsciiString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsGreater", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::IsGreater(Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsGreater", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::IsGreater(TCollection_AsciiString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "StartsWith", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "theStartString"
+            }
+          ], 
+          "key": "TCollection_AsciiString::StartsWith(TCollection_AsciiString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "EndsWith", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "theEndString"
+            }
+          ], 
+          "key": "TCollection_AsciiString::EndsWith(TCollection_AsciiString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IntegerValue", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [], 
+          "key": "TCollection_AsciiString::IntegerValue()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsIntegerValue", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [], 
+          "key": "TCollection_AsciiString::IsIntegerValue()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsRealValue", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [], 
+          "key": "TCollection_AsciiString::IsRealValue()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsAscii", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [], 
+          "key": "TCollection_AsciiString::IsAscii()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LeftAdjust", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [], 
+          "key": "TCollection_AsciiString::LeftAdjust()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LeftJustify", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Width"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "Filler"
+            }
+          ], 
+          "key": "TCollection_AsciiString::LeftJustify(Standard_Integer, char)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [], 
+          "key": "TCollection_AsciiString::Length()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Location", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "other"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "FromIndex"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ToIndex"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Location(TCollection_AsciiString, Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Location", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "FromIndex"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ToIndex"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Location(Standard_Integer, char, Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LowerCase", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [], 
+          "key": "TCollection_AsciiString::LowerCase()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Prepend", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Prepend(TCollection_AsciiString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Print", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "astream"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Print(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Read", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "Standard_IStream &", 
+              "type": "Standard_IStream", 
+              "name": "astream"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Read(Standard_IStream)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RealValue", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [], 
+          "key": "TCollection_AsciiString::RealValue()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RemoveAll", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "CaseSensitive"
+            }
+          ], 
+          "key": "TCollection_AsciiString::RemoveAll(char, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RemoveAll", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_AsciiString::RemoveAll(char)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Remove", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ahowmany", 
+              "default": "1"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Remove(Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RightAdjust", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [], 
+          "key": "TCollection_AsciiString::RightAdjust()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RightJustify", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Width"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "Filler"
+            }
+          ], 
+          "key": "TCollection_AsciiString::RightJustify(Standard_Integer, char)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Search", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Search(Standard_CString)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Search", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Search(TCollection_AsciiString)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SearchFromEnd", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_AsciiString::SearchFromEnd(Standard_CString)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SearchFromEnd", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_AsciiString::SearchFromEnd(TCollection_AsciiString)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetValue", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const char", 
+              "type": "char", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_AsciiString::SetValue(Standard_Integer, char)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetValue", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_AsciiString::SetValue(Standard_Integer, Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetValue", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_AsciiString::SetValue(Standard_Integer, TCollection_AsciiString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Split", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Split(Standard_Integer)", 
+          "returnType": "TCollection_AsciiString", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SubString", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "FromIndex"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ToIndex"
+            }
+          ], 
+          "key": "TCollection_AsciiString::SubString(Standard_Integer, Standard_Integer)", 
+          "returnType": "TCollection_AsciiString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ToCString", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [], 
+          "key": "TCollection_AsciiString::ToCString()", 
+          "returnType": "Standard_CString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Token", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "separators", 
+              "default": "\" \\t\""
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "whichone", 
+              "default": "1"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Token(Standard_CString, Standard_Integer)", 
+          "returnType": "TCollection_AsciiString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Trunc", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ahowmany"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Trunc(Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UpperCase", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [], 
+          "key": "TCollection_AsciiString::UpperCase()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UsefullLength", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [], 
+          "key": "TCollection_AsciiString::UsefullLength()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }
+          ], 
+          "key": "TCollection_AsciiString::Value(Standard_Integer)", 
+          "returnType": "Standard_Character", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HashCode", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "astring"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Upper"
+            }
+          ], 
+          "key": "TCollection_AsciiString::HashCode(TCollection_AsciiString, Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEqual", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "string1"
+            }, 
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "string2"
+            }
+          ], 
+          "key": "TCollection_AsciiString::IsEqual(TCollection_AsciiString, TCollection_AsciiString)", 
+          "returnType": "Standard_Boolean", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEqual", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "string1"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "string2"
+            }
+          ], 
+          "key": "TCollection_AsciiString::IsEqual(TCollection_AsciiString, Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsSameString", 
+          "parent": "TCollection_AsciiString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "theString1"
+            }, 
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "theString2"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "theIsCaseSensitive"
+            }
+          ], 
+          "key": "TCollection_AsciiString::IsSameString(TCollection_AsciiString, TCollection_AsciiString, Standard_Boolean)", 
+          "returnType": "Standard_Boolean", 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/TCollection_AsciiString.hxx", 
+        52
+      ], 
+      "key": "TCollection_AsciiString"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TCollection_HExtendedString", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HExtendedString", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_HExtendedString::TCollection_HExtendedString()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HExtendedString", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "message"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::TCollection_HExtendedString(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HExtendedString", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_ExtString", 
+              "type": "Standard_ExtString", 
+              "name": "message"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::TCollection_HExtendedString(Standard_ExtString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HExtendedString", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "aChar"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::TCollection_HExtendedString(?unknown?)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HExtendedString", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "length"
+            }, 
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "filler"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::TCollection_HExtendedString(Standard_Integer, ?unknown?)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HExtendedString", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "aString"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::TCollection_HExtendedString(TCollection_ExtendedString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HExtendedString", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "aString"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::TCollection_HExtendedString(opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HExtendedString", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HExtendedString> &", 
+              "type": "opencascade::handle<TCollection_HExtendedString>", 
+              "name": "aString"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::TCollection_HExtendedString(opencascade::handle<TCollection_HExtendedString>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TCollection_HExtendedString", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const TCollection_HExtendedString &", 
+              "type": "TCollection_HExtendedString", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::TCollection_HExtendedString(TCollection_HExtendedString)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AssignCat", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HExtendedString> &", 
+              "type": "opencascade::handle<TCollection_HExtendedString>", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::AssignCat(opencascade::handle<TCollection_HExtendedString>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Cat", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HExtendedString> &", 
+              "type": "opencascade::handle<TCollection_HExtendedString>", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::Cat(opencascade::handle<TCollection_HExtendedString>)", 
+          "returnType": "opencascade::handle<TCollection_HExtendedString>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeAll", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "aChar"
+            }, 
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "NewChar"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::ChangeAll(?unknown?, ?unknown?)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Clear", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_HExtendedString::Clear()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEmpty", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_HExtendedString::IsEmpty()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Insert", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::Insert(Standard_Integer, ?unknown?)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Insert", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const opencascade::handle<TCollection_HExtendedString> &", 
+              "type": "opencascade::handle<TCollection_HExtendedString>", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::Insert(Standard_Integer, opencascade::handle<TCollection_HExtendedString>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsLess", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HExtendedString> &", 
+              "type": "opencascade::handle<TCollection_HExtendedString>", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::IsLess(opencascade::handle<TCollection_HExtendedString>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsGreater", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HExtendedString> &", 
+              "type": "opencascade::handle<TCollection_HExtendedString>", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::IsGreater(opencascade::handle<TCollection_HExtendedString>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsAscii", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_HExtendedString::IsAscii()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_HExtendedString::Length()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Remove", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ahowmany", 
+              "default": "1"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::Remove(Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RemoveAll", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::RemoveAll(?unknown?)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetValue", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::SetValue(Standard_Integer, ?unknown?)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetValue", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }, 
+            {
+              "decl": "const opencascade::handle<TCollection_HExtendedString> &", 
+              "type": "opencascade::handle<TCollection_HExtendedString>", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::SetValue(Standard_Integer, opencascade::handle<TCollection_HExtendedString>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Split", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::Split(Standard_Integer)", 
+          "returnType": "opencascade::handle<TCollection_HExtendedString>", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Search", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HExtendedString> &", 
+              "type": "opencascade::handle<TCollection_HExtendedString>", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::Search(opencascade::handle<TCollection_HExtendedString>)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SearchFromEnd", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HExtendedString> &", 
+              "type": "opencascade::handle<TCollection_HExtendedString>", 
+              "name": "what"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::SearchFromEnd(opencascade::handle<TCollection_HExtendedString>)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ToExtString", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_HExtendedString::ToExtString()", 
+          "returnType": "Standard_ExtString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Token", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_ExtString", 
+              "type": "Standard_ExtString", 
+              "name": "separators"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "whichone", 
+              "default": "1"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::Token(Standard_ExtString, Standard_Integer)", 
+          "returnType": "opencascade::handle<TCollection_HExtendedString>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Trunc", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ahowmany"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::Trunc(Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "where"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::Value(Standard_Integer)", 
+          "returnType": "Standard_ExtCharacter", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "String", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_HExtendedString::String()", 
+          "returnType": "TCollection_ExtendedString const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Print", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "astream"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::Print(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsSameState", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HExtendedString> &", 
+              "type": "opencascade::handle<TCollection_HExtendedString>", 
+              "name": "other"
+            }
+          ], 
+          "key": "TCollection_HExtendedString::IsSameState(opencascade::handle<TCollection_HExtendedString>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_HExtendedString::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_HExtendedString::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "TCollection_HExtendedString", 
+          "arguments": [], 
+          "key": "TCollection_HExtendedString::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TCollection_HExtendedString.hxx", 
+        53
+      ], 
+      "key": "TCollection_HExtendedString"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TCollection_BasicMapIterator", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "TCollection_BasicMapIterator", 
+          "parent": "TCollection_BasicMapIterator", 
+          "arguments": [
+            {
+              "decl": "const TCollection_BasicMapIterator &", 
+              "type": "TCollection_BasicMapIterator", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "TCollection_BasicMapIterator::TCollection_BasicMapIterator(TCollection_BasicMapIterator)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Reset", 
+          "parent": "TCollection_BasicMapIterator", 
+          "arguments": [], 
+          "key": "TCollection_BasicMapIterator::Reset()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "More", 
+          "parent": "TCollection_BasicMapIterator", 
+          "arguments": [], 
+          "key": "TCollection_BasicMapIterator::More()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Next", 
+          "parent": "TCollection_BasicMapIterator", 
+          "arguments": [], 
+          "key": "TCollection_BasicMapIterator::Next()", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/TCollection_BasicMapIterator.hxx", 
+        54
+      ], 
+      "key": "TCollection_BasicMapIterator"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TCollection_BasicMap", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "TCollection_BasicMap", 
+          "parent": "TCollection_BasicMap", 
+          "arguments": [
+            {
+              "decl": "const TCollection_BasicMap &", 
+              "type": "TCollection_BasicMap", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "TCollection_BasicMap::TCollection_BasicMap(TCollection_BasicMap)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbBuckets", 
+          "parent": "TCollection_BasicMap", 
+          "arguments": [], 
+          "key": "TCollection_BasicMap::NbBuckets()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Extent", 
+          "parent": "TCollection_BasicMap", 
+          "arguments": [], 
+          "key": "TCollection_BasicMap::Extent()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEmpty", 
+          "parent": "TCollection_BasicMap", 
+          "arguments": [], 
+          "key": "TCollection_BasicMap::IsEmpty()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Statistics", 
+          "parent": "TCollection_BasicMap", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "S"
+            }
+          ], 
+          "key": "TCollection_BasicMap::Statistics(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/TCollection_BasicMap.hxx", 
+        89
+      ], 
+      "key": "TCollection_BasicMap"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TCollection_BaseSequence", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "method", 
+          "name": "IsEmpty", 
+          "parent": "TCollection_BaseSequence", 
+          "arguments": [], 
+          "key": "TCollection_BaseSequence::IsEmpty()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "TCollection_BaseSequence", 
+          "arguments": [], 
+          "key": "TCollection_BaseSequence::Length()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Reverse", 
+          "parent": "TCollection_BaseSequence", 
+          "arguments": [], 
+          "key": "TCollection_BaseSequence::Reverse()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Exchange", 
+          "parent": "TCollection_BaseSequence", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "I"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "J"
+            }
+          ], 
+          "key": "TCollection_BaseSequence::Exchange(Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/TCollection_BaseSequence.hxx", 
+        39
+      ], 
+      "key": "TCollection_BaseSequence"
+    }, 
+    {
+      "type": "TCollection_SeqNode *", 
+      "declType": "typedef", 
+      "name": "TCollection_SeqNodePtr", 
+      "key": "TCollection_SeqNodePtr"
+    }, 
+    {
+      "type": "opencascade::handle<TCollection_SeqNode>", 
+      "declType": "typedef", 
+      "name": "Handle_TCollection_SeqNode", 
+      "key": "Handle_TCollection_SeqNode"
+    }, 
+    {
+      "type": "TCollection_MapNode *", 
+      "declType": "typedef", 
+      "name": "TCollection_MapNodePtr", 
+      "key": "TCollection_MapNodePtr"
+    }, 
+    {
+      "type": "opencascade::handle<TCollection_HAsciiString>", 
+      "declType": "typedef", 
+      "name": "Handle_TCollection_HAsciiString", 
+      "key": "Handle_TCollection_HAsciiString"
+    }, 
+    {
+      "type": "opencascade::handle<TCollection_MapNode>", 
+      "declType": "typedef", 
+      "name": "Handle_TCollection_MapNode", 
+      "key": "Handle_TCollection_MapNode"
+    }, 
+    {
+      "type": "opencascade::handle<TCollection_HExtendedString>", 
+      "declType": "typedef", 
+      "name": "Handle_TCollection_HExtendedString", 
+      "key": "Handle_TCollection_HExtendedString"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "TCollection_Left", 
+          0
+        ], 
+        [
+          "TCollection_Right", 
+          1
+        ]
+      ], 
+      "name": "TCollection_Side", 
+      "key": "TCollection_Side"
+    }
+  ], 
+  "name": "TCollection"
+}

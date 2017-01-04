@@ -1,0 +1,1283 @@
+{
+  "headers": [
+    "GeomLib_InterpolationErrors.hxx", 
+    "GeomLib_CheckCurveOnSurface.hxx", 
+    "GeomLib_DenominatorMultiplierPtr.hxx", 
+    "GeomLib_PolyFunc.hxx", 
+    "GeomLib_Check2dBSplineCurve.hxx", 
+    "GeomLib_CheckBSplineCurve.hxx", 
+    "GeomLib_Array1OfMat.hxx", 
+    "GeomLib_Tool.hxx", 
+    "GeomLib_Interpolate.hxx", 
+    "GeomLib_LogSample.hxx", 
+    "GeomLib_IsPlanarSurface.hxx", 
+    "GeomLib_DenominatorMultiplier.hxx", 
+    "GeomLib_MakeCurvefromApprox.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "GeomLib_CheckCurveOnSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_CheckCurveOnSurface", 
+          "parent": "GeomLib_CheckCurveOnSurface", 
+          "arguments": [], 
+          "key": "GeomLib_CheckCurveOnSurface::GeomLib_CheckCurveOnSurface()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_CheckCurveOnSurface", 
+          "parent": "GeomLib_CheckCurveOnSurface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "theCurve"
+            }, 
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "theSurface"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theLast"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theTolRange", 
+              "default": "Precision::PConfusion()"
+            }
+          ], 
+          "key": "GeomLib_CheckCurveOnSurface::GeomLib_CheckCurveOnSurface(opencascade::handle<Geom_Curve>, opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_CheckCurveOnSurface", 
+          "parent": "GeomLib_CheckCurveOnSurface", 
+          "arguments": [
+            {
+              "decl": "const GeomLib_CheckCurveOnSurface &", 
+              "type": "GeomLib_CheckCurveOnSurface", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomLib_CheckCurveOnSurface::GeomLib_CheckCurveOnSurface(GeomLib_CheckCurveOnSurface)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "GeomLib_CheckCurveOnSurface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "theCurve"
+            }, 
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "theSurface"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theLast"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theTolRange", 
+              "default": "Precision::PConfusion()"
+            }
+          ], 
+          "key": "GeomLib_CheckCurveOnSurface::Init(opencascade::handle<Geom_Curve>, opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Init", 
+          "parent": "GeomLib_CheckCurveOnSurface", 
+          "arguments": [], 
+          "key": "GeomLib_CheckCurveOnSurface::Init()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "GeomLib_CheckCurveOnSurface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "thePCurve"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "isTheMultyTheradDisabled", 
+              "default": "false"
+            }
+          ], 
+          "key": "GeomLib_CheckCurveOnSurface::Perform(opencascade::handle<Geom2d_Curve>, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve", 
+          "parent": "GeomLib_CheckCurveOnSurface", 
+          "arguments": [], 
+          "key": "GeomLib_CheckCurveOnSurface::Curve()", 
+          "returnType": "opencascade::handle<Geom_Curve> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Surface", 
+          "parent": "GeomLib_CheckCurveOnSurface", 
+          "arguments": [], 
+          "key": "GeomLib_CheckCurveOnSurface::Surface()", 
+          "returnType": "opencascade::handle<Geom_Surface> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Range", 
+          "parent": "GeomLib_CheckCurveOnSurface", 
+          "arguments": [
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theFirst"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theLast"
+            }
+          ], 
+          "key": "GeomLib_CheckCurveOnSurface::Range(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "GeomLib_CheckCurveOnSurface", 
+          "arguments": [], 
+          "key": "GeomLib_CheckCurveOnSurface::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ErrorStatus", 
+          "parent": "GeomLib_CheckCurveOnSurface", 
+          "arguments": [], 
+          "key": "GeomLib_CheckCurveOnSurface::ErrorStatus()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxDistance", 
+          "parent": "GeomLib_CheckCurveOnSurface", 
+          "arguments": [], 
+          "key": "GeomLib_CheckCurveOnSurface::MaxDistance()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxParameter", 
+          "parent": "GeomLib_CheckCurveOnSurface", 
+          "arguments": [], 
+          "key": "GeomLib_CheckCurveOnSurface::MaxParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomLib_CheckCurveOnSurface.hxx", 
+        27
+      ], 
+      "key": "GeomLib_CheckCurveOnSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomLib_DenominatorMultiplier", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_DenominatorMultiplier", 
+          "parent": "GeomLib_DenominatorMultiplier", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_BSplineSurface> &", 
+              "type": "opencascade::handle<Geom_BSplineSurface>", 
+              "name": "Surface"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "KnotVector"
+            }
+          ], 
+          "key": "GeomLib_DenominatorMultiplier::GeomLib_DenominatorMultiplier(opencascade::handle<Geom_BSplineSurface>, TColStd_Array1OfReal)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_DenominatorMultiplier", 
+          "parent": "GeomLib_DenominatorMultiplier", 
+          "arguments": [
+            {
+              "decl": "const GeomLib_DenominatorMultiplier &", 
+              "type": "GeomLib_DenominatorMultiplier", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomLib_DenominatorMultiplier::GeomLib_DenominatorMultiplier(GeomLib_DenominatorMultiplier)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "GeomLib_DenominatorMultiplier", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "UParameter"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "VParameter"
+            }
+          ], 
+          "key": "GeomLib_DenominatorMultiplier::Value(Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomLib_DenominatorMultiplier.hxx", 
+        34
+      ], 
+      "key": "GeomLib_DenominatorMultiplier"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomLib_PolyFunc", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_PolyFunc", 
+          "parent": "GeomLib_PolyFunc", 
+          "arguments": [
+            {
+              "decl": "const math_Vector &", 
+              "type": "math_Vector", 
+              "name": "Coeffs"
+            }
+          ], 
+          "key": "GeomLib_PolyFunc::GeomLib_PolyFunc(math_Vector)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_PolyFunc", 
+          "parent": "GeomLib_PolyFunc", 
+          "arguments": [
+            {
+              "decl": "const GeomLib_PolyFunc &", 
+              "type": "GeomLib_PolyFunc", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomLib_PolyFunc::GeomLib_PolyFunc(GeomLib_PolyFunc)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "GeomLib_PolyFunc", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "F"
+            }
+          ], 
+          "key": "GeomLib_PolyFunc::Value(Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Derivative", 
+          "parent": "GeomLib_PolyFunc", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "D"
+            }
+          ], 
+          "key": "GeomLib_PolyFunc::Derivative(Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Values", 
+          "parent": "GeomLib_PolyFunc", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "F"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "D"
+            }
+          ], 
+          "key": "GeomLib_PolyFunc::Values(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionWithDerivative"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomLib_PolyFunc.hxx", 
+        31
+      ], 
+      "key": "GeomLib_PolyFunc"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomLib_Check2dBSplineCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_Check2dBSplineCurve", 
+          "parent": "GeomLib_Check2dBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_BSplineCurve> &", 
+              "type": "opencascade::handle<Geom2d_BSplineCurve>", 
+              "name": "Curve"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "AngularTolerance"
+            }
+          ], 
+          "key": "GeomLib_Check2dBSplineCurve::GeomLib_Check2dBSplineCurve(opencascade::handle<Geom2d_BSplineCurve>, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_Check2dBSplineCurve", 
+          "parent": "GeomLib_Check2dBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const GeomLib_Check2dBSplineCurve &", 
+              "type": "GeomLib_Check2dBSplineCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomLib_Check2dBSplineCurve::GeomLib_Check2dBSplineCurve(GeomLib_Check2dBSplineCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "GeomLib_Check2dBSplineCurve", 
+          "arguments": [], 
+          "key": "GeomLib_Check2dBSplineCurve::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NeedTangentFix", 
+          "parent": "GeomLib_Check2dBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "Standard_Boolean &", 
+              "type": "Standard_Boolean", 
+              "name": "FirstFlag"
+            }, 
+            {
+              "decl": "Standard_Boolean &", 
+              "type": "Standard_Boolean", 
+              "name": "SecondFlag"
+            }
+          ], 
+          "key": "GeomLib_Check2dBSplineCurve::NeedTangentFix(Standard_Boolean, Standard_Boolean)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FixTangent", 
+          "parent": "GeomLib_Check2dBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "FirstFlag"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "LastFlag"
+            }
+          ], 
+          "key": "GeomLib_Check2dBSplineCurve::FixTangent(Standard_Boolean, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FixedTangent", 
+          "parent": "GeomLib_Check2dBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "FirstFlag"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "LastFlag"
+            }
+          ], 
+          "key": "GeomLib_Check2dBSplineCurve::FixedTangent(Standard_Boolean, Standard_Boolean)", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomLib_Check2dBSplineCurve.hxx", 
+        34
+      ], 
+      "key": "GeomLib_Check2dBSplineCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomLib_CheckBSplineCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_CheckBSplineCurve", 
+          "parent": "GeomLib_CheckBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_BSplineCurve> &", 
+              "type": "opencascade::handle<Geom_BSplineCurve>", 
+              "name": "Curve"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "AngularTolerance"
+            }
+          ], 
+          "key": "GeomLib_CheckBSplineCurve::GeomLib_CheckBSplineCurve(opencascade::handle<Geom_BSplineCurve>, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_CheckBSplineCurve", 
+          "parent": "GeomLib_CheckBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const GeomLib_CheckBSplineCurve &", 
+              "type": "GeomLib_CheckBSplineCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomLib_CheckBSplineCurve::GeomLib_CheckBSplineCurve(GeomLib_CheckBSplineCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "GeomLib_CheckBSplineCurve", 
+          "arguments": [], 
+          "key": "GeomLib_CheckBSplineCurve::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NeedTangentFix", 
+          "parent": "GeomLib_CheckBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "Standard_Boolean &", 
+              "type": "Standard_Boolean", 
+              "name": "FirstFlag"
+            }, 
+            {
+              "decl": "Standard_Boolean &", 
+              "type": "Standard_Boolean", 
+              "name": "SecondFlag"
+            }
+          ], 
+          "key": "GeomLib_CheckBSplineCurve::NeedTangentFix(Standard_Boolean, Standard_Boolean)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FixTangent", 
+          "parent": "GeomLib_CheckBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "FirstFlag"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "LastFlag"
+            }
+          ], 
+          "key": "GeomLib_CheckBSplineCurve::FixTangent(Standard_Boolean, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FixedTangent", 
+          "parent": "GeomLib_CheckBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "FirstFlag"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "LastFlag"
+            }
+          ], 
+          "key": "GeomLib_CheckBSplineCurve::FixedTangent(Standard_Boolean, Standard_Boolean)", 
+          "returnType": "opencascade::handle<Geom_BSplineCurve>", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomLib_CheckBSplineCurve.hxx", 
+        34
+      ], 
+      "key": "GeomLib_CheckBSplineCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomLib_Tool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_Tool", 
+          "parent": "GeomLib_Tool", 
+          "arguments": [], 
+          "key": "GeomLib_Tool::GeomLib_Tool()", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_Tool", 
+          "parent": "GeomLib_Tool", 
+          "arguments": [
+            {
+              "decl": "const GeomLib_Tool &", 
+              "type": "GeomLib_Tool", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomLib_Tool::GeomLib_Tool(GeomLib_Tool)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parameter", 
+          "parent": "GeomLib_Tool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Curve"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Point"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "MaxDist"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }
+          ], 
+          "key": "GeomLib_Tool::Parameter(opencascade::handle<Geom_Curve>, gp_Pnt, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parameters", 
+          "parent": "GeomLib_Tool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surface"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Point"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "MaxDist"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }
+          ], 
+          "key": "GeomLib_Tool::Parameters(opencascade::handle<Geom_Surface>, gp_Pnt, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parameter", 
+          "parent": "GeomLib_Tool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Curve"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Point"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "MaxDist"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }
+          ], 
+          "key": "GeomLib_Tool::Parameter(opencascade::handle<Geom2d_Curve>, gp_Pnt2d, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomLib_Tool.hxx", 
+        41
+      ], 
+      "key": "GeomLib_Tool"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomLib_Interpolate", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_Interpolate", 
+          "parent": "GeomLib_Interpolate", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Degree"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NumPoints"
+            }, 
+            {
+              "decl": "const TColgp_Array1OfPnt &", 
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Points"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Parameters"
+            }
+          ], 
+          "key": "GeomLib_Interpolate::GeomLib_Interpolate(Standard_Integer, Standard_Integer, TColgp_Array1OfPnt, TColStd_Array1OfReal)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_Interpolate", 
+          "parent": "GeomLib_Interpolate", 
+          "arguments": [
+            {
+              "decl": "const GeomLib_Interpolate &", 
+              "type": "GeomLib_Interpolate", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomLib_Interpolate::GeomLib_Interpolate(GeomLib_Interpolate)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "GeomLib_Interpolate", 
+          "arguments": [], 
+          "key": "GeomLib_Interpolate::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Error", 
+          "parent": "GeomLib_Interpolate", 
+          "arguments": [], 
+          "key": "GeomLib_Interpolate::Error()", 
+          "returnType": "GeomLib_InterpolationErrors", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve", 
+          "parent": "GeomLib_Interpolate", 
+          "arguments": [], 
+          "key": "GeomLib_Interpolate::Curve()", 
+          "returnType": "opencascade::handle<Geom_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomLib_Interpolate.hxx", 
+        42
+      ], 
+      "key": "GeomLib_Interpolate"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomLib_LogSample", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_LogSample", 
+          "parent": "GeomLib_LogSample", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "A"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "B"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }
+          ], 
+          "key": "GeomLib_LogSample::GeomLib_LogSample(Standard_Real, Standard_Real, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_LogSample", 
+          "parent": "GeomLib_LogSample", 
+          "arguments": [
+            {
+              "decl": "const GeomLib_LogSample &", 
+              "type": "GeomLib_LogSample", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomLib_LogSample::GeomLib_LogSample(GeomLib_LogSample)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetParameter", 
+          "parent": "GeomLib_LogSample", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "GeomLib_LogSample::GetParameter(Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionSample"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomLib_LogSample.hxx", 
+        31
+      ], 
+      "key": "GeomLib_LogSample"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomLib_IsPlanarSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_IsPlanarSurface", 
+          "parent": "GeomLib_IsPlanarSurface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "default": "9.9999999999999995E-8"
+            }
+          ], 
+          "key": "GeomLib_IsPlanarSurface::GeomLib_IsPlanarSurface(opencascade::handle<Geom_Surface>, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_IsPlanarSurface", 
+          "parent": "GeomLib_IsPlanarSurface", 
+          "arguments": [
+            {
+              "decl": "const GeomLib_IsPlanarSurface &", 
+              "type": "GeomLib_IsPlanarSurface", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomLib_IsPlanarSurface::GeomLib_IsPlanarSurface(GeomLib_IsPlanarSurface)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsPlanar", 
+          "parent": "GeomLib_IsPlanarSurface", 
+          "arguments": [], 
+          "key": "GeomLib_IsPlanarSurface::IsPlanar()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Plan", 
+          "parent": "GeomLib_IsPlanarSurface", 
+          "arguments": [], 
+          "key": "GeomLib_IsPlanarSurface::Plan()", 
+          "returnType": "gp_Pln const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomLib_IsPlanarSurface.hxx", 
+        33
+      ], 
+      "key": "GeomLib_IsPlanarSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomLib_MakeCurvefromApprox", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_MakeCurvefromApprox", 
+          "parent": "GeomLib_MakeCurvefromApprox", 
+          "arguments": [
+            {
+              "decl": "const AdvApprox_ApproxAFunction &", 
+              "type": "AdvApprox_ApproxAFunction", 
+              "name": "Approx"
+            }
+          ], 
+          "key": "GeomLib_MakeCurvefromApprox::GeomLib_MakeCurvefromApprox(AdvApprox_ApproxAFunction)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLib_MakeCurvefromApprox", 
+          "parent": "GeomLib_MakeCurvefromApprox", 
+          "arguments": [
+            {
+              "decl": "const GeomLib_MakeCurvefromApprox &", 
+              "type": "GeomLib_MakeCurvefromApprox", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomLib_MakeCurvefromApprox::GeomLib_MakeCurvefromApprox(GeomLib_MakeCurvefromApprox)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "GeomLib_MakeCurvefromApprox", 
+          "arguments": [], 
+          "key": "GeomLib_MakeCurvefromApprox::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Nb1DSpaces", 
+          "parent": "GeomLib_MakeCurvefromApprox", 
+          "arguments": [], 
+          "key": "GeomLib_MakeCurvefromApprox::Nb1DSpaces()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Nb2DSpaces", 
+          "parent": "GeomLib_MakeCurvefromApprox", 
+          "arguments": [], 
+          "key": "GeomLib_MakeCurvefromApprox::Nb2DSpaces()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Nb3DSpaces", 
+          "parent": "GeomLib_MakeCurvefromApprox", 
+          "arguments": [], 
+          "key": "GeomLib_MakeCurvefromApprox::Nb3DSpaces()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve2d", 
+          "parent": "GeomLib_MakeCurvefromApprox", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index2d"
+            }
+          ], 
+          "key": "GeomLib_MakeCurvefromApprox::Curve2d(Standard_Integer)", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve2dFromTwo1d", 
+          "parent": "GeomLib_MakeCurvefromApprox", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index1d"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index2d"
+            }
+          ], 
+          "key": "GeomLib_MakeCurvefromApprox::Curve2dFromTwo1d(Standard_Integer, Standard_Integer)", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve2d", 
+          "parent": "GeomLib_MakeCurvefromApprox", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index1d"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index2d"
+            }
+          ], 
+          "key": "GeomLib_MakeCurvefromApprox::Curve2d(Standard_Integer, Standard_Integer)", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve", 
+          "parent": "GeomLib_MakeCurvefromApprox", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index3d"
+            }
+          ], 
+          "key": "GeomLib_MakeCurvefromApprox::Curve(Standard_Integer)", 
+          "returnType": "opencascade::handle<Geom_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve", 
+          "parent": "GeomLib_MakeCurvefromApprox", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index1D"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index3D"
+            }
+          ], 
+          "key": "GeomLib_MakeCurvefromApprox::Curve(Standard_Integer, Standard_Integer)", 
+          "returnType": "opencascade::handle<Geom_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomLib_MakeCurvefromApprox.hxx", 
+        36
+      ], 
+      "key": "GeomLib_MakeCurvefromApprox"
+    }, 
+    {
+      "type": "GeomLib_DenominatorMultiplier *", 
+      "declType": "typedef", 
+      "name": "GeomLib_DenominatorMultiplierPtr", 
+      "key": "GeomLib_DenominatorMultiplierPtr"
+    }, 
+    {
+      "type": "NCollection_Array1<gp_Mat>", 
+      "declType": "typedef", 
+      "name": "GeomLib_Array1OfMat", 
+      "key": "GeomLib_Array1OfMat"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "GeomLib_NoError", 
+          0
+        ], 
+        [
+          "GeomLib_NotEnoughtPoints", 
+          1
+        ], 
+        [
+          "GeomLib_DegreeSmallerThan3", 
+          2
+        ], 
+        [
+          "GeomLib_InversionProblem", 
+          3
+        ]
+      ], 
+      "name": "GeomLib_InterpolationErrors", 
+      "key": "GeomLib_InterpolationErrors"
+    }
+  ], 
+  "name": "GeomLib"
+}

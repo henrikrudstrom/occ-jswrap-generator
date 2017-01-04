@@ -73,7 +73,7 @@ function initialize(settings) {
     inc: path.join(settings.paths.build, 'inc'),
     gyp: path.join(settings.paths.build, 'gyp'),
     config: path.join(settings.paths.build, 'config'),
-    headerCache: 'cache/headers',
+    headerCache: 'data/headers',
     data: path.join(settings.paths.generator, 'data')
   });
 

@@ -1,0 +1,5580 @@
+{
+  "headers": [
+    "Standard_DimensionMismatch.hxx", 
+    "Standard_MMgrOpt.hxx", 
+    "Standard_Stream.hxx", 
+    "Standard_Macro.hxx", 
+    "Standard_ErrorHandler.hxx", 
+    "Standard_ProgramError.hxx", 
+    "Standard_DefineAlloc.hxx", 
+    "Standard_CString.hxx", 
+    "Standard_TypeMismatch.hxx", 
+    "Standard_NegativeValue.hxx", 
+    "Standard_MMgrRoot.hxx", 
+    "Standard_DefineException.hxx", 
+    "Standard_DomainError.hxx", 
+    "Standard_NoMoreObject.hxx", 
+    "Standard_LicenseError.hxx", 
+    "Standard_AbortiveTransaction.hxx", 
+    "Standard_TypeDef.hxx", 
+    "Standard_Atomic.hxx", 
+    "Standard_Address.hxx", 
+    "Standard_DivideByZero.hxx", 
+    "Standard_ImmutableObject.hxx", 
+    "Standard_JmpBuf.hxx", 
+    "Standard_MMgrTBBalloc.hxx", 
+    "Standard_Underflow.hxx", 
+    "Standard_Handle.hxx", 
+    "Standard_LicenseNotFound.hxx", 
+    "Standard_math.hxx", 
+    "Standard_MMgrRaw.hxx", 
+    "Standard_PCharacter.hxx", 
+    "Standard_PErrorHandler.hxx", 
+    "Standard_DimensionError.hxx", 
+    "Standard_HandlerStatus.hxx", 
+    "Standard_IStream.hxx", 
+    "Standard_UUID.hxx", 
+    "Standard_Assert.hxx", 
+    "Standard_Real.hxx", 
+    "Standard_OStream.hxx", 
+    "Standard_OutOfRange.hxx", 
+    "Standard_PByte.hxx", 
+    "Standard_ExtString.hxx", 
+    "Standard_ShortReal.hxx", 
+    "Standard_RangeError.hxx", 
+    "Standard_Integer.hxx", 
+    "Standard_ConstructionError.hxx", 
+    "Standard_ExtCharacter.hxx", 
+    "Standard_Time.hxx", 
+    "Standard_Byte.hxx", 
+    "Standard_Mutex.hxx", 
+    "Standard_SStream.hxx", 
+    "Standard_Version.hxx", 
+    "Standard_TooManyUsers.hxx", 
+    "Standard_Boolean.hxx", 
+    "Standard_Overflow.hxx", 
+    "Standard_PrimitiveTypes.hxx", 
+    "Standard_Character.hxx", 
+    "Standard_NullObject.hxx", 
+    "Standard_MultiplyDefined.hxx", 
+    "Standard_OutOfMemory.hxx", 
+    "Standard_GUID.hxx", 
+    "Standard_NullValue.hxx", 
+    "Standard_DefineHandle.hxx", 
+    "Standard_Type.hxx", 
+    "Standard_Transient.hxx", 
+    "Standard_NumericError.hxx", 
+    "Standard_NoSuchObject.hxx", 
+    "Standard_ThreadId.hxx", 
+    "Standard_PExtCharacter.hxx", 
+    "Standard_NotImplemented.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Standard_ErrorHandler", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_ErrorHandler", 
+          "parent": "Standard_ErrorHandler", 
+          "arguments": [], 
+          "key": "Standard_ErrorHandler::Standard_ErrorHandler()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_ErrorHandler", 
+          "parent": "Standard_ErrorHandler", 
+          "arguments": [
+            {
+              "decl": "const Standard_ErrorHandler &", 
+              "type": "Standard_ErrorHandler", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_ErrorHandler::Standard_ErrorHandler(Standard_ErrorHandler)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Destroy", 
+          "parent": "Standard_ErrorHandler", 
+          "arguments": [], 
+          "key": "Standard_ErrorHandler::Destroy()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Unlink", 
+          "parent": "Standard_ErrorHandler", 
+          "arguments": [], 
+          "key": "Standard_ErrorHandler::Unlink()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Catches", 
+          "parent": "Standard_ErrorHandler", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Standard_Type> &", 
+              "type": "opencascade::handle<Standard_Type>", 
+              "name": "aType"
+            }
+          ], 
+          "key": "Standard_ErrorHandler::Catches(opencascade::handle<Standard_Type>)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Label", 
+          "parent": "Standard_ErrorHandler", 
+          "arguments": [], 
+          "key": "Standard_ErrorHandler::Label()", 
+          "returnType": "Standard_JmpBuf &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Error", 
+          "parent": "Standard_ErrorHandler", 
+          "arguments": [], 
+          "key": "Standard_ErrorHandler::Error()", 
+          "returnType": "opencascade::handle<Standard_Failure>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastCaughtError", 
+          "parent": "Standard_ErrorHandler", 
+          "arguments": [], 
+          "key": "Standard_ErrorHandler::LastCaughtError()", 
+          "returnType": "opencascade::handle<Standard_Failure>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsInTryBlock", 
+          "parent": "Standard_ErrorHandler", 
+          "arguments": [], 
+          "key": "Standard_ErrorHandler::IsInTryBlock()", 
+          "returnType": "Standard_Boolean", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RegisterCallback", 
+          "parent": "Standard_ErrorHandler", 
+          "arguments": [], 
+          "key": "Standard_ErrorHandler::RegisterCallback()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UnregisterCallback", 
+          "parent": "Standard_ErrorHandler", 
+          "arguments": [], 
+          "key": "Standard_ErrorHandler::UnregisterCallback()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DestroyCallback", 
+          "parent": "Standard_ErrorHandler", 
+          "arguments": [], 
+          "key": "Standard_ErrorHandler::DestroyCallback()", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_ErrorHandler.hxx", 
+        107
+      ], 
+      "key": "Standard_ErrorHandler"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_GUID", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_GUID", 
+          "parent": "Standard_GUID", 
+          "arguments": [], 
+          "key": "Standard_GUID::Standard_GUID()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_GUID", 
+          "parent": "Standard_GUID", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aGuid"
+            }
+          ], 
+          "key": "Standard_GUID::Standard_GUID(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_GUID", 
+          "parent": "Standard_GUID", 
+          "arguments": [
+            {
+              "decl": "const Standard_ExtString", 
+              "type": "Standard_ExtString", 
+              "name": "aGuid"
+            }
+          ], 
+          "key": "Standard_GUID::Standard_GUID(Standard_ExtString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_GUID", 
+          "parent": "Standard_GUID", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "a32b"
+            }, 
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "a16b1"
+            }, 
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "a16b2"
+            }, 
+            {
+              "decl": "const ?unknown?", 
+              "type": "?unknown?", 
+              "name": "a16b3"
+            }, 
+            {
+              "decl": "const Standard_Byte", 
+              "type": "Standard_Byte", 
+              "name": "a8b1"
+            }, 
+            {
+              "decl": "const Standard_Byte", 
+              "type": "Standard_Byte", 
+              "name": "a8b2"
+            }, 
+            {
+              "decl": "const Standard_Byte", 
+              "type": "Standard_Byte", 
+              "name": "a8b3"
+            }, 
+            {
+              "decl": "const Standard_Byte", 
+              "type": "Standard_Byte", 
+              "name": "a8b4"
+            }, 
+            {
+              "decl": "const Standard_Byte", 
+              "type": "Standard_Byte", 
+              "name": "a8b5"
+            }, 
+            {
+              "decl": "const Standard_Byte", 
+              "type": "Standard_Byte", 
+              "name": "a8b6"
+            }
+          ], 
+          "key": "Standard_GUID::Standard_GUID(Standard_Integer, ?unknown?, ?unknown?, ?unknown?, Standard_Byte, Standard_Byte, Standard_Byte, Standard_Byte, Standard_Byte, Standard_Byte)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_GUID", 
+          "parent": "Standard_GUID", 
+          "arguments": [
+            {
+              "decl": "const Standard_UUID &", 
+              "type": "Standard_UUID", 
+              "name": "aGuid"
+            }
+          ], 
+          "key": "Standard_GUID::Standard_GUID(Standard_UUID)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_GUID", 
+          "parent": "Standard_GUID", 
+          "arguments": [
+            {
+              "decl": "const Standard_GUID &", 
+              "type": "Standard_GUID", 
+              "name": "aGuid"
+            }
+          ], 
+          "key": "Standard_GUID::Standard_GUID(Standard_GUID)", 
+          "returnType": "", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ToUUID", 
+          "parent": "Standard_GUID", 
+          "arguments": [], 
+          "key": "Standard_GUID::ToUUID()", 
+          "returnType": "Standard_UUID", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ToCString", 
+          "parent": "Standard_GUID", 
+          "arguments": [
+            {
+              "decl": "const Standard_PCharacter", 
+              "type": "Standard_PCharacter", 
+              "name": "aStrGuid"
+            }
+          ], 
+          "key": "Standard_GUID::ToCString(Standard_PCharacter)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ToExtString", 
+          "parent": "Standard_GUID", 
+          "arguments": [
+            {
+              "decl": "const Standard_PExtCharacter", 
+              "type": "Standard_PExtCharacter", 
+              "name": "aStrGuid"
+            }
+          ], 
+          "key": "Standard_GUID::ToExtString(Standard_PExtCharacter)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsSame", 
+          "parent": "Standard_GUID", 
+          "arguments": [
+            {
+              "decl": "const Standard_GUID &", 
+              "type": "Standard_GUID", 
+              "name": "uid"
+            }
+          ], 
+          "key": "Standard_GUID::IsSame(Standard_GUID)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsNotSame", 
+          "parent": "Standard_GUID", 
+          "arguments": [
+            {
+              "decl": "const Standard_GUID &", 
+              "type": "Standard_GUID", 
+              "name": "uid"
+            }
+          ], 
+          "key": "Standard_GUID::IsNotSame(Standard_GUID)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Assign", 
+          "parent": "Standard_GUID", 
+          "arguments": [
+            {
+              "decl": "const Standard_GUID &", 
+              "type": "Standard_GUID", 
+              "name": "uid"
+            }
+          ], 
+          "key": "Standard_GUID::Assign(Standard_GUID)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Assign", 
+          "parent": "Standard_GUID", 
+          "arguments": [
+            {
+              "decl": "const Standard_UUID &", 
+              "type": "Standard_UUID", 
+              "name": "uid"
+            }
+          ], 
+          "key": "Standard_GUID::Assign(Standard_UUID)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ShallowDump", 
+          "parent": "Standard_GUID", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "aStream"
+            }
+          ], 
+          "key": "Standard_GUID::ShallowDump(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CheckGUIDFormat", 
+          "parent": "Standard_GUID", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aGuid"
+            }
+          ], 
+          "key": "Standard_GUID::CheckGUIDFormat(Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Hash", 
+          "parent": "Standard_GUID", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Upper"
+            }
+          ], 
+          "key": "Standard_GUID::Hash(Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HashCode", 
+          "parent": "Standard_GUID", 
+          "arguments": [
+            {
+              "decl": "const Standard_GUID &", 
+              "type": "Standard_GUID", 
+              "name": "aguid"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Upper"
+            }
+          ], 
+          "key": "Standard_GUID::HashCode(Standard_GUID, Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEqual", 
+          "parent": "Standard_GUID", 
+          "arguments": [
+            {
+              "decl": "const Standard_GUID &", 
+              "type": "Standard_GUID", 
+              "name": "string1"
+            }, 
+            {
+              "decl": "const Standard_GUID &", 
+              "type": "Standard_GUID", 
+              "name": "string2"
+            }
+          ], 
+          "key": "Standard_GUID::IsEqual(Standard_GUID, Standard_GUID)", 
+          "returnType": "Standard_Boolean", 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_GUID.hxx", 
+        38
+      ], 
+      "key": "Standard_GUID"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_Transient", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_Transient", 
+          "parent": "Standard_Transient", 
+          "arguments": [], 
+          "key": "Standard_Transient::Standard_Transient()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_Transient", 
+          "parent": "Standard_Transient", 
+          "arguments": [
+            {
+              "decl": "const Standard_Transient &", 
+              "type": "Standard_Transient", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_Transient::Standard_Transient(Standard_Transient)", 
+          "returnType": "", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Delete", 
+          "parent": "Standard_Transient", 
+          "arguments": [], 
+          "key": "Standard_Transient::Delete()", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_Transient", 
+          "arguments": [], 
+          "key": "Standard_Transient::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_Transient", 
+          "arguments": [], 
+          "key": "Standard_Transient::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_Transient", 
+          "arguments": [], 
+          "key": "Standard_Transient::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsInstance", 
+          "parent": "Standard_Transient", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Standard_Type> &", 
+              "type": "opencascade::handle<Standard_Type>", 
+              "name": "theType"
+            }
+          ], 
+          "key": "Standard_Transient::IsInstance(opencascade::handle<Standard_Type>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsInstance", 
+          "parent": "Standard_Transient", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theTypeName"
+            }
+          ], 
+          "key": "Standard_Transient::IsInstance(Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsKind", 
+          "parent": "Standard_Transient", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Standard_Type> &", 
+              "type": "opencascade::handle<Standard_Type>", 
+              "name": "theType"
+            }
+          ], 
+          "key": "Standard_Transient::IsKind(opencascade::handle<Standard_Type>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsKind", 
+          "parent": "Standard_Transient", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theTypeName"
+            }
+          ], 
+          "key": "Standard_Transient::IsKind(Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "This", 
+          "parent": "Standard_Transient", 
+          "arguments": [], 
+          "key": "Standard_Transient::This()", 
+          "returnType": "Standard_Transient *", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetRefCount", 
+          "parent": "Standard_Transient", 
+          "arguments": [], 
+          "key": "Standard_Transient::GetRefCount()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IncrementRefCounter", 
+          "parent": "Standard_Transient", 
+          "arguments": [], 
+          "key": "Standard_Transient::IncrementRefCounter()", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DecrementRefCounter", 
+          "parent": "Standard_Transient", 
+          "arguments": [], 
+          "key": "Standard_Transient::DecrementRefCounter()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_Transient.hxx", 
+        31
+      ], 
+      "key": "Standard_Transient"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_Type", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_Type", 
+          "parent": "Standard_Type", 
+          "arguments": [
+            {
+              "decl": "const Standard_Type &", 
+              "type": "Standard_Type", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_Type::Standard_Type(Standard_Type)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SystemName", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::SystemName()", 
+          "returnType": "Standard_CString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Name", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Name()", 
+          "returnType": "Standard_CString", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Size", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Size()", 
+          "returnType": "Standard_Size", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parent", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Parent()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SubType", 
+          "parent": "Standard_Type", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Standard_Type> &", 
+              "type": "opencascade::handle<Standard_Type>", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Standard_Type::SubType(opencascade::handle<Standard_Type>)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SubType", 
+          "parent": "Standard_Type", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Standard_Type::SubType(Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Print", 
+          "parent": "Standard_Type", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "theStream"
+            }
+          ], 
+          "key": "Standard_Type::Print(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Instance", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::Instance()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Register", 
+          "parent": "Standard_Type", 
+          "arguments": [
+            {
+              "decl": "const char *", 
+              "type": "char", 
+              "name": "theSystemName"
+            }, 
+            {
+              "decl": "const char *", 
+              "type": "char", 
+              "name": "theName"
+            }, 
+            {
+              "decl": "Standard_Size", 
+              "type": "Standard_Size", 
+              "name": "theSize"
+            }, 
+            {
+              "decl": "const opencascade::handle<Standard_Type> &", 
+              "type": "opencascade::handle<Standard_Type>", 
+              "name": "theParent"
+            }
+          ], 
+          "key": "Standard_Type::Register(char, char, Standard_Size, opencascade::handle<Standard_Type>)", 
+          "returnType": "Standard_Type *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_Type", 
+          "arguments": [], 
+          "key": "Standard_Type::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_Transient"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_Type.hxx", 
+        86
+      ], 
+      "key": "Standard_Type"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_NoSuchObject", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_NoSuchObject", 
+          "parent": "Standard_NoSuchObject", 
+          "arguments": [], 
+          "key": "Standard_NoSuchObject::Standard_NoSuchObject()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_NoSuchObject", 
+          "parent": "Standard_NoSuchObject", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_NoSuchObject::Standard_NoSuchObject(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_NoSuchObject", 
+          "parent": "Standard_NoSuchObject", 
+          "arguments": [
+            {
+              "decl": "const Standard_NoSuchObject &", 
+              "type": "Standard_NoSuchObject", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_NoSuchObject::Standard_NoSuchObject(Standard_NoSuchObject)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_NoSuchObject", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_NoSuchObject::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_NoSuchObject", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_NoSuchObject::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_NoSuchObject", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_NoSuchObject::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_NoSuchObject>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_NoSuchObject", 
+          "arguments": [], 
+          "key": "Standard_NoSuchObject::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_NoSuchObject", 
+          "arguments": [], 
+          "key": "Standard_NoSuchObject::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_NoSuchObject", 
+          "arguments": [], 
+          "key": "Standard_NoSuchObject::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_DomainError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_NoSuchObject.hxx", 
+        35
+      ], 
+      "key": "Standard_NoSuchObject"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_DomainError", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_DomainError", 
+          "parent": "Standard_DomainError", 
+          "arguments": [], 
+          "key": "Standard_DomainError::Standard_DomainError()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_DomainError", 
+          "parent": "Standard_DomainError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_DomainError::Standard_DomainError(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_DomainError", 
+          "parent": "Standard_DomainError", 
+          "arguments": [
+            {
+              "decl": "const Standard_DomainError &", 
+              "type": "Standard_DomainError", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_DomainError::Standard_DomainError(Standard_DomainError)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_DomainError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_DomainError::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_DomainError", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_DomainError::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_DomainError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_DomainError::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_DomainError>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_DomainError", 
+          "arguments": [], 
+          "key": "Standard_DomainError::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_DomainError", 
+          "arguments": [], 
+          "key": "Standard_DomainError::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_DomainError", 
+          "arguments": [], 
+          "key": "Standard_DomainError::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_Failure"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_DomainError.hxx", 
+        35
+      ], 
+      "key": "Standard_DomainError"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_DimensionError", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_DimensionError", 
+          "parent": "Standard_DimensionError", 
+          "arguments": [], 
+          "key": "Standard_DimensionError::Standard_DimensionError()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_DimensionError", 
+          "parent": "Standard_DimensionError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_DimensionError::Standard_DimensionError(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_DimensionError", 
+          "parent": "Standard_DimensionError", 
+          "arguments": [
+            {
+              "decl": "const Standard_DimensionError &", 
+              "type": "Standard_DimensionError", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_DimensionError::Standard_DimensionError(Standard_DimensionError)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_DimensionError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_DimensionError::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_DimensionError", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_DimensionError::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_DimensionError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_DimensionError::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_DimensionError>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_DimensionError", 
+          "arguments": [], 
+          "key": "Standard_DimensionError::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_DimensionError", 
+          "arguments": [], 
+          "key": "Standard_DimensionError::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_DimensionError", 
+          "arguments": [], 
+          "key": "Standard_DimensionError::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_DomainError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_DimensionError.hxx", 
+        35
+      ], 
+      "key": "Standard_DimensionError"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_DimensionMismatch", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_DimensionMismatch", 
+          "parent": "Standard_DimensionMismatch", 
+          "arguments": [], 
+          "key": "Standard_DimensionMismatch::Standard_DimensionMismatch()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_DimensionMismatch", 
+          "parent": "Standard_DimensionMismatch", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_DimensionMismatch::Standard_DimensionMismatch(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_DimensionMismatch", 
+          "parent": "Standard_DimensionMismatch", 
+          "arguments": [
+            {
+              "decl": "const Standard_DimensionMismatch &", 
+              "type": "Standard_DimensionMismatch", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_DimensionMismatch::Standard_DimensionMismatch(Standard_DimensionMismatch)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_DimensionMismatch", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_DimensionMismatch::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_DimensionMismatch", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_DimensionMismatch::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_DimensionMismatch", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_DimensionMismatch::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_DimensionMismatch>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_DimensionMismatch", 
+          "arguments": [], 
+          "key": "Standard_DimensionMismatch::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_DimensionMismatch", 
+          "arguments": [], 
+          "key": "Standard_DimensionMismatch::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_DimensionMismatch", 
+          "arguments": [], 
+          "key": "Standard_DimensionMismatch::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_DimensionError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_DimensionMismatch.hxx", 
+        35
+      ], 
+      "key": "Standard_DimensionMismatch"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_MMgrRoot", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "declType": "method", 
+          "name": "Allocate", 
+          "parent": "Standard_MMgrRoot", 
+          "arguments": [
+            {
+              "decl": "const Standard_Size", 
+              "type": "Standard_Size", 
+              "name": "theSize"
+            }
+          ], 
+          "key": "Standard_MMgrRoot::Allocate(Standard_Size)", 
+          "returnType": "Standard_Address", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Reallocate", 
+          "parent": "Standard_MMgrRoot", 
+          "arguments": [
+            {
+              "decl": "Standard_Address", 
+              "type": "Standard_Address", 
+              "name": "thePtr"
+            }, 
+            {
+              "decl": "const Standard_Size", 
+              "type": "Standard_Size", 
+              "name": "theSize"
+            }
+          ], 
+          "key": "Standard_MMgrRoot::Reallocate(Standard_Address, Standard_Size)", 
+          "returnType": "Standard_Address", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Free", 
+          "parent": "Standard_MMgrRoot", 
+          "arguments": [
+            {
+              "decl": "Standard_Address", 
+              "type": "Standard_Address", 
+              "name": "thePtr"
+            }
+          ], 
+          "key": "Standard_MMgrRoot::Free(Standard_Address)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Purge", 
+          "parent": "Standard_MMgrRoot", 
+          "arguments": [
+            {
+              "decl": "Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "isDestroyed", 
+              "default": "false"
+            }
+          ], 
+          "key": "Standard_MMgrRoot::Purge(Standard_Boolean)", 
+          "returnType": "Standard_Integer", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_MMgrRoot.hxx", 
+        26
+      ], 
+      "key": "Standard_MMgrRoot"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_Mutex", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Sentry", 
+          "parent": "Standard_Mutex", 
+          "arguments": [
+            {
+              "decl": "Standard_Mutex &", 
+              "type": "Standard_Mutex", 
+              "name": "theMutex"
+            }
+          ], 
+          "key": "Standard_Mutex::Sentry(Standard_Mutex)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Sentry", 
+          "parent": "Standard_Mutex", 
+          "arguments": [
+            {
+              "decl": "Standard_Mutex *", 
+              "type": "Standard_Mutex", 
+              "name": "theMutex"
+            }
+          ], 
+          "key": "Standard_Mutex::Sentry(Standard_Mutex)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_Mutex", 
+          "parent": "Standard_Mutex", 
+          "arguments": [], 
+          "key": "Standard_Mutex::Standard_Mutex()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Lock", 
+          "parent": "Standard_Mutex", 
+          "arguments": [], 
+          "key": "Standard_Mutex::Lock()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "TryLock", 
+          "parent": "Standard_Mutex", 
+          "arguments": [], 
+          "key": "Standard_Mutex::TryLock()", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Unlock", 
+          "parent": "Standard_Mutex", 
+          "arguments": [], 
+          "key": "Standard_Mutex::Unlock()", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Callback"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_Mutex.hxx", 
+        65
+      ], 
+      "key": "Standard_Mutex"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_MMgrOpt", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_MMgrOpt", 
+          "parent": "Standard_MMgrOpt", 
+          "arguments": [
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "aClear", 
+              "default": "true"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "aMMap", 
+              "default": "true"
+            }, 
+            {
+              "decl": "const Standard_Size", 
+              "type": "Standard_Size", 
+              "name": "aCellSize", 
+              "default": "200"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "aNbPages", 
+              "default": "10000"
+            }, 
+            {
+              "decl": "const Standard_Size", 
+              "type": "Standard_Size", 
+              "name": "aThreshold", 
+              "default": "40000"
+            }
+          ], 
+          "key": "Standard_MMgrOpt::Standard_MMgrOpt(Standard_Boolean, Standard_Boolean, Standard_Size, Standard_Integer, Standard_Size)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Allocate", 
+          "parent": "Standard_MMgrOpt", 
+          "arguments": [
+            {
+              "decl": "const Standard_Size", 
+              "type": "Standard_Size", 
+              "name": "aSize"
+            }
+          ], 
+          "key": "Standard_MMgrOpt::Allocate(Standard_Size)", 
+          "returnType": "Standard_Address", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Reallocate", 
+          "parent": "Standard_MMgrOpt", 
+          "arguments": [
+            {
+              "decl": "Standard_Address", 
+              "type": "Standard_Address", 
+              "name": "thePtr"
+            }, 
+            {
+              "decl": "const Standard_Size", 
+              "type": "Standard_Size", 
+              "name": "theSize"
+            }
+          ], 
+          "key": "Standard_MMgrOpt::Reallocate(Standard_Address, Standard_Size)", 
+          "returnType": "Standard_Address", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Free", 
+          "parent": "Standard_MMgrOpt", 
+          "arguments": [
+            {
+              "decl": "Standard_Address", 
+              "type": "Standard_Address", 
+              "name": "thePtr"
+            }
+          ], 
+          "key": "Standard_MMgrOpt::Free(Standard_Address)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Purge", 
+          "parent": "Standard_MMgrOpt", 
+          "arguments": [
+            {
+              "decl": "Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "isDestroyed"
+            }
+          ], 
+          "key": "Standard_MMgrOpt::Purge(Standard_Boolean)", 
+          "returnType": "Standard_Integer", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetCallBackFunction", 
+          "parent": "Standard_MMgrOpt", 
+          "arguments": [
+            {
+              "decl": "Standard_MMgrOpt::TPCallBackFunc", 
+              "type": "Standard_MMgrOpt::TPCallBackFunc", 
+              "name": "pFunc"
+            }
+          ], 
+          "key": "Standard_MMgrOpt::SetCallBackFunction(Standard_MMgrOpt::TPCallBackFunc)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_MMgrRoot"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_MMgrOpt.hxx", 
+        62
+      ], 
+      "key": "Standard_MMgrOpt"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_ProgramError", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_ProgramError", 
+          "parent": "Standard_ProgramError", 
+          "arguments": [], 
+          "key": "Standard_ProgramError::Standard_ProgramError()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_ProgramError", 
+          "parent": "Standard_ProgramError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_ProgramError::Standard_ProgramError(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_ProgramError", 
+          "parent": "Standard_ProgramError", 
+          "arguments": [
+            {
+              "decl": "const Standard_ProgramError &", 
+              "type": "Standard_ProgramError", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_ProgramError::Standard_ProgramError(Standard_ProgramError)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_ProgramError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_ProgramError::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_ProgramError", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_ProgramError::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_ProgramError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_ProgramError::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_ProgramError>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_ProgramError", 
+          "arguments": [], 
+          "key": "Standard_ProgramError::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_ProgramError", 
+          "arguments": [], 
+          "key": "Standard_ProgramError::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_ProgramError", 
+          "arguments": [], 
+          "key": "Standard_ProgramError::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_Failure"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_ProgramError.hxx", 
+        35
+      ], 
+      "key": "Standard_ProgramError"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_TypeMismatch", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_TypeMismatch", 
+          "parent": "Standard_TypeMismatch", 
+          "arguments": [], 
+          "key": "Standard_TypeMismatch::Standard_TypeMismatch()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_TypeMismatch", 
+          "parent": "Standard_TypeMismatch", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_TypeMismatch::Standard_TypeMismatch(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_TypeMismatch", 
+          "parent": "Standard_TypeMismatch", 
+          "arguments": [
+            {
+              "decl": "const Standard_TypeMismatch &", 
+              "type": "Standard_TypeMismatch", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_TypeMismatch::Standard_TypeMismatch(Standard_TypeMismatch)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_TypeMismatch", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_TypeMismatch::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_TypeMismatch", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_TypeMismatch::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_TypeMismatch", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_TypeMismatch::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_TypeMismatch>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_TypeMismatch", 
+          "arguments": [], 
+          "key": "Standard_TypeMismatch::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_TypeMismatch", 
+          "arguments": [], 
+          "key": "Standard_TypeMismatch::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_TypeMismatch", 
+          "arguments": [], 
+          "key": "Standard_TypeMismatch::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_DomainError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_TypeMismatch.hxx", 
+        35
+      ], 
+      "key": "Standard_TypeMismatch"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_RangeError", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_RangeError", 
+          "parent": "Standard_RangeError", 
+          "arguments": [], 
+          "key": "Standard_RangeError::Standard_RangeError()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_RangeError", 
+          "parent": "Standard_RangeError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_RangeError::Standard_RangeError(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_RangeError", 
+          "parent": "Standard_RangeError", 
+          "arguments": [
+            {
+              "decl": "const Standard_RangeError &", 
+              "type": "Standard_RangeError", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_RangeError::Standard_RangeError(Standard_RangeError)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_RangeError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_RangeError::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_RangeError", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_RangeError::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_RangeError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_RangeError::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_RangeError>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_RangeError", 
+          "arguments": [], 
+          "key": "Standard_RangeError::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_RangeError", 
+          "arguments": [], 
+          "key": "Standard_RangeError::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_RangeError", 
+          "arguments": [], 
+          "key": "Standard_RangeError::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_DomainError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_RangeError.hxx", 
+        35
+      ], 
+      "key": "Standard_RangeError"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_NegativeValue", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_NegativeValue", 
+          "parent": "Standard_NegativeValue", 
+          "arguments": [], 
+          "key": "Standard_NegativeValue::Standard_NegativeValue()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_NegativeValue", 
+          "parent": "Standard_NegativeValue", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_NegativeValue::Standard_NegativeValue(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_NegativeValue", 
+          "parent": "Standard_NegativeValue", 
+          "arguments": [
+            {
+              "decl": "const Standard_NegativeValue &", 
+              "type": "Standard_NegativeValue", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_NegativeValue::Standard_NegativeValue(Standard_NegativeValue)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_NegativeValue", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_NegativeValue::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_NegativeValue", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_NegativeValue::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_NegativeValue", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_NegativeValue::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_NegativeValue>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_NegativeValue", 
+          "arguments": [], 
+          "key": "Standard_NegativeValue::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_NegativeValue", 
+          "arguments": [], 
+          "key": "Standard_NegativeValue::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_NegativeValue", 
+          "arguments": [], 
+          "key": "Standard_NegativeValue::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_RangeError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_NegativeValue.hxx", 
+        35
+      ], 
+      "key": "Standard_NegativeValue"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_NoMoreObject", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_NoMoreObject", 
+          "parent": "Standard_NoMoreObject", 
+          "arguments": [], 
+          "key": "Standard_NoMoreObject::Standard_NoMoreObject()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_NoMoreObject", 
+          "parent": "Standard_NoMoreObject", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_NoMoreObject::Standard_NoMoreObject(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_NoMoreObject", 
+          "parent": "Standard_NoMoreObject", 
+          "arguments": [
+            {
+              "decl": "const Standard_NoMoreObject &", 
+              "type": "Standard_NoMoreObject", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_NoMoreObject::Standard_NoMoreObject(Standard_NoMoreObject)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_NoMoreObject", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_NoMoreObject::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_NoMoreObject", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_NoMoreObject::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_NoMoreObject", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_NoMoreObject::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_NoMoreObject>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_NoMoreObject", 
+          "arguments": [], 
+          "key": "Standard_NoMoreObject::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_NoMoreObject", 
+          "arguments": [], 
+          "key": "Standard_NoMoreObject::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_NoMoreObject", 
+          "arguments": [], 
+          "key": "Standard_NoMoreObject::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_DomainError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_NoMoreObject.hxx", 
+        35
+      ], 
+      "key": "Standard_NoMoreObject"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_LicenseError", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_LicenseError", 
+          "parent": "Standard_LicenseError", 
+          "arguments": [], 
+          "key": "Standard_LicenseError::Standard_LicenseError()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_LicenseError", 
+          "parent": "Standard_LicenseError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_LicenseError::Standard_LicenseError(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_LicenseError", 
+          "parent": "Standard_LicenseError", 
+          "arguments": [
+            {
+              "decl": "const Standard_LicenseError &", 
+              "type": "Standard_LicenseError", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_LicenseError::Standard_LicenseError(Standard_LicenseError)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_LicenseError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_LicenseError::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_LicenseError", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_LicenseError::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_LicenseError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_LicenseError::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_LicenseError>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_LicenseError", 
+          "arguments": [], 
+          "key": "Standard_LicenseError::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_LicenseError", 
+          "arguments": [], 
+          "key": "Standard_LicenseError::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_LicenseError", 
+          "arguments": [], 
+          "key": "Standard_LicenseError::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_Failure"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_LicenseError.hxx", 
+        35
+      ], 
+      "key": "Standard_LicenseError"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_AbortiveTransaction", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_AbortiveTransaction", 
+          "parent": "Standard_AbortiveTransaction", 
+          "arguments": [], 
+          "key": "Standard_AbortiveTransaction::Standard_AbortiveTransaction()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_AbortiveTransaction", 
+          "parent": "Standard_AbortiveTransaction", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_AbortiveTransaction::Standard_AbortiveTransaction(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_AbortiveTransaction", 
+          "parent": "Standard_AbortiveTransaction", 
+          "arguments": [
+            {
+              "decl": "const Standard_AbortiveTransaction &", 
+              "type": "Standard_AbortiveTransaction", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_AbortiveTransaction::Standard_AbortiveTransaction(Standard_AbortiveTransaction)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_AbortiveTransaction", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_AbortiveTransaction::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_AbortiveTransaction", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_AbortiveTransaction::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_AbortiveTransaction", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_AbortiveTransaction::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_AbortiveTransaction>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_AbortiveTransaction", 
+          "arguments": [], 
+          "key": "Standard_AbortiveTransaction::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_AbortiveTransaction", 
+          "arguments": [], 
+          "key": "Standard_AbortiveTransaction::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_AbortiveTransaction", 
+          "arguments": [], 
+          "key": "Standard_AbortiveTransaction::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_Failure"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_AbortiveTransaction.hxx", 
+        35
+      ], 
+      "key": "Standard_AbortiveTransaction"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_NumericError", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_NumericError", 
+          "parent": "Standard_NumericError", 
+          "arguments": [], 
+          "key": "Standard_NumericError::Standard_NumericError()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_NumericError", 
+          "parent": "Standard_NumericError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_NumericError::Standard_NumericError(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_NumericError", 
+          "parent": "Standard_NumericError", 
+          "arguments": [
+            {
+              "decl": "const Standard_NumericError &", 
+              "type": "Standard_NumericError", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_NumericError::Standard_NumericError(Standard_NumericError)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_NumericError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_NumericError::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_NumericError", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_NumericError::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_NumericError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_NumericError::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_NumericError>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_NumericError", 
+          "arguments": [], 
+          "key": "Standard_NumericError::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_NumericError", 
+          "arguments": [], 
+          "key": "Standard_NumericError::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_NumericError", 
+          "arguments": [], 
+          "key": "Standard_NumericError::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_Failure"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_NumericError.hxx", 
+        35
+      ], 
+      "key": "Standard_NumericError"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_DivideByZero", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_DivideByZero", 
+          "parent": "Standard_DivideByZero", 
+          "arguments": [], 
+          "key": "Standard_DivideByZero::Standard_DivideByZero()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_DivideByZero", 
+          "parent": "Standard_DivideByZero", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_DivideByZero::Standard_DivideByZero(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_DivideByZero", 
+          "parent": "Standard_DivideByZero", 
+          "arguments": [
+            {
+              "decl": "const Standard_DivideByZero &", 
+              "type": "Standard_DivideByZero", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_DivideByZero::Standard_DivideByZero(Standard_DivideByZero)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_DivideByZero", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_DivideByZero::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_DivideByZero", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_DivideByZero::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_DivideByZero", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_DivideByZero::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_DivideByZero>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_DivideByZero", 
+          "arguments": [], 
+          "key": "Standard_DivideByZero::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_DivideByZero", 
+          "arguments": [], 
+          "key": "Standard_DivideByZero::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_DivideByZero", 
+          "arguments": [], 
+          "key": "Standard_DivideByZero::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_NumericError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_DivideByZero.hxx", 
+        35
+      ], 
+      "key": "Standard_DivideByZero"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_ImmutableObject", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_ImmutableObject", 
+          "parent": "Standard_ImmutableObject", 
+          "arguments": [], 
+          "key": "Standard_ImmutableObject::Standard_ImmutableObject()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_ImmutableObject", 
+          "parent": "Standard_ImmutableObject", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_ImmutableObject::Standard_ImmutableObject(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_ImmutableObject", 
+          "parent": "Standard_ImmutableObject", 
+          "arguments": [
+            {
+              "decl": "const Standard_ImmutableObject &", 
+              "type": "Standard_ImmutableObject", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_ImmutableObject::Standard_ImmutableObject(Standard_ImmutableObject)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_ImmutableObject", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_ImmutableObject::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_ImmutableObject", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_ImmutableObject::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_ImmutableObject", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_ImmutableObject::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_ImmutableObject>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_ImmutableObject", 
+          "arguments": [], 
+          "key": "Standard_ImmutableObject::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_ImmutableObject", 
+          "arguments": [], 
+          "key": "Standard_ImmutableObject::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_ImmutableObject", 
+          "arguments": [], 
+          "key": "Standard_ImmutableObject::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_DomainError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_ImmutableObject.hxx", 
+        35
+      ], 
+      "key": "Standard_ImmutableObject"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_MMgrTBBalloc", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_MMgrTBBalloc", 
+          "parent": "Standard_MMgrTBBalloc", 
+          "arguments": [
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "aClear", 
+              "default": "false"
+            }
+          ], 
+          "key": "Standard_MMgrTBBalloc::Standard_MMgrTBBalloc(Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_MMgrTBBalloc", 
+          "parent": "Standard_MMgrTBBalloc", 
+          "arguments": [
+            {
+              "decl": "const Standard_MMgrTBBalloc &", 
+              "type": "Standard_MMgrTBBalloc", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_MMgrTBBalloc::Standard_MMgrTBBalloc(Standard_MMgrTBBalloc)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Allocate", 
+          "parent": "Standard_MMgrTBBalloc", 
+          "arguments": [
+            {
+              "decl": "const Standard_Size", 
+              "type": "Standard_Size", 
+              "name": "aSize"
+            }
+          ], 
+          "key": "Standard_MMgrTBBalloc::Allocate(Standard_Size)", 
+          "returnType": "Standard_Address", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Reallocate", 
+          "parent": "Standard_MMgrTBBalloc", 
+          "arguments": [
+            {
+              "decl": "Standard_Address", 
+              "type": "Standard_Address", 
+              "name": "thePtr"
+            }, 
+            {
+              "decl": "const Standard_Size", 
+              "type": "Standard_Size", 
+              "name": "theSize"
+            }
+          ], 
+          "key": "Standard_MMgrTBBalloc::Reallocate(Standard_Address, Standard_Size)", 
+          "returnType": "Standard_Address", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Free", 
+          "parent": "Standard_MMgrTBBalloc", 
+          "arguments": [
+            {
+              "decl": "Standard_Address", 
+              "type": "Standard_Address", 
+              "name": "thePtr"
+            }
+          ], 
+          "key": "Standard_MMgrTBBalloc::Free(Standard_Address)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_MMgrRoot"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_MMgrTBBalloc.hxx", 
+        28
+      ], 
+      "key": "Standard_MMgrTBBalloc"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_Underflow", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_Underflow", 
+          "parent": "Standard_Underflow", 
+          "arguments": [], 
+          "key": "Standard_Underflow::Standard_Underflow()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_Underflow", 
+          "parent": "Standard_Underflow", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_Underflow::Standard_Underflow(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_Underflow", 
+          "parent": "Standard_Underflow", 
+          "arguments": [
+            {
+              "decl": "const Standard_Underflow &", 
+              "type": "Standard_Underflow", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_Underflow::Standard_Underflow(Standard_Underflow)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_Underflow", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_Underflow::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_Underflow", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_Underflow::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_Underflow", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_Underflow::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_Underflow>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_Underflow", 
+          "arguments": [], 
+          "key": "Standard_Underflow::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_Underflow", 
+          "arguments": [], 
+          "key": "Standard_Underflow::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_Underflow", 
+          "arguments": [], 
+          "key": "Standard_Underflow::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_NumericError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_Underflow.hxx", 
+        35
+      ], 
+      "key": "Standard_Underflow"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_LicenseNotFound", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_LicenseNotFound", 
+          "parent": "Standard_LicenseNotFound", 
+          "arguments": [], 
+          "key": "Standard_LicenseNotFound::Standard_LicenseNotFound()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_LicenseNotFound", 
+          "parent": "Standard_LicenseNotFound", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_LicenseNotFound::Standard_LicenseNotFound(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_LicenseNotFound", 
+          "parent": "Standard_LicenseNotFound", 
+          "arguments": [
+            {
+              "decl": "const Standard_LicenseNotFound &", 
+              "type": "Standard_LicenseNotFound", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_LicenseNotFound::Standard_LicenseNotFound(Standard_LicenseNotFound)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_LicenseNotFound", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_LicenseNotFound::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_LicenseNotFound", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_LicenseNotFound::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_LicenseNotFound", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_LicenseNotFound::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_LicenseNotFound>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_LicenseNotFound", 
+          "arguments": [], 
+          "key": "Standard_LicenseNotFound::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_LicenseNotFound", 
+          "arguments": [], 
+          "key": "Standard_LicenseNotFound::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_LicenseNotFound", 
+          "arguments": [], 
+          "key": "Standard_LicenseNotFound::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_LicenseError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_LicenseNotFound.hxx", 
+        35
+      ], 
+      "key": "Standard_LicenseNotFound"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_MMgrRaw", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_MMgrRaw", 
+          "parent": "Standard_MMgrRaw", 
+          "arguments": [
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "aClear", 
+              "default": "false"
+            }
+          ], 
+          "key": "Standard_MMgrRaw::Standard_MMgrRaw(Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_MMgrRaw", 
+          "parent": "Standard_MMgrRaw", 
+          "arguments": [
+            {
+              "decl": "const Standard_MMgrRaw &", 
+              "type": "Standard_MMgrRaw", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_MMgrRaw::Standard_MMgrRaw(Standard_MMgrRaw)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Allocate", 
+          "parent": "Standard_MMgrRaw", 
+          "arguments": [
+            {
+              "decl": "const Standard_Size", 
+              "type": "Standard_Size", 
+              "name": "aSize"
+            }
+          ], 
+          "key": "Standard_MMgrRaw::Allocate(Standard_Size)", 
+          "returnType": "Standard_Address", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Reallocate", 
+          "parent": "Standard_MMgrRaw", 
+          "arguments": [
+            {
+              "decl": "Standard_Address", 
+              "type": "Standard_Address", 
+              "name": "thePtr"
+            }, 
+            {
+              "decl": "const Standard_Size", 
+              "type": "Standard_Size", 
+              "name": "theSize"
+            }
+          ], 
+          "key": "Standard_MMgrRaw::Reallocate(Standard_Address, Standard_Size)", 
+          "returnType": "Standard_Address", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Free", 
+          "parent": "Standard_MMgrRaw", 
+          "arguments": [
+            {
+              "decl": "Standard_Address", 
+              "type": "Standard_Address", 
+              "name": "thePtr"
+            }
+          ], 
+          "key": "Standard_MMgrRaw::Free(Standard_Address)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_MMgrRoot"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_MMgrRaw.hxx", 
+        27
+      ], 
+      "key": "Standard_MMgrRaw"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_OutOfRange", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_OutOfRange", 
+          "parent": "Standard_OutOfRange", 
+          "arguments": [], 
+          "key": "Standard_OutOfRange::Standard_OutOfRange()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_OutOfRange", 
+          "parent": "Standard_OutOfRange", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_OutOfRange::Standard_OutOfRange(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_OutOfRange", 
+          "parent": "Standard_OutOfRange", 
+          "arguments": [
+            {
+              "decl": "const Standard_OutOfRange &", 
+              "type": "Standard_OutOfRange", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_OutOfRange::Standard_OutOfRange(Standard_OutOfRange)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_OutOfRange", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_OutOfRange::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_OutOfRange", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_OutOfRange::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_OutOfRange", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_OutOfRange::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_OutOfRange>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_OutOfRange", 
+          "arguments": [], 
+          "key": "Standard_OutOfRange::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_OutOfRange", 
+          "arguments": [], 
+          "key": "Standard_OutOfRange::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_OutOfRange", 
+          "arguments": [], 
+          "key": "Standard_OutOfRange::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_RangeError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_OutOfRange.hxx", 
+        35
+      ], 
+      "key": "Standard_OutOfRange"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_ConstructionError", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_ConstructionError", 
+          "parent": "Standard_ConstructionError", 
+          "arguments": [], 
+          "key": "Standard_ConstructionError::Standard_ConstructionError()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_ConstructionError", 
+          "parent": "Standard_ConstructionError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_ConstructionError::Standard_ConstructionError(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_ConstructionError", 
+          "parent": "Standard_ConstructionError", 
+          "arguments": [
+            {
+              "decl": "const Standard_ConstructionError &", 
+              "type": "Standard_ConstructionError", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_ConstructionError::Standard_ConstructionError(Standard_ConstructionError)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_ConstructionError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_ConstructionError::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_ConstructionError", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_ConstructionError::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_ConstructionError", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_ConstructionError::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_ConstructionError>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_ConstructionError", 
+          "arguments": [], 
+          "key": "Standard_ConstructionError::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_ConstructionError", 
+          "arguments": [], 
+          "key": "Standard_ConstructionError::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_ConstructionError", 
+          "arguments": [], 
+          "key": "Standard_ConstructionError::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_DomainError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_ConstructionError.hxx", 
+        35
+      ], 
+      "key": "Standard_ConstructionError"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_TooManyUsers", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_TooManyUsers", 
+          "parent": "Standard_TooManyUsers", 
+          "arguments": [], 
+          "key": "Standard_TooManyUsers::Standard_TooManyUsers()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_TooManyUsers", 
+          "parent": "Standard_TooManyUsers", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_TooManyUsers::Standard_TooManyUsers(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_TooManyUsers", 
+          "parent": "Standard_TooManyUsers", 
+          "arguments": [
+            {
+              "decl": "const Standard_TooManyUsers &", 
+              "type": "Standard_TooManyUsers", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_TooManyUsers::Standard_TooManyUsers(Standard_TooManyUsers)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_TooManyUsers", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_TooManyUsers::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_TooManyUsers", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_TooManyUsers::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_TooManyUsers", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_TooManyUsers::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_TooManyUsers>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_TooManyUsers", 
+          "arguments": [], 
+          "key": "Standard_TooManyUsers::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_TooManyUsers", 
+          "arguments": [], 
+          "key": "Standard_TooManyUsers::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_TooManyUsers", 
+          "arguments": [], 
+          "key": "Standard_TooManyUsers::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_LicenseError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_TooManyUsers.hxx", 
+        35
+      ], 
+      "key": "Standard_TooManyUsers"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_Overflow", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_Overflow", 
+          "parent": "Standard_Overflow", 
+          "arguments": [], 
+          "key": "Standard_Overflow::Standard_Overflow()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_Overflow", 
+          "parent": "Standard_Overflow", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_Overflow::Standard_Overflow(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_Overflow", 
+          "parent": "Standard_Overflow", 
+          "arguments": [
+            {
+              "decl": "const Standard_Overflow &", 
+              "type": "Standard_Overflow", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_Overflow::Standard_Overflow(Standard_Overflow)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_Overflow", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_Overflow::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_Overflow", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_Overflow::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_Overflow", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_Overflow::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_Overflow>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_Overflow", 
+          "arguments": [], 
+          "key": "Standard_Overflow::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_Overflow", 
+          "arguments": [], 
+          "key": "Standard_Overflow::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_Overflow", 
+          "arguments": [], 
+          "key": "Standard_Overflow::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_NumericError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_Overflow.hxx", 
+        35
+      ], 
+      "key": "Standard_Overflow"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_NullObject", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_NullObject", 
+          "parent": "Standard_NullObject", 
+          "arguments": [], 
+          "key": "Standard_NullObject::Standard_NullObject()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_NullObject", 
+          "parent": "Standard_NullObject", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_NullObject::Standard_NullObject(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_NullObject", 
+          "parent": "Standard_NullObject", 
+          "arguments": [
+            {
+              "decl": "const Standard_NullObject &", 
+              "type": "Standard_NullObject", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_NullObject::Standard_NullObject(Standard_NullObject)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_NullObject", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_NullObject::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_NullObject", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_NullObject::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_NullObject", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_NullObject::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_NullObject>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_NullObject", 
+          "arguments": [], 
+          "key": "Standard_NullObject::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_NullObject", 
+          "arguments": [], 
+          "key": "Standard_NullObject::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_NullObject", 
+          "arguments": [], 
+          "key": "Standard_NullObject::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_DomainError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_NullObject.hxx", 
+        35
+      ], 
+      "key": "Standard_NullObject"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_MultiplyDefined", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_MultiplyDefined", 
+          "parent": "Standard_MultiplyDefined", 
+          "arguments": [], 
+          "key": "Standard_MultiplyDefined::Standard_MultiplyDefined()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_MultiplyDefined", 
+          "parent": "Standard_MultiplyDefined", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_MultiplyDefined::Standard_MultiplyDefined(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_MultiplyDefined", 
+          "parent": "Standard_MultiplyDefined", 
+          "arguments": [
+            {
+              "decl": "const Standard_MultiplyDefined &", 
+              "type": "Standard_MultiplyDefined", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_MultiplyDefined::Standard_MultiplyDefined(Standard_MultiplyDefined)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_MultiplyDefined", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_MultiplyDefined::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_MultiplyDefined", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_MultiplyDefined::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_MultiplyDefined", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_MultiplyDefined::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_MultiplyDefined>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_MultiplyDefined", 
+          "arguments": [], 
+          "key": "Standard_MultiplyDefined::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_MultiplyDefined", 
+          "arguments": [], 
+          "key": "Standard_MultiplyDefined::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_MultiplyDefined", 
+          "arguments": [], 
+          "key": "Standard_MultiplyDefined::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_DomainError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_MultiplyDefined.hxx", 
+        35
+      ], 
+      "key": "Standard_MultiplyDefined"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_OutOfMemory", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_OutOfMemory", 
+          "parent": "Standard_OutOfMemory", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "0"
+            }
+          ], 
+          "key": "Standard_OutOfMemory::Standard_OutOfMemory(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_OutOfMemory", 
+          "parent": "Standard_OutOfMemory", 
+          "arguments": [
+            {
+              "decl": "const Standard_OutOfMemory &", 
+              "type": "Standard_OutOfMemory", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_OutOfMemory::Standard_OutOfMemory(Standard_OutOfMemory)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetMessageString", 
+          "parent": "Standard_OutOfMemory", 
+          "arguments": [], 
+          "key": "Standard_OutOfMemory::GetMessageString()", 
+          "returnType": "Standard_CString", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetMessageString", 
+          "parent": "Standard_OutOfMemory", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "aMessage"
+            }
+          ], 
+          "key": "Standard_OutOfMemory::SetMessageString(Standard_CString)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_OutOfMemory", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_OutOfMemory::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_OutOfMemory", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_OutOfMemory::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_OutOfMemory", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_OutOfMemory::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_OutOfMemory>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_OutOfMemory", 
+          "arguments": [], 
+          "key": "Standard_OutOfMemory::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_OutOfMemory", 
+          "arguments": [], 
+          "key": "Standard_OutOfMemory::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_OutOfMemory", 
+          "arguments": [], 
+          "key": "Standard_OutOfMemory::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_ProgramError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_OutOfMemory.hxx", 
+        49
+      ], 
+      "key": "Standard_OutOfMemory"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_NullValue", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_NullValue", 
+          "parent": "Standard_NullValue", 
+          "arguments": [], 
+          "key": "Standard_NullValue::Standard_NullValue()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_NullValue", 
+          "parent": "Standard_NullValue", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_NullValue::Standard_NullValue(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_NullValue", 
+          "parent": "Standard_NullValue", 
+          "arguments": [
+            {
+              "decl": "const Standard_NullValue &", 
+              "type": "Standard_NullValue", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_NullValue::Standard_NullValue(Standard_NullValue)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_NullValue", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_NullValue::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_NullValue", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_NullValue::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_NullValue", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_NullValue::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_NullValue>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_NullValue", 
+          "arguments": [], 
+          "key": "Standard_NullValue::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_NullValue", 
+          "arguments": [], 
+          "key": "Standard_NullValue::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_NullValue", 
+          "arguments": [], 
+          "key": "Standard_NullValue::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_RangeError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_NullValue.hxx", 
+        35
+      ], 
+      "key": "Standard_NullValue"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Standard_NotImplemented", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Standard_NotImplemented", 
+          "parent": "Standard_NotImplemented", 
+          "arguments": [], 
+          "key": "Standard_NotImplemented::Standard_NotImplemented()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_NotImplemented", 
+          "parent": "Standard_NotImplemented", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_NotImplemented::Standard_NotImplemented(Standard_CString)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Standard_NotImplemented", 
+          "parent": "Standard_NotImplemented", 
+          "arguments": [
+            {
+              "decl": "const Standard_NotImplemented &", 
+              "type": "Standard_NotImplemented", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Standard_NotImplemented::Standard_NotImplemented(Standard_NotImplemented)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_NotImplemented", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_NotImplemented::Raise(Standard_CString)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Raise", 
+          "parent": "Standard_NotImplemented", 
+          "arguments": [
+            {
+              "decl": "Standard_SStream &", 
+              "type": "Standard_SStream", 
+              "name": "theMessage"
+            }
+          ], 
+          "key": "Standard_NotImplemented::Raise(Standard_SStream)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewInstance", 
+          "parent": "Standard_NotImplemented", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Standard_NotImplemented::NewInstance(Standard_CString)", 
+          "returnType": "opencascade::handle<Standard_NotImplemented>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Standard_NotImplemented", 
+          "arguments": [], 
+          "key": "Standard_NotImplemented::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Standard_NotImplemented", 
+          "arguments": [], 
+          "key": "Standard_NotImplemented::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Standard_NotImplemented", 
+          "arguments": [], 
+          "key": "Standard_NotImplemented::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_ProgramError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Standard_NotImplemented.hxx", 
+        35
+      ], 
+      "key": "Standard_NotImplemented"
+    }, 
+    {
+      "type": "int", 
+      "declType": "typedef", 
+      "name": "Standard_Integer", 
+      "key": "Standard_Integer"
+    }, 
+    {
+      "type": "double", 
+      "declType": "typedef", 
+      "name": "Standard_Real", 
+      "key": "Standard_Real"
+    }, 
+    {
+      "type": "bool", 
+      "declType": "typedef", 
+      "name": "Standard_Boolean", 
+      "key": "Standard_Boolean"
+    }, 
+    {
+      "type": "float", 
+      "declType": "typedef", 
+      "name": "Standard_ShortReal", 
+      "key": "Standard_ShortReal"
+    }, 
+    {
+      "type": "char", 
+      "declType": "typedef", 
+      "name": "Standard_Character", 
+      "key": "Standard_Character"
+    }, 
+    {
+      "type": "unsigned char", 
+      "declType": "typedef", 
+      "name": "Standard_Byte", 
+      "key": "Standard_Byte"
+    }, 
+    {
+      "type": "void *", 
+      "declType": "typedef", 
+      "name": "Standard_Address", 
+      "key": "Standard_Address"
+    }, 
+    {
+      "type": "time_t", 
+      "declType": "typedef", 
+      "name": "Standard_Time", 
+      "key": "Standard_Time"
+    }, 
+    {
+      "type": "char", 
+      "declType": "typedef", 
+      "name": "Standard_Utf8Char", 
+      "key": "Standard_Utf8Char"
+    }, 
+    {
+      "type": "unsigned char", 
+      "declType": "typedef", 
+      "name": "Standard_Utf8UChar", 
+      "key": "Standard_Utf8UChar"
+    }, 
+    {
+      "type": "?unknown?", 
+      "declType": "typedef", 
+      "name": "Standard_ExtCharacter", 
+      "key": "Standard_ExtCharacter"
+    }, 
+    {
+      "type": "?unknown?", 
+      "declType": "typedef", 
+      "name": "Standard_Utf16Char", 
+      "key": "Standard_Utf16Char"
+    }, 
+    {
+      "type": "?unknown?", 
+      "declType": "typedef", 
+      "name": "Standard_Utf32Char", 
+      "key": "Standard_Utf32Char"
+    }, 
+    {
+      "type": "wchar_t", 
+      "declType": "typedef", 
+      "name": "Standard_WideChar", 
+      "key": "Standard_WideChar"
+    }, 
+    {
+      "type": "char const *", 
+      "declType": "typedef", 
+      "name": "Standard_CString", 
+      "key": "Standard_CString"
+    }, 
+    {
+      "type": "?unknown? const *", 
+      "declType": "typedef", 
+      "name": "Standard_ExtString", 
+      "key": "Standard_ExtString"
+    }, 
+    {
+      "type": "std::ostream", 
+      "declType": "typedef", 
+      "name": "Standard_OStream", 
+      "key": "Standard_OStream"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_Transient>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_Transient", 
+      "key": "Handle_Standard_Transient"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_Type>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_Type", 
+      "key": "Handle_Standard_Type"
+    }, 
+    {
+      "type": "std::stringstream", 
+      "declType": "typedef", 
+      "name": "Standard_SStream", 
+      "key": "Standard_SStream"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_Failure>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_Failure", 
+      "key": "Handle_Standard_Failure"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_DomainError>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_DomainError", 
+      "key": "Handle_Standard_DomainError"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_DimensionError>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_DimensionError", 
+      "key": "Handle_Standard_DimensionError"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_DimensionMismatch>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_DimensionMismatch", 
+      "key": "Handle_Standard_DimensionMismatch"
+    }, 
+    {
+      "type": "Standard_ErrorHandler *", 
+      "declType": "typedef", 
+      "name": "Standard_PErrorHandler", 
+      "key": "Standard_PErrorHandler"
+    }, 
+    {
+      "type": "jmp_buf", 
+      "declType": "typedef", 
+      "name": "Standard_JmpBuf", 
+      "key": "Standard_JmpBuf"
+    }, 
+    {
+      "type": "pthread_t", 
+      "declType": "typedef", 
+      "name": "Standard_ThreadId", 
+      "key": "Standard_ThreadId"
+    }, 
+    {
+      "type": "Standard_ErrorHandler::Callback", 
+      "declType": "typedef", 
+      "name": "Standard_ErrorHandlerCallback", 
+      "key": "Standard_ErrorHandlerCallback"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_ProgramError>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_ProgramError", 
+      "key": "Handle_Standard_ProgramError"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_TypeMismatch>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_TypeMismatch", 
+      "key": "Handle_Standard_TypeMismatch"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_RangeError>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_RangeError", 
+      "key": "Handle_Standard_RangeError"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_NegativeValue>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_NegativeValue", 
+      "key": "Handle_Standard_NegativeValue"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_NoMoreObject>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_NoMoreObject", 
+      "key": "Handle_Standard_NoMoreObject"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_LicenseError>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_LicenseError", 
+      "key": "Handle_Standard_LicenseError"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_AbortiveTransaction>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_AbortiveTransaction", 
+      "key": "Handle_Standard_AbortiveTransaction"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_NumericError>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_NumericError", 
+      "key": "Handle_Standard_NumericError"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_DivideByZero>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_DivideByZero", 
+      "key": "Handle_Standard_DivideByZero"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_ImmutableObject>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_ImmutableObject", 
+      "key": "Handle_Standard_ImmutableObject"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_Underflow>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_Underflow", 
+      "key": "Handle_Standard_Underflow"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_LicenseNotFound>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_LicenseNotFound", 
+      "key": "Handle_Standard_LicenseNotFound"
+    }, 
+    {
+      "type": "Standard_Character *", 
+      "declType": "typedef", 
+      "name": "Standard_PCharacter", 
+      "key": "Standard_PCharacter"
+    }, 
+    {
+      "type": "std::istream", 
+      "declType": "typedef", 
+      "name": "Standard_IStream", 
+      "key": "Standard_IStream"
+    }, 
+    {
+      "type": "GUID", 
+      "declType": "typedef", 
+      "name": "Standard_UUID", 
+      "key": "Standard_UUID"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_OutOfRange>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_OutOfRange", 
+      "key": "Handle_Standard_OutOfRange"
+    }, 
+    {
+      "type": "Standard_Byte *", 
+      "declType": "typedef", 
+      "name": "Standard_PByte", 
+      "key": "Standard_PByte"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_ConstructionError>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_ConstructionError", 
+      "key": "Handle_Standard_ConstructionError"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_TooManyUsers>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_TooManyUsers", 
+      "key": "Handle_Standard_TooManyUsers"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_Overflow>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_Overflow", 
+      "key": "Handle_Standard_Overflow"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_NullObject>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_NullObject", 
+      "key": "Handle_Standard_NullObject"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_MultiplyDefined>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_MultiplyDefined", 
+      "key": "Handle_Standard_MultiplyDefined"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_OutOfMemory>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_OutOfMemory", 
+      "key": "Handle_Standard_OutOfMemory"
+    }, 
+    {
+      "type": "Standard_ExtCharacter *", 
+      "declType": "typedef", 
+      "name": "Standard_PExtCharacter", 
+      "key": "Standard_PExtCharacter"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_NullValue>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_NullValue", 
+      "key": "Handle_Standard_NullValue"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_NoSuchObject>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_NoSuchObject", 
+      "key": "Handle_Standard_NoSuchObject"
+    }, 
+    {
+      "type": "opencascade::handle<Standard_NotImplemented>", 
+      "declType": "typedef", 
+      "name": "Handle_Standard_NotImplemented", 
+      "key": "Handle_Standard_NotImplemented"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "Standard_HandlerVoid", 
+          0
+        ], 
+        [
+          "Standard_HandlerJumped", 
+          1
+        ], 
+        [
+          "Standard_HandlerProcessed", 
+          2
+        ]
+      ], 
+      "name": "Standard_HandlerStatus", 
+      "key": "Standard_HandlerStatus"
+    }
+  ], 
+  "name": "Standard"
+}

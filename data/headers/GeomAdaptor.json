@@ -1,0 +1,3541 @@
+{
+  "headers": [
+    "GeomAdaptor_HCurve.hxx", 
+    "GeomAdaptor_Surface.hxx", 
+    "GeomAdaptor_GHCurve.hxx", 
+    "GeomAdaptor_HSurfaceOfRevolution.hxx", 
+    "GeomAdaptor_SurfaceOfLinearExtrusion.hxx", 
+    "GeomAdaptor_HSurfaceOfLinearExtrusion.hxx", 
+    "GeomAdaptor_SurfaceOfRevolution.hxx", 
+    "GeomAdaptor_HSurface.hxx", 
+    "GeomAdaptor_Curve.hxx", 
+    "GeomAdaptor_GHSurface.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "GeomAdaptor_Surface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_Surface", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::GeomAdaptor_Surface()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_Surface", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::GeomAdaptor_Surface(opencascade::handle<Geom_Surface>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_Surface", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "UFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "ULast"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "VFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "VLast"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "TolU", 
+              "default": "0."
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "TolV", 
+              "default": "0."
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::GeomAdaptor_Surface(opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_Surface", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_Surface &", 
+              "type": "GeomAdaptor_Surface", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::GeomAdaptor_Surface(GeomAdaptor_Surface)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::Load(opencascade::handle<Geom_Surface>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "UFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "ULast"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "VFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "VLast"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "TolU", 
+              "default": "0."
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "TolV", 
+              "default": "0."
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::Load(opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Surface", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::Surface()", 
+          "returnType": "opencascade::handle<Geom_Surface> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstUParameter", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::FirstUParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastUParameter", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::LastUParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstVParameter", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::FirstVParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastVParameter", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::LastVParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UContinuity", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::UContinuity()", 
+          "returnType": "GeomAbs_Shape", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VContinuity", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::VContinuity()", 
+          "returnType": "GeomAbs_Shape", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbUIntervals", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::NbUIntervals(GeomAbs_Shape)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbVIntervals", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::NbVIntervals(GeomAbs_Shape)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UIntervals", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::UIntervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VIntervals", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::VIntervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UTrim", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::UTrim(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "opencascade::handle<Adaptor3d_HSurface>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VTrim", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::VTrim(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "opencascade::handle<Adaptor3d_HSurface>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsUClosed", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::IsUClosed()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVClosed", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::IsVClosed()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsUPeriodic", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::IsUPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UPeriod", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::UPeriod()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVPeriodic", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::IsVPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VPeriod", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::VPeriod()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::Value(Standard_Real, Standard_Real)", 
+          "returnType": "gp_Pnt", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D0", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::D0(Standard_Real, Standard_Real, gp_Pnt)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D1U"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D1V"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::D1(Standard_Real, Standard_Real, gp_Pnt, gp_Vec, gp_Vec)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D1U"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D1V"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D2U"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D2V"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D2UV"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::D2(Standard_Real, Standard_Real, gp_Pnt, gp_Vec, gp_Vec, gp_Vec, gp_Vec, gp_Vec)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D3", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D1U"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D1V"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D2U"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D2V"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D2UV"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D3U"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D3V"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D3UUV"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D3UVV"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::D3(Standard_Real, Standard_Real, gp_Pnt, gp_Vec, gp_Vec, gp_Vec, gp_Vec, gp_Vec, gp_Vec, gp_Vec, gp_Vec, gp_Vec)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "DN", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Nu"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Nv"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::DN(Standard_Real, Standard_Real, Standard_Integer, Standard_Integer)", 
+          "returnType": "gp_Vec", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UResolution", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "R3d"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::UResolution(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VResolution", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "R3d"
+            }
+          ], 
+          "key": "GeomAdaptor_Surface::VResolution(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetType", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::GetType()", 
+          "returnType": "GeomAbs_SurfaceType", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Plane", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::Plane()", 
+          "returnType": "gp_Pln", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Cylinder", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::Cylinder()", 
+          "returnType": "gp_Cylinder", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Cone", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::Cone()", 
+          "returnType": "gp_Cone", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Sphere", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::Sphere()", 
+          "returnType": "gp_Sphere", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Torus", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::Torus()", 
+          "returnType": "gp_Torus", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UDegree", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::UDegree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbUPoles", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::NbUPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VDegree", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::VDegree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbVPoles", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::NbVPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbUKnots", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::NbUKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbVKnots", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::NbVKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsURational", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::IsURational()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVRational", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::IsVRational()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Bezier", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::Bezier()", 
+          "returnType": "opencascade::handle<Geom_BezierSurface>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "BSpline", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::BSpline()", 
+          "returnType": "opencascade::handle<Geom_BSplineSurface>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "AxeOfRevolution", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::AxeOfRevolution()", 
+          "returnType": "gp_Ax1", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Direction", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::Direction()", 
+          "returnType": "gp_Dir", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "BasisCurve", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::BasisCurve()", 
+          "returnType": "opencascade::handle<Adaptor3d_HCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "BasisSurface", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::BasisSurface()", 
+          "returnType": "opencascade::handle<Adaptor3d_HSurface>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "OffsetValue", 
+          "parent": "GeomAdaptor_Surface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Surface::OffsetValue()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor3d_Surface"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAdaptor_Surface.hxx", 
+        61
+      ], 
+      "key": "GeomAdaptor_Surface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAdaptor_Curve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_Curve", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::GeomAdaptor_Curve()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_Curve", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomAdaptor_Curve::GeomAdaptor_Curve(opencascade::handle<Geom_Curve>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_Curve", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "UFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "ULast"
+            }
+          ], 
+          "key": "GeomAdaptor_Curve::GeomAdaptor_Curve(opencascade::handle<Geom_Curve>, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_Curve", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_Curve &", 
+              "type": "GeomAdaptor_Curve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomAdaptor_Curve::GeomAdaptor_Curve(GeomAdaptor_Curve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomAdaptor_Curve::Load(opencascade::handle<Geom_Curve>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "UFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "ULast"
+            }
+          ], 
+          "key": "GeomAdaptor_Curve::Load(opencascade::handle<Geom_Curve>, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::Curve()", 
+          "returnType": "opencascade::handle<Geom_Curve> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstParameter", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::FirstParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastParameter", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::LastParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Continuity", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::Continuity()", 
+          "returnType": "GeomAbs_Shape", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbIntervals", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_Curve::NbIntervals(GeomAbs_Shape)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Intervals", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_Curve::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Trim", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "GeomAdaptor_Curve::Trim(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "opencascade::handle<Adaptor3d_HCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsClosed", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::IsClosed()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsPeriodic", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::IsPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Period", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::Period()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }
+          ], 
+          "key": "GeomAdaptor_Curve::Value(Standard_Real)", 
+          "returnType": "gp_Pnt", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D0", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }
+          ], 
+          "key": "GeomAdaptor_Curve::D0(Standard_Real, gp_Pnt)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V"
+            }
+          ], 
+          "key": "GeomAdaptor_Curve::D1(Standard_Real, gp_Pnt, gp_Vec)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V2"
+            }
+          ], 
+          "key": "GeomAdaptor_Curve::D2(Standard_Real, gp_Pnt, gp_Vec, gp_Vec)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D3", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V2"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V3"
+            }
+          ], 
+          "key": "GeomAdaptor_Curve::D3(Standard_Real, gp_Pnt, gp_Vec, gp_Vec, gp_Vec)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "DN", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }
+          ], 
+          "key": "GeomAdaptor_Curve::DN(Standard_Real, Standard_Integer)", 
+          "returnType": "gp_Vec", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Resolution", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "R3d"
+            }
+          ], 
+          "key": "GeomAdaptor_Curve::Resolution(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetType", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::GetType()", 
+          "returnType": "GeomAbs_CurveType", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Line", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::Line()", 
+          "returnType": "gp_Lin", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Circle", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::Circle()", 
+          "returnType": "gp_Circ", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Ellipse", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::Ellipse()", 
+          "returnType": "gp_Elips", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Hyperbola", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::Hyperbola()", 
+          "returnType": "gp_Hypr", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parabola", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::Parabola()", 
+          "returnType": "gp_Parab", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Degree", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::Degree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsRational", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::IsRational()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPoles", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::NbPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbKnots", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::NbKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Bezier", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::Bezier()", 
+          "returnType": "opencascade::handle<Geom_BezierCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "BSpline", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::BSpline()", 
+          "returnType": "opencascade::handle<Geom_BSplineCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "OffsetCurve", 
+          "parent": "GeomAdaptor_Curve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_Curve::OffsetCurve()", 
+          "returnType": "opencascade::handle<Geom_OffsetCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor3d_Curve"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAdaptor_Curve.hxx", 
+        60
+      ], 
+      "key": "GeomAdaptor_Curve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAdaptor_GHCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_GHCurve", 
+          "parent": "GeomAdaptor_GHCurve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_GHCurve::GeomAdaptor_GHCurve()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_GHCurve", 
+          "parent": "GeomAdaptor_GHCurve", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_Curve &", 
+              "type": "GeomAdaptor_Curve", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomAdaptor_GHCurve::GeomAdaptor_GHCurve(GeomAdaptor_Curve)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_GHCurve", 
+          "parent": "GeomAdaptor_GHCurve", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_GHCurve &", 
+              "type": "GeomAdaptor_GHCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomAdaptor_GHCurve::GeomAdaptor_GHCurve(GeomAdaptor_GHCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "GeomAdaptor_GHCurve", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_Curve &", 
+              "type": "GeomAdaptor_Curve", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomAdaptor_GHCurve::Set(GeomAdaptor_Curve)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve", 
+          "parent": "GeomAdaptor_GHCurve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_GHCurve::Curve()", 
+          "returnType": "Adaptor3d_Curve const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetCurve", 
+          "parent": "GeomAdaptor_GHCurve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_GHCurve::GetCurve()", 
+          "returnType": "Adaptor3d_Curve &", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeCurve", 
+          "parent": "GeomAdaptor_GHCurve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_GHCurve::ChangeCurve()", 
+          "returnType": "GeomAdaptor_Curve &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "GeomAdaptor_GHCurve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_GHCurve::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "GeomAdaptor_GHCurve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_GHCurve::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "GeomAdaptor_GHCurve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_GHCurve::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor3d_HCurve"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAdaptor_GHCurve.hxx", 
+        36
+      ], 
+      "key": "GeomAdaptor_GHCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAdaptor_HCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_HCurve", 
+          "parent": "GeomAdaptor_HCurve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HCurve::GeomAdaptor_HCurve()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_HCurve", 
+          "parent": "GeomAdaptor_HCurve", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_Curve &", 
+              "type": "GeomAdaptor_Curve", 
+              "name": "AS"
+            }
+          ], 
+          "key": "GeomAdaptor_HCurve::GeomAdaptor_HCurve(GeomAdaptor_Curve)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_HCurve", 
+          "parent": "GeomAdaptor_HCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_HCurve::GeomAdaptor_HCurve(opencascade::handle<Geom_Curve>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_HCurve", 
+          "parent": "GeomAdaptor_HCurve", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "UFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "ULast"
+            }
+          ], 
+          "key": "GeomAdaptor_HCurve::GeomAdaptor_HCurve(opencascade::handle<Geom_Curve>, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_HCurve", 
+          "parent": "GeomAdaptor_HCurve", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_HCurve &", 
+              "type": "GeomAdaptor_HCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomAdaptor_HCurve::GeomAdaptor_HCurve(GeomAdaptor_HCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "GeomAdaptor_HCurve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HCurve::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "GeomAdaptor_HCurve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HCurve::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "GeomAdaptor_HCurve", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HCurve::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GeomAdaptor_GHCurve"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAdaptor_HCurve.hxx", 
+        36
+      ], 
+      "key": "GeomAdaptor_HCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAdaptor_SurfaceOfRevolution", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_SurfaceOfRevolution", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::GeomAdaptor_SurfaceOfRevolution()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_SurfaceOfRevolution", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::GeomAdaptor_SurfaceOfRevolution(opencascade::handle<Adaptor3d_HCurve>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_SurfaceOfRevolution", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const gp_Ax1 &", 
+              "type": "gp_Ax1", 
+              "name": "V"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::GeomAdaptor_SurfaceOfRevolution(opencascade::handle<Adaptor3d_HCurve>, gp_Ax1)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_SurfaceOfRevolution", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_SurfaceOfRevolution &", 
+              "type": "GeomAdaptor_SurfaceOfRevolution", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::GeomAdaptor_SurfaceOfRevolution(GeomAdaptor_SurfaceOfRevolution)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::Load(opencascade::handle<Adaptor3d_HCurve>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax1 &", 
+              "type": "gp_Ax1", 
+              "name": "V"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::Load(gp_Ax1)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AxeOfRevolution", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::AxeOfRevolution()", 
+          "returnType": "gp_Ax1", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstUParameter", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::FirstUParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastUParameter", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::LastUParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstVParameter", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::FirstVParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastVParameter", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::LastVParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UContinuity", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::UContinuity()", 
+          "returnType": "GeomAbs_Shape", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VContinuity", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::VContinuity()", 
+          "returnType": "GeomAbs_Shape", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbUIntervals", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::NbUIntervals(GeomAbs_Shape)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbVIntervals", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::NbVIntervals(GeomAbs_Shape)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UIntervals", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::UIntervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VIntervals", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::VIntervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UTrim", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::UTrim(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "opencascade::handle<Adaptor3d_HSurface>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VTrim", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::VTrim(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "opencascade::handle<Adaptor3d_HSurface>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsUClosed", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::IsUClosed()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVClosed", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::IsVClosed()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsUPeriodic", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::IsUPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UPeriod", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::UPeriod()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVPeriodic", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::IsVPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VPeriod", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::VPeriod()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UResolution", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "R3d"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::UResolution(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VResolution", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "R3d"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::VResolution(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetType", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::GetType()", 
+          "returnType": "GeomAbs_SurfaceType", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Plane", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::Plane()", 
+          "returnType": "gp_Pln", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Cylinder", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::Cylinder()", 
+          "returnType": "gp_Cylinder", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Cone", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::Cone()", 
+          "returnType": "gp_Cone", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Sphere", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::Sphere()", 
+          "returnType": "gp_Sphere", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Torus", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::Torus()", 
+          "returnType": "gp_Torus", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VDegree", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::VDegree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbVPoles", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::NbVPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbVKnots", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::NbVKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsURational", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::IsURational()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVRational", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::IsVRational()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Bezier", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::Bezier()", 
+          "returnType": "opencascade::handle<Geom_BezierSurface>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "BSpline", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::BSpline()", 
+          "returnType": "opencascade::handle<Geom_BSplineSurface>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Axis", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::Axis()", 
+          "returnType": "gp_Ax3 const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "BasisCurve", 
+          "parent": "GeomAdaptor_SurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfRevolution::BasisCurve()", 
+          "returnType": "opencascade::handle<Adaptor3d_HCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GeomAdaptor_Surface"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAdaptor_SurfaceOfRevolution.hxx", 
+        63
+      ], 
+      "key": "GeomAdaptor_SurfaceOfRevolution"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAdaptor_HSurfaceOfRevolution", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_HSurfaceOfRevolution", 
+          "parent": "GeomAdaptor_HSurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HSurfaceOfRevolution::GeomAdaptor_HSurfaceOfRevolution()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_HSurfaceOfRevolution", 
+          "parent": "GeomAdaptor_HSurfaceOfRevolution", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_SurfaceOfRevolution &", 
+              "type": "GeomAdaptor_SurfaceOfRevolution", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_HSurfaceOfRevolution::GeomAdaptor_HSurfaceOfRevolution(GeomAdaptor_SurfaceOfRevolution)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_HSurfaceOfRevolution", 
+          "parent": "GeomAdaptor_HSurfaceOfRevolution", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_HSurfaceOfRevolution &", 
+              "type": "GeomAdaptor_HSurfaceOfRevolution", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomAdaptor_HSurfaceOfRevolution::GeomAdaptor_HSurfaceOfRevolution(GeomAdaptor_HSurfaceOfRevolution)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "GeomAdaptor_HSurfaceOfRevolution", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_SurfaceOfRevolution &", 
+              "type": "GeomAdaptor_SurfaceOfRevolution", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_HSurfaceOfRevolution::Set(GeomAdaptor_SurfaceOfRevolution)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Surface", 
+          "parent": "GeomAdaptor_HSurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HSurfaceOfRevolution::Surface()", 
+          "returnType": "Adaptor3d_Surface const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeSurface", 
+          "parent": "GeomAdaptor_HSurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HSurfaceOfRevolution::ChangeSurface()", 
+          "returnType": "GeomAdaptor_SurfaceOfRevolution &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "GeomAdaptor_HSurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HSurfaceOfRevolution::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "GeomAdaptor_HSurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HSurfaceOfRevolution::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "GeomAdaptor_HSurfaceOfRevolution", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HSurfaceOfRevolution::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor3d_HSurface"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAdaptor_HSurfaceOfRevolution.hxx", 
+        36
+      ], 
+      "key": "GeomAdaptor_HSurfaceOfRevolution"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::GeomAdaptor_SurfaceOfLinearExtrusion()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::GeomAdaptor_SurfaceOfLinearExtrusion(opencascade::handle<Adaptor3d_HCurve>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "V"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::GeomAdaptor_SurfaceOfLinearExtrusion(opencascade::handle<Adaptor3d_HCurve>, gp_Dir)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_SurfaceOfLinearExtrusion &", 
+              "type": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::GeomAdaptor_SurfaceOfLinearExtrusion(GeomAdaptor_SurfaceOfLinearExtrusion)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::Load(opencascade::handle<Adaptor3d_HCurve>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [
+            {
+              "decl": "const gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "V"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::Load(gp_Dir)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstUParameter", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::FirstUParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastUParameter", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::LastUParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstVParameter", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::FirstVParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastVParameter", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::LastVParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UContinuity", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::UContinuity()", 
+          "returnType": "GeomAbs_Shape", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VContinuity", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::VContinuity()", 
+          "returnType": "GeomAbs_Shape", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbUIntervals", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::NbUIntervals(GeomAbs_Shape)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbVIntervals", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::NbVIntervals(GeomAbs_Shape)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UIntervals", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::UIntervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VIntervals", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::VIntervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UTrim", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::UTrim(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "opencascade::handle<Adaptor3d_HSurface>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VTrim", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::VTrim(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "opencascade::handle<Adaptor3d_HSurface>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsUClosed", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::IsUClosed()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVClosed", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::IsVClosed()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsUPeriodic", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::IsUPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UPeriod", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::UPeriod()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVPeriodic", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::IsVPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VPeriod", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::VPeriod()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UResolution", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "R3d"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::UResolution(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "VResolution", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "R3d"
+            }
+          ], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::VResolution(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetType", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::GetType()", 
+          "returnType": "GeomAbs_SurfaceType", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Plane", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::Plane()", 
+          "returnType": "gp_Pln", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Cylinder", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::Cylinder()", 
+          "returnType": "gp_Cylinder", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Cone", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::Cone()", 
+          "returnType": "gp_Cone", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Sphere", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::Sphere()", 
+          "returnType": "gp_Sphere", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Torus", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::Torus()", 
+          "returnType": "gp_Torus", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "UDegree", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::UDegree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbUPoles", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::NbUPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsURational", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::IsURational()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVRational", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::IsVRational()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Bezier", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::Bezier()", 
+          "returnType": "opencascade::handle<Geom_BezierSurface>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "BSpline", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::BSpline()", 
+          "returnType": "opencascade::handle<Geom_BSplineSurface>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "AxeOfRevolution", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::AxeOfRevolution()", 
+          "returnType": "gp_Ax1", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Direction", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::Direction()", 
+          "returnType": "gp_Dir", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "BasisCurve", 
+          "parent": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_SurfaceOfLinearExtrusion::BasisCurve()", 
+          "returnType": "opencascade::handle<Adaptor3d_HCurve>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GeomAdaptor_Surface"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAdaptor_SurfaceOfLinearExtrusion.hxx", 
+        52
+      ], 
+      "key": "GeomAdaptor_SurfaceOfLinearExtrusion"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAdaptor_HSurfaceOfLinearExtrusion", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_HSurfaceOfLinearExtrusion", 
+          "parent": "GeomAdaptor_HSurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HSurfaceOfLinearExtrusion::GeomAdaptor_HSurfaceOfLinearExtrusion()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_HSurfaceOfLinearExtrusion", 
+          "parent": "GeomAdaptor_HSurfaceOfLinearExtrusion", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_SurfaceOfLinearExtrusion &", 
+              "type": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_HSurfaceOfLinearExtrusion::GeomAdaptor_HSurfaceOfLinearExtrusion(GeomAdaptor_SurfaceOfLinearExtrusion)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_HSurfaceOfLinearExtrusion", 
+          "parent": "GeomAdaptor_HSurfaceOfLinearExtrusion", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_HSurfaceOfLinearExtrusion &", 
+              "type": "GeomAdaptor_HSurfaceOfLinearExtrusion", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomAdaptor_HSurfaceOfLinearExtrusion::GeomAdaptor_HSurfaceOfLinearExtrusion(GeomAdaptor_HSurfaceOfLinearExtrusion)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "GeomAdaptor_HSurfaceOfLinearExtrusion", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_SurfaceOfLinearExtrusion &", 
+              "type": "GeomAdaptor_SurfaceOfLinearExtrusion", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_HSurfaceOfLinearExtrusion::Set(GeomAdaptor_SurfaceOfLinearExtrusion)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Surface", 
+          "parent": "GeomAdaptor_HSurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HSurfaceOfLinearExtrusion::Surface()", 
+          "returnType": "Adaptor3d_Surface const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeSurface", 
+          "parent": "GeomAdaptor_HSurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HSurfaceOfLinearExtrusion::ChangeSurface()", 
+          "returnType": "GeomAdaptor_SurfaceOfLinearExtrusion &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "GeomAdaptor_HSurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HSurfaceOfLinearExtrusion::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "GeomAdaptor_HSurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HSurfaceOfLinearExtrusion::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "GeomAdaptor_HSurfaceOfLinearExtrusion", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HSurfaceOfLinearExtrusion::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor3d_HSurface"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAdaptor_HSurfaceOfLinearExtrusion.hxx", 
+        36
+      ], 
+      "key": "GeomAdaptor_HSurfaceOfLinearExtrusion"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAdaptor_GHSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_GHSurface", 
+          "parent": "GeomAdaptor_GHSurface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_GHSurface::GeomAdaptor_GHSurface()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_GHSurface", 
+          "parent": "GeomAdaptor_GHSurface", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_Surface &", 
+              "type": "GeomAdaptor_Surface", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_GHSurface::GeomAdaptor_GHSurface(GeomAdaptor_Surface)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_GHSurface", 
+          "parent": "GeomAdaptor_GHSurface", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_GHSurface &", 
+              "type": "GeomAdaptor_GHSurface", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomAdaptor_GHSurface::GeomAdaptor_GHSurface(GeomAdaptor_GHSurface)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "GeomAdaptor_GHSurface", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_Surface &", 
+              "type": "GeomAdaptor_Surface", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_GHSurface::Set(GeomAdaptor_Surface)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Surface", 
+          "parent": "GeomAdaptor_GHSurface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_GHSurface::Surface()", 
+          "returnType": "Adaptor3d_Surface const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeSurface", 
+          "parent": "GeomAdaptor_GHSurface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_GHSurface::ChangeSurface()", 
+          "returnType": "GeomAdaptor_Surface &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "GeomAdaptor_GHSurface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_GHSurface::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "GeomAdaptor_GHSurface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_GHSurface::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "GeomAdaptor_GHSurface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_GHSurface::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor3d_HSurface"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAdaptor_GHSurface.hxx", 
+        36
+      ], 
+      "key": "GeomAdaptor_GHSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAdaptor_HSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_HSurface", 
+          "parent": "GeomAdaptor_HSurface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HSurface::GeomAdaptor_HSurface()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_HSurface", 
+          "parent": "GeomAdaptor_HSurface", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_Surface &", 
+              "type": "GeomAdaptor_Surface", 
+              "name": "AS"
+            }
+          ], 
+          "key": "GeomAdaptor_HSurface::GeomAdaptor_HSurface(GeomAdaptor_Surface)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_HSurface", 
+          "parent": "GeomAdaptor_HSurface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomAdaptor_HSurface::GeomAdaptor_HSurface(opencascade::handle<Geom_Surface>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_HSurface", 
+          "parent": "GeomAdaptor_HSurface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "UFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "ULast"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "VFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "VLast"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "TolU", 
+              "default": "0."
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "TolV", 
+              "default": "0."
+            }
+          ], 
+          "key": "GeomAdaptor_HSurface::GeomAdaptor_HSurface(opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomAdaptor_HSurface", 
+          "parent": "GeomAdaptor_HSurface", 
+          "arguments": [
+            {
+              "decl": "const GeomAdaptor_HSurface &", 
+              "type": "GeomAdaptor_HSurface", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomAdaptor_HSurface::GeomAdaptor_HSurface(GeomAdaptor_HSurface)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "GeomAdaptor_HSurface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HSurface::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "GeomAdaptor_HSurface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HSurface::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "GeomAdaptor_HSurface", 
+          "arguments": [], 
+          "key": "GeomAdaptor_HSurface::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GeomAdaptor_GHSurface"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAdaptor_HSurface.hxx", 
+        37
+      ], 
+      "key": "GeomAdaptor_HSurface"
+    }, 
+    {
+      "type": "opencascade::handle<GeomAdaptor_GHCurve>", 
+      "declType": "typedef", 
+      "name": "Handle_GeomAdaptor_GHCurve", 
+      "key": "Handle_GeomAdaptor_GHCurve"
+    }, 
+    {
+      "type": "opencascade::handle<GeomAdaptor_HCurve>", 
+      "declType": "typedef", 
+      "name": "Handle_GeomAdaptor_HCurve", 
+      "key": "Handle_GeomAdaptor_HCurve"
+    }, 
+    {
+      "type": "opencascade::handle<GeomAdaptor_HSurfaceOfRevolution>", 
+      "declType": "typedef", 
+      "name": "Handle_GeomAdaptor_HSurfaceOfRevolution", 
+      "key": "Handle_GeomAdaptor_HSurfaceOfRevolution"
+    }, 
+    {
+      "type": "opencascade::handle<GeomAdaptor_HSurfaceOfLinearExtrusion>", 
+      "declType": "typedef", 
+      "name": "Handle_GeomAdaptor_HSurfaceOfLinearExtrusion", 
+      "key": "Handle_GeomAdaptor_HSurfaceOfLinearExtrusion"
+    }, 
+    {
+      "type": "opencascade::handle<GeomAdaptor_GHSurface>", 
+      "declType": "typedef", 
+      "name": "Handle_GeomAdaptor_GHSurface", 
+      "key": "Handle_GeomAdaptor_GHSurface"
+    }, 
+    {
+      "type": "opencascade::handle<GeomAdaptor_HSurface>", 
+      "declType": "typedef", 
+      "name": "Handle_GeomAdaptor_HSurface", 
+      "key": "Handle_GeomAdaptor_HSurface"
+    }
+  ], 
+  "name": "GeomAdaptor"
+}

@@ -1,0 +1,4049 @@
+{
+  "headers": [
+    "Bnd_B3f.hxx", 
+    "Bnd_HArray1OfBox.hxx", 
+    "Bnd_SeqOfBox.hxx", 
+    "Bnd_HArray1OfBox2d.hxx", 
+    "Bnd_Array1OfSphere.hxx", 
+    "Bnd_Range.hxx", 
+    "Bnd_B2d.hxx", 
+    "Bnd_Array1OfBox.hxx", 
+    "Bnd_Array1OfBox2d.hxx", 
+    "Bnd_B3d.hxx", 
+    "Bnd_Box.hxx", 
+    "Bnd_B2f.hxx", 
+    "Bnd_HArray1OfSphere.hxx", 
+    "Bnd_Box2d.hxx", 
+    "Bnd_Sphere.hxx", 
+    "Bnd_BoundSortBox.hxx", 
+    "Bnd_BoundSortBox2d.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Bnd_B3f", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Bnd_B3f", 
+          "parent": "Bnd_B3f", 
+          "arguments": [], 
+          "key": "Bnd_B3f::Bnd_B3f()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_B3f", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theCenter"
+            }, 
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theHSize"
+            }
+          ], 
+          "key": "Bnd_B3f::Bnd_B3f(gp_XYZ, gp_XYZ)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_B3f", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B3f &", 
+              "type": "Bnd_B3f", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Bnd_B3f::Bnd_B3f(Bnd_B3f)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVoid", 
+          "parent": "Bnd_B3f", 
+          "arguments": [], 
+          "key": "Bnd_B3f::IsVoid()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Clear", 
+          "parent": "Bnd_B3f", 
+          "arguments": [], 
+          "key": "Bnd_B3f::Clear()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "thePnt"
+            }
+          ], 
+          "key": "Bnd_B3f::Add(gp_XYZ)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "thePnt"
+            }
+          ], 
+          "key": "Bnd_B3f::Add(gp_Pnt)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B3f &", 
+              "type": "Bnd_B3f", 
+              "name": "theBox"
+            }
+          ], 
+          "key": "Bnd_B3f::Add(Bnd_B3f)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CornerMin", 
+          "parent": "Bnd_B3f", 
+          "arguments": [], 
+          "key": "Bnd_B3f::CornerMin()", 
+          "returnType": "gp_XYZ", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CornerMax", 
+          "parent": "Bnd_B3f", 
+          "arguments": [], 
+          "key": "Bnd_B3f::CornerMax()", 
+          "returnType": "gp_XYZ", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SquareExtent", 
+          "parent": "Bnd_B3f", 
+          "arguments": [], 
+          "key": "Bnd_B3f::SquareExtent()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Enlarge", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theDiff"
+            }
+          ], 
+          "key": "Bnd_B3f::Enlarge(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Limit", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B3f &", 
+              "type": "Bnd_B3f", 
+              "name": "theOtherBox"
+            }
+          ], 
+          "key": "Bnd_B3f::Limit(Bnd_B3f)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Transformed", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const gp_Trsf &", 
+              "type": "gp_Trsf", 
+              "name": "theTrsf"
+            }
+          ], 
+          "key": "Bnd_B3f::Transformed(gp_Trsf)", 
+          "returnType": "Bnd_B3f", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "thePnt"
+            }
+          ], 
+          "key": "Bnd_B3f::IsOut(gp_XYZ)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theCenter"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theRadius"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "isSphereHollow", 
+              "default": "false"
+            }
+          ], 
+          "key": "Bnd_B3f::IsOut(gp_XYZ, Standard_Real, Standard_Boolean)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B3f &", 
+              "type": "Bnd_B3f", 
+              "name": "theOtherBox"
+            }
+          ], 
+          "key": "Bnd_B3f::IsOut(Bnd_B3f)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B3f &", 
+              "type": "Bnd_B3f", 
+              "name": "theOtherBox"
+            }, 
+            {
+              "decl": "const gp_Trsf &", 
+              "type": "gp_Trsf", 
+              "name": "theTrsf"
+            }
+          ], 
+          "key": "Bnd_B3f::IsOut(Bnd_B3f, gp_Trsf)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax1 &", 
+              "type": "gp_Ax1", 
+              "name": "theLine"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "isRay", 
+              "default": "false"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theOverthickness", 
+              "default": "0."
+            }
+          ], 
+          "key": "Bnd_B3f::IsOut(gp_Ax1, Standard_Boolean, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax3 &", 
+              "type": "gp_Ax3", 
+              "name": "thePlane"
+            }
+          ], 
+          "key": "Bnd_B3f::IsOut(gp_Ax3)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsIn", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B3f &", 
+              "type": "Bnd_B3f", 
+              "name": "theBox"
+            }
+          ], 
+          "key": "Bnd_B3f::IsIn(Bnd_B3f)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsIn", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B3f &", 
+              "type": "Bnd_B3f", 
+              "name": "theBox"
+            }, 
+            {
+              "decl": "const gp_Trsf &", 
+              "type": "gp_Trsf", 
+              "name": "theTrsf"
+            }
+          ], 
+          "key": "Bnd_B3f::IsIn(Bnd_B3f, gp_Trsf)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetCenter", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theCenter"
+            }
+          ], 
+          "key": "Bnd_B3f::SetCenter(gp_XYZ)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetHSize", 
+          "parent": "Bnd_B3f", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theHSize"
+            }
+          ], 
+          "key": "Bnd_B3f::SetHSize(gp_XYZ)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Bnd_B3f.hxx", 
+        36
+      ], 
+      "key": "Bnd_B3f"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bnd_Box", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Bnd_Box", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::Bnd_Box()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_Box", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box &", 
+              "type": "Bnd_Box", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Bnd_Box::Bnd_Box(Bnd_Box)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetWhole", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::SetWhole()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetVoid", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::SetVoid()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }
+          ], 
+          "key": "Bnd_Box::Set(gp_Pnt)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "D"
+            }
+          ], 
+          "key": "Bnd_Box::Set(gp_Pnt, gp_Dir)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Update", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "aXmin"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "aYmin"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "aZmin"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "aXmax"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "aYmax"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "aZmax"
+            }
+          ], 
+          "key": "Bnd_Box::Update(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Update", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Y"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Z"
+            }
+          ], 
+          "key": "Bnd_Box::Update(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetGap", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::GetGap()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetGap", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "Bnd_Box::SetGap(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Enlarge", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "Bnd_Box::Enlarge(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Get", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theXmin"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theYmin"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theZmin"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theXmax"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theYmax"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theZmax"
+            }
+          ], 
+          "key": "Bnd_Box::Get(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CornerMin", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::CornerMin()", 
+          "returnType": "gp_Pnt", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CornerMax", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::CornerMax()", 
+          "returnType": "gp_Pnt", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "OpenXmin", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::OpenXmin()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "OpenXmax", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::OpenXmax()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "OpenYmin", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::OpenYmin()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "OpenYmax", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::OpenYmax()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "OpenZmin", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::OpenZmin()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "OpenZmax", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::OpenZmax()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOpenXmin", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::IsOpenXmin()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOpenXmax", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::IsOpenXmax()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOpenYmin", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::IsOpenYmin()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOpenYmax", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::IsOpenYmax()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOpenZmin", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::IsOpenZmin()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOpenZmax", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::IsOpenZmax()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsWhole", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::IsWhole()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVoid", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::IsVoid()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsXThin", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "tol"
+            }
+          ], 
+          "key": "Bnd_Box::IsXThin(Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsYThin", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "tol"
+            }
+          ], 
+          "key": "Bnd_Box::IsYThin(Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsZThin", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "tol"
+            }
+          ], 
+          "key": "Bnd_Box::IsZThin(Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsThin", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "tol"
+            }
+          ], 
+          "key": "Bnd_Box::IsThin(Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Transformed", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const gp_Trsf &", 
+              "type": "gp_Trsf", 
+              "name": "T"
+            }
+          ], 
+          "key": "Bnd_Box::Transformed(gp_Trsf)", 
+          "returnType": "Bnd_Box", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box &", 
+              "type": "Bnd_Box", 
+              "name": "Other"
+            }
+          ], 
+          "key": "Bnd_Box::Add(Bnd_Box)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }
+          ], 
+          "key": "Bnd_Box::Add(gp_Pnt)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "D"
+            }
+          ], 
+          "key": "Bnd_Box::Add(gp_Pnt, gp_Dir)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "D"
+            }
+          ], 
+          "key": "Bnd_Box::Add(gp_Dir)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }
+          ], 
+          "key": "Bnd_Box::IsOut(gp_Pnt)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "L"
+            }
+          ], 
+          "key": "Bnd_Box::IsOut(gp_Lin)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }
+          ], 
+          "key": "Bnd_Box::IsOut(gp_Pln)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box &", 
+              "type": "Bnd_Box", 
+              "name": "Other"
+            }
+          ], 
+          "key": "Bnd_Box::IsOut(Bnd_Box)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box &", 
+              "type": "Bnd_Box", 
+              "name": "Other"
+            }, 
+            {
+              "decl": "const gp_Trsf &", 
+              "type": "gp_Trsf", 
+              "name": "T"
+            }
+          ], 
+          "key": "Bnd_Box::IsOut(Bnd_Box, gp_Trsf)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const gp_Trsf &", 
+              "type": "gp_Trsf", 
+              "name": "T1"
+            }, 
+            {
+              "decl": "const Bnd_Box &", 
+              "type": "Bnd_Box", 
+              "name": "Other"
+            }, 
+            {
+              "decl": "const gp_Trsf &", 
+              "type": "gp_Trsf", 
+              "name": "T2"
+            }
+          ], 
+          "key": "Bnd_Box::IsOut(gp_Trsf, Bnd_Box, gp_Trsf)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P2"
+            }, 
+            {
+              "decl": "const gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "D"
+            }
+          ], 
+          "key": "Bnd_Box::IsOut(gp_Pnt, gp_Pnt, gp_Dir)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Distance", 
+          "parent": "Bnd_Box", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box &", 
+              "type": "Bnd_Box", 
+              "name": "Other"
+            }
+          ], 
+          "key": "Bnd_Box::Distance(Bnd_Box)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::Dump()", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SquareExtent", 
+          "parent": "Bnd_Box", 
+          "arguments": [], 
+          "key": "Bnd_Box::SquareExtent()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Bnd_Box.hxx", 
+        61
+      ], 
+      "key": "Bnd_Box"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bnd_HArray1OfBox", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Bnd_HArray1OfBox", 
+          "parent": "Bnd_HArray1OfBox", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theLower"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theUpper"
+            }
+          ], 
+          "key": "Bnd_HArray1OfBox::Bnd_HArray1OfBox(Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_HArray1OfBox", 
+          "parent": "Bnd_HArray1OfBox", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theLower"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theUpper"
+            }, 
+            {
+              "decl": "const NCollection_Array1<Bnd_Box>::value_type &", 
+              "type": "NCollection_Array1<Bnd_Box>::value_type", 
+              "name": "theValue"
+            }
+          ], 
+          "key": "Bnd_HArray1OfBox::Bnd_HArray1OfBox(Standard_Integer, Standard_Integer, NCollection_Array1<Bnd_Box>::value_type)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_HArray1OfBox", 
+          "parent": "Bnd_HArray1OfBox", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Array1OfBox &", 
+              "type": "Bnd_Array1OfBox", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Bnd_HArray1OfBox::Bnd_HArray1OfBox(Bnd_Array1OfBox)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_HArray1OfBox", 
+          "parent": "Bnd_HArray1OfBox", 
+          "arguments": [
+            {
+              "decl": "const Bnd_HArray1OfBox &", 
+              "type": "Bnd_HArray1OfBox", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Bnd_HArray1OfBox::Bnd_HArray1OfBox(Bnd_HArray1OfBox)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Array1", 
+          "parent": "Bnd_HArray1OfBox", 
+          "arguments": [], 
+          "key": "Bnd_HArray1OfBox::Array1()", 
+          "returnType": "Bnd_Array1OfBox const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeArray1", 
+          "parent": "Bnd_HArray1OfBox", 
+          "arguments": [], 
+          "key": "Bnd_HArray1OfBox::ChangeArray1()", 
+          "returnType": "Bnd_Array1OfBox &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Bnd_HArray1OfBox", 
+          "arguments": [], 
+          "key": "Bnd_HArray1OfBox::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Bnd_HArray1OfBox", 
+          "arguments": [], 
+          "key": "Bnd_HArray1OfBox::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Bnd_HArray1OfBox", 
+          "arguments": [], 
+          "key": "Bnd_HArray1OfBox::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Array1<Bnd_Box>"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Bnd_HArray1OfBox.hxx", 
+        24
+      ], 
+      "key": "Bnd_HArray1OfBox"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bnd_Box2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Bnd_Box2d", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [], 
+          "key": "Bnd_Box2d::Bnd_Box2d()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_Box2d", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box2d &", 
+              "type": "Bnd_Box2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Bnd_Box2d::Bnd_Box2d(Bnd_Box2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetWhole", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [], 
+          "key": "Bnd_Box2d::SetWhole()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetVoid", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [], 
+          "key": "Bnd_Box2d::SetVoid()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "thePnt"
+            }
+          ], 
+          "key": "Bnd_Box2d::Set(gp_Pnt2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "thePnt"
+            }, 
+            {
+              "decl": "const gp_Dir2d &", 
+              "type": "gp_Dir2d", 
+              "name": "theDir"
+            }
+          ], 
+          "key": "Bnd_Box2d::Set(gp_Pnt2d, gp_Dir2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Update", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "aXmin"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "aYmin"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "aXmax"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "aYmax"
+            }
+          ], 
+          "key": "Bnd_Box2d::Update(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Update", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Y"
+            }
+          ], 
+          "key": "Bnd_Box2d::Update(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetGap", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [], 
+          "key": "Bnd_Box2d::GetGap()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetGap", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "Bnd_Box2d::SetGap(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Enlarge", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theTol"
+            }
+          ], 
+          "key": "Bnd_Box2d::Enlarge(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Get", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "aXmin"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "aYmin"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "aXmax"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "aYmax"
+            }
+          ], 
+          "key": "Bnd_Box2d::Get(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "OpenXmin", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [], 
+          "key": "Bnd_Box2d::OpenXmin()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "OpenXmax", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [], 
+          "key": "Bnd_Box2d::OpenXmax()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "OpenYmin", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [], 
+          "key": "Bnd_Box2d::OpenYmin()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "OpenYmax", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [], 
+          "key": "Bnd_Box2d::OpenYmax()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOpenXmin", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [], 
+          "key": "Bnd_Box2d::IsOpenXmin()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOpenXmax", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [], 
+          "key": "Bnd_Box2d::IsOpenXmax()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOpenYmin", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [], 
+          "key": "Bnd_Box2d::IsOpenYmin()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOpenYmax", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [], 
+          "key": "Bnd_Box2d::IsOpenYmax()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsWhole", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [], 
+          "key": "Bnd_Box2d::IsWhole()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVoid", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [], 
+          "key": "Bnd_Box2d::IsVoid()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Transformed", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Trsf2d &", 
+              "type": "gp_Trsf2d", 
+              "name": "T"
+            }
+          ], 
+          "key": "Bnd_Box2d::Transformed(gp_Trsf2d)", 
+          "returnType": "Bnd_Box2d", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box2d &", 
+              "type": "Bnd_Box2d", 
+              "name": "Other"
+            }
+          ], 
+          "key": "Bnd_Box2d::Add(Bnd_Box2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "thePnt"
+            }
+          ], 
+          "key": "Bnd_Box2d::Add(gp_Pnt2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "thePnt"
+            }, 
+            {
+              "decl": "const gp_Dir2d &", 
+              "type": "gp_Dir2d", 
+              "name": "theDir"
+            }
+          ], 
+          "key": "Bnd_Box2d::Add(gp_Pnt2d, gp_Dir2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Dir2d &", 
+              "type": "gp_Dir2d", 
+              "name": "D"
+            }
+          ], 
+          "key": "Bnd_Box2d::Add(gp_Dir2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }
+          ], 
+          "key": "Bnd_Box2d::IsOut(gp_Pnt2d)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box2d &", 
+              "type": "Bnd_Box2d", 
+              "name": "Other"
+            }
+          ], 
+          "key": "Bnd_Box2d::IsOut(Bnd_Box2d)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box2d &", 
+              "type": "Bnd_Box2d", 
+              "name": "theOther"
+            }, 
+            {
+              "decl": "const gp_Trsf2d &", 
+              "type": "gp_Trsf2d", 
+              "name": "theTrsf"
+            }
+          ], 
+          "key": "Bnd_Box2d::IsOut(Bnd_Box2d, gp_Trsf2d)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Trsf2d &", 
+              "type": "gp_Trsf2d", 
+              "name": "T1"
+            }, 
+            {
+              "decl": "const Bnd_Box2d &", 
+              "type": "Bnd_Box2d", 
+              "name": "Other"
+            }, 
+            {
+              "decl": "const gp_Trsf2d &", 
+              "type": "gp_Trsf2d", 
+              "name": "T2"
+            }
+          ], 
+          "key": "Bnd_Box2d::IsOut(gp_Trsf2d, Bnd_Box2d, gp_Trsf2d)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [], 
+          "key": "Bnd_Box2d::Dump()", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SquareExtent", 
+          "parent": "Bnd_Box2d", 
+          "arguments": [], 
+          "key": "Bnd_Box2d::SquareExtent()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Bnd_Box2d.hxx", 
+        51
+      ], 
+      "key": "Bnd_Box2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bnd_HArray1OfBox2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Bnd_HArray1OfBox2d", 
+          "parent": "Bnd_HArray1OfBox2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theLower"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theUpper"
+            }
+          ], 
+          "key": "Bnd_HArray1OfBox2d::Bnd_HArray1OfBox2d(Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_HArray1OfBox2d", 
+          "parent": "Bnd_HArray1OfBox2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theLower"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theUpper"
+            }, 
+            {
+              "decl": "const NCollection_Array1<Bnd_Box2d>::value_type &", 
+              "type": "NCollection_Array1<Bnd_Box2d>::value_type", 
+              "name": "theValue"
+            }
+          ], 
+          "key": "Bnd_HArray1OfBox2d::Bnd_HArray1OfBox2d(Standard_Integer, Standard_Integer, NCollection_Array1<Bnd_Box2d>::value_type)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_HArray1OfBox2d", 
+          "parent": "Bnd_HArray1OfBox2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Array1OfBox2d &", 
+              "type": "Bnd_Array1OfBox2d", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Bnd_HArray1OfBox2d::Bnd_HArray1OfBox2d(Bnd_Array1OfBox2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_HArray1OfBox2d", 
+          "parent": "Bnd_HArray1OfBox2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_HArray1OfBox2d &", 
+              "type": "Bnd_HArray1OfBox2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Bnd_HArray1OfBox2d::Bnd_HArray1OfBox2d(Bnd_HArray1OfBox2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Array1", 
+          "parent": "Bnd_HArray1OfBox2d", 
+          "arguments": [], 
+          "key": "Bnd_HArray1OfBox2d::Array1()", 
+          "returnType": "Bnd_Array1OfBox2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeArray1", 
+          "parent": "Bnd_HArray1OfBox2d", 
+          "arguments": [], 
+          "key": "Bnd_HArray1OfBox2d::ChangeArray1()", 
+          "returnType": "Bnd_Array1OfBox2d &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Bnd_HArray1OfBox2d", 
+          "arguments": [], 
+          "key": "Bnd_HArray1OfBox2d::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Bnd_HArray1OfBox2d", 
+          "arguments": [], 
+          "key": "Bnd_HArray1OfBox2d::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Bnd_HArray1OfBox2d", 
+          "arguments": [], 
+          "key": "Bnd_HArray1OfBox2d::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Array1<Bnd_Box2d>"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Bnd_HArray1OfBox2d.hxx", 
+        24
+      ], 
+      "key": "Bnd_HArray1OfBox2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bnd_Sphere", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Bnd_Sphere", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [], 
+          "key": "Bnd_Sphere::Bnd_Sphere()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_Sphere", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theCntr"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theRad"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theU"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theV"
+            }
+          ], 
+          "key": "Bnd_Sphere::Bnd_Sphere(gp_XYZ, Standard_Real, Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_Sphere", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Sphere &", 
+              "type": "Bnd_Sphere", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Bnd_Sphere::Bnd_Sphere(Bnd_Sphere)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "U", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [], 
+          "key": "Bnd_Sphere::U()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "V", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [], 
+          "key": "Bnd_Sphere::V()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsValid", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [], 
+          "key": "Bnd_Sphere::IsValid()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetValid", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "isValid"
+            }
+          ], 
+          "key": "Bnd_Sphere::SetValid(Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Center", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [], 
+          "key": "Bnd_Sphere::Center()", 
+          "returnType": "gp_XYZ const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Radius", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [], 
+          "key": "Bnd_Sphere::Radius()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Distances", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theXYZ"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theMin"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theMax"
+            }
+          ], 
+          "key": "Bnd_Sphere::Distances(gp_XYZ, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SquareDistances", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theXYZ"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theMin"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theMax"
+            }
+          ], 
+          "key": "Bnd_Sphere::SquareDistances(gp_XYZ, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Project", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theNode"
+            }, 
+            {
+              "decl": "gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theProjNode"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theDist"
+            }, 
+            {
+              "decl": "Standard_Boolean &", 
+              "type": "Standard_Boolean", 
+              "name": "theInside"
+            }
+          ], 
+          "key": "Bnd_Sphere::Project(gp_XYZ, gp_XYZ, Standard_Real, Standard_Boolean)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Distance", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theNode"
+            }
+          ], 
+          "key": "Bnd_Sphere::Distance(gp_XYZ)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SquareDistance", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theNode"
+            }
+          ], 
+          "key": "Bnd_Sphere::SquareDistance(gp_XYZ)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Sphere &", 
+              "type": "Bnd_Sphere", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Bnd_Sphere::Add(Bnd_Sphere)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Sphere &", 
+              "type": "Bnd_Sphere", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Bnd_Sphere::IsOut(Bnd_Sphere)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "thePnt"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theMaxDist"
+            }
+          ], 
+          "key": "Bnd_Sphere::IsOut(gp_XYZ, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SquareExtent", 
+          "parent": "Bnd_Sphere", 
+          "arguments": [], 
+          "key": "Bnd_Sphere::SquareExtent()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Bnd_Sphere.hxx", 
+        32
+      ], 
+      "key": "Bnd_Sphere"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bnd_Range", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Bnd_Range", 
+          "parent": "Bnd_Range", 
+          "arguments": [], 
+          "key": "Bnd_Range::Bnd_Range()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_Range", 
+          "parent": "Bnd_Range", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theMin"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theMax"
+            }
+          ], 
+          "key": "Bnd_Range::Bnd_Range(Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_Range", 
+          "parent": "Bnd_Range", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Range &", 
+              "type": "Bnd_Range", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Bnd_Range::Bnd_Range(Bnd_Range)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Common", 
+          "parent": "Bnd_Range", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Range &", 
+              "type": "Bnd_Range", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Bnd_Range::Common(Bnd_Range)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_Range", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theParameter"
+            }
+          ], 
+          "key": "Bnd_Range::Add(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetMin", 
+          "parent": "Bnd_Range", 
+          "arguments": [
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "thePar"
+            }
+          ], 
+          "key": "Bnd_Range::GetMin(Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetMAX", 
+          "parent": "Bnd_Range", 
+          "arguments": [
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "thePar"
+            }
+          ], 
+          "key": "Bnd_Range::GetMAX(Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Delta", 
+          "parent": "Bnd_Range", 
+          "arguments": [], 
+          "key": "Bnd_Range::Delta()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVoid", 
+          "parent": "Bnd_Range", 
+          "arguments": [], 
+          "key": "Bnd_Range::IsVoid()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetVoid", 
+          "parent": "Bnd_Range", 
+          "arguments": [], 
+          "key": "Bnd_Range::SetVoid()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Enlarge", 
+          "parent": "Bnd_Range", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theDelta"
+            }
+          ], 
+          "key": "Bnd_Range::Enlarge(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Bnd_Range.hxx", 
+        26
+      ], 
+      "key": "Bnd_Range"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bnd_B2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Bnd_B2d", 
+          "parent": "Bnd_B2d", 
+          "arguments": [], 
+          "key": "Bnd_B2d::Bnd_B2d()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_B2d", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "theCenter"
+            }, 
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "theHSize"
+            }
+          ], 
+          "key": "Bnd_B2d::Bnd_B2d(gp_XY, gp_XY)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_B2d", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B2d &", 
+              "type": "Bnd_B2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Bnd_B2d::Bnd_B2d(Bnd_B2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVoid", 
+          "parent": "Bnd_B2d", 
+          "arguments": [], 
+          "key": "Bnd_B2d::IsVoid()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Clear", 
+          "parent": "Bnd_B2d", 
+          "arguments": [], 
+          "key": "Bnd_B2d::Clear()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "thePnt"
+            }
+          ], 
+          "key": "Bnd_B2d::Add(gp_XY)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "thePnt"
+            }
+          ], 
+          "key": "Bnd_B2d::Add(gp_Pnt2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B2d &", 
+              "type": "Bnd_B2d", 
+              "name": "theBox"
+            }
+          ], 
+          "key": "Bnd_B2d::Add(Bnd_B2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CornerMin", 
+          "parent": "Bnd_B2d", 
+          "arguments": [], 
+          "key": "Bnd_B2d::CornerMin()", 
+          "returnType": "gp_XY", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CornerMax", 
+          "parent": "Bnd_B2d", 
+          "arguments": [], 
+          "key": "Bnd_B2d::CornerMax()", 
+          "returnType": "gp_XY", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SquareExtent", 
+          "parent": "Bnd_B2d", 
+          "arguments": [], 
+          "key": "Bnd_B2d::SquareExtent()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Enlarge", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theDiff"
+            }
+          ], 
+          "key": "Bnd_B2d::Enlarge(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Limit", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B2d &", 
+              "type": "Bnd_B2d", 
+              "name": "theOtherBox"
+            }
+          ], 
+          "key": "Bnd_B2d::Limit(Bnd_B2d)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Transformed", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Trsf2d &", 
+              "type": "gp_Trsf2d", 
+              "name": "theTrsf"
+            }
+          ], 
+          "key": "Bnd_B2d::Transformed(gp_Trsf2d)", 
+          "returnType": "Bnd_B2d", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "thePnt"
+            }
+          ], 
+          "key": "Bnd_B2d::IsOut(gp_XY)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "theCenter"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theRadius"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "isCircleHollow", 
+              "default": "false"
+            }
+          ], 
+          "key": "Bnd_B2d::IsOut(gp_XY, Standard_Real, Standard_Boolean)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B2d &", 
+              "type": "Bnd_B2d", 
+              "name": "theOtherBox"
+            }
+          ], 
+          "key": "Bnd_B2d::IsOut(Bnd_B2d)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B2d &", 
+              "type": "Bnd_B2d", 
+              "name": "theOtherBox"
+            }, 
+            {
+              "decl": "const gp_Trsf2d &", 
+              "type": "gp_Trsf2d", 
+              "name": "theTrsf"
+            }
+          ], 
+          "key": "Bnd_B2d::IsOut(Bnd_B2d, gp_Trsf2d)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2d &", 
+              "type": "gp_Ax2d", 
+              "name": "theLine"
+            }
+          ], 
+          "key": "Bnd_B2d::IsOut(gp_Ax2d)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "theP0"
+            }, 
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "theP1"
+            }
+          ], 
+          "key": "Bnd_B2d::IsOut(gp_XY, gp_XY)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsIn", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B2d &", 
+              "type": "Bnd_B2d", 
+              "name": "theBox"
+            }
+          ], 
+          "key": "Bnd_B2d::IsIn(Bnd_B2d)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsIn", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B2d &", 
+              "type": "Bnd_B2d", 
+              "name": "theBox"
+            }, 
+            {
+              "decl": "const gp_Trsf2d &", 
+              "type": "gp_Trsf2d", 
+              "name": "theTrsf"
+            }
+          ], 
+          "key": "Bnd_B2d::IsIn(Bnd_B2d, gp_Trsf2d)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetCenter", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "theCenter"
+            }
+          ], 
+          "key": "Bnd_B2d::SetCenter(gp_XY)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetHSize", 
+          "parent": "Bnd_B2d", 
+          "arguments": [
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "theHSize"
+            }
+          ], 
+          "key": "Bnd_B2d::SetHSize(gp_XY)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Bnd_B2d.hxx", 
+        34
+      ], 
+      "key": "Bnd_B2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bnd_B3d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Bnd_B3d", 
+          "parent": "Bnd_B3d", 
+          "arguments": [], 
+          "key": "Bnd_B3d::Bnd_B3d()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_B3d", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theCenter"
+            }, 
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theHSize"
+            }
+          ], 
+          "key": "Bnd_B3d::Bnd_B3d(gp_XYZ, gp_XYZ)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_B3d", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B3d &", 
+              "type": "Bnd_B3d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Bnd_B3d::Bnd_B3d(Bnd_B3d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVoid", 
+          "parent": "Bnd_B3d", 
+          "arguments": [], 
+          "key": "Bnd_B3d::IsVoid()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Clear", 
+          "parent": "Bnd_B3d", 
+          "arguments": [], 
+          "key": "Bnd_B3d::Clear()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "thePnt"
+            }
+          ], 
+          "key": "Bnd_B3d::Add(gp_XYZ)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "thePnt"
+            }
+          ], 
+          "key": "Bnd_B3d::Add(gp_Pnt)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B3d &", 
+              "type": "Bnd_B3d", 
+              "name": "theBox"
+            }
+          ], 
+          "key": "Bnd_B3d::Add(Bnd_B3d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CornerMin", 
+          "parent": "Bnd_B3d", 
+          "arguments": [], 
+          "key": "Bnd_B3d::CornerMin()", 
+          "returnType": "gp_XYZ", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CornerMax", 
+          "parent": "Bnd_B3d", 
+          "arguments": [], 
+          "key": "Bnd_B3d::CornerMax()", 
+          "returnType": "gp_XYZ", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SquareExtent", 
+          "parent": "Bnd_B3d", 
+          "arguments": [], 
+          "key": "Bnd_B3d::SquareExtent()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Enlarge", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theDiff"
+            }
+          ], 
+          "key": "Bnd_B3d::Enlarge(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Limit", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B3d &", 
+              "type": "Bnd_B3d", 
+              "name": "theOtherBox"
+            }
+          ], 
+          "key": "Bnd_B3d::Limit(Bnd_B3d)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Transformed", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const gp_Trsf &", 
+              "type": "gp_Trsf", 
+              "name": "theTrsf"
+            }
+          ], 
+          "key": "Bnd_B3d::Transformed(gp_Trsf)", 
+          "returnType": "Bnd_B3d", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "thePnt"
+            }
+          ], 
+          "key": "Bnd_B3d::IsOut(gp_XYZ)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theCenter"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theRadius"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "isSphereHollow", 
+              "default": "false"
+            }
+          ], 
+          "key": "Bnd_B3d::IsOut(gp_XYZ, Standard_Real, Standard_Boolean)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B3d &", 
+              "type": "Bnd_B3d", 
+              "name": "theOtherBox"
+            }
+          ], 
+          "key": "Bnd_B3d::IsOut(Bnd_B3d)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B3d &", 
+              "type": "Bnd_B3d", 
+              "name": "theOtherBox"
+            }, 
+            {
+              "decl": "const gp_Trsf &", 
+              "type": "gp_Trsf", 
+              "name": "theTrsf"
+            }
+          ], 
+          "key": "Bnd_B3d::IsOut(Bnd_B3d, gp_Trsf)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax1 &", 
+              "type": "gp_Ax1", 
+              "name": "theLine"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "isRay", 
+              "default": "false"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theOverthickness", 
+              "default": "0."
+            }
+          ], 
+          "key": "Bnd_B3d::IsOut(gp_Ax1, Standard_Boolean, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax3 &", 
+              "type": "gp_Ax3", 
+              "name": "thePlane"
+            }
+          ], 
+          "key": "Bnd_B3d::IsOut(gp_Ax3)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsIn", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B3d &", 
+              "type": "Bnd_B3d", 
+              "name": "theBox"
+            }
+          ], 
+          "key": "Bnd_B3d::IsIn(Bnd_B3d)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsIn", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B3d &", 
+              "type": "Bnd_B3d", 
+              "name": "theBox"
+            }, 
+            {
+              "decl": "const gp_Trsf &", 
+              "type": "gp_Trsf", 
+              "name": "theTrsf"
+            }
+          ], 
+          "key": "Bnd_B3d::IsIn(Bnd_B3d, gp_Trsf)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetCenter", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theCenter"
+            }
+          ], 
+          "key": "Bnd_B3d::SetCenter(gp_XYZ)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetHSize", 
+          "parent": "Bnd_B3d", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theHSize"
+            }
+          ], 
+          "key": "Bnd_B3d::SetHSize(gp_XYZ)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Bnd_B3d.hxx", 
+        35
+      ], 
+      "key": "Bnd_B3d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bnd_B2f", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Bnd_B2f", 
+          "parent": "Bnd_B2f", 
+          "arguments": [], 
+          "key": "Bnd_B2f::Bnd_B2f()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_B2f", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "theCenter"
+            }, 
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "theHSize"
+            }
+          ], 
+          "key": "Bnd_B2f::Bnd_B2f(gp_XY, gp_XY)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_B2f", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B2f &", 
+              "type": "Bnd_B2f", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Bnd_B2f::Bnd_B2f(Bnd_B2f)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVoid", 
+          "parent": "Bnd_B2f", 
+          "arguments": [], 
+          "key": "Bnd_B2f::IsVoid()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Clear", 
+          "parent": "Bnd_B2f", 
+          "arguments": [], 
+          "key": "Bnd_B2f::Clear()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "thePnt"
+            }
+          ], 
+          "key": "Bnd_B2f::Add(gp_XY)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "thePnt"
+            }
+          ], 
+          "key": "Bnd_B2f::Add(gp_Pnt2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B2f &", 
+              "type": "Bnd_B2f", 
+              "name": "theBox"
+            }
+          ], 
+          "key": "Bnd_B2f::Add(Bnd_B2f)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CornerMin", 
+          "parent": "Bnd_B2f", 
+          "arguments": [], 
+          "key": "Bnd_B2f::CornerMin()", 
+          "returnType": "gp_XY", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CornerMax", 
+          "parent": "Bnd_B2f", 
+          "arguments": [], 
+          "key": "Bnd_B2f::CornerMax()", 
+          "returnType": "gp_XY", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SquareExtent", 
+          "parent": "Bnd_B2f", 
+          "arguments": [], 
+          "key": "Bnd_B2f::SquareExtent()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Enlarge", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theDiff"
+            }
+          ], 
+          "key": "Bnd_B2f::Enlarge(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Limit", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B2f &", 
+              "type": "Bnd_B2f", 
+              "name": "theOtherBox"
+            }
+          ], 
+          "key": "Bnd_B2f::Limit(Bnd_B2f)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Transformed", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const gp_Trsf2d &", 
+              "type": "gp_Trsf2d", 
+              "name": "theTrsf"
+            }
+          ], 
+          "key": "Bnd_B2f::Transformed(gp_Trsf2d)", 
+          "returnType": "Bnd_B2f", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "thePnt"
+            }
+          ], 
+          "key": "Bnd_B2f::IsOut(gp_XY)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "theCenter"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theRadius"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "isCircleHollow", 
+              "default": "false"
+            }
+          ], 
+          "key": "Bnd_B2f::IsOut(gp_XY, Standard_Real, Standard_Boolean)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B2f &", 
+              "type": "Bnd_B2f", 
+              "name": "theOtherBox"
+            }
+          ], 
+          "key": "Bnd_B2f::IsOut(Bnd_B2f)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B2f &", 
+              "type": "Bnd_B2f", 
+              "name": "theOtherBox"
+            }, 
+            {
+              "decl": "const gp_Trsf2d &", 
+              "type": "gp_Trsf2d", 
+              "name": "theTrsf"
+            }
+          ], 
+          "key": "Bnd_B2f::IsOut(Bnd_B2f, gp_Trsf2d)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2d &", 
+              "type": "gp_Ax2d", 
+              "name": "theLine"
+            }
+          ], 
+          "key": "Bnd_B2f::IsOut(gp_Ax2d)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOut", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "theP0"
+            }, 
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "theP1"
+            }
+          ], 
+          "key": "Bnd_B2f::IsOut(gp_XY, gp_XY)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsIn", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B2f &", 
+              "type": "Bnd_B2f", 
+              "name": "theBox"
+            }
+          ], 
+          "key": "Bnd_B2f::IsIn(Bnd_B2f)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsIn", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const Bnd_B2f &", 
+              "type": "Bnd_B2f", 
+              "name": "theBox"
+            }, 
+            {
+              "decl": "const gp_Trsf2d &", 
+              "type": "gp_Trsf2d", 
+              "name": "theTrsf"
+            }
+          ], 
+          "key": "Bnd_B2f::IsIn(Bnd_B2f, gp_Trsf2d)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetCenter", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "theCenter"
+            }
+          ], 
+          "key": "Bnd_B2f::SetCenter(gp_XY)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetHSize", 
+          "parent": "Bnd_B2f", 
+          "arguments": [
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "theHSize"
+            }
+          ], 
+          "key": "Bnd_B2f::SetHSize(gp_XY)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Bnd_B2f.hxx", 
+        35
+      ], 
+      "key": "Bnd_B2f"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bnd_HArray1OfSphere", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Bnd_HArray1OfSphere", 
+          "parent": "Bnd_HArray1OfSphere", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theLower"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theUpper"
+            }
+          ], 
+          "key": "Bnd_HArray1OfSphere::Bnd_HArray1OfSphere(Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_HArray1OfSphere", 
+          "parent": "Bnd_HArray1OfSphere", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theLower"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theUpper"
+            }, 
+            {
+              "decl": "const NCollection_Array1<Bnd_Sphere>::value_type &", 
+              "type": "NCollection_Array1<Bnd_Sphere>::value_type", 
+              "name": "theValue"
+            }
+          ], 
+          "key": "Bnd_HArray1OfSphere::Bnd_HArray1OfSphere(Standard_Integer, Standard_Integer, NCollection_Array1<Bnd_Sphere>::value_type)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_HArray1OfSphere", 
+          "parent": "Bnd_HArray1OfSphere", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Array1OfSphere &", 
+              "type": "Bnd_Array1OfSphere", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Bnd_HArray1OfSphere::Bnd_HArray1OfSphere(Bnd_Array1OfSphere)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_HArray1OfSphere", 
+          "parent": "Bnd_HArray1OfSphere", 
+          "arguments": [
+            {
+              "decl": "const Bnd_HArray1OfSphere &", 
+              "type": "Bnd_HArray1OfSphere", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Bnd_HArray1OfSphere::Bnd_HArray1OfSphere(Bnd_HArray1OfSphere)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Array1", 
+          "parent": "Bnd_HArray1OfSphere", 
+          "arguments": [], 
+          "key": "Bnd_HArray1OfSphere::Array1()", 
+          "returnType": "Bnd_Array1OfSphere const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeArray1", 
+          "parent": "Bnd_HArray1OfSphere", 
+          "arguments": [], 
+          "key": "Bnd_HArray1OfSphere::ChangeArray1()", 
+          "returnType": "Bnd_Array1OfSphere &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Bnd_HArray1OfSphere", 
+          "arguments": [], 
+          "key": "Bnd_HArray1OfSphere::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Bnd_HArray1OfSphere", 
+          "arguments": [], 
+          "key": "Bnd_HArray1OfSphere::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Bnd_HArray1OfSphere", 
+          "arguments": [], 
+          "key": "Bnd_HArray1OfSphere::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Array1<Bnd_Sphere>"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Bnd_HArray1OfSphere.hxx", 
+        24
+      ], 
+      "key": "Bnd_HArray1OfSphere"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bnd_BoundSortBox", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Bnd_BoundSortBox", 
+          "parent": "Bnd_BoundSortBox", 
+          "arguments": [], 
+          "key": "Bnd_BoundSortBox::Bnd_BoundSortBox()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_BoundSortBox", 
+          "parent": "Bnd_BoundSortBox", 
+          "arguments": [
+            {
+              "decl": "const Bnd_BoundSortBox &", 
+              "type": "Bnd_BoundSortBox", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Bnd_BoundSortBox::Bnd_BoundSortBox(Bnd_BoundSortBox)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Initialize", 
+          "parent": "Bnd_BoundSortBox", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box &", 
+              "type": "Bnd_Box", 
+              "name": "CompleteBox"
+            }, 
+            {
+              "decl": "const opencascade::handle<Bnd_HArray1OfBox> &", 
+              "type": "opencascade::handle<Bnd_HArray1OfBox>", 
+              "name": "SetOfBox"
+            }
+          ], 
+          "key": "Bnd_BoundSortBox::Initialize(Bnd_Box, opencascade::handle<Bnd_HArray1OfBox>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Initialize", 
+          "parent": "Bnd_BoundSortBox", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Bnd_HArray1OfBox> &", 
+              "type": "opencascade::handle<Bnd_HArray1OfBox>", 
+              "name": "SetOfBox"
+            }
+          ], 
+          "key": "Bnd_BoundSortBox::Initialize(opencascade::handle<Bnd_HArray1OfBox>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Initialize", 
+          "parent": "Bnd_BoundSortBox", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box &", 
+              "type": "Bnd_Box", 
+              "name": "CompleteBox"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "nbComponents"
+            }
+          ], 
+          "key": "Bnd_BoundSortBox::Initialize(Bnd_Box, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_BoundSortBox", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box &", 
+              "type": "Bnd_Box", 
+              "name": "theBox"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "boxIndex"
+            }
+          ], 
+          "key": "Bnd_BoundSortBox::Add(Bnd_Box, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Compare", 
+          "parent": "Bnd_BoundSortBox", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box &", 
+              "type": "Bnd_Box", 
+              "name": "theBox"
+            }
+          ], 
+          "key": "Bnd_BoundSortBox::Compare(Bnd_Box)", 
+          "returnType": "TColStd_ListOfInteger const &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Compare", 
+          "parent": "Bnd_BoundSortBox", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }
+          ], 
+          "key": "Bnd_BoundSortBox::Compare(gp_Pln)", 
+          "returnType": "TColStd_ListOfInteger const &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Bnd_BoundSortBox", 
+          "arguments": [], 
+          "key": "Bnd_BoundSortBox::Dump()", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Destroy", 
+          "parent": "Bnd_BoundSortBox", 
+          "arguments": [], 
+          "key": "Bnd_BoundSortBox::Destroy()", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Bnd_BoundSortBox.hxx", 
+        44
+      ], 
+      "key": "Bnd_BoundSortBox"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bnd_BoundSortBox2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Bnd_BoundSortBox2d", 
+          "parent": "Bnd_BoundSortBox2d", 
+          "arguments": [], 
+          "key": "Bnd_BoundSortBox2d::Bnd_BoundSortBox2d()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Bnd_BoundSortBox2d", 
+          "parent": "Bnd_BoundSortBox2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_BoundSortBox2d &", 
+              "type": "Bnd_BoundSortBox2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Bnd_BoundSortBox2d::Bnd_BoundSortBox2d(Bnd_BoundSortBox2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Initialize", 
+          "parent": "Bnd_BoundSortBox2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box2d &", 
+              "type": "Bnd_Box2d", 
+              "name": "CompleteBox"
+            }, 
+            {
+              "decl": "const opencascade::handle<Bnd_HArray1OfBox2d> &", 
+              "type": "opencascade::handle<Bnd_HArray1OfBox2d>", 
+              "name": "SetOfBox"
+            }
+          ], 
+          "key": "Bnd_BoundSortBox2d::Initialize(Bnd_Box2d, opencascade::handle<Bnd_HArray1OfBox2d>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Initialize", 
+          "parent": "Bnd_BoundSortBox2d", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Bnd_HArray1OfBox2d> &", 
+              "type": "opencascade::handle<Bnd_HArray1OfBox2d>", 
+              "name": "SetOfBox"
+            }
+          ], 
+          "key": "Bnd_BoundSortBox2d::Initialize(opencascade::handle<Bnd_HArray1OfBox2d>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Initialize", 
+          "parent": "Bnd_BoundSortBox2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box2d &", 
+              "type": "Bnd_Box2d", 
+              "name": "CompleteBox"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "nbComponents"
+            }
+          ], 
+          "key": "Bnd_BoundSortBox2d::Initialize(Bnd_Box2d, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Bnd_BoundSortBox2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box2d &", 
+              "type": "Bnd_Box2d", 
+              "name": "theBox"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "boxIndex"
+            }
+          ], 
+          "key": "Bnd_BoundSortBox2d::Add(Bnd_Box2d, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Compare", 
+          "parent": "Bnd_BoundSortBox2d", 
+          "arguments": [
+            {
+              "decl": "const Bnd_Box2d &", 
+              "type": "Bnd_Box2d", 
+              "name": "theBox"
+            }
+          ], 
+          "key": "Bnd_BoundSortBox2d::Compare(Bnd_Box2d)", 
+          "returnType": "TColStd_ListOfInteger const &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Bnd_BoundSortBox2d", 
+          "arguments": [], 
+          "key": "Bnd_BoundSortBox2d::Dump()", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Bnd_BoundSortBox2d.hxx", 
+        43
+      ], 
+      "key": "Bnd_BoundSortBox2d"
+    }, 
+    {
+      "type": "NCollection_Array1<Bnd_Box>", 
+      "declType": "typedef", 
+      "name": "Bnd_Array1OfBox", 
+      "key": "Bnd_Array1OfBox"
+    }, 
+    {
+      "type": "opencascade::handle<Bnd_HArray1OfBox>", 
+      "declType": "typedef", 
+      "name": "Handle_Bnd_HArray1OfBox", 
+      "key": "Handle_Bnd_HArray1OfBox"
+    }, 
+    {
+      "type": "NCollection_Sequence<Bnd_Box>", 
+      "declType": "typedef", 
+      "name": "Bnd_SeqOfBox", 
+      "key": "Bnd_SeqOfBox"
+    }, 
+    {
+      "type": "NCollection_Array1<Bnd_Box2d>", 
+      "declType": "typedef", 
+      "name": "Bnd_Array1OfBox2d", 
+      "key": "Bnd_Array1OfBox2d"
+    }, 
+    {
+      "type": "opencascade::handle<Bnd_HArray1OfBox2d>", 
+      "declType": "typedef", 
+      "name": "Handle_Bnd_HArray1OfBox2d", 
+      "key": "Handle_Bnd_HArray1OfBox2d"
+    }, 
+    {
+      "type": "NCollection_Array1<Bnd_Sphere>", 
+      "declType": "typedef", 
+      "name": "Bnd_Array1OfSphere", 
+      "key": "Bnd_Array1OfSphere"
+    }, 
+    {
+      "type": "opencascade::handle<Bnd_HArray1OfSphere>", 
+      "declType": "typedef", 
+      "name": "Handle_Bnd_HArray1OfSphere", 
+      "key": "Handle_Bnd_HArray1OfSphere"
+    }
+  ], 
+  "name": "Bnd"
+}

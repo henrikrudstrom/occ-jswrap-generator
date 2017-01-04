@@ -1,0 +1,3370 @@
+{
+  "headers": [
+    "Approx_CurveOnSurface.hxx", 
+    "Approx_MCurvesToBSpCurve.hxx", 
+    "Approx_CurvlinFunc.hxx", 
+    "Approx_Curve2d.hxx", 
+    "Approx_Status.hxx", 
+    "Approx_HArray1OfAdHSurface.hxx", 
+    "Approx_FitAndDivide2d.hxx", 
+    "Approx_ParametrizationType.hxx", 
+    "Approx_Array1OfAdHSurface.hxx", 
+    "Approx_HArray1OfGTrsf2d.hxx", 
+    "Approx_SweepFunction.hxx", 
+    "Approx_SameParameter.hxx", 
+    "Approx_SequenceOfHArray1OfReal.hxx", 
+    "Approx_SweepApproximation.hxx", 
+    "Approx_CurvilinearParameter.hxx", 
+    "Approx_Array1OfGTrsf2d.hxx", 
+    "Approx_FitAndDivide.hxx", 
+    "Approx_Curve3d.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Approx_CurveOnSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Approx_CurveOnSurface", 
+          "parent": "Approx_CurveOnSurface", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "C2D"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "Surf"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegree"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxSegments"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "Only3d", 
+              "default": "false"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "Only2d", 
+              "default": "false"
+            }
+          ], 
+          "key": "Approx_CurveOnSurface::Approx_CurveOnSurface(opencascade::handle<Adaptor2d_HCurve2d>, opencascade::handle<Adaptor3d_HSurface>, Standard_Real, Standard_Real, Standard_Real, GeomAbs_Shape, Standard_Integer, Standard_Integer, Standard_Boolean, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_CurveOnSurface", 
+          "parent": "Approx_CurveOnSurface", 
+          "arguments": [
+            {
+              "decl": "const Approx_CurveOnSurface &", 
+              "type": "Approx_CurveOnSurface", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Approx_CurveOnSurface::Approx_CurveOnSurface(Approx_CurveOnSurface)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "Approx_CurveOnSurface", 
+          "arguments": [], 
+          "key": "Approx_CurveOnSurface::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasResult", 
+          "parent": "Approx_CurveOnSurface", 
+          "arguments": [], 
+          "key": "Approx_CurveOnSurface::HasResult()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve3d", 
+          "parent": "Approx_CurveOnSurface", 
+          "arguments": [], 
+          "key": "Approx_CurveOnSurface::Curve3d()", 
+          "returnType": "opencascade::handle<Geom_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError3d", 
+          "parent": "Approx_CurveOnSurface", 
+          "arguments": [], 
+          "key": "Approx_CurveOnSurface::MaxError3d()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve2d", 
+          "parent": "Approx_CurveOnSurface", 
+          "arguments": [], 
+          "key": "Approx_CurveOnSurface::Curve2d()", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError2dU", 
+          "parent": "Approx_CurveOnSurface", 
+          "arguments": [], 
+          "key": "Approx_CurveOnSurface::MaxError2dU()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError2dV", 
+          "parent": "Approx_CurveOnSurface", 
+          "arguments": [], 
+          "key": "Approx_CurveOnSurface::MaxError2dV()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Approx_CurveOnSurface.hxx", 
+        37
+      ], 
+      "key": "Approx_CurveOnSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Approx_MCurvesToBSpCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Approx_MCurvesToBSpCurve", 
+          "parent": "Approx_MCurvesToBSpCurve", 
+          "arguments": [], 
+          "key": "Approx_MCurvesToBSpCurve::Approx_MCurvesToBSpCurve()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_MCurvesToBSpCurve", 
+          "parent": "Approx_MCurvesToBSpCurve", 
+          "arguments": [
+            {
+              "decl": "const Approx_MCurvesToBSpCurve &", 
+              "type": "Approx_MCurvesToBSpCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Approx_MCurvesToBSpCurve::Approx_MCurvesToBSpCurve(Approx_MCurvesToBSpCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Reset", 
+          "parent": "Approx_MCurvesToBSpCurve", 
+          "arguments": [], 
+          "key": "Approx_MCurvesToBSpCurve::Reset()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Append", 
+          "parent": "Approx_MCurvesToBSpCurve", 
+          "arguments": [
+            {
+              "decl": "const AppParCurves_MultiCurve &", 
+              "type": "AppParCurves_MultiCurve", 
+              "name": "MC"
+            }
+          ], 
+          "key": "Approx_MCurvesToBSpCurve::Append(AppParCurves_MultiCurve)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "Approx_MCurvesToBSpCurve", 
+          "arguments": [], 
+          "key": "Approx_MCurvesToBSpCurve::Perform()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "Approx_MCurvesToBSpCurve", 
+          "arguments": [
+            {
+              "decl": "const AppParCurves_SequenceOfMultiCurve &", 
+              "type": "AppParCurves_SequenceOfMultiCurve", 
+              "name": "TheSeq"
+            }
+          ], 
+          "key": "Approx_MCurvesToBSpCurve::Perform(AppParCurves_SequenceOfMultiCurve)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Approx_MCurvesToBSpCurve", 
+          "arguments": [], 
+          "key": "Approx_MCurvesToBSpCurve::Value()", 
+          "returnType": "AppParCurves_MultiBSpCurve const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeValue", 
+          "parent": "Approx_MCurvesToBSpCurve", 
+          "arguments": [], 
+          "key": "Approx_MCurvesToBSpCurve::ChangeValue()", 
+          "returnType": "AppParCurves_MultiBSpCurve const &", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Approx_MCurvesToBSpCurve.hxx", 
+        32
+      ], 
+      "key": "Approx_MCurvesToBSpCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Approx_CurvlinFunc", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Approx_CurvlinFunc", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "Approx_CurvlinFunc::Approx_CurvlinFunc(opencascade::handle<Adaptor3d_HCurve>, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_CurvlinFunc", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "C2D"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "Approx_CurvlinFunc::Approx_CurvlinFunc(opencascade::handle<Adaptor2d_HCurve2d>, opencascade::handle<Adaptor3d_HSurface>, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_CurvlinFunc", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "C2D1"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "C2D2"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S1"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "Approx_CurvlinFunc::Approx_CurvlinFunc(opencascade::handle<Adaptor2d_HCurve2d>, opencascade::handle<Adaptor2d_HCurve2d>, opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor3d_HSurface>, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_CurvlinFunc", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [
+            {
+              "decl": "const Approx_CurvlinFunc &", 
+              "type": "Approx_CurvlinFunc", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Approx_CurvlinFunc::Approx_CurvlinFunc(Approx_CurvlinFunc)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetTol", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "Approx_CurvlinFunc::SetTol(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstParameter", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [], 
+          "key": "Approx_CurvlinFunc::FirstParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastParameter", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [], 
+          "key": "Approx_CurvlinFunc::LastParameter()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbIntervals", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "Approx_CurvlinFunc::NbIntervals(GeomAbs_Shape)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Intervals", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "Approx_CurvlinFunc::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Trim", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "Approx_CurvlinFunc::Trim(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [], 
+          "key": "Approx_CurvlinFunc::Length()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Length", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [
+            {
+              "decl": "Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "FirstU"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "LasrU"
+            }
+          ], 
+          "key": "Approx_CurvlinFunc::Length(Adaptor3d_Curve, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetLength", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [], 
+          "key": "Approx_CurvlinFunc::GetLength()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetUParameter", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [
+            {
+              "decl": "Adaptor3d_Curve &", 
+              "type": "Adaptor3d_Curve", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NumberOfCurve"
+            }
+          ], 
+          "key": "Approx_CurvlinFunc::GetUParameter(Adaptor3d_Curve, Standard_Real, Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetSParameter", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }
+          ], 
+          "key": "Approx_CurvlinFunc::GetSParameter(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "EvalCase1", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Order"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Result"
+            }
+          ], 
+          "key": "Approx_CurvlinFunc::EvalCase1(Standard_Real, Standard_Integer, TColStd_Array1OfReal)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "EvalCase2", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Order"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Result"
+            }
+          ], 
+          "key": "Approx_CurvlinFunc::EvalCase2(Standard_Real, Standard_Integer, TColStd_Array1OfReal)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "EvalCase3", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Order"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Result"
+            }
+          ], 
+          "key": "Approx_CurvlinFunc::EvalCase3(Standard_Real, Standard_Integer, TColStd_Array1OfReal)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [], 
+          "key": "Approx_CurvlinFunc::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [], 
+          "key": "Approx_CurvlinFunc::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Approx_CurvlinFunc", 
+          "arguments": [], 
+          "key": "Approx_CurvlinFunc::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Approx_CurvlinFunc.hxx", 
+        44
+      ], 
+      "key": "Approx_CurvlinFunc"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Approx_Curve2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Approx_Curve2d", 
+          "parent": "Approx_Curve2d", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "C2D"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "TolU"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "TolV"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegree"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxSegments"
+            }
+          ], 
+          "key": "Approx_Curve2d::Approx_Curve2d(opencascade::handle<Adaptor2d_HCurve2d>, Standard_Real, Standard_Real, Standard_Real, Standard_Real, GeomAbs_Shape, Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_Curve2d", 
+          "parent": "Approx_Curve2d", 
+          "arguments": [
+            {
+              "decl": "const Approx_Curve2d &", 
+              "type": "Approx_Curve2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Approx_Curve2d::Approx_Curve2d(Approx_Curve2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "Approx_Curve2d", 
+          "arguments": [], 
+          "key": "Approx_Curve2d::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasResult", 
+          "parent": "Approx_Curve2d", 
+          "arguments": [], 
+          "key": "Approx_Curve2d::HasResult()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve", 
+          "parent": "Approx_Curve2d", 
+          "arguments": [], 
+          "key": "Approx_Curve2d::Curve()", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError2dU", 
+          "parent": "Approx_Curve2d", 
+          "arguments": [], 
+          "key": "Approx_Curve2d::MaxError2dU()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError2dV", 
+          "parent": "Approx_Curve2d", 
+          "arguments": [], 
+          "key": "Approx_Curve2d::MaxError2dV()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Approx_Curve2d.hxx", 
+        30
+      ], 
+      "key": "Approx_Curve2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Approx_HArray1OfAdHSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Approx_HArray1OfAdHSurface", 
+          "parent": "Approx_HArray1OfAdHSurface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theLower"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theUpper"
+            }
+          ], 
+          "key": "Approx_HArray1OfAdHSurface::Approx_HArray1OfAdHSurface(Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_HArray1OfAdHSurface", 
+          "parent": "Approx_HArray1OfAdHSurface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theLower"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theUpper"
+            }, 
+            {
+              "decl": "const NCollection_Array1<opencascade::handle<Adaptor3d_HSurface> >::value_type &", 
+              "type": "NCollection_Array1<opencascade::handle<Adaptor3d_HSurface> >::value_type", 
+              "name": "theValue"
+            }
+          ], 
+          "key": "Approx_HArray1OfAdHSurface::Approx_HArray1OfAdHSurface(Standard_Integer, Standard_Integer, NCollection_Array1<opencascade::handle<Adaptor3d_HSurface> >::value_type)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_HArray1OfAdHSurface", 
+          "parent": "Approx_HArray1OfAdHSurface", 
+          "arguments": [
+            {
+              "decl": "const Approx_Array1OfAdHSurface &", 
+              "type": "Approx_Array1OfAdHSurface", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Approx_HArray1OfAdHSurface::Approx_HArray1OfAdHSurface(Approx_Array1OfAdHSurface)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_HArray1OfAdHSurface", 
+          "parent": "Approx_HArray1OfAdHSurface", 
+          "arguments": [
+            {
+              "decl": "const Approx_HArray1OfAdHSurface &", 
+              "type": "Approx_HArray1OfAdHSurface", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Approx_HArray1OfAdHSurface::Approx_HArray1OfAdHSurface(Approx_HArray1OfAdHSurface)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Array1", 
+          "parent": "Approx_HArray1OfAdHSurface", 
+          "arguments": [], 
+          "key": "Approx_HArray1OfAdHSurface::Array1()", 
+          "returnType": "Approx_Array1OfAdHSurface const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeArray1", 
+          "parent": "Approx_HArray1OfAdHSurface", 
+          "arguments": [], 
+          "key": "Approx_HArray1OfAdHSurface::ChangeArray1()", 
+          "returnType": "Approx_Array1OfAdHSurface &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Approx_HArray1OfAdHSurface", 
+          "arguments": [], 
+          "key": "Approx_HArray1OfAdHSurface::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Approx_HArray1OfAdHSurface", 
+          "arguments": [], 
+          "key": "Approx_HArray1OfAdHSurface::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Approx_HArray1OfAdHSurface", 
+          "arguments": [], 
+          "key": "Approx_HArray1OfAdHSurface::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Array1<opencascade::handle<Adaptor3d_HSurface> >"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Approx_HArray1OfAdHSurface.hxx", 
+        24
+      ], 
+      "key": "Approx_HArray1OfAdHSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Approx_FitAndDivide2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Approx_FitAndDivide2d", 
+          "parent": "Approx_FitAndDivide2d", 
+          "arguments": [
+            {
+              "decl": "const AppCont_Function &", 
+              "type": "AppCont_Function", 
+              "name": "Line"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "degreemin", 
+              "default": "3"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "degreemax", 
+              "default": "8"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance3d", 
+              "default": "1.0000000000000001E-5"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance2d", 
+              "default": "1.0000000000000001E-5"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "cutting", 
+              "default": "false"
+            }, 
+            {
+              "decl": "const AppParCurves_Constraint", 
+              "type": "AppParCurves_Constraint", 
+              "name": "FirstC", 
+              "default": "::AppParCurves_Constraint::AppParCurves_TangencyPoint"
+            }, 
+            {
+              "decl": "const AppParCurves_Constraint", 
+              "type": "AppParCurves_Constraint", 
+              "name": "LastC", 
+              "default": "::AppParCurves_Constraint::AppParCurves_TangencyPoint"
+            }
+          ], 
+          "key": "Approx_FitAndDivide2d::Approx_FitAndDivide2d(AppCont_Function, Standard_Integer, Standard_Integer, Standard_Real, Standard_Real, Standard_Boolean, AppParCurves_Constraint, AppParCurves_Constraint)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_FitAndDivide2d", 
+          "parent": "Approx_FitAndDivide2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "degreemin", 
+              "default": "3"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "degreemax", 
+              "default": "8"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance3d", 
+              "default": "1.0000000000000001E-5"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance2d", 
+              "default": "1.0000000000000001E-5"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "cutting", 
+              "default": "false"
+            }, 
+            {
+              "decl": "const AppParCurves_Constraint", 
+              "type": "AppParCurves_Constraint", 
+              "name": "FirstC", 
+              "default": "::AppParCurves_Constraint::AppParCurves_TangencyPoint"
+            }, 
+            {
+              "decl": "const AppParCurves_Constraint", 
+              "type": "AppParCurves_Constraint", 
+              "name": "LastC", 
+              "default": "::AppParCurves_Constraint::AppParCurves_TangencyPoint"
+            }
+          ], 
+          "key": "Approx_FitAndDivide2d::Approx_FitAndDivide2d(Standard_Integer, Standard_Integer, Standard_Real, Standard_Real, Standard_Boolean, AppParCurves_Constraint, AppParCurves_Constraint)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_FitAndDivide2d", 
+          "parent": "Approx_FitAndDivide2d", 
+          "arguments": [
+            {
+              "decl": "const Approx_FitAndDivide2d &", 
+              "type": "Approx_FitAndDivide2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Approx_FitAndDivide2d::Approx_FitAndDivide2d(Approx_FitAndDivide2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "Approx_FitAndDivide2d", 
+          "arguments": [
+            {
+              "decl": "const AppCont_Function &", 
+              "type": "AppCont_Function", 
+              "name": "Line"
+            }
+          ], 
+          "key": "Approx_FitAndDivide2d::Perform(AppCont_Function)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetDegrees", 
+          "parent": "Approx_FitAndDivide2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "degreemin"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "degreemax"
+            }
+          ], 
+          "key": "Approx_FitAndDivide2d::SetDegrees(Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetTolerances", 
+          "parent": "Approx_FitAndDivide2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance3d"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance2d"
+            }
+          ], 
+          "key": "Approx_FitAndDivide2d::SetTolerances(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetConstraints", 
+          "parent": "Approx_FitAndDivide2d", 
+          "arguments": [
+            {
+              "decl": "const AppParCurves_Constraint", 
+              "type": "AppParCurves_Constraint", 
+              "name": "FirstC"
+            }, 
+            {
+              "decl": "const AppParCurves_Constraint", 
+              "type": "AppParCurves_Constraint", 
+              "name": "LastC"
+            }
+          ], 
+          "key": "Approx_FitAndDivide2d::SetConstraints(AppParCurves_Constraint, AppParCurves_Constraint)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsAllApproximated", 
+          "parent": "Approx_FitAndDivide2d", 
+          "arguments": [], 
+          "key": "Approx_FitAndDivide2d::IsAllApproximated()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsToleranceReached", 
+          "parent": "Approx_FitAndDivide2d", 
+          "arguments": [], 
+          "key": "Approx_FitAndDivide2d::IsToleranceReached()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Error", 
+          "parent": "Approx_FitAndDivide2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "tol3d"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "tol2d"
+            }
+          ], 
+          "key": "Approx_FitAndDivide2d::Error(Standard_Integer, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbMultiCurves", 
+          "parent": "Approx_FitAndDivide2d", 
+          "arguments": [], 
+          "key": "Approx_FitAndDivide2d::NbMultiCurves()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Approx_FitAndDivide2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "default": "1"
+            }
+          ], 
+          "key": "Approx_FitAndDivide2d::Value(Standard_Integer)", 
+          "returnType": "AppParCurves_MultiCurve", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parameters", 
+          "parent": "Approx_FitAndDivide2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "firstp"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "lastp"
+            }
+          ], 
+          "key": "Approx_FitAndDivide2d::Parameters(Standard_Integer, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Approx_FitAndDivide2d.hxx", 
+        36
+      ], 
+      "key": "Approx_FitAndDivide2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Approx_HArray1OfGTrsf2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Approx_HArray1OfGTrsf2d", 
+          "parent": "Approx_HArray1OfGTrsf2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theLower"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theUpper"
+            }
+          ], 
+          "key": "Approx_HArray1OfGTrsf2d::Approx_HArray1OfGTrsf2d(Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_HArray1OfGTrsf2d", 
+          "parent": "Approx_HArray1OfGTrsf2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theLower"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theUpper"
+            }, 
+            {
+              "decl": "const NCollection_Array1<gp_GTrsf2d>::value_type &", 
+              "type": "NCollection_Array1<gp_GTrsf2d>::value_type", 
+              "name": "theValue"
+            }
+          ], 
+          "key": "Approx_HArray1OfGTrsf2d::Approx_HArray1OfGTrsf2d(Standard_Integer, Standard_Integer, NCollection_Array1<gp_GTrsf2d>::value_type)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_HArray1OfGTrsf2d", 
+          "parent": "Approx_HArray1OfGTrsf2d", 
+          "arguments": [
+            {
+              "decl": "const Approx_Array1OfGTrsf2d &", 
+              "type": "Approx_Array1OfGTrsf2d", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Approx_HArray1OfGTrsf2d::Approx_HArray1OfGTrsf2d(Approx_Array1OfGTrsf2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_HArray1OfGTrsf2d", 
+          "parent": "Approx_HArray1OfGTrsf2d", 
+          "arguments": [
+            {
+              "decl": "const Approx_HArray1OfGTrsf2d &", 
+              "type": "Approx_HArray1OfGTrsf2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Approx_HArray1OfGTrsf2d::Approx_HArray1OfGTrsf2d(Approx_HArray1OfGTrsf2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Array1", 
+          "parent": "Approx_HArray1OfGTrsf2d", 
+          "arguments": [], 
+          "key": "Approx_HArray1OfGTrsf2d::Array1()", 
+          "returnType": "Approx_Array1OfGTrsf2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeArray1", 
+          "parent": "Approx_HArray1OfGTrsf2d", 
+          "arguments": [], 
+          "key": "Approx_HArray1OfGTrsf2d::ChangeArray1()", 
+          "returnType": "Approx_Array1OfGTrsf2d &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Approx_HArray1OfGTrsf2d", 
+          "arguments": [], 
+          "key": "Approx_HArray1OfGTrsf2d::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Approx_HArray1OfGTrsf2d", 
+          "arguments": [], 
+          "key": "Approx_HArray1OfGTrsf2d::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Approx_HArray1OfGTrsf2d", 
+          "arguments": [], 
+          "key": "Approx_HArray1OfGTrsf2d::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Array1<gp_GTrsf2d>"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Approx_HArray1OfGTrsf2d.hxx", 
+        24
+      ], 
+      "key": "Approx_HArray1OfGTrsf2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Approx_SweepFunction", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "declType": "method", 
+          "name": "D0", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Param"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "TColgp_Array1OfPnt &", 
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles"
+            }, 
+            {
+              "decl": "TColgp_Array1OfPnt2d &", 
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths"
+            }
+          ], 
+          "key": "Approx_SweepFunction::D0(Standard_Real, Standard_Real, Standard_Real, TColgp_Array1OfPnt, TColgp_Array1OfPnt2d, TColStd_Array1OfReal)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Param"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "TColgp_Array1OfPnt &", 
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles"
+            }, 
+            {
+              "decl": "TColgp_Array1OfVec &", 
+              "type": "TColgp_Array1OfVec", 
+              "name": "DPoles"
+            }, 
+            {
+              "decl": "TColgp_Array1OfPnt2d &", 
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d"
+            }, 
+            {
+              "decl": "TColgp_Array1OfVec2d &", 
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "DPoles2d"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "DWeigths"
+            }
+          ], 
+          "key": "Approx_SweepFunction::D1(Standard_Real, Standard_Real, Standard_Real, TColgp_Array1OfPnt, TColgp_Array1OfVec, TColgp_Array1OfPnt2d, TColgp_Array1OfVec2d, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Param"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "TColgp_Array1OfPnt &", 
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles"
+            }, 
+            {
+              "decl": "TColgp_Array1OfVec &", 
+              "type": "TColgp_Array1OfVec", 
+              "name": "DPoles"
+            }, 
+            {
+              "decl": "TColgp_Array1OfVec &", 
+              "type": "TColgp_Array1OfVec", 
+              "name": "D2Poles"
+            }, 
+            {
+              "decl": "TColgp_Array1OfPnt2d &", 
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d"
+            }, 
+            {
+              "decl": "TColgp_Array1OfVec2d &", 
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "DPoles2d"
+            }, 
+            {
+              "decl": "TColgp_Array1OfVec2d &", 
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "D2Poles2d"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "DWeigths"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "D2Weigths"
+            }
+          ], 
+          "key": "Approx_SweepFunction::D2(Standard_Real, Standard_Real, Standard_Real, TColgp_Array1OfPnt, TColgp_Array1OfVec, TColgp_Array1OfVec, TColgp_Array1OfPnt2d, TColgp_Array1OfVec2d, TColgp_Array1OfVec2d, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Nb2dCurves", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [], 
+          "key": "Approx_SweepFunction::Nb2dCurves()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "SectionShape", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "NbPoles"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "NbKnots"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "Degree"
+            }
+          ], 
+          "key": "Approx_SweepFunction::SectionShape(Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Knots", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "TKnots"
+            }
+          ], 
+          "key": "Approx_SweepFunction::Knots(TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Mults", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfInteger &", 
+              "type": "TColStd_Array1OfInteger", 
+              "name": "TMults"
+            }
+          ], 
+          "key": "Approx_SweepFunction::Mults(TColStd_Array1OfInteger)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsRational", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [], 
+          "key": "Approx_SweepFunction::IsRational()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbIntervals", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "Approx_SweepFunction::NbIntervals(GeomAbs_Shape)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Intervals", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "S"
+            }
+          ], 
+          "key": "Approx_SweepFunction::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetInterval", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }
+          ], 
+          "key": "Approx_SweepFunction::SetInterval(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Resolution", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "TolU"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "TolV"
+            }
+          ], 
+          "key": "Approx_SweepFunction::Resolution(Standard_Integer, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetTolerance", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "BoundTol"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "SurfTol"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "AngleTol"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Tol3d"
+            }
+          ], 
+          "key": "Approx_SweepFunction::GetTolerance(Standard_Real, Standard_Real, Standard_Real, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetTolerance", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol3d"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol2d"
+            }
+          ], 
+          "key": "Approx_SweepFunction::SetTolerance(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "BarycentreOfSurf", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [], 
+          "key": "Approx_SweepFunction::BarycentreOfSurf()", 
+          "returnType": "gp_Pnt", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaximalSection", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [], 
+          "key": "Approx_SweepFunction::MaximalSection()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetMinimalWeight", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths"
+            }
+          ], 
+          "key": "Approx_SweepFunction::GetMinimalWeight(TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [], 
+          "key": "Approx_SweepFunction::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [], 
+          "key": "Approx_SweepFunction::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Approx_SweepFunction", 
+          "arguments": [], 
+          "key": "Approx_SweepFunction::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Approx_SweepFunction.hxx", 
+        44
+      ], 
+      "key": "Approx_SweepFunction"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Approx_SameParameter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Approx_SameParameter", 
+          "parent": "Approx_SameParameter", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C3D"
+            }, 
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C2D"
+            }, 
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "Approx_SameParameter::Approx_SameParameter(opencascade::handle<Geom_Curve>, opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom_Surface>, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_SameParameter", 
+          "parent": "Approx_SameParameter", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C3D"
+            }, 
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C2D"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "Approx_SameParameter::Approx_SameParameter(opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Geom2d_Curve>, opencascade::handle<Adaptor3d_HSurface>, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_SameParameter", 
+          "parent": "Approx_SameParameter", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C3D"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "C2D"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "Approx_SameParameter::Approx_SameParameter(opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor2d_HCurve2d>, opencascade::handle<Adaptor3d_HSurface>, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_SameParameter", 
+          "parent": "Approx_SameParameter", 
+          "arguments": [
+            {
+              "decl": "const Approx_SameParameter &", 
+              "type": "Approx_SameParameter", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Approx_SameParameter::Approx_SameParameter(Approx_SameParameter)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "Approx_SameParameter", 
+          "arguments": [], 
+          "key": "Approx_SameParameter::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "TolReached", 
+          "parent": "Approx_SameParameter", 
+          "arguments": [], 
+          "key": "Approx_SameParameter::TolReached()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsSameParameter", 
+          "parent": "Approx_SameParameter", 
+          "arguments": [], 
+          "key": "Approx_SameParameter::IsSameParameter()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve2d", 
+          "parent": "Approx_SameParameter", 
+          "arguments": [], 
+          "key": "Approx_SameParameter::Curve2d()", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Approx_SameParameter.hxx", 
+        40
+      ], 
+      "key": "Approx_SameParameter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Approx_SweepApproximation", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Approx_SweepApproximation", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Approx_SweepFunction> &", 
+              "type": "opencascade::handle<Approx_SweepFunction>", 
+              "name": "Func"
+            }
+          ], 
+          "key": "Approx_SweepApproximation::Approx_SweepApproximation(opencascade::handle<Approx_SweepFunction>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_SweepApproximation", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [
+            {
+              "decl": "const Approx_SweepApproximation &", 
+              "type": "Approx_SweepApproximation", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Approx_SweepApproximation::Approx_SweepApproximation(Approx_SweepApproximation)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol3d"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "BoundTol"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol2d"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "TolAngular"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C0"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Degmax", 
+              "default": "11"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Segmax", 
+              "default": "50"
+            }
+          ], 
+          "key": "Approx_SweepApproximation::Perform(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, GeomAbs_Shape, Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Eval", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Parameter"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "DerivativeRequest"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Result"
+            }
+          ], 
+          "key": "Approx_SweepApproximation::Eval(Standard_Real, Standard_Integer, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Integer", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [], 
+          "key": "Approx_SweepApproximation::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SurfShape", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "UDegree"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "VDegree"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "NbUPoles"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "NbVPoles"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "NbUKnots"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "NbVKnots"
+            }
+          ], 
+          "key": "Approx_SweepApproximation::SurfShape(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Surface", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [
+            {
+              "decl": "TColgp_Array2OfPnt &", 
+              "type": "TColgp_Array2OfPnt", 
+              "name": "TPoles"
+            }, 
+            {
+              "decl": "TColStd_Array2OfReal &", 
+              "type": "TColStd_Array2OfReal", 
+              "name": "TWeights"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "TUKnots"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "TVKnots"
+            }, 
+            {
+              "decl": "TColStd_Array1OfInteger &", 
+              "type": "TColStd_Array1OfInteger", 
+              "name": "TUMults"
+            }, 
+            {
+              "decl": "TColStd_Array1OfInteger &", 
+              "type": "TColStd_Array1OfInteger", 
+              "name": "TVMults"
+            }
+          ], 
+          "key": "Approx_SweepApproximation::Surface(TColgp_Array2OfPnt, TColStd_Array2OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfInteger, TColStd_Array1OfInteger)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UDegree", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [], 
+          "key": "Approx_SweepApproximation::UDegree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VDegree", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [], 
+          "key": "Approx_SweepApproximation::VDegree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SurfPoles", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [], 
+          "key": "Approx_SweepApproximation::SurfPoles()", 
+          "returnType": "TColgp_Array2OfPnt const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SurfWeights", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [], 
+          "key": "Approx_SweepApproximation::SurfWeights()", 
+          "returnType": "TColStd_Array2OfReal const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SurfUKnots", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [], 
+          "key": "Approx_SweepApproximation::SurfUKnots()", 
+          "returnType": "TColStd_Array1OfReal const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SurfVKnots", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [], 
+          "key": "Approx_SweepApproximation::SurfVKnots()", 
+          "returnType": "TColStd_Array1OfReal const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SurfUMults", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [], 
+          "key": "Approx_SweepApproximation::SurfUMults()", 
+          "returnType": "TColStd_Array1OfInteger const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SurfVMults", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [], 
+          "key": "Approx_SweepApproximation::SurfVMults()", 
+          "returnType": "TColStd_Array1OfInteger const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxErrorOnSurf", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [], 
+          "key": "Approx_SweepApproximation::MaxErrorOnSurf()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AverageErrorOnSurf", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [], 
+          "key": "Approx_SweepApproximation::AverageErrorOnSurf()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbCurves2d", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [], 
+          "key": "Approx_SweepApproximation::NbCurves2d()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curves2dShape", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "Degree"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "NbPoles"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "NbKnots"
+            }
+          ], 
+          "key": "Approx_SweepApproximation::Curves2dShape(Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve2d", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "TColgp_Array1OfPnt2d &", 
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "TPoles"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "TKnots"
+            }, 
+            {
+              "decl": "TColStd_Array1OfInteger &", 
+              "type": "TColStd_Array1OfInteger", 
+              "name": "TMults"
+            }
+          ], 
+          "key": "Approx_SweepApproximation::Curve2d(Standard_Integer, TColgp_Array1OfPnt2d, TColStd_Array1OfReal, TColStd_Array1OfInteger)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curves2dDegree", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [], 
+          "key": "Approx_SweepApproximation::Curves2dDegree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve2dPoles", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "Approx_SweepApproximation::Curve2dPoles(Standard_Integer)", 
+          "returnType": "TColgp_Array1OfPnt2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curves2dKnots", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [], 
+          "key": "Approx_SweepApproximation::Curves2dKnots()", 
+          "returnType": "TColStd_Array1OfReal const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curves2dMults", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [], 
+          "key": "Approx_SweepApproximation::Curves2dMults()", 
+          "returnType": "TColStd_Array1OfInteger const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Max2dError", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "Approx_SweepApproximation::Max2dError(Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Average2dError", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "Approx_SweepApproximation::Average2dError(Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "TolCurveOnSurf", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "Approx_SweepApproximation::TolCurveOnSurf(Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Approx_SweepApproximation", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "o"
+            }
+          ], 
+          "key": "Approx_SweepApproximation::Dump(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Approx_SweepApproximation.hxx", 
+        62
+      ], 
+      "key": "Approx_SweepApproximation"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Approx_CurvilinearParameter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Approx_CurvilinearParameter", 
+          "parent": "Approx_CurvilinearParameter", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C3D"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "Order"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegree"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxSegments"
+            }
+          ], 
+          "key": "Approx_CurvilinearParameter::Approx_CurvilinearParameter(opencascade::handle<Adaptor3d_HCurve>, Standard_Real, GeomAbs_Shape, Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_CurvilinearParameter", 
+          "parent": "Approx_CurvilinearParameter", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "C2D"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "Surf"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "Order"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegree"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxSegments"
+            }
+          ], 
+          "key": "Approx_CurvilinearParameter::Approx_CurvilinearParameter(opencascade::handle<Adaptor2d_HCurve2d>, opencascade::handle<Adaptor3d_HSurface>, Standard_Real, GeomAbs_Shape, Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_CurvilinearParameter", 
+          "parent": "Approx_CurvilinearParameter", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "C2D1"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "Surf1"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "C2D2"
+            }, 
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "Surf2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "Order"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegree"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxSegments"
+            }
+          ], 
+          "key": "Approx_CurvilinearParameter::Approx_CurvilinearParameter(opencascade::handle<Adaptor2d_HCurve2d>, opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor2d_HCurve2d>, opencascade::handle<Adaptor3d_HSurface>, Standard_Real, GeomAbs_Shape, Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_CurvilinearParameter", 
+          "parent": "Approx_CurvilinearParameter", 
+          "arguments": [
+            {
+              "decl": "const Approx_CurvilinearParameter &", 
+              "type": "Approx_CurvilinearParameter", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Approx_CurvilinearParameter::Approx_CurvilinearParameter(Approx_CurvilinearParameter)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "Approx_CurvilinearParameter", 
+          "arguments": [], 
+          "key": "Approx_CurvilinearParameter::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasResult", 
+          "parent": "Approx_CurvilinearParameter", 
+          "arguments": [], 
+          "key": "Approx_CurvilinearParameter::HasResult()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve3d", 
+          "parent": "Approx_CurvilinearParameter", 
+          "arguments": [], 
+          "key": "Approx_CurvilinearParameter::Curve3d()", 
+          "returnType": "opencascade::handle<Geom_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError3d", 
+          "parent": "Approx_CurvilinearParameter", 
+          "arguments": [], 
+          "key": "Approx_CurvilinearParameter::MaxError3d()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve2d1", 
+          "parent": "Approx_CurvilinearParameter", 
+          "arguments": [], 
+          "key": "Approx_CurvilinearParameter::Curve2d1()", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError2d1", 
+          "parent": "Approx_CurvilinearParameter", 
+          "arguments": [], 
+          "key": "Approx_CurvilinearParameter::MaxError2d1()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve2d2", 
+          "parent": "Approx_CurvilinearParameter", 
+          "arguments": [], 
+          "key": "Approx_CurvilinearParameter::Curve2d2()", 
+          "returnType": "opencascade::handle<Geom2d_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError2d2", 
+          "parent": "Approx_CurvilinearParameter", 
+          "arguments": [], 
+          "key": "Approx_CurvilinearParameter::MaxError2d2()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Approx_CurvilinearParameter", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "o"
+            }
+          ], 
+          "key": "Approx_CurvilinearParameter::Dump(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Approx_CurvilinearParameter.hxx", 
+        45
+      ], 
+      "key": "Approx_CurvilinearParameter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Approx_FitAndDivide", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Approx_FitAndDivide", 
+          "parent": "Approx_FitAndDivide", 
+          "arguments": [
+            {
+              "decl": "const AppCont_Function &", 
+              "type": "AppCont_Function", 
+              "name": "Line"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "degreemin", 
+              "default": "3"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "degreemax", 
+              "default": "8"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance3d", 
+              "default": "1.0000000000000001E-5"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance2d", 
+              "default": "1.0000000000000001E-5"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "cutting", 
+              "default": "false"
+            }, 
+            {
+              "decl": "const AppParCurves_Constraint", 
+              "type": "AppParCurves_Constraint", 
+              "name": "FirstC", 
+              "default": "::AppParCurves_Constraint::AppParCurves_TangencyPoint"
+            }, 
+            {
+              "decl": "const AppParCurves_Constraint", 
+              "type": "AppParCurves_Constraint", 
+              "name": "LastC", 
+              "default": "::AppParCurves_Constraint::AppParCurves_TangencyPoint"
+            }
+          ], 
+          "key": "Approx_FitAndDivide::Approx_FitAndDivide(AppCont_Function, Standard_Integer, Standard_Integer, Standard_Real, Standard_Real, Standard_Boolean, AppParCurves_Constraint, AppParCurves_Constraint)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_FitAndDivide", 
+          "parent": "Approx_FitAndDivide", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "degreemin", 
+              "default": "3"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "degreemax", 
+              "default": "8"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance3d", 
+              "default": "1.0000000000000001E-5"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance2d", 
+              "default": "1.0000000000000001E-5"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "cutting", 
+              "default": "false"
+            }, 
+            {
+              "decl": "const AppParCurves_Constraint", 
+              "type": "AppParCurves_Constraint", 
+              "name": "FirstC", 
+              "default": "::AppParCurves_Constraint::AppParCurves_TangencyPoint"
+            }, 
+            {
+              "decl": "const AppParCurves_Constraint", 
+              "type": "AppParCurves_Constraint", 
+              "name": "LastC", 
+              "default": "::AppParCurves_Constraint::AppParCurves_TangencyPoint"
+            }
+          ], 
+          "key": "Approx_FitAndDivide::Approx_FitAndDivide(Standard_Integer, Standard_Integer, Standard_Real, Standard_Real, Standard_Boolean, AppParCurves_Constraint, AppParCurves_Constraint)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_FitAndDivide", 
+          "parent": "Approx_FitAndDivide", 
+          "arguments": [
+            {
+              "decl": "const Approx_FitAndDivide &", 
+              "type": "Approx_FitAndDivide", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Approx_FitAndDivide::Approx_FitAndDivide(Approx_FitAndDivide)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "Approx_FitAndDivide", 
+          "arguments": [
+            {
+              "decl": "const AppCont_Function &", 
+              "type": "AppCont_Function", 
+              "name": "Line"
+            }
+          ], 
+          "key": "Approx_FitAndDivide::Perform(AppCont_Function)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetDegrees", 
+          "parent": "Approx_FitAndDivide", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "degreemin"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "degreemax"
+            }
+          ], 
+          "key": "Approx_FitAndDivide::SetDegrees(Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetTolerances", 
+          "parent": "Approx_FitAndDivide", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance3d"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolerance2d"
+            }
+          ], 
+          "key": "Approx_FitAndDivide::SetTolerances(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetConstraints", 
+          "parent": "Approx_FitAndDivide", 
+          "arguments": [
+            {
+              "decl": "const AppParCurves_Constraint", 
+              "type": "AppParCurves_Constraint", 
+              "name": "FirstC"
+            }, 
+            {
+              "decl": "const AppParCurves_Constraint", 
+              "type": "AppParCurves_Constraint", 
+              "name": "LastC"
+            }
+          ], 
+          "key": "Approx_FitAndDivide::SetConstraints(AppParCurves_Constraint, AppParCurves_Constraint)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsAllApproximated", 
+          "parent": "Approx_FitAndDivide", 
+          "arguments": [], 
+          "key": "Approx_FitAndDivide::IsAllApproximated()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsToleranceReached", 
+          "parent": "Approx_FitAndDivide", 
+          "arguments": [], 
+          "key": "Approx_FitAndDivide::IsToleranceReached()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Error", 
+          "parent": "Approx_FitAndDivide", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "tol3d"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "tol2d"
+            }
+          ], 
+          "key": "Approx_FitAndDivide::Error(Standard_Integer, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbMultiCurves", 
+          "parent": "Approx_FitAndDivide", 
+          "arguments": [], 
+          "key": "Approx_FitAndDivide::NbMultiCurves()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Approx_FitAndDivide", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "default": "1"
+            }
+          ], 
+          "key": "Approx_FitAndDivide::Value(Standard_Integer)", 
+          "returnType": "AppParCurves_MultiCurve", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parameters", 
+          "parent": "Approx_FitAndDivide", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "firstp"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "lastp"
+            }
+          ], 
+          "key": "Approx_FitAndDivide::Parameters(Standard_Integer, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Approx_FitAndDivide.hxx", 
+        36
+      ], 
+      "key": "Approx_FitAndDivide"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Approx_Curve3d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Approx_Curve3d", 
+          "parent": "Approx_Curve3d", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "Curve"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol3d"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "Order"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxSegments"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegree"
+            }
+          ], 
+          "key": "Approx_Curve3d::Approx_Curve3d(opencascade::handle<Adaptor3d_HCurve>, Standard_Real, GeomAbs_Shape, Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Approx_Curve3d", 
+          "parent": "Approx_Curve3d", 
+          "arguments": [
+            {
+              "decl": "const Approx_Curve3d &", 
+              "type": "Approx_Curve3d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Approx_Curve3d::Approx_Curve3d(Approx_Curve3d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve", 
+          "parent": "Approx_Curve3d", 
+          "arguments": [], 
+          "key": "Approx_Curve3d::Curve()", 
+          "returnType": "opencascade::handle<Geom_BSplineCurve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "Approx_Curve3d", 
+          "arguments": [], 
+          "key": "Approx_Curve3d::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasResult", 
+          "parent": "Approx_Curve3d", 
+          "arguments": [], 
+          "key": "Approx_Curve3d::HasResult()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError", 
+          "parent": "Approx_Curve3d", 
+          "arguments": [], 
+          "key": "Approx_Curve3d::MaxError()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Approx_Curve3d", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "o"
+            }
+          ], 
+          "key": "Approx_Curve3d::Dump(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Approx_Curve3d.hxx", 
+        29
+      ], 
+      "key": "Approx_Curve3d"
+    }, 
+    {
+      "type": "opencascade::handle<Approx_CurvlinFunc>", 
+      "declType": "typedef", 
+      "name": "Handle_Approx_CurvlinFunc", 
+      "key": "Handle_Approx_CurvlinFunc"
+    }, 
+    {
+      "type": "NCollection_Array1<opencascade::handle<Adaptor3d_HSurface> >", 
+      "declType": "typedef", 
+      "name": "Approx_Array1OfAdHSurface", 
+      "key": "Approx_Array1OfAdHSurface"
+    }, 
+    {
+      "type": "opencascade::handle<Approx_HArray1OfAdHSurface>", 
+      "declType": "typedef", 
+      "name": "Handle_Approx_HArray1OfAdHSurface", 
+      "key": "Handle_Approx_HArray1OfAdHSurface"
+    }, 
+    {
+      "type": "NCollection_Array1<gp_GTrsf2d>", 
+      "declType": "typedef", 
+      "name": "Approx_Array1OfGTrsf2d", 
+      "key": "Approx_Array1OfGTrsf2d"
+    }, 
+    {
+      "type": "opencascade::handle<Approx_HArray1OfGTrsf2d>", 
+      "declType": "typedef", 
+      "name": "Handle_Approx_HArray1OfGTrsf2d", 
+      "key": "Handle_Approx_HArray1OfGTrsf2d"
+    }, 
+    {
+      "type": "opencascade::handle<Approx_SweepFunction>", 
+      "declType": "typedef", 
+      "name": "Handle_Approx_SweepFunction", 
+      "key": "Handle_Approx_SweepFunction"
+    }, 
+    {
+      "type": "NCollection_Sequence<opencascade::handle<TColStd_HArray1OfReal> >", 
+      "declType": "typedef", 
+      "name": "Approx_SequenceOfHArray1OfReal", 
+      "key": "Approx_SequenceOfHArray1OfReal"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "Approx_PointsAdded", 
+          0
+        ], 
+        [
+          "Approx_NoPointsAdded", 
+          1
+        ], 
+        [
+          "Approx_NoApproximation", 
+          2
+        ]
+      ], 
+      "name": "Approx_Status", 
+      "key": "Approx_Status"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "Approx_ChordLength", 
+          0
+        ], 
+        [
+          "Approx_Centripetal", 
+          1
+        ], 
+        [
+          "Approx_IsoParametric", 
+          2
+        ]
+      ], 
+      "name": "Approx_ParametrizationType", 
+      "key": "Approx_ParametrizationType"
+    }
+  ], 
+  "name": "Approx"
+}

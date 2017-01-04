@@ -1,0 +1,1073 @@
+{
+  "headers": [
+    "AdvApprox_ApproxAFunction.hxx", 
+    "AdvApprox_DichoCutting.hxx", 
+    "AdvApprox_PrefCutting.hxx", 
+    "AdvApprox_Cutting.hxx", 
+    "AdvApprox_SimpleApprox.hxx", 
+    "AdvApprox_PrefAndRec.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "AdvApprox_Cutting", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "AdvApprox_Cutting", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "a"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "b"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "cuttingvalue"
+            }
+          ], 
+          "key": "AdvApprox_Cutting::Value(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApprox_Cutting.hxx", 
+        29
+      ], 
+      "key": "AdvApprox_Cutting"
+    }, 
+    {
+      "declType": "class", 
+      "name": "AdvApprox_ApproxAFunction", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "AdvApprox_ApproxAFunction", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num1DSS"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num2DSS"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num3DSS"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "OneDTol"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "TwoDTol"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "ThreeDTol"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDeg"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxSeg"
+            }, 
+            {
+              "decl": "const AdvApprox_EvaluatorFunction &", 
+              "type": "AdvApprox_EvaluatorFunction", 
+              "name": "Func"
+            }
+          ], 
+          "key": "AdvApprox_ApproxAFunction::AdvApprox_ApproxAFunction(Standard_Integer, Standard_Integer, Standard_Integer, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, Standard_Real, Standard_Real, GeomAbs_Shape, Standard_Integer, Standard_Integer, AdvApprox_EvaluatorFunction)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApprox_ApproxAFunction", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num1DSS"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num2DSS"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num3DSS"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "OneDTol"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "TwoDTol"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "ThreeDTol"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDeg"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxSeg"
+            }, 
+            {
+              "decl": "const AdvApprox_EvaluatorFunction &", 
+              "type": "AdvApprox_EvaluatorFunction", 
+              "name": "Func"
+            }, 
+            {
+              "decl": "const AdvApprox_Cutting &", 
+              "type": "AdvApprox_Cutting", 
+              "name": "CutTool"
+            }
+          ], 
+          "key": "AdvApprox_ApproxAFunction::AdvApprox_ApproxAFunction(Standard_Integer, Standard_Integer, Standard_Integer, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, Standard_Real, Standard_Real, GeomAbs_Shape, Standard_Integer, Standard_Integer, AdvApprox_EvaluatorFunction, AdvApprox_Cutting)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApprox_ApproxAFunction", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [
+            {
+              "decl": "const AdvApprox_ApproxAFunction &", 
+              "type": "AdvApprox_ApproxAFunction", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AdvApprox_ApproxAFunction::AdvApprox_ApproxAFunction(AdvApprox_ApproxAFunction)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Approximation", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "TotalDimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "TotalNumSS"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfInteger &", 
+              "type": "TColStd_Array1OfInteger", 
+              "name": "LocalDimension"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "AdvApprox_EvaluatorFunction &", 
+              "type": "AdvApprox_EvaluatorFunction", 
+              "name": "Evaluator"
+            }, 
+            {
+              "decl": "const AdvApprox_Cutting &", 
+              "type": "AdvApprox_Cutting", 
+              "name": "CutTool"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ContinuityOrder"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NumMaxCoeffs"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxSegments"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "TolerancesArray"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "code_precis"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "NumCurves"
+            }, 
+            {
+              "decl": "TColStd_Array1OfInteger &", 
+              "type": "TColStd_Array1OfInteger", 
+              "name": "NumCoeffPerCurveArray"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "LocalCoefficientArray"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "IntervalsArray"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "ErrorMaxArray"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "AverageErrorArray"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "ErrorCode"
+            }
+          ], 
+          "key": "AdvApprox_ApproxAFunction::Approximation(Standard_Integer, Standard_Integer, TColStd_Array1OfInteger, Standard_Real, Standard_Real, AdvApprox_EvaluatorFunction, AdvApprox_Cutting, Standard_Integer, Standard_Integer, Standard_Integer, TColStd_Array1OfReal, Standard_Integer, Standard_Integer, TColStd_Array1OfInteger, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal, Standard_Integer)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [], 
+          "key": "AdvApprox_ApproxAFunction::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasResult", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [], 
+          "key": "AdvApprox_ApproxAFunction::HasResult()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Poles1d", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [], 
+          "key": "AdvApprox_ApproxAFunction::Poles1d()", 
+          "returnType": "opencascade::handle<TColStd_HArray2OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Poles2d", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [], 
+          "key": "AdvApprox_ApproxAFunction::Poles2d()", 
+          "returnType": "opencascade::handle<TColgp_HArray2OfPnt2d>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Poles", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [], 
+          "key": "AdvApprox_ApproxAFunction::Poles()", 
+          "returnType": "opencascade::handle<TColgp_HArray2OfPnt>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPoles", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [], 
+          "key": "AdvApprox_ApproxAFunction::NbPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Poles1d", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "P"
+            }
+          ], 
+          "key": "AdvApprox_ApproxAFunction::Poles1d(Standard_Integer, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Poles2d", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "TColgp_Array1OfPnt2d &", 
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "P"
+            }
+          ], 
+          "key": "AdvApprox_ApproxAFunction::Poles2d(Standard_Integer, TColgp_Array1OfPnt2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Poles", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "TColgp_Array1OfPnt &", 
+              "type": "TColgp_Array1OfPnt", 
+              "name": "P"
+            }
+          ], 
+          "key": "AdvApprox_ApproxAFunction::Poles(Standard_Integer, TColgp_Array1OfPnt)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Degree", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [], 
+          "key": "AdvApprox_ApproxAFunction::Degree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbKnots", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [], 
+          "key": "AdvApprox_ApproxAFunction::NbKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NumSubSpaces", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }
+          ], 
+          "key": "AdvApprox_ApproxAFunction::NumSubSpaces(Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Knots", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [], 
+          "key": "AdvApprox_ApproxAFunction::Knots()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Multiplicities", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [], 
+          "key": "AdvApprox_ApproxAFunction::Multiplicities()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfInteger>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }
+          ], 
+          "key": "AdvApprox_ApproxAFunction::MaxError(Standard_Integer)", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AverageError", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }
+          ], 
+          "key": "AdvApprox_ApproxAFunction::AverageError(Standard_Integer)", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "AdvApprox_ApproxAFunction::MaxError(Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AverageError", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "AdvApprox_ApproxAFunction::AverageError(Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "AdvApprox_ApproxAFunction", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "o"
+            }
+          ], 
+          "key": "AdvApprox_ApproxAFunction::Dump(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApprox_ApproxAFunction.hxx", 
+        47
+      ], 
+      "key": "AdvApprox_ApproxAFunction"
+    }, 
+    {
+      "declType": "class", 
+      "name": "AdvApprox_DichoCutting", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "AdvApprox_DichoCutting", 
+          "parent": "AdvApprox_DichoCutting", 
+          "arguments": [], 
+          "key": "AdvApprox_DichoCutting::AdvApprox_DichoCutting()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApprox_DichoCutting", 
+          "parent": "AdvApprox_DichoCutting", 
+          "arguments": [
+            {
+              "decl": "const AdvApprox_DichoCutting &", 
+              "type": "AdvApprox_DichoCutting", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AdvApprox_DichoCutting::AdvApprox_DichoCutting(AdvApprox_DichoCutting)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "AdvApprox_DichoCutting", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "a"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "b"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "cuttingvalue"
+            }
+          ], 
+          "key": "AdvApprox_DichoCutting::Value(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "AdvApprox_Cutting"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApprox_DichoCutting.hxx", 
+        31
+      ], 
+      "key": "AdvApprox_DichoCutting"
+    }, 
+    {
+      "declType": "class", 
+      "name": "AdvApprox_PrefCutting", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "AdvApprox_PrefCutting", 
+          "parent": "AdvApprox_PrefCutting", 
+          "arguments": [
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "CutPnts"
+            }
+          ], 
+          "key": "AdvApprox_PrefCutting::AdvApprox_PrefCutting(TColStd_Array1OfReal)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApprox_PrefCutting", 
+          "parent": "AdvApprox_PrefCutting", 
+          "arguments": [
+            {
+              "decl": "const AdvApprox_PrefCutting &", 
+              "type": "AdvApprox_PrefCutting", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AdvApprox_PrefCutting::AdvApprox_PrefCutting(AdvApprox_PrefCutting)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "AdvApprox_PrefCutting", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "a"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "b"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "cuttingvalue"
+            }
+          ], 
+          "key": "AdvApprox_PrefCutting::Value(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "AdvApprox_Cutting"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApprox_PrefCutting.hxx", 
+        33
+      ], 
+      "key": "AdvApprox_PrefCutting"
+    }, 
+    {
+      "declType": "class", 
+      "name": "AdvApprox_SimpleApprox", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "AdvApprox_SimpleApprox", 
+          "parent": "AdvApprox_SimpleApprox", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "TotalDimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "TotalNumSS"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "WorkDegree"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NbGaussPoints"
+            }, 
+            {
+              "decl": "const opencascade::handle<PLib_JacobiPolynomial> &", 
+              "type": "opencascade::handle<PLib_JacobiPolynomial>", 
+              "name": "JacobiBase"
+            }, 
+            {
+              "decl": "const AdvApprox_EvaluatorFunction &", 
+              "type": "AdvApprox_EvaluatorFunction", 
+              "name": "Func"
+            }
+          ], 
+          "key": "AdvApprox_SimpleApprox::AdvApprox_SimpleApprox(Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Integer, Standard_Integer, opencascade::handle<PLib_JacobiPolynomial>, AdvApprox_EvaluatorFunction)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApprox_SimpleApprox", 
+          "parent": "AdvApprox_SimpleApprox", 
+          "arguments": [
+            {
+              "decl": "const AdvApprox_SimpleApprox &", 
+              "type": "AdvApprox_SimpleApprox", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AdvApprox_SimpleApprox::AdvApprox_SimpleApprox(AdvApprox_SimpleApprox)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "AdvApprox_SimpleApprox", 
+          "arguments": [
+            {
+              "decl": "const TColStd_Array1OfInteger &", 
+              "type": "TColStd_Array1OfInteger", 
+              "name": "LocalDimension"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "LocalTolerancesArray"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "First"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Last"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegree"
+            }
+          ], 
+          "key": "AdvApprox_SimpleApprox::Perform(TColStd_Array1OfInteger, TColStd_Array1OfReal, Standard_Real, Standard_Real, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "AdvApprox_SimpleApprox", 
+          "arguments": [], 
+          "key": "AdvApprox_SimpleApprox::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Degree", 
+          "parent": "AdvApprox_SimpleApprox", 
+          "arguments": [], 
+          "key": "AdvApprox_SimpleApprox::Degree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Coefficients", 
+          "parent": "AdvApprox_SimpleApprox", 
+          "arguments": [], 
+          "key": "AdvApprox_SimpleApprox::Coefficients()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstConstr", 
+          "parent": "AdvApprox_SimpleApprox", 
+          "arguments": [], 
+          "key": "AdvApprox_SimpleApprox::FirstConstr()", 
+          "returnType": "opencascade::handle<TColStd_HArray2OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastConstr", 
+          "parent": "AdvApprox_SimpleApprox", 
+          "arguments": [], 
+          "key": "AdvApprox_SimpleApprox::LastConstr()", 
+          "returnType": "opencascade::handle<TColStd_HArray2OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SomTab", 
+          "parent": "AdvApprox_SimpleApprox", 
+          "arguments": [], 
+          "key": "AdvApprox_SimpleApprox::SomTab()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DifTab", 
+          "parent": "AdvApprox_SimpleApprox", 
+          "arguments": [], 
+          "key": "AdvApprox_SimpleApprox::DifTab()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError", 
+          "parent": "AdvApprox_SimpleApprox", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "AdvApprox_SimpleApprox::MaxError(Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AverageError", 
+          "parent": "AdvApprox_SimpleApprox", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "AdvApprox_SimpleApprox::AverageError(Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "AdvApprox_SimpleApprox", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "o"
+            }
+          ], 
+          "key": "AdvApprox_SimpleApprox::Dump(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApprox_SimpleApprox.hxx", 
+        45
+      ], 
+      "key": "AdvApprox_SimpleApprox"
+    }, 
+    {
+      "declType": "class", 
+      "name": "AdvApprox_PrefAndRec", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "AdvApprox_PrefAndRec", 
+          "parent": "AdvApprox_PrefAndRec", 
+          "arguments": [
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "RecomendedCut"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "PrefferedCut"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Weight", 
+              "default": "5"
+            }
+          ], 
+          "key": "AdvApprox_PrefAndRec::AdvApprox_PrefAndRec(TColStd_Array1OfReal, TColStd_Array1OfReal, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApprox_PrefAndRec", 
+          "parent": "AdvApprox_PrefAndRec", 
+          "arguments": [
+            {
+              "decl": "const AdvApprox_PrefAndRec &", 
+              "type": "AdvApprox_PrefAndRec", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AdvApprox_PrefAndRec::AdvApprox_PrefAndRec(AdvApprox_PrefAndRec)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "AdvApprox_PrefAndRec", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "a"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "b"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "cuttingvalue"
+            }
+          ], 
+          "key": "AdvApprox_PrefAndRec::Value(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "AdvApprox_Cutting"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApprox_PrefAndRec.hxx", 
+        35
+      ], 
+      "key": "AdvApprox_PrefAndRec"
+    }
+  ], 
+  "name": "AdvApprox"
+}

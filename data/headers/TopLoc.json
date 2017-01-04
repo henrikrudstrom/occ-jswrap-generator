@@ -1,0 +1,750 @@
+{
+  "headers": [
+    "TopLoc_MapLocationHasher.hxx", 
+    "TopLoc_SListNodeOfItemLocation.hxx", 
+    "TopLoc_SListOfItemLocation.hxx", 
+    "TopLoc_MapIteratorOfMapOfLocation.hxx", 
+    "TopLoc_IndexedMapOfLocation.hxx", 
+    "TopLoc_MapOfLocation.hxx", 
+    "TopLoc_Location.hxx", 
+    "TopLoc_Datum3D.hxx", 
+    "TopLoc_ItemLocation.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "TopLoc_SListNodeOfItemLocation", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "TopLoc_SListNodeOfItemLocation", 
+          "parent": "TopLoc_SListNodeOfItemLocation", 
+          "arguments": [
+            {
+              "decl": "const TopLoc_ItemLocation &", 
+              "type": "TopLoc_ItemLocation", 
+              "name": "I"
+            }, 
+            {
+              "decl": "const TopLoc_SListOfItemLocation &", 
+              "type": "TopLoc_SListOfItemLocation", 
+              "name": "aTail"
+            }
+          ], 
+          "key": "TopLoc_SListNodeOfItemLocation::TopLoc_SListNodeOfItemLocation(TopLoc_ItemLocation, TopLoc_SListOfItemLocation)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TopLoc_SListNodeOfItemLocation", 
+          "parent": "TopLoc_SListNodeOfItemLocation", 
+          "arguments": [
+            {
+              "decl": "const TopLoc_SListNodeOfItemLocation &", 
+              "type": "TopLoc_SListNodeOfItemLocation", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "TopLoc_SListNodeOfItemLocation::TopLoc_SListNodeOfItemLocation(TopLoc_SListNodeOfItemLocation)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Tail", 
+          "parent": "TopLoc_SListNodeOfItemLocation", 
+          "arguments": [], 
+          "key": "TopLoc_SListNodeOfItemLocation::Tail()", 
+          "returnType": "TopLoc_SListOfItemLocation &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "TopLoc_SListNodeOfItemLocation", 
+          "arguments": [], 
+          "key": "TopLoc_SListNodeOfItemLocation::Value()", 
+          "returnType": "TopLoc_ItemLocation &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "TopLoc_SListNodeOfItemLocation", 
+          "arguments": [], 
+          "key": "TopLoc_SListNodeOfItemLocation::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "TopLoc_SListNodeOfItemLocation", 
+          "arguments": [], 
+          "key": "TopLoc_SListNodeOfItemLocation::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "TopLoc_SListNodeOfItemLocation", 
+          "arguments": [], 
+          "key": "TopLoc_SListNodeOfItemLocation::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopLoc_SListNodeOfItemLocation.hxx", 
+        34
+      ], 
+      "key": "TopLoc_SListNodeOfItemLocation"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopLoc_ItemLocation", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "TopLoc_ItemLocation", 
+          "parent": "TopLoc_ItemLocation", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TopLoc_Datum3D> &", 
+              "type": "opencascade::handle<TopLoc_Datum3D>", 
+              "name": "D"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "P"
+            }
+          ], 
+          "key": "TopLoc_ItemLocation::TopLoc_ItemLocation(opencascade::handle<TopLoc_Datum3D>, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TopLoc_ItemLocation", 
+          "parent": "TopLoc_ItemLocation", 
+          "arguments": [
+            {
+              "decl": "const TopLoc_ItemLocation &", 
+              "type": "TopLoc_ItemLocation", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "TopLoc_ItemLocation::TopLoc_ItemLocation(TopLoc_ItemLocation)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/TopLoc_ItemLocation.hxx", 
+        41
+      ], 
+      "key": "TopLoc_ItemLocation"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopLoc_SListOfItemLocation", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "TopLoc_SListOfItemLocation", 
+          "parent": "TopLoc_SListOfItemLocation", 
+          "arguments": [], 
+          "key": "TopLoc_SListOfItemLocation::TopLoc_SListOfItemLocation()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TopLoc_SListOfItemLocation", 
+          "parent": "TopLoc_SListOfItemLocation", 
+          "arguments": [
+            {
+              "decl": "const TopLoc_ItemLocation &", 
+              "type": "TopLoc_ItemLocation", 
+              "name": "anItem"
+            }, 
+            {
+              "decl": "const TopLoc_SListOfItemLocation &", 
+              "type": "TopLoc_SListOfItemLocation", 
+              "name": "aTail"
+            }
+          ], 
+          "key": "TopLoc_SListOfItemLocation::TopLoc_SListOfItemLocation(TopLoc_ItemLocation, TopLoc_SListOfItemLocation)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TopLoc_SListOfItemLocation", 
+          "parent": "TopLoc_SListOfItemLocation", 
+          "arguments": [
+            {
+              "decl": "const TopLoc_SListOfItemLocation &", 
+              "type": "TopLoc_SListOfItemLocation", 
+              "name": "Other"
+            }
+          ], 
+          "key": "TopLoc_SListOfItemLocation::TopLoc_SListOfItemLocation(TopLoc_SListOfItemLocation)", 
+          "returnType": "", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Assign", 
+          "parent": "TopLoc_SListOfItemLocation", 
+          "arguments": [
+            {
+              "decl": "const TopLoc_SListOfItemLocation &", 
+              "type": "TopLoc_SListOfItemLocation", 
+              "name": "Other"
+            }
+          ], 
+          "key": "TopLoc_SListOfItemLocation::Assign(TopLoc_SListOfItemLocation)", 
+          "returnType": "TopLoc_SListOfItemLocation &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEmpty", 
+          "parent": "TopLoc_SListOfItemLocation", 
+          "arguments": [], 
+          "key": "TopLoc_SListOfItemLocation::IsEmpty()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Clear", 
+          "parent": "TopLoc_SListOfItemLocation", 
+          "arguments": [], 
+          "key": "TopLoc_SListOfItemLocation::Clear()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "TopLoc_SListOfItemLocation", 
+          "arguments": [], 
+          "key": "TopLoc_SListOfItemLocation::Value()", 
+          "returnType": "TopLoc_ItemLocation const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Tail", 
+          "parent": "TopLoc_SListOfItemLocation", 
+          "arguments": [], 
+          "key": "TopLoc_SListOfItemLocation::Tail()", 
+          "returnType": "TopLoc_SListOfItemLocation const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Construct", 
+          "parent": "TopLoc_SListOfItemLocation", 
+          "arguments": [
+            {
+              "decl": "const TopLoc_ItemLocation &", 
+              "type": "TopLoc_ItemLocation", 
+              "name": "anItem"
+            }
+          ], 
+          "key": "TopLoc_SListOfItemLocation::Construct(TopLoc_ItemLocation)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ToTail", 
+          "parent": "TopLoc_SListOfItemLocation", 
+          "arguments": [], 
+          "key": "TopLoc_SListOfItemLocation::ToTail()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "More", 
+          "parent": "TopLoc_SListOfItemLocation", 
+          "arguments": [], 
+          "key": "TopLoc_SListOfItemLocation::More()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Next", 
+          "parent": "TopLoc_SListOfItemLocation", 
+          "arguments": [], 
+          "key": "TopLoc_SListOfItemLocation::Next()", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/TopLoc_SListOfItemLocation.hxx", 
+        45
+      ], 
+      "key": "TopLoc_SListOfItemLocation"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopLoc_Datum3D", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "TopLoc_Datum3D", 
+          "parent": "TopLoc_Datum3D", 
+          "arguments": [], 
+          "key": "TopLoc_Datum3D::TopLoc_Datum3D()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TopLoc_Datum3D", 
+          "parent": "TopLoc_Datum3D", 
+          "arguments": [
+            {
+              "decl": "const gp_Trsf &", 
+              "type": "gp_Trsf", 
+              "name": "T"
+            }
+          ], 
+          "key": "TopLoc_Datum3D::TopLoc_Datum3D(gp_Trsf)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TopLoc_Datum3D", 
+          "parent": "TopLoc_Datum3D", 
+          "arguments": [
+            {
+              "decl": "const TopLoc_Datum3D &", 
+              "type": "TopLoc_Datum3D", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "TopLoc_Datum3D::TopLoc_Datum3D(TopLoc_Datum3D)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Transformation", 
+          "parent": "TopLoc_Datum3D", 
+          "arguments": [], 
+          "key": "TopLoc_Datum3D::Transformation()", 
+          "returnType": "gp_Trsf const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ShallowDump", 
+          "parent": "TopLoc_Datum3D", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "S"
+            }
+          ], 
+          "key": "TopLoc_Datum3D::ShallowDump(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "TopLoc_Datum3D", 
+          "arguments": [], 
+          "key": "TopLoc_Datum3D::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "TopLoc_Datum3D", 
+          "arguments": [], 
+          "key": "TopLoc_Datum3D::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "TopLoc_Datum3D", 
+          "arguments": [], 
+          "key": "TopLoc_Datum3D::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopLoc_Datum3D.hxx", 
+        38
+      ], 
+      "key": "TopLoc_Datum3D"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopLoc_Location", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "TopLoc_Location", 
+          "parent": "TopLoc_Location", 
+          "arguments": [], 
+          "key": "TopLoc_Location::TopLoc_Location()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TopLoc_Location", 
+          "parent": "TopLoc_Location", 
+          "arguments": [
+            {
+              "decl": "const gp_Trsf &", 
+              "type": "gp_Trsf", 
+              "name": "T"
+            }
+          ], 
+          "key": "TopLoc_Location::TopLoc_Location(gp_Trsf)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TopLoc_Location", 
+          "parent": "TopLoc_Location", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TopLoc_Datum3D> &", 
+              "type": "opencascade::handle<TopLoc_Datum3D>", 
+              "name": "D"
+            }
+          ], 
+          "key": "TopLoc_Location::TopLoc_Location(opencascade::handle<TopLoc_Datum3D>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "TopLoc_Location", 
+          "parent": "TopLoc_Location", 
+          "arguments": [
+            {
+              "decl": "const TopLoc_Location &", 
+              "type": "TopLoc_Location", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "TopLoc_Location::TopLoc_Location(TopLoc_Location)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsIdentity", 
+          "parent": "TopLoc_Location", 
+          "arguments": [], 
+          "key": "TopLoc_Location::IsIdentity()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Identity", 
+          "parent": "TopLoc_Location", 
+          "arguments": [], 
+          "key": "TopLoc_Location::Identity()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstDatum", 
+          "parent": "TopLoc_Location", 
+          "arguments": [], 
+          "key": "TopLoc_Location::FirstDatum()", 
+          "returnType": "opencascade::handle<TopLoc_Datum3D> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstPower", 
+          "parent": "TopLoc_Location", 
+          "arguments": [], 
+          "key": "TopLoc_Location::FirstPower()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NextLocation", 
+          "parent": "TopLoc_Location", 
+          "arguments": [], 
+          "key": "TopLoc_Location::NextLocation()", 
+          "returnType": "TopLoc_Location const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Transformation", 
+          "parent": "TopLoc_Location", 
+          "arguments": [], 
+          "key": "TopLoc_Location::Transformation()", 
+          "returnType": "gp_Trsf const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Inverted", 
+          "parent": "TopLoc_Location", 
+          "arguments": [], 
+          "key": "TopLoc_Location::Inverted()", 
+          "returnType": "TopLoc_Location", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Multiplied", 
+          "parent": "TopLoc_Location", 
+          "arguments": [
+            {
+              "decl": "const TopLoc_Location &", 
+              "type": "TopLoc_Location", 
+              "name": "Other"
+            }
+          ], 
+          "key": "TopLoc_Location::Multiplied(TopLoc_Location)", 
+          "returnType": "TopLoc_Location", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Divided", 
+          "parent": "TopLoc_Location", 
+          "arguments": [
+            {
+              "decl": "const TopLoc_Location &", 
+              "type": "TopLoc_Location", 
+              "name": "Other"
+            }
+          ], 
+          "key": "TopLoc_Location::Divided(TopLoc_Location)", 
+          "returnType": "TopLoc_Location", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Predivided", 
+          "parent": "TopLoc_Location", 
+          "arguments": [
+            {
+              "decl": "const TopLoc_Location &", 
+              "type": "TopLoc_Location", 
+              "name": "Other"
+            }
+          ], 
+          "key": "TopLoc_Location::Predivided(TopLoc_Location)", 
+          "returnType": "TopLoc_Location", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Powered", 
+          "parent": "TopLoc_Location", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "pwr"
+            }
+          ], 
+          "key": "TopLoc_Location::Powered(Standard_Integer)", 
+          "returnType": "TopLoc_Location", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HashCode", 
+          "parent": "TopLoc_Location", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Upper"
+            }
+          ], 
+          "key": "TopLoc_Location::HashCode(Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEqual", 
+          "parent": "TopLoc_Location", 
+          "arguments": [
+            {
+              "decl": "const TopLoc_Location &", 
+              "type": "TopLoc_Location", 
+              "name": "Other"
+            }
+          ], 
+          "key": "TopLoc_Location::IsEqual(TopLoc_Location)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDifferent", 
+          "parent": "TopLoc_Location", 
+          "arguments": [
+            {
+              "decl": "const TopLoc_Location &", 
+              "type": "TopLoc_Location", 
+              "name": "Other"
+            }
+          ], 
+          "key": "TopLoc_Location::IsDifferent(TopLoc_Location)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ShallowDump", 
+          "parent": "TopLoc_Location", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "S"
+            }
+          ], 
+          "key": "TopLoc_Location::ShallowDump(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/TopLoc_Location.hxx", 
+        38
+      ], 
+      "key": "TopLoc_Location"
+    }, 
+    {
+      "type": "NCollection_DefaultHasher<TopLoc_Location>", 
+      "declType": "typedef", 
+      "name": "TopLoc_MapLocationHasher", 
+      "key": "TopLoc_MapLocationHasher"
+    }, 
+    {
+      "type": "opencascade::handle<TopLoc_SListNodeOfItemLocation>", 
+      "declType": "typedef", 
+      "name": "Handle_TopLoc_SListNodeOfItemLocation", 
+      "key": "Handle_TopLoc_SListNodeOfItemLocation"
+    }, 
+    {
+      "type": "NCollection_Map<TopLoc_Location, NCollection_DefaultHasher<TopLoc_Location> >", 
+      "declType": "typedef", 
+      "name": "TopLoc_MapOfLocation", 
+      "key": "TopLoc_MapOfLocation"
+    }, 
+    {
+      "type": "NCollection_Map<TopLoc_Location, NCollection_DefaultHasher<TopLoc_Location> >::Iterator", 
+      "declType": "typedef", 
+      "name": "TopLoc_MapIteratorOfMapOfLocation", 
+      "key": "TopLoc_MapIteratorOfMapOfLocation"
+    }, 
+    {
+      "type": "NCollection_IndexedMap<TopLoc_Location, NCollection_DefaultHasher<TopLoc_Location> >", 
+      "declType": "typedef", 
+      "name": "TopLoc_IndexedMapOfLocation", 
+      "key": "TopLoc_IndexedMapOfLocation"
+    }, 
+    {
+      "type": "opencascade::handle<TopLoc_Datum3D>", 
+      "declType": "typedef", 
+      "name": "Handle_TopLoc_Datum3D", 
+      "key": "Handle_TopLoc_Datum3D"
+    }
+  ], 
+  "name": "TopLoc"
+}

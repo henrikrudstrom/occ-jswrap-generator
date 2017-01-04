@@ -1,0 +1,3301 @@
+{
+  "headers": [
+    "gce_MakeCirc.hxx", 
+    "gce_MakeLin.hxx", 
+    "gce_MakeCirc2d.hxx", 
+    "gce_MakeLin2d.hxx", 
+    "gce_MakeMirror.hxx", 
+    "gce_MakeElips2d.hxx", 
+    "gce_MakeHypr.hxx", 
+    "gce_MakeParab.hxx", 
+    "gce_MakeScale.hxx", 
+    "gce_ErrorType.hxx", 
+    "gce_MakeDir2d.hxx", 
+    "gce_MakeHypr2d.hxx", 
+    "gce_MakeTranslation2d.hxx", 
+    "gce_MakeMirror2d.hxx", 
+    "gce_MakeCylinder.hxx", 
+    "gce_MakeRotation.hxx", 
+    "gce_MakeParab2d.hxx", 
+    "gce_Root.hxx", 
+    "gce_MakeDir.hxx", 
+    "gce_MakeTranslation.hxx", 
+    "gce_MakeScale2d.hxx", 
+    "gce_MakePln.hxx", 
+    "gce_MakeCone.hxx", 
+    "gce_MakeRotation2d.hxx", 
+    "gce_MakeElips.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "gce_Root", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_Root", 
+          "parent": "gce_Root", 
+          "arguments": [], 
+          "key": "gce_Root::gce_Root()", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_Root", 
+          "parent": "gce_Root", 
+          "arguments": [
+            {
+              "decl": "const gce_Root &", 
+              "type": "gce_Root", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_Root::gce_Root(gce_Root)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "gce_Root", 
+          "arguments": [], 
+          "key": "gce_Root::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Status", 
+          "parent": "gce_Root", 
+          "arguments": [], 
+          "key": "gce_Root::Status()", 
+          "returnType": "gce_ErrorType", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/gce_Root.hxx", 
+        30
+      ], 
+      "key": "gce_Root"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeCirc", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc", 
+          "parent": "gce_MakeCirc", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2 &", 
+              "type": "gp_Ax2", 
+              "name": "A2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Radius"
+            }
+          ], 
+          "key": "gce_MakeCirc::gce_MakeCirc(gp_Ax2, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc", 
+          "parent": "gce_MakeCirc", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "Circ"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Dist"
+            }
+          ], 
+          "key": "gce_MakeCirc::gce_MakeCirc(gp_Circ, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc", 
+          "parent": "gce_MakeCirc", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "Circ"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Point"
+            }
+          ], 
+          "key": "gce_MakeCirc::gce_MakeCirc(gp_Circ, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc", 
+          "parent": "gce_MakeCirc", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P2"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P3"
+            }
+          ], 
+          "key": "gce_MakeCirc::gce_MakeCirc(gp_Pnt, gp_Pnt, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc", 
+          "parent": "gce_MakeCirc", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Center"
+            }, 
+            {
+              "decl": "const gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "Norm"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Radius"
+            }
+          ], 
+          "key": "gce_MakeCirc::gce_MakeCirc(gp_Pnt, gp_Dir, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc", 
+          "parent": "gce_MakeCirc", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Center"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "Plane"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Radius"
+            }
+          ], 
+          "key": "gce_MakeCirc::gce_MakeCirc(gp_Pnt, gp_Pln, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc", 
+          "parent": "gce_MakeCirc", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Center"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Ptaxis"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Radius"
+            }
+          ], 
+          "key": "gce_MakeCirc::gce_MakeCirc(gp_Pnt, gp_Pnt, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc", 
+          "parent": "gce_MakeCirc", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax1 &", 
+              "type": "gp_Ax1", 
+              "name": "Axis"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Radius"
+            }
+          ], 
+          "key": "gce_MakeCirc::gce_MakeCirc(gp_Ax1, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc", 
+          "parent": "gce_MakeCirc", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeCirc &", 
+              "type": "gce_MakeCirc", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeCirc::gce_MakeCirc(gce_MakeCirc)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeCirc", 
+          "arguments": [], 
+          "key": "gce_MakeCirc::Value()", 
+          "returnType": "gp_Circ const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeCirc", 
+          "arguments": [], 
+          "key": "gce_MakeCirc::Operator()", 
+          "returnType": "gp_Circ const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "gce_Root"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeCirc.hxx", 
+        52
+      ], 
+      "key": "gce_MakeCirc"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeLin", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeLin", 
+          "parent": "gce_MakeLin", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax1 &", 
+              "type": "gp_Ax1", 
+              "name": "A1"
+            }
+          ], 
+          "key": "gce_MakeLin::gce_MakeLin(gp_Ax1)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeLin", 
+          "parent": "gce_MakeLin", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "V"
+            }
+          ], 
+          "key": "gce_MakeLin::gce_MakeLin(gp_Pnt, gp_Dir)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeLin", 
+          "parent": "gce_MakeLin", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "Lin"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Point"
+            }
+          ], 
+          "key": "gce_MakeLin::gce_MakeLin(gp_Lin, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeLin", 
+          "parent": "gce_MakeLin", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P2"
+            }
+          ], 
+          "key": "gce_MakeLin::gce_MakeLin(gp_Pnt, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeLin", 
+          "parent": "gce_MakeLin", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeLin &", 
+              "type": "gce_MakeLin", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeLin::gce_MakeLin(gce_MakeLin)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeLin", 
+          "arguments": [], 
+          "key": "gce_MakeLin::Value()", 
+          "returnType": "gp_Lin const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeLin", 
+          "arguments": [], 
+          "key": "gce_MakeLin::Operator()", 
+          "returnType": "gp_Lin const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "gce_Root"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeLin.hxx", 
+        40
+      ], 
+      "key": "gce_MakeLin"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeCirc2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc2d", 
+          "parent": "gce_MakeCirc2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2d &", 
+              "type": "gp_Ax2d", 
+              "name": "XAxis"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Radius"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "Sense", 
+              "default": "true"
+            }
+          ], 
+          "key": "gce_MakeCirc2d::gce_MakeCirc2d(gp_Ax2d, Standard_Real, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc2d", 
+          "parent": "gce_MakeCirc2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax22d &", 
+              "type": "gp_Ax22d", 
+              "name": "Axis"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Radius"
+            }
+          ], 
+          "key": "gce_MakeCirc2d::gce_MakeCirc2d(gp_Ax22d, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc2d", 
+          "parent": "gce_MakeCirc2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ2d &", 
+              "type": "gp_Circ2d", 
+              "name": "Circ"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Dist"
+            }
+          ], 
+          "key": "gce_MakeCirc2d::gce_MakeCirc2d(gp_Circ2d, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc2d", 
+          "parent": "gce_MakeCirc2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ2d &", 
+              "type": "gp_Circ2d", 
+              "name": "Circ"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Point"
+            }
+          ], 
+          "key": "gce_MakeCirc2d::gce_MakeCirc2d(gp_Circ2d, gp_Pnt2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc2d", 
+          "parent": "gce_MakeCirc2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P2"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P3"
+            }
+          ], 
+          "key": "gce_MakeCirc2d::gce_MakeCirc2d(gp_Pnt2d, gp_Pnt2d, gp_Pnt2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc2d", 
+          "parent": "gce_MakeCirc2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Center"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Radius"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "Sense", 
+              "default": "true"
+            }
+          ], 
+          "key": "gce_MakeCirc2d::gce_MakeCirc2d(gp_Pnt2d, Standard_Real, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc2d", 
+          "parent": "gce_MakeCirc2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Center"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Point"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "Sense", 
+              "default": "true"
+            }
+          ], 
+          "key": "gce_MakeCirc2d::gce_MakeCirc2d(gp_Pnt2d, gp_Pnt2d, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCirc2d", 
+          "parent": "gce_MakeCirc2d", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeCirc2d &", 
+              "type": "gce_MakeCirc2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeCirc2d::gce_MakeCirc2d(gce_MakeCirc2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeCirc2d", 
+          "arguments": [], 
+          "key": "gce_MakeCirc2d::Value()", 
+          "returnType": "gp_Circ2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeCirc2d", 
+          "arguments": [], 
+          "key": "gce_MakeCirc2d::Operator()", 
+          "returnType": "gp_Circ2d const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "gce_Root"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeCirc2d.hxx", 
+        47
+      ], 
+      "key": "gce_MakeCirc2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeLin2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeLin2d", 
+          "parent": "gce_MakeLin2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2d &", 
+              "type": "gp_Ax2d", 
+              "name": "A"
+            }
+          ], 
+          "key": "gce_MakeLin2d::gce_MakeLin2d(gp_Ax2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeLin2d", 
+          "parent": "gce_MakeLin2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const gp_Dir2d &", 
+              "type": "gp_Dir2d", 
+              "name": "V"
+            }
+          ], 
+          "key": "gce_MakeLin2d::gce_MakeLin2d(gp_Pnt2d, gp_Dir2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeLin2d", 
+          "parent": "gce_MakeLin2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "A"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "B"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "C"
+            }
+          ], 
+          "key": "gce_MakeLin2d::gce_MakeLin2d(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeLin2d", 
+          "parent": "gce_MakeLin2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin2d &", 
+              "type": "gp_Lin2d", 
+              "name": "Lin"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Dist"
+            }
+          ], 
+          "key": "gce_MakeLin2d::gce_MakeLin2d(gp_Lin2d, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeLin2d", 
+          "parent": "gce_MakeLin2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin2d &", 
+              "type": "gp_Lin2d", 
+              "name": "Lin"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Point"
+            }
+          ], 
+          "key": "gce_MakeLin2d::gce_MakeLin2d(gp_Lin2d, gp_Pnt2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeLin2d", 
+          "parent": "gce_MakeLin2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P2"
+            }
+          ], 
+          "key": "gce_MakeLin2d::gce_MakeLin2d(gp_Pnt2d, gp_Pnt2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeLin2d", 
+          "parent": "gce_MakeLin2d", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeLin2d &", 
+              "type": "gce_MakeLin2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeLin2d::gce_MakeLin2d(gce_MakeLin2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeLin2d", 
+          "arguments": [], 
+          "key": "gce_MakeLin2d::Value()", 
+          "returnType": "gp_Lin2d", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeLin2d", 
+          "arguments": [], 
+          "key": "gce_MakeLin2d::Operator()", 
+          "returnType": "gp_Lin2d", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "gce_Root"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeLin2d.hxx", 
+        45
+      ], 
+      "key": "gce_MakeLin2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeMirror", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeMirror", 
+          "parent": "gce_MakeMirror", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Point"
+            }
+          ], 
+          "key": "gce_MakeMirror::gce_MakeMirror(gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeMirror", 
+          "parent": "gce_MakeMirror", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax1 &", 
+              "type": "gp_Ax1", 
+              "name": "Axis"
+            }
+          ], 
+          "key": "gce_MakeMirror::gce_MakeMirror(gp_Ax1)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeMirror", 
+          "parent": "gce_MakeMirror", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "Line"
+            }
+          ], 
+          "key": "gce_MakeMirror::gce_MakeMirror(gp_Lin)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeMirror", 
+          "parent": "gce_MakeMirror", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Point"
+            }, 
+            {
+              "decl": "const gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "Direc"
+            }
+          ], 
+          "key": "gce_MakeMirror::gce_MakeMirror(gp_Pnt, gp_Dir)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeMirror", 
+          "parent": "gce_MakeMirror", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "Plane"
+            }
+          ], 
+          "key": "gce_MakeMirror::gce_MakeMirror(gp_Pln)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeMirror", 
+          "parent": "gce_MakeMirror", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2 &", 
+              "type": "gp_Ax2", 
+              "name": "Plane"
+            }
+          ], 
+          "key": "gce_MakeMirror::gce_MakeMirror(gp_Ax2)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeMirror", 
+          "parent": "gce_MakeMirror", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeMirror &", 
+              "type": "gce_MakeMirror", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeMirror::gce_MakeMirror(gce_MakeMirror)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeMirror", 
+          "arguments": [], 
+          "key": "gce_MakeMirror::Value()", 
+          "returnType": "gp_Trsf const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeMirror", 
+          "arguments": [], 
+          "key": "gce_MakeMirror::Operator()", 
+          "returnType": "gp_Trsf const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeMirror.hxx", 
+        41
+      ], 
+      "key": "gce_MakeMirror"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeElips2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeElips2d", 
+          "parent": "gce_MakeElips2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2d &", 
+              "type": "gp_Ax2d", 
+              "name": "MajorAxis"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "MajorRadius"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "MinorRadius"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "Sense", 
+              "default": "true"
+            }
+          ], 
+          "key": "gce_MakeElips2d::gce_MakeElips2d(gp_Ax2d, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeElips2d", 
+          "parent": "gce_MakeElips2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax22d &", 
+              "type": "gp_Ax22d", 
+              "name": "A"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "MajorRadius"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "MinorRadius"
+            }
+          ], 
+          "key": "gce_MakeElips2d::gce_MakeElips2d(gp_Ax22d, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeElips2d", 
+          "parent": "gce_MakeElips2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "S1"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "S2"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Center"
+            }
+          ], 
+          "key": "gce_MakeElips2d::gce_MakeElips2d(gp_Pnt2d, gp_Pnt2d, gp_Pnt2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeElips2d", 
+          "parent": "gce_MakeElips2d", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeElips2d &", 
+              "type": "gce_MakeElips2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeElips2d::gce_MakeElips2d(gce_MakeElips2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeElips2d", 
+          "arguments": [], 
+          "key": "gce_MakeElips2d::Value()", 
+          "returnType": "gp_Elips2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeElips2d", 
+          "arguments": [], 
+          "key": "gce_MakeElips2d::Operator()", 
+          "returnType": "gp_Elips2d const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "gce_Root"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeElips2d.hxx", 
+        43
+      ], 
+      "key": "gce_MakeElips2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeHypr", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeHypr", 
+          "parent": "gce_MakeHypr", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2 &", 
+              "type": "gp_Ax2", 
+              "name": "A2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "MajorRadius"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "MinorRadius"
+            }
+          ], 
+          "key": "gce_MakeHypr::gce_MakeHypr(gp_Ax2, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeHypr", 
+          "parent": "gce_MakeHypr", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "S1"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "S2"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Center"
+            }
+          ], 
+          "key": "gce_MakeHypr::gce_MakeHypr(gp_Pnt, gp_Pnt, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeHypr", 
+          "parent": "gce_MakeHypr", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeHypr &", 
+              "type": "gce_MakeHypr", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeHypr::gce_MakeHypr(gce_MakeHypr)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeHypr", 
+          "arguments": [], 
+          "key": "gce_MakeHypr::Value()", 
+          "returnType": "gp_Hypr const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeHypr", 
+          "arguments": [], 
+          "key": "gce_MakeHypr::Operator()", 
+          "returnType": "gp_Hypr const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "gce_Root"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeHypr.hxx", 
+        70
+      ], 
+      "key": "gce_MakeHypr"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeParab", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeParab", 
+          "parent": "gce_MakeParab", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2 &", 
+              "type": "gp_Ax2", 
+              "name": "A2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Focal"
+            }
+          ], 
+          "key": "gce_MakeParab::gce_MakeParab(gp_Ax2, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeParab", 
+          "parent": "gce_MakeParab", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax1 &", 
+              "type": "gp_Ax1", 
+              "name": "D"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "F"
+            }
+          ], 
+          "key": "gce_MakeParab::gce_MakeParab(gp_Ax1, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeParab", 
+          "parent": "gce_MakeParab", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeParab &", 
+              "type": "gce_MakeParab", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeParab::gce_MakeParab(gce_MakeParab)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeParab", 
+          "arguments": [], 
+          "key": "gce_MakeParab::Value()", 
+          "returnType": "gp_Parab const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeParab", 
+          "arguments": [], 
+          "key": "gce_MakeParab::Operator()", 
+          "returnType": "gp_Parab const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "gce_Root"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeParab.hxx", 
+        61
+      ], 
+      "key": "gce_MakeParab"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeScale", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeScale", 
+          "parent": "gce_MakeScale", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Point"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Scale"
+            }
+          ], 
+          "key": "gce_MakeScale::gce_MakeScale(gp_Pnt, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeScale", 
+          "parent": "gce_MakeScale", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeScale &", 
+              "type": "gce_MakeScale", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeScale::gce_MakeScale(gce_MakeScale)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeScale", 
+          "arguments": [], 
+          "key": "gce_MakeScale::Value()", 
+          "returnType": "gp_Trsf const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeScale", 
+          "arguments": [], 
+          "key": "gce_MakeScale::Operator()", 
+          "returnType": "gp_Trsf const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeScale.hxx", 
+        36
+      ], 
+      "key": "gce_MakeScale"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeDir2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeDir2d", 
+          "parent": "gce_MakeDir2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V"
+            }
+          ], 
+          "key": "gce_MakeDir2d::gce_MakeDir2d(gp_Vec2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeDir2d", 
+          "parent": "gce_MakeDir2d", 
+          "arguments": [
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "Coord"
+            }
+          ], 
+          "key": "gce_MakeDir2d::gce_MakeDir2d(gp_XY)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeDir2d", 
+          "parent": "gce_MakeDir2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Xv"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Yv"
+            }
+          ], 
+          "key": "gce_MakeDir2d::gce_MakeDir2d(Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeDir2d", 
+          "parent": "gce_MakeDir2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P2"
+            }
+          ], 
+          "key": "gce_MakeDir2d::gce_MakeDir2d(gp_Pnt2d, gp_Pnt2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeDir2d", 
+          "parent": "gce_MakeDir2d", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeDir2d &", 
+              "type": "gce_MakeDir2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeDir2d::gce_MakeDir2d(gce_MakeDir2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeDir2d", 
+          "arguments": [], 
+          "key": "gce_MakeDir2d::Value()", 
+          "returnType": "gp_Dir2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeDir2d", 
+          "arguments": [], 
+          "key": "gce_MakeDir2d::Operator()", 
+          "returnType": "gp_Dir2d const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "gce_Root"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeDir2d.hxx", 
+        40
+      ], 
+      "key": "gce_MakeDir2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeHypr2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeHypr2d", 
+          "parent": "gce_MakeHypr2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "S1"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "S2"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Center"
+            }
+          ], 
+          "key": "gce_MakeHypr2d::gce_MakeHypr2d(gp_Pnt2d, gp_Pnt2d, gp_Pnt2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeHypr2d", 
+          "parent": "gce_MakeHypr2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2d &", 
+              "type": "gp_Ax2d", 
+              "name": "MajorAxis"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "MajorRadius"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "MinorRadius"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "Sense"
+            }
+          ], 
+          "key": "gce_MakeHypr2d::gce_MakeHypr2d(gp_Ax2d, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeHypr2d", 
+          "parent": "gce_MakeHypr2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax22d &", 
+              "type": "gp_Ax22d", 
+              "name": "A"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "MajorRadius"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "MinorRadius"
+            }
+          ], 
+          "key": "gce_MakeHypr2d::gce_MakeHypr2d(gp_Ax22d, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeHypr2d", 
+          "parent": "gce_MakeHypr2d", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeHypr2d &", 
+              "type": "gce_MakeHypr2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeHypr2d::gce_MakeHypr2d(gce_MakeHypr2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeHypr2d", 
+          "arguments": [], 
+          "key": "gce_MakeHypr2d::Value()", 
+          "returnType": "gp_Hypr2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeHypr2d", 
+          "arguments": [], 
+          "key": "gce_MakeHypr2d::Operator()", 
+          "returnType": "gp_Hypr2d const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "gce_Root"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeHypr2d.hxx", 
+        67
+      ], 
+      "key": "gce_MakeHypr2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeTranslation2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeTranslation2d", 
+          "parent": "gce_MakeTranslation2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "Vect"
+            }
+          ], 
+          "key": "gce_MakeTranslation2d::gce_MakeTranslation2d(gp_Vec2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeTranslation2d", 
+          "parent": "gce_MakeTranslation2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Point1"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Point2"
+            }
+          ], 
+          "key": "gce_MakeTranslation2d::gce_MakeTranslation2d(gp_Pnt2d, gp_Pnt2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeTranslation2d", 
+          "parent": "gce_MakeTranslation2d", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeTranslation2d &", 
+              "type": "gce_MakeTranslation2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeTranslation2d::gce_MakeTranslation2d(gce_MakeTranslation2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeTranslation2d", 
+          "arguments": [], 
+          "key": "gce_MakeTranslation2d::Value()", 
+          "returnType": "gp_Trsf2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeTranslation2d", 
+          "arguments": [], 
+          "key": "gce_MakeTranslation2d::Operator()", 
+          "returnType": "gp_Trsf2d const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeTranslation2d.hxx", 
+        36
+      ], 
+      "key": "gce_MakeTranslation2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeMirror2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeMirror2d", 
+          "parent": "gce_MakeMirror2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Point"
+            }
+          ], 
+          "key": "gce_MakeMirror2d::gce_MakeMirror2d(gp_Pnt2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeMirror2d", 
+          "parent": "gce_MakeMirror2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2d &", 
+              "type": "gp_Ax2d", 
+              "name": "Axis"
+            }
+          ], 
+          "key": "gce_MakeMirror2d::gce_MakeMirror2d(gp_Ax2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeMirror2d", 
+          "parent": "gce_MakeMirror2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin2d &", 
+              "type": "gp_Lin2d", 
+              "name": "Line"
+            }
+          ], 
+          "key": "gce_MakeMirror2d::gce_MakeMirror2d(gp_Lin2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeMirror2d", 
+          "parent": "gce_MakeMirror2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Point"
+            }, 
+            {
+              "decl": "const gp_Dir2d &", 
+              "type": "gp_Dir2d", 
+              "name": "Direc"
+            }
+          ], 
+          "key": "gce_MakeMirror2d::gce_MakeMirror2d(gp_Pnt2d, gp_Dir2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeMirror2d", 
+          "parent": "gce_MakeMirror2d", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeMirror2d &", 
+              "type": "gce_MakeMirror2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeMirror2d::gce_MakeMirror2d(gce_MakeMirror2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeMirror2d", 
+          "arguments": [], 
+          "key": "gce_MakeMirror2d::Value()", 
+          "returnType": "gp_Trsf2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeMirror2d", 
+          "arguments": [], 
+          "key": "gce_MakeMirror2d::Operator()", 
+          "returnType": "gp_Trsf2d const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeMirror2d.hxx", 
+        38
+      ], 
+      "key": "gce_MakeMirror2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeCylinder", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCylinder", 
+          "parent": "gce_MakeCylinder", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2 &", 
+              "type": "gp_Ax2", 
+              "name": "A2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Radius"
+            }
+          ], 
+          "key": "gce_MakeCylinder::gce_MakeCylinder(gp_Ax2, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCylinder", 
+          "parent": "gce_MakeCylinder", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Point"
+            }
+          ], 
+          "key": "gce_MakeCylinder::gce_MakeCylinder(gp_Cylinder, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCylinder", 
+          "parent": "gce_MakeCylinder", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Dist"
+            }
+          ], 
+          "key": "gce_MakeCylinder::gce_MakeCylinder(gp_Cylinder, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCylinder", 
+          "parent": "gce_MakeCylinder", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P2"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P3"
+            }
+          ], 
+          "key": "gce_MakeCylinder::gce_MakeCylinder(gp_Pnt, gp_Pnt, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCylinder", 
+          "parent": "gce_MakeCylinder", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax1 &", 
+              "type": "gp_Ax1", 
+              "name": "Axis"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Radius"
+            }
+          ], 
+          "key": "gce_MakeCylinder::gce_MakeCylinder(gp_Ax1, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCylinder", 
+          "parent": "gce_MakeCylinder", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "Circ"
+            }
+          ], 
+          "key": "gce_MakeCylinder::gce_MakeCylinder(gp_Circ)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCylinder", 
+          "parent": "gce_MakeCylinder", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeCylinder &", 
+              "type": "gce_MakeCylinder", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeCylinder::gce_MakeCylinder(gce_MakeCylinder)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeCylinder", 
+          "arguments": [], 
+          "key": "gce_MakeCylinder::Value()", 
+          "returnType": "gp_Cylinder const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeCylinder", 
+          "arguments": [], 
+          "key": "gce_MakeCylinder::Operator()", 
+          "returnType": "gp_Cylinder const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "gce_Root"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeCylinder.hxx", 
+        44
+      ], 
+      "key": "gce_MakeCylinder"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeRotation", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeRotation", 
+          "parent": "gce_MakeRotation", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "Line"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Angle"
+            }
+          ], 
+          "key": "gce_MakeRotation::gce_MakeRotation(gp_Lin, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeRotation", 
+          "parent": "gce_MakeRotation", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax1 &", 
+              "type": "gp_Ax1", 
+              "name": "Axis"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Angle"
+            }
+          ], 
+          "key": "gce_MakeRotation::gce_MakeRotation(gp_Ax1, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeRotation", 
+          "parent": "gce_MakeRotation", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Point"
+            }, 
+            {
+              "decl": "const gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "Direc"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Angle"
+            }
+          ], 
+          "key": "gce_MakeRotation::gce_MakeRotation(gp_Pnt, gp_Dir, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeRotation", 
+          "parent": "gce_MakeRotation", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeRotation &", 
+              "type": "gce_MakeRotation", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeRotation::gce_MakeRotation(gce_MakeRotation)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeRotation", 
+          "arguments": [], 
+          "key": "gce_MakeRotation::Value()", 
+          "returnType": "gp_Trsf const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeRotation", 
+          "arguments": [], 
+          "key": "gce_MakeRotation::Operator()", 
+          "returnType": "gp_Trsf const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeRotation.hxx", 
+        39
+      ], 
+      "key": "gce_MakeRotation"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeParab2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeParab2d", 
+          "parent": "gce_MakeParab2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2d &", 
+              "type": "gp_Ax2d", 
+              "name": "MirrorAxis"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Focal"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "Sense", 
+              "default": "true"
+            }
+          ], 
+          "key": "gce_MakeParab2d::gce_MakeParab2d(gp_Ax2d, Standard_Real, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeParab2d", 
+          "parent": "gce_MakeParab2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax22d &", 
+              "type": "gp_Ax22d", 
+              "name": "A"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Focal"
+            }
+          ], 
+          "key": "gce_MakeParab2d::gce_MakeParab2d(gp_Ax22d, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeParab2d", 
+          "parent": "gce_MakeParab2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2d &", 
+              "type": "gp_Ax2d", 
+              "name": "D"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "F"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "Sense", 
+              "default": "true"
+            }
+          ], 
+          "key": "gce_MakeParab2d::gce_MakeParab2d(gp_Ax2d, gp_Pnt2d, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeParab2d", 
+          "parent": "gce_MakeParab2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "S1"
+            }, 
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Center"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "Sense", 
+              "default": "true"
+            }
+          ], 
+          "key": "gce_MakeParab2d::gce_MakeParab2d(gp_Pnt2d, gp_Pnt2d, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeParab2d", 
+          "parent": "gce_MakeParab2d", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeParab2d &", 
+              "type": "gce_MakeParab2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeParab2d::gce_MakeParab2d(gce_MakeParab2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeParab2d", 
+          "arguments": [], 
+          "key": "gce_MakeParab2d::Value()", 
+          "returnType": "gp_Parab2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeParab2d", 
+          "arguments": [], 
+          "key": "gce_MakeParab2d::Operator()", 
+          "returnType": "gp_Parab2d const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "gce_Root"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeParab2d.hxx", 
+        58
+      ], 
+      "key": "gce_MakeParab2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeDir", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeDir", 
+          "parent": "gce_MakeDir", 
+          "arguments": [
+            {
+              "decl": "const gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V"
+            }
+          ], 
+          "key": "gce_MakeDir::gce_MakeDir(gp_Vec)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeDir", 
+          "parent": "gce_MakeDir", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "Coord"
+            }
+          ], 
+          "key": "gce_MakeDir::gce_MakeDir(gp_XYZ)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeDir", 
+          "parent": "gce_MakeDir", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Xv"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Yv"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Zv"
+            }
+          ], 
+          "key": "gce_MakeDir::gce_MakeDir(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeDir", 
+          "parent": "gce_MakeDir", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P2"
+            }
+          ], 
+          "key": "gce_MakeDir::gce_MakeDir(gp_Pnt, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeDir", 
+          "parent": "gce_MakeDir", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeDir &", 
+              "type": "gce_MakeDir", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeDir::gce_MakeDir(gce_MakeDir)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeDir", 
+          "arguments": [], 
+          "key": "gce_MakeDir::Value()", 
+          "returnType": "gp_Dir const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeDir", 
+          "arguments": [], 
+          "key": "gce_MakeDir::Operator()", 
+          "returnType": "gp_Dir const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "gce_Root"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeDir.hxx", 
+        41
+      ], 
+      "key": "gce_MakeDir"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeTranslation", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeTranslation", 
+          "parent": "gce_MakeTranslation", 
+          "arguments": [
+            {
+              "decl": "const gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "Vect"
+            }
+          ], 
+          "key": "gce_MakeTranslation::gce_MakeTranslation(gp_Vec)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeTranslation", 
+          "parent": "gce_MakeTranslation", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Point1"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Point2"
+            }
+          ], 
+          "key": "gce_MakeTranslation::gce_MakeTranslation(gp_Pnt, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeTranslation", 
+          "parent": "gce_MakeTranslation", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeTranslation &", 
+              "type": "gce_MakeTranslation", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeTranslation::gce_MakeTranslation(gce_MakeTranslation)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeTranslation", 
+          "arguments": [], 
+          "key": "gce_MakeTranslation::Value()", 
+          "returnType": "gp_Trsf const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeTranslation", 
+          "arguments": [], 
+          "key": "gce_MakeTranslation::Operator()", 
+          "returnType": "gp_Trsf const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeTranslation.hxx", 
+        36
+      ], 
+      "key": "gce_MakeTranslation"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeScale2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeScale2d", 
+          "parent": "gce_MakeScale2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Point"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Scale"
+            }
+          ], 
+          "key": "gce_MakeScale2d::gce_MakeScale2d(gp_Pnt2d, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeScale2d", 
+          "parent": "gce_MakeScale2d", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeScale2d &", 
+              "type": "gce_MakeScale2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeScale2d::gce_MakeScale2d(gce_MakeScale2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeScale2d", 
+          "arguments": [], 
+          "key": "gce_MakeScale2d::Value()", 
+          "returnType": "gp_Trsf2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeScale2d", 
+          "arguments": [], 
+          "key": "gce_MakeScale2d::Operator()", 
+          "returnType": "gp_Trsf2d const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeScale2d.hxx", 
+        36
+      ], 
+      "key": "gce_MakeScale2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakePln", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakePln", 
+          "parent": "gce_MakePln", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2 &", 
+              "type": "gp_Ax2", 
+              "name": "A2"
+            }
+          ], 
+          "key": "gce_MakePln::gce_MakePln(gp_Ax2)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakePln", 
+          "parent": "gce_MakePln", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "V"
+            }
+          ], 
+          "key": "gce_MakePln::gce_MakePln(gp_Pnt, gp_Dir)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakePln", 
+          "parent": "gce_MakePln", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "A"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "B"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "D"
+            }
+          ], 
+          "key": "gce_MakePln::gce_MakePln(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakePln", 
+          "parent": "gce_MakePln", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "Pln"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Point"
+            }
+          ], 
+          "key": "gce_MakePln::gce_MakePln(gp_Pln, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakePln", 
+          "parent": "gce_MakePln", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "Pln"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Dist"
+            }
+          ], 
+          "key": "gce_MakePln::gce_MakePln(gp_Pln, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakePln", 
+          "parent": "gce_MakePln", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P2"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P3"
+            }
+          ], 
+          "key": "gce_MakePln::gce_MakePln(gp_Pnt, gp_Pnt, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakePln", 
+          "parent": "gce_MakePln", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P2"
+            }
+          ], 
+          "key": "gce_MakePln::gce_MakePln(gp_Pnt, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakePln", 
+          "parent": "gce_MakePln", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax1 &", 
+              "type": "gp_Ax1", 
+              "name": "Axis"
+            }
+          ], 
+          "key": "gce_MakePln::gce_MakePln(gp_Ax1)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakePln", 
+          "parent": "gce_MakePln", 
+          "arguments": [
+            {
+              "decl": "const gce_MakePln &", 
+              "type": "gce_MakePln", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakePln::gce_MakePln(gce_MakePln)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakePln", 
+          "arguments": [], 
+          "key": "gce_MakePln::Value()", 
+          "returnType": "gp_Pln const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakePln", 
+          "arguments": [], 
+          "key": "gce_MakePln::Operator()", 
+          "returnType": "gp_Pln const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "gce_Root"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakePln.hxx", 
+        52
+      ], 
+      "key": "gce_MakePln"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeCone", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCone", 
+          "parent": "gce_MakeCone", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2 &", 
+              "type": "gp_Ax2", 
+              "name": "A2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Ang"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Radius"
+            }
+          ], 
+          "key": "gce_MakeCone::gce_MakeCone(gp_Ax2, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCone", 
+          "parent": "gce_MakeCone", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Cone"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Point"
+            }
+          ], 
+          "key": "gce_MakeCone::gce_MakeCone(gp_Cone, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCone", 
+          "parent": "gce_MakeCone", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Cone"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Dist"
+            }
+          ], 
+          "key": "gce_MakeCone::gce_MakeCone(gp_Cone, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCone", 
+          "parent": "gce_MakeCone", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P2"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P3"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P4"
+            }
+          ], 
+          "key": "gce_MakeCone::gce_MakeCone(gp_Pnt, gp_Pnt, gp_Pnt, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCone", 
+          "parent": "gce_MakeCone", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax1 &", 
+              "type": "gp_Ax1", 
+              "name": "Axis"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P2"
+            }
+          ], 
+          "key": "gce_MakeCone::gce_MakeCone(gp_Ax1, gp_Pnt, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCone", 
+          "parent": "gce_MakeCone", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "Axis"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P2"
+            }
+          ], 
+          "key": "gce_MakeCone::gce_MakeCone(gp_Lin, gp_Pnt, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCone", 
+          "parent": "gce_MakeCone", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "R1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "R2"
+            }
+          ], 
+          "key": "gce_MakeCone::gce_MakeCone(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeCone", 
+          "parent": "gce_MakeCone", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeCone &", 
+              "type": "gce_MakeCone", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeCone::gce_MakeCone(gce_MakeCone)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeCone", 
+          "arguments": [], 
+          "key": "gce_MakeCone::Value()", 
+          "returnType": "gp_Cone const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeCone", 
+          "arguments": [], 
+          "key": "gce_MakeCone::Operator()", 
+          "returnType": "gp_Cone const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "gce_Root"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeCone.hxx", 
+        46
+      ], 
+      "key": "gce_MakeCone"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeRotation2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeRotation2d", 
+          "parent": "gce_MakeRotation2d", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "Point"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Angle"
+            }
+          ], 
+          "key": "gce_MakeRotation2d::gce_MakeRotation2d(gp_Pnt2d, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeRotation2d", 
+          "parent": "gce_MakeRotation2d", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeRotation2d &", 
+              "type": "gce_MakeRotation2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeRotation2d::gce_MakeRotation2d(gce_MakeRotation2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeRotation2d", 
+          "arguments": [], 
+          "key": "gce_MakeRotation2d::Value()", 
+          "returnType": "gp_Trsf2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeRotation2d", 
+          "arguments": [], 
+          "key": "gce_MakeRotation2d::Operator()", 
+          "returnType": "gp_Trsf2d const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeRotation2d.hxx", 
+        36
+      ], 
+      "key": "gce_MakeRotation2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "gce_MakeElips", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeElips", 
+          "parent": "gce_MakeElips", 
+          "arguments": [
+            {
+              "decl": "const gp_Ax2 &", 
+              "type": "gp_Ax2", 
+              "name": "A2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "MajorRadius"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "MinorRadius"
+            }
+          ], 
+          "key": "gce_MakeElips::gce_MakeElips(gp_Ax2, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeElips", 
+          "parent": "gce_MakeElips", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "S1"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "S2"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Center"
+            }
+          ], 
+          "key": "gce_MakeElips::gce_MakeElips(gp_Pnt, gp_Pnt, gp_Pnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "gce_MakeElips", 
+          "parent": "gce_MakeElips", 
+          "arguments": [
+            {
+              "decl": "const gce_MakeElips &", 
+              "type": "gce_MakeElips", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "gce_MakeElips::gce_MakeElips(gce_MakeElips)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "gce_MakeElips", 
+          "arguments": [], 
+          "key": "gce_MakeElips::Value()", 
+          "returnType": "gp_Elips const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Operator", 
+          "parent": "gce_MakeElips", 
+          "arguments": [], 
+          "key": "gce_MakeElips::Operator()", 
+          "returnType": "gp_Elips const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "gce_Root"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/gce_MakeElips.hxx", 
+        39
+      ], 
+      "key": "gce_MakeElips"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "gce_Done", 
+          0
+        ], 
+        [
+          "gce_ConfusedPoints", 
+          1
+        ], 
+        [
+          "gce_NegativeRadius", 
+          2
+        ], 
+        [
+          "gce_ColinearPoints", 
+          3
+        ], 
+        [
+          "gce_IntersectionError", 
+          4
+        ], 
+        [
+          "gce_NullAxis", 
+          5
+        ], 
+        [
+          "gce_NullAngle", 
+          6
+        ], 
+        [
+          "gce_NullRadius", 
+          7
+        ], 
+        [
+          "gce_InvertAxis", 
+          8
+        ], 
+        [
+          "gce_BadAngle", 
+          9
+        ], 
+        [
+          "gce_InvertRadius", 
+          10
+        ], 
+        [
+          "gce_NullFocusLength", 
+          11
+        ], 
+        [
+          "gce_NullVector", 
+          12
+        ], 
+        [
+          "gce_BadEquation", 
+          13
+        ]
+      ], 
+      "name": "gce_ErrorType", 
+      "key": "gce_ErrorType"
+    }
+  ], 
+  "name": "gce"
+}

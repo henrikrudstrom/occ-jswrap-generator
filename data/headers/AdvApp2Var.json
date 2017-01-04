@@ -1,0 +1,5773 @@
+{
+  "headers": [
+    "AdvApp2Var_Strip.hxx", 
+    "AdvApp2Var_SequenceOfStrip.hxx", 
+    "AdvApp2Var_CriterionType.hxx", 
+    "AdvApp2Var_Node.hxx", 
+    "AdvApp2Var_ApproxAFunc2Var.hxx", 
+    "AdvApp2Var_Framework.hxx", 
+    "AdvApp2Var_ApproxF2var.hxx", 
+    "AdvApp2Var_SequenceOfPatch.hxx", 
+    "AdvApp2Var_Network.hxx", 
+    "AdvApp2Var_Criterion.hxx", 
+    "AdvApp2Var_SysBase.hxx", 
+    "AdvApp2Var_MathBase.hxx", 
+    "AdvApp2Var_CriterionRepartition.hxx", 
+    "AdvApp2Var_Patch.hxx", 
+    "AdvApp2Var_Context.hxx", 
+    "AdvApp2Var_Data.hxx", 
+    "AdvApp2Var_SequenceOfNode.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "AdvApp2Var_Context", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_Context", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::AdvApp2Var_Context()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_Context", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ifav"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iu"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iv"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "nlimu"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "nlimv"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iprecis"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "nb1Dss"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "nb2Dss"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "nb3Dss"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "tol1D"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "tol2D"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "tol3D"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray2OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray2OfReal>", 
+              "name": "tof1D"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray2OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray2OfReal>", 
+              "name": "tof2D"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray2OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray2OfReal>", 
+              "name": "tof3D"
+            }
+          ], 
+          "key": "AdvApp2Var_Context::AdvApp2Var_Context(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray2OfReal>, opencascade::handle<TColStd_HArray2OfReal>, opencascade::handle<TColStd_HArray2OfReal>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_Context", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_Context &", 
+              "type": "AdvApp2Var_Context", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AdvApp2Var_Context::AdvApp2Var_Context(AdvApp2Var_Context)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "TotalDimension", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::TotalDimension()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "TotalNumberSSP", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::TotalNumberSSP()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FavorIso", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::FavorIso()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UOrder", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::UOrder()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VOrder", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::VOrder()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ULimit", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::ULimit()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VLimit", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::VLimit()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UJacDeg", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::UJacDeg()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VJacDeg", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::VJacDeg()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UJacMax", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::UJacMax()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VJacMax", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::VJacMax()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "URoots", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::URoots()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VRoots", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::VRoots()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UGauss", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::UGauss()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VGauss", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::VGauss()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IToler", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::IToler()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FToler", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::FToler()", 
+          "returnType": "opencascade::handle<TColStd_HArray2OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CToler", 
+          "parent": "AdvApp2Var_Context", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Context::CToler()", 
+          "returnType": "opencascade::handle<TColStd_HArray2OfReal>", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApp2Var_Context.hxx", 
+        32
+      ], 
+      "key": "AdvApp2Var_Context"
+    }, 
+    {
+      "declType": "class", 
+      "name": "AdvApp2Var_Node", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_Node", 
+          "parent": "AdvApp2Var_Node", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Node::AdvApp2Var_Node()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_Node", 
+          "parent": "AdvApp2Var_Node", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iu"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iv"
+            }
+          ], 
+          "key": "AdvApp2Var_Node::AdvApp2Var_Node(Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_Node", 
+          "parent": "AdvApp2Var_Node", 
+          "arguments": [
+            {
+              "decl": "const gp_XY &", 
+              "type": "gp_XY", 
+              "name": "UV"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iu"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iv"
+            }
+          ], 
+          "key": "AdvApp2Var_Node::AdvApp2Var_Node(gp_XY, Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Coord", 
+          "parent": "AdvApp2Var_Node", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Node::Coord()", 
+          "returnType": "gp_XY", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetCoord", 
+          "parent": "AdvApp2Var_Node", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "x1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "x2"
+            }
+          ], 
+          "key": "AdvApp2Var_Node::SetCoord(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UOrder", 
+          "parent": "AdvApp2Var_Node", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Node::UOrder()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VOrder", 
+          "parent": "AdvApp2Var_Node", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Node::VOrder()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetPoint", 
+          "parent": "AdvApp2Var_Node", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iu"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iv"
+            }, 
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "Cte"
+            }
+          ], 
+          "key": "AdvApp2Var_Node::SetPoint(Standard_Integer, Standard_Integer, gp_Pnt)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Point", 
+          "parent": "AdvApp2Var_Node", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iu"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iv"
+            }
+          ], 
+          "key": "AdvApp2Var_Node::Point(Standard_Integer, Standard_Integer)", 
+          "returnType": "gp_Pnt", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetError", 
+          "parent": "AdvApp2Var_Node", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iu"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iv"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "error"
+            }
+          ], 
+          "key": "AdvApp2Var_Node::SetError(Standard_Integer, Standard_Integer, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Error", 
+          "parent": "AdvApp2Var_Node", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iu"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iv"
+            }
+          ], 
+          "key": "AdvApp2Var_Node::Error(Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApp2Var_Node.hxx", 
+        35
+      ], 
+      "key": "AdvApp2Var_Node"
+    }, 
+    {
+      "declType": "class", 
+      "name": "AdvApp2Var_Framework", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_Framework", 
+          "parent": "AdvApp2Var_Framework", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Framework::AdvApp2Var_Framework()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_Framework", 
+          "parent": "AdvApp2Var_Framework", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_SequenceOfNode &", 
+              "type": "AdvApp2Var_SequenceOfNode", 
+              "name": "Frame"
+            }, 
+            {
+              "decl": "const AdvApp2Var_SequenceOfStrip &", 
+              "type": "AdvApp2Var_SequenceOfStrip", 
+              "name": "UFrontier"
+            }, 
+            {
+              "decl": "const AdvApp2Var_SequenceOfStrip &", 
+              "type": "AdvApp2Var_SequenceOfStrip", 
+              "name": "VFrontier"
+            }
+          ], 
+          "key": "AdvApp2Var_Framework::AdvApp2Var_Framework(AdvApp2Var_SequenceOfNode, AdvApp2Var_SequenceOfStrip, AdvApp2Var_SequenceOfStrip)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_Framework", 
+          "parent": "AdvApp2Var_Framework", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_Framework &", 
+              "type": "AdvApp2Var_Framework", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AdvApp2Var_Framework::AdvApp2Var_Framework(AdvApp2Var_Framework)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstNotApprox", 
+          "parent": "AdvApp2Var_Framework", 
+          "arguments": [
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "IndexIso"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "IndexStrip"
+            }, 
+            {
+              "decl": "AdvApp2Var_Iso &", 
+              "type": "AdvApp2Var_Iso", 
+              "name": "anIso"
+            }
+          ], 
+          "key": "AdvApp2Var_Framework::FirstNotApprox(Standard_Integer, Standard_Integer, AdvApp2Var_Iso)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstNode", 
+          "parent": "AdvApp2Var_Framework", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_IsoType", 
+              "type": "GeomAbs_IsoType", 
+              "name": "Type"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexIso"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexStrip"
+            }
+          ], 
+          "key": "AdvApp2Var_Framework::FirstNode(GeomAbs_IsoType, Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastNode", 
+          "parent": "AdvApp2Var_Framework", 
+          "arguments": [
+            {
+              "decl": "const GeomAbs_IsoType", 
+              "type": "GeomAbs_IsoType", 
+              "name": "Type"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexIso"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexStrip"
+            }
+          ], 
+          "key": "AdvApp2Var_Framework::LastNode(GeomAbs_IsoType, Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeIso", 
+          "parent": "AdvApp2Var_Framework", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexIso"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexStrip"
+            }, 
+            {
+              "decl": "const AdvApp2Var_Iso &", 
+              "type": "AdvApp2Var_Iso", 
+              "name": "anIso"
+            }
+          ], 
+          "key": "AdvApp2Var_Framework::ChangeIso(Standard_Integer, Standard_Integer, AdvApp2Var_Iso)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Node", 
+          "parent": "AdvApp2Var_Framework", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexNode"
+            }
+          ], 
+          "key": "AdvApp2Var_Framework::Node(Standard_Integer)", 
+          "returnType": "AdvApp2Var_Node const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Node", 
+          "parent": "AdvApp2Var_Framework", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }
+          ], 
+          "key": "AdvApp2Var_Framework::Node(Standard_Real, Standard_Real)", 
+          "returnType": "AdvApp2Var_Node const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsoU", 
+          "parent": "AdvApp2Var_Framework", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V0"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V1"
+            }
+          ], 
+          "key": "AdvApp2Var_Framework::IsoU(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "AdvApp2Var_Iso const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsoV", 
+          "parent": "AdvApp2Var_Framework", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U0"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }
+          ], 
+          "key": "AdvApp2Var_Framework::IsoV(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "AdvApp2Var_Iso const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeNode", 
+          "parent": "AdvApp2Var_Framework", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexNode"
+            }
+          ], 
+          "key": "AdvApp2Var_Framework::ChangeNode(Standard_Integer)", 
+          "returnType": "AdvApp2Var_Node &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UpdateInU", 
+          "parent": "AdvApp2Var_Framework", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "CuttingValue"
+            }
+          ], 
+          "key": "AdvApp2Var_Framework::UpdateInU(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UpdateInV", 
+          "parent": "AdvApp2Var_Framework", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "CuttingValue"
+            }
+          ], 
+          "key": "AdvApp2Var_Framework::UpdateInV(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UEquation", 
+          "parent": "AdvApp2Var_Framework", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexIso"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexStrip"
+            }
+          ], 
+          "key": "AdvApp2Var_Framework::UEquation(Standard_Integer, Standard_Integer)", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VEquation", 
+          "parent": "AdvApp2Var_Framework", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexIso"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IndexStrip"
+            }
+          ], 
+          "key": "AdvApp2Var_Framework::VEquation(Standard_Integer, Standard_Integer)", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal> const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApp2Var_Framework.hxx", 
+        37
+      ], 
+      "key": "AdvApp2Var_Framework"
+    }, 
+    {
+      "declType": "class", 
+      "name": "AdvApp2Var_Criterion", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "AdvApp2Var_Criterion", 
+          "arguments": [
+            {
+              "decl": "AdvApp2Var_Patch &", 
+              "type": "AdvApp2Var_Patch", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const AdvApp2Var_Context &", 
+              "type": "AdvApp2Var_Context", 
+              "name": "C"
+            }
+          ], 
+          "key": "AdvApp2Var_Criterion::Value(AdvApp2Var_Patch, AdvApp2Var_Context)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsSatisfied", 
+          "parent": "AdvApp2Var_Criterion", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_Patch &", 
+              "type": "AdvApp2Var_Patch", 
+              "name": "P"
+            }
+          ], 
+          "key": "AdvApp2Var_Criterion::IsSatisfied(AdvApp2Var_Patch)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxValue", 
+          "parent": "AdvApp2Var_Criterion", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Criterion::MaxValue()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Type", 
+          "parent": "AdvApp2Var_Criterion", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Criterion::Type()", 
+          "returnType": "AdvApp2Var_CriterionType", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Repartition", 
+          "parent": "AdvApp2Var_Criterion", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Criterion::Repartition()", 
+          "returnType": "AdvApp2Var_CriterionRepartition", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApp2Var_Criterion.hxx", 
+        34
+      ], 
+      "key": "AdvApp2Var_Criterion"
+    }, 
+    {
+      "declType": "class", 
+      "name": "AdvApp2Var_Patch", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_Patch", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::AdvApp2Var_Patch()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_Patch", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U0"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V0"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iu"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iv"
+            }
+          ], 
+          "key": "AdvApp2Var_Patch::AdvApp2Var_Patch(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDiscretised", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::IsDiscretised()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Discretise", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_Context &", 
+              "type": "AdvApp2Var_Context", 
+              "name": "Conditions"
+            }, 
+            {
+              "decl": "const AdvApp2Var_Framework &", 
+              "type": "AdvApp2Var_Framework", 
+              "name": "Constraints"
+            }, 
+            {
+              "decl": "const AdvApp2Var_EvaluatorFunc2Var &", 
+              "type": "AdvApp2Var_EvaluatorFunc2Var", 
+              "name": "func"
+            }
+          ], 
+          "key": "AdvApp2Var_Patch::Discretise(AdvApp2Var_Context, AdvApp2Var_Framework, AdvApp2Var_EvaluatorFunc2Var)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsApproximated", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::IsApproximated()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasResult", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::HasResult()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MakeApprox", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_Context &", 
+              "type": "AdvApp2Var_Context", 
+              "name": "Conditions"
+            }, 
+            {
+              "decl": "const AdvApp2Var_Framework &", 
+              "type": "AdvApp2Var_Framework", 
+              "name": "Constraints"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NumDec"
+            }
+          ], 
+          "key": "AdvApp2Var_Patch::MakeApprox(AdvApp2Var_Context, AdvApp2Var_Framework, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AddConstraints", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_Context &", 
+              "type": "AdvApp2Var_Context", 
+              "name": "Conditions"
+            }, 
+            {
+              "decl": "const AdvApp2Var_Framework &", 
+              "type": "AdvApp2Var_Framework", 
+              "name": "Constraints"
+            }
+          ], 
+          "key": "AdvApp2Var_Patch::AddConstraints(AdvApp2Var_Context, AdvApp2Var_Framework)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AddErrors", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_Framework &", 
+              "type": "AdvApp2Var_Framework", 
+              "name": "Constraints"
+            }
+          ], 
+          "key": "AdvApp2Var_Patch::AddErrors(AdvApp2Var_Framework)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeDomain", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "a"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "b"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "c"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "d"
+            }
+          ], 
+          "key": "AdvApp2Var_Patch::ChangeDomain(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ResetApprox", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::ResetApprox()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "OverwriteApprox", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::OverwriteApprox()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "U0", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::U0()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "U1", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::U1()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "V0", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::V0()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "V1", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::V1()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UOrder", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::UOrder()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VOrder", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::VOrder()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CutSense", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::CutSense()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CutSense", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_Criterion &", 
+              "type": "AdvApp2Var_Criterion", 
+              "name": "Crit"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NumDec"
+            }
+          ], 
+          "key": "AdvApp2Var_Patch::CutSense(AdvApp2Var_Criterion, Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbCoeffInU", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::NbCoeffInU()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbCoeffInV", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::NbCoeffInV()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeNbCoeff", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NbCoeffU"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NbCoeffV"
+            }
+          ], 
+          "key": "AdvApp2Var_Patch::ChangeNbCoeff(Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Poles", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "SSPIndex"
+            }, 
+            {
+              "decl": "const AdvApp2Var_Context &", 
+              "type": "AdvApp2Var_Context", 
+              "name": "Conditions"
+            }
+          ], 
+          "key": "AdvApp2Var_Patch::Poles(Standard_Integer, AdvApp2Var_Context)", 
+          "returnType": "opencascade::handle<TColgp_HArray2OfPnt>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Coefficients", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "SSPIndex"
+            }, 
+            {
+              "decl": "const AdvApp2Var_Context &", 
+              "type": "AdvApp2Var_Context", 
+              "name": "Conditions"
+            }
+          ], 
+          "key": "AdvApp2Var_Patch::Coefficients(Standard_Integer, AdvApp2Var_Context)", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxErrors", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::MaxErrors()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AverageErrors", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::AverageErrors()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsoErrors", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::IsoErrors()", 
+          "returnType": "opencascade::handle<TColStd_HArray2OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CritValue", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Patch::CritValue()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetCritValue", 
+          "parent": "AdvApp2Var_Patch", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "dist"
+            }
+          ], 
+          "key": "AdvApp2Var_Patch::SetCritValue(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApp2Var_Patch.hxx", 
+        38
+      ], 
+      "key": "AdvApp2Var_Patch"
+    }, 
+    {
+      "declType": "class", 
+      "name": "AdvApp2Var_Network", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_Network", 
+          "parent": "AdvApp2Var_Network", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Network::AdvApp2Var_Network()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_Network", 
+          "parent": "AdvApp2Var_Network", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_SequenceOfPatch &", 
+              "type": "AdvApp2Var_SequenceOfPatch", 
+              "name": "Net"
+            }, 
+            {
+              "decl": "const TColStd_SequenceOfReal &", 
+              "type": "TColStd_SequenceOfReal", 
+              "name": "TheU"
+            }, 
+            {
+              "decl": "const TColStd_SequenceOfReal &", 
+              "type": "TColStd_SequenceOfReal", 
+              "name": "TheV"
+            }
+          ], 
+          "key": "AdvApp2Var_Network::AdvApp2Var_Network(AdvApp2Var_SequenceOfPatch, TColStd_SequenceOfReal, TColStd_SequenceOfReal)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_Network", 
+          "parent": "AdvApp2Var_Network", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_Network &", 
+              "type": "AdvApp2Var_Network", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AdvApp2Var_Network::AdvApp2Var_Network(AdvApp2Var_Network)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstNotApprox", 
+          "parent": "AdvApp2Var_Network", 
+          "arguments": [
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "AdvApp2Var_Network::FirstNotApprox(Standard_Integer)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangePatch", 
+          "parent": "AdvApp2Var_Network", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "AdvApp2Var_Network::ChangePatch(Standard_Integer)", 
+          "returnType": "AdvApp2Var_Patch &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UpdateInU", 
+          "parent": "AdvApp2Var_Network", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "CuttingValue"
+            }
+          ], 
+          "key": "AdvApp2Var_Network::UpdateInU(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UpdateInV", 
+          "parent": "AdvApp2Var_Network", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "CuttingValue"
+            }
+          ], 
+          "key": "AdvApp2Var_Network::UpdateInV(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SameDegree", 
+          "parent": "AdvApp2Var_Network", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iu"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iv"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "ncfu"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "ncfv"
+            }
+          ], 
+          "key": "AdvApp2Var_Network::SameDegree(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPatch", 
+          "parent": "AdvApp2Var_Network", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Network::NbPatch()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPatchInU", 
+          "parent": "AdvApp2Var_Network", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Network::NbPatchInU()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPatchInV", 
+          "parent": "AdvApp2Var_Network", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Network::NbPatchInV()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UParameter", 
+          "parent": "AdvApp2Var_Network", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "AdvApp2Var_Network::UParameter(Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VParameter", 
+          "parent": "AdvApp2Var_Network", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "AdvApp2Var_Network::VParameter(Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Patch", 
+          "parent": "AdvApp2Var_Network", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "UIndex"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "VIndex"
+            }
+          ], 
+          "key": "AdvApp2Var_Network::Patch(Standard_Integer, Standard_Integer)", 
+          "returnType": "AdvApp2Var_Patch const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApp2Var_Network.hxx", 
+        34
+      ], 
+      "key": "AdvApp2Var_Network"
+    }, 
+    {
+      "declType": "class", 
+      "name": "AdvApp2Var_ApproxAFunc2Var", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_ApproxAFunc2Var", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num1DSS"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num2DSS"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num3DSS"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "OneDTol"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "TwoDTol"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "ThreeDTol"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray2OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray2OfReal>", 
+              "name": "OneDTolFr"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray2OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray2OfReal>", 
+              "name": "TwoDTolFr"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray2OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray2OfReal>", 
+              "name": "ThreeDTolFr"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "FirstInU"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "LastInU"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "FirstInV"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "LastInV"
+            }, 
+            {
+              "decl": "const GeomAbs_IsoType", 
+              "type": "GeomAbs_IsoType", 
+              "name": "FavorIso"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "ContInU"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "ContInV"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "PrecisCode"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegInU"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegInV"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxPatch"
+            }, 
+            {
+              "decl": "const AdvApp2Var_EvaluatorFunc2Var &", 
+              "type": "AdvApp2Var_EvaluatorFunc2Var", 
+              "name": "Func"
+            }, 
+            {
+              "decl": "AdvApprox_Cutting &", 
+              "type": "AdvApprox_Cutting", 
+              "name": "UChoice"
+            }, 
+            {
+              "decl": "AdvApprox_Cutting &", 
+              "type": "AdvApprox_Cutting", 
+              "name": "VChoice"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::AdvApp2Var_ApproxAFunc2Var(Standard_Integer, Standard_Integer, Standard_Integer, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray2OfReal>, opencascade::handle<TColStd_HArray2OfReal>, opencascade::handle<TColStd_HArray2OfReal>, Standard_Real, Standard_Real, Standard_Real, Standard_Real, GeomAbs_IsoType, GeomAbs_Shape, GeomAbs_Shape, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, AdvApp2Var_EvaluatorFunc2Var, AdvApprox_Cutting, AdvApprox_Cutting)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_ApproxAFunc2Var", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num1DSS"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num2DSS"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num3DSS"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "OneDTol"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "TwoDTol"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "ThreeDTol"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray2OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray2OfReal>", 
+              "name": "OneDTolFr"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray2OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray2OfReal>", 
+              "name": "TwoDTolFr"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray2OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray2OfReal>", 
+              "name": "ThreeDTolFr"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "FirstInU"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "LastInU"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "FirstInV"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "LastInV"
+            }, 
+            {
+              "decl": "const GeomAbs_IsoType", 
+              "type": "GeomAbs_IsoType", 
+              "name": "FavorIso"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "ContInU"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "ContInV"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "PrecisCode"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegInU"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegInV"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxPatch"
+            }, 
+            {
+              "decl": "const AdvApp2Var_EvaluatorFunc2Var &", 
+              "type": "AdvApp2Var_EvaluatorFunc2Var", 
+              "name": "Func"
+            }, 
+            {
+              "decl": "const AdvApp2Var_Criterion &", 
+              "type": "AdvApp2Var_Criterion", 
+              "name": "Crit"
+            }, 
+            {
+              "decl": "AdvApprox_Cutting &", 
+              "type": "AdvApprox_Cutting", 
+              "name": "UChoice"
+            }, 
+            {
+              "decl": "AdvApprox_Cutting &", 
+              "type": "AdvApprox_Cutting", 
+              "name": "VChoice"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::AdvApp2Var_ApproxAFunc2Var(Standard_Integer, Standard_Integer, Standard_Integer, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray2OfReal>, opencascade::handle<TColStd_HArray2OfReal>, opencascade::handle<TColStd_HArray2OfReal>, Standard_Real, Standard_Real, Standard_Real, Standard_Real, GeomAbs_IsoType, GeomAbs_Shape, GeomAbs_Shape, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, AdvApp2Var_EvaluatorFunc2Var, AdvApp2Var_Criterion, AdvApprox_Cutting, AdvApprox_Cutting)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_ApproxAFunc2Var", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_ApproxAFunc2Var &", 
+              "type": "AdvApp2Var_ApproxAFunc2Var", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::AdvApp2Var_ApproxAFunc2Var(AdvApp2Var_ApproxAFunc2Var)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasResult", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::HasResult()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Surface", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::Surface(Standard_Integer)", 
+          "returnType": "opencascade::handle<Geom_BSplineSurface>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UDegree", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::UDegree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VDegree", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::VDegree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NumSubSpaces", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::NumSubSpaces(Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::MaxError(Standard_Integer)", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AverageError", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::AverageError(Standard_Integer)", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UFrontError", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::UFrontError(Standard_Integer)", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VFrontError", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::VFrontError(Standard_Integer)", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::MaxError(Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AverageError", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::AverageError(Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UFrontError", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::UFrontError(Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VFrontError", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::VFrontError(Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CritError", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::CritError(Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "AdvApp2Var_ApproxAFunc2Var", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "o"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxAFunc2Var::Dump(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApp2Var_ApproxAFunc2Var.hxx", 
+        90
+      ], 
+      "key": "AdvApp2Var_ApproxAFunc2Var"
+    }, 
+    {
+      "declType": "class", 
+      "name": "AdvApp2Var_ApproxF2var", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_ApproxF2var", 
+          "parent": "AdvApp2Var_ApproxF2var", 
+          "arguments": [], 
+          "key": "AdvApp2Var_ApproxF2var::AdvApp2Var_ApproxF2var()", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_ApproxF2var", 
+          "parent": "AdvApp2Var_ApproxF2var", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_ApproxF2var &", 
+              "type": "AdvApp2Var_ApproxF2var", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxF2var::AdvApp2Var_ApproxF2var(AdvApp2Var_ApproxF2var)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mma2fnc_", 
+          "parent": "AdvApp2Var_ApproxF2var", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbsesp"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimse"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "uvfonc"
+            }, 
+            {
+              "decl": "const AdvApp2Var_EvaluatorFunc2Var &", 
+              "type": "AdvApp2Var_EvaluatorFunc2Var", 
+              "name": "foncnp"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tconst"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "isofav"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbroot"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "rootlg"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iordre"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ideriv"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndgjac"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbcrmx"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncflim"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "epsapr"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncoeff"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "courbe"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbcrbe"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "somtab"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "diftab"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "contr1"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "contr2"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tabdec"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "errmax"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "errmoy"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxF2var::mma2fnc_(integer, integer, integer, doublereal, AdvApp2Var_EvaluatorFunc2Var, doublereal, integer, integer, doublereal, integer, integer, integer, integer, integer, doublereal, integer, doublereal, integer, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mma2roo_", 
+          "parent": "AdvApp2Var_ApproxF2var", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbpntu"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbpntv"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "urootl"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vrootl"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxF2var::mma2roo_(integer, integer, doublereal, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mma2jmx_", 
+          "parent": "AdvApp2Var_ApproxF2var", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndgjac"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iordre"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "xjacmx"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxF2var::mma2jmx_(integer, integer, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmapptt_", 
+          "parent": "AdvApp2Var_ApproxF2var", 
+          "arguments": [
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg0"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg1"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg2"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg3"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg4"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxF2var::mmapptt_(integer, integer, integer, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mma2cdi_", 
+          "parent": "AdvApp2Var_ApproxF2var", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbpntu"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "urootl"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbpntv"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vrootl"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iordru"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iordrv"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "contr1"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "contr2"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "contr3"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "contr4"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "sotbu1"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "sotbu2"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "ditbu1"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "ditbu2"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "sotbv1"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "sotbv2"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "ditbv1"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "ditbv2"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "sosotb"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "soditb"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "disotb"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "diditb"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxF2var::mma2cdi_(integer, integer, doublereal, integer, doublereal, integer, integer, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mma2ds1_", 
+          "parent": "AdvApp2Var_ApproxF2var", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "uintfn"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vintfn"
+            }, 
+            {
+              "decl": "const AdvApp2Var_EvaluatorFunc2Var &", 
+              "type": "AdvApp2Var_EvaluatorFunc2Var", 
+              "name": "foncnp"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbpntu"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbpntv"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "urootb"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vrootb"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "isofav"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "sosotb"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "disotb"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "soditb"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "diditb"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "fpntab"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "ttable"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxF2var::mma2ds1_(integer, doublereal, doublereal, AdvApp2Var_EvaluatorFunc2Var, integer, integer, doublereal, doublereal, integer, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mma2ce1_", 
+          "parent": "AdvApp2Var_ApproxF2var", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "numdec"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbsesp"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimse"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndminu"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndminv"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndguli"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndgvli"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndjacu"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndjacv"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iordru"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iordrv"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbpntu"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbpntv"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "epsapr"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "sosotb"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "disotb"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "soditb"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "diditb"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "patjac"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "errmax"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "errmoy"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndegpu"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndegpv"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "itydec"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxF2var::mma2ce1_(integer, integer, integer, integer, integer, integer, integer, integer, integer, integer, integer, integer, integer, integer, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, integer, integer, integer, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mma2can_", 
+          "parent": "AdvApp2Var_ApproxF2var", 
+          "arguments": [
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg0"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg1"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg2"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg3"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg4"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg5"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg6"
+            }, 
+            {
+              "decl": "const doublereal *", 
+              "type": "doublereal", 
+              "name": "arg7"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg8"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg9"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg10"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxF2var::mma2can_(integer, integer, integer, integer, integer, integer, integer, doublereal, doublereal, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mma1her_", 
+          "parent": "AdvApp2Var_ApproxF2var", 
+          "arguments": [
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg0"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg1"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg2"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxF2var::mma1her_(integer, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mma2ac2_", 
+          "parent": "AdvApp2Var_ApproxF2var", 
+          "arguments": [
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg0"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg1"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg2"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg3"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg4"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg5"
+            }, 
+            {
+              "decl": "const doublereal *", 
+              "type": "doublereal", 
+              "name": "arg6"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg7"
+            }, 
+            {
+              "decl": "const doublereal *", 
+              "type": "doublereal", 
+              "name": "arg8"
+            }, 
+            {
+              "decl": "const doublereal *", 
+              "type": "doublereal", 
+              "name": "arg9"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg10"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxF2var::mma2ac2_(integer, integer, integer, integer, integer, integer, doublereal, integer, doublereal, doublereal, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mma2ac3_", 
+          "parent": "AdvApp2Var_ApproxF2var", 
+          "arguments": [
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg0"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg1"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg2"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg3"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg4"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg5"
+            }, 
+            {
+              "decl": "const doublereal *", 
+              "type": "doublereal", 
+              "name": "arg6"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg7"
+            }, 
+            {
+              "decl": "const doublereal *", 
+              "type": "doublereal", 
+              "name": "arg8"
+            }, 
+            {
+              "decl": "const doublereal *", 
+              "type": "doublereal", 
+              "name": "arg9"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg10"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxF2var::mma2ac3_(integer, integer, integer, integer, integer, integer, doublereal, integer, doublereal, doublereal, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mma2ac1_", 
+          "parent": "AdvApp2Var_ApproxF2var", 
+          "arguments": [
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg0"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg1"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg2"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg3"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "arg4"
+            }, 
+            {
+              "decl": "const doublereal *", 
+              "type": "doublereal", 
+              "name": "arg5"
+            }, 
+            {
+              "decl": "const doublereal *", 
+              "type": "doublereal", 
+              "name": "arg6"
+            }, 
+            {
+              "decl": "const doublereal *", 
+              "type": "doublereal", 
+              "name": "arg7"
+            }, 
+            {
+              "decl": "const doublereal *", 
+              "type": "doublereal", 
+              "name": "arg8"
+            }, 
+            {
+              "decl": "const doublereal *", 
+              "type": "doublereal", 
+              "name": "arg9"
+            }, 
+            {
+              "decl": "const doublereal *", 
+              "type": "doublereal", 
+              "name": "arg10"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg11"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxF2var::mma2ac1_(integer, integer, integer, integer, integer, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mma2fx6_", 
+          "parent": "AdvApp2Var_ApproxF2var", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncfmxu"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncfmxv"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbsesp"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimse"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbupat"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbvpat"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iordru"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iordrv"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "epsapr"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "epsfro"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "patcan"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "errmax"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncoefu"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncoefv"
+            }
+          ], 
+          "key": "AdvApp2Var_ApproxF2var::mma2fx6_(integer, integer, integer, integer, integer, integer, integer, integer, integer, doublereal, doublereal, doublereal, doublereal, integer, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApp2Var_ApproxF2var.hxx", 
+        27
+      ], 
+      "key": "AdvApp2Var_ApproxF2var"
+    }, 
+    {
+      "declType": "class", 
+      "name": "AdvApp2Var_SysBase", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_SysBase", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [], 
+          "key": "AdvApp2Var_SysBase::AdvApp2Var_SysBase()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_SysBase", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_SysBase &", 
+              "type": "AdvApp2Var_SysBase", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::AdvApp2Var_SysBase(AdvApp2Var_SysBase)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "mitem", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [], 
+          "key": "AdvApp2Var_SysBase::mitem()", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "mitem", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_SysBase::mitem &", 
+              "type": "AdvApp2Var_SysBase::mitem", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::mitem(AdvApp2Var_SysBase::mitem)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [], 
+          "key": "AdvApp2Var_SysBase::()", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_SysBase &", 
+              "type": "AdvApp2Var_SysBase", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::(AdvApp2Var_SysBase)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [], 
+          "key": "AdvApp2Var_SysBase::()", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_SysBase &", 
+              "type": "AdvApp2Var_SysBase", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::(AdvApp2Var_SysBase)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mainial_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [], 
+          "key": "AdvApp2Var_SysBase::mainial_()", 
+          "returnType": "int", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "macinit_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "int *", 
+              "type": "int", 
+              "name": "arg0"
+            }, 
+            {
+              "decl": "int *", 
+              "type": "int", 
+              "name": "arg1"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::macinit_(int, int)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mcrdelt_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iunit"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "isize"
+            }, 
+            {
+              "decl": "void *", 
+              "type": "void", 
+              "name": "t"
+            }, 
+            {
+              "decl": "intptr_t *", 
+              "type": "intptr_t", 
+              "name": "iofset"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::mcrdelt_(integer, integer, void, intptr_t, integer)", 
+          "returnType": "int", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mcrfill_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "size"
+            }, 
+            {
+              "decl": "void *", 
+              "type": "void", 
+              "name": "tin"
+            }, 
+            {
+              "decl": "void *", 
+              "type": "void", 
+              "name": "tout"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::mcrfill_(integer, void, void)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mcrrqst_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iunit"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "isize"
+            }, 
+            {
+              "decl": "void *", 
+              "type": "void", 
+              "name": "t"
+            }, 
+            {
+              "decl": "intptr_t *", 
+              "type": "intptr_t", 
+              "name": "iofset"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::mcrrqst_(integer, integer, void, intptr_t, integer)", 
+          "returnType": "int", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mnfndeb_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [], 
+          "key": "AdvApp2Var_SysBase::mnfndeb_()", 
+          "returnType": "integer", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "do__fio", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [], 
+          "key": "AdvApp2Var_SysBase::do__fio()", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "do__lio", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [], 
+          "key": "AdvApp2Var_SysBase::do__lio()", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "macrai4_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbelem"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "maxelm"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "itablo"
+            }, 
+            {
+              "decl": "intptr_t *", 
+              "type": "intptr_t", 
+              "name": "iofset"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::macrai4_(integer, integer, integer, intptr_t, integer)", 
+          "returnType": "int", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "macrar8_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbelem"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "maxelm"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "xtablo"
+            }, 
+            {
+              "decl": "intptr_t *", 
+              "type": "intptr_t", 
+              "name": "iofset"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::macrar8_(integer, integer, doublereal, intptr_t, integer)", 
+          "returnType": "int", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "macrdi4_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbelem"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "maxelm"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "itablo"
+            }, 
+            {
+              "decl": "intptr_t *", 
+              "type": "intptr_t", 
+              "name": "iofset"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::macrdi4_(integer, integer, integer, intptr_t, integer)", 
+          "returnType": "int", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "macrdr8_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbelem"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "maxelm"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "xtablo"
+            }, 
+            {
+              "decl": "intptr_t *", 
+              "type": "intptr_t", 
+              "name": "iofset"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::macrdr8_(integer, integer, doublereal, intptr_t, integer)", 
+          "returnType": "int", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "maermsg_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "const char *", 
+              "type": "char", 
+              "name": "cnompg"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "icoder"
+            }, 
+            {
+              "decl": "ftnlen", 
+              "type": "ftnlen", 
+              "name": "cnompg_len"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::maermsg_(char, integer, ftnlen)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "maitbr8_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "itaill"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "xtab"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "xval"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::maitbr8_(integer, doublereal, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "maovsr8_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ivalcs"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::maovsr8_(integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mgenmsg_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "const char *", 
+              "type": "char", 
+              "name": "nomprg"
+            }, 
+            {
+              "decl": "ftnlen", 
+              "type": "ftnlen", 
+              "name": "nomprg_len"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::mgenmsg_(char, ftnlen)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mgsomsg_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "const char *", 
+              "type": "char", 
+              "name": "nomprg"
+            }, 
+            {
+              "decl": "ftnlen", 
+              "type": "ftnlen", 
+              "name": "nomprg_len"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::mgsomsg_(char, ftnlen)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "miraz_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "taille"
+            }, 
+            {
+              "decl": "void *", 
+              "type": "void", 
+              "name": "adt"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::miraz_(integer, void)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "msifill_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbintg"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ivecin"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ivecou"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::msifill_(integer, integer, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "msrfill_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbreel"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vecent"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vecsor"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::msrfill_(integer, doublereal, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mswrdbg_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "const char *", 
+              "type": "char", 
+              "name": "ctexte"
+            }, 
+            {
+              "decl": "ftnlen", 
+              "type": "ftnlen", 
+              "name": "ctexte_len"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::mswrdbg_(char, ftnlen)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mvriraz_", 
+          "parent": "AdvApp2Var_SysBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "taille"
+            }, 
+            {
+              "decl": "void *", 
+              "type": "void", 
+              "name": "adt"
+            }
+          ], 
+          "key": "AdvApp2Var_SysBase::mvriraz_(integer, void)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApp2Var_SysBase.hxx", 
+        26
+      ], 
+      "key": "AdvApp2Var_SysBase"
+    }, 
+    {
+      "declType": "class", 
+      "name": "AdvApp2Var_MathBase", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_MathBase", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [], 
+          "key": "AdvApp2Var_MathBase::AdvApp2Var_MathBase()", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_MathBase", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_MathBase &", 
+              "type": "AdvApp2Var_MathBase", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::AdvApp2Var_MathBase(AdvApp2Var_MathBase)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmapcmp_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg0"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg1"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg2"
+            }, 
+            {
+              "decl": "double *", 
+              "type": "double", 
+              "name": "arg3"
+            }, 
+            {
+              "decl": "double *", 
+              "type": "double", 
+              "name": "arg4"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmapcmp_(integer, integer, integer, double, double)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmdrc11_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg0"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg1"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg2"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg3"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg4"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg5"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmdrc11_(integer, integer, integer, doublereal, doublereal, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmfmca9_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg0"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg1"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg2"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg3"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg4"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg5"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg6"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg7"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmfmca9_(integer, integer, integer, integer, integer, integer, doublereal, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmfmcb5_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg0"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg1"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg2"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg3"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg4"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg5"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg6"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg7"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg8"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmfmcb5_(integer, integer, integer, doublereal, integer, integer, integer, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmwprcs_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg0"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg1"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg2"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "arg3"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg4"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "arg5"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmwprcs_(doublereal, doublereal, doublereal, doublereal, integer, integer)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmcglc1_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimax"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncoeff"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "courbe"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tdebut"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tfinal"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "epsiln"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "xlongc"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "erreur"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmcglc1_(integer, integer, integer, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmbulld_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbcoln"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nblign"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "dtabtr"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "numcle"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmbulld_(integer, integer, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmcdriv_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncoeff"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "courbe"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ideriv"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncofdv"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "crvdrv"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmcdriv_(integer, integer, doublereal, integer, integer, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmcvctx_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncofmx"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nderiv"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "ctrtes"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "crvres"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tabaux"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "xmatri"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmcvctx_(integer, integer, integer, doublereal, doublereal, doublereal, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mdsptpt_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "point1"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "point2"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "distan"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mdsptpt_(integer, doublereal, doublereal, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmaperx_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncofmx"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncoeff"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iordre"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "crvjac"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncfnew"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "ycvmax"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "errmax"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmaperx_(integer, integer, integer, integer, doublereal, integer, doublereal, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmdrvck_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncoeff"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "courbe"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ideriv"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tparam"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "pntcrb"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmdrvck_(integer, integer, doublereal, integer, doublereal, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmeps1_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "epsilo"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmeps1_(doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmfmca8_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "ncoefu"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "ncoefv"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "ndimax"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "ncfumx"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "ncfvmx"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tabini"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tabres"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmfmca8_(integer, integer, integer, integer, integer, integer, doublereal, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmfmcar_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncofmx"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncoefu"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncoefv"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "patold"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "upara1"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "upara2"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vpara1"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vpara2"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "patnew"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmfmcar_(integer, integer, integer, integer, doublereal, doublereal, doublereal, doublereal, doublereal, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmfmtb1_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "maxsz1"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "table1"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "isize1"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "jsize1"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "maxsz2"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "table2"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "isize2"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "jsize2"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmfmtb1_(integer, doublereal, integer, integer, integer, doublereal, integer, integer, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmgaus1_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimf"
+            }, 
+            {
+              "decl": "int (*)( ::integer *,::doublereal *,::doublereal *,::integer * )", 
+              "type": "int (*)( ::integer *,::doublereal *,::doublereal *,::integer * )", 
+              "name": "bfunx"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "k"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "xd"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "xf"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "saux1"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "saux2"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "somme"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "niter"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmgaus1_(integer, int (*)( ::integer *,::doublereal *,::doublereal *,::integer * ), integer, doublereal, doublereal, doublereal, doublereal, doublereal, integer, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmhjcan_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncourb"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncftab"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "orcont"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncflim"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tcbold"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tdecop"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tcbnew"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmhjcan_(integer, integer, integer, integer, integer, doublereal, doublereal, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mminltt_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncolmx"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nlgnmx"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tabtri"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbrcol"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbrlgn"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "ajoute"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "epseg"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mminltt_(integer, integer, doublereal, integer, integer, doublereal, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmjaccv_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "ncoef"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "ndim"
+            }, 
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "ider"
+            }, 
+            {
+              "decl": "const doublereal *", 
+              "type": "doublereal", 
+              "name": "crvlgd"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "polaux"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "crvcan"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmjaccv_(integer, integer, integer, doublereal, doublereal, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmpobas_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tparam"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iordre"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncoeff"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nderiv"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "valbas"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmpobas_(doublereal, integer, integer, integer, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmmpocur_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncofmx"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndim"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndeg"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "courbe"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tparam"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tabval"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmmpocur_(integer, integer, integer, doublereal, doublereal, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmposui_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "dimmat"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nistoc"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "aposit"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "posuiv"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmposui_(integer, integer, integer, integer, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmresol_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "hdimen"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "gdimen"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "hnstoc"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "gnstoc"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "mnstoc"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "matsyh"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "matsyg"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vecsyh"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vecsyg"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "hposit"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "hposui"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "gposit"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "mmposui"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "mposit"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vecsol"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmresol_(integer, integer, integer, integer, integer, doublereal, doublereal, doublereal, doublereal, integer, integer, integer, integer, integer, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmrtptt_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndglgd"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "rtlegd"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmrtptt_(integer, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmsrre2_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tparam"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nbrval"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tablev"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "epsil"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "numint"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "itypen"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmsrre2_(doublereal, integer, doublereal, doublereal, integer, integer, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmtrpjj_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncofmx"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncoeff"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "epsi3d"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iordre"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "crvlgd"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "ycvmax"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "errmax"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncfnew"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmtrpjj_(integer, integer, integer, doublereal, integer, doublereal, doublereal, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmunivt_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vector"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vecnrm"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "epsiln"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmunivt_(integer, doublereal, doublereal, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmvncol_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vecin"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vecout"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmvncol_(integer, doublereal, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "msc_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vecte1"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vecte2"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::msc_(integer, doublereal, doublereal)", 
+          "returnType": "doublereal", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mvsheld_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "n"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "is"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "dtab"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "icle"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mvsheld_(integer, integer, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmarcin_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimax"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndim"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncoeff"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "crvold"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "u0"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "u1"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "crvnew"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmarcin_(integer, integer, integer, doublereal, doublereal, doublereal, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmcvinv_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimax"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncoef"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndim"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "curveo"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "curve"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmcvinv_(integer, integer, integer, doublereal, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmjacan_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "const integer *", 
+              "type": "integer", 
+              "name": "ideriv"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndeg"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "poljac"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "polcan"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmjacan_(integer, integer, doublereal, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmpocrb_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimax"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ncoeff"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "courbe"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndim"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "tparam"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "pntcrb"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmpocrb_(integer, integer, doublereal, integer, doublereal, doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmmrslwd_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "normax"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "nordre"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndim"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "amat"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "bmat"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "epspiv"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "aaux"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "xmat"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "iercod"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmmrslwd_(integer, integer, integer, doublereal, doublereal, doublereal, doublereal, doublereal, integer)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mmveps3_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "eps03"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mmveps3_(doublereal)", 
+          "returnType": "int", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "pow__di", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "x"
+            }, 
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "n"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::pow__di(doublereal, integer)", 
+          "returnType": "doublereal", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "mzsnorm_", 
+          "parent": "AdvApp2Var_MathBase", 
+          "arguments": [
+            {
+              "decl": "integer *", 
+              "type": "integer", 
+              "name": "ndimen"
+            }, 
+            {
+              "decl": "doublereal *", 
+              "type": "doublereal", 
+              "name": "vecteu"
+            }
+          ], 
+          "key": "AdvApp2Var_MathBase::mzsnorm_(integer, doublereal)", 
+          "returnType": "doublereal", 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApp2Var_MathBase.hxx", 
+        21
+      ], 
+      "key": "AdvApp2Var_MathBase"
+    }, 
+    {
+      "declType": "class", 
+      "name": "AdvApp2Var_Data", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_Data", 
+          "parent": "AdvApp2Var_Data", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Data::AdvApp2Var_Data()", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "AdvApp2Var_Data", 
+          "parent": "AdvApp2Var_Data", 
+          "arguments": [
+            {
+              "decl": "const AdvApp2Var_Data &", 
+              "type": "AdvApp2Var_Data", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "AdvApp2Var_Data::AdvApp2Var_Data(AdvApp2Var_Data)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Getmdnombr", 
+          "parent": "AdvApp2Var_Data", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Data::Getmdnombr()", 
+          "returnType": "mdnombr_1_ &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Getminombr", 
+          "parent": "AdvApp2Var_Data", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Data::Getminombr()", 
+          "returnType": "minombr_1_ &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Getmaovpar", 
+          "parent": "AdvApp2Var_Data", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Data::Getmaovpar()", 
+          "returnType": "maovpar_1_ &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Getmaovpch", 
+          "parent": "AdvApp2Var_Data", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Data::Getmaovpch()", 
+          "returnType": "maovpch_1_ &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Getmlgdrtl", 
+          "parent": "AdvApp2Var_Data", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Data::Getmlgdrtl()", 
+          "returnType": "mlgdrtl_1_ &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Getmmjcobi", 
+          "parent": "AdvApp2Var_Data", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Data::Getmmjcobi()", 
+          "returnType": "mmjcobi_1_ &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Getmmcmcnp", 
+          "parent": "AdvApp2Var_Data", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Data::Getmmcmcnp()", 
+          "returnType": "mmcmcnp_1_ &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Getmmapgss", 
+          "parent": "AdvApp2Var_Data", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Data::Getmmapgss()", 
+          "returnType": "mmapgss_1_ &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Getmmapgs0", 
+          "parent": "AdvApp2Var_Data", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Data::Getmmapgs0()", 
+          "returnType": "mmapgs0_1_ &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Getmmapgs1", 
+          "parent": "AdvApp2Var_Data", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Data::Getmmapgs1()", 
+          "returnType": "mmapgs1_1_ &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Getmmapgs2", 
+          "parent": "AdvApp2Var_Data", 
+          "arguments": [], 
+          "key": "AdvApp2Var_Data::Getmmapgs2()", 
+          "returnType": "mmapgs2_1_ &", 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/AdvApp2Var_Data.hxx", 
+        81
+      ], 
+      "key": "AdvApp2Var_Data"
+    }, 
+    {
+      "type": "NCollection_Sequence<AdvApp2Var_Iso>", 
+      "declType": "typedef", 
+      "name": "AdvApp2Var_Strip", 
+      "key": "AdvApp2Var_Strip"
+    }, 
+    {
+      "type": "NCollection_Sequence<NCollection_Sequence<AdvApp2Var_Iso> >", 
+      "declType": "typedef", 
+      "name": "AdvApp2Var_SequenceOfStrip", 
+      "key": "AdvApp2Var_SequenceOfStrip"
+    }, 
+    {
+      "type": "NCollection_Sequence<AdvApp2Var_Patch>", 
+      "declType": "typedef", 
+      "name": "AdvApp2Var_SequenceOfPatch", 
+      "key": "AdvApp2Var_SequenceOfPatch"
+    }, 
+    {
+      "type": "NCollection_Sequence<AdvApp2Var_Node>", 
+      "declType": "typedef", 
+      "name": "AdvApp2Var_SequenceOfNode", 
+      "key": "AdvApp2Var_SequenceOfNode"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "AdvApp2Var_Absolute", 
+          0
+        ], 
+        [
+          "AdvApp2Var_Relative", 
+          1
+        ]
+      ], 
+      "name": "AdvApp2Var_CriterionType", 
+      "key": "AdvApp2Var_CriterionType"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "AdvApp2Var_Regular", 
+          0
+        ], 
+        [
+          "AdvApp2Var_Incremental", 
+          1
+        ]
+      ], 
+      "name": "AdvApp2Var_CriterionRepartition", 
+      "key": "AdvApp2Var_CriterionRepartition"
+    }
+  ], 
+  "name": "AdvApp2Var"
+}

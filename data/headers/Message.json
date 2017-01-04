@@ -1,0 +1,3269 @@
+{
+  "headers": [
+    "Message_ProgressIndicator.hxx", 
+    "Message_Status.hxx", 
+    "Message_ProgressSentry.hxx", 
+    "Message_HArrayOfMsg.hxx", 
+    "Message_ListOfMsg.hxx", 
+    "Message_StatusType.hxx", 
+    "Message_PrinterOStream.hxx", 
+    "Message_Gravity.hxx", 
+    "Message_SequenceOfProgressScale.hxx", 
+    "Message_Algorithm.hxx", 
+    "Message_MsgFile.hxx", 
+    "Message_ListIteratorOfListOfMsg.hxx", 
+    "Message_ExecStatus.hxx", 
+    "Message_Printer.hxx", 
+    "Message_Messenger.hxx", 
+    "Message_ProgressScale.hxx", 
+    "Message_SequenceOfPrinters.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Message_ProgressScale", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Message_ProgressScale", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [], 
+          "key": "Message_ProgressScale::Message_ProgressScale()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Message_ProgressScale", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [
+            {
+              "decl": "const Message_ProgressScale &", 
+              "type": "Message_ProgressScale", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Message_ProgressScale::Message_ProgressScale(Message_ProgressScale)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetName", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theName"
+            }
+          ], 
+          "key": "Message_ProgressScale::SetName(Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetName", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "theName"
+            }
+          ], 
+          "key": "Message_ProgressScale::SetName(opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetName", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [], 
+          "key": "Message_ProgressScale::GetName()", 
+          "returnType": "opencascade::handle<TCollection_HAsciiString>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetMin", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theMin"
+            }
+          ], 
+          "key": "Message_ProgressScale::SetMin(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetMin", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [], 
+          "key": "Message_ProgressScale::GetMin()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetMax", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theMax"
+            }
+          ], 
+          "key": "Message_ProgressScale::SetMax(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetMax", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [], 
+          "key": "Message_ProgressScale::GetMax()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetRange", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "min"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "max"
+            }
+          ], 
+          "key": "Message_ProgressScale::SetRange(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetStep", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theStep"
+            }
+          ], 
+          "key": "Message_ProgressScale::SetStep(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetStep", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [], 
+          "key": "Message_ProgressScale::GetStep()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetInfinite", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "theInfinite", 
+              "default": "true"
+            }
+          ], 
+          "key": "Message_ProgressScale::SetInfinite(Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetInfinite", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [], 
+          "key": "Message_ProgressScale::GetInfinite()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetScale", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "min"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "max"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "step"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "theInfinite", 
+              "default": "true"
+            }
+          ], 
+          "key": "Message_ProgressScale::SetScale(Standard_Real, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetSpan", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "first"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "last"
+            }
+          ], 
+          "key": "Message_ProgressScale::SetSpan(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetFirst", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [], 
+          "key": "Message_ProgressScale::GetFirst()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetLast", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [], 
+          "key": "Message_ProgressScale::GetLast()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LocalToBase", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "val"
+            }
+          ], 
+          "key": "Message_ProgressScale::LocalToBase(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "BaseToLocal", 
+          "parent": "Message_ProgressScale", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "val"
+            }
+          ], 
+          "key": "Message_ProgressScale::BaseToLocal(Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Message_ProgressScale.hxx", 
+        40
+      ], 
+      "key": "Message_ProgressScale"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Message_ProgressIndicator", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "declType": "method", 
+          "name": "Reset", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [], 
+          "key": "Message_ProgressIndicator::Reset()", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetName", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "name"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::SetName(Standard_CString)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetName", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "name"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::SetName(opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetRange", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "min"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "max"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::SetRange(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetStep", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "step"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::SetStep(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetInfinite", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "isInf", 
+              "default": "true"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::SetInfinite(Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetScale", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "name"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "min"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "max"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "step"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "isInf", 
+              "default": "false"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::SetScale(Standard_CString, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetScale", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "min"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "max"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "step"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "isInf", 
+              "default": "false"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::SetScale(Standard_Real, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetScale", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "min"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "max"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "step"
+            }, 
+            {
+              "decl": "Standard_Boolean &", 
+              "type": "Standard_Boolean", 
+              "name": "isInf"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::GetScale(Standard_Real, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetValue", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "val"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::SetValue(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetValue", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [], 
+          "key": "Message_ProgressIndicator::GetValue()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Increment", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [], 
+          "key": "Message_ProgressIndicator::Increment()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Increment", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "step"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::Increment(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewScope", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "name", 
+              "default": "0"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::NewScope(Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewScope", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "name"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::NewScope(opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewScope", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "span"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "name", 
+              "default": "0"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::NewScope(Standard_Real, Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewScope", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "span"
+            }, 
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "name"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::NewScope(Standard_Real, opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "EndScope", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [], 
+          "key": "Message_ProgressIndicator::EndScope()", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NextScope", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "name", 
+              "default": "0"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::NextScope(Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NextScope", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "span"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "name", 
+              "default": "0"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::NextScope(Standard_Real, Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UserBreak", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [], 
+          "key": "Message_ProgressIndicator::UserBreak()", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Show", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "force", 
+              "default": "true"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::Show(Standard_Boolean)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetPosition", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [], 
+          "key": "Message_ProgressIndicator::GetPosition()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetNbScopes", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [], 
+          "key": "Message_ProgressIndicator::GetNbScopes()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetScope", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "index"
+            }
+          ], 
+          "key": "Message_ProgressIndicator::GetScope(Standard_Integer)", 
+          "returnType": "Message_ProgressScale const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [], 
+          "key": "Message_ProgressIndicator::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [], 
+          "key": "Message_ProgressIndicator::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Message_ProgressIndicator", 
+          "arguments": [], 
+          "key": "Message_ProgressIndicator::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Message_ProgressIndicator.hxx", 
+        80
+      ], 
+      "key": "Message_ProgressIndicator"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Message_ProgressSentry", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Message_ProgressSentry", 
+          "parent": "Message_ProgressSentry", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Message_ProgressIndicator> &", 
+              "type": "opencascade::handle<Message_ProgressIndicator>", 
+              "name": "PI"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "name"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "min"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "max"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "step"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "isInf", 
+              "default": "false"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "newScopeSpan", 
+              "default": "0."
+            }
+          ], 
+          "key": "Message_ProgressSentry::Message_ProgressSentry(opencascade::handle<Message_ProgressIndicator>, Standard_CString, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Message_ProgressSentry", 
+          "parent": "Message_ProgressSentry", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Message_ProgressIndicator> &", 
+              "type": "opencascade::handle<Message_ProgressIndicator>", 
+              "name": "PI"
+            }, 
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "name"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "min"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "max"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "step"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "isInf", 
+              "default": "false"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "newScopeSpan", 
+              "default": "0."
+            }
+          ], 
+          "key": "Message_ProgressSentry::Message_ProgressSentry(opencascade::handle<Message_ProgressIndicator>, opencascade::handle<TCollection_HAsciiString>, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Message_ProgressSentry", 
+          "parent": "Message_ProgressSentry", 
+          "arguments": [
+            {
+              "decl": "const Message_ProgressSentry &", 
+              "type": "Message_ProgressSentry", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Message_ProgressSentry::Message_ProgressSentry(Message_ProgressSentry)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Relieve", 
+          "parent": "Message_ProgressSentry", 
+          "arguments": [], 
+          "key": "Message_ProgressSentry::Relieve()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Next", 
+          "parent": "Message_ProgressSentry", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "name", 
+              "default": "0"
+            }
+          ], 
+          "key": "Message_ProgressSentry::Next(Standard_CString)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Next", 
+          "parent": "Message_ProgressSentry", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "span"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "name", 
+              "default": "0"
+            }
+          ], 
+          "key": "Message_ProgressSentry::Next(Standard_Real, Standard_CString)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Next", 
+          "parent": "Message_ProgressSentry", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "span"
+            }, 
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "name"
+            }
+          ], 
+          "key": "Message_ProgressSentry::Next(Standard_Real, opencascade::handle<TCollection_HAsciiString>)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "More", 
+          "parent": "Message_ProgressSentry", 
+          "arguments": [], 
+          "key": "Message_ProgressSentry::More()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Show", 
+          "parent": "Message_ProgressSentry", 
+          "arguments": [], 
+          "key": "Message_ProgressSentry::Show()", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Message_ProgressSentry.hxx", 
+        40
+      ], 
+      "key": "Message_ProgressSentry"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Message_Printer", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "declType": "method", 
+          "name": "GetTraceLevel", 
+          "parent": "Message_Printer", 
+          "arguments": [], 
+          "key": "Message_Printer::GetTraceLevel()", 
+          "returnType": "Message_Gravity", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetTraceLevel", 
+          "parent": "Message_Printer", 
+          "arguments": [
+            {
+              "decl": "const Message_Gravity", 
+              "type": "Message_Gravity", 
+              "name": "theTraceLevel"
+            }
+          ], 
+          "key": "Message_Printer::SetTraceLevel(Message_Gravity)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Send", 
+          "parent": "Message_Printer", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "theString"
+            }, 
+            {
+              "decl": "const Message_Gravity", 
+              "type": "Message_Gravity", 
+              "name": "theGravity"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "theToPutEol"
+            }
+          ], 
+          "key": "Message_Printer::Send(TCollection_ExtendedString, Message_Gravity, Standard_Boolean)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Send", 
+          "parent": "Message_Printer", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theString"
+            }, 
+            {
+              "decl": "const Message_Gravity", 
+              "type": "Message_Gravity", 
+              "name": "theGravity"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "theToPutEol"
+            }
+          ], 
+          "key": "Message_Printer::Send(Standard_CString, Message_Gravity, Standard_Boolean)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Send", 
+          "parent": "Message_Printer", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "theString"
+            }, 
+            {
+              "decl": "const Message_Gravity", 
+              "type": "Message_Gravity", 
+              "name": "theGravity"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "theToPutEol"
+            }
+          ], 
+          "key": "Message_Printer::Send(TCollection_AsciiString, Message_Gravity, Standard_Boolean)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Message_Printer", 
+          "arguments": [], 
+          "key": "Message_Printer::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Message_Printer", 
+          "arguments": [], 
+          "key": "Message_Printer::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Message_Printer", 
+          "arguments": [], 
+          "key": "Message_Printer::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Message_Printer.hxx", 
+        37
+      ], 
+      "key": "Message_Printer"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Message_PrinterOStream", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Message_PrinterOStream", 
+          "parent": "Message_PrinterOStream", 
+          "arguments": [
+            {
+              "decl": "const Message_Gravity", 
+              "type": "Message_Gravity", 
+              "name": "theTraceLevel", 
+              "default": "::Message_Gravity::Message_Info"
+            }
+          ], 
+          "key": "Message_PrinterOStream::Message_PrinterOStream(Message_Gravity)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Message_PrinterOStream", 
+          "parent": "Message_PrinterOStream", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theFileName"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "theDoAppend"
+            }, 
+            {
+              "decl": "const Message_Gravity", 
+              "type": "Message_Gravity", 
+              "name": "theTraceLevel", 
+              "default": "::Message_Gravity::Message_Info"
+            }
+          ], 
+          "key": "Message_PrinterOStream::Message_PrinterOStream(Standard_CString, Standard_Boolean, Message_Gravity)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Message_PrinterOStream", 
+          "parent": "Message_PrinterOStream", 
+          "arguments": [
+            {
+              "decl": "const Message_PrinterOStream &", 
+              "type": "Message_PrinterOStream", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Message_PrinterOStream::Message_PrinterOStream(Message_PrinterOStream)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Close", 
+          "parent": "Message_PrinterOStream", 
+          "arguments": [], 
+          "key": "Message_PrinterOStream::Close()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetUseUtf8", 
+          "parent": "Message_PrinterOStream", 
+          "arguments": [], 
+          "key": "Message_PrinterOStream::GetUseUtf8()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetUseUtf8", 
+          "parent": "Message_PrinterOStream", 
+          "arguments": [
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "useUtf8"
+            }
+          ], 
+          "key": "Message_PrinterOStream::SetUseUtf8(Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetStream", 
+          "parent": "Message_PrinterOStream", 
+          "arguments": [], 
+          "key": "Message_PrinterOStream::GetStream()", 
+          "returnType": "Standard_OStream &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Send", 
+          "parent": "Message_PrinterOStream", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theString"
+            }, 
+            {
+              "decl": "const Message_Gravity", 
+              "type": "Message_Gravity", 
+              "name": "theGravity"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "putEndl", 
+              "default": "true"
+            }
+          ], 
+          "key": "Message_PrinterOStream::Send(Standard_CString, Message_Gravity, Standard_Boolean)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Send", 
+          "parent": "Message_PrinterOStream", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "theString"
+            }, 
+            {
+              "decl": "const Message_Gravity", 
+              "type": "Message_Gravity", 
+              "name": "theGravity"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "putEndl", 
+              "default": "true"
+            }
+          ], 
+          "key": "Message_PrinterOStream::Send(TCollection_AsciiString, Message_Gravity, Standard_Boolean)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Send", 
+          "parent": "Message_PrinterOStream", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "theString"
+            }, 
+            {
+              "decl": "const Message_Gravity", 
+              "type": "Message_Gravity", 
+              "name": "theGravity"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "putEndl", 
+              "default": "true"
+            }
+          ], 
+          "key": "Message_PrinterOStream::Send(TCollection_ExtendedString, Message_Gravity, Standard_Boolean)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Message_PrinterOStream", 
+          "arguments": [], 
+          "key": "Message_PrinterOStream::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Message_PrinterOStream", 
+          "arguments": [], 
+          "key": "Message_PrinterOStream::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Message_PrinterOStream", 
+          "arguments": [], 
+          "key": "Message_PrinterOStream::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Message_Printer"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Message_PrinterOStream.hxx", 
+        38
+      ], 
+      "key": "Message_PrinterOStream"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Message_ExecStatus", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Message_ExecStatus", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [], 
+          "key": "Message_ExecStatus::Message_ExecStatus()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Message_ExecStatus", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [
+            {
+              "decl": "Message_Status", 
+              "type": "Message_Status", 
+              "name": "status"
+            }
+          ], 
+          "key": "Message_ExecStatus::Message_ExecStatus(Message_Status)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Message_ExecStatus", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [
+            {
+              "decl": "const Message_ExecStatus &", 
+              "type": "Message_ExecStatus", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Message_ExecStatus::Message_ExecStatus(Message_ExecStatus)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [
+            {
+              "decl": "Message_Status", 
+              "type": "Message_Status", 
+              "name": "status"
+            }
+          ], 
+          "key": "Message_ExecStatus::Set(Message_Status)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsSet", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [
+            {
+              "decl": "Message_Status", 
+              "type": "Message_Status", 
+              "name": "status"
+            }
+          ], 
+          "key": "Message_ExecStatus::IsSet(Message_Status)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Clear", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [
+            {
+              "decl": "Message_Status", 
+              "type": "Message_Status", 
+              "name": "status"
+            }
+          ], 
+          "key": "Message_ExecStatus::Clear(Message_Status)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [], 
+          "key": "Message_ExecStatus::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsFail", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [], 
+          "key": "Message_ExecStatus::IsFail()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsWarn", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [], 
+          "key": "Message_ExecStatus::IsWarn()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsAlarm", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [], 
+          "key": "Message_ExecStatus::IsAlarm()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetAllDone", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [], 
+          "key": "Message_ExecStatus::SetAllDone()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetAllWarn", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [], 
+          "key": "Message_ExecStatus::SetAllWarn()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetAllAlarm", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [], 
+          "key": "Message_ExecStatus::SetAllAlarm()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetAllFail", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [], 
+          "key": "Message_ExecStatus::SetAllFail()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ClearAllDone", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [], 
+          "key": "Message_ExecStatus::ClearAllDone()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ClearAllWarn", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [], 
+          "key": "Message_ExecStatus::ClearAllWarn()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ClearAllAlarm", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [], 
+          "key": "Message_ExecStatus::ClearAllAlarm()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ClearAllFail", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [], 
+          "key": "Message_ExecStatus::ClearAllFail()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Clear", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [], 
+          "key": "Message_ExecStatus::Clear()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [
+            {
+              "decl": "const Message_ExecStatus &", 
+              "type": "Message_ExecStatus", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Message_ExecStatus::Add(Message_ExecStatus)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "And", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [
+            {
+              "decl": "const Message_ExecStatus &", 
+              "type": "Message_ExecStatus", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Message_ExecStatus::And(Message_ExecStatus)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "StatusIndex", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [
+            {
+              "decl": "Message_Status", 
+              "type": "Message_Status", 
+              "name": "status"
+            }
+          ], 
+          "key": "Message_ExecStatus::StatusIndex(Message_Status)", 
+          "returnType": "Standard_Integer", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LocalStatusIndex", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [
+            {
+              "decl": "Message_Status", 
+              "type": "Message_Status", 
+              "name": "status"
+            }
+          ], 
+          "key": "Message_ExecStatus::LocalStatusIndex(Message_Status)", 
+          "returnType": "Standard_Integer", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "TypeOfStatus", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [
+            {
+              "decl": "Message_Status", 
+              "type": "Message_Status", 
+              "name": "status"
+            }
+          ], 
+          "key": "Message_ExecStatus::TypeOfStatus(Message_Status)", 
+          "returnType": "Message_StatusType", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "StatusByIndex", 
+          "parent": "Message_ExecStatus", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theIndex"
+            }
+          ], 
+          "key": "Message_ExecStatus::StatusByIndex(Standard_Integer)", 
+          "returnType": "Message_Status", 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Message_ExecStatus.hxx", 
+        42
+      ], 
+      "key": "Message_ExecStatus"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Message_Messenger", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Message_Messenger", 
+          "parent": "Message_Messenger", 
+          "arguments": [], 
+          "key": "Message_Messenger::Message_Messenger()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Message_Messenger", 
+          "parent": "Message_Messenger", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Message_Printer> &", 
+              "type": "opencascade::handle<Message_Printer>", 
+              "name": "thePrinter"
+            }
+          ], 
+          "key": "Message_Messenger::Message_Messenger(opencascade::handle<Message_Printer>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Message_Messenger", 
+          "parent": "Message_Messenger", 
+          "arguments": [
+            {
+              "decl": "const Message_Messenger &", 
+              "type": "Message_Messenger", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Message_Messenger::Message_Messenger(Message_Messenger)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AddPrinter", 
+          "parent": "Message_Messenger", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Message_Printer> &", 
+              "type": "opencascade::handle<Message_Printer>", 
+              "name": "thePrinter"
+            }
+          ], 
+          "key": "Message_Messenger::AddPrinter(opencascade::handle<Message_Printer>)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RemovePrinter", 
+          "parent": "Message_Messenger", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Message_Printer> &", 
+              "type": "opencascade::handle<Message_Printer>", 
+              "name": "thePrinter"
+            }
+          ], 
+          "key": "Message_Messenger::RemovePrinter(opencascade::handle<Message_Printer>)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RemovePrinters", 
+          "parent": "Message_Messenger", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Standard_Type> &", 
+              "type": "opencascade::handle<Standard_Type>", 
+              "name": "theType"
+            }
+          ], 
+          "key": "Message_Messenger::RemovePrinters(opencascade::handle<Standard_Type>)", 
+          "returnType": "Standard_Integer", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Printers", 
+          "parent": "Message_Messenger", 
+          "arguments": [], 
+          "key": "Message_Messenger::Printers()", 
+          "returnType": "Message_SequenceOfPrinters const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangePrinters", 
+          "parent": "Message_Messenger", 
+          "arguments": [], 
+          "key": "Message_Messenger::ChangePrinters()", 
+          "returnType": "Message_SequenceOfPrinters &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Send", 
+          "parent": "Message_Messenger", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theString"
+            }, 
+            {
+              "decl": "const Message_Gravity", 
+              "type": "Message_Gravity", 
+              "name": "theGravity", 
+              "default": "::Message_Gravity::Message_Warning"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "putEndl", 
+              "default": "true"
+            }
+          ], 
+          "key": "Message_Messenger::Send(Standard_CString, Message_Gravity, Standard_Boolean)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Send", 
+          "parent": "Message_Messenger", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "theString"
+            }, 
+            {
+              "decl": "const Message_Gravity", 
+              "type": "Message_Gravity", 
+              "name": "theGravity", 
+              "default": "::Message_Gravity::Message_Warning"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "putEndl", 
+              "default": "true"
+            }
+          ], 
+          "key": "Message_Messenger::Send(TCollection_AsciiString, Message_Gravity, Standard_Boolean)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Send", 
+          "parent": "Message_Messenger", 
+          "arguments": [
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "theString"
+            }, 
+            {
+              "decl": "const Message_Gravity", 
+              "type": "Message_Gravity", 
+              "name": "theGravity", 
+              "default": "::Message_Gravity::Message_Warning"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "putEndl", 
+              "default": "true"
+            }
+          ], 
+          "key": "Message_Messenger::Send(TCollection_ExtendedString, Message_Gravity, Standard_Boolean)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Message_Messenger", 
+          "arguments": [], 
+          "key": "Message_Messenger::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Message_Messenger", 
+          "arguments": [], 
+          "key": "Message_Messenger::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Message_Messenger", 
+          "arguments": [], 
+          "key": "Message_Messenger::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Message_Messenger.hxx", 
+        49
+      ], 
+      "key": "Message_Messenger"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Message_Algorithm", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Message_Algorithm", 
+          "parent": "Message_Algorithm", 
+          "arguments": [], 
+          "key": "Message_Algorithm::Message_Algorithm()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Message_Algorithm", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const Message_Algorithm &", 
+              "type": "Message_Algorithm", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Message_Algorithm::Message_Algorithm(Message_Algorithm)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetStatus", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const Message_Status &", 
+              "type": "Message_Status", 
+              "name": "theStat"
+            }
+          ], 
+          "key": "Message_Algorithm::SetStatus(Message_Status)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetStatus", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const Message_Status &", 
+              "type": "Message_Status", 
+              "name": "theStat"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theInt"
+            }
+          ], 
+          "key": "Message_Algorithm::SetStatus(Message_Status, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetStatus", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const Message_Status &", 
+              "type": "Message_Status", 
+              "name": "theStat"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theStr"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "noRepetitions", 
+              "default": "true"
+            }
+          ], 
+          "key": "Message_Algorithm::SetStatus(Message_Status, Standard_CString, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetStatus", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const Message_Status &", 
+              "type": "Message_Status", 
+              "name": "theStat"
+            }, 
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "theStr"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "noRepetitions", 
+              "default": "true"
+            }
+          ], 
+          "key": "Message_Algorithm::SetStatus(Message_Status, TCollection_AsciiString, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetStatus", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const Message_Status &", 
+              "type": "Message_Status", 
+              "name": "theStat"
+            }, 
+            {
+              "decl": "const opencascade::handle<TCollection_HAsciiString> &", 
+              "type": "opencascade::handle<TCollection_HAsciiString>", 
+              "name": "theStr"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "noRepetitions", 
+              "default": "true"
+            }
+          ], 
+          "key": "Message_Algorithm::SetStatus(Message_Status, opencascade::handle<TCollection_HAsciiString>, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetStatus", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const Message_Status &", 
+              "type": "Message_Status", 
+              "name": "theStat"
+            }, 
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "theStr"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "noRepetitions", 
+              "default": "true"
+            }
+          ], 
+          "key": "Message_Algorithm::SetStatus(Message_Status, TCollection_ExtendedString, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetStatus", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const Message_Status &", 
+              "type": "Message_Status", 
+              "name": "theStat"
+            }, 
+            {
+              "decl": "const opencascade::handle<TCollection_HExtendedString> &", 
+              "type": "opencascade::handle<TCollection_HExtendedString>", 
+              "name": "theStr"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "noRepetitions", 
+              "default": "true"
+            }
+          ], 
+          "key": "Message_Algorithm::SetStatus(Message_Status, opencascade::handle<TCollection_HExtendedString>, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetStatus", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const Message_Status &", 
+              "type": "Message_Status", 
+              "name": "theStat"
+            }, 
+            {
+              "decl": "const Message_Msg &", 
+              "type": "Message_Msg", 
+              "name": "theMsg"
+            }
+          ], 
+          "key": "Message_Algorithm::SetStatus(Message_Status, Message_Msg)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetStatus", 
+          "parent": "Message_Algorithm", 
+          "arguments": [], 
+          "key": "Message_Algorithm::GetStatus()", 
+          "returnType": "Message_ExecStatus const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeStatus", 
+          "parent": "Message_Algorithm", 
+          "arguments": [], 
+          "key": "Message_Algorithm::ChangeStatus()", 
+          "returnType": "Message_ExecStatus &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ClearStatus", 
+          "parent": "Message_Algorithm", 
+          "arguments": [], 
+          "key": "Message_Algorithm::ClearStatus()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetMessenger", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Message_Messenger> &", 
+              "type": "opencascade::handle<Message_Messenger>", 
+              "name": "theMsgr"
+            }
+          ], 
+          "key": "Message_Algorithm::SetMessenger(opencascade::handle<Message_Messenger>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetMessenger", 
+          "parent": "Message_Algorithm", 
+          "arguments": [], 
+          "key": "Message_Algorithm::GetMessenger()", 
+          "returnType": "opencascade::handle<Message_Messenger>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SendStatusMessages", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const Message_ExecStatus &", 
+              "type": "Message_ExecStatus", 
+              "name": "theFilter"
+            }, 
+            {
+              "decl": "const Message_Gravity", 
+              "type": "Message_Gravity", 
+              "name": "theTraceLevel", 
+              "default": "::Message_Gravity::Message_Warning"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theMaxCount", 
+              "default": "20"
+            }
+          ], 
+          "key": "Message_Algorithm::SendStatusMessages(Message_ExecStatus, Message_Gravity, Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "SendMessages", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const Message_Gravity", 
+              "type": "Message_Gravity", 
+              "name": "theTraceLevel", 
+              "default": "::Message_Gravity::Message_Warning"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theMaxCount", 
+              "default": "20"
+            }
+          ], 
+          "key": "Message_Algorithm::SendMessages(Message_Gravity, Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AddStatus", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Message_Algorithm> &", 
+              "type": "opencascade::handle<Message_Algorithm>", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Message_Algorithm::AddStatus(opencascade::handle<Message_Algorithm>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AddStatus", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const Message_ExecStatus &", 
+              "type": "Message_ExecStatus", 
+              "name": "theStatus"
+            }, 
+            {
+              "decl": "const opencascade::handle<Message_Algorithm> &", 
+              "type": "opencascade::handle<Message_Algorithm>", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Message_Algorithm::AddStatus(Message_ExecStatus, opencascade::handle<Message_Algorithm>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetMessageNumbers", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const Message_Status &", 
+              "type": "Message_Status", 
+              "name": "theStatus"
+            }
+          ], 
+          "key": "Message_Algorithm::GetMessageNumbers(Message_Status)", 
+          "returnType": "opencascade::handle<TColStd_HPackedMapOfInteger>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetMessageStrings", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const Message_Status &", 
+              "type": "Message_Status", 
+              "name": "theStatus"
+            }
+          ], 
+          "key": "Message_Algorithm::GetMessageStrings(Message_Status)", 
+          "returnType": "opencascade::handle<TColStd_HSequenceOfHExtendedString>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "PrepareReport", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TColStd_HPackedMapOfInteger> &", 
+              "type": "opencascade::handle<TColStd_HPackedMapOfInteger>", 
+              "name": "theError"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theMaxCount"
+            }
+          ], 
+          "key": "Message_Algorithm::PrepareReport(opencascade::handle<TColStd_HPackedMapOfInteger>, Standard_Integer)", 
+          "returnType": "TCollection_ExtendedString", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "PrepareReport", 
+          "parent": "Message_Algorithm", 
+          "arguments": [
+            {
+              "decl": "const TColStd_SequenceOfHExtendedString &", 
+              "type": "TColStd_SequenceOfHExtendedString", 
+              "name": "theReportSeq"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theMaxCount"
+            }
+          ], 
+          "key": "Message_Algorithm::PrepareReport(TColStd_SequenceOfHExtendedString, Standard_Integer)", 
+          "returnType": "TCollection_ExtendedString", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Message_Algorithm", 
+          "arguments": [], 
+          "key": "Message_Algorithm::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Message_Algorithm", 
+          "arguments": [], 
+          "key": "Message_Algorithm::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Message_Algorithm", 
+          "arguments": [], 
+          "key": "Message_Algorithm::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Message_Algorithm.hxx", 
+        89
+      ], 
+      "key": "Message_Algorithm"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Message_MsgFile", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Message_MsgFile", 
+          "parent": "Message_MsgFile", 
+          "arguments": [], 
+          "key": "Message_MsgFile::Message_MsgFile()", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Message_MsgFile", 
+          "parent": "Message_MsgFile", 
+          "arguments": [
+            {
+              "decl": "const Message_MsgFile &", 
+              "type": "Message_MsgFile", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Message_MsgFile::Message_MsgFile(Message_MsgFile)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Load", 
+          "parent": "Message_MsgFile", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theDirName"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theFileName"
+            }
+          ], 
+          "key": "Message_MsgFile::Load(Standard_CString, Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LoadFile", 
+          "parent": "Message_MsgFile", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theFName"
+            }
+          ], 
+          "key": "Message_MsgFile::LoadFile(Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LoadFromEnv", 
+          "parent": "Message_MsgFile", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theEnvName"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theFileName"
+            }, 
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theLangExt", 
+              "default": "\"\""
+            }
+          ], 
+          "key": "Message_MsgFile::LoadFromEnv(Standard_CString, Standard_CString, Standard_CString)", 
+          "returnType": "Standard_Boolean", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LoadFromString", 
+          "parent": "Message_MsgFile", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "theContent"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theLength", 
+              "default": "-1"
+            }
+          ], 
+          "key": "Message_MsgFile::LoadFromString(Standard_CString, Standard_Integer)", 
+          "returnType": "Standard_Boolean", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AddMsg", 
+          "parent": "Message_MsgFile", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "key"
+            }, 
+            {
+              "decl": "const TCollection_ExtendedString &", 
+              "type": "TCollection_ExtendedString", 
+              "name": "text"
+            }
+          ], 
+          "key": "Message_MsgFile::AddMsg(TCollection_AsciiString, TCollection_ExtendedString)", 
+          "returnType": "Standard_Boolean", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasMsg", 
+          "parent": "Message_MsgFile", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "key"
+            }
+          ], 
+          "key": "Message_MsgFile::HasMsg(TCollection_AsciiString)", 
+          "returnType": "Standard_Boolean", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Msg", 
+          "parent": "Message_MsgFile", 
+          "arguments": [
+            {
+              "decl": "const Standard_CString", 
+              "type": "Standard_CString", 
+              "name": "key"
+            }
+          ], 
+          "key": "Message_MsgFile::Msg(Standard_CString)", 
+          "returnType": "TCollection_ExtendedString const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Msg", 
+          "parent": "Message_MsgFile", 
+          "arguments": [
+            {
+              "decl": "const TCollection_AsciiString &", 
+              "type": "TCollection_AsciiString", 
+              "name": "key"
+            }
+          ], 
+          "key": "Message_MsgFile::Msg(TCollection_AsciiString)", 
+          "returnType": "TCollection_ExtendedString const &", 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Message_MsgFile.hxx", 
+        53
+      ], 
+      "key": "Message_MsgFile"
+    }, 
+    {
+      "type": "NCollection_Sequence<Message_ProgressScale>", 
+      "declType": "typedef", 
+      "name": "Message_SequenceOfProgressScale", 
+      "key": "Message_SequenceOfProgressScale"
+    }, 
+    {
+      "type": "opencascade::handle<Message_ProgressIndicator>", 
+      "declType": "typedef", 
+      "name": "Handle_Message_ProgressIndicator", 
+      "key": "Handle_Message_ProgressIndicator"
+    }, 
+    {
+      "type": "NCollection_Array1<NCollection_Handle<Message_Msg> >", 
+      "declType": "typedef", 
+      "name": "Message_ArrayOfMsg", 
+      "key": "Message_ArrayOfMsg"
+    }, 
+    {
+      "type": "NCollection_Handle<NCollection_Array1<NCollection_Handle<Message_Msg> > >", 
+      "declType": "typedef", 
+      "name": "Message_HArrayOfMsg", 
+      "key": "Message_HArrayOfMsg"
+    }, 
+    {
+      "type": "NCollection_List<Message_Msg>", 
+      "declType": "typedef", 
+      "name": "Message_ListOfMsg", 
+      "key": "Message_ListOfMsg"
+    }, 
+    {
+      "type": "NCollection_List<Message_Msg>::Iterator", 
+      "declType": "typedef", 
+      "name": "Message_ListIteratorOfListOfMsg", 
+      "key": "Message_ListIteratorOfListOfMsg"
+    }, 
+    {
+      "type": "opencascade::handle<Message_Printer>", 
+      "declType": "typedef", 
+      "name": "Handle_Message_Printer", 
+      "key": "Handle_Message_Printer"
+    }, 
+    {
+      "type": "opencascade::handle<Message_PrinterOStream>", 
+      "declType": "typedef", 
+      "name": "Handle_Message_PrinterOStream", 
+      "key": "Handle_Message_PrinterOStream"
+    }, 
+    {
+      "type": "opencascade::handle<Message_Algorithm>", 
+      "declType": "typedef", 
+      "name": "Handle_Message_Algorithm", 
+      "key": "Handle_Message_Algorithm"
+    }, 
+    {
+      "type": "NCollection_Sequence<opencascade::handle<Message_Printer> >", 
+      "declType": "typedef", 
+      "name": "Message_SequenceOfPrinters", 
+      "key": "Message_SequenceOfPrinters"
+    }, 
+    {
+      "type": "opencascade::handle<Message_Messenger>", 
+      "declType": "typedef", 
+      "name": "Handle_Message_Messenger", 
+      "key": "Handle_Message_Messenger"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "Message_DONE", 
+          256
+        ], 
+        [
+          "Message_WARN", 
+          512
+        ], 
+        [
+          "Message_ALARM", 
+          1024
+        ], 
+        [
+          "Message_FAIL", 
+          2048
+        ]
+      ], 
+      "name": "Message_StatusType", 
+      "key": "Message_StatusType"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "Message_None", 
+          0
+        ], 
+        [
+          "Message_Done1", 
+          256
+        ], 
+        [
+          "Message_Done2", 
+          257
+        ], 
+        [
+          "Message_Done3", 
+          258
+        ], 
+        [
+          "Message_Done4", 
+          259
+        ], 
+        [
+          "Message_Done5", 
+          260
+        ], 
+        [
+          "Message_Done6", 
+          261
+        ], 
+        [
+          "Message_Done7", 
+          262
+        ], 
+        [
+          "Message_Done8", 
+          263
+        ], 
+        [
+          "Message_Done9", 
+          264
+        ], 
+        [
+          "Message_Done10", 
+          265
+        ], 
+        [
+          "Message_Done11", 
+          266
+        ], 
+        [
+          "Message_Done12", 
+          267
+        ], 
+        [
+          "Message_Done13", 
+          268
+        ], 
+        [
+          "Message_Done14", 
+          269
+        ], 
+        [
+          "Message_Done15", 
+          270
+        ], 
+        [
+          "Message_Done16", 
+          271
+        ], 
+        [
+          "Message_Done17", 
+          272
+        ], 
+        [
+          "Message_Done18", 
+          273
+        ], 
+        [
+          "Message_Done19", 
+          274
+        ], 
+        [
+          "Message_Done20", 
+          275
+        ], 
+        [
+          "Message_Done21", 
+          276
+        ], 
+        [
+          "Message_Done22", 
+          277
+        ], 
+        [
+          "Message_Done23", 
+          278
+        ], 
+        [
+          "Message_Done24", 
+          279
+        ], 
+        [
+          "Message_Done25", 
+          280
+        ], 
+        [
+          "Message_Done26", 
+          281
+        ], 
+        [
+          "Message_Done27", 
+          282
+        ], 
+        [
+          "Message_Done28", 
+          283
+        ], 
+        [
+          "Message_Done29", 
+          284
+        ], 
+        [
+          "Message_Done30", 
+          285
+        ], 
+        [
+          "Message_Done31", 
+          286
+        ], 
+        [
+          "Message_Done32", 
+          287
+        ], 
+        [
+          "Message_Warn1", 
+          512
+        ], 
+        [
+          "Message_Warn2", 
+          513
+        ], 
+        [
+          "Message_Warn3", 
+          514
+        ], 
+        [
+          "Message_Warn4", 
+          515
+        ], 
+        [
+          "Message_Warn5", 
+          516
+        ], 
+        [
+          "Message_Warn6", 
+          517
+        ], 
+        [
+          "Message_Warn7", 
+          518
+        ], 
+        [
+          "Message_Warn8", 
+          519
+        ], 
+        [
+          "Message_Warn9", 
+          520
+        ], 
+        [
+          "Message_Warn10", 
+          521
+        ], 
+        [
+          "Message_Warn11", 
+          522
+        ], 
+        [
+          "Message_Warn12", 
+          523
+        ], 
+        [
+          "Message_Warn13", 
+          524
+        ], 
+        [
+          "Message_Warn14", 
+          525
+        ], 
+        [
+          "Message_Warn15", 
+          526
+        ], 
+        [
+          "Message_Warn16", 
+          527
+        ], 
+        [
+          "Message_Warn17", 
+          528
+        ], 
+        [
+          "Message_Warn18", 
+          529
+        ], 
+        [
+          "Message_Warn19", 
+          530
+        ], 
+        [
+          "Message_Warn20", 
+          531
+        ], 
+        [
+          "Message_Warn21", 
+          532
+        ], 
+        [
+          "Message_Warn22", 
+          533
+        ], 
+        [
+          "Message_Warn23", 
+          534
+        ], 
+        [
+          "Message_Warn24", 
+          535
+        ], 
+        [
+          "Message_Warn25", 
+          536
+        ], 
+        [
+          "Message_Warn26", 
+          537
+        ], 
+        [
+          "Message_Warn27", 
+          538
+        ], 
+        [
+          "Message_Warn28", 
+          539
+        ], 
+        [
+          "Message_Warn29", 
+          540
+        ], 
+        [
+          "Message_Warn30", 
+          541
+        ], 
+        [
+          "Message_Warn31", 
+          542
+        ], 
+        [
+          "Message_Warn32", 
+          543
+        ], 
+        [
+          "Message_Alarm1", 
+          1024
+        ], 
+        [
+          "Message_Alarm2", 
+          1025
+        ], 
+        [
+          "Message_Alarm3", 
+          1026
+        ], 
+        [
+          "Message_Alarm4", 
+          1027
+        ], 
+        [
+          "Message_Alarm5", 
+          1028
+        ], 
+        [
+          "Message_Alarm6", 
+          1029
+        ], 
+        [
+          "Message_Alarm7", 
+          1030
+        ], 
+        [
+          "Message_Alarm8", 
+          1031
+        ], 
+        [
+          "Message_Alarm9", 
+          1032
+        ], 
+        [
+          "Message_Alarm10", 
+          1033
+        ], 
+        [
+          "Message_Alarm11", 
+          1034
+        ], 
+        [
+          "Message_Alarm12", 
+          1035
+        ], 
+        [
+          "Message_Alarm13", 
+          1036
+        ], 
+        [
+          "Message_Alarm14", 
+          1037
+        ], 
+        [
+          "Message_Alarm15", 
+          1038
+        ], 
+        [
+          "Message_Alarm16", 
+          1039
+        ], 
+        [
+          "Message_Alarm17", 
+          1040
+        ], 
+        [
+          "Message_Alarm18", 
+          1041
+        ], 
+        [
+          "Message_Alarm19", 
+          1042
+        ], 
+        [
+          "Message_Alarm20", 
+          1043
+        ], 
+        [
+          "Message_Alarm21", 
+          1044
+        ], 
+        [
+          "Message_Alarm22", 
+          1045
+        ], 
+        [
+          "Message_Alarm23", 
+          1046
+        ], 
+        [
+          "Message_Alarm24", 
+          1047
+        ], 
+        [
+          "Message_Alarm25", 
+          1048
+        ], 
+        [
+          "Message_Alarm26", 
+          1049
+        ], 
+        [
+          "Message_Alarm27", 
+          1050
+        ], 
+        [
+          "Message_Alarm28", 
+          1051
+        ], 
+        [
+          "Message_Alarm29", 
+          1052
+        ], 
+        [
+          "Message_Alarm30", 
+          1053
+        ], 
+        [
+          "Message_Alarm31", 
+          1054
+        ], 
+        [
+          "Message_Alarm32", 
+          1055
+        ], 
+        [
+          "Message_Fail1", 
+          2048
+        ], 
+        [
+          "Message_Fail2", 
+          2049
+        ], 
+        [
+          "Message_Fail3", 
+          2050
+        ], 
+        [
+          "Message_Fail4", 
+          2051
+        ], 
+        [
+          "Message_Fail5", 
+          2052
+        ], 
+        [
+          "Message_Fail6", 
+          2053
+        ], 
+        [
+          "Message_Fail7", 
+          2054
+        ], 
+        [
+          "Message_Fail8", 
+          2055
+        ], 
+        [
+          "Message_Fail9", 
+          2056
+        ], 
+        [
+          "Message_Fail10", 
+          2057
+        ], 
+        [
+          "Message_Fail11", 
+          2058
+        ], 
+        [
+          "Message_Fail12", 
+          2059
+        ], 
+        [
+          "Message_Fail13", 
+          2060
+        ], 
+        [
+          "Message_Fail14", 
+          2061
+        ], 
+        [
+          "Message_Fail15", 
+          2062
+        ], 
+        [
+          "Message_Fail16", 
+          2063
+        ], 
+        [
+          "Message_Fail17", 
+          2064
+        ], 
+        [
+          "Message_Fail18", 
+          2065
+        ], 
+        [
+          "Message_Fail19", 
+          2066
+        ], 
+        [
+          "Message_Fail20", 
+          2067
+        ], 
+        [
+          "Message_Fail21", 
+          2068
+        ], 
+        [
+          "Message_Fail22", 
+          2069
+        ], 
+        [
+          "Message_Fail23", 
+          2070
+        ], 
+        [
+          "Message_Fail24", 
+          2071
+        ], 
+        [
+          "Message_Fail25", 
+          2072
+        ], 
+        [
+          "Message_Fail26", 
+          2073
+        ], 
+        [
+          "Message_Fail27", 
+          2074
+        ], 
+        [
+          "Message_Fail28", 
+          2075
+        ], 
+        [
+          "Message_Fail29", 
+          2076
+        ], 
+        [
+          "Message_Fail30", 
+          2077
+        ], 
+        [
+          "Message_Fail31", 
+          2078
+        ], 
+        [
+          "Message_Fail32", 
+          2079
+        ]
+      ], 
+      "name": "Message_Status", 
+      "key": "Message_Status"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "Message_Trace", 
+          0
+        ], 
+        [
+          "Message_Info", 
+          1
+        ], 
+        [
+          "Message_Warning", 
+          2
+        ], 
+        [
+          "Message_Alarm", 
+          3
+        ], 
+        [
+          "Message_Fail", 
+          4
+        ]
+      ], 
+      "name": "Message_Gravity", 
+      "key": "Message_Gravity"
+    }
+  ], 
+  "name": "Message"
+}

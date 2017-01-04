@@ -1,0 +1,336 @@
+{
+  "headers": [
+    "BSplSLib_Cache.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "BSplSLib_Cache", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "BSplSLib_Cache", 
+          "parent": "BSplSLib_Cache", 
+          "arguments": [], 
+          "key": "BSplSLib_Cache::BSplSLib_Cache()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "BSplSLib_Cache", 
+          "parent": "BSplSLib_Cache", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "theDegreeU"
+            }, 
+            {
+              "decl": "const Standard_Boolean &", 
+              "type": "Standard_Boolean", 
+              "name": "thePeriodicU"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "theFlatKnotsU"
+            }, 
+            {
+              "decl": "const Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "theDegreeV"
+            }, 
+            {
+              "decl": "const Standard_Boolean &", 
+              "type": "Standard_Boolean", 
+              "name": "thePeriodicV"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "theFlatKnotsV"
+            }, 
+            {
+              "decl": "const TColgp_Array2OfPnt &", 
+              "type": "TColgp_Array2OfPnt", 
+              "name": "thePoles"
+            }, 
+            {
+              "decl": "const TColStd_Array2OfReal *", 
+              "type": "TColStd_Array2OfReal", 
+              "name": "theWeights", 
+              "default": "__null"
+            }
+          ], 
+          "key": "BSplSLib_Cache::BSplSLib_Cache(Standard_Integer, Standard_Boolean, TColStd_Array1OfReal, Standard_Integer, Standard_Boolean, TColStd_Array1OfReal, TColgp_Array2OfPnt, TColStd_Array2OfReal)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "BSplSLib_Cache", 
+          "parent": "BSplSLib_Cache", 
+          "arguments": [
+            {
+              "decl": "const BSplSLib_Cache &", 
+              "type": "BSplSLib_Cache", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "BSplSLib_Cache::BSplSLib_Cache(BSplSLib_Cache)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsCacheValid", 
+          "parent": "BSplSLib_Cache", 
+          "arguments": [
+            {
+              "decl": "Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theParameterU"
+            }, 
+            {
+              "decl": "Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theParameterV"
+            }
+          ], 
+          "key": "BSplSLib_Cache::IsCacheValid(Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "BuildCache", 
+          "parent": "BSplSLib_Cache", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theParameterU"
+            }, 
+            {
+              "decl": "const Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theParameterV"
+            }, 
+            {
+              "decl": "const Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "theDegreeU"
+            }, 
+            {
+              "decl": "const Standard_Boolean &", 
+              "type": "Standard_Boolean", 
+              "name": "thePeriodicU"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "theFlatKnotsU"
+            }, 
+            {
+              "decl": "const Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "theDegreeV"
+            }, 
+            {
+              "decl": "const Standard_Boolean &", 
+              "type": "Standard_Boolean", 
+              "name": "thePeriodicV"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "theFlatKnotsV"
+            }, 
+            {
+              "decl": "const TColgp_Array2OfPnt &", 
+              "type": "TColgp_Array2OfPnt", 
+              "name": "thePoles"
+            }, 
+            {
+              "decl": "const TColStd_Array2OfReal *", 
+              "type": "TColStd_Array2OfReal", 
+              "name": "theWeights", 
+              "default": "__null"
+            }
+          ], 
+          "key": "BSplSLib_Cache::BuildCache(Standard_Real, Standard_Real, Standard_Integer, Standard_Boolean, TColStd_Array1OfReal, Standard_Integer, Standard_Boolean, TColStd_Array1OfReal, TColgp_Array2OfPnt, TColStd_Array2OfReal)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D0", 
+          "parent": "BSplSLib_Cache", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theU"
+            }, 
+            {
+              "decl": "const Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theV"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "thePoint"
+            }
+          ], 
+          "key": "BSplSLib_Cache::D0(Standard_Real, Standard_Real, gp_Pnt)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "BSplSLib_Cache", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theU"
+            }, 
+            {
+              "decl": "const Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theV"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "thePoint"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "theTangentU"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "theTangentV"
+            }
+          ], 
+          "key": "BSplSLib_Cache::D1(Standard_Real, Standard_Real, gp_Pnt, gp_Vec, gp_Vec)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "BSplSLib_Cache", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theU"
+            }, 
+            {
+              "decl": "const Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "theV"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "thePoint"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "theTangentU"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "theTangentV"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "theCurvatureU"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "theCurvatureV"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "theCurvatureUV"
+            }
+          ], 
+          "key": "BSplSLib_Cache::D2(Standard_Real, Standard_Real, gp_Pnt, gp_Vec, gp_Vec, gp_Vec, gp_Vec, gp_Vec)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "BSplSLib_Cache", 
+          "arguments": [], 
+          "key": "BSplSLib_Cache::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "BSplSLib_Cache", 
+          "arguments": [], 
+          "key": "BSplSLib_Cache::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "BSplSLib_Cache", 
+          "arguments": [], 
+          "key": "BSplSLib_Cache::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_Transient"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BSplSLib_Cache.hxx", 
+        36
+      ], 
+      "key": "BSplSLib_Cache"
+    }, 
+    {
+      "type": "opencascade::handle<BSplSLib_Cache>", 
+      "declType": "typedef", 
+      "name": "Handle_BSplSLib_Cache", 
+      "key": "Handle_BSplSLib_Cache"
+    }
+  ], 
+  "name": "BSplSLib"
+}

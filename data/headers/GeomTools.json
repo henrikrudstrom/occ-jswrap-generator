@@ -1,0 +1,891 @@
+{
+  "headers": [
+    "GeomTools_SurfaceSet.hxx", 
+    "GeomTools_UndefinedTypeHandler.hxx", 
+    "GeomTools_Curve2dSet.hxx", 
+    "GeomTools_CurveSet.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "GeomTools_SurfaceSet", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomTools_SurfaceSet", 
+          "parent": "GeomTools_SurfaceSet", 
+          "arguments": [], 
+          "key": "GeomTools_SurfaceSet::GeomTools_SurfaceSet()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomTools_SurfaceSet", 
+          "parent": "GeomTools_SurfaceSet", 
+          "arguments": [
+            {
+              "decl": "const GeomTools_SurfaceSet &", 
+              "type": "GeomTools_SurfaceSet", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomTools_SurfaceSet::GeomTools_SurfaceSet(GeomTools_SurfaceSet)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Clear", 
+          "parent": "GeomTools_SurfaceSet", 
+          "arguments": [], 
+          "key": "GeomTools_SurfaceSet::Clear()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "GeomTools_SurfaceSet", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomTools_SurfaceSet::Add(opencascade::handle<Geom_Surface>)", 
+          "returnType": "Standard_Integer", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Surface", 
+          "parent": "GeomTools_SurfaceSet", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "I"
+            }
+          ], 
+          "key": "GeomTools_SurfaceSet::Surface(Standard_Integer)", 
+          "returnType": "opencascade::handle<Geom_Surface>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Index", 
+          "parent": "GeomTools_SurfaceSet", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomTools_SurfaceSet::Index(opencascade::handle<Geom_Surface>)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "GeomTools_SurfaceSet", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "OS"
+            }
+          ], 
+          "key": "GeomTools_SurfaceSet::Dump(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Write", 
+          "parent": "GeomTools_SurfaceSet", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "OS"
+            }
+          ], 
+          "key": "GeomTools_SurfaceSet::Write(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Read", 
+          "parent": "GeomTools_SurfaceSet", 
+          "arguments": [
+            {
+              "decl": "Standard_IStream &", 
+              "type": "Standard_IStream", 
+              "name": "IS"
+            }
+          ], 
+          "key": "GeomTools_SurfaceSet::Read(Standard_IStream)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "PrintSurface", 
+          "parent": "GeomTools_SurfaceSet", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "OS"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "compact", 
+              "default": "false"
+            }
+          ], 
+          "key": "GeomTools_SurfaceSet::PrintSurface(opencascade::handle<Geom_Surface>, Standard_OStream, Standard_Boolean)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ReadSurface", 
+          "parent": "GeomTools_SurfaceSet", 
+          "arguments": [
+            {
+              "decl": "Standard_IStream &", 
+              "type": "Standard_IStream", 
+              "name": "IS"
+            }
+          ], 
+          "key": "GeomTools_SurfaceSet::ReadSurface(Standard_IStream)", 
+          "returnType": "opencascade::handle<Geom_Surface>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetProgress", 
+          "parent": "GeomTools_SurfaceSet", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Message_ProgressIndicator> &", 
+              "type": "opencascade::handle<Message_ProgressIndicator>", 
+              "name": "PR"
+            }
+          ], 
+          "key": "GeomTools_SurfaceSet::SetProgress(opencascade::handle<Message_ProgressIndicator>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetProgress", 
+          "parent": "GeomTools_SurfaceSet", 
+          "arguments": [], 
+          "key": "GeomTools_SurfaceSet::GetProgress()", 
+          "returnType": "opencascade::handle<Message_ProgressIndicator>", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomTools_SurfaceSet.hxx", 
+        35
+      ], 
+      "key": "GeomTools_SurfaceSet"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomTools_UndefinedTypeHandler", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomTools_UndefinedTypeHandler", 
+          "parent": "GeomTools_UndefinedTypeHandler", 
+          "arguments": [], 
+          "key": "GeomTools_UndefinedTypeHandler::GeomTools_UndefinedTypeHandler()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomTools_UndefinedTypeHandler", 
+          "parent": "GeomTools_UndefinedTypeHandler", 
+          "arguments": [
+            {
+              "decl": "const GeomTools_UndefinedTypeHandler &", 
+              "type": "GeomTools_UndefinedTypeHandler", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomTools_UndefinedTypeHandler::GeomTools_UndefinedTypeHandler(GeomTools_UndefinedTypeHandler)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "PrintCurve", 
+          "parent": "GeomTools_UndefinedTypeHandler", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "OS"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "compact", 
+              "default": "false"
+            }
+          ], 
+          "key": "GeomTools_UndefinedTypeHandler::PrintCurve(opencascade::handle<Geom_Curve>, Standard_OStream, Standard_Boolean)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "ReadCurve", 
+          "parent": "GeomTools_UndefinedTypeHandler", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ctype"
+            }, 
+            {
+              "decl": "Standard_IStream &", 
+              "type": "Standard_IStream", 
+              "name": "IS"
+            }, 
+            {
+              "decl": "opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomTools_UndefinedTypeHandler::ReadCurve(Standard_Integer, Standard_IStream, opencascade::handle<Geom_Curve>)", 
+          "returnType": "Standard_IStream &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "PrintCurve2d", 
+          "parent": "GeomTools_UndefinedTypeHandler", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "OS"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "compact", 
+              "default": "false"
+            }
+          ], 
+          "key": "GeomTools_UndefinedTypeHandler::PrintCurve2d(opencascade::handle<Geom2d_Curve>, Standard_OStream, Standard_Boolean)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "ReadCurve2d", 
+          "parent": "GeomTools_UndefinedTypeHandler", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ctype"
+            }, 
+            {
+              "decl": "Standard_IStream &", 
+              "type": "Standard_IStream", 
+              "name": "IS"
+            }, 
+            {
+              "decl": "opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomTools_UndefinedTypeHandler::ReadCurve2d(Standard_Integer, Standard_IStream, opencascade::handle<Geom2d_Curve>)", 
+          "returnType": "Standard_IStream &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "PrintSurface", 
+          "parent": "GeomTools_UndefinedTypeHandler", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "OS"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "compact", 
+              "default": "false"
+            }
+          ], 
+          "key": "GeomTools_UndefinedTypeHandler::PrintSurface(opencascade::handle<Geom_Surface>, Standard_OStream, Standard_Boolean)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "ReadSurface", 
+          "parent": "GeomTools_UndefinedTypeHandler", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ctype"
+            }, 
+            {
+              "decl": "Standard_IStream &", 
+              "type": "Standard_IStream", 
+              "name": "IS"
+            }, 
+            {
+              "decl": "opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomTools_UndefinedTypeHandler::ReadSurface(Standard_Integer, Standard_IStream, opencascade::handle<Geom_Surface>)", 
+          "returnType": "Standard_IStream &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "GeomTools_UndefinedTypeHandler", 
+          "arguments": [], 
+          "key": "GeomTools_UndefinedTypeHandler::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "GeomTools_UndefinedTypeHandler", 
+          "arguments": [], 
+          "key": "GeomTools_UndefinedTypeHandler::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "GeomTools_UndefinedTypeHandler", 
+          "arguments": [], 
+          "key": "GeomTools_UndefinedTypeHandler::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomTools_UndefinedTypeHandler.hxx", 
+        37
+      ], 
+      "key": "GeomTools_UndefinedTypeHandler"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomTools_Curve2dSet", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomTools_Curve2dSet", 
+          "parent": "GeomTools_Curve2dSet", 
+          "arguments": [], 
+          "key": "GeomTools_Curve2dSet::GeomTools_Curve2dSet()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomTools_Curve2dSet", 
+          "parent": "GeomTools_Curve2dSet", 
+          "arguments": [
+            {
+              "decl": "const GeomTools_Curve2dSet &", 
+              "type": "GeomTools_Curve2dSet", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomTools_Curve2dSet::GeomTools_Curve2dSet(GeomTools_Curve2dSet)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Clear", 
+          "parent": "GeomTools_Curve2dSet", 
+          "arguments": [], 
+          "key": "GeomTools_Curve2dSet::Clear()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "GeomTools_Curve2dSet", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomTools_Curve2dSet::Add(opencascade::handle<Geom2d_Curve>)", 
+          "returnType": "Standard_Integer", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve2d", 
+          "parent": "GeomTools_Curve2dSet", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "I"
+            }
+          ], 
+          "key": "GeomTools_Curve2dSet::Curve2d(Standard_Integer)", 
+          "returnType": "opencascade::handle<Geom2d_Curve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Index", 
+          "parent": "GeomTools_Curve2dSet", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomTools_Curve2dSet::Index(opencascade::handle<Geom2d_Curve>)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "GeomTools_Curve2dSet", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "OS"
+            }
+          ], 
+          "key": "GeomTools_Curve2dSet::Dump(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Write", 
+          "parent": "GeomTools_Curve2dSet", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "OS"
+            }
+          ], 
+          "key": "GeomTools_Curve2dSet::Write(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Read", 
+          "parent": "GeomTools_Curve2dSet", 
+          "arguments": [
+            {
+              "decl": "Standard_IStream &", 
+              "type": "Standard_IStream", 
+              "name": "IS"
+            }
+          ], 
+          "key": "GeomTools_Curve2dSet::Read(Standard_IStream)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "PrintCurve2d", 
+          "parent": "GeomTools_Curve2dSet", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "OS"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "compact", 
+              "default": "false"
+            }
+          ], 
+          "key": "GeomTools_Curve2dSet::PrintCurve2d(opencascade::handle<Geom2d_Curve>, Standard_OStream, Standard_Boolean)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ReadCurve2d", 
+          "parent": "GeomTools_Curve2dSet", 
+          "arguments": [
+            {
+              "decl": "Standard_IStream &", 
+              "type": "Standard_IStream", 
+              "name": "IS"
+            }
+          ], 
+          "key": "GeomTools_Curve2dSet::ReadCurve2d(Standard_IStream)", 
+          "returnType": "opencascade::handle<Geom2d_Curve>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetProgress", 
+          "parent": "GeomTools_Curve2dSet", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Message_ProgressIndicator> &", 
+              "type": "opencascade::handle<Message_ProgressIndicator>", 
+              "name": "PR"
+            }
+          ], 
+          "key": "GeomTools_Curve2dSet::SetProgress(opencascade::handle<Message_ProgressIndicator>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetProgress", 
+          "parent": "GeomTools_Curve2dSet", 
+          "arguments": [], 
+          "key": "GeomTools_Curve2dSet::GetProgress()", 
+          "returnType": "opencascade::handle<Message_ProgressIndicator>", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomTools_Curve2dSet.hxx", 
+        35
+      ], 
+      "key": "GeomTools_Curve2dSet"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomTools_CurveSet", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomTools_CurveSet", 
+          "parent": "GeomTools_CurveSet", 
+          "arguments": [], 
+          "key": "GeomTools_CurveSet::GeomTools_CurveSet()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomTools_CurveSet", 
+          "parent": "GeomTools_CurveSet", 
+          "arguments": [
+            {
+              "decl": "const GeomTools_CurveSet &", 
+              "type": "GeomTools_CurveSet", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomTools_CurveSet::GeomTools_CurveSet(GeomTools_CurveSet)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Clear", 
+          "parent": "GeomTools_CurveSet", 
+          "arguments": [], 
+          "key": "GeomTools_CurveSet::Clear()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Add", 
+          "parent": "GeomTools_CurveSet", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomTools_CurveSet::Add(opencascade::handle<Geom_Curve>)", 
+          "returnType": "Standard_Integer", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve", 
+          "parent": "GeomTools_CurveSet", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "I"
+            }
+          ], 
+          "key": "GeomTools_CurveSet::Curve(Standard_Integer)", 
+          "returnType": "opencascade::handle<Geom_Curve>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Index", 
+          "parent": "GeomTools_CurveSet", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomTools_CurveSet::Index(opencascade::handle<Geom_Curve>)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "GeomTools_CurveSet", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "OS"
+            }
+          ], 
+          "key": "GeomTools_CurveSet::Dump(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Write", 
+          "parent": "GeomTools_CurveSet", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "OS"
+            }
+          ], 
+          "key": "GeomTools_CurveSet::Write(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Read", 
+          "parent": "GeomTools_CurveSet", 
+          "arguments": [
+            {
+              "decl": "Standard_IStream &", 
+              "type": "Standard_IStream", 
+              "name": "IS"
+            }
+          ], 
+          "key": "GeomTools_CurveSet::Read(Standard_IStream)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "PrintCurve", 
+          "parent": "GeomTools_CurveSet", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "OS"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "compact", 
+              "default": "false"
+            }
+          ], 
+          "key": "GeomTools_CurveSet::PrintCurve(opencascade::handle<Geom_Curve>, Standard_OStream, Standard_Boolean)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ReadCurve", 
+          "parent": "GeomTools_CurveSet", 
+          "arguments": [
+            {
+              "decl": "Standard_IStream &", 
+              "type": "Standard_IStream", 
+              "name": "IS"
+            }
+          ], 
+          "key": "GeomTools_CurveSet::ReadCurve(Standard_IStream)", 
+          "returnType": "opencascade::handle<Geom_Curve>", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetProgress", 
+          "parent": "GeomTools_CurveSet", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Message_ProgressIndicator> &", 
+              "type": "opencascade::handle<Message_ProgressIndicator>", 
+              "name": "PR"
+            }
+          ], 
+          "key": "GeomTools_CurveSet::SetProgress(opencascade::handle<Message_ProgressIndicator>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetProgress", 
+          "parent": "GeomTools_CurveSet", 
+          "arguments": [], 
+          "key": "GeomTools_CurveSet::GetProgress()", 
+          "returnType": "opencascade::handle<Message_ProgressIndicator>", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomTools_CurveSet.hxx", 
+        35
+      ], 
+      "key": "GeomTools_CurveSet"
+    }, 
+    {
+      "type": "opencascade::handle<GeomTools_UndefinedTypeHandler>", 
+      "declType": "typedef", 
+      "name": "Handle_GeomTools_UndefinedTypeHandler", 
+      "key": "Handle_GeomTools_UndefinedTypeHandler"
+    }
+  ], 
+  "name": "GeomTools"
+}

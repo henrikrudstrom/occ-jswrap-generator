@@ -1,0 +1,2975 @@
+{
+  "headers": [
+    "IntAna_ListOfCurve.hxx", 
+    "IntAna_ResultType.hxx", 
+    "IntAna_IntQuadQuad.hxx", 
+    "IntAna_Quadric.hxx", 
+    "IntAna_ListIteratorOfListOfCurve.hxx", 
+    "IntAna_IntConicQuad.hxx", 
+    "IntAna_Int3Pln.hxx", 
+    "IntAna_IntLinTorus.hxx", 
+    "IntAna_Curve.hxx", 
+    "IntAna_QuadQuadGeo.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "IntAna_Curve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "IntAna_Curve", 
+          "parent": "IntAna_Curve", 
+          "arguments": [], 
+          "key": "IntAna_Curve::IntAna_Curve()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_Curve", 
+          "parent": "IntAna_Curve", 
+          "arguments": [
+            {
+              "decl": "const IntAna_Curve &", 
+              "type": "IntAna_Curve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "IntAna_Curve::IntAna_Curve(IntAna_Curve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetCylinderQuadValues", 
+          "parent": "IntAna_Curve", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cylinder"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qxx"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qyy"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qzz"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qxy"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qxz"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qyz"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qx"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qy"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qz"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Q1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "DomInf"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "DomSup"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "TwoZForATheta"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "ZIsPositive"
+            }
+          ], 
+          "key": "IntAna_Curve::SetCylinderQuadValues(gp_Cylinder, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetConeQuadValues", 
+          "parent": "IntAna_Curve", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Cone"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qxx"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qyy"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qzz"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qxy"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qxz"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qyz"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qx"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qy"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Qz"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Q1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "DomInf"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "DomSup"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "TwoZForATheta"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "ZIsPositive"
+            }
+          ], 
+          "key": "IntAna_Curve::SetConeQuadValues(gp_Cone, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsOpen", 
+          "parent": "IntAna_Curve", 
+          "arguments": [], 
+          "key": "IntAna_Curve::IsOpen()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Domain", 
+          "parent": "IntAna_Curve", 
+          "arguments": [
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Theta1"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Theta2"
+            }
+          ], 
+          "key": "IntAna_Curve::Domain(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsConstant", 
+          "parent": "IntAna_Curve", 
+          "arguments": [], 
+          "key": "IntAna_Curve::IsConstant()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsFirstOpen", 
+          "parent": "IntAna_Curve", 
+          "arguments": [], 
+          "key": "IntAna_Curve::IsFirstOpen()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsLastOpen", 
+          "parent": "IntAna_Curve", 
+          "arguments": [], 
+          "key": "IntAna_Curve::IsLastOpen()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "IntAna_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Theta"
+            }
+          ], 
+          "key": "IntAna_Curve::Value(Standard_Real)", 
+          "returnType": "gp_Pnt", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1u", 
+          "parent": "IntAna_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Theta"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V"
+            }
+          ], 
+          "key": "IntAna_Curve::D1u(Standard_Real, gp_Pnt, gp_Vec)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FindParameter", 
+          "parent": "IntAna_Curve", 
+          "arguments": [
+            {
+              "decl": "const gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Para"
+            }
+          ], 
+          "key": "IntAna_Curve::FindParameter(gp_Pnt, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetIsFirstOpen", 
+          "parent": "IntAna_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "Flag"
+            }
+          ], 
+          "key": "IntAna_Curve::SetIsFirstOpen(Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetIsLastOpen", 
+          "parent": "IntAna_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "Flag"
+            }
+          ], 
+          "key": "IntAna_Curve::SetIsLastOpen(Standard_Boolean)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "InternalUVValue", 
+          "parent": "IntAna_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Param"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "A"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "B"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "C"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Co"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Si"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "Di"
+            }
+          ], 
+          "key": "IntAna_Curve::InternalUVValue(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetDomain", 
+          "parent": "IntAna_Curve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Theta1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Theta2"
+            }
+          ], 
+          "key": "IntAna_Curve::SetDomain(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntAna_Curve.hxx", 
+        37
+      ], 
+      "key": "IntAna_Curve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntAna_Quadric", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "IntAna_Quadric", 
+          "parent": "IntAna_Quadric", 
+          "arguments": [], 
+          "key": "IntAna_Quadric::IntAna_Quadric()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_Quadric", 
+          "parent": "IntAna_Quadric", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }
+          ], 
+          "key": "IntAna_Quadric::IntAna_Quadric(gp_Pln)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_Quadric", 
+          "parent": "IntAna_Quadric", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sph"
+            }
+          ], 
+          "key": "IntAna_Quadric::IntAna_Quadric(gp_Sphere)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_Quadric", 
+          "parent": "IntAna_Quadric", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }
+          ], 
+          "key": "IntAna_Quadric::IntAna_Quadric(gp_Cylinder)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_Quadric", 
+          "parent": "IntAna_Quadric", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Cone"
+            }
+          ], 
+          "key": "IntAna_Quadric::IntAna_Quadric(gp_Cone)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_Quadric", 
+          "parent": "IntAna_Quadric", 
+          "arguments": [
+            {
+              "decl": "const IntAna_Quadric &", 
+              "type": "IntAna_Quadric", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "IntAna_Quadric::IntAna_Quadric(IntAna_Quadric)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetQuadric", 
+          "parent": "IntAna_Quadric", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }
+          ], 
+          "key": "IntAna_Quadric::SetQuadric(gp_Pln)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetQuadric", 
+          "parent": "IntAna_Quadric", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sph"
+            }
+          ], 
+          "key": "IntAna_Quadric::SetQuadric(gp_Sphere)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetQuadric", 
+          "parent": "IntAna_Quadric", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Con"
+            }
+          ], 
+          "key": "IntAna_Quadric::SetQuadric(gp_Cone)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetQuadric", 
+          "parent": "IntAna_Quadric", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }
+          ], 
+          "key": "IntAna_Quadric::SetQuadric(gp_Cylinder)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Coefficients", 
+          "parent": "IntAna_Quadric", 
+          "arguments": [
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCXX"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCYY"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCZZ"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCXY"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCXZ"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCYZ"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCX"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCY"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCZ"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCCte"
+            }
+          ], 
+          "key": "IntAna_Quadric::Coefficients(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NewCoefficients", 
+          "parent": "IntAna_Quadric", 
+          "arguments": [
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCXX"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCYY"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCZZ"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCXY"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCXZ"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCYZ"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCX"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCY"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCZ"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "xCCte"
+            }, 
+            {
+              "decl": "const gp_Ax3 &", 
+              "type": "gp_Ax3", 
+              "name": "Axis"
+            }
+          ], 
+          "key": "IntAna_Quadric::NewCoefficients(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Ax3)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntAna_Quadric.hxx", 
+        34
+      ], 
+      "key": "IntAna_Quadric"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntAna_IntQuadQuad", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntQuadQuad", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [], 
+          "key": "IntAna_IntQuadQuad::IntAna_IntQuadQuad()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntQuadQuad", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const IntAna_Quadric &", 
+              "type": "IntAna_Quadric", 
+              "name": "Q"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_IntQuadQuad::IntAna_IntQuadQuad(gp_Cylinder, IntAna_Quadric, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntQuadQuad", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const IntAna_Quadric &", 
+              "type": "IntAna_Quadric", 
+              "name": "Q"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_IntQuadQuad::IntAna_IntQuadQuad(gp_Cone, IntAna_Quadric, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntQuadQuad", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [
+            {
+              "decl": "const IntAna_IntQuadQuad &", 
+              "type": "IntAna_IntQuadQuad", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "IntAna_IntQuadQuad::IntAna_IntQuadQuad(IntAna_IntQuadQuad)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const IntAna_Quadric &", 
+              "type": "IntAna_Quadric", 
+              "name": "Q"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_IntQuadQuad::Perform(gp_Cylinder, IntAna_Quadric, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const IntAna_Quadric &", 
+              "type": "IntAna_Quadric", 
+              "name": "Q"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_IntQuadQuad::Perform(gp_Cone, IntAna_Quadric, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [], 
+          "key": "IntAna_IntQuadQuad::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IdenticalElements", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [], 
+          "key": "IntAna_IntQuadQuad::IdenticalElements()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbCurve", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [], 
+          "key": "IntAna_IntQuadQuad::NbCurve()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curve", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }
+          ], 
+          "key": "IntAna_IntQuadQuad::Curve(Standard_Integer)", 
+          "returnType": "IntAna_Curve const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPnt", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [], 
+          "key": "IntAna_IntQuadQuad::NbPnt()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Point", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }
+          ], 
+          "key": "IntAna_IntQuadQuad::Point(Standard_Integer)", 
+          "returnType": "gp_Pnt const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parameters", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }
+          ], 
+          "key": "IntAna_IntQuadQuad::Parameters(Standard_Integer, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasNextCurve", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "I"
+            }
+          ], 
+          "key": "IntAna_IntQuadQuad::HasNextCurve(Standard_Integer)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NextCurve", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "I"
+            }, 
+            {
+              "decl": "Standard_Boolean &", 
+              "type": "Standard_Boolean", 
+              "name": "Opposite"
+            }
+          ], 
+          "key": "IntAna_IntQuadQuad::NextCurve(Standard_Integer, Standard_Boolean)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasPreviousCurve", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "I"
+            }
+          ], 
+          "key": "IntAna_IntQuadQuad::HasPreviousCurve(Standard_Integer)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "PreviousCurve", 
+          "parent": "IntAna_IntQuadQuad", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "I"
+            }, 
+            {
+              "decl": "Standard_Boolean &", 
+              "type": "Standard_Boolean", 
+              "name": "Opposite"
+            }
+          ], 
+          "key": "IntAna_IntQuadQuad::PreviousCurve(Standard_Integer, Standard_Boolean)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntAna_IntQuadQuad.hxx", 
+        48
+      ], 
+      "key": "IntAna_IntQuadQuad"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntAna_IntConicQuad", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntConicQuad", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [], 
+          "key": "IntAna_IntConicQuad::IntAna_IntConicQuad()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntConicQuad", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "L"
+            }, 
+            {
+              "decl": "const IntAna_Quadric &", 
+              "type": "IntAna_Quadric", 
+              "name": "Q"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::IntAna_IntConicQuad(gp_Lin, IntAna_Quadric)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntConicQuad", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const IntAna_Quadric &", 
+              "type": "IntAna_Quadric", 
+              "name": "Q"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::IntAna_IntConicQuad(gp_Circ, IntAna_Quadric)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntConicQuad", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Elips &", 
+              "type": "gp_Elips", 
+              "name": "E"
+            }, 
+            {
+              "decl": "const IntAna_Quadric &", 
+              "type": "IntAna_Quadric", 
+              "name": "Q"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::IntAna_IntConicQuad(gp_Elips, IntAna_Quadric)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntConicQuad", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Parab &", 
+              "type": "gp_Parab", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const IntAna_Quadric &", 
+              "type": "IntAna_Quadric", 
+              "name": "Q"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::IntAna_IntConicQuad(gp_Parab, IntAna_Quadric)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntConicQuad", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Hypr &", 
+              "type": "gp_Hypr", 
+              "name": "H"
+            }, 
+            {
+              "decl": "const IntAna_Quadric &", 
+              "type": "IntAna_Quadric", 
+              "name": "Q"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::IntAna_IntConicQuad(gp_Hypr, IntAna_Quadric)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntConicQuad", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "L"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolang"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "default": "0"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Len", 
+              "default": "0"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::IntAna_IntConicQuad(gp_Lin, gp_Pln, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntConicQuad", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolang"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::IntAna_IntConicQuad(gp_Circ, gp_Pln, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntConicQuad", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Elips &", 
+              "type": "gp_Elips", 
+              "name": "E"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolang"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::IntAna_IntConicQuad(gp_Elips, gp_Pln, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntConicQuad", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Parab &", 
+              "type": "gp_Parab", 
+              "name": "Pb"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolang"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::IntAna_IntConicQuad(gp_Parab, gp_Pln, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntConicQuad", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Hypr &", 
+              "type": "gp_Hypr", 
+              "name": "H"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolang"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::IntAna_IntConicQuad(gp_Hypr, gp_Pln, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntConicQuad", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const IntAna_IntConicQuad &", 
+              "type": "IntAna_IntConicQuad", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::IntAna_IntConicQuad(IntAna_IntConicQuad)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "L"
+            }, 
+            {
+              "decl": "const IntAna_Quadric &", 
+              "type": "IntAna_Quadric", 
+              "name": "Q"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::Perform(gp_Lin, IntAna_Quadric)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const IntAna_Quadric &", 
+              "type": "IntAna_Quadric", 
+              "name": "Q"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::Perform(gp_Circ, IntAna_Quadric)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Elips &", 
+              "type": "gp_Elips", 
+              "name": "E"
+            }, 
+            {
+              "decl": "const IntAna_Quadric &", 
+              "type": "IntAna_Quadric", 
+              "name": "Q"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::Perform(gp_Elips, IntAna_Quadric)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Parab &", 
+              "type": "gp_Parab", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const IntAna_Quadric &", 
+              "type": "IntAna_Quadric", 
+              "name": "Q"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::Perform(gp_Parab, IntAna_Quadric)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Hypr &", 
+              "type": "gp_Hypr", 
+              "name": "H"
+            }, 
+            {
+              "decl": "const IntAna_Quadric &", 
+              "type": "IntAna_Quadric", 
+              "name": "Q"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::Perform(gp_Hypr, IntAna_Quadric)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "L"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolang"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "default": "0"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Len", 
+              "default": "0"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::Perform(gp_Lin, gp_Pln, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ &", 
+              "type": "gp_Circ", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolang"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::Perform(gp_Circ, gp_Pln, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Elips &", 
+              "type": "gp_Elips", 
+              "name": "E"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolang"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::Perform(gp_Elips, gp_Pln, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Parab &", 
+              "type": "gp_Parab", 
+              "name": "Pb"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolang"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::Perform(gp_Parab, gp_Pln, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const gp_Hypr &", 
+              "type": "gp_Hypr", 
+              "name": "H"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolang"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::Perform(gp_Hypr, gp_Pln, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [], 
+          "key": "IntAna_IntConicQuad::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsInQuadric", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [], 
+          "key": "IntAna_IntConicQuad::IsInQuadric()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsParallel", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [], 
+          "key": "IntAna_IntConicQuad::IsParallel()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPoints", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [], 
+          "key": "IntAna_IntConicQuad::NbPoints()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Point", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::Point(Standard_Integer)", 
+          "returnType": "gp_Pnt const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ParamOnConic", 
+          "parent": "IntAna_IntConicQuad", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }
+          ], 
+          "key": "IntAna_IntConicQuad::ParamOnConic(Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntAna_IntConicQuad.hxx", 
+        57
+      ], 
+      "key": "IntAna_IntConicQuad"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntAna_Int3Pln", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "IntAna_Int3Pln", 
+          "parent": "IntAna_Int3Pln", 
+          "arguments": [], 
+          "key": "IntAna_Int3Pln::IntAna_Int3Pln()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_Int3Pln", 
+          "parent": "IntAna_Int3Pln", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P2"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P3"
+            }
+          ], 
+          "key": "IntAna_Int3Pln::IntAna_Int3Pln(gp_Pln, gp_Pln, gp_Pln)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_Int3Pln", 
+          "parent": "IntAna_Int3Pln", 
+          "arguments": [
+            {
+              "decl": "const IntAna_Int3Pln &", 
+              "type": "IntAna_Int3Pln", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "IntAna_Int3Pln::IntAna_Int3Pln(IntAna_Int3Pln)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_Int3Pln", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P2"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P3"
+            }
+          ], 
+          "key": "IntAna_Int3Pln::Perform(gp_Pln, gp_Pln, gp_Pln)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "IntAna_Int3Pln", 
+          "arguments": [], 
+          "key": "IntAna_Int3Pln::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEmpty", 
+          "parent": "IntAna_Int3Pln", 
+          "arguments": [], 
+          "key": "IntAna_Int3Pln::IsEmpty()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "IntAna_Int3Pln", 
+          "arguments": [], 
+          "key": "IntAna_Int3Pln::Value()", 
+          "returnType": "gp_Pnt const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntAna_Int3Pln.hxx", 
+        35
+      ], 
+      "key": "IntAna_Int3Pln"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntAna_IntLinTorus", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntLinTorus", 
+          "parent": "IntAna_IntLinTorus", 
+          "arguments": [], 
+          "key": "IntAna_IntLinTorus::IntAna_IntLinTorus()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntLinTorus", 
+          "parent": "IntAna_IntLinTorus", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "L"
+            }, 
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "T"
+            }
+          ], 
+          "key": "IntAna_IntLinTorus::IntAna_IntLinTorus(gp_Lin, gp_Torus)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_IntLinTorus", 
+          "parent": "IntAna_IntLinTorus", 
+          "arguments": [
+            {
+              "decl": "const IntAna_IntLinTorus &", 
+              "type": "IntAna_IntLinTorus", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "IntAna_IntLinTorus::IntAna_IntLinTorus(IntAna_IntLinTorus)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_IntLinTorus", 
+          "arguments": [
+            {
+              "decl": "const gp_Lin &", 
+              "type": "gp_Lin", 
+              "name": "L"
+            }, 
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "T"
+            }
+          ], 
+          "key": "IntAna_IntLinTorus::Perform(gp_Lin, gp_Torus)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "IntAna_IntLinTorus", 
+          "arguments": [], 
+          "key": "IntAna_IntLinTorus::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPoints", 
+          "parent": "IntAna_IntLinTorus", 
+          "arguments": [], 
+          "key": "IntAna_IntLinTorus::NbPoints()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "IntAna_IntLinTorus", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "IntAna_IntLinTorus::Value(Standard_Integer)", 
+          "returnType": "gp_Pnt const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ParamOnLine", 
+          "parent": "IntAna_IntLinTorus", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "IntAna_IntLinTorus::ParamOnLine(Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ParamOnTorus", 
+          "parent": "IntAna_IntLinTorus", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "FI"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "THETA"
+            }
+          ], 
+          "key": "IntAna_IntLinTorus::ParamOnTorus(Standard_Integer, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntAna_IntLinTorus.hxx", 
+        36
+      ], 
+      "key": "IntAna_IntLinTorus"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntAna_QuadQuadGeo", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "TolAng"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo(gp_Pln, gp_Pln, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolang"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "H", 
+              "default": "0"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo(gp_Pln, gp_Cylinder, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "S"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo(gp_Pln, gp_Sphere)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolang"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo(gp_Pln, gp_Cone, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl1"
+            }, 
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo(gp_Cylinder, gp_Cylinder, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }, 
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sph"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo(gp_Cylinder, gp_Sphere, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }, 
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Con"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo(gp_Cylinder, gp_Cone, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sph1"
+            }, 
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sph2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo(gp_Sphere, gp_Sphere, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sph"
+            }, 
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Con"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo(gp_Sphere, gp_Cone, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Con1"
+            }, 
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Con2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo(gp_Cone, gp_Cone, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "Pln"
+            }, 
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "Tor"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo(gp_Pln, gp_Torus, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }, 
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "Tor"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo(gp_Cylinder, gp_Torus, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Con"
+            }, 
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "Tor"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo(gp_Cone, gp_Torus, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sph"
+            }, 
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "Tor"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo(gp_Sphere, gp_Torus, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "Tor1"
+            }, 
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "Tor2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo(gp_Torus, gp_Torus, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "IntAna_QuadQuadGeo", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const IntAna_QuadQuadGeo &", 
+              "type": "IntAna_QuadQuadGeo", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::IntAna_QuadQuadGeo(IntAna_QuadQuadGeo)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P1"
+            }, 
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "TolAng"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Perform(gp_Pln, gp_Pln, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolang"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "H", 
+              "default": "0"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Perform(gp_Pln, gp_Cylinder, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "S"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Perform(gp_Pln, gp_Sphere)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "P"
+            }, 
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tolang"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Perform(gp_Pln, gp_Cone, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl1"
+            }, 
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Perform(gp_Cylinder, gp_Cylinder, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }, 
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sph"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Perform(gp_Cylinder, gp_Sphere, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }, 
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Con"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Perform(gp_Cylinder, gp_Cone, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sph1"
+            }, 
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sph2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Perform(gp_Sphere, gp_Sphere, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sph"
+            }, 
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Con"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Perform(gp_Sphere, gp_Cone, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Con1"
+            }, 
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Con2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Perform(gp_Cone, gp_Cone, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Pln &", 
+              "type": "gp_Pln", 
+              "name": "Pln"
+            }, 
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "Tor"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Perform(gp_Pln, gp_Torus, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }, 
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "Tor"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Perform(gp_Cylinder, gp_Torus, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "Con"
+            }, 
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "Tor"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Perform(gp_Cone, gp_Torus, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sph"
+            }, 
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "Tor"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Perform(gp_Sphere, gp_Torus, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "Tor1"
+            }, 
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "Tor2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Perform(gp_Torus, gp_Torus, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [], 
+          "key": "IntAna_QuadQuadGeo::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "TypeInter", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [], 
+          "key": "IntAna_QuadQuadGeo::TypeInter()", 
+          "returnType": "IntAna_ResultType", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbSolutions", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [], 
+          "key": "IntAna_QuadQuadGeo::NbSolutions()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Point", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Point(Standard_Integer)", 
+          "returnType": "gp_Pnt", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Line", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Line(Standard_Integer)", 
+          "returnType": "gp_Lin", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Circle", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Circle(Standard_Integer)", 
+          "returnType": "gp_Circ", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Ellipse", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Ellipse(Standard_Integer)", 
+          "returnType": "gp_Elips", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parabola", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Parabola(Standard_Integer)", 
+          "returnType": "gp_Parab", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Hyperbola", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Num"
+            }
+          ], 
+          "key": "IntAna_QuadQuadGeo::Hyperbola(Standard_Integer)", 
+          "returnType": "gp_Hypr", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasCommonGen", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [], 
+          "key": "IntAna_QuadQuadGeo::HasCommonGen()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "PChar", 
+          "parent": "IntAna_QuadQuadGeo", 
+          "arguments": [], 
+          "key": "IntAna_QuadQuadGeo::PChar()", 
+          "returnType": "gp_Pnt const &", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntAna_QuadQuadGeo.hxx", 
+        61
+      ], 
+      "key": "IntAna_QuadQuadGeo"
+    }, 
+    {
+      "type": "NCollection_List<IntAna_Curve>", 
+      "declType": "typedef", 
+      "name": "IntAna_ListOfCurve", 
+      "key": "IntAna_ListOfCurve"
+    }, 
+    {
+      "type": "NCollection_List<IntAna_Curve>::Iterator", 
+      "declType": "typedef", 
+      "name": "IntAna_ListIteratorOfListOfCurve", 
+      "key": "IntAna_ListIteratorOfListOfCurve"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "IntAna_Point", 
+          0
+        ], 
+        [
+          "IntAna_Line", 
+          1
+        ], 
+        [
+          "IntAna_Circle", 
+          2
+        ], 
+        [
+          "IntAna_PointAndCircle", 
+          3
+        ], 
+        [
+          "IntAna_Ellipse", 
+          4
+        ], 
+        [
+          "IntAna_Parabola", 
+          5
+        ], 
+        [
+          "IntAna_Hyperbola", 
+          6
+        ], 
+        [
+          "IntAna_Empty", 
+          7
+        ], 
+        [
+          "IntAna_Same", 
+          8
+        ], 
+        [
+          "IntAna_NoGeometricSolution", 
+          9
+        ]
+      ], 
+      "name": "IntAna_ResultType", 
+      "key": "IntAna_ResultType"
+    }
+  ], 
+  "name": "IntAna"
+}

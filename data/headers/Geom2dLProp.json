@@ -1,0 +1,981 @@
+{
+  "headers": [
+    "Geom2dLProp_FuncCurNul.hxx", 
+    "Geom2dLProp_NumericCurInf2d.hxx", 
+    "Geom2dLProp_CLProps2d.hxx", 
+    "Geom2dLProp_CurAndInf2d.hxx", 
+    "Geom2dLProp_Curve2dTool.hxx", 
+    "Geom2dLProp_FuncCurExt.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Geom2dLProp_FuncCurNul", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Geom2dLProp_FuncCurNul", 
+          "parent": "Geom2dLProp_FuncCurNul", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "Geom2dLProp_FuncCurNul::Geom2dLProp_FuncCurNul(opencascade::handle<Geom2d_Curve>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Geom2dLProp_FuncCurNul", 
+          "parent": "Geom2dLProp_FuncCurNul", 
+          "arguments": [
+            {
+              "decl": "const Geom2dLProp_FuncCurNul &", 
+              "type": "Geom2dLProp_FuncCurNul", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Geom2dLProp_FuncCurNul::Geom2dLProp_FuncCurNul(Geom2dLProp_FuncCurNul)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Geom2dLProp_FuncCurNul", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "F"
+            }
+          ], 
+          "key": "Geom2dLProp_FuncCurNul::Value(Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Derivative", 
+          "parent": "Geom2dLProp_FuncCurNul", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "D"
+            }
+          ], 
+          "key": "Geom2dLProp_FuncCurNul::Derivative(Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Values", 
+          "parent": "Geom2dLProp_FuncCurNul", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "F"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "D"
+            }
+          ], 
+          "key": "Geom2dLProp_FuncCurNul::Values(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionWithDerivative"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dLProp_FuncCurNul.hxx", 
+        31
+      ], 
+      "key": "Geom2dLProp_FuncCurNul"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dLProp_NumericCurInf2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Geom2dLProp_NumericCurInf2d", 
+          "parent": "Geom2dLProp_NumericCurInf2d", 
+          "arguments": [], 
+          "key": "Geom2dLProp_NumericCurInf2d::Geom2dLProp_NumericCurInf2d()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Geom2dLProp_NumericCurInf2d", 
+          "parent": "Geom2dLProp_NumericCurInf2d", 
+          "arguments": [
+            {
+              "decl": "const Geom2dLProp_NumericCurInf2d &", 
+              "type": "Geom2dLProp_NumericCurInf2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Geom2dLProp_NumericCurInf2d::Geom2dLProp_NumericCurInf2d(Geom2dLProp_NumericCurInf2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "PerformCurExt", 
+          "parent": "Geom2dLProp_NumericCurInf2d", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "LProp_CurAndInf &", 
+              "type": "LProp_CurAndInf", 
+              "name": "Result"
+            }
+          ], 
+          "key": "Geom2dLProp_NumericCurInf2d::PerformCurExt(opencascade::handle<Geom2d_Curve>, LProp_CurAndInf)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "PerformInf", 
+          "parent": "Geom2dLProp_NumericCurInf2d", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "LProp_CurAndInf &", 
+              "type": "LProp_CurAndInf", 
+              "name": "Result"
+            }
+          ], 
+          "key": "Geom2dLProp_NumericCurInf2d::PerformInf(opencascade::handle<Geom2d_Curve>, LProp_CurAndInf)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "PerformCurExt", 
+          "parent": "Geom2dLProp_NumericCurInf2d", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "UMin"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "UMax"
+            }, 
+            {
+              "decl": "LProp_CurAndInf &", 
+              "type": "LProp_CurAndInf", 
+              "name": "Result"
+            }
+          ], 
+          "key": "Geom2dLProp_NumericCurInf2d::PerformCurExt(opencascade::handle<Geom2d_Curve>, Standard_Real, Standard_Real, LProp_CurAndInf)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "PerformInf", 
+          "parent": "Geom2dLProp_NumericCurInf2d", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "UMin"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "UMax"
+            }, 
+            {
+              "decl": "LProp_CurAndInf &", 
+              "type": "LProp_CurAndInf", 
+              "name": "Result"
+            }
+          ], 
+          "key": "Geom2dLProp_NumericCurInf2d::PerformInf(opencascade::handle<Geom2d_Curve>, Standard_Real, Standard_Real, LProp_CurAndInf)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "Geom2dLProp_NumericCurInf2d", 
+          "arguments": [], 
+          "key": "Geom2dLProp_NumericCurInf2d::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dLProp_NumericCurInf2d.hxx", 
+        32
+      ], 
+      "key": "Geom2dLProp_NumericCurInf2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dLProp_Curve2dTool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Geom2dLProp_Curve2dTool", 
+          "parent": "Geom2dLProp_Curve2dTool", 
+          "arguments": [], 
+          "key": "Geom2dLProp_Curve2dTool::Geom2dLProp_Curve2dTool()", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Geom2dLProp_Curve2dTool", 
+          "parent": "Geom2dLProp_Curve2dTool", 
+          "arguments": [
+            {
+              "decl": "const Geom2dLProp_Curve2dTool &", 
+              "type": "Geom2dLProp_Curve2dTool", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Geom2dLProp_Curve2dTool::Geom2dLProp_Curve2dTool(Geom2dLProp_Curve2dTool)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Geom2dLProp_Curve2dTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }
+          ], 
+          "key": "Geom2dLProp_Curve2dTool::Value(opencascade::handle<Geom2d_Curve>, Standard_Real, gp_Pnt2d)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "Geom2dLProp_Curve2dTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V1"
+            }
+          ], 
+          "key": "Geom2dLProp_Curve2dTool::D1(opencascade::handle<Geom2d_Curve>, Standard_Real, gp_Pnt2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "Geom2dLProp_Curve2dTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V2"
+            }
+          ], 
+          "key": "Geom2dLProp_Curve2dTool::D2(opencascade::handle<Geom2d_Curve>, Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D3", 
+          "parent": "Geom2dLProp_Curve2dTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V2"
+            }, 
+            {
+              "decl": "gp_Vec2d &", 
+              "type": "gp_Vec2d", 
+              "name": "V3"
+            }
+          ], 
+          "key": "Geom2dLProp_Curve2dTool::D3(opencascade::handle<Geom2d_Curve>, Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d, gp_Vec2d)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Continuity", 
+          "parent": "Geom2dLProp_Curve2dTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "Geom2dLProp_Curve2dTool::Continuity(opencascade::handle<Geom2d_Curve>)", 
+          "returnType": "Standard_Integer", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstParameter", 
+          "parent": "Geom2dLProp_Curve2dTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "Geom2dLProp_Curve2dTool::FirstParameter(opencascade::handle<Geom2d_Curve>)", 
+          "returnType": "Standard_Real", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastParameter", 
+          "parent": "Geom2dLProp_Curve2dTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "Geom2dLProp_Curve2dTool::LastParameter(opencascade::handle<Geom2d_Curve>)", 
+          "returnType": "Standard_Real", 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dLProp_Curve2dTool.hxx", 
+        32
+      ], 
+      "key": "Geom2dLProp_Curve2dTool"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dLProp_CLProps2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Geom2dLProp_CLProps2d", 
+          "parent": "Geom2dLProp_CLProps2d", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }
+          ], 
+          "key": "Geom2dLProp_CLProps2d::Geom2dLProp_CLProps2d(opencascade::handle<Geom2d_Curve>, Standard_Integer, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Geom2dLProp_CLProps2d", 
+          "parent": "Geom2dLProp_CLProps2d", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }
+          ], 
+          "key": "Geom2dLProp_CLProps2d::Geom2dLProp_CLProps2d(opencascade::handle<Geom2d_Curve>, Standard_Real, Standard_Integer, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Geom2dLProp_CLProps2d", 
+          "parent": "Geom2dLProp_CLProps2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }
+          ], 
+          "key": "Geom2dLProp_CLProps2d::Geom2dLProp_CLProps2d(Standard_Integer, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Geom2dLProp_CLProps2d", 
+          "parent": "Geom2dLProp_CLProps2d", 
+          "arguments": [
+            {
+              "decl": "const Geom2dLProp_CLProps2d &", 
+              "type": "Geom2dLProp_CLProps2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Geom2dLProp_CLProps2d::Geom2dLProp_CLProps2d(Geom2dLProp_CLProps2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetParameter", 
+          "parent": "Geom2dLProp_CLProps2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }
+          ], 
+          "key": "Geom2dLProp_CLProps2d::SetParameter(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetCurve", 
+          "parent": "Geom2dLProp_CLProps2d", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "Geom2dLProp_CLProps2d::SetCurve(opencascade::handle<Geom2d_Curve>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Geom2dLProp_CLProps2d", 
+          "arguments": [], 
+          "key": "Geom2dLProp_CLProps2d::Value()", 
+          "returnType": "gp_Pnt2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "Geom2dLProp_CLProps2d", 
+          "arguments": [], 
+          "key": "Geom2dLProp_CLProps2d::D1()", 
+          "returnType": "gp_Vec2d const &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "Geom2dLProp_CLProps2d", 
+          "arguments": [], 
+          "key": "Geom2dLProp_CLProps2d::D2()", 
+          "returnType": "gp_Vec2d const &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D3", 
+          "parent": "Geom2dLProp_CLProps2d", 
+          "arguments": [], 
+          "key": "Geom2dLProp_CLProps2d::D3()", 
+          "returnType": "gp_Vec2d const &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsTangentDefined", 
+          "parent": "Geom2dLProp_CLProps2d", 
+          "arguments": [], 
+          "key": "Geom2dLProp_CLProps2d::IsTangentDefined()", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Tangent", 
+          "parent": "Geom2dLProp_CLProps2d", 
+          "arguments": [
+            {
+              "decl": "gp_Dir2d &", 
+              "type": "gp_Dir2d", 
+              "name": "D"
+            }
+          ], 
+          "key": "Geom2dLProp_CLProps2d::Tangent(gp_Dir2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curvature", 
+          "parent": "Geom2dLProp_CLProps2d", 
+          "arguments": [], 
+          "key": "Geom2dLProp_CLProps2d::Curvature()", 
+          "returnType": "Standard_Real", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Normal", 
+          "parent": "Geom2dLProp_CLProps2d", 
+          "arguments": [
+            {
+              "decl": "gp_Dir2d &", 
+              "type": "gp_Dir2d", 
+              "name": "N"
+            }
+          ], 
+          "key": "Geom2dLProp_CLProps2d::Normal(gp_Dir2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CentreOfCurvature", 
+          "parent": "Geom2dLProp_CLProps2d", 
+          "arguments": [
+            {
+              "decl": "gp_Pnt2d &", 
+              "type": "gp_Pnt2d", 
+              "name": "P"
+            }
+          ], 
+          "key": "Geom2dLProp_CLProps2d::CentreOfCurvature(gp_Pnt2d)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dLProp_CLProps2d.hxx", 
+        43
+      ], 
+      "key": "Geom2dLProp_CLProps2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dLProp_CurAndInf2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Geom2dLProp_CurAndInf2d", 
+          "parent": "Geom2dLProp_CurAndInf2d", 
+          "arguments": [], 
+          "key": "Geom2dLProp_CurAndInf2d::Geom2dLProp_CurAndInf2d()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Geom2dLProp_CurAndInf2d", 
+          "parent": "Geom2dLProp_CurAndInf2d", 
+          "arguments": [
+            {
+              "decl": "const Geom2dLProp_CurAndInf2d &", 
+              "type": "Geom2dLProp_CurAndInf2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Geom2dLProp_CurAndInf2d::Geom2dLProp_CurAndInf2d(Geom2dLProp_CurAndInf2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "Geom2dLProp_CurAndInf2d", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "Geom2dLProp_CurAndInf2d::Perform(opencascade::handle<Geom2d_Curve>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "PerformCurExt", 
+          "parent": "Geom2dLProp_CurAndInf2d", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "Geom2dLProp_CurAndInf2d::PerformCurExt(opencascade::handle<Geom2d_Curve>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "PerformInf", 
+          "parent": "Geom2dLProp_CurAndInf2d", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "Geom2dLProp_CurAndInf2d::PerformInf(opencascade::handle<Geom2d_Curve>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "Geom2dLProp_CurAndInf2d", 
+          "arguments": [], 
+          "key": "Geom2dLProp_CurAndInf2d::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "LProp_CurAndInf"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dLProp_CurAndInf2d.hxx", 
+        37
+      ], 
+      "key": "Geom2dLProp_CurAndInf2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dLProp_FuncCurExt", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Geom2dLProp_FuncCurExt", 
+          "parent": "Geom2dLProp_FuncCurExt", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom2d_Curve> &", 
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }
+          ], 
+          "key": "Geom2dLProp_FuncCurExt::Geom2dLProp_FuncCurExt(opencascade::handle<Geom2d_Curve>, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Geom2dLProp_FuncCurExt", 
+          "parent": "Geom2dLProp_FuncCurExt", 
+          "arguments": [
+            {
+              "decl": "const Geom2dLProp_FuncCurExt &", 
+              "type": "Geom2dLProp_FuncCurExt", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Geom2dLProp_FuncCurExt::Geom2dLProp_FuncCurExt(Geom2dLProp_FuncCurExt)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Geom2dLProp_FuncCurExt", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "F"
+            }
+          ], 
+          "key": "Geom2dLProp_FuncCurExt::Value(Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Derivative", 
+          "parent": "Geom2dLProp_FuncCurExt", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "D"
+            }
+          ], 
+          "key": "Geom2dLProp_FuncCurExt::Derivative(Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Values", 
+          "parent": "Geom2dLProp_FuncCurExt", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "X"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "F"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "D"
+            }
+          ], 
+          "key": "Geom2dLProp_FuncCurExt::Values(Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsMinKC", 
+          "parent": "Geom2dLProp_FuncCurExt", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Param"
+            }
+          ], 
+          "key": "Geom2dLProp_FuncCurExt::IsMinKC(Standard_Real)", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionWithDerivative"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dLProp_FuncCurExt.hxx", 
+        31
+      ], 
+      "key": "Geom2dLProp_FuncCurExt"
+    }
+  ], 
+  "name": "Geom2dLProp"
+}

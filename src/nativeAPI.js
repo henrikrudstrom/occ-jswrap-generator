@@ -8,7 +8,7 @@ var lookup = {};
 var loaded = false;
 
 function ignoreReferenceTypesForNow(decl) {
-  if (decl.returnType && decl.returnType.indexOf('&') !== -1){
+  if (decl.returnType && decl.returnType.indexOf('&') !== -1) {
     return false;
   }
   return true;
@@ -17,7 +17,7 @@ function ignoreReferenceTypesForNow(decl) {
 function load() {
   if (loaded) return;
 
-  modules = glob.sync(`./${settings.paths.cache}/headers/*.json`).map(file =>
+  modules = glob.sync(`./${settings.paths.headerCache}/*.json`).map(file =>
     JSON.parse(fs.readFileSync(file))
   );
 

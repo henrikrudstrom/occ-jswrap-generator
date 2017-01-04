@@ -1,0 +1,1039 @@
+{
+  "headers": [
+    "PLib_Base.hxx", 
+    "PLib_JacobiPolynomial_0.hxx", 
+    "PLib_JacobiPolynomial.hxx", 
+    "PLib_DoubleJacobiPolynomial.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "PLib_Base", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "declType": "method", 
+          "name": "ToCoefficients", 
+          "parent": "PLib_Base", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Degree"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "CoeffinBase"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Coefficients"
+            }
+          ], 
+          "key": "PLib_Base::ToCoefficients(Standard_Integer, Standard_Integer, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D0", 
+          "parent": "PLib_Base", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisValue"
+            }
+          ], 
+          "key": "PLib_Base::D0(Standard_Real, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "PLib_Base", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisValue"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisD1"
+            }
+          ], 
+          "key": "PLib_Base::D1(Standard_Real, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "PLib_Base", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisValue"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisD1"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisD2"
+            }
+          ], 
+          "key": "PLib_Base::D2(Standard_Real, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D3", 
+          "parent": "PLib_Base", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisValue"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisD1"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisD2"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisD3"
+            }
+          ], 
+          "key": "PLib_Base::D3(Standard_Real, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "WorkDegree", 
+          "parent": "PLib_Base", 
+          "arguments": [], 
+          "key": "PLib_Base::WorkDegree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "ReduceDegree", 
+          "parent": "PLib_Base", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegree"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "BaseCoeff"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "NewDegree"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "MaxError"
+            }
+          ], 
+          "key": "PLib_Base::ReduceDegree(Standard_Integer, Standard_Integer, Standard_Real, Standard_Real, Standard_Integer, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "PLib_Base", 
+          "arguments": [], 
+          "key": "PLib_Base::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "PLib_Base", 
+          "arguments": [], 
+          "key": "PLib_Base::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "PLib_Base", 
+          "arguments": [], 
+          "key": "PLib_Base::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/PLib_Base.hxx", 
+        33
+      ], 
+      "key": "PLib_Base"
+    }, 
+    {
+      "declType": "class", 
+      "name": "PLib_JacobiPolynomial", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "PLib_JacobiPolynomial", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "WorkDegree"
+            }, 
+            {
+              "decl": "const GeomAbs_Shape", 
+              "type": "GeomAbs_Shape", 
+              "name": "ConstraintOrder"
+            }
+          ], 
+          "key": "PLib_JacobiPolynomial::PLib_JacobiPolynomial(Standard_Integer, GeomAbs_Shape)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "PLib_JacobiPolynomial", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const PLib_JacobiPolynomial &", 
+              "type": "PLib_JacobiPolynomial", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "PLib_JacobiPolynomial::PLib_JacobiPolynomial(PLib_JacobiPolynomial)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Points", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NbGaussPoints"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "TabPoints"
+            }
+          ], 
+          "key": "PLib_JacobiPolynomial::Points(Standard_Integer, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Weights", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NbGaussPoints"
+            }, 
+            {
+              "decl": "TColStd_Array2OfReal &", 
+              "type": "TColStd_Array2OfReal", 
+              "name": "TabWeights"
+            }
+          ], 
+          "key": "PLib_JacobiPolynomial::Weights(Standard_Integer, TColStd_Array2OfReal)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxValue", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "TabMax"
+            }
+          ], 
+          "key": "PLib_JacobiPolynomial::MaxValue(TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "JacCoeff"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NewDegree"
+            }
+          ], 
+          "key": "PLib_JacobiPolynomial::MaxError(Standard_Integer, Standard_Real, Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ReduceDegree", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegree"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Tol"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "JacCoeff"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "NewDegree"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "MaxError"
+            }
+          ], 
+          "key": "PLib_JacobiPolynomial::ReduceDegree(Standard_Integer, Standard_Integer, Standard_Real, Standard_Real, Standard_Integer, Standard_Real)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "AverageError", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "JacCoeff"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NewDegree"
+            }
+          ], 
+          "key": "PLib_JacobiPolynomial::AverageError(Standard_Integer, Standard_Real, Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ToCoefficients", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Degree"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "JacCoeff"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Coefficients"
+            }
+          ], 
+          "key": "PLib_JacobiPolynomial::ToCoefficients(Standard_Integer, Standard_Integer, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D0", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisValue"
+            }
+          ], 
+          "key": "PLib_JacobiPolynomial::D0(Standard_Real, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisValue"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisD1"
+            }
+          ], 
+          "key": "PLib_JacobiPolynomial::D1(Standard_Real, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisValue"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisD1"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisD2"
+            }
+          ], 
+          "key": "PLib_JacobiPolynomial::D2(Standard_Real, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "D3", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisValue"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisD1"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisD2"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "BasisD3"
+            }
+          ], 
+          "key": "PLib_JacobiPolynomial::D3(Standard_Real, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "WorkDegree", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [], 
+          "key": "PLib_JacobiPolynomial::WorkDegree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "NivConstr", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [], 
+          "key": "PLib_JacobiPolynomial::NivConstr()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [], 
+          "key": "PLib_JacobiPolynomial::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [], 
+          "key": "PLib_JacobiPolynomial::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "PLib_JacobiPolynomial", 
+          "arguments": [], 
+          "key": "PLib_JacobiPolynomial::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "PLib_Base"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/PLib_JacobiPolynomial.hxx", 
+        62
+      ], 
+      "key": "PLib_JacobiPolynomial"
+    }, 
+    {
+      "declType": "class", 
+      "name": "PLib_DoubleJacobiPolynomial", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "PLib_DoubleJacobiPolynomial", 
+          "parent": "PLib_DoubleJacobiPolynomial", 
+          "arguments": [], 
+          "key": "PLib_DoubleJacobiPolynomial::PLib_DoubleJacobiPolynomial()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "PLib_DoubleJacobiPolynomial", 
+          "parent": "PLib_DoubleJacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<PLib_JacobiPolynomial> &", 
+              "type": "opencascade::handle<PLib_JacobiPolynomial>", 
+              "name": "JacPolU"
+            }, 
+            {
+              "decl": "const opencascade::handle<PLib_JacobiPolynomial> &", 
+              "type": "opencascade::handle<PLib_JacobiPolynomial>", 
+              "name": "JacPolV"
+            }
+          ], 
+          "key": "PLib_DoubleJacobiPolynomial::PLib_DoubleJacobiPolynomial(opencascade::handle<PLib_JacobiPolynomial>, opencascade::handle<PLib_JacobiPolynomial>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "PLib_DoubleJacobiPolynomial", 
+          "parent": "PLib_DoubleJacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const PLib_DoubleJacobiPolynomial &", 
+              "type": "PLib_DoubleJacobiPolynomial", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "PLib_DoubleJacobiPolynomial::PLib_DoubleJacobiPolynomial(PLib_DoubleJacobiPolynomial)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxErrorU", 
+          "parent": "PLib_DoubleJacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "DegreeU"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "DegreeV"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "dJacCoeff"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "JacCoeff"
+            }
+          ], 
+          "key": "PLib_DoubleJacobiPolynomial::MaxErrorU(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, TColStd_Array1OfReal)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxErrorV", 
+          "parent": "PLib_DoubleJacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "DegreeU"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "DegreeV"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "dJacCoeff"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "JacCoeff"
+            }
+          ], 
+          "key": "PLib_DoubleJacobiPolynomial::MaxErrorV(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, TColStd_Array1OfReal)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxError", 
+          "parent": "PLib_DoubleJacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MinDegreeU"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegreeU"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MinDegreeV"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegreeV"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "dJacCoeff"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "JacCoeff"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Error"
+            }
+          ], 
+          "key": "PLib_DoubleJacobiPolynomial::MaxError(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, TColStd_Array1OfReal, Standard_Real)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ReduceDegree", 
+          "parent": "PLib_DoubleJacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MinDegreeU"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegreeU"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MinDegreeV"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegreeV"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "dJacCoeff"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "JacCoeff"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "EpmsCut"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "MaxError"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "NewDegreeU"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "NewDegreeV"
+            }
+          ], 
+          "key": "PLib_DoubleJacobiPolynomial::ReduceDegree(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, TColStd_Array1OfReal, Standard_Real, Standard_Real, Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AverageError", 
+          "parent": "PLib_DoubleJacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "DegreeU"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "DegreeV"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "dJacCoeff"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "JacCoeff"
+            }
+          ], 
+          "key": "PLib_DoubleJacobiPolynomial::AverageError(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, TColStd_Array1OfReal)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "WDoubleJacobiToCoefficients", 
+          "parent": "PLib_DoubleJacobiPolynomial", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "DegreeU"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "DegreeV"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "JacCoeff"
+            }, 
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Coefficients"
+            }
+          ], 
+          "key": "PLib_DoubleJacobiPolynomial::WDoubleJacobiToCoefficients(Standard_Integer, Standard_Integer, Standard_Integer, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "U", 
+          "parent": "PLib_DoubleJacobiPolynomial", 
+          "arguments": [], 
+          "key": "PLib_DoubleJacobiPolynomial::U()", 
+          "returnType": "opencascade::handle<PLib_JacobiPolynomial>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "V", 
+          "parent": "PLib_DoubleJacobiPolynomial", 
+          "arguments": [], 
+          "key": "PLib_DoubleJacobiPolynomial::V()", 
+          "returnType": "opencascade::handle<PLib_JacobiPolynomial>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "TabMaxU", 
+          "parent": "PLib_DoubleJacobiPolynomial", 
+          "arguments": [], 
+          "key": "PLib_DoubleJacobiPolynomial::TabMaxU()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "TabMaxV", 
+          "parent": "PLib_DoubleJacobiPolynomial", 
+          "arguments": [], 
+          "key": "PLib_DoubleJacobiPolynomial::TabMaxV()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/PLib_DoubleJacobiPolynomial.hxx", 
+        32
+      ], 
+      "key": "PLib_DoubleJacobiPolynomial"
+    }, 
+    {
+      "type": "opencascade::handle<PLib_Base>", 
+      "declType": "typedef", 
+      "name": "Handle_PLib_Base", 
+      "key": "Handle_PLib_Base"
+    }, 
+    {
+      "type": "opencascade::handle<PLib_JacobiPolynomial>", 
+      "declType": "typedef", 
+      "name": "Handle_PLib_JacobiPolynomial", 
+      "key": "Handle_PLib_JacobiPolynomial"
+    }
+  ], 
+  "name": "PLib"
+}

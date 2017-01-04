@@ -1,0 +1,2117 @@
+{
+  "headers": [
+    "Convert_SequenceOfArray1OfPoles2d.hxx", 
+    "Convert_CompPolynomialToPoles.hxx", 
+    "Convert_ConicToBSplineCurve.hxx", 
+    "Convert_CircleToBSplineCurve.hxx", 
+    "Convert_EllipseToBSplineCurve.hxx", 
+    "Convert_CompBezierCurvesToBSplineCurve.hxx", 
+    "Convert_ElementarySurfaceToBSplineSurface.hxx", 
+    "Convert_SphereToBSplineSurface.hxx", 
+    "Convert_CosAndSinEvalFunction.hxx", 
+    "Convert_CompBezierCurves2dToBSplineCurve2d.hxx", 
+    "Convert_CylinderToBSplineSurface.hxx", 
+    "Convert_ParameterisationType.hxx", 
+    "Convert_SequenceOfArray1OfPoles.hxx", 
+    "Convert_PolynomialCosAndSin.hxx", 
+    "Convert_ParabolaToBSplineCurve.hxx", 
+    "Convert_ConeToBSplineSurface.hxx", 
+    "Convert_HyperbolaToBSplineCurve.hxx", 
+    "Convert_GridPolynomialToPoles.hxx", 
+    "Convert_TorusToBSplineSurface.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Convert_CompPolynomialToPoles", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Convert_CompPolynomialToPoles", 
+          "parent": "Convert_CompPolynomialToPoles", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NumCurves"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Continuity"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegree"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfInteger> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfInteger>", 
+              "name": "NumCoeffPerCurve"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "Coefficients"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray2OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray2OfReal>", 
+              "name": "PolynomialIntervals"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "TrueIntervals"
+            }
+          ], 
+          "key": "Convert_CompPolynomialToPoles::Convert_CompPolynomialToPoles(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, opencascade::handle<TColStd_HArray1OfInteger>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray2OfReal>, opencascade::handle<TColStd_HArray1OfReal>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_CompPolynomialToPoles", 
+          "parent": "Convert_CompPolynomialToPoles", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NumCurves"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegree"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfInteger &", 
+              "type": "TColStd_Array1OfInteger", 
+              "name": "Continuity"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfInteger &", 
+              "type": "TColStd_Array1OfInteger", 
+              "name": "NumCoeffPerCurve"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Coefficients"
+            }, 
+            {
+              "decl": "const TColStd_Array2OfReal &", 
+              "type": "TColStd_Array2OfReal", 
+              "name": "PolynomialIntervals"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "TrueIntervals"
+            }
+          ], 
+          "key": "Convert_CompPolynomialToPoles::Convert_CompPolynomialToPoles(Standard_Integer, Standard_Integer, Standard_Integer, TColStd_Array1OfInteger, TColStd_Array1OfInteger, TColStd_Array1OfReal, TColStd_Array2OfReal, TColStd_Array1OfReal)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_CompPolynomialToPoles", 
+          "parent": "Convert_CompPolynomialToPoles", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Dimension"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxDegree"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Degree"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Coefficients"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "PolynomialIntervals"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "TrueIntervals"
+            }
+          ], 
+          "key": "Convert_CompPolynomialToPoles::Convert_CompPolynomialToPoles(Standard_Integer, Standard_Integer, Standard_Integer, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_CompPolynomialToPoles", 
+          "parent": "Convert_CompPolynomialToPoles", 
+          "arguments": [
+            {
+              "decl": "const Convert_CompPolynomialToPoles &", 
+              "type": "Convert_CompPolynomialToPoles", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Convert_CompPolynomialToPoles::Convert_CompPolynomialToPoles(Convert_CompPolynomialToPoles)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPoles", 
+          "parent": "Convert_CompPolynomialToPoles", 
+          "arguments": [], 
+          "key": "Convert_CompPolynomialToPoles::NbPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Poles", 
+          "parent": "Convert_CompPolynomialToPoles", 
+          "arguments": [
+            {
+              "decl": "opencascade::handle<TColStd_HArray2OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray2OfReal>", 
+              "name": "Poles"
+            }
+          ], 
+          "key": "Convert_CompPolynomialToPoles::Poles(opencascade::handle<TColStd_HArray2OfReal>)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Degree", 
+          "parent": "Convert_CompPolynomialToPoles", 
+          "arguments": [], 
+          "key": "Convert_CompPolynomialToPoles::Degree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbKnots", 
+          "parent": "Convert_CompPolynomialToPoles", 
+          "arguments": [], 
+          "key": "Convert_CompPolynomialToPoles::NbKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Knots", 
+          "parent": "Convert_CompPolynomialToPoles", 
+          "arguments": [
+            {
+              "decl": "opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "K"
+            }
+          ], 
+          "key": "Convert_CompPolynomialToPoles::Knots(opencascade::handle<TColStd_HArray1OfReal>)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Multiplicities", 
+          "parent": "Convert_CompPolynomialToPoles", 
+          "arguments": [
+            {
+              "decl": "opencascade::handle<TColStd_HArray1OfInteger> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfInteger>", 
+              "name": "M"
+            }
+          ], 
+          "key": "Convert_CompPolynomialToPoles::Multiplicities(opencascade::handle<TColStd_HArray1OfInteger>)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "Convert_CompPolynomialToPoles", 
+          "arguments": [], 
+          "key": "Convert_CompPolynomialToPoles::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Convert_CompPolynomialToPoles.hxx", 
+        59
+      ], 
+      "key": "Convert_CompPolynomialToPoles"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Convert_ConicToBSplineCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Convert_ConicToBSplineCurve", 
+          "parent": "Convert_ConicToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Convert_ConicToBSplineCurve &", 
+              "type": "Convert_ConicToBSplineCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Convert_ConicToBSplineCurve::Convert_ConicToBSplineCurve(Convert_ConicToBSplineCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Degree", 
+          "parent": "Convert_ConicToBSplineCurve", 
+          "arguments": [], 
+          "key": "Convert_ConicToBSplineCurve::Degree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPoles", 
+          "parent": "Convert_ConicToBSplineCurve", 
+          "arguments": [], 
+          "key": "Convert_ConicToBSplineCurve::NbPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbKnots", 
+          "parent": "Convert_ConicToBSplineCurve", 
+          "arguments": [], 
+          "key": "Convert_ConicToBSplineCurve::NbKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsPeriodic", 
+          "parent": "Convert_ConicToBSplineCurve", 
+          "arguments": [], 
+          "key": "Convert_ConicToBSplineCurve::IsPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Pole", 
+          "parent": "Convert_ConicToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "Convert_ConicToBSplineCurve::Pole(Standard_Integer)", 
+          "returnType": "gp_Pnt2d", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Weight", 
+          "parent": "Convert_ConicToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "Convert_ConicToBSplineCurve::Weight(Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Knot", 
+          "parent": "Convert_ConicToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "Convert_ConicToBSplineCurve::Knot(Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Multiplicity", 
+          "parent": "Convert_ConicToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "Convert_ConicToBSplineCurve::Multiplicity(Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "BuildCosAndSin", 
+          "parent": "Convert_ConicToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Convert_ParameterisationType", 
+              "type": "Convert_ParameterisationType", 
+              "name": "Parametrisation"
+            }, 
+            {
+              "decl": "opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "CosNumerator"
+            }, 
+            {
+              "decl": "opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "SinNumerator"
+            }, 
+            {
+              "decl": "opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "Denominator"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "Degree"
+            }, 
+            {
+              "decl": "opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "Knots"
+            }, 
+            {
+              "decl": "opencascade::handle<TColStd_HArray1OfInteger> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfInteger>", 
+              "name": "Mults"
+            }
+          ], 
+          "key": "Convert_ConicToBSplineCurve::BuildCosAndSin(Convert_ParameterisationType, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, Standard_Integer, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfInteger>)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "BuildCosAndSin", 
+          "parent": "Convert_ConicToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Convert_ParameterisationType", 
+              "type": "Convert_ParameterisationType", 
+              "name": "Parametrisation"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "UFirst"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "ULast"
+            }, 
+            {
+              "decl": "opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "CosNumerator"
+            }, 
+            {
+              "decl": "opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "SinNumerator"
+            }, 
+            {
+              "decl": "opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "Denominator"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "Degree"
+            }, 
+            {
+              "decl": "opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "Knots"
+            }, 
+            {
+              "decl": "opencascade::handle<TColStd_HArray1OfInteger> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfInteger>", 
+              "name": "Mults"
+            }
+          ], 
+          "key": "Convert_ConicToBSplineCurve::BuildCosAndSin(Convert_ParameterisationType, Standard_Real, Standard_Real, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, Standard_Integer, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfInteger>)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Convert_ConicToBSplineCurve.hxx", 
+        59
+      ], 
+      "key": "Convert_ConicToBSplineCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Convert_CircleToBSplineCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Convert_CircleToBSplineCurve", 
+          "parent": "Convert_CircleToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ2d &", 
+              "type": "gp_Circ2d", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Convert_ParameterisationType", 
+              "type": "Convert_ParameterisationType", 
+              "name": "Parameterisation", 
+              "default": "::Convert_ParameterisationType::Convert_TgtThetaOver2"
+            }
+          ], 
+          "key": "Convert_CircleToBSplineCurve::Convert_CircleToBSplineCurve(gp_Circ2d, Convert_ParameterisationType)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_CircleToBSplineCurve", 
+          "parent": "Convert_CircleToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const gp_Circ2d &", 
+              "type": "gp_Circ2d", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const Convert_ParameterisationType", 
+              "type": "Convert_ParameterisationType", 
+              "name": "Parameterisation", 
+              "default": "::Convert_ParameterisationType::Convert_TgtThetaOver2"
+            }
+          ], 
+          "key": "Convert_CircleToBSplineCurve::Convert_CircleToBSplineCurve(gp_Circ2d, Standard_Real, Standard_Real, Convert_ParameterisationType)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_CircleToBSplineCurve", 
+          "parent": "Convert_CircleToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Convert_CircleToBSplineCurve &", 
+              "type": "Convert_CircleToBSplineCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Convert_CircleToBSplineCurve::Convert_CircleToBSplineCurve(Convert_CircleToBSplineCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Convert_ConicToBSplineCurve"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Convert_CircleToBSplineCurve.hxx", 
+        44
+      ], 
+      "key": "Convert_CircleToBSplineCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Convert_EllipseToBSplineCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Convert_EllipseToBSplineCurve", 
+          "parent": "Convert_EllipseToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const gp_Elips2d &", 
+              "type": "gp_Elips2d", 
+              "name": "E"
+            }, 
+            {
+              "decl": "const Convert_ParameterisationType", 
+              "type": "Convert_ParameterisationType", 
+              "name": "Parameterisation", 
+              "default": "::Convert_ParameterisationType::Convert_TgtThetaOver2"
+            }
+          ], 
+          "key": "Convert_EllipseToBSplineCurve::Convert_EllipseToBSplineCurve(gp_Elips2d, Convert_ParameterisationType)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_EllipseToBSplineCurve", 
+          "parent": "Convert_EllipseToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const gp_Elips2d &", 
+              "type": "gp_Elips2d", 
+              "name": "E"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const Convert_ParameterisationType", 
+              "type": "Convert_ParameterisationType", 
+              "name": "Parameterisation", 
+              "default": "::Convert_ParameterisationType::Convert_TgtThetaOver2"
+            }
+          ], 
+          "key": "Convert_EllipseToBSplineCurve::Convert_EllipseToBSplineCurve(gp_Elips2d, Standard_Real, Standard_Real, Convert_ParameterisationType)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_EllipseToBSplineCurve", 
+          "parent": "Convert_EllipseToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Convert_EllipseToBSplineCurve &", 
+              "type": "Convert_EllipseToBSplineCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Convert_EllipseToBSplineCurve::Convert_EllipseToBSplineCurve(Convert_EllipseToBSplineCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Convert_ConicToBSplineCurve"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Convert_EllipseToBSplineCurve.hxx", 
+        42
+      ], 
+      "key": "Convert_EllipseToBSplineCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Convert_CompBezierCurvesToBSplineCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Convert_CompBezierCurvesToBSplineCurve", 
+          "parent": "Convert_CompBezierCurvesToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "AngularTolerance", 
+              "default": "1.0E-4"
+            }
+          ], 
+          "key": "Convert_CompBezierCurvesToBSplineCurve::Convert_CompBezierCurvesToBSplineCurve(Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_CompBezierCurvesToBSplineCurve", 
+          "parent": "Convert_CompBezierCurvesToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Convert_CompBezierCurvesToBSplineCurve &", 
+              "type": "Convert_CompBezierCurvesToBSplineCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Convert_CompBezierCurvesToBSplineCurve::Convert_CompBezierCurvesToBSplineCurve(Convert_CompBezierCurvesToBSplineCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AddCurve", 
+          "parent": "Convert_CompBezierCurvesToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array1OfPnt &", 
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles"
+            }
+          ], 
+          "key": "Convert_CompBezierCurvesToBSplineCurve::AddCurve(TColgp_Array1OfPnt)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "Convert_CompBezierCurvesToBSplineCurve", 
+          "arguments": [], 
+          "key": "Convert_CompBezierCurvesToBSplineCurve::Perform()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Degree", 
+          "parent": "Convert_CompBezierCurvesToBSplineCurve", 
+          "arguments": [], 
+          "key": "Convert_CompBezierCurvesToBSplineCurve::Degree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPoles", 
+          "parent": "Convert_CompBezierCurvesToBSplineCurve", 
+          "arguments": [], 
+          "key": "Convert_CompBezierCurvesToBSplineCurve::NbPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Poles", 
+          "parent": "Convert_CompBezierCurvesToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "TColgp_Array1OfPnt &", 
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles"
+            }
+          ], 
+          "key": "Convert_CompBezierCurvesToBSplineCurve::Poles(TColgp_Array1OfPnt)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbKnots", 
+          "parent": "Convert_CompBezierCurvesToBSplineCurve", 
+          "arguments": [], 
+          "key": "Convert_CompBezierCurvesToBSplineCurve::NbKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "KnotsAndMults", 
+          "parent": "Convert_CompBezierCurvesToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Knots"
+            }, 
+            {
+              "decl": "TColStd_Array1OfInteger &", 
+              "type": "TColStd_Array1OfInteger", 
+              "name": "Mults"
+            }
+          ], 
+          "key": "Convert_CompBezierCurvesToBSplineCurve::KnotsAndMults(TColStd_Array1OfReal, TColStd_Array1OfInteger)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Convert_CompBezierCurvesToBSplineCurve.hxx", 
+        46
+      ], 
+      "key": "Convert_CompBezierCurvesToBSplineCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Convert_ElementarySurfaceToBSplineSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Convert_ElementarySurfaceToBSplineSurface", 
+          "parent": "Convert_ElementarySurfaceToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const Convert_ElementarySurfaceToBSplineSurface &", 
+              "type": "Convert_ElementarySurfaceToBSplineSurface", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Convert_ElementarySurfaceToBSplineSurface::Convert_ElementarySurfaceToBSplineSurface(Convert_ElementarySurfaceToBSplineSurface)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UDegree", 
+          "parent": "Convert_ElementarySurfaceToBSplineSurface", 
+          "arguments": [], 
+          "key": "Convert_ElementarySurfaceToBSplineSurface::UDegree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VDegree", 
+          "parent": "Convert_ElementarySurfaceToBSplineSurface", 
+          "arguments": [], 
+          "key": "Convert_ElementarySurfaceToBSplineSurface::VDegree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbUPoles", 
+          "parent": "Convert_ElementarySurfaceToBSplineSurface", 
+          "arguments": [], 
+          "key": "Convert_ElementarySurfaceToBSplineSurface::NbUPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbVPoles", 
+          "parent": "Convert_ElementarySurfaceToBSplineSurface", 
+          "arguments": [], 
+          "key": "Convert_ElementarySurfaceToBSplineSurface::NbVPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbUKnots", 
+          "parent": "Convert_ElementarySurfaceToBSplineSurface", 
+          "arguments": [], 
+          "key": "Convert_ElementarySurfaceToBSplineSurface::NbUKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbVKnots", 
+          "parent": "Convert_ElementarySurfaceToBSplineSurface", 
+          "arguments": [], 
+          "key": "Convert_ElementarySurfaceToBSplineSurface::NbVKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsUPeriodic", 
+          "parent": "Convert_ElementarySurfaceToBSplineSurface", 
+          "arguments": [], 
+          "key": "Convert_ElementarySurfaceToBSplineSurface::IsUPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsVPeriodic", 
+          "parent": "Convert_ElementarySurfaceToBSplineSurface", 
+          "arguments": [], 
+          "key": "Convert_ElementarySurfaceToBSplineSurface::IsVPeriodic()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Pole", 
+          "parent": "Convert_ElementarySurfaceToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "UIndex"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "VIndex"
+            }
+          ], 
+          "key": "Convert_ElementarySurfaceToBSplineSurface::Pole(Standard_Integer, Standard_Integer)", 
+          "returnType": "gp_Pnt", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Weight", 
+          "parent": "Convert_ElementarySurfaceToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "UIndex"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "VIndex"
+            }
+          ], 
+          "key": "Convert_ElementarySurfaceToBSplineSurface::Weight(Standard_Integer, Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UKnot", 
+          "parent": "Convert_ElementarySurfaceToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "UIndex"
+            }
+          ], 
+          "key": "Convert_ElementarySurfaceToBSplineSurface::UKnot(Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VKnot", 
+          "parent": "Convert_ElementarySurfaceToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "UIndex"
+            }
+          ], 
+          "key": "Convert_ElementarySurfaceToBSplineSurface::VKnot(Standard_Integer)", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UMultiplicity", 
+          "parent": "Convert_ElementarySurfaceToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "UIndex"
+            }
+          ], 
+          "key": "Convert_ElementarySurfaceToBSplineSurface::UMultiplicity(Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VMultiplicity", 
+          "parent": "Convert_ElementarySurfaceToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "VIndex"
+            }
+          ], 
+          "key": "Convert_ElementarySurfaceToBSplineSurface::VMultiplicity(Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Convert_ElementarySurfaceToBSplineSurface.hxx", 
+        64
+      ], 
+      "key": "Convert_ElementarySurfaceToBSplineSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Convert_SphereToBSplineSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Convert_SphereToBSplineSurface", 
+          "parent": "Convert_SphereToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sph"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V2"
+            }
+          ], 
+          "key": "Convert_SphereToBSplineSurface::Convert_SphereToBSplineSurface(gp_Sphere, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_SphereToBSplineSurface", 
+          "parent": "Convert_SphereToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sph"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Param1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Param2"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "UTrim", 
+              "default": "true"
+            }
+          ], 
+          "key": "Convert_SphereToBSplineSurface::Convert_SphereToBSplineSurface(gp_Sphere, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_SphereToBSplineSurface", 
+          "parent": "Convert_SphereToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const gp_Sphere &", 
+              "type": "gp_Sphere", 
+              "name": "Sph"
+            }
+          ], 
+          "key": "Convert_SphereToBSplineSurface::Convert_SphereToBSplineSurface(gp_Sphere)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_SphereToBSplineSurface", 
+          "parent": "Convert_SphereToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const Convert_SphereToBSplineSurface &", 
+              "type": "Convert_SphereToBSplineSurface", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Convert_SphereToBSplineSurface::Convert_SphereToBSplineSurface(Convert_SphereToBSplineSurface)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Convert_ElementarySurfaceToBSplineSurface"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Convert_SphereToBSplineSurface.hxx", 
+        43
+      ], 
+      "key": "Convert_SphereToBSplineSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Convert_CompBezierCurves2dToBSplineCurve2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Convert_CompBezierCurves2dToBSplineCurve2d", 
+          "parent": "Convert_CompBezierCurves2dToBSplineCurve2d", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "AngularTolerance", 
+              "default": "1.0E-4"
+            }
+          ], 
+          "key": "Convert_CompBezierCurves2dToBSplineCurve2d::Convert_CompBezierCurves2dToBSplineCurve2d(Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_CompBezierCurves2dToBSplineCurve2d", 
+          "parent": "Convert_CompBezierCurves2dToBSplineCurve2d", 
+          "arguments": [
+            {
+              "decl": "const Convert_CompBezierCurves2dToBSplineCurve2d &", 
+              "type": "Convert_CompBezierCurves2dToBSplineCurve2d", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Convert_CompBezierCurves2dToBSplineCurve2d::Convert_CompBezierCurves2dToBSplineCurve2d(Convert_CompBezierCurves2dToBSplineCurve2d)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AddCurve", 
+          "parent": "Convert_CompBezierCurves2dToBSplineCurve2d", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array1OfPnt2d &", 
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles"
+            }
+          ], 
+          "key": "Convert_CompBezierCurves2dToBSplineCurve2d::AddCurve(TColgp_Array1OfPnt2d)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "Convert_CompBezierCurves2dToBSplineCurve2d", 
+          "arguments": [], 
+          "key": "Convert_CompBezierCurves2dToBSplineCurve2d::Perform()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Degree", 
+          "parent": "Convert_CompBezierCurves2dToBSplineCurve2d", 
+          "arguments": [], 
+          "key": "Convert_CompBezierCurves2dToBSplineCurve2d::Degree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbPoles", 
+          "parent": "Convert_CompBezierCurves2dToBSplineCurve2d", 
+          "arguments": [], 
+          "key": "Convert_CompBezierCurves2dToBSplineCurve2d::NbPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Poles", 
+          "parent": "Convert_CompBezierCurves2dToBSplineCurve2d", 
+          "arguments": [
+            {
+              "decl": "TColgp_Array1OfPnt2d &", 
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles"
+            }
+          ], 
+          "key": "Convert_CompBezierCurves2dToBSplineCurve2d::Poles(TColgp_Array1OfPnt2d)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbKnots", 
+          "parent": "Convert_CompBezierCurves2dToBSplineCurve2d", 
+          "arguments": [], 
+          "key": "Convert_CompBezierCurves2dToBSplineCurve2d::NbKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "KnotsAndMults", 
+          "parent": "Convert_CompBezierCurves2dToBSplineCurve2d", 
+          "arguments": [
+            {
+              "decl": "TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Knots"
+            }, 
+            {
+              "decl": "TColStd_Array1OfInteger &", 
+              "type": "TColStd_Array1OfInteger", 
+              "name": "Mults"
+            }
+          ], 
+          "key": "Convert_CompBezierCurves2dToBSplineCurve2d::KnotsAndMults(TColStd_Array1OfReal, TColStd_Array1OfInteger)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Convert_CompBezierCurves2dToBSplineCurve2d.hxx", 
+        41
+      ], 
+      "key": "Convert_CompBezierCurves2dToBSplineCurve2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Convert_CylinderToBSplineSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Convert_CylinderToBSplineSurface", 
+          "parent": "Convert_CylinderToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V2"
+            }
+          ], 
+          "key": "Convert_CylinderToBSplineSurface::Convert_CylinderToBSplineSurface(gp_Cylinder, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_CylinderToBSplineSurface", 
+          "parent": "Convert_CylinderToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const gp_Cylinder &", 
+              "type": "gp_Cylinder", 
+              "name": "Cyl"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V2"
+            }
+          ], 
+          "key": "Convert_CylinderToBSplineSurface::Convert_CylinderToBSplineSurface(gp_Cylinder, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_CylinderToBSplineSurface", 
+          "parent": "Convert_CylinderToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const Convert_CylinderToBSplineSurface &", 
+              "type": "Convert_CylinderToBSplineSurface", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Convert_CylinderToBSplineSurface::Convert_CylinderToBSplineSurface(Convert_CylinderToBSplineSurface)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Convert_ElementarySurfaceToBSplineSurface"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Convert_CylinderToBSplineSurface.hxx", 
+        41
+      ], 
+      "key": "Convert_CylinderToBSplineSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Convert_ParabolaToBSplineCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Convert_ParabolaToBSplineCurve", 
+          "parent": "Convert_ParabolaToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const gp_Parab2d &", 
+              "type": "gp_Parab2d", 
+              "name": "Prb"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }
+          ], 
+          "key": "Convert_ParabolaToBSplineCurve::Convert_ParabolaToBSplineCurve(gp_Parab2d, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_ParabolaToBSplineCurve", 
+          "parent": "Convert_ParabolaToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Convert_ParabolaToBSplineCurve &", 
+              "type": "Convert_ParabolaToBSplineCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Convert_ParabolaToBSplineCurve::Convert_ParabolaToBSplineCurve(Convert_ParabolaToBSplineCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Convert_ConicToBSplineCurve"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Convert_ParabolaToBSplineCurve.hxx", 
+        39
+      ], 
+      "key": "Convert_ParabolaToBSplineCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Convert_ConeToBSplineSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Convert_ConeToBSplineSurface", 
+          "parent": "Convert_ConeToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V2"
+            }
+          ], 
+          "key": "Convert_ConeToBSplineSurface::Convert_ConeToBSplineSurface(gp_Cone, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_ConeToBSplineSurface", 
+          "parent": "Convert_ConeToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const gp_Cone &", 
+              "type": "gp_Cone", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V2"
+            }
+          ], 
+          "key": "Convert_ConeToBSplineSurface::Convert_ConeToBSplineSurface(gp_Cone, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_ConeToBSplineSurface", 
+          "parent": "Convert_ConeToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const Convert_ConeToBSplineSurface &", 
+              "type": "Convert_ConeToBSplineSurface", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Convert_ConeToBSplineSurface::Convert_ConeToBSplineSurface(Convert_ConeToBSplineSurface)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Convert_ElementarySurfaceToBSplineSurface"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Convert_ConeToBSplineSurface.hxx", 
+        43
+      ], 
+      "key": "Convert_ConeToBSplineSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Convert_HyperbolaToBSplineCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Convert_HyperbolaToBSplineCurve", 
+          "parent": "Convert_HyperbolaToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const gp_Hypr2d &", 
+              "type": "gp_Hypr2d", 
+              "name": "H"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }
+          ], 
+          "key": "Convert_HyperbolaToBSplineCurve::Convert_HyperbolaToBSplineCurve(gp_Hypr2d, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_HyperbolaToBSplineCurve", 
+          "parent": "Convert_HyperbolaToBSplineCurve", 
+          "arguments": [
+            {
+              "decl": "const Convert_HyperbolaToBSplineCurve &", 
+              "type": "Convert_HyperbolaToBSplineCurve", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Convert_HyperbolaToBSplineCurve::Convert_HyperbolaToBSplineCurve(Convert_HyperbolaToBSplineCurve)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Convert_ConicToBSplineCurve"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Convert_HyperbolaToBSplineCurve.hxx", 
+        40
+      ], 
+      "key": "Convert_HyperbolaToBSplineCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Convert_GridPolynomialToPoles", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Convert_GridPolynomialToPoles", 
+          "parent": "Convert_GridPolynomialToPoles", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxUDegree"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxVDegree"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfInteger> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfInteger>", 
+              "name": "NumCoeff"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "Coefficients"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "PolynomialUIntervals"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "PolynomialVIntervals"
+            }
+          ], 
+          "key": "Convert_GridPolynomialToPoles::Convert_GridPolynomialToPoles(Standard_Integer, Standard_Integer, opencascade::handle<TColStd_HArray1OfInteger>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_GridPolynomialToPoles", 
+          "parent": "Convert_GridPolynomialToPoles", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NbUSurfaces"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "NBVSurfaces"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "UContinuity"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "VContinuity"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxUDegree"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxVDegree"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray2OfInteger> &", 
+              "type": "opencascade::handle<TColStd_HArray2OfInteger>", 
+              "name": "NumCoeffPerSurface"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "Coefficients"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "PolynomialUIntervals"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "PolynomialVIntervals"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "TrueUIntervals"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "TrueVIntervals"
+            }
+          ], 
+          "key": "Convert_GridPolynomialToPoles::Convert_GridPolynomialToPoles(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, opencascade::handle<TColStd_HArray2OfInteger>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_GridPolynomialToPoles", 
+          "parent": "Convert_GridPolynomialToPoles", 
+          "arguments": [
+            {
+              "decl": "const Convert_GridPolynomialToPoles &", 
+              "type": "Convert_GridPolynomialToPoles", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Convert_GridPolynomialToPoles::Convert_GridPolynomialToPoles(Convert_GridPolynomialToPoles)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Perform", 
+          "parent": "Convert_GridPolynomialToPoles", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "UContinuity"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "VContinuity"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxUDegree"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "MaxVDegree"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray2OfInteger> &", 
+              "type": "opencascade::handle<TColStd_HArray2OfInteger>", 
+              "name": "NumCoeffPerSurface"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "Coefficients"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "PolynomialUIntervals"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "PolynomialVIntervals"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "TrueUIntervals"
+            }, 
+            {
+              "decl": "const opencascade::handle<TColStd_HArray1OfReal> &", 
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "TrueVIntervals"
+            }
+          ], 
+          "key": "Convert_GridPolynomialToPoles::Perform(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, opencascade::handle<TColStd_HArray2OfInteger>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbUPoles", 
+          "parent": "Convert_GridPolynomialToPoles", 
+          "arguments": [], 
+          "key": "Convert_GridPolynomialToPoles::NbUPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbVPoles", 
+          "parent": "Convert_GridPolynomialToPoles", 
+          "arguments": [], 
+          "key": "Convert_GridPolynomialToPoles::NbVPoles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Poles", 
+          "parent": "Convert_GridPolynomialToPoles", 
+          "arguments": [], 
+          "key": "Convert_GridPolynomialToPoles::Poles()", 
+          "returnType": "opencascade::handle<TColgp_HArray2OfPnt> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UDegree", 
+          "parent": "Convert_GridPolynomialToPoles", 
+          "arguments": [], 
+          "key": "Convert_GridPolynomialToPoles::UDegree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VDegree", 
+          "parent": "Convert_GridPolynomialToPoles", 
+          "arguments": [], 
+          "key": "Convert_GridPolynomialToPoles::VDegree()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbUKnots", 
+          "parent": "Convert_GridPolynomialToPoles", 
+          "arguments": [], 
+          "key": "Convert_GridPolynomialToPoles::NbUKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbVKnots", 
+          "parent": "Convert_GridPolynomialToPoles", 
+          "arguments": [], 
+          "key": "Convert_GridPolynomialToPoles::NbVKnots()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UKnots", 
+          "parent": "Convert_GridPolynomialToPoles", 
+          "arguments": [], 
+          "key": "Convert_GridPolynomialToPoles::UKnots()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VKnots", 
+          "parent": "Convert_GridPolynomialToPoles", 
+          "arguments": [], 
+          "key": "Convert_GridPolynomialToPoles::VKnots()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UMultiplicities", 
+          "parent": "Convert_GridPolynomialToPoles", 
+          "arguments": [], 
+          "key": "Convert_GridPolynomialToPoles::UMultiplicities()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfInteger> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "VMultiplicities", 
+          "parent": "Convert_GridPolynomialToPoles", 
+          "arguments": [], 
+          "key": "Convert_GridPolynomialToPoles::VMultiplicities()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfInteger> const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsDone", 
+          "parent": "Convert_GridPolynomialToPoles", 
+          "arguments": [], 
+          "key": "Convert_GridPolynomialToPoles::IsDone()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Convert_GridPolynomialToPoles.hxx", 
+        38
+      ], 
+      "key": "Convert_GridPolynomialToPoles"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Convert_TorusToBSplineSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Convert_TorusToBSplineSurface", 
+          "parent": "Convert_TorusToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V2"
+            }
+          ], 
+          "key": "Convert_TorusToBSplineSurface::Convert_TorusToBSplineSurface(gp_Torus, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_TorusToBSplineSurface", 
+          "parent": "Convert_TorusToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "T"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Param1"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Param2"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "UTrim", 
+              "default": "true"
+            }
+          ], 
+          "key": "Convert_TorusToBSplineSurface::Convert_TorusToBSplineSurface(gp_Torus, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_TorusToBSplineSurface", 
+          "parent": "Convert_TorusToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const gp_Torus &", 
+              "type": "gp_Torus", 
+              "name": "T"
+            }
+          ], 
+          "key": "Convert_TorusToBSplineSurface::Convert_TorusToBSplineSurface(gp_Torus)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Convert_TorusToBSplineSurface", 
+          "parent": "Convert_TorusToBSplineSurface", 
+          "arguments": [
+            {
+              "decl": "const Convert_TorusToBSplineSurface &", 
+              "type": "Convert_TorusToBSplineSurface", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Convert_TorusToBSplineSurface::Convert_TorusToBSplineSurface(Convert_TorusToBSplineSurface)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Convert_ElementarySurfaceToBSplineSurface"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Convert_TorusToBSplineSurface.hxx", 
+        43
+      ], 
+      "key": "Convert_TorusToBSplineSurface"
+    }, 
+    {
+      "type": "TColgp_SequenceOfArray1OfPnt2d", 
+      "declType": "typedef", 
+      "name": "Convert_SequenceOfArray1OfPoles2d", 
+      "key": "Convert_SequenceOfArray1OfPoles2d"
+    }, 
+    {
+      "type": "NCollection_Sequence<opencascade::handle<TColgp_HArray1OfPnt> >", 
+      "declType": "typedef", 
+      "name": "Convert_SequenceOfArray1OfPoles", 
+      "key": "Convert_SequenceOfArray1OfPoles"
+    }, 
+    {
+      "type": "void (*)( ::Standard_Real,::Standard_Integer const,::TColgp_Array1OfPnt2d const &,::TColStd_Array1OfReal const &,::TColStd_Array1OfInteger const *,::Standard_Real * )", 
+      "declType": "typedef", 
+      "name": "Convert_CosAndSinEvalFunction", 
+      "key": "Convert_CosAndSinEvalFunction"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "Convert_TgtThetaOver2", 
+          0
+        ], 
+        [
+          "Convert_TgtThetaOver2_1", 
+          1
+        ], 
+        [
+          "Convert_TgtThetaOver2_2", 
+          2
+        ], 
+        [
+          "Convert_TgtThetaOver2_3", 
+          3
+        ], 
+        [
+          "Convert_TgtThetaOver2_4", 
+          4
+        ], 
+        [
+          "Convert_QuasiAngular", 
+          5
+        ], 
+        [
+          "Convert_RationalC1", 
+          6
+        ], 
+        [
+          "Convert_Polynomial", 
+          7
+        ]
+      ], 
+      "name": "Convert_ParameterisationType", 
+      "key": "Convert_ParameterisationType"
+    }
+  ], 
+  "name": "Convert"
+}

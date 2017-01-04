@@ -1,0 +1,1999 @@
+{
+  "headers": [
+    "Poly_Polygon3D.hxx", 
+    "Poly_PolygonOnTriangulation.hxx", 
+    "Poly_CoherentNode.hxx", 
+    "Poly_Triangulation.hxx", 
+    "Poly_Connect.hxx", 
+    "Poly_Triangle.hxx", 
+    "Poly_Polygon2D.hxx", 
+    "Poly_CoherentTriangle.hxx", 
+    "Poly_HArray1OfTriangle.hxx", 
+    "Poly_ListOfTriangulation.hxx", 
+    "Poly_Array1OfTriangle.hxx", 
+    "Poly_CoherentLink.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Poly_Polygon3D", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Poly_Polygon3D", 
+          "parent": "Poly_Polygon3D", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array1OfPnt &", 
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Nodes"
+            }
+          ], 
+          "key": "Poly_Polygon3D::Poly_Polygon3D(TColgp_Array1OfPnt)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_Polygon3D", 
+          "parent": "Poly_Polygon3D", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array1OfPnt &", 
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Nodes"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Parameters"
+            }
+          ], 
+          "key": "Poly_Polygon3D::Poly_Polygon3D(TColgp_Array1OfPnt, TColStd_Array1OfReal)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_Polygon3D", 
+          "parent": "Poly_Polygon3D", 
+          "arguments": [
+            {
+              "decl": "const Poly_Polygon3D &", 
+              "type": "Poly_Polygon3D", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Poly_Polygon3D::Poly_Polygon3D(Poly_Polygon3D)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Copy", 
+          "parent": "Poly_Polygon3D", 
+          "arguments": [], 
+          "key": "Poly_Polygon3D::Copy()", 
+          "returnType": "opencascade::handle<Poly_Polygon3D>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Deflection", 
+          "parent": "Poly_Polygon3D", 
+          "arguments": [], 
+          "key": "Poly_Polygon3D::Deflection()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Deflection", 
+          "parent": "Poly_Polygon3D", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "D"
+            }
+          ], 
+          "key": "Poly_Polygon3D::Deflection(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbNodes", 
+          "parent": "Poly_Polygon3D", 
+          "arguments": [], 
+          "key": "Poly_Polygon3D::NbNodes()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Nodes", 
+          "parent": "Poly_Polygon3D", 
+          "arguments": [], 
+          "key": "Poly_Polygon3D::Nodes()", 
+          "returnType": "TColgp_Array1OfPnt const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasParameters", 
+          "parent": "Poly_Polygon3D", 
+          "arguments": [], 
+          "key": "Poly_Polygon3D::HasParameters()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parameters", 
+          "parent": "Poly_Polygon3D", 
+          "arguments": [], 
+          "key": "Poly_Polygon3D::Parameters()", 
+          "returnType": "TColStd_Array1OfReal const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeParameters", 
+          "parent": "Poly_Polygon3D", 
+          "arguments": [], 
+          "key": "Poly_Polygon3D::ChangeParameters()", 
+          "returnType": "TColStd_Array1OfReal &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Poly_Polygon3D", 
+          "arguments": [], 
+          "key": "Poly_Polygon3D::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Poly_Polygon3D", 
+          "arguments": [], 
+          "key": "Poly_Polygon3D::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Poly_Polygon3D", 
+          "arguments": [], 
+          "key": "Poly_Polygon3D::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Poly_Polygon3D.hxx", 
+        43
+      ], 
+      "key": "Poly_Polygon3D"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Poly_PolygonOnTriangulation", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Poly_PolygonOnTriangulation", 
+          "parent": "Poly_PolygonOnTriangulation", 
+          "arguments": [
+            {
+              "decl": "const TColStd_Array1OfInteger &", 
+              "type": "TColStd_Array1OfInteger", 
+              "name": "Nodes"
+            }
+          ], 
+          "key": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation(TColStd_Array1OfInteger)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_PolygonOnTriangulation", 
+          "parent": "Poly_PolygonOnTriangulation", 
+          "arguments": [
+            {
+              "decl": "const TColStd_Array1OfInteger &", 
+              "type": "TColStd_Array1OfInteger", 
+              "name": "Nodes"
+            }, 
+            {
+              "decl": "const TColStd_Array1OfReal &", 
+              "type": "TColStd_Array1OfReal", 
+              "name": "Parameters"
+            }
+          ], 
+          "key": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation(TColStd_Array1OfInteger, TColStd_Array1OfReal)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_PolygonOnTriangulation", 
+          "parent": "Poly_PolygonOnTriangulation", 
+          "arguments": [
+            {
+              "decl": "const Poly_PolygonOnTriangulation &", 
+              "type": "Poly_PolygonOnTriangulation", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation(Poly_PolygonOnTriangulation)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Copy", 
+          "parent": "Poly_PolygonOnTriangulation", 
+          "arguments": [], 
+          "key": "Poly_PolygonOnTriangulation::Copy()", 
+          "returnType": "opencascade::handle<Poly_PolygonOnTriangulation>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Deflection", 
+          "parent": "Poly_PolygonOnTriangulation", 
+          "arguments": [], 
+          "key": "Poly_PolygonOnTriangulation::Deflection()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Deflection", 
+          "parent": "Poly_PolygonOnTriangulation", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "D"
+            }
+          ], 
+          "key": "Poly_PolygonOnTriangulation::Deflection(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbNodes", 
+          "parent": "Poly_PolygonOnTriangulation", 
+          "arguments": [], 
+          "key": "Poly_PolygonOnTriangulation::NbNodes()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Nodes", 
+          "parent": "Poly_PolygonOnTriangulation", 
+          "arguments": [], 
+          "key": "Poly_PolygonOnTriangulation::Nodes()", 
+          "returnType": "TColStd_Array1OfInteger const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasParameters", 
+          "parent": "Poly_PolygonOnTriangulation", 
+          "arguments": [], 
+          "key": "Poly_PolygonOnTriangulation::HasParameters()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Parameters", 
+          "parent": "Poly_PolygonOnTriangulation", 
+          "arguments": [], 
+          "key": "Poly_PolygonOnTriangulation::Parameters()", 
+          "returnType": "opencascade::handle<TColStd_HArray1OfReal>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Poly_PolygonOnTriangulation", 
+          "arguments": [], 
+          "key": "Poly_PolygonOnTriangulation::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Poly_PolygonOnTriangulation", 
+          "arguments": [], 
+          "key": "Poly_PolygonOnTriangulation::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Poly_PolygonOnTriangulation", 
+          "arguments": [], 
+          "key": "Poly_PolygonOnTriangulation::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Poly_PolygonOnTriangulation.hxx", 
+        48
+      ], 
+      "key": "Poly_PolygonOnTriangulation"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Poly_CoherentTriangle", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Poly_CoherentTriangle", 
+          "parent": "Poly_CoherentTriangle", 
+          "arguments": [], 
+          "key": "Poly_CoherentTriangle::Poly_CoherentTriangle()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_CoherentTriangle", 
+          "parent": "Poly_CoherentTriangle", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iNode0"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iNode1"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iNode2"
+            }
+          ], 
+          "key": "Poly_CoherentTriangle::Poly_CoherentTriangle(Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_CoherentTriangle", 
+          "parent": "Poly_CoherentTriangle", 
+          "arguments": [
+            {
+              "decl": "const Poly_CoherentTriangle &", 
+              "type": "Poly_CoherentTriangle", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Poly_CoherentTriangle::Poly_CoherentTriangle(Poly_CoherentTriangle)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Node", 
+          "parent": "Poly_CoherentTriangle", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ind"
+            }
+          ], 
+          "key": "Poly_CoherentTriangle::Node(Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEmpty", 
+          "parent": "Poly_CoherentTriangle", 
+          "arguments": [], 
+          "key": "Poly_CoherentTriangle::IsEmpty()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetConnection", 
+          "parent": "Poly_CoherentTriangle", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iConn"
+            }, 
+            {
+              "decl": "Poly_CoherentTriangle &", 
+              "type": "Poly_CoherentTriangle", 
+              "name": "theTr"
+            }
+          ], 
+          "key": "Poly_CoherentTriangle::SetConnection(Standard_Integer, Poly_CoherentTriangle)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetConnection", 
+          "parent": "Poly_CoherentTriangle", 
+          "arguments": [
+            {
+              "decl": "Poly_CoherentTriangle &", 
+              "type": "Poly_CoherentTriangle", 
+              "name": "theTri"
+            }
+          ], 
+          "key": "Poly_CoherentTriangle::SetConnection(Poly_CoherentTriangle)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RemoveConnection", 
+          "parent": "Poly_CoherentTriangle", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iConn"
+            }
+          ], 
+          "key": "Poly_CoherentTriangle::RemoveConnection(Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RemoveConnection", 
+          "parent": "Poly_CoherentTriangle", 
+          "arguments": [
+            {
+              "decl": "Poly_CoherentTriangle &", 
+              "type": "Poly_CoherentTriangle", 
+              "name": "theTri"
+            }
+          ], 
+          "key": "Poly_CoherentTriangle::RemoveConnection(Poly_CoherentTriangle)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NConnections", 
+          "parent": "Poly_CoherentTriangle", 
+          "arguments": [], 
+          "key": "Poly_CoherentTriangle::NConnections()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetConnectedNode", 
+          "parent": "Poly_CoherentTriangle", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iConn"
+            }
+          ], 
+          "key": "Poly_CoherentTriangle::GetConnectedNode(Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetConnectedTri", 
+          "parent": "Poly_CoherentTriangle", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iConn"
+            }
+          ], 
+          "key": "Poly_CoherentTriangle::GetConnectedTri(Standard_Integer)", 
+          "returnType": "Poly_CoherentTriangle const *", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetLink", 
+          "parent": "Poly_CoherentTriangle", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iLink"
+            }
+          ], 
+          "key": "Poly_CoherentTriangle::GetLink(Standard_Integer)", 
+          "returnType": "Poly_CoherentLink const *", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FindConnection", 
+          "parent": "Poly_CoherentTriangle", 
+          "arguments": [
+            {
+              "decl": "const Poly_CoherentTriangle &", 
+              "type": "Poly_CoherentTriangle", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Poly_CoherentTriangle::FindConnection(Poly_CoherentTriangle)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Poly_CoherentTriangle.hxx", 
+        29
+      ], 
+      "key": "Poly_CoherentTriangle"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Poly_CoherentNode", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Poly_CoherentNode", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [], 
+          "key": "Poly_CoherentNode::Poly_CoherentNode()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_CoherentNode", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "thePnt"
+            }
+          ], 
+          "key": "Poly_CoherentNode::Poly_CoherentNode(gp_XYZ)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_CoherentNode", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [
+            {
+              "decl": "const Poly_CoherentNode &", 
+              "type": "Poly_CoherentNode", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Poly_CoherentNode::Poly_CoherentNode(Poly_CoherentNode)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetUV", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theU"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "theV"
+            }
+          ], 
+          "key": "Poly_CoherentNode::SetUV(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetU", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [], 
+          "key": "Poly_CoherentNode::GetU()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetV", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [], 
+          "key": "Poly_CoherentNode::GetV()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetNormal", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [
+            {
+              "decl": "const gp_XYZ &", 
+              "type": "gp_XYZ", 
+              "name": "theVector"
+            }
+          ], 
+          "key": "Poly_CoherentNode::SetNormal(gp_XYZ)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasNormal", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [], 
+          "key": "Poly_CoherentNode::HasNormal()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetNormal", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [], 
+          "key": "Poly_CoherentNode::GetNormal()", 
+          "returnType": "gp_XYZ", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetIndex", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theIndex"
+            }
+          ], 
+          "key": "Poly_CoherentNode::SetIndex(Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetIndex", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [], 
+          "key": "Poly_CoherentNode::GetIndex()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsFreeNode", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [], 
+          "key": "Poly_CoherentNode::IsFreeNode()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Clear", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<NCollection_BaseAllocator> &", 
+              "type": "opencascade::handle<NCollection_BaseAllocator>", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Poly_CoherentNode::Clear(opencascade::handle<NCollection_BaseAllocator>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "AddTriangle", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [
+            {
+              "decl": "const Poly_CoherentTriangle &", 
+              "type": "Poly_CoherentTriangle", 
+              "name": "theTri"
+            }, 
+            {
+              "decl": "const opencascade::handle<NCollection_BaseAllocator> &", 
+              "type": "opencascade::handle<NCollection_BaseAllocator>", 
+              "name": "theA"
+            }
+          ], 
+          "key": "Poly_CoherentNode::AddTriangle(Poly_CoherentTriangle, opencascade::handle<NCollection_BaseAllocator>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RemoveTriangle", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [
+            {
+              "decl": "const Poly_CoherentTriangle &", 
+              "type": "Poly_CoherentTriangle", 
+              "name": "theTri"
+            }, 
+            {
+              "decl": "const opencascade::handle<NCollection_BaseAllocator> &", 
+              "type": "opencascade::handle<NCollection_BaseAllocator>", 
+              "name": "theA"
+            }
+          ], 
+          "key": "Poly_CoherentNode::RemoveTriangle(Poly_CoherentTriangle, opencascade::handle<NCollection_BaseAllocator>)", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "TriangleIterator", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [], 
+          "key": "Poly_CoherentNode::TriangleIterator()", 
+          "returnType": "Poly_CoherentTriPtr::Iterator", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Dump", 
+          "parent": "Poly_CoherentNode", 
+          "arguments": [
+            {
+              "decl": "Standard_OStream &", 
+              "type": "Standard_OStream", 
+              "name": "theStream"
+            }
+          ], 
+          "key": "Poly_CoherentNode::Dump(Standard_OStream)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "gp_XYZ"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Poly_CoherentNode.hxx", 
+        36
+      ], 
+      "key": "Poly_CoherentNode"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Poly_Triangle", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Poly_Triangle", 
+          "parent": "Poly_Triangle", 
+          "arguments": [], 
+          "key": "Poly_Triangle::Poly_Triangle()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_Triangle", 
+          "parent": "Poly_Triangle", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N1"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N2"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N3"
+            }
+          ], 
+          "key": "Poly_Triangle::Poly_Triangle(Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_Triangle", 
+          "parent": "Poly_Triangle", 
+          "arguments": [
+            {
+              "decl": "const Poly_Triangle &", 
+              "type": "Poly_Triangle", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Poly_Triangle::Poly_Triangle(Poly_Triangle)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "Poly_Triangle", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N1"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N2"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N3"
+            }
+          ], 
+          "key": "Poly_Triangle::Set(Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Set", 
+          "parent": "Poly_Triangle", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Node"
+            }
+          ], 
+          "key": "Poly_Triangle::Set(Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Get", 
+          "parent": "Poly_Triangle", 
+          "arguments": [
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "N1"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "N2"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "N3"
+            }
+          ], 
+          "key": "Poly_Triangle::Get(Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Poly_Triangle", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "Poly_Triangle::Value(Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeValue", 
+          "parent": "Poly_Triangle", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "Index"
+            }
+          ], 
+          "key": "Poly_Triangle::ChangeValue(Standard_Integer)", 
+          "returnType": "Standard_Integer &", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Poly_Triangle.hxx", 
+        33
+      ], 
+      "key": "Poly_Triangle"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Poly_Triangulation", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Poly_Triangulation", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "nbNodes"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "nbTriangles"
+            }, 
+            {
+              "decl": "const Standard_Boolean", 
+              "type": "Standard_Boolean", 
+              "name": "UVNodes"
+            }
+          ], 
+          "key": "Poly_Triangulation::Poly_Triangulation(Standard_Integer, Standard_Integer, Standard_Boolean)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_Triangulation", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array1OfPnt &", 
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Nodes"
+            }, 
+            {
+              "decl": "const Poly_Array1OfTriangle &", 
+              "type": "Poly_Array1OfTriangle", 
+              "name": "Triangles"
+            }
+          ], 
+          "key": "Poly_Triangulation::Poly_Triangulation(TColgp_Array1OfPnt, Poly_Array1OfTriangle)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_Triangulation", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array1OfPnt &", 
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Nodes"
+            }, 
+            {
+              "decl": "const TColgp_Array1OfPnt2d &", 
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "UVNodes"
+            }, 
+            {
+              "decl": "const Poly_Array1OfTriangle &", 
+              "type": "Poly_Array1OfTriangle", 
+              "name": "Triangles"
+            }
+          ], 
+          "key": "Poly_Triangulation::Poly_Triangulation(TColgp_Array1OfPnt, TColgp_Array1OfPnt2d, Poly_Array1OfTriangle)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_Triangulation", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [
+            {
+              "decl": "const Poly_Triangulation &", 
+              "type": "Poly_Triangulation", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Poly_Triangulation::Poly_Triangulation(Poly_Triangulation)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Copy", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::Copy()", 
+          "returnType": "opencascade::handle<Poly_Triangulation>", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "declType": "method", 
+          "name": "Deflection", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::Deflection()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Deflection", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "D"
+            }
+          ], 
+          "key": "Poly_Triangulation::Deflection(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "RemoveUVNodes", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::RemoveUVNodes()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbNodes", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::NbNodes()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbTriangles", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::NbTriangles()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasUVNodes", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::HasUVNodes()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Nodes", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::Nodes()", 
+          "returnType": "TColgp_Array1OfPnt const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeNodes", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::ChangeNodes()", 
+          "returnType": "TColgp_Array1OfPnt &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "UVNodes", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::UVNodes()", 
+          "returnType": "TColgp_Array1OfPnt2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeUVNodes", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::ChangeUVNodes()", 
+          "returnType": "TColgp_Array1OfPnt2d &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Triangles", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::Triangles()", 
+          "returnType": "Poly_Array1OfTriangle const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeTriangles", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::ChangeTriangles()", 
+          "returnType": "Poly_Array1OfTriangle &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetNormals", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<TShort_HArray1OfShortReal> &", 
+              "type": "opencascade::handle<TShort_HArray1OfShortReal>", 
+              "name": "theNormals"
+            }
+          ], 
+          "key": "Poly_Triangulation::SetNormals(opencascade::handle<TShort_HArray1OfShortReal>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Normals", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::Normals()", 
+          "returnType": "TShort_Array1OfShortReal const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeNormals", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::ChangeNormals()", 
+          "returnType": "TShort_Array1OfShortReal &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "HasNormals", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::HasNormals()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Poly_Triangulation", 
+          "arguments": [], 
+          "key": "Poly_Triangulation::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Poly_Triangulation.hxx", 
+        65
+      ], 
+      "key": "Poly_Triangulation"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Poly_Connect", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Poly_Connect", 
+          "parent": "Poly_Connect", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Poly_Triangulation> &", 
+              "type": "opencascade::handle<Poly_Triangulation>", 
+              "name": "T"
+            }
+          ], 
+          "key": "Poly_Connect::Poly_Connect(opencascade::handle<Poly_Triangulation>)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_Connect", 
+          "parent": "Poly_Connect", 
+          "arguments": [
+            {
+              "decl": "const Poly_Connect &", 
+              "type": "Poly_Connect", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Poly_Connect::Poly_Connect(Poly_Connect)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Triangulation", 
+          "parent": "Poly_Connect", 
+          "arguments": [], 
+          "key": "Poly_Connect::Triangulation()", 
+          "returnType": "opencascade::handle<Poly_Triangulation>", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Triangle", 
+          "parent": "Poly_Connect", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }
+          ], 
+          "key": "Poly_Connect::Triangle(Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Triangles", 
+          "parent": "Poly_Connect", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "T"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "t1"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "t2"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "t3"
+            }
+          ], 
+          "key": "Poly_Connect::Triangles(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Nodes", 
+          "parent": "Poly_Connect", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "T"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "n1"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "n2"
+            }, 
+            {
+              "decl": "Standard_Integer &", 
+              "type": "Standard_Integer", 
+              "name": "n3"
+            }
+          ], 
+          "key": "Poly_Connect::Nodes(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "returnType": "void", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Initialize", 
+          "parent": "Poly_Connect", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }
+          ], 
+          "key": "Poly_Connect::Initialize(Standard_Integer)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "More", 
+          "parent": "Poly_Connect", 
+          "arguments": [], 
+          "key": "Poly_Connect::More()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Next", 
+          "parent": "Poly_Connect", 
+          "arguments": [], 
+          "key": "Poly_Connect::Next()", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "Poly_Connect", 
+          "arguments": [], 
+          "key": "Poly_Connect::Value()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Poly_Connect.hxx", 
+        64
+      ], 
+      "key": "Poly_Connect"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Poly_Polygon2D", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Poly_Polygon2D", 
+          "parent": "Poly_Polygon2D", 
+          "arguments": [
+            {
+              "decl": "const TColgp_Array1OfPnt2d &", 
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Nodes"
+            }
+          ], 
+          "key": "Poly_Polygon2D::Poly_Polygon2D(TColgp_Array1OfPnt2d)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_Polygon2D", 
+          "parent": "Poly_Polygon2D", 
+          "arguments": [
+            {
+              "decl": "const Poly_Polygon2D &", 
+              "type": "Poly_Polygon2D", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Poly_Polygon2D::Poly_Polygon2D(Poly_Polygon2D)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Deflection", 
+          "parent": "Poly_Polygon2D", 
+          "arguments": [], 
+          "key": "Poly_Polygon2D::Deflection()", 
+          "returnType": "Standard_Real", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Deflection", 
+          "parent": "Poly_Polygon2D", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "D"
+            }
+          ], 
+          "key": "Poly_Polygon2D::Deflection(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "NbNodes", 
+          "parent": "Poly_Polygon2D", 
+          "arguments": [], 
+          "key": "Poly_Polygon2D::NbNodes()", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Nodes", 
+          "parent": "Poly_Polygon2D", 
+          "arguments": [], 
+          "key": "Poly_Polygon2D::Nodes()", 
+          "returnType": "TColgp_Array1OfPnt2d const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Poly_Polygon2D", 
+          "arguments": [], 
+          "key": "Poly_Polygon2D::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Poly_Polygon2D", 
+          "arguments": [], 
+          "key": "Poly_Polygon2D::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Poly_Polygon2D", 
+          "arguments": [], 
+          "key": "Poly_Polygon2D::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Poly_Polygon2D.hxx", 
+        39
+      ], 
+      "key": "Poly_Polygon2D"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Poly_CoherentLink", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Poly_CoherentLink", 
+          "parent": "Poly_CoherentLink", 
+          "arguments": [], 
+          "key": "Poly_CoherentLink::Poly_CoherentLink()", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_CoherentLink", 
+          "parent": "Poly_CoherentLink", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iNode0"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iNode1"
+            }
+          ], 
+          "key": "Poly_CoherentLink::Poly_CoherentLink(Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_CoherentLink", 
+          "parent": "Poly_CoherentLink", 
+          "arguments": [
+            {
+              "decl": "const Poly_CoherentTriangle &", 
+              "type": "Poly_CoherentTriangle", 
+              "name": "theTri"
+            }, 
+            {
+              "decl": "Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "iSide"
+            }
+          ], 
+          "key": "Poly_CoherentLink::Poly_CoherentLink(Poly_CoherentTriangle, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_CoherentLink", 
+          "parent": "Poly_CoherentLink", 
+          "arguments": [
+            {
+              "decl": "const Poly_CoherentLink &", 
+              "type": "Poly_CoherentLink", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Poly_CoherentLink::Poly_CoherentLink(Poly_CoherentLink)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Node", 
+          "parent": "Poly_CoherentLink", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ind"
+            }
+          ], 
+          "key": "Poly_CoherentLink::Node(Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "OppositeNode", 
+          "parent": "Poly_CoherentLink", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "ind"
+            }
+          ], 
+          "key": "Poly_CoherentLink::OppositeNode(Standard_Integer)", 
+          "returnType": "Standard_Integer", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GetAttribute", 
+          "parent": "Poly_CoherentLink", 
+          "arguments": [], 
+          "key": "Poly_CoherentLink::GetAttribute()", 
+          "returnType": "Standard_Address", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetAttribute", 
+          "parent": "Poly_CoherentLink", 
+          "arguments": [
+            {
+              "decl": "const Standard_Address", 
+              "type": "Standard_Address", 
+              "name": "theAtt"
+            }
+          ], 
+          "key": "Poly_CoherentLink::SetAttribute(Standard_Address)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsEmpty", 
+          "parent": "Poly_CoherentLink", 
+          "arguments": [], 
+          "key": "Poly_CoherentLink::IsEmpty()", 
+          "returnType": "Standard_Boolean", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Nullify", 
+          "parent": "Poly_CoherentLink", 
+          "arguments": [], 
+          "key": "Poly_CoherentLink::Nullify()", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Poly_CoherentLink.hxx", 
+        35
+      ], 
+      "key": "Poly_CoherentLink"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Poly_HArray1OfTriangle", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "Poly_HArray1OfTriangle", 
+          "parent": "Poly_HArray1OfTriangle", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theLower"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theUpper"
+            }
+          ], 
+          "key": "Poly_HArray1OfTriangle::Poly_HArray1OfTriangle(Standard_Integer, Standard_Integer)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_HArray1OfTriangle", 
+          "parent": "Poly_HArray1OfTriangle", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theLower"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "theUpper"
+            }, 
+            {
+              "decl": "const NCollection_Array1<Poly_Triangle>::value_type &", 
+              "type": "NCollection_Array1<Poly_Triangle>::value_type", 
+              "name": "theValue"
+            }
+          ], 
+          "key": "Poly_HArray1OfTriangle::Poly_HArray1OfTriangle(Standard_Integer, Standard_Integer, NCollection_Array1<Poly_Triangle>::value_type)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_HArray1OfTriangle", 
+          "parent": "Poly_HArray1OfTriangle", 
+          "arguments": [
+            {
+              "decl": "const Poly_Array1OfTriangle &", 
+              "type": "Poly_Array1OfTriangle", 
+              "name": "theOther"
+            }
+          ], 
+          "key": "Poly_HArray1OfTriangle::Poly_HArray1OfTriangle(Poly_Array1OfTriangle)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "Poly_HArray1OfTriangle", 
+          "parent": "Poly_HArray1OfTriangle", 
+          "arguments": [
+            {
+              "decl": "const Poly_HArray1OfTriangle &", 
+              "type": "Poly_HArray1OfTriangle", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "Poly_HArray1OfTriangle::Poly_HArray1OfTriangle(Poly_HArray1OfTriangle)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Array1", 
+          "parent": "Poly_HArray1OfTriangle", 
+          "arguments": [], 
+          "key": "Poly_HArray1OfTriangle::Array1()", 
+          "returnType": "Poly_Array1OfTriangle const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "ChangeArray1", 
+          "parent": "Poly_HArray1OfTriangle", 
+          "arguments": [], 
+          "key": "Poly_HArray1OfTriangle::ChangeArray1()", 
+          "returnType": "Poly_Array1OfTriangle &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_name", 
+          "parent": "Poly_HArray1OfTriangle", 
+          "arguments": [], 
+          "key": "Poly_HArray1OfTriangle::get_type_name()", 
+          "returnType": "char const *", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "get_type_descriptor", 
+          "parent": "Poly_HArray1OfTriangle", 
+          "arguments": [], 
+          "key": "Poly_HArray1OfTriangle::get_type_descriptor()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DynamicType", 
+          "parent": "Poly_HArray1OfTriangle", 
+          "arguments": [], 
+          "key": "Poly_HArray1OfTriangle::DynamicType()", 
+          "returnType": "opencascade::handle<Standard_Type> const &", 
+          "const": "1", 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Array1<Poly_Triangle>"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Poly_HArray1OfTriangle.hxx", 
+        24
+      ], 
+      "key": "Poly_HArray1OfTriangle"
+    }, 
+    {
+      "type": "opencascade::handle<Poly_Polygon3D>", 
+      "declType": "typedef", 
+      "name": "Handle_Poly_Polygon3D", 
+      "key": "Handle_Poly_Polygon3D"
+    }, 
+    {
+      "type": "opencascade::handle<Poly_PolygonOnTriangulation>", 
+      "declType": "typedef", 
+      "name": "Handle_Poly_PolygonOnTriangulation", 
+      "key": "Handle_Poly_PolygonOnTriangulation"
+    }, 
+    {
+      "type": "NCollection_Array1<Poly_Triangle>", 
+      "declType": "typedef", 
+      "name": "Poly_Array1OfTriangle", 
+      "key": "Poly_Array1OfTriangle"
+    }, 
+    {
+      "type": "opencascade::handle<Poly_Triangulation>", 
+      "declType": "typedef", 
+      "name": "Handle_Poly_Triangulation", 
+      "key": "Handle_Poly_Triangulation"
+    }, 
+    {
+      "type": "opencascade::handle<Poly_Polygon2D>", 
+      "declType": "typedef", 
+      "name": "Handle_Poly_Polygon2D", 
+      "key": "Handle_Poly_Polygon2D"
+    }, 
+    {
+      "type": "opencascade::handle<Poly_HArray1OfTriangle>", 
+      "declType": "typedef", 
+      "name": "Handle_Poly_HArray1OfTriangle", 
+      "key": "Handle_Poly_HArray1OfTriangle"
+    }, 
+    {
+      "type": "NCollection_List<opencascade::handle<Poly_Triangulation> >", 
+      "declType": "typedef", 
+      "name": "Poly_ListOfTriangulation", 
+      "key": "Poly_ListOfTriangulation"
+    }
+  ], 
+  "name": "Poly"
+}

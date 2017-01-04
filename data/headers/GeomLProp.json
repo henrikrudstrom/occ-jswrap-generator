@@ -1,0 +1,1068 @@
+{
+  "headers": [
+    "GeomLProp_SurfaceTool.hxx", 
+    "GeomLProp_CLProps.hxx", 
+    "GeomLProp_CurveTool.hxx", 
+    "GeomLProp_SLProps.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "GeomLProp_SurfaceTool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomLProp_SurfaceTool", 
+          "parent": "GeomLProp_SurfaceTool", 
+          "arguments": [], 
+          "key": "GeomLProp_SurfaceTool::GeomLProp_SurfaceTool()", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLProp_SurfaceTool", 
+          "parent": "GeomLProp_SurfaceTool", 
+          "arguments": [
+            {
+              "decl": "const GeomLProp_SurfaceTool &", 
+              "type": "GeomLProp_SurfaceTool", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomLProp_SurfaceTool::GeomLProp_SurfaceTool(GeomLProp_SurfaceTool)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "GeomLProp_SurfaceTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }
+          ], 
+          "key": "GeomLProp_SurfaceTool::Value(opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, gp_Pnt)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "GeomLProp_SurfaceTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D1U"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D1V"
+            }
+          ], 
+          "key": "GeomLProp_SurfaceTool::D1(opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, gp_Pnt, gp_Vec, gp_Vec)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "GeomLProp_SurfaceTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D1U"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D1V"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D2U"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "D2V"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "DUV"
+            }
+          ], 
+          "key": "GeomLProp_SurfaceTool::D2(opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, gp_Pnt, gp_Vec, gp_Vec, gp_Vec, gp_Vec, gp_Vec)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DN", 
+          "parent": "GeomLProp_SurfaceTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IU"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "IV"
+            }
+          ], 
+          "key": "GeomLProp_SurfaceTool::DN(opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, Standard_Integer, Standard_Integer)", 
+          "returnType": "gp_Vec", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Continuity", 
+          "parent": "GeomLProp_SurfaceTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomLProp_SurfaceTool::Continuity(opencascade::handle<Geom_Surface>)", 
+          "returnType": "Standard_Integer", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Bounds", 
+          "parent": "GeomLProp_SurfaceTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "U1"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "U2"
+            }, 
+            {
+              "decl": "Standard_Real &", 
+              "type": "Standard_Real", 
+              "name": "V2"
+            }
+          ], 
+          "key": "GeomLProp_SurfaceTool::Bounds(opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomLProp_SurfaceTool.hxx", 
+        32
+      ], 
+      "key": "GeomLProp_SurfaceTool"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomLProp_CurveTool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomLProp_CurveTool", 
+          "parent": "GeomLProp_CurveTool", 
+          "arguments": [], 
+          "key": "GeomLProp_CurveTool::GeomLProp_CurveTool()", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLProp_CurveTool", 
+          "parent": "GeomLProp_CurveTool", 
+          "arguments": [
+            {
+              "decl": "const GeomLProp_CurveTool &", 
+              "type": "GeomLProp_CurveTool", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomLProp_CurveTool::GeomLProp_CurveTool(GeomLProp_CurveTool)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "GeomLProp_CurveTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }
+          ], 
+          "key": "GeomLProp_CurveTool::Value(opencascade::handle<Geom_Curve>, Standard_Real, gp_Pnt)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "GeomLProp_CurveTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V1"
+            }
+          ], 
+          "key": "GeomLProp_CurveTool::D1(opencascade::handle<Geom_Curve>, Standard_Real, gp_Pnt, gp_Vec)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "GeomLProp_CurveTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V2"
+            }
+          ], 
+          "key": "GeomLProp_CurveTool::D2(opencascade::handle<Geom_Curve>, Standard_Real, gp_Pnt, gp_Vec, gp_Vec)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D3", 
+          "parent": "GeomLProp_CurveTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V1"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V2"
+            }, 
+            {
+              "decl": "gp_Vec &", 
+              "type": "gp_Vec", 
+              "name": "V3"
+            }
+          ], 
+          "key": "GeomLProp_CurveTool::D3(opencascade::handle<Geom_Curve>, Standard_Real, gp_Pnt, gp_Vec, gp_Vec, gp_Vec)", 
+          "returnType": "void", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Continuity", 
+          "parent": "GeomLProp_CurveTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomLProp_CurveTool::Continuity(opencascade::handle<Geom_Curve>)", 
+          "returnType": "Standard_Integer", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "FirstParameter", 
+          "parent": "GeomLProp_CurveTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomLProp_CurveTool::FirstParameter(opencascade::handle<Geom_Curve>)", 
+          "returnType": "Standard_Real", 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "LastParameter", 
+          "parent": "GeomLProp_CurveTool", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomLProp_CurveTool::LastParameter(opencascade::handle<Geom_Curve>)", 
+          "returnType": "Standard_Real", 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomLProp_CurveTool.hxx", 
+        32
+      ], 
+      "key": "GeomLProp_CurveTool"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomLProp_CLProps", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomLProp_CLProps", 
+          "parent": "GeomLProp_CLProps", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }
+          ], 
+          "key": "GeomLProp_CLProps::GeomLProp_CLProps(opencascade::handle<Geom_Curve>, Standard_Integer, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLProp_CLProps", 
+          "parent": "GeomLProp_CLProps", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }
+          ], 
+          "key": "GeomLProp_CLProps::GeomLProp_CLProps(opencascade::handle<Geom_Curve>, Standard_Real, Standard_Integer, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLProp_CLProps", 
+          "parent": "GeomLProp_CLProps", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }
+          ], 
+          "key": "GeomLProp_CLProps::GeomLProp_CLProps(Standard_Integer, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLProp_CLProps", 
+          "parent": "GeomLProp_CLProps", 
+          "arguments": [
+            {
+              "decl": "const GeomLProp_CLProps &", 
+              "type": "GeomLProp_CLProps", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomLProp_CLProps::GeomLProp_CLProps(GeomLProp_CLProps)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetParameter", 
+          "parent": "GeomLProp_CLProps", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }
+          ], 
+          "key": "GeomLProp_CLProps::SetParameter(Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetCurve", 
+          "parent": "GeomLProp_CLProps", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Curve> &", 
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C"
+            }
+          ], 
+          "key": "GeomLProp_CLProps::SetCurve(opencascade::handle<Geom_Curve>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "GeomLProp_CLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_CLProps::Value()", 
+          "returnType": "gp_Pnt const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1", 
+          "parent": "GeomLProp_CLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_CLProps::D1()", 
+          "returnType": "gp_Vec const &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2", 
+          "parent": "GeomLProp_CLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_CLProps::D2()", 
+          "returnType": "gp_Vec const &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D3", 
+          "parent": "GeomLProp_CLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_CLProps::D3()", 
+          "returnType": "gp_Vec const &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsTangentDefined", 
+          "parent": "GeomLProp_CLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_CLProps::IsTangentDefined()", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Tangent", 
+          "parent": "GeomLProp_CLProps", 
+          "arguments": [
+            {
+              "decl": "gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "D"
+            }
+          ], 
+          "key": "GeomLProp_CLProps::Tangent(gp_Dir)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Curvature", 
+          "parent": "GeomLProp_CLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_CLProps::Curvature()", 
+          "returnType": "Standard_Real", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Normal", 
+          "parent": "GeomLProp_CLProps", 
+          "arguments": [
+            {
+              "decl": "gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "N"
+            }
+          ], 
+          "key": "GeomLProp_CLProps::Normal(gp_Dir)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CentreOfCurvature", 
+          "parent": "GeomLProp_CLProps", 
+          "arguments": [
+            {
+              "decl": "gp_Pnt &", 
+              "type": "gp_Pnt", 
+              "name": "P"
+            }
+          ], 
+          "key": "GeomLProp_CLProps::CentreOfCurvature(gp_Pnt)", 
+          "returnType": "void", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomLProp_CLProps.hxx", 
+        43
+      ], 
+      "key": "GeomLProp_CLProps"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomLProp_SLProps", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "declType": "constructor", 
+          "name": "GeomLProp_SLProps", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }
+          ], 
+          "key": "GeomLProp_SLProps::GeomLProp_SLProps(opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, Standard_Integer, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLProp_SLProps", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }, 
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }
+          ], 
+          "key": "GeomLProp_SLProps::GeomLProp_SLProps(opencascade::handle<Geom_Surface>, Standard_Integer, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLProp_SLProps", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [
+            {
+              "decl": "const Standard_Integer", 
+              "type": "Standard_Integer", 
+              "name": "N"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "Resolution"
+            }
+          ], 
+          "key": "GeomLProp_SLProps::GeomLProp_SLProps(Standard_Integer, Standard_Real)", 
+          "returnType": "", 
+          "throws": true
+        }, 
+        {
+          "declType": "constructor", 
+          "name": "GeomLProp_SLProps", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [
+            {
+              "decl": "const GeomLProp_SLProps &", 
+              "type": "GeomLProp_SLProps", 
+              "name": "arg0"
+            }
+          ], 
+          "key": "GeomLProp_SLProps::GeomLProp_SLProps(GeomLProp_SLProps)", 
+          "returnType": "", 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetSurface", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [
+            {
+              "decl": "const opencascade::handle<Geom_Surface> &", 
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S"
+            }
+          ], 
+          "key": "GeomLProp_SLProps::SetSurface(opencascade::handle<Geom_Surface>)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "SetParameters", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "U"
+            }, 
+            {
+              "decl": "const Standard_Real", 
+              "type": "Standard_Real", 
+              "name": "V"
+            }
+          ], 
+          "key": "GeomLProp_SLProps::SetParameters(Standard_Real, Standard_Real)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Value", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_SLProps::Value()", 
+          "returnType": "gp_Pnt const &", 
+          "const": "1", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1U", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_SLProps::D1U()", 
+          "returnType": "gp_Vec const &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D1V", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_SLProps::D1V()", 
+          "returnType": "gp_Vec const &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2U", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_SLProps::D2U()", 
+          "returnType": "gp_Vec const &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "D2V", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_SLProps::D2V()", 
+          "returnType": "gp_Vec const &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "DUV", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_SLProps::DUV()", 
+          "returnType": "gp_Vec const &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsTangentUDefined", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_SLProps::IsTangentUDefined()", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "TangentU", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [
+            {
+              "decl": "gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "D"
+            }
+          ], 
+          "key": "GeomLProp_SLProps::TangentU(gp_Dir)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsTangentVDefined", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_SLProps::IsTangentVDefined()", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "TangentV", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [
+            {
+              "decl": "gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "D"
+            }
+          ], 
+          "key": "GeomLProp_SLProps::TangentV(gp_Dir)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsNormalDefined", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_SLProps::IsNormalDefined()", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "Normal", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_SLProps::Normal()", 
+          "returnType": "gp_Dir const &", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsCurvatureDefined", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_SLProps::IsCurvatureDefined()", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "IsUmbilic", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_SLProps::IsUmbilic()", 
+          "returnType": "Standard_Boolean", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MaxCurvature", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_SLProps::MaxCurvature()", 
+          "returnType": "Standard_Real", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MinCurvature", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_SLProps::MinCurvature()", 
+          "returnType": "Standard_Real", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "CurvatureDirections", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [
+            {
+              "decl": "gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "MaxD"
+            }, 
+            {
+              "decl": "gp_Dir &", 
+              "type": "gp_Dir", 
+              "name": "MinD"
+            }
+          ], 
+          "key": "GeomLProp_SLProps::CurvatureDirections(gp_Dir, gp_Dir)", 
+          "returnType": "void", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "MeanCurvature", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_SLProps::MeanCurvature()", 
+          "returnType": "Standard_Real", 
+          "throws": true
+        }, 
+        {
+          "declType": "method", 
+          "name": "GaussianCurvature", 
+          "parent": "GeomLProp_SLProps", 
+          "arguments": [], 
+          "key": "GeomLProp_SLProps::GaussianCurvature()", 
+          "returnType": "Standard_Real", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomLProp_SLProps.hxx", 
+        43
+      ], 
+      "key": "GeomLProp_SLProps"
+    }
+  ], 
+  "name": "GeomLProp"
+}
