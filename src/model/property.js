@@ -1,39 +1,32 @@
 const Declaration = require('./declaration.js');
+const Method = require('./method.js');
 const factory = require('../factory.js');
 const nativeAPI = require('../nativeAPI');
-
 
 class PropertyDefinition extends Declaration.Definition {
   constructor(wrapperAPI, parent, conf) {
     super(wrapperAPI, parent, conf);
-    this.getterKey = conf.getterKey;
-    this.setterKey = conf.setterKey;
+    this.getter = factory.createDefinition(wrapperAPI, parent, conf.getter);
+    if (conf.setter)
+      this.setter = factory.createDefinition(wrapperAPI, parent, conf.setter);
     this.readOnly = conf.readOnly;
-    this.nativeGetter = nativeAPI.get(this.getterKey);
-    this.cppGetterName = this.nativeGetter.name;
-    if (!this.readOnly) {
-      this.nativeSetter = nativeAPI.get(this.setterKey);
-      this.cppSetterName = this.nativeSetter.name;
-    }
   }
 
   getType() {
-    return nativeAPI.get(this.getterKey).returnType;
+    return nativeAPI.get(this.getter.methodKey).returnType;
   }
 
   getKeys() {
-    return [this.setterKey, this.getterKey];
+    return [this.setter.methodKey, this.getter.methodKey];
   }
 
   getWrappedDependencies() {
-    if (this.wrapperAPI.isBuiltIn(this.nativeGetter.returnType))
-      return [];
-    var type = this.wrapperAPI.getWrappedType(this.nativeGetter.returnType);
-    return [type];
+    return this.getter.getWrappedDependencies();
   }
 
   canBeWrapped() {
-    return this.getWrappedDependencies().every(dep => Boolean(dep));
+    return this.getter.canBeWrapped() &&
+      (this.readOnly || this.setter.canBeWrapped());
   }
 }
 
@@ -42,13 +35,13 @@ factory.registerDefinition('property', PropertyDefinition);
 class PropertyConfiguration extends Declaration.Configuration {
   constructor(name, getterKey, setterKey) {
     super(name, 'property');
-    this.getterKey = getterKey;
-    this.setterKey = setterKey;
-    this.readOnly = !this.setterKey;
+    this.getter = new Method.Configuration(name, getterKey);
+    this.setter = setterKey ? new Method.Configuration(name, setterKey) : undefined;
+    this.readOnly = !setterKey;
   }
 
   getKeys() {
-    return [this.setterKey, this.getterKey];
+    return [this.setter.methodKey, this.getter.methodKey];
   }
 }
 

@@ -64,6 +64,7 @@ describe('Wrapper definition', () => {
     var propPnt = pointClass.getMemberByName('pnt');
     var ctor = pointClass.getConstructor();
     expect(propX.canBeWrapped()).to.equal(true);
+    console.log(propPnt.getWrappedDependencies())
     expect(propPnt.canBeWrapped()).to.equal(false);
     expect(ctor.overloads[0].canBeWrapped()).to.equal(false);
     expect(ctor.overloads[1].canBeWrapped()).to.equal(true);
