@@ -22,6 +22,6 @@ module.exports = function render(model, renderers) {
   factory.register(renderers);
   var root = factory.create(model);
   var files = {};
-  root.renderMain(null, files);
+  root.renderMain(files);
   return files;
 };

@@ -1,6 +1,4 @@
-'use strict'
 const upperCamelCase = require('uppercamelcase');
-
 
 class Renderer {
   emit(part, context) {
@@ -10,9 +8,9 @@ class Renderer {
       .map(rend => rend[fnName](this, context));
   }
 
-  renderMain(parent, files) {
+  renderMain(files) {
     if (!this.renderers) return;
-    this.renderers.forEach(renderer => renderer.renderMain(this, files));
+    this.renderers.forEach(renderer => renderer.renderMain(files, this));
   }
 }
 

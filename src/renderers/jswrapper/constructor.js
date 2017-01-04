@@ -1,15 +1,10 @@
-'use strict'
 const MethodRenderer = require('./method.js');
 
 class ConstructorRenderer extends MethodRenderer {
-  constructor(def) {
-    super(def);
-  }
-
   renderMemberDeclarations() {
     return `\
-      static bool firstCall; 
-      
+      static bool firstCall;
+
       static NAN_METHOD(New);`;
   }
 
@@ -17,9 +12,9 @@ class ConstructorRenderer extends MethodRenderer {
   renderMemberImplementation(parent) {
     return `\
       ${this.emit('overloadFunctions')}
-      
+
       bool ${parent.def.qualifiedName}::firstCall = true;
-      
+
       NAN_METHOD(${parent.def.qualifiedName}::${this.methodName}) {
         if (!info.IsConstructCall()) {
           // [NOTE] generic recursive call with 'new'
@@ -38,8 +33,10 @@ class ConstructorRenderer extends MethodRenderer {
         ${this.emit('overloadCalls')}
       }`;
   }
-  
-  renderMemberInitialization(parent){
+
+  renderMemberInitialization() {
     return '';
   }
 }
+
+module.exports = ConstructorRenderer;

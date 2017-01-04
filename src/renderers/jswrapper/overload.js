@@ -1,8 +1,11 @@
-'use strict'
 const Renderer = require('../renderer.js');
 const factory = require('../../factory.js');
 
 class OverloadRenderer extends Renderer {
+  static register() {
+    return 'method';
+  }
+
   static overloadName(cls, method, index) {
     return `${cls.parent.name}_${cls.nativeClass.name}_${method.cppName}Overload${index}`;
   }
@@ -19,7 +22,7 @@ class OverloadRenderer extends Renderer {
     var nativeMethod = this.def.nativeMethod;
     var args = nativeMethod.arguments.map((arg, i) => 'arg' + i).join(', ');
     var overloadName = this.overloadName(cls, method, index);
-    
+
     var argValues = nativeMethod.arguments.map((arg, i) =>
       this.fromJsValue(arg.type, 'arg' + i, `info[${i}]`, 'return NULL;')
     ).join('\n  ');
@@ -36,8 +39,8 @@ class OverloadRenderer extends Renderer {
         ${this.RenderNativeCall(cls, args)}
       }`;
   }
-  
-  renderReturnValueAssignment(){
+
+  renderReturnValueAssignment() {
     return this.def.nativeMethod.returType === 'void' ? '' : `\
       auto val = ${this.toJsValue(this.wrapperAPI, this.def.nativeMethod.returnType, 'res')}
       info.GetReturnValue().Set(val);`;
@@ -56,6 +59,10 @@ class OverloadRenderer extends Renderer {
 
 
 class ConstructorOverloadRenderer extends OverloadRenderer {
+  static register() {
+    return 'method';
+  }
+
   callConstructor(args) {
     return `return new ${this.def.nativeMethod.name}(${args});`;
   }
@@ -64,8 +71,4 @@ class ConstructorOverloadRenderer extends OverloadRenderer {
       auto wrapper = new ${cls.name}(res);
       wrapper->Wrap(info.This());`;
   }
-  
 }
-
-
-factory.registerRenderer('overload', OverloadRenderer);

@@ -1,11 +1,10 @@
 const Renderer = require('../renderer.js');
 
-
 class ClassRenderer extends Renderer {
-  constructor(def) {
+  constructor(def, factory) {
     super();
     this.def = def;
-    this.renderers = def.members.map(decl => factory.createRenderer(decl));
+    this.renderers = def.members.map(decl => factory.create(decl));
   }
 
   renderIncludeClass() {

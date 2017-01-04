@@ -1,4 +1,3 @@
-'use strict'
 const Container = require('./container.js');
 const Method = require('./method.js');
 const Property = require('./property.js');
@@ -18,9 +17,7 @@ class ClassDefinition extends Container.Definition {
   }
 
   $hasHandle(nativeCls) {
-    if (nativeCls === undefined) return false;
-    if (nativeCls.bases === undefined) return false;
-    if (nativeCls.bases.length < 1) return false;
+    if (!nativeCls.bases || !nativeCls.bases[0]) return false;
     if (nativeCls.bases[0].name === 'Standard_Transient') return true;
     return this.$hasHandle(nativeAPI.get(nativeCls.bases[0].name));
   }

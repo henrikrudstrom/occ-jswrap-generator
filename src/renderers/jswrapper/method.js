@@ -1,12 +1,11 @@
-'use strict'
 const Renderer = require('../renderer.js');
 
 class MethodRenderer extends Renderer {
-  constructor(def) {
+  constructor(def, factory) {
     super();
     this.def = def;
     this.nativeName = def.overloads[0].nativeMethod.name;
-    this.renderers = def.members.map(decl => this.def.overloads.createRenderer(decl));
+    this.renderers = def.overloads.map(decl => factory.create(decl));
     this.methodName = def.cppName;
   }
 
@@ -14,7 +13,7 @@ class MethodRenderer extends Renderer {
     return `static NAN_METHOD(${this.methodName});`;
   }
 
-  renderBeforeOverloadCalls(){
+  renderBeforeOverloadCalls() {
     return '';
   }
 
@@ -28,7 +27,7 @@ class MethodRenderer extends Renderer {
       }`;
   }
 
-  renderMemberInitialization(parent){
+  renderMemberInitialization(parent) {
     return `Nan::SetPrototypeMethod(ctor, "${this.def.name}", ${this.methodName});`;
   }
 }
