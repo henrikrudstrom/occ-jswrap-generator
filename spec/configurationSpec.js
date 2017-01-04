@@ -92,15 +92,6 @@ describe('Wrapper configuration', () => {
     });
   });
 
-  it('can distinguish if a class is derived from Standard_Transient or not', () => {
-    configure((mod) => {
-      var pln = mod.wrapClass('gp_Pln', 'Pln');
-      expect(pln.hasHandle).to.equal(false);
-      var plane = mod.wrapClass('Geom_Plane', 'Plane');
-      expect(plane.hasHandle).to.equal(true);
-    });
-  });
-
   it('can define wrapped properties', () => {
     configure((mod) => {
       var pnt = mod.wrapClass('gp_Pnt', 'Pnt')

@@ -1,8 +1,10 @@
 const nativeAPI = require('../nativeAPI');
 
+
 class MethodOverloadConfiguration {
   constructor(methodKey) {
     this.methodKey = methodKey;
+    this.declType = 'methodOverload';
   }
 }
 

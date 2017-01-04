@@ -1,8 +1,6 @@
 const Declaration = require('./declaration.js');
 const MethodOverload = require('./methodOverload.js');
-
-const definitions = require('./definitions.js');
-const nativeAPI = require('../nativeAPI');
+const factory = require('../factory.js');
 
 
 class MethodDefinition extends Declaration.Definition {
@@ -32,7 +30,7 @@ class MethodDefinition extends Declaration.Definition {
   }
 }
 
-definitions.register('method', MethodDefinition);
+factory.registerDefinition('method', MethodDefinition);
 
 
 class MethodConfiguration extends Declaration.Configuration {

@@ -3,17 +3,26 @@ const Method = require('./method.js');
 const Property = require('./property.js');
 const Constructor = require('./constructor.js');
 const nativeAPI = require('../nativeAPI.js');
-const definitions = require('./definitions.js');
+const factory = require('../factory.js');
+
 
 class ClassDefinition extends Container.Definition {
   constructor(wrapperAPI, parent, conf) {
     super(wrapperAPI, parent, conf);
     this.classKey = conf.classKey;
     this.declType = 'class';
-    this.hasHandle = conf.hasHandle;
     this.qualifiedName = `${this.parent.name}::${this.name}`;
     this.dotOrArrow = this.hasHandle ? '->' : '.';
     this.nativeClass = nativeAPI.get(this.classKey);
+    this.hasHandle = this.$hasHandle(this.nativeClass);
+  }
+
+  $hasHandle(nativeCls) {
+    if (nativeCls === undefined) return false;
+    if (nativeCls.bases === undefined) return false;
+    if (nativeCls.bases.length < 1) return false;
+    if (nativeCls.bases[0].name === 'Standard_Transient') return true;
+    return this.$hasHandle(nativeAPI.get(nativeCls.bases[0].name));
   }
 
   getWrappedDependencies() {
@@ -44,22 +53,13 @@ class ClassDefinition extends Container.Definition {
   }
 }
 
-definitions.register('class', ClassDefinition);
-
-function hasHandle(nativeCls) {
-  if (nativeCls === undefined) return false;
-  if (nativeCls.bases === undefined) return false;
-  if (nativeCls.bases.length < 1) return false;
-  if (nativeCls.bases[0].name === 'Standard_Transient') return true;
-  return hasHandle(nativeAPI.get(nativeCls.bases[0].name));
-}
+factory.registerDefinition('class', ClassDefinition);
 
 class ClassConfiguration extends Container.Configuration {
   constructor(name, key) {
     super(name);
     this.classKey = key;
     this.declType = 'class';
-    this.hasHandle = hasHandle(nativeAPI.get(key));
   }
 
   $wrapMethod(methodConf) {

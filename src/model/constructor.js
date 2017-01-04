@@ -1,5 +1,6 @@
 const Method = require('./method.js');
-const definitions = require('./definitions.js');
+const factory = require('../factory.js');
+
 
 class ConstructorDefinition extends Method.Definition {
 
@@ -12,7 +13,7 @@ class ConstructorConfiguration extends Method.Configuration {
   }
 }
 
-definitions.register('constructor', ConstructorDefinition);
+factory.registerDefinition('constructor', ConstructorDefinition);
 
 module.exports = {
   Configuration: ConstructorConfiguration,

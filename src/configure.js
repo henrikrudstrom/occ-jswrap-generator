@@ -1,4 +1,4 @@
-const Module = require('./wrapper/module.js');
+const Module = require('./model/module.js');
 const WrappedAPI = require('./wrappedAPI.js');
 const settings = require('./settings.js');
 const path = require('path');

@@ -18,6 +18,15 @@ describe('Wrapper definition', () => {
     expect(geometryClass.getBaseClass()).to.equal(undefined);
   });
 
+  it('can distinguish if a class is derived from Standard_Transient or not', () => {
+    var wrapperAPI = configure((mod) => {
+      mod.wrapClass('gp_Pln', 'Pln');
+      mod.wrapClass('Geom_Plane', 'Plane');
+    });
+    expect(wrapperAPI.getWrapper('Pln').hasHandle).to.equal(false);
+    expect(wrapperAPI.getWrapper('Plane').hasHandle).to.equal(true);
+  });
+
   it('knows if method dependencies are wrapped', () => {
     var wrapperAPI = configure((mod) => {
       mod.name = 'moduleA';

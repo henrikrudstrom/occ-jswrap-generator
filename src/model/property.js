@@ -1,6 +1,7 @@
 const Declaration = require('./declaration.js');
-const definitions = require('./definitions.js');
+const factory = require('../factory.js');
 const nativeAPI = require('../nativeAPI');
+
 
 class PropertyDefinition extends Declaration.Definition {
   constructor(wrapperAPI, parent, conf) {
@@ -37,7 +38,7 @@ class PropertyDefinition extends Declaration.Definition {
   }
 }
 
-definitions.register('property', PropertyDefinition);
+factory.registerDefinition('property', PropertyDefinition);
 
 class PropertyConfiguration extends Declaration.Configuration {
   constructor(name, getterKey, setterKey) {

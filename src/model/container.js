@@ -1,6 +1,7 @@
 const createRegexp = require('./../util.js').createRegexp;
 const Declaration = require('./declaration.js');
-const definitions = require('./definitions.js');
+const factory = require('../factory.js');
+
 
 function matchDeclByKey(exp) {
   return decl => decl.getKeys().every(k => exp.test(k));
@@ -43,7 +44,7 @@ var containerMixin = Base => class extends Base {
 class ContainerDefinition extends containerMixin(Declaration.Definition) {
   constructor(wrapperAPI, parent, def) {
     super(wrapperAPI, parent, def);
-    this.declarations = def.declarations.map(decl => definitions.create(wrapperAPI, this, decl));
+    this.declarations = def.declarations.map(decl => factory.createDefinition(wrapperAPI, this, decl));
   }
 }
 
