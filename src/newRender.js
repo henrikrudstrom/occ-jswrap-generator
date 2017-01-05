@@ -1,4 +1,4 @@
-const RendererFactory = require('./factory.js').RendererTypemap;
+const RendererFactory = require('./factory.js').Renderer;
 
 module.exports = function render(model, renderers) {
   var factory = new RendererFactory(renderers);

@@ -38,3 +38,6 @@ ${this.emit('CMake').join('\n\n')}
   `;
   }
 }
+WrapperRenderer.prototype.type = 'wrapper';
+
+module.exports = WrapperRenderer;

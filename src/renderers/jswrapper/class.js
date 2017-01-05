@@ -139,5 +139,5 @@ class ClassRenderer extends Renderer {
     }`;
   }
 }
-
+ClassRenderer.prototype.type = 'class';
 module.exports.ClassRenderer = ClassRenderer;

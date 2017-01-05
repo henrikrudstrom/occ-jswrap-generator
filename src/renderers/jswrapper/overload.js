@@ -56,7 +56,7 @@ class OverloadRenderer extends Renderer {
       }`;
   }
 }
-
+OverloadRenderer.prototype.type = 'method';
 
 class ConstructorOverloadRenderer extends OverloadRenderer {
   static register() {
@@ -72,3 +72,9 @@ class ConstructorOverloadRenderer extends OverloadRenderer {
       wrapper->Wrap(info.This());`;
   }
 }
+ConstructorOverloadRenderer.prototype.type = 'constructor';
+
+module.exports = {
+  ConstructorOverload: ConstructorOverloadRenderer,
+  Overload: OverloadRenderer
+};

@@ -35,3 +35,5 @@ target_link_libraries(${mod.name} \${CMAKE_JS_LIB})
 target_link_libraries(${mod.name} common TKernel TKG2d TKG3d TKGeomBase TKMath)`;
   }
 }
+ModuleRenderer.prototype.type = 'module';
+module.exports = ModuleRenderer;

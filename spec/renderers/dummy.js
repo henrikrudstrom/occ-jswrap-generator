@@ -1,14 +1,11 @@
 const Renderer = require('../../src/renderers/renderer.js');
 
 class WrapperRenderer extends Renderer {
-  constructor(def, factory) {
+  constructor(def, factory, typemap) {
     super();
     this.def = def;
-    this.renderers = def.members.map(mod => factory.create(mod, factory));
-  }
-
-  static register() {
-    return 'wrapper';
+    this.typemap = typemap;
+    this.renderers = def.members.map(mod => factory.create(mod, typemap));
   }
 
   renderMain(files, parent) {
@@ -18,14 +15,10 @@ class WrapperRenderer extends Renderer {
 }
 
 class ModuleRenderer extends Renderer {
-  constructor(def, factory) {
+  constructor(def, factory, typemap) {
     super();
     this.def = def;
-    this.renderers = def.members.map(mod => factory.create(mod, factory));
-  }
-
-  static register() {
-    return 'module';
+    this.renderers = def.members.map(mod => factory.create(mod, typemap));
   }
 
   renderMain(files, parent) {
@@ -38,18 +31,14 @@ init {
 }
 
 class ClassRenderer extends Renderer {
-  constructor(def, factory) {
+  constructor(def, factory, typemap) {
     super();
     this.def = def;
-    this.renderers = def.members.map(mod => factory.create(mod, factory));
+    this.renderers = def.members.map(mod => factory.create(mod, typemap));
   }
 
   static register() {
     return 'class';
-  }
-
-  renderModuleInit() {
-    return `${this.def.name}::init()`;
   }
 
   renderMain(files, parent) {
@@ -59,6 +48,10 @@ implementation {
   ${this.emit('memberImpl').join('\n')}
 }`;
   }
+
+  renderModuleInit() {
+    return `${this.def.name}::init()`;
+  }
 }
 
 class MethodRenderer extends Renderer {
@@ -67,13 +60,23 @@ class MethodRenderer extends Renderer {
     this.def = def;
   }
 
-  static register() {
-    return 'method';
-  }
-
   renderMemberImpl(parent) {
     return `${parent.def.name}::${this.def.name} { ... }`;
   }
 }
 
-module.exports = [WrapperRenderer, ModuleRenderer, ClassRenderer, MethodRenderer];
+class BuiltinRenderer extends Renderer {
+  constructor(def) {
+    super();
+    this.def = def;
+  }
+}
+
+WrapperRenderer.prototype.type = 'wrapper';
+ModuleRenderer.prototype.type = 'module';
+ClassRenderer.prototype.type = 'class';
+MethodRenderer.prototype.type = 'method';
+BuiltinRenderer.prototype.type = 'builtin';
+
+module.exports = [WrapperRenderer, ModuleRenderer,
+  ClassRenderer, MethodRenderer, BuiltinRenderer];

@@ -31,3 +31,5 @@ class MethodRenderer extends Renderer {
     return `Nan::SetPrototypeMethod(ctor, "${this.def.name}", ${this.methodName});`;
   }
 }
+MethodRenderer.prototype.type = 'method';
+module.exports = MethodRenderer;

@@ -38,5 +38,5 @@ class ConstructorRenderer extends MethodRenderer {
     return '';
   }
 }
-
+ConstructorRenderer.prototype.type = 'constructor';
 module.exports = ConstructorRenderer;
