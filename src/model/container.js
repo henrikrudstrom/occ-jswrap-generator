@@ -1,7 +1,5 @@
-'use strict'
 const createRegexp = require('./../util.js').createRegexp;
 const Declaration = require('./declaration.js');
-const factory = require('../factory.js');
 
 
 function matchDeclByKey(exp) {
@@ -43,10 +41,10 @@ var containerMixin = Base => class extends Base {
 };
 
 class ContainerDefinition extends containerMixin(Declaration.Definition) {
-  constructor(wrapperAPI, parent, def) {
-    super(wrapperAPI, parent, def);
-    this.members = def.members.map(decl =>
-      factory.createDefinition(wrapperAPI, this, decl));
+  constructor(conf, parent, factory, typemap) {
+    super(conf, parent, factory, typemap);
+    this.members = conf.members.map(decl =>
+      factory.createDefinition(decl, parent, typemap));
   }
 }
 

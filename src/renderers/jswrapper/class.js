@@ -1,10 +1,10 @@
 const Renderer = require('../renderer.js');
 
 class ClassRenderer extends Renderer {
-  constructor(def, factory) {
+  constructor(def, factory, typemap) {
     super();
     this.def = def;
-    this.renderers = def.members.map(decl => factory.create(decl));
+    this.renderers = def.members.map(decl => factory.create(decl, typemap));
   }
 
   renderIncludeClass() {
@@ -19,7 +19,7 @@ class ClassRenderer extends Renderer {
     var name = this.def.name;
     var base = this.def.getWrappedBase();
     var baseClass = base || 'Nan::ObjectWrap';
-    var nativeName = this.def.classKey;
+    var nativeName = this.def.nativeName;
 
     var includes = this.def.getWrappedDependencies()
       .map(dep => `#include <${dep.parent.name}/${dep.name}.h>`)
@@ -44,7 +44,7 @@ class ClassRenderer extends Renderer {
       #include <common/WrapperClassTraits.h>
       #include <common/DynamicCastMap.h>
 
-      #include <${this.def.classKey}.hxx>
+      #include <${this.def.nativeName}.hxx>
 
       ${includes}
 
@@ -77,7 +77,7 @@ class ClassRenderer extends Renderer {
   renderImplementationFile() {
     var name = this.def.name;
     var qualifiedName = this.def.qualifiedName;
-    var nativeName = this.def.classKey;
+    var nativeName = this.def.nativeName;
     var hasHandle = this.def.hasHandle;
     var base = this.def.getBaseClass();
 
@@ -141,5 +141,3 @@ class ClassRenderer extends Renderer {
 }
 
 module.exports.ClassRenderer = ClassRenderer;
-module.exports.register =
-factory.registerRenderer('class', ClassRenderer);

@@ -1,16 +1,12 @@
 const Container = require('./container.js');
 const Class = require('./class.js');
 const nativeAPI = require('../nativeAPI.js');
-const factory = require('../factory.js');
-
 
 class ModuleDefinition extends Container.Definition {
-  constructor(wrapperAPI, parent, conf) {
-    super(wrapperAPI, parent, conf);
+  constructor(conf, parent, factory, typemap) {
+    super(conf, parent, factory, typemap);
   }
 }
-
-factory.registerDefinition('module', ModuleDefinition);
 
 class ModuleConfiguration extends Container.Configuration {
   constructor(name) {

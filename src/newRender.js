@@ -1,26 +1,33 @@
-const fs = require('fs');
-const glob = require('glob');
+const RendererTypemap = require('./typemap.js').RendererTypemap;
 
-class RendererFactory {
-  constructor() {
-    console.log("hmm")
-    this.renderers = {};
+class Factory {
+  constructor(constructors) {
+    this.constructors = {};
+    constructors.forEach((ctor) => {
+      this.constructors[ctor.factoryKey()] = ctor;
+    });
   }
-  register(renderer) {
-    if (Array.isArray(renderer))
-      renderer.forEach(this.register.bind(this));
-    else
-      this.renderers[renderer.register()] = renderer;
+}
+
+class RendererFactory extends Factory {
+  create(def, typemap) {
+    var renderer = new this.constructors[def.declType](def, this, typemap);
+    typemap.populate(renderer);
   }
-  create(def) {
-    return new this.renderers[def.declType](def, this);
+}
+
+class DefinitionFactory extends Factory {
+  create(def, parent, typemap) {
+    var renderer = new this.constructors[def.declType](def, parent, this, typemap);
+    typemap.populate(renderer);
   }
 }
 
 module.exports = function render(model, renderers) {
-  var factory = new RendererFactory();
-  factory.register(renderers);
-  var root = factory.create(model);
+  var typemap = new RendererTypemap();
+  var factory = new RendererFactory(renderers);
+  var root = factory.create(model, typemap);
+
   var files = {};
   root.renderMain(files);
   return files;

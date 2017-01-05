@@ -1,10 +1,10 @@
 const Renderer = require('../renderer.js');
 
 class WrapperRenderer extends Renderer {
-  constructor(def, factory) {
+  constructor(def, factory, typemap) {
     super();
     this.def = def;
-    this.renderers = def.members.map(mod => factory.create(mod, factory));
+    this.renderers = def.members.map(mod => factory.create(mod, typemap));
   }
 
   static register() {

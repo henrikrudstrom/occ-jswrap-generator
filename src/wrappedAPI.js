@@ -19,20 +19,20 @@ class WrappedAPI {
     });
 
     this.builtins = [
-      { name: 'double', classKey: 'Standard_Real' },
-      { name: 'int', classKey: 'Standard_Integer' },
-      { name: 'bool', classKey: 'Standard_Boolean' }
+      { name: 'double', nativeName: 'Standard_Real' },
+      { name: 'int', nativeName: 'Standard_Integer' },
+      { name: 'bool', nativeName: 'Standard_Boolean' }
     ];
     this.builtins.forEach((builtin) => {
-      this.wrapped[builtin.classKey] = builtin.name;
-      this.native[builtin.name] = builtin.classKey;
+      this.wrapped[builtin.nativeName] = builtin.name;
+      this.native[builtin.name] = builtin.nativeName;
       this.types[builtin.name] = builtin;
     });
   }
 
   isBuiltIn(type) {
     if (type.name) type = type.name;
-    return this.builtins.some(b => b.name === type || b.classKey === type);
+    return this.builtins.some(b => b.name === type || b.nativeName === type);
   }
 
   getWrapper(name) {

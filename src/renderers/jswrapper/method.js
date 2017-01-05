@@ -1,11 +1,11 @@
 const Renderer = require('../renderer.js');
 
 class MethodRenderer extends Renderer {
-  constructor(def, factory) {
+  constructor(def, factory, typemap) {
     super();
     this.def = def;
     this.nativeName = def.overloads[0].nativeMethod.name;
-    this.renderers = def.overloads.map(decl => factory.create(decl));
+    this.renderers = def.overloads.map(decl => factory.create(decl, typemap));
     this.methodName = def.cppName;
   }
 

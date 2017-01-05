@@ -1,11 +1,27 @@
-const definitions = {};
+class Factory {
+  constructor(constructors) {
+    this.constructors = {};
+    constructors.forEach((ctor) => {
+      this.constructors[ctor.factoryKey()] = ctor;
+    });
+  }
+}
 
-module.exports.registerDefinition = function registerDefinition(type, fn) {
-  definitions[type] = fn;
-};
+class RendererFactory extends Factory {
+  create(def, typemap) {
+    var renderer = new this.constructors[def.declType](def, this, typemap);
+    typemap.populate(renderer);
+  }
+}
 
-module.exports.createDefinition = function createDefinition(wrappedAPI, parent, conf) {
-  var Constructor = definitions[conf.declType];
-  if (Constructor === undefined) throw new Error(`No contructor registred for ${conf.declType}`);
-  return new Constructor(wrappedAPI, parent, conf);
+class DefinitionFactory extends Factory {
+  create(def, parent, typemap) {
+    var renderer = new this.constructors[def.declType](def, parent, this, typemap);
+    typemap.populate(renderer);
+  }
+}
+
+module.exports = {
+  Definition: DefinitionFactory,
+  Renderer: RendererFactory
 };

@@ -20,17 +20,17 @@ function writeSource(mod, filename, src) {
   write(path.join(settings.paths.src, mod), filename, src);
 }
 
-function renderWrapper(wrapperAPI) {
+function renderWrapper(typemap) {
   var headerFiles = {};
   var sourceFiles = {};
-  wrapperAPI.modules.forEach((mod) => {
-    writeSource(mod.name, mod.name + '.cc', renderModuleSource(wrapperAPI, mod));
+  typemap.modules.forEach((mod) => {
+    writeSource(mod.name, mod.name + '.cc', renderModuleSource(typemap, mod));
     mod.members.forEach((cls) => {
-      writeHeader(mod.name, cls.name + '.h', renderClassHeader(wrapperAPI, cls));
-      writeSource(mod.name, cls.name + '.cc', renderClassSource(wrapperAPI, cls));
+      writeHeader(mod.name, cls.name + '.h', renderClassHeader(typemap, cls));
+      writeSource(mod.name, cls.name + '.cc', renderClassSource(typemap, cls));
     });
   });
-  write('.', 'CMakeLists.txt', renderCMake(wrapperAPI));
+  write('.', 'CMakeLists.txt', renderCMake(typemap));
   return { headerFiles, sourceFiles };
 }
 

@@ -3,17 +3,16 @@ const Method = require('./method.js');
 const Property = require('./property.js');
 const Constructor = require('./constructor.js');
 const nativeAPI = require('../nativeAPI.js');
-const factory = require('../factory.js');
-
 
 class ClassDefinition extends Container.Definition {
-  constructor(wrapperAPI, parent, conf) {
-    super(wrapperAPI, parent, conf);
-    this.classKey = conf.classKey;
+  constructor(conf, parent, factory, typemap) {
+    super(conf, parent, factory, typemap);
+    this.nativeName = conf.nativeName;
     this.qualifiedName = `${this.parent.name}::${this.name}`;
     this.dotOrArrow = this.hasHandle ? '->' : '.';
-    this.nativeClass = nativeAPI.get(this.classKey);
+    this.nativeClass = nativeAPI.get(this.nativeName);
     this.hasHandle = this.$hasHandle(this.nativeClass);
+    this.isType = true;
   }
 
   $hasHandle(nativeCls) {
@@ -38,11 +37,11 @@ class ClassDefinition extends Container.Definition {
   }
 
   getBaseClass() {
-    return this.wrapperAPI.getWrappedType(this.getNativeBaseClass());
+    return this.typemap.getWrappedType(this.getNativeBaseClass());
   }
 
   getKeys() {
-    return [this.classKey];
+    return [this.nativeName];
   }
 
   getConstructor() {
@@ -55,7 +54,8 @@ factory.registerDefinition('class', ClassDefinition);
 class ClassConfiguration extends Container.Configuration {
   constructor(name, key) {
     super(name, 'class');
-    this.classKey = key;
+    this.nativeName = key;
+    this.isType = true;
   }
 
   $wrapMethod(methodConf) {
@@ -73,7 +73,7 @@ class ClassConfiguration extends Container.Configuration {
     if (typeof (renameFunc) === 'string')
       rename = () => renameFunc;
 
-    query = `${this.classKey}::${query}`;
+    query = `${this.nativeName}::${query}`;
     var methods = nativeAPI.find(query, 'method');
     methods.forEach(method =>
       this.$wrapMethod(new Method.Configuration(rename(method.name), method.key)));
@@ -87,14 +87,14 @@ class ClassConfiguration extends Container.Configuration {
       setterKey = undefined;
     }
 
-    var getterQuery = `${this.classKey}::${getterKey}`;
+    var getterQuery = `${this.nativeName}::${getterKey}`;
     var getters = nativeAPI.find(getterQuery, 'method');
     if (getters.length > 1) throw new Error('multiple getters found');
     getterKey = getters[0].key;
     this.excludeByKey(getterKey);
 
     if (setterKey !== undefined) {
-      var setterQuery = `${this.classKey}::${setterKey}`;
+      var setterQuery = `${this.nativeName}::${setterKey}`;
       var setters = nativeAPI.find(setterQuery, 'method');
       if (setters.length > 1) throw new Error('multiple setters found');
       setterKey = setters[0].key;
@@ -106,7 +106,7 @@ class ClassConfiguration extends Container.Configuration {
   }
 
   wrapConstructor(signature) {
-    var ctorQuery = `${this.classKey}::${this.classKey}(${signature})`;
+    var ctorQuery = `${this.nativeName}::${this.nativeName}(${signature})`;
     var ctors = nativeAPI.find(ctorQuery, 'constructor')
       .filter(ctor => ctor.copyConstructor !== true);
     ctors.forEach(method =>
@@ -115,7 +115,7 @@ class ClassConfiguration extends Container.Configuration {
   }
 
   getKeys() {
-    return [this.classKey];
+    return [this.nativeName];
   }
 }
 

@@ -1,8 +1,8 @@
 const Container = require('./container.js');
 
 class WrapperDefinition extends Container.Definition {
-  constructor(wrapperAPI, parent, conf) {
-    super(wrapperAPI, parent, conf);
+  constructor(conf, parent, factory, typemap) {
+    super(conf, parent, factory, typemap);
   }
 }
 

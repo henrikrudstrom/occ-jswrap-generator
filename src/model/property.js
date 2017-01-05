@@ -1,14 +1,13 @@
 const Declaration = require('./declaration.js');
 const Method = require('./method.js');
-const factory = require('../factory.js');
 const nativeAPI = require('../nativeAPI');
 
 class PropertyDefinition extends Declaration.Definition {
-  constructor(wrapperAPI, parent, conf) {
-    super(wrapperAPI, parent, conf);
-    this.getter = factory.createDefinition(wrapperAPI, parent, conf.getter);
+  constructor(conf, parent, factory, typemap) {
+    super(conf, parent, factory, typemap);
+    this.getter = factory.createDefinition(conf.getter, parent, typemap);
     if (conf.setter)
-      this.setter = factory.createDefinition(wrapperAPI, parent, conf.setter);
+      this.setter = factory.createDefinition(conf.setter, parent, typemap);
     this.readOnly = conf.readOnly;
   }
 
@@ -29,8 +28,6 @@ class PropertyDefinition extends Declaration.Definition {
       (this.readOnly || this.setter.canBeWrapped());
   }
 }
-
-factory.registerDefinition('property', PropertyDefinition);
 
 class PropertyConfiguration extends Declaration.Configuration {
   constructor(name, getterKey, setterKey) {

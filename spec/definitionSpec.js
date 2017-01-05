@@ -3,6 +3,7 @@ const configure = require('../src/configure.js');
 const util = require('../src/util.js');
 const WrappedAPI = require('../src/wrappedAPI.js');
 const WrapperDefinition = require('../src/model/wrapper.js').Definition;
+const Typemap = require('../src/typemap.js').DefinitionTypemap;
 
 const expect = chai.expect;
 chai.use(require('chai-things'));
@@ -14,7 +15,7 @@ describe('Wrapper definition', () => {
       mod.wrapClass('Geom_Point', 'Point');
       mod.wrapClass('Geom_Geometry', 'Geometry');
     });
-    var def = new WrapperDefinition(new WrappedAPI(conf), null, conf).members[0];
+    var def = new WrapperDefinition(new Typemap(conf), null, conf).members[0];
     var pointClass = def.getMemberByName('Point');
     var geometryClass = def.getMemberByName('Geometry');
     expect(pointClass.getBaseClass().name).to.equal(geometryClass.name);
@@ -26,7 +27,7 @@ describe('Wrapper definition', () => {
       mod.wrapClass('gp_Pln', 'Pln');
       mod.wrapClass('Geom_Plane', 'Plane');
     });
-    var def = new WrapperDefinition(new WrappedAPI(conf), null, conf).members[0];
+    var def = new WrapperDefinition(new Typemap(conf), null, conf).members[0];
     expect(def.getMemberByName('Pln').hasHandle).to.equal(false);
     expect(def.getMemberByName('Plane').hasHandle).to.equal(true);
   });
@@ -40,7 +41,7 @@ describe('Wrapper definition', () => {
         .wrapMethod('Pnt', 'pnt')
         .wrapMethod('Transform', 'transform');
     });
-    var def = new WrapperDefinition(new WrappedAPI(conf), null, conf).members[0];
+    var def = new WrapperDefinition(new Typemap(conf), null, conf).members[0];
     var pointClass = def.getMemberByName('CartesianPoint');
     var methodX = pointClass.getMemberByName('x');
     var methodPnt = pointClass.getMemberByName('pnt');
@@ -58,7 +59,7 @@ describe('Wrapper definition', () => {
         .wrapProperty('Pnt', 'pnt')
         .wrapConstructor('*');
     });
-    var def = new WrapperDefinition(new WrappedAPI(conf), null, conf).members[0];
+    var def = new WrapperDefinition(new Typemap(conf), null, conf).members[0];
     var pointClass = def.getMemberByName('CartesianPoint');
     var propX = pointClass.getMemberByName('x');
     var propPnt = pointClass.getMemberByName('pnt');
@@ -83,7 +84,7 @@ describe('Wrapper definition', () => {
         .wrapProperty('Pnt', 'pnt')
         .wrapMethod('Transform', 'transform');
     });
-    var def = new WrapperDefinition(new WrappedAPI(conf), null, conf).members[0];
+    var def = new WrapperDefinition(new Typemap(conf), null, conf).members[0];
     var pointClass = def.getMemberByName('CartesianPoint');
     var deps = pointClass.getWrappedDependencies().map(dep => dep.name);
     expect(deps).to.include('Pnt');
@@ -98,7 +99,7 @@ describe('Wrapper definition', () => {
         .wrapMethod('SetX', 'x')
         .wrapConstructor('Standard_Real, Standard_Real, Standard_Real');
     });
-    var def = new WrapperDefinition(new WrappedAPI(conf), null, conf).members[0];
+    var def = new WrapperDefinition(new Typemap(conf), null, conf).members[0];
     var pnt = def.getMemberByName('Pnt');
     var ctor = pnt.getConstructor();
     expect(ctor).to.not.equal(undefined);

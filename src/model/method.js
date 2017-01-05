@@ -1,13 +1,12 @@
 const Declaration = require('./declaration.js');
 const MethodOverload = require('./methodOverload.js');
-const factory = require('../factory.js');
 
 
 class MethodDefinition extends Declaration.Definition {
-  constructor(wrapperAPI, parent, conf) {
-    super(wrapperAPI, parent, conf);
+  constructor(conf, parent, factory, typemap) {
+    super(conf, parent, factory, typemap);
     this.overloads = conf.overloads.map(
-      overload => factory.createDefinition(wrapperAPI, this, overload)
+      overload => factory.createDefinition(overload, parent, typemap)
     );
     this.declType = conf.declType;
     this.cppName = this.overloads[0].nativeMethod.name;
@@ -23,10 +22,6 @@ class MethodDefinition extends Declaration.Definition {
 
   canBeWrapped() {
     return this.overloads.some(overload => overload.canBeWrapped());
-  }
-
-  getKeys() {
-    return [this.methodKey];
   }
 }
 

@@ -4,13 +4,13 @@ function getWrappedObject(cls, wrapperVar) {
   return `${wrapperVar}->wrappedObject`;
 }
 
-function toJsValue(wrapperAPI, nativeType, variable) {
+function toJsValue(typemap, nativeType, variable) {
   if (nativeType === 'Standard_Real' ||
     nativeType === 'Standard_Boolean' ||
     nativeType === 'Standard_Boolean')
     return `Nan::New(${variable});`;
 
-  var wrappedType = wrapperAPI.getWrappedType(nativeType);
+  var wrappedType = typemap.getWrappedType(nativeType);
 
   if (wrappedType === undefined)
     throw new Error(`dont know how to convert ${nativeType} to js value`);
@@ -18,13 +18,13 @@ function toJsValue(wrapperAPI, nativeType, variable) {
   return `${wrappedType.qualifiedName}::BuildWrapper((void *) &${variable});`;
 }
 
-function fromJsValue(wrapperAPI, nativeType, resVar, inVar, failClause) {
-  var wrappedType = wrapperAPI.getWrappedType(nativeType);
+function fromJsValue(typemap, nativeType, resVar, inVar, failClause) {
+  var wrappedType = typemap.getWrappedType(nativeType);
 
   if (wrappedType === undefined)
     throw new Error(`dont know how to convert from js value to '${nativeType}'`);
 
-  var type = wrappedType.classKey;
+  var type = wrappedType.nativeName;
 
   var typeDecl = type;
   var convertFunction = `Util::ConvertWrappedValue<${type}>`;
@@ -41,11 +41,11 @@ if(!${convertFunction}(${inVar}, ${resVar})){
 }
 
 
-function renderOverload(wrapperAPI, cls, method, overload, index) {
+function renderOverload(typemap, cls, method, overload, index) {
   var nativeMethod = overload.nativeMethod;
 
   var argValues = nativeMethod.arguments.map((arg, i) =>
-    fromJsValue(wrapperAPI, arg.type, 'arg' + i, `info[${i}]`, 'return false;')
+    fromJsValue(typemap, arg.type, 'arg' + i, `info[${i}]`, 'return false;')
   ).join('\n  ');
 
   var argNames = nativeMethod.arguments.map((arg, i) => 'arg' + i).join(', ');
@@ -53,7 +53,7 @@ function renderOverload(wrapperAPI, cls, method, overload, index) {
   var isVoid = nativeMethod.returnType === 'void';
   var resultVariableOrNot = isVoid ? '' : 'auto result =';
   var assignReturnValue = isVoid ? '' : `\
-  auto val = ${toJsValue(wrapperAPI, nativeMethod.returnType, 'result')}
+  auto val = ${toJsValue(typemap, nativeMethod.returnType, 'result')}
   info.GetReturnValue().Set(val);`;
 
   return `\
@@ -72,27 +72,27 @@ bool ${method.name}Overload${index}(const Nan::FunctionCallbackInfo<v8::Value>& 
 }`;
 }
 
-function renderConstructorOverload(wrapperAPI, cls, overload, index) {
+function renderConstructorOverload(typemap, cls, overload, index) {
   var nativeMethod = overload.nativeMethod;
 
   var argValues = nativeMethod.arguments.map((arg, i) =>
-    fromJsValue(wrapperAPI, arg.type, 'arg' + i, `info[${i}]`, 'return NULL;')
+    fromJsValue(typemap, arg.type, 'arg' + i, `info[${i}]`, 'return NULL;')
   ).join('\n  ');
 
   var argNames = nativeMethod.arguments.map((arg, i) => 'arg' + i).join(', ');
 
   return `\
-${cls.classKey} * ${cls.qualifiedName.replace('::', '_')}_ConstructorOverload${index}(const Nan::FunctionCallbackInfo<v8::Value>& info){
+${cls.nativeName} * ${cls.qualifiedName.replace('::', '_')}_ConstructorOverload${index}(const Nan::FunctionCallbackInfo<v8::Value>& info){
   if(info.Length() != ${nativeMethod.arguments.length}) return NULL;
 
   ${argValues}
 
-  return new ${cls.classKey}(${argNames});
+  return new ${cls.nativeName}(${argNames});
 }`;
 }
 
 
-function renderConstructor(wrapperAPI, cls) {
+function renderConstructor(typemap, cls) {
   var ctor = cls.getConstructor();
   if (ctor === undefined)
     return `NAN_METHOD(${cls.qualifiedName}::New) { }`;
@@ -100,7 +100,7 @@ function renderConstructor(wrapperAPI, cls) {
   var overloadFunctions = ctor.overloads
     .filter(overload => overload.canBeWrapped())
     .map((overload, index) =>
-      renderConstructorOverload(wrapperAPI, cls, overload, index)
+      renderConstructorOverload(typemap, cls, overload, index)
     ).join('\n\n');
 
   var overloadCalls = ctor.overloads
@@ -133,19 +133,19 @@ NAN_METHOD(${cls.qualifiedName}::New) {
       return;
   }
 
-  ${cls.classKey} * res;
+  ${cls.nativeName} * res;
 
   ${overloadCalls}
 }`;
 }
 
 
-function renderMethod(wrapperAPI, cls, method) {
+function renderMethod(typemap, cls, method) {
   if (!method.canBeWrapped()) return `// method ${method.name} cannot be wrapped`;
   var overloadFunctions = method.overloads
     .filter(overload => overload.canBeWrapped())
     .map((overload, index) =>
-      renderOverload(wrapperAPI, cls, method, overload, index)
+      renderOverload(typemap, cls, method, overload, index)
     ).join('\n\n');
 
   var overloadCalls = method.overloads
@@ -162,28 +162,28 @@ NAN_METHOD(${cls.qualifiedName}::${method.cppName}) {
 }
 
 
-function renderGetter(wrapperAPI, cls, property) {
+function renderGetter(typemap, cls, property) {
   return `\
 NAN_GETTER(${cls.qualifiedName}::${property.cppGetterName}) {
   auto wrapped = Nan::ObjectWrap::Unwrap<${cls.qualifiedName}>(info.Holder());
   auto obj = ${getWrappedObject(cls, 'wrapped')};
   auto result = obj${cls.dotOrArrow}${property.cppGetterName}();
-  auto val = ${toJsValue(wrapperAPI, property.getType(), 'result')}
+  auto val = ${toJsValue(typemap, property.getType(), 'result')}
   info.GetReturnValue().Set(val);
 }`;
 }
 
-function renderSetter(wrapperAPI, cls, property) {
+function renderSetter(typemap, cls, property) {
   return `\
 NAN_SETTER(${cls.qualifiedName}::${property.cppSetterName}) {
   auto wrapper = Nan::ObjectWrap::Unwrap<${cls.qualifiedName}>(info.Holder());
   // [NOTE] 'value' is defined argument in 'NAN_SETTER'
-  ${fromJsValue(wrapperAPI, property.getType(), 'arg1', 'value', 'return;')}
+  ${fromJsValue(typemap, property.getType(), 'arg1', 'value', 'return;')}
   ${getWrappedObject(cls, 'wrapper')}${cls.dotOrArrow}${property.cppSetterName}(arg1);
 }`;
 }
 
-function renderInit(wrapperAPI, cls) {
+function renderInit(typemap, cls) {
   var baseClass = cls.getBaseClass();
   var inherit = baseClass ? `ctor->Inherit(Nan::New(${baseClass.qualifiedName}::constructor));` : '';
 
@@ -226,22 +226,22 @@ NAN_MODULE_INIT(${cls.qualifiedName}::Init) {
 `;
 }
 
-function renderClassSource(wrapperAPI, cls) {
-  var nativeClassType = cls.hasHandle ? `opencascade::handle<${cls.classKey}>` : cls.classKey;
+function renderClassSource(typemap, cls) {
+  var nativeClassType = cls.hasHandle ? `opencascade::handle<${cls.nativeName}>` : cls.nativeName;
 
   var getters = cls.members
     .filter(decl => decl.declType === 'property')
-    .map(decl => renderGetter(wrapperAPI, cls, decl))
+    .map(decl => renderGetter(typemap, cls, decl))
     .join('\n\n');
 
   var setters = cls.members
     .filter(decl => decl.declType === 'property')
-    .map(decl => renderSetter(wrapperAPI, cls, decl))
+    .map(decl => renderSetter(typemap, cls, decl))
     .join('\n\n');
 
   var methods = cls.members
     .filter(decl => decl.declType === 'method')
-    .map(decl => renderMethod(wrapperAPI, cls, decl))
+    .map(decl => renderMethod(typemap, cls, decl))
     .join('\n\n');
 
   var base = cls.getBaseClass();
@@ -249,14 +249,14 @@ function renderClassSource(wrapperAPI, cls) {
 
   var emptyCtor = `${ctorName}() {}`;
 
-  var ptrCtorArgs = `${cls.classKey} * wrapObj`;
+  var ptrCtorArgs = `${cls.nativeName} * wrapObj`;
   var ptrCtorInit = `${base ? base.name : 'wrappedObject'}(${!cls.hasHandle && !cls.hasHandle ? '*' : ''}wrapObj)`;
   var ptrCtor = `${ctorName}(${ptrCtorArgs}) : ${ptrCtorInit} { }`;
 
   var valueCtorInit = `${base ? base.name : 'wrappedObject'}(wrapObj)`;
-  var valueCtor = `${ctorName}(${cls.classKey} wrapObj) : ${valueCtorInit} { }`;
+  var valueCtor = `${ctorName}(${cls.nativeName} wrapObj) : ${valueCtorInit} { }`;
   if (cls.hasHandle) {
-    valueCtor = `${ctorName}(opencascade::handle<${cls.classKey}> wrapObj) : ${valueCtorInit} { }`;
+    valueCtor = `${ctorName}(opencascade::handle<${cls.nativeName}> wrapObj) : ${valueCtorInit} { }`;
   }
 
   return `\
@@ -269,7 +269,7 @@ ${emptyCtor}
 ${ptrCtor}
 ${valueCtor}
 
-${renderConstructor(wrapperAPI, cls)}
+${renderConstructor(typemap, cls)}
 
 v8::Local<v8::Object> ${cls.qualifiedName}::BuildWrapper(void * res){
   auto obj = new ${cls.name}(*static_cast<${nativeClassType} *>(res));
@@ -284,7 +284,7 @@ ${setters}
 
 ${methods}
 
-${renderInit(wrapperAPI, cls)}
+${renderInit(typemap, cls)}
 
 `;
 }

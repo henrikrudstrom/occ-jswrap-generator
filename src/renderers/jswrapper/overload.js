@@ -42,7 +42,7 @@ class OverloadRenderer extends Renderer {
 
   renderReturnValueAssignment() {
     return this.def.nativeMethod.returType === 'void' ? '' : `\
-      auto val = ${this.toJsValue(this.wrapperAPI, this.def.nativeMethod.returnType, 'res')}
+      auto val = ${this.toJsValue(this.typemap, this.def.nativeMethod.returnType, 'res')}
       info.GetReturnValue().Set(val);`;
   }
 

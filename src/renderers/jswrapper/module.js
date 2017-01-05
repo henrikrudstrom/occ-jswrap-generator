@@ -1,13 +1,17 @@
 const Renderer = require('../renderer.js');
 
 class ModuleRenderer extends Renderer {
-  constructor(def, factory) {
+  constructor(def, factory, typemap) {
     super();
     this.def = def;
-    this.renderers = def.members.map(decl => factory.create(decl));
+    this.renderers = def.members.map(decl => factory.create(decl, typemap));
   }
 
-  renderMain(parent, files) {
+  renderMain(files, parent){
+
+  }
+
+  renderModuleImpl() {
     return `\
   #include <nan.h>
   ${this.emit('includeClass').join('\n')}

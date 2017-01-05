@@ -1,9 +1,9 @@
 class DeclarationDefinition {
-  constructor(wrapperAPI, parent, def) {
-    this.wrapperAPI = wrapperAPI;
+  constructor(conf, parent, factory, typemap) {
+    this.typemap = typemap;
     this.parent = parent;
-    this.name = def.name;
-    this.declType = def.declType;
+    this.name = conf.name;
+    this.declType = conf.declType;
   }
 }
 

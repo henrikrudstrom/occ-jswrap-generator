@@ -1,9 +1,9 @@
-function renderClassHeader(wrapperAPI, cls) {
+function renderClassHeader(typemap, cls) {
   if (cls.declType !== 'class') return false;
 
   var base = cls.getBaseClass();
 
-  var wrappedType = cls.hasHandle ? `opencascade::handle<${cls.classKey}>` : cls.classKey;
+  var wrappedType = cls.hasHandle ? `opencascade::handle<${cls.nativeName}>` : cls.nativeName;
   var includes = cls.getWrappedDependencies()
     .map(dep => `#include <${dep.parent.name}/${dep.name}.h>`)
     .join('\n');
@@ -26,10 +26,10 @@ function renderClassHeader(wrapperAPI, cls) {
     .join('\n    ');
 
   var emptyCtor = `${cls.name}();`;
-  var ptrCtor = `${cls.name}(${cls.classKey} * wrapObj);`;
-  var valueCtor = `${cls.name}(${cls.classKey} wrapObj);`;
+  var ptrCtor = `${cls.name}(${cls.nativeName} * wrapObj);`;
+  var valueCtor = `${cls.name}(${cls.nativeName} wrapObj);`;
   if (cls.hasHandle) {
-    valueCtor = `${cls.name}(opencascade::handle<${cls.classKey}> wrapObj);`;
+    valueCtor = `${cls.name}(opencascade::handle<${cls.nativeName}> wrapObj);`;
   }
 
   return `
@@ -42,7 +42,7 @@ function renderClassHeader(wrapperAPI, cls) {
 #include <common/WrapperClassTraits.h>
 #include <common/DynamicCastMap.h>
 
-#include <${cls.classKey}.hxx>
+#include <${cls.nativeName}.hxx>
 
 ${includes}
 
@@ -74,8 +74,8 @@ namespace ${cls.parent.name} {
 
 }
 
-template<> struct wrapper_for_type<${cls.classKey}> { typedef ${cls.parent.name}::${cls.name} type; };
-template<> struct wrapped_type<${cls.parent.name}::${cls.name}> { typedef ${cls.classKey} type; };
+template<> struct wrapper_for_type<${cls.nativeName}> { typedef ${cls.parent.name}::${cls.name} type; };
+template<> struct wrapped_type<${cls.parent.name}::${cls.name}> { typedef ${cls.nativeName} type; };
 
 #endif //${cls.name.toUpperCase()}_H`;
 }

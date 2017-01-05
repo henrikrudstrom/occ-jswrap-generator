@@ -1,4 +1,5 @@
 const Module = require('./model/module.js');
+const Builtin = require('./model/builtin.js');
 const WrappedAPI = require('./wrappedAPI.js');
 const settings = require('./settings.js');
 const path = require('path');
@@ -14,6 +15,14 @@ function getConfigurators() {
   return glob.sync(`${settings.paths.definition}/*.js`).map(loadConfig);
 }
 
+function builtInModule() {
+  var mod = new Module.Configuration();
+  mod.members.push(new Builtin.Configuration('double', 'Standard_Real'));
+  mod.members.push(new Builtin.Configuration('int', 'Standard_Integer'));
+  mod.members.push(new Builtin.Configuration('bool', 'Standard_Boolean'));
+  return mod;
+}
+
 function configure(configurators) {
   if (configurators === undefined)
     configurators = getConfigurators();
@@ -22,7 +31,8 @@ function configure(configurators) {
     var mod = new Module.Configuration();
     fn(mod);
     return mod;
-  });
+  }).concat(builtInModule());
+
   return new Wrapper.Configuration('occ-node', modules);
 }
 
