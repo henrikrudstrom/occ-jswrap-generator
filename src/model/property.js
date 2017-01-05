@@ -1,6 +1,8 @@
 const Declaration = require('./declaration.js');
 const Method = require('./method.js');
 const nativeAPI = require('../nativeAPI');
+const ClassConfiguration = require('./class.js').Configuration;
+const util = require('../util.js');
 
 class PropertyDefinition extends Declaration.Definition {
   constructor(conf, parent, factory, typemap) {
@@ -30,17 +32,31 @@ class PropertyDefinition extends Declaration.Definition {
 }
 
 class PropertyConfiguration extends Declaration.Configuration {
-  constructor(name, getterKey, setterKey) {
+  constructor(name, getter, setter) {
     super(name, 'property');
-    this.getter = new Method.Configuration(name, getterKey);
-    this.setter = setterKey ? new Method.Configuration(name, setterKey) : undefined;
-    this.readOnly = !setterKey;
+    this.getter = getter;
+    this.setter = setter;
+    this.readOnly = !setter;
   }
 
   getKeys() {
     return [this.setter.methodKey, this.getter.methodKey];
   }
+  
+  static wrap(parent, getterKey, setterKey, name) {
+    var getter = Method.Configuration.wrap(parent, getterKey, util.renameMember(getterKey));
+    var setter = setterKey ? Method.Configuration.wrap(parent, setterKey, util.renameMember(setterKey)) : undefined;
+    return new PropertyConfiguration(name, getter, setter)
+  }
+  
+  static wrapReadOnly(parent, getterKey, name) {
+    return PropertyConfiguration.wrap(parent, getterKey, undefined, name);
+  }
 }
+
+
+ClassConfiguration.registerType('property', PropertyConfiguration.wrap);
+ClassConfiguration.registerType('readOnlyProperty', PropertyConfiguration.wrapReadOnly);
 
 module.exports = {
   Configuration: PropertyConfiguration,

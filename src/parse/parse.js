@@ -4,6 +4,7 @@ const mkdirp = require('mkdirp');
 const run = require('gulp-run');
 const gutil = require('gulp-util');
 const settings = require('../settings.js');
+const groupBy = require('../util.js').groupBy;
 
 module.exports = function(gulp) {
   const runSequence = require('run-sequence').use(gulp);
@@ -27,16 +28,7 @@ module.exports = function(gulp) {
     return run(cmd).exec(done);
   }
 
-  function groupBy(arr, fn) {
-    var grouped = [];
-    function add(value, group) {
-      if (grouped[group] === undefined)
-        grouped[group] = [];
-      grouped[group].push(value);
-    }
-    arr.forEach((value, index) => add(value, fn(value, index)));
-    return grouped;
-  }
+
 
   // create gulp task for each module
   settings.oce.modules.forEach(function(moduleName) {

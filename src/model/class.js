@@ -1,8 +1,10 @@
 const Container = require('./container.js');
-const Method = require('./method.js');
-const Property = require('./property.js');
-const Constructor = require('./constructor.js');
+//const Method = require('./method.js');
+//const Property = require('./property.js');
+//const Constructor = require('./constructor.js');
 const nativeAPI = require('../nativeAPI.js');
+const upperCamelCase = require('uppercamelcase');
+
 
 class ClassDefinition extends Container.Definition {
   constructor(conf, parent, factory, typemap) {
@@ -49,69 +51,11 @@ class ClassDefinition extends Container.Definition {
   }
 }
 
-factory.registerDefinition('class', ClassDefinition);
-
 class ClassConfiguration extends Container.Configuration {
   constructor(name, key) {
     super(name, 'class');
     this.nativeName = key;
     this.isType = true;
-  }
-
-  $wrapMethod(methodConf) {
-    var existingMember = this.getMemberByName(methodConf.name);
-    if (existingMember !== undefined) {
-      existingMember.overload(methodConf);
-    } else
-      this.members.push(methodConf);
-
-    return this;
-  }
-
-  wrapMethod(query, renameFunc) {
-    var rename = renameFunc;
-    if (typeof (renameFunc) === 'string')
-      rename = () => renameFunc;
-
-    query = `${this.nativeName}::${query}`;
-    var methods = nativeAPI.find(query, 'method');
-    methods.forEach(method =>
-      this.$wrapMethod(new Method.Configuration(rename(method.name), method.key)));
-    return this;
-  }
-
-  wrapProperty(getterKey, setterKey, name) {
-    if (name === undefined && setterKey === undefined) throw new Error('wrapper name cannot be undefined');
-    if (name === undefined) {
-      name = setterKey;
-      setterKey = undefined;
-    }
-
-    var getterQuery = `${this.nativeName}::${getterKey}`;
-    var getters = nativeAPI.find(getterQuery, 'method');
-    if (getters.length > 1) throw new Error('multiple getters found');
-    getterKey = getters[0].key;
-    this.excludeByKey(getterKey);
-
-    if (setterKey !== undefined) {
-      var setterQuery = `${this.nativeName}::${setterKey}`;
-      var setters = nativeAPI.find(setterQuery, 'method');
-      if (setters.length > 1) throw new Error('multiple setters found');
-      setterKey = setters[0].key;
-      this.excludeByKey(setters[0].key);
-    }
-
-    this.members.push(new Property.Configuration(name, getterKey, setterKey));
-    return this;
-  }
-
-  wrapConstructor(signature) {
-    var ctorQuery = `${this.nativeName}::${this.nativeName}(${signature})`;
-    var ctors = nativeAPI.find(ctorQuery, 'constructor')
-      .filter(ctor => ctor.copyConstructor !== true);
-    ctors.forEach(method =>
-      this.$wrapMethod(new Constructor.Configuration(this.name, method.key)));
-    return this;
   }
 
   getKeys() {

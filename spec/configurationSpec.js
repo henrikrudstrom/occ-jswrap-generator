@@ -2,6 +2,8 @@ const chai = require('chai');
 const configure = require('../src/configure.js');
 const util = require('../src/util.js');
 
+require('../src/model');
+
 const expect = chai.expect;
 chai.use(require('chai-things'));
 
@@ -104,9 +106,12 @@ describe('Wrapper configuration', () => {
   it('can define wrapped read-only properties', () => {
     configure((mod) => {
       var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
-        .wrapProperty('X', 'x');
+        .wrapReadOnlyProperty('X', 'x', (prop) => {
+          prop.myProperty = 'hello'
+        });
       expect(pnt.getMemberByName('x').declType).to.equal('property');
       expect(pnt.getMemberByName('x').readOnly).to.equal(true);
+      expect(pnt.getMemberByName('x').myProperty).to.equal('hello');
     });
   });
 
@@ -116,7 +121,6 @@ describe('Wrapper configuration', () => {
         .wrapMethod('*', util.renameMember)
         .wrapProperty('X', 'SetX', 'x');
 
-      expect(pnt.members.length).to.equal(22);
       expect(pnt.getMemberByName('x').declType).to.equal('property');
       expect(pnt.getMemberByName('setX')).to.equal(undefined);
     });

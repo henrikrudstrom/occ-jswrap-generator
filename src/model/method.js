@@ -1,6 +1,8 @@
 const Declaration = require('./declaration.js');
 const MethodOverload = require('./methodOverload.js');
-
+const nativeAPI = require('../nativeAPI');
+const ClassConfiguration = require('./class.js').Configuration;
+const groupBy = require('../util.js').groupBy;
 
 class MethodDefinition extends Declaration.Definition {
   constructor(conf, parent, factory, typemap) {
@@ -25,13 +27,12 @@ class MethodDefinition extends Declaration.Definition {
   }
 }
 
-factory.registerDefinition('method', MethodDefinition);
-
 
 class MethodConfiguration extends Declaration.Configuration {
-  constructor(name, methodKey) {
+  constructor(name, methods) {
     super(name, 'method');
-    this.overloads = [new MethodOverload.Configuration(name, methodKey)];
+    
+    this.overloads = methods.map(method => new MethodOverload.Configuration(name, method.key));
   }
 
   overload(methodConf) {
@@ -41,7 +42,33 @@ class MethodConfiguration extends Declaration.Configuration {
   getKeys() {
     return [this.overloads.map(overload => overload.methodKey)];
   }
+  
+  static $wrapMethod(parent, conf) {
+    var existingMember = parent.getMemberByName(conf.name);
+    if (existingMember !== undefined) {
+      conf.overload(existingMember);
+      parent.excludeByName(existingMember.name);
+    }
+    return conf;
+  }
+
+  static wrap(parent, query, renameFunc) {
+    var rename = renameFunc;
+    if (typeof (renameFunc) === 'string')
+      rename = () => renameFunc;
+
+    query = `${parent.nativeName}::${query}`;
+    var methods = nativeAPI.find(query, 'method');
+    var grouped = groupBy(methods, method => method.name, {});
+    return Object.keys(grouped).map(group => 
+      MethodConfiguration.$wrapMethod(parent, new MethodConfiguration(rename(group), grouped[group])));
+    
+    // return methods.map(method =>
+    //   MethodConfiguration.$wrapMethod(parent, new MethodConfiguration(rename(method.name), method.key)));
+  }
 }
+
+ClassConfiguration.registerType('method', MethodConfiguration.wrap);
 
 module.exports = {
   Configuration: MethodConfiguration,

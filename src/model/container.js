@@ -1,13 +1,15 @@
 const createRegexp = require('./../util.js').createRegexp;
 const Declaration = require('./declaration.js');
-
+const upperCamelCase = require('uppercamelcase');
 
 function matchDeclByKey(exp) {
   return decl => decl.getKeys().every(k => exp.test(k));
 }
 
 function matchDeclByName(exp) {
-  return decl => exp.test(decl.name);
+  return decl => {
+    return exp.test(decl.name);
+  }
 }
 
 function not(fn) {
@@ -48,6 +50,7 @@ class ContainerDefinition extends containerMixin(Declaration.Definition) {
   }
 }
 
+
 class ContainerConfiguration extends containerMixin(Declaration.Configuration) {
   constructor(name, declType) {
     super(name, declType);
@@ -69,6 +72,22 @@ class ContainerConfiguration extends containerMixin(Declaration.Configuration) {
   rename(name, newName) {
     var decl = this.getMemberByName(name);
     decl.name = newName;
+    return this;
+  }
+  
+  static registerType(typename, fn) {
+    this.prototype[`wrap${upperCamelCase(typename)}`] = function(...args){
+      return this.wrap(fn, ...args);
+    }
+  } 
+
+  wrap(fn, ...rest) {
+    var conf = fn(this, ...rest.slice(0, fn.length - 1))
+    var cb = rest[fn.length-1];
+    if(cb) cb(conf);
+    if(!Array.isArray(conf)) conf = [conf];
+
+    this.members = this.members.concat(conf);
     return this;
   }
 }

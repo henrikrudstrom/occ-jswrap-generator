@@ -4,8 +4,6 @@ const factory = require('../factory.js');
 class BuiltinDefinition extends Declaration.Definition {
 }
 
-factory.registerDefinition('builtin', BuiltinDefinition);
-
 class BuiltinConfiguration extends Declaration.Configuration {
   constructor(name, nativeName) {
     super(name, 'builtin');
