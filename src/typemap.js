@@ -11,16 +11,11 @@ class Typemap {
       this.native[this.getName(item)] = this.getNativeName(item);
       this.types[this.getName(item)] = item;
     }
-    this.getMembers(item).forEach(mem => this.populate(mem));
   }
 
   isBuiltIn(typeName) {
     var type = this.types[this.wrapped[typeName]];
-    return type && this.definesType(type);
-  }
-
-  getWrapper(name) {
-    return this.types[name];
+    return type !== undefined && type.type === 'builtin';
   }
 
   getWrappedType(key) {
@@ -63,4 +58,4 @@ class RendererTypemap extends Typemap {
   }
 }
 
-module.exports = { DefinitionTypemap, RendererTypemap };
+module.exports = { Definition: DefinitionTypemap, Renderer: RendererTypemap };

@@ -131,7 +131,7 @@ class ClassRenderer extends Renderer {
       ${this.emit('memberInitialization')}
 
       Nan::Set(target, className, Nan::GetFunction(ctor).ToLocalChecked());
-      v8::Local<v8::Object> obj = Nan::To<v8::Object>(ctor->GetFunction()->NewInstance()->GetPrototype()).ToLocalChecked();
+      v8::Local<v8::Object> obj = Nan::To<v8::Object>(ctor->GetFunction()->NewInstance()->GetPrototype).ToLocalChecked();
       prototype.Reset(obj);
       constructor.Reset(ctor);
 

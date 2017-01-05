@@ -23,7 +23,7 @@ describe('nativeAPI', () => {
   });
 
   it('can query class declarations by decl type', () => {
-    var declTypes = nativeAPI.find('gp_Pnt::*', 'method').map(decl => decl.declType);
-    expect(declTypes).all.to.equal('method');
+    var types = nativeAPI.find('gp_Pnt::*', 'method').map(decl => decl.declType);
+    expect(types).all.to.equal('method');
   });
 });

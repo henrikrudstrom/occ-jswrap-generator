@@ -17,6 +17,7 @@ function getConfigurators() {
 
 function builtInModule() {
   var mod = new Module.Configuration();
+  mod.name = 'builtins';
   mod.members.push(new Builtin.Configuration('double', 'Standard_Real'));
   mod.members.push(new Builtin.Configuration('int', 'Standard_Integer'));
   mod.members.push(new Builtin.Configuration('bool', 'Standard_Boolean'));

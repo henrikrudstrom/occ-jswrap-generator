@@ -17,6 +17,7 @@ class ClassDefinition extends Container.Definition {
     this.isType = true;
   }
 
+
   $hasHandle(nativeCls) {
     if (!nativeCls.bases || !nativeCls.bases[0]) return false;
     if (nativeCls.bases[0].name === 'Standard_Transient') return true;
@@ -47,21 +48,24 @@ class ClassDefinition extends Container.Definition {
   }
 
   getConstructor() {
-    return this.members.filter(decl => decl.declType === 'constructor')[0];
+    return this.members.filter(decl => decl.type === 'constructor')[0];
   }
 }
+ClassDefinition.prototype.type = 'class';
 
 class ClassConfiguration extends Container.Configuration {
   constructor(name, key) {
-    super(name, 'class');
+    super(name);
     this.nativeName = key;
     this.isType = true;
   }
+
 
   getKeys() {
     return [this.nativeName];
   }
 }
+ClassConfiguration.prototype.type = 'class';
 
 module.exports = {
   Configuration: ClassConfiguration,

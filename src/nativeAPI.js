@@ -36,7 +36,7 @@ function load() {
   loaded = true;
 }
 
-function find(key, declType) {
+function find(key, type) {
   var result = lookup[key];
   if (result !== undefined)
     return [result];
@@ -50,14 +50,14 @@ function find(key, declType) {
   if (res.length === 0)
     return undefined;
 
-  if (declType)
-    return res.filter(decl => decl.declType === declType);
+  if (type)
+    return res.filter(decl => decl.declType === type);
 
   return res;
 }
 
-function get(key, declType) {
-  var result = find(key, declType);
+function get(key, type) {
+  var result = find(key, type);
   if (result === undefined) return result;
   if (result.length > 1) throw new Error('Excepted one result, got multiple');
   return result[0];

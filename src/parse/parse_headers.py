@@ -87,7 +87,7 @@ class Module:
         self.ns = parse_files(oce_include, self.files)
         #print "===================loaded"
 
-#json.dumps(classes[1], declType=ComplexEncoder)
+#json.dumps(classes[1], type=ComplexEncoder)
 
 
 
@@ -148,7 +148,7 @@ def w_member_function(cd, parent):
         name=clean_name(cd.name),
         key=parent.name + '::' + cd.name + "(" + ", ".join([a['type'] for a in args]) + ")",
         parent=parent.name,
-        declType="method",
+        type="method",
         arguments=args,
         returnType=str(cd.return_type) if cd.return_type else ""
 
@@ -164,7 +164,7 @@ def w_member_function(cd, parent):
 
 def w_constructor(cc, parent):
     member = w_member_function(cc, parent)
-    member['declType']="constructor"
+    member['type']="constructor"
     add_if(member, declarations.is_copy_constructor(cc), "copyConstructor")
     #member["trivialConstructor"] = cc.is_trivial_constructor
     return member
@@ -172,12 +172,12 @@ def w_constructor(cc, parent):
 def w_enum(e):
     return Dict(
         name=clean_name(e.name),
-        declType="enum",
+        type="enum",
         key=clean_name(e.name),
         values=e.values)
 
 def w_typedef(td):
-    return Dict(name=clean_name(td.name), type=str(td.decl_type), key=clean_name(td.name), declType="typedef")
+    return Dict(name=clean_name(td.name), type=str(td.decl_type), key=clean_name(td.name), type="typedef")
 
 
 
@@ -211,7 +211,7 @@ def w_class(cls):
         abstract=cls.is_abstract,
         artificial=cls.is_artificial,
         location=cls.location.as_tuple(),
-        declType="class",
+        type="class",
         key=cls.name,
         declarations=constructors + members
         #operators=iter(cls.operators(), w_operator),

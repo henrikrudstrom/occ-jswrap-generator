@@ -10,6 +10,7 @@ class MethodOverloadDefinition extends Declaration.Definition {
     this.typemap = typemap;
   }
 
+
   getWrappedDependencies() {
     if (!this.wrappedDependenciesCache) {
       this.wrappedDependenciesCache = this.nativeMethod.arguments
@@ -26,13 +27,16 @@ class MethodOverloadDefinition extends Declaration.Definition {
     return this.getWrappedDependencies().every(dep => Boolean(dep));
   }
 }
+MethodOverloadDefinition.prototype.type = 'methodOverload';
 
 class MethodOverloadConfiguration extends Declaration.Configuration {
   constructor(name, methodKey) {
-    super(name, 'methodOverload');
+    super(name);
     this.methodKey = methodKey;
   }
 }
+MethodOverloadConfiguration.prototype.type = 'methodOverload';
+
 
 module.exports = {
   Configuration: MethodOverloadConfiguration,

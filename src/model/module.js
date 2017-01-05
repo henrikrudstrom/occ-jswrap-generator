@@ -6,12 +6,15 @@ class ModuleDefinition extends Container.Definition {
   constructor(conf, parent, factory, typemap) {
     super(conf, parent, factory, typemap);
   }
+
 }
+ModuleDefinition.prototype.type = 'module';
 
 class ModuleConfiguration extends Container.Configuration {
   constructor(name) {
-    super(name || 'unnamed-module', 'module');
+    super(name || 'unnamed-module');
   }
+
 
   wrapClass(clsKey, name) {
     var cls = this.getMemberByKey(clsKey);
@@ -28,6 +31,7 @@ class ModuleConfiguration extends Container.Configuration {
     res.forEach(decl => this.wrapClass(decl.name, fn(decl.name)));
   }
 }
+ModuleConfiguration.prototype.type = 'module';
 
 module.exports = {
   Configuration: ModuleConfiguration,

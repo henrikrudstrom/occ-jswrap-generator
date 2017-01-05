@@ -3,16 +3,13 @@ class DeclarationDefinition {
     this.typemap = typemap;
     this.parent = parent;
     this.name = conf.name;
-    this.declType = conf.declType;
   }
 }
 
 class DeclarationConfiguration {
-  constructor(name, declType) {
+  constructor(name) {
     if (name === undefined) throw new Error('Declaration name cannot be undefined');
     this.name = name;
-    if (declType === undefined) throw new Error('Declaration type cannot be undefined');
-    this.declType = declType;
   }
 }
 

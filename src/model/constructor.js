@@ -3,15 +3,15 @@ const nativeAPI = require('../nativeAPI');
 const ClassConfiguration = require('./class.js').Configuration;
 
 class ConstructorDefinition extends Method.Definition {
-
 }
+ConstructorDefinition.prototype.type = 'constructor';
 
 class ConstructorConfiguration extends Method.Configuration {
   constructor(name, methodKey) {
     super(name, methodKey);
-    this.declType = 'constructor';
   }
-  
+
+
   static wrap(parent, signature) {
     var ctorQuery = `${parent.nativeName}::${parent.nativeName}(${signature})`;
     var ctors = nativeAPI.find(ctorQuery, 'constructor')
@@ -19,8 +19,9 @@ class ConstructorConfiguration extends Method.Configuration {
     return Method.Configuration.$wrapMethod(parent, new ConstructorConfiguration(parent.name, ctors));
   }
 }
-
+ConstructorConfiguration.prototype.type = 'constructor';
 ClassConfiguration.registerType('constructor', ConstructorConfiguration.wrap);
+
 
 module.exports = {
   Configuration: ConstructorConfiguration,

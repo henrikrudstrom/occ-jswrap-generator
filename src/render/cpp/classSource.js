@@ -188,13 +188,13 @@ function renderInit(typemap, cls) {
   var inherit = baseClass ? `ctor->Inherit(Nan::New(${baseClass.qualifiedName}::constructor));` : '';
 
   var properties = cls.members
-    .filter(decl => decl.declType === 'property')
+    .filter(decl => decl.type === 'property')
     .filter(decl => decl.canBeWrapped())
     .map(prop => `Nan::SetAccessor(ctorInst, Nan::New("${prop.name}").ToLocalChecked(), ${prop.cppGetterName}, ${prop.cppSetterName});`)
     .join('\n  ');
 
   var methods = cls.members
-    .filter(decl => decl.declType === 'method')
+    .filter(decl => decl.type === 'method')
     .filter(decl => decl.canBeWrapped())
     .map(decl => `Nan::SetPrototypeMethod(ctor, "${decl.name}", ${decl.cppName});`)
     .join('\n  ');
@@ -217,7 +217,7 @@ NAN_MODULE_INIT(${cls.qualifiedName}::Init) {
 
   Nan::Set(target, className, Nan::GetFunction(ctor).ToLocalChecked());
 
-  v8::Local<v8::Object> obj = Nan::To<v8::Object>(ctor->GetFunction()->NewInstance()->GetPrototype()).ToLocalChecked();
+  v8::Local<v8::Object> obj = Nan::To<v8::Object>(ctor->GetFunction()->NewInstance()->GetPrototype).ToLocalChecked();
   prototype.Reset(obj);
   constructor.Reset(ctor);
 
@@ -230,17 +230,17 @@ function renderClassSource(typemap, cls) {
   var nativeClassType = cls.hasHandle ? `opencascade::handle<${cls.nativeName}>` : cls.nativeName;
 
   var getters = cls.members
-    .filter(decl => decl.declType === 'property')
+    .filter(decl => decl.type === 'property')
     .map(decl => renderGetter(typemap, cls, decl))
     .join('\n\n');
 
   var setters = cls.members
-    .filter(decl => decl.declType === 'property')
+    .filter(decl => decl.type === 'property')
     .map(decl => renderSetter(typemap, cls, decl))
     .join('\n\n');
 
   var methods = cls.members
-    .filter(decl => decl.declType === 'method')
+    .filter(decl => decl.type === 'method')
     .map(decl => renderMethod(typemap, cls, decl))
     .join('\n\n');
 

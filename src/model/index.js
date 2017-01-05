@@ -1,11 +1,11 @@
-const BuiltinDefinition = require('./builtin.js');
-const ClassDefinition = require('./class.js');
-const ConstructorDefinition = require('./constructor.js');
-const MethodDefinition = require('./method.js');
-const ModuleDefinition = require('./module.js');
-const OverloadDefinition = require('./methodOverload.js');
-const PropertyDefinition = require('./property.js');
-const WrapperDefinition = require('./wrapper.js');
+const BuiltinDefinition = require('./builtin.js').Definition;
+const ClassDefinition = require('./class.js').Definition;
+const ConstructorDefinition = require('./constructor.js').Definition;
+const MethodDefinition = require('./method.js').Definition;
+const ModuleDefinition = require('./module.js').Definition;
+const OverloadDefinition = require('./methodOverload.js').Definition;
+const PropertyDefinition = require('./property.js').Definition;
+const WrapperDefinition = require('./wrapper.js').Definition;
 
 module.exports = [
   BuiltinDefinition,

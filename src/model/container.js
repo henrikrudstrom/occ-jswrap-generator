@@ -7,9 +7,7 @@ function matchDeclByKey(exp) {
 }
 
 function matchDeclByName(exp) {
-  return decl => {
-    return exp.test(decl.name);
-  }
+  return decl => exp.test(decl.name);
 }
 
 function not(fn) {
@@ -46,14 +44,14 @@ class ContainerDefinition extends containerMixin(Declaration.Definition) {
   constructor(conf, parent, factory, typemap) {
     super(conf, parent, factory, typemap);
     this.members = conf.members.map(decl =>
-      factory.createDefinition(decl, parent, typemap));
+      factory.create(decl, this, typemap));
   }
 }
 
 
 class ContainerConfiguration extends containerMixin(Declaration.Configuration) {
-  constructor(name, declType) {
-    super(name, declType);
+  constructor(name, type) {
+    super(name);
     this.members = [];
   }
 
@@ -74,18 +72,18 @@ class ContainerConfiguration extends containerMixin(Declaration.Configuration) {
     decl.name = newName;
     return this;
   }
-  
+
   static registerType(typename, fn) {
-    this.prototype[`wrap${upperCamelCase(typename)}`] = function(...args){
+    this.prototype[`wrap${upperCamelCase(typename)}`] = function (...args) {
       return this.wrap(fn, ...args);
-    }
-  } 
+    };
+  }
 
   wrap(fn, ...rest) {
-    var conf = fn(this, ...rest.slice(0, fn.length - 1))
-    var cb = rest[fn.length-1];
-    if(cb) cb(conf);
-    if(!Array.isArray(conf)) conf = [conf];
+    var conf = fn(this, ...rest.slice(0, fn.length - 1));
+    var cb = rest[fn.length - 1];
+    if (cb) cb(conf);
+    if (!Array.isArray(conf)) conf = [conf];
 
     this.members = this.members.concat(conf);
     return this;

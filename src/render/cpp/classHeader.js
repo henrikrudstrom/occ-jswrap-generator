@@ -1,5 +1,5 @@
 function renderClassHeader(typemap, cls) {
-  if (cls.declType !== 'class') return false;
+  if (cls.type !== 'class') return false;
 
   var base = cls.getBaseClass();
 
@@ -9,19 +9,19 @@ function renderClassHeader(typemap, cls) {
     .join('\n');
 
   var methodDeclarations = cls.members
-    .filter(decl => decl.declType === 'method')
+    .filter(decl => decl.type === 'method')
     .filter(decl => decl.canBeWrapped())
     .map(decl => `static NAN_METHOD(${decl.cppName});`)
     .join('\n    ');
 
   var propertyGetters = cls.members
-    .filter(decl => decl.declType === 'property')
+    .filter(decl => decl.type === 'property')
     .filter(decl => decl.canBeWrapped())
     .map(decl => `static NAN_GETTER(${decl.cppGetterName});`)
     .join('\n    ');
 
   var propertySetters = cls.members
-    .filter(decl => decl.declType === 'property')
+    .filter(decl => decl.type === 'property')
     .map(decl => `static NAN_SETTER(${decl.cppSetterName});`)
     .join('\n    ');
 
