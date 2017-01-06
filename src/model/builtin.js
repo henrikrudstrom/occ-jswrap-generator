@@ -18,7 +18,6 @@ class BuiltinConfiguration extends Declaration.Configuration {
     this.isBuiltIn = true;
   }
 
-
   getKeys() {
     return [this.nativeName];
   }

@@ -2,9 +2,28 @@ const Renderer = require('../renderer.js');
 
 class ClassRenderer extends Renderer {
   constructor(def, factory, typemap) {
-    super();
-    this.def = def;
-    this.renderers = def.members.map(decl => factory.create(decl, typemap));
+    super(def, factory, typemap);
+    this.renderers = def.members.map(member => factory.create(member, typemap));
+
+    var nativeClassName = this.def.nativeClass.name;
+    this.nativeTypeDecl = nativeClassName;
+    this.convertFunction = `Util::ConvertWrappedValue<${nativeClassName}>`;
+    if (this.def.hasHandle) {
+      this.nativeTypeDecl = `opencascade::handle<${this.def.nativeClass.name}>`;
+      this.convertFunction = `Util::ConvertWrappedTransientValue<${this.def.nativeClass.name}>`;
+    }
+  }
+
+  toNative(resVar, inVar, failClause) {
+    return `\
+      ${this.nativeTypeDecl} ${resVar};
+      if(!${this.convertFunction}(${inVar}, ${resVar})){
+        ${failClause}
+      }`;
+  }
+
+  toJs(inVar) {
+    return `${this.def.qualifiedName}::BuildWrapper((void *) &${inVar});`;
   }
 
   renderIncludeClass() {
@@ -15,10 +34,16 @@ class ClassRenderer extends Renderer {
     return `${this.def.qualifiedName}::Init(target);`;
   }
 
+  renderMain(content) {
+    content[`[inc]/${this.def.parent.name}/${this.def.name}.h`] = this.renderHeaderFile();
+    content[`[src]/${this.def.parent.name}/${this.def.name}.cc`] = this.renderImplementationFile();
+    return super.renderMain(content);
+  }
+
   renderHeaderFile() {
     var name = this.def.name;
-    var base = this.def.getWrappedBase();
-    var baseClass = base || 'Nan::ObjectWrap';
+    var base = this.def.getBaseClass();
+    var baseClass = base ? base.qualifiedName : 'Nan::ObjectWrap';
     var nativeName = this.def.nativeName;
 
     var includes = this.def.getWrappedDependencies()
@@ -62,9 +87,7 @@ class ClassRenderer extends Renderer {
           ${valueCtor}
 
         private:
-          static bool firstCall;
-
-          ${this.emit('memberDeclarations')}
+          ${this.emit('memberDeclarations').join('\n')}
         };
       }
 
@@ -101,7 +124,7 @@ class ClassRenderer extends Renderer {
       `ctor->Inherit(Nan::New(${base.qualifiedName}::constructor));` : '';
 
     return `\
-    ${this.renderClassInclude()}
+    #include <${this.def.parent.name}/${this.def.name}.h>
 
     Nan::Persistent<v8::FunctionTemplate> ${qualifiedName}::constructor;
     Nan::Persistent<v8::Object> ${qualifiedName}::prototype;
@@ -117,7 +140,7 @@ class ClassRenderer extends Renderer {
       return val;
     }
 
-    ${this.emit('memberImplementation')}
+    ${this.emit('memberImplementation').join('\n')}
 
     NAN_MODULE_INIT(${qualifiedName}::Init) {
       auto qualifiedName = Nan::New("${qualifiedName}").ToLocalChecked();
@@ -128,7 +151,7 @@ class ClassRenderer extends Renderer {
       ctorInst->SetInternalFieldCount(1); // for ObjectWrap, it should set 1
       ${inherit}
 
-      ${this.emit('memberInitialization')}
+      ${this.emit('memberInitialization').join('\n')}
 
       Nan::Set(target, className, Nan::GetFunction(ctor).ToLocalChecked());
       v8::Local<v8::Object> obj = Nan::To<v8::Object>(ctor->GetFunction()->NewInstance()->GetPrototype).ToLocalChecked();
@@ -140,4 +163,4 @@ class ClassRenderer extends Renderer {
   }
 }
 ClassRenderer.prototype.type = 'class';
-module.exports.ClassRenderer = ClassRenderer;
+module.exports = ClassRenderer;

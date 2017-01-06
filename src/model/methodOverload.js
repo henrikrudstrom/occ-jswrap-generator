@@ -6,8 +6,7 @@ class MethodOverloadDefinition extends Declaration.Definition {
     super(conf, parent, factory, typemap);
     this.methodKey = conf.methodKey;
     this.nativeMethod = nativeAPI.get(this.methodKey);
-    if (this.nativeMethod === undefined) throw new Error('Could not find native method ' + this.methodKey);
-    this.typemap = typemap;
+    this.returnType = this.nativeMethod.returnType;
   }
 
 

@@ -9,15 +9,14 @@ class ConstructorRenderer extends MethodRenderer {
   }
 
 
-  renderMemberImplementation(parent) {
+  renderMemberImplementation() {
     return `\
-      ${this.emit('overloadFunctions')}
+      ${this.emit('overloadFunctions').join('\n')}
 
-      bool ${parent.def.qualifiedName}::firstCall = true;
+      bool ${this.def.parent.qualifiedName}::firstCall = true;
 
-      NAN_METHOD(${parent.def.qualifiedName}::${this.methodName}) {
+      NAN_METHOD(${this.def.parent.qualifiedName}::${this.methodName}) {
         if (!info.IsConstructCall()) {
-          // [NOTE] generic recursive call with 'new'
           std::vector<v8::Local<v8::Value> > args(info.Length());
           for (std::size_t i = 0; i < args.size(); ++i) args[i] = info[i];
           auto inst = Nan::NewInstance(info.Callee(), args.size(), args.data());
@@ -25,12 +24,12 @@ class ConstructorRenderer extends MethodRenderer {
           return;
         }
         if(firstCall){
-          auto wrapper = new ${parent.def.name}();
+          auto wrapper = new ${this.def.parent.name}();
           wrapper->Wrap(info.This());
           firstCall = false;
           return;
         }
-        ${this.emit('overloadCalls')}
+        ${this.emit('overloadCalls').join('\n')}
       }`;
   }
 

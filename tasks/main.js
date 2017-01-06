@@ -1,11 +1,24 @@
+const clean = require('gulp-clean');
+const glob = require('glob');
+const run = require('gulp-run');
+const runSequence = require('run-sequence');
+const path = require('path');
+
 const render = require('../src/render.js');
 const configure = require('../src/configure.js');
 const settings = require('../src/settings.js');
-const clean = require('gulp-clean');
-const glob = require('glob');
-const fs = require('fs');
-const run = require('gulp-run');
-const runSequence = require('run-sequence');
+
+
+function loadConfig(file) {
+  file = path.relative(__dirname, file);
+  return require(file); // eslint-disable-line global-require
+}
+
+function getConfigurators() {
+  return glob.sync(`${settings.paths.definition}/*.js`).map(loadConfig);
+}
+
+const jsWrapperRenderers = require('../src/renderers/jswrapper');
 
 module.exports = function(gulp) {
   require('../src/parse/parse.js')(gulp);
@@ -20,8 +33,9 @@ module.exports = function(gulp) {
   });
 
   gulp.task('render-wrapper', () => {
-    var definition = configure();
-    render.wrapper(definition);
+    var configuration = configure(...getConfigurators());
+    var content = render(configuration, jsWrapperRenderers);
+    render.write(content, settings);
   });
 
   gulp.task('format-cpp', function(done) {

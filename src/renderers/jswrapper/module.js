@@ -2,13 +2,13 @@ const Renderer = require('../renderer.js');
 
 class ModuleRenderer extends Renderer {
   constructor(def, factory, typemap) {
-    super();
-    this.def = def;
-    this.renderers = def.members.map(decl => factory.create(decl, typemap));
+    super(def, factory, typemap);
+    this.renderers = def.members.map(cls => factory.create(cls, typemap));
   }
 
-  renderMain(files, parent){
-
+  renderMain(content) {
+    content[`[src]/${this.def.name}/module.cc`] = this.renderModuleImpl();
+    return super.renderMain(content);
   }
 
   renderModuleImpl() {

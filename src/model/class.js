@@ -1,9 +1,5 @@
 const Container = require('./container.js');
-//const Method = require('./method.js');
-//const Property = require('./property.js');
-//const Constructor = require('./constructor.js');
 const nativeAPI = require('../nativeAPI.js');
-const upperCamelCase = require('uppercamelcase');
 
 
 class ClassDefinition extends Container.Definition {

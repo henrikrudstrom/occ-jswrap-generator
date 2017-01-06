@@ -1,19 +1,6 @@
 const Module = require('./model/module.js');
 const Builtin = require('./model/builtin.js');
-const WrappedAPI = require('./wrappedAPI.js');
-const settings = require('./settings.js');
-const path = require('path');
-const glob = require('glob');
-const Wrapper = require('./model/wrapper.js');
-
-function loadConfig(file) {
-  file = path.relative(__dirname, file);
-  return require(file); // eslint-disable-line global-require
-}
-
-function getConfigurators() {
-  return glob.sync(`${settings.paths.definition}/*.js`).map(loadConfig);
-}
+const Wrapper = require('../src/model/wrapper.js');
 
 function builtInModule() {
   var mod = new Module.Configuration();
@@ -24,10 +11,7 @@ function builtInModule() {
   return mod;
 }
 
-function configure(configurators) {
-  if (configurators === undefined)
-    configurators = getConfigurators();
-  if (!Array.isArray(configurators)) configurators = [configurators];
+function configure(...configurators) {
   var modules = configurators.map((fn) => {
     var mod = new Module.Configuration();
     fn(mod);

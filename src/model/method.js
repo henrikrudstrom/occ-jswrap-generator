@@ -5,11 +5,12 @@ const ClassConfiguration = require('./class.js').Configuration;
 const groupBy = require('../util.js').groupBy;
 
 class MethodDefinition extends Declaration.Definition {
-  constructor(conf, parent, factory, typemap) {
+  constructor(conf, parent, factory, typemap, parentClass) {
     super(conf, parent, factory, typemap);
     this.overloads = conf.overloads.map(
-      overload => factory.create(overload, this, typemap)
+      overload => factory.create(overload, this, typemap, parentClass || this)
     );
+    this.overloads.forEach((overload, index) => { overload.index = index; });
     this.type = conf.type;
     this.cppName = this.overloads[0].nativeMethod.name;
   }

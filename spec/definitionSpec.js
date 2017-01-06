@@ -93,6 +93,22 @@ describe('Wrapper definition', () => {
     expect(ctor.canBeWrapped()).to.equal(true);
   });
 
+  it('overloads have reference to parent class', () => {
+    var conf = configure((mod) => {
+      mod.name = 'test';
+      mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint')
+        .wrapProperty('X', 'SetX', 'x')
+        .wrapMethod('Pnt', 'pnt')
+        .wrapConstructor('*');
+    });
+    var def = new Factory(definitions).create(conf).getMemberByName('test');
+    var pointClass = def.getMemberByName('CartesianPoint');
+    var propX = pointClass.getMemberByName('x');
+    var methodPnt = pointClass.getMemberByName('pnt');
+    expect(propX.getter.overloads[0].parentClass.name).to.equal('CartesianPoint');
+    expect(methodPnt.getter.overloads[0].parentClass.name).to.equal('CartesianPoint');
+  });
+
   it('can determine which wrapper classes needs to be included', () => {
     var conf = configure((mod) => {
       mod.name = 'test';

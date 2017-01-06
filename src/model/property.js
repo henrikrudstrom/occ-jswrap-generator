@@ -7,9 +7,9 @@ const util = require('../util.js');
 class PropertyDefinition extends Declaration.Definition {
   constructor(conf, parent, factory, typemap) {
     super(conf, parent, factory, typemap);
-    this.getter = factory.create(conf.getter, parent, typemap);
+    this.getter = factory.create(conf.getter, this, typemap, parent);
     if (conf.setter)
-      this.setter = factory.create(conf.setter, parent, typemap);
+      this.setter = factory.create(conf.setter, this, typemap, parent);
     this.readOnly = conf.readOnly;
   }
 

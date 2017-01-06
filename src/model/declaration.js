@@ -4,6 +4,10 @@ class DeclarationDefinition {
     this.parent = parent;
     this.name = conf.name;
   }
+
+  canBeWrapped() {
+    return true;
+  }
 }
 
 class DeclarationConfiguration {

@@ -1,37 +1,33 @@
-const renderClassHeader = require('./render/cpp/classHeader.js');
-const renderClassSource = require('./render/cpp/classSource.js');
-const renderModuleSource = require('./render/cpp/moduleSource.js');
-const renderCMake = require('./render/cmake.js');
-const settings = require('./settings.js');
 const fs = require('fs');
 const mkdirp = require('mkdirp');
 const path = require('path');
+const definitions = require('./model');
 
-function write(folder, filename, src) {
-  mkdirp.sync(folder);
-  fs.writeFileSync(path.join(folder, filename), src);
-}
+const Factory = require('./factory.js');
 
-function writeHeader(mod, filename, src) {
-  write(path.join(settings.paths.inc, mod), filename, src);
-}
+module.exports = function render(configuration, renderers) {
+  var model = new Factory.Definition(definitions).create(configuration);
+  var renderer = new Factory.Renderer(renderers).create(model);
 
-function writeSource(mod, filename, src) {
-  write(path.join(settings.paths.src, mod), filename, src);
-}
+  return renderer.renderMain();
+};
 
-function renderWrapper(typemap) {
-  var headerFiles = {};
-  var sourceFiles = {};
-  typemap.modules.forEach((mod) => {
-    writeSource(mod.name, mod.name + '.cc', renderModuleSource(typemap, mod));
-    mod.members.forEach((cls) => {
-      writeHeader(mod.name, cls.name + '.h', renderClassHeader(typemap, cls));
-      writeSource(mod.name, cls.name + '.cc', renderClassSource(typemap, cls));
+module.exports.write = function write(content, settings) {
+  var paths = {
+    '[inc]': settings.paths.inc,
+    '[src]': settings.paths.src,
+    '[root]': '.'
+  };
+
+  function replace(filename) {
+    Object.keys(paths).forEach((pth) => {
+      filename = filename.replace(pth, paths[pth]);
     });
+    return filename;
+  }
+  Object.keys(content).forEach((file) => {
+    var fullFilename = replace(file);
+    mkdirp.sync(path.dirname(fullFilename));
+    fs.writeFileSync(fullFilename, content[file]);
   });
-  write('.', 'CMakeLists.txt', renderCMake(typemap));
-  return { headerFiles, sourceFiles };
-}
-
-module.exports.wrapper = renderWrapper;
+};

@@ -2,18 +2,14 @@ const Renderer = require('../renderer.js');
 
 class WrapperRenderer extends Renderer {
   constructor(def, factory, typemap) {
-    super();
-    this.def = def;
+    super(def, factory, typemap);
     this.renderers = def.members.map(mod => factory.create(mod, typemap));
   }
 
-  static register() {
-    return 'wrapper';
-  }
-
-  renderMain(files, parent) {
-    super.renderMain(files, parent);
-    files['CMakeLists.txt'] = this.renderCMake();
+  renderMain(content, parent) {
+    if (!content) content = {};
+    content['[root]/CMakeLists.txt'] = this.renderCMake();
+    return super.renderMain(content, parent);
   }
 
   renderCMake() {

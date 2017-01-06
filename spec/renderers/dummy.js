@@ -9,8 +9,9 @@ class WrapperRenderer extends Renderer {
   }
 
   renderMain(files, parent) {
-    super.renderMain(files, parent);
+    files = files || {};
     files['./makefile'] = 'dummy makefile content';
+    return super.renderMain(files, parent);
   }
 }
 
@@ -22,11 +23,11 @@ class ModuleRenderer extends Renderer {
   }
 
   renderMain(files, parent) {
-    super.renderMain(files, parent);
     files[`src/${this.def.name}.cc`] = `\
 init {
   ${this.emit('moduleInit').join('\n')}
 }`;
+return super.renderMain(files, parent);
   }
 }
 
@@ -42,11 +43,12 @@ class ClassRenderer extends Renderer {
   }
 
   renderMain(files, parent) {
-    super.renderMain(files, parent);
     files[`src/${this.def.name}.cc`] = `\
 implementation {
   ${this.emit('memberImpl').join('\n')}
 }`;
+
+  return super.renderMain(files, parent);
   }
 
   renderModuleInit() {

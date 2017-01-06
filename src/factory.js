@@ -10,18 +10,18 @@ class Factory {
 }
 
 class RendererFactory extends Factory {
-  create(def, typemap) {
+  create(def, typemap, ...rest) {
     typemap = typemap || new Typemap.Renderer();
-    var renderer = new this.constructors[def.type](def, this, typemap);
+    var renderer = new this.constructors[def.type](def, this, typemap, ...rest);
     typemap.populate(renderer);
     return renderer;
   }
 }
 
 class DefinitionFactory extends Factory {
-  create(def, parent, typemap) {
+  create(def, parent, typemap, ...rest) {
     typemap = typemap || new Typemap.Definition();
-    var renderer = new this.constructors[def.type](def, parent, this, typemap);
+    var renderer = new this.constructors[def.type](def, parent, this, typemap, ...rest);
     typemap.populate(renderer);
     return renderer;
   }

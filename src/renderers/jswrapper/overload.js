@@ -1,34 +1,45 @@
 const Renderer = require('../renderer.js');
-const factory = require('../../factory.js');
 
-class OverloadRenderer extends Renderer {
-  static register() {
-    return 'method';
+class MethodOverloadRenderer extends Renderer {
+  parentClass() {
+    return this.def.parent.parent;
   }
 
-  static overloadName(cls, method, index) {
-    return `${cls.parent.name}_${cls.nativeClass.name}_${method.cppName}Overload${index}`;
+  getWrappedObject(wrapperVar) {
+    if (this.parentClass().hasHandle)
+      return `opencascade::handle<${this.parentClass().nativeClass.name}>::DownCast(${wrapperVar}->wrappedObject)`;
+    return `${wrapperVar}->wrappedObject`;
   }
 
-  renderNativeCall(cls, args) {
+  overloadName() {
+    var baseName = this.parentClass().qualifiedName.replace('::', '_');
+    return `${baseName}_${this.def.parent.cppName}Overload${this.def.index}`;
+  }
+
+  renderNativeCall(args) {
+    var cls = this.parentClass();
     var returns = this.def.returnType !== 'void' ? 'return' : '';
     return `\
       auto wrapped = Nan::ObjectWrap::Unwrap<${cls.qualifiedName}>(info.Holder());
-      auto obj = ${this.getWrappedObject(cls, 'wrapped')};
+      auto obj = ${this.getWrappedObject('wrapped')};
       ${returns} obj${cls.dotOrArrow}${this.def.nativeMethod.name}(${args});`;
   }
 
-  renderOverloadFunctions(cls, method, index) {
+  renderOverloadFunctions() {
     var nativeMethod = this.def.nativeMethod;
     var args = nativeMethod.arguments.map((arg, i) => 'arg' + i).join(', ');
-    var overloadName = this.overloadName(cls, method, index);
+    var overloadName = this.overloadName();
 
-    var argValues = nativeMethod.arguments.map((arg, i) =>
-      this.fromJsValue(arg.type, 'arg' + i, `info[${i}]`, 'return NULL;')
+    var argValues = nativeMethod.arguments.map((arg, i) => {
+      console.log(arg)
+      return this.typemap
+        .getWrappedType(arg.type)
+        .toNative('arg' + i, `info[${i}]`, 'return NULL;');
+    }
     ).join('\n  ');
-
+    console.log(this.def)
     return `\
-      ${this.overloadReturnType} ${overloadName}(const Nan::FunctionCallbackInfo<v8::Value>& info, bool & success){
+      ${this.def.returnType} ${overloadName}(const Nan::FunctionCallbackInfo<v8::Value>& info, bool & success){
         if(info.Length() != ${nativeMethod.arguments.length}) {
           success = false;
           return NULL;
@@ -36,45 +47,42 @@ class OverloadRenderer extends Renderer {
 
         ${argValues}
 
-        ${this.RenderNativeCall(cls, args)}
+        ${this.renderNativeCall(args)}
       }`;
   }
 
   renderReturnValueAssignment() {
-    return this.def.nativeMethod.returType === 'void' ? '' : `\
-      auto val = ${this.toJsValue(this.typemap, this.def.nativeMethod.returnType, 'res')}
+    var returnType = this.def.nativeMethod.returnType;
+    return returnType === 'void' ? '' : `\
+      auto val = ${this.typemap.getWrappedType(returnType).toJs('res')}
       info.GetReturnValue().Set(val);`;
   }
 
-  renderOverloadCalls(cls, method, index) {
+  renderOverloadCalls() {
     return `\
       bool success;
-      res = ${this.overloadName(cls, method, index)}(info, success);
+      res = ${this.overloadName(this.def.index)}(info, success);
       if(success) {
-        ${this.renderReturnValueAssignment(cls)}
+        ${this.renderReturnValueAssignment()}
         return;
       }`;
   }
 }
-OverloadRenderer.prototype.type = 'method';
+MethodOverloadRenderer.prototype.type = 'methodOverload';
 
-class ConstructorOverloadRenderer extends OverloadRenderer {
-  static register() {
-    return 'method';
-  }
-
+class ConstructorOverloadRenderer extends MethodOverloadRenderer {
   callConstructor(args) {
     return `return new ${this.def.nativeMethod.name}(${args});`;
   }
-  renderReturnValueAssignment(cls) {
+  renderReturnValueAssignment() {
     return `\
-      auto wrapper = new ${cls.name}(res);
+      auto wrapper = new ${this.parentClass().name}(res);
       wrapper->Wrap(info.This());`;
   }
 }
-ConstructorOverloadRenderer.prototype.type = 'constructor';
+ConstructorOverloadRenderer.prototype.type = 'constructorOverload';
 
 module.exports = {
-  ConstructorOverload: ConstructorOverloadRenderer,
-  Overload: OverloadRenderer
+  ConstructorRenderer: ConstructorOverloadRenderer,
+  MethodRenderer: MethodOverloadRenderer
 };

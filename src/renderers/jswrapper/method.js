@@ -2,10 +2,9 @@ const Renderer = require('../renderer.js');
 
 class MethodRenderer extends Renderer {
   constructor(def, factory, typemap) {
-    super();
-    this.def = def;
+    super(def, factory, typemap);
     this.nativeName = def.overloads[0].nativeMethod.name;
-    this.renderers = def.overloads.map(decl => factory.create(decl, typemap));
+    this.renderers = def.overloads.map(overload => factory.create(overload, typemap));
     this.methodName = def.cppName;
   }
 
@@ -17,17 +16,17 @@ class MethodRenderer extends Renderer {
     return '';
   }
 
-  renderMemberImplementation(parent) {
+  renderMemberImplementation() {
     return `\
-      ${this.emit('overloadFunctions')}
+      ${this.emit('overloadFunctions').join('\n')}
 
-      NAN_METHOD(${parent.def.qualifiedName}::${this.methodName}) {
-        ${this.renderBeforeOverloadCalls};
-        ${this.emit('overloadCalls')}
+      NAN_METHOD(${this.def.parent.qualifiedName}::${this.methodName}) {
+        ${this.renderBeforeOverloadCalls()};
+        ${this.emit('overloadCalls').join('\n')}
       }`;
   }
 
-  renderMemberInitialization(parent) {
+  renderMemberInitialization() {
     return `Nan::SetPrototypeMethod(ctor, "${this.def.name}", ${this.methodName});`;
   }
 }
