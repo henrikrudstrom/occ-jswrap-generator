@@ -34,7 +34,7 @@ module.exports = function(gulp) {
 
   gulp.task('render-wrapper', () => {
     var configuration = configure(...getConfigurators());
-    var content = render(configuration, jsWrapperRenderers);
+    var content = render(configuration, jsWrapperRenderers.all);
     render.write(content, settings);
   });
 

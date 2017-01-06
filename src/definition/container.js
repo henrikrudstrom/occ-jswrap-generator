@@ -44,8 +44,9 @@ var containerMixin = Base => class extends Base {
 class ContainerDefinition extends containerMixin(DeclarationDefinition) {
   constructor(conf, parent, factory, typemap) {
     super(conf, parent, factory, typemap);
-    this.members = conf.members.map(decl =>
-      factory.create(decl, this, typemap));
+    this.members = conf.members
+      .sort((a, b) => ((a.type + a.name) <= (b.type + b.name) ? -1 : 1))
+      .map(decl => factory.create(decl, this, typemap));
   }
 }
 

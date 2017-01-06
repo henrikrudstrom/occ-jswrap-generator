@@ -6,10 +6,10 @@ const groupBy = require('../util.js').groupBy;
 const renameMember = require('../util.js').renameMember;
 
 class CallableConfiguration extends DeclarationConfiguration {
-  constructor(name, methods) {
+  constructor(name, methods, overloadType) {
     super(name);
-
-    this.overloads = methods.map(method => new MethodOverloadConfiguration(name, method.key));
+    this.overloads = methods
+      .map(method => new MethodOverloadConfiguration(name, method.key, overloadType));
   }
 
   getKeys() {
@@ -43,7 +43,7 @@ class ConstructorConfiguration extends CallableConfiguration {
     var ctorQuery = `${parent.nativeName}::${parent.nativeName}(${signature})`;
     var ctors = nativeAPI.find(ctorQuery, 'constructor')
       .filter(ctor => ctor.copyConstructor !== true);
-    return new ConstructorConfiguration(parent.name, ctors);
+    return new ConstructorConfiguration(parent.name, ctors, 'constructorOverload');
   }
 }
 ConstructorConfiguration.prototype.type = 'constructor';

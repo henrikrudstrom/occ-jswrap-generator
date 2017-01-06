@@ -126,11 +126,12 @@ describe('Wrapper definition', () => {
 
   it('should not get wrong objects in declarations list', () => {
     var conf = configure((mod) => {
+      mod.name = 'test'
       mod.wrapClass('gp_Pnt', 'Pnt')
         .wrapMethod('SetX', 'x')
         .wrapConstructor('Standard_Real, Standard_Real, Standard_Real');
     });
-    var def = new Factory(definitions.all).create(conf).members[0];
+    var def = new Factory(definitions.all).create(conf).getMemberByName('test');
     var pnt = def.getMemberByName('Pnt');
     var ctor = pnt.getConstructor();
 
@@ -138,5 +139,16 @@ describe('Wrapper definition', () => {
     expect(ctor.type).to.equal('constructor');
     expect(ctor.overloads.length).to.equal(1);
     expect(ctor.overloads[0].canBeWrapped()).to.equal(true);
+  });
+
+  it('should not get wrong objects in declarations list', () => {
+    var conf = configure((mod) => {
+      mod.name = 'test';
+      mod.wrapClass('gp_Pnt', 'Pnt')
+        .wrapConstructor('Standard_Real, Standard_Real, Standard_Real');
+    });
+    var def = new Factory(definitions.all).create(conf).getMemberByName('test');
+    var pnt = def.getMemberByName('Pnt');
+    expect(pnt.getMemberByName('Pnt').overloads[0].type).to.equal('constructorOverload');
   });
 });

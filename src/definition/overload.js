@@ -28,4 +28,14 @@ class MethodOverloadDefinition extends DeclarationDefinition {
 }
 MethodOverloadDefinition.prototype.type = 'methodOverload';
 
-module.exports = MethodOverloadDefinition;
+class ConstructorOverloadDefinition extends MethodOverloadDefinition {
+  constructor(conf, parent, factory, typemap) {
+    super(conf, parent, factory, typemap);
+    this.methodKey = conf.methodKey;
+    this.nativeMethod = nativeAPI.get(this.methodKey);
+    this.returnType = parent.parent.name;
+  }
+}
+ConstructorOverloadDefinition.prototype.type = 'constructorOverload';
+
+module.exports = { MethodOverloadDefinition, ConstructorOverloadDefinition };

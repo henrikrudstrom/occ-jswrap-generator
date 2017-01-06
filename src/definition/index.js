@@ -2,7 +2,7 @@ const Builtin = require('./builtin.js');
 const Class = require('./class.js');
 const callable = require('./callable.js');
 const Module = require('./module.js');
-const Overload = require('./methodOverload.js');
+const overload = require('./overload.js');
 const Wrapper = require('./wrapper.js');
 
 module.exports = {
@@ -13,7 +13,8 @@ module.exports = {
   Getter: callable.GetterDefinition,
   Setter: callable.SetterDefinition,
   Module,
-  Overload,
+  MethodOverload: overload.MethodOverloadDefinition,
+  ConstructorOverload: overload.ConstructorOverloadDefinition,
   Wrapper
 };
 

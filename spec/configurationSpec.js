@@ -118,8 +118,6 @@ describe('Wrapper configuration', () => {
     configure((mod) => {
       var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
         .wrapReadOnlyProperty('X', 'x', (prop) => {
-          console.log("SDFSDF")
-          console.log(prop)
           prop.myProperty = 'hello';
         });
 
@@ -151,7 +149,7 @@ describe('Wrapper configuration', () => {
       var pointCtor = point.getMemberByName('Point');
       expect(pointCtor.type).to.equal('constructor');
       expect(pointCtor.overloads.length).to.equal(1);
-
+      expect(pointCtor.overloads[0].type).to.equal('constructorOverload');
       var pntCtor = pnt.getMemberByName('Pnt');
       expect(pntCtor.type).to.equal('constructor');
       expect(pntCtor.overloads.length).to.equal(3);

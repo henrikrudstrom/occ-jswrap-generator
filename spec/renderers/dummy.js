@@ -2,9 +2,7 @@ const Renderer = require('../../src/renderers/renderer.js');
 
 class WrapperRenderer extends Renderer {
   constructor(def, factory, typemap) {
-    super();
-    this.def = def;
-    this.typemap = typemap;
+    super(def, factory, typemap);
     this.renderers = def.members.map(mod => factory.create(mod, typemap));
   }
 
@@ -17,8 +15,7 @@ class WrapperRenderer extends Renderer {
 
 class ModuleRenderer extends Renderer {
   constructor(def, factory, typemap) {
-    super();
-    this.def = def;
+    super(def, factory, typemap);
     this.renderers = def.members.map(mod => factory.create(mod, typemap));
   }
 
@@ -33,8 +30,7 @@ return super.renderMain(files, parent);
 
 class ClassRenderer extends Renderer {
   constructor(def, factory, typemap) {
-    super();
-    this.def = def;
+    super(def, factory, typemap);
     this.renderers = def.members.map(mod => factory.create(mod, typemap));
   }
 
@@ -57,13 +53,31 @@ implementation {
 }
 
 class MethodRenderer extends Renderer {
-  constructor(def) {
-    super();
-    this.def = def;
+  constructor(def, factory, typemap) {
+    super(def, factory, typemap);
+    this.renderers = def.overloads.map(overload => factory.create(overload, typemap));
   }
 
   renderMemberImpl(parent) {
-    return `${parent.def.name}::${this.def.name} { ... }`;
+    return `${parent.def.name}::${this.def.name} { ${this.emit('call').join(',')} }`;
+  }
+}
+
+class MethodOverloadRenderer extends Renderer {
+  renderCall() {
+    return 'methodCall';
+  }
+}
+
+class ConstructorOverloadRenderer extends Renderer {
+  renderCall() {
+    return 'constructorCall';
+  }
+}
+
+class ConstructorRenderer extends MethodRenderer {
+  renderMemberImpl(parent) {
+    return `${parent.def.name}::Constructor { ${this.emit('call').join(',')} }`;
   }
 }
 
@@ -78,7 +92,11 @@ WrapperRenderer.prototype.type = 'wrapper';
 ModuleRenderer.prototype.type = 'module';
 ClassRenderer.prototype.type = 'class';
 MethodRenderer.prototype.type = 'method';
+ConstructorRenderer.prototype.type = 'constructor';
+MethodOverloadRenderer.prototype.type = 'methodOverload';
+ConstructorOverloadRenderer.prototype.type = 'constructorOverload';
 BuiltinRenderer.prototype.type = 'builtin';
 
 module.exports = [WrapperRenderer, ModuleRenderer,
-  ClassRenderer, MethodRenderer, BuiltinRenderer];
+  ClassRenderer, MethodRenderer, BuiltinRenderer, ConstructorRenderer,
+  ConstructorOverloadRenderer, MethodOverloadRenderer];

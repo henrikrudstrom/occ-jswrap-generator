@@ -1,12 +1,11 @@
 const DeclarationConfiguration = require('./declaration.js');
 
 class MethodOverloadConfiguration extends DeclarationConfiguration {
-  constructor(name, methodKey) {
+  constructor(name, methodKey, type) {
     super(name);
     this.methodKey = methodKey;
+    this.type = type || 'methodOverload';
   }
 }
-MethodOverloadConfiguration.prototype.type = 'methodOverload';
-
 
 module.exports = MethodOverloadConfiguration;
