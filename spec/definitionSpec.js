@@ -79,34 +79,21 @@ describe('Wrapper definition', () => {
     var def = new Factory(definitions.all).create(conf).getMemberByName('test');
     var pointClass = def.getMemberByName('CartesianPoint');
     var propX = pointClass.getMemberByName('x');
+    var setPropX = pointClass.getMemberByName('setX');
     var propPnt = pointClass.getMemberByName('pnt');
     var ctor = pointClass.getConstructor();
 
-    expect(propX.getter.overloads[0].canBeWrapped()).to.equal(true);
-    expect(propX.getter.canBeWrapped()).to.equal(true);
+    expect(propX.overloads[0].canBeWrapped()).to.equal(true);
     expect(propX.canBeWrapped()).to.equal(true);
+
+    expect(setPropX.overloads[0].canBeWrapped()).to.equal(true);
+    expect(setPropX.canBeWrapped()).to.equal(true);
 
     expect(propPnt.canBeWrapped()).to.equal(false);
 
     expect(ctor.overloads[0].canBeWrapped()).to.equal(false);
     expect(ctor.overloads[1].canBeWrapped()).to.equal(true);
     expect(ctor.canBeWrapped()).to.equal(true);
-  });
-
-  it('overloads have reference to parent class', () => {
-    var conf = configure((mod) => {
-      mod.name = 'test';
-      mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint')
-        .wrapProperty('X', 'SetX', 'x')
-        .wrapMethod('Pnt', 'pnt')
-        .wrapConstructor('*');
-    });
-    var def = new Factory(definitions.all).create(conf).getMemberByName('test');
-    var pointClass = def.getMemberByName('CartesianPoint');
-    var propX = pointClass.getMemberByName('x');
-    var methodPnt = pointClass.getMemberByName('pnt');
-    expect(propX.getter.overloads[0].parentClass.name).to.equal('CartesianPoint');
-    expect(methodPnt.getter.overloads[0].parentClass.name).to.equal('CartesianPoint');
   });
 
   it('can determine which wrapper classes needs to be included', () => {
@@ -126,9 +113,8 @@ describe('Wrapper definition', () => {
     var propX = pointClass.getMemberByName('x');
     var propPnt = pointClass.getMemberByName('pnt');
 
-    expect(propX.getter.overloads[0].getWrappedDependencies().length).to.equal(0);
-    expect(propPnt.getter.overloads[0].getWrappedDependencies().map(d => d.name)).to.include('Pnt');
-    expect(propPnt.getter.getWrappedDependencies().map(d => d.name)).to.include('Pnt');
+    expect(propX.overloads[0].getWrappedDependencies().length).to.equal(0);
+    expect(propPnt.overloads[0].getWrappedDependencies().map(d => d.name)).to.include('Pnt');
     expect(propPnt.getWrappedDependencies().map(d => d.name)).to.include('Pnt');
 
     var deps = pointClass.getWrappedDependencies().map(dep => dep.name);

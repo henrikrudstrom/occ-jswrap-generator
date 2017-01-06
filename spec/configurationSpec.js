@@ -108,8 +108,9 @@ describe('Wrapper configuration', () => {
       var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
         .wrapProperty('X', 'SetX', 'x');
 
-      expect(pnt.getMemberByName('x').type).to.equal('property');
-      expect(pnt.getMemberByName('x').readOnly).to.equal(false);
+      expect(pnt.getMemberByName('x').type).to.equal('getter');
+      expect(pnt.getMemberByName('setX').type).to.equal('setter');
+      //expect(pnt.getMemberByName('x').readOnly).to.equal(false);
     });
   });
 
@@ -117,10 +118,12 @@ describe('Wrapper configuration', () => {
     configure((mod) => {
       var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
         .wrapReadOnlyProperty('X', 'x', (prop) => {
+          console.log("SDFSDF")
+          console.log(prop)
           prop.myProperty = 'hello';
         });
 
-      expect(pnt.getMemberByName('x').type).to.equal('property');
+      expect(pnt.getMemberByName('x').type).to.equal('getter');
       expect(pnt.getMemberByName('x').readOnly).to.equal(true);
       expect(pnt.getMemberByName('x').myProperty).to.equal('hello');
     });
@@ -132,8 +135,8 @@ describe('Wrapper configuration', () => {
         .wrapMethod('*', util.renameMember)
         .wrapProperty('X', 'SetX', 'x');
 
-      expect(pnt.getMemberByName('x').type).to.equal('property');
-      expect(pnt.getMemberByName('setX')).to.equal(undefined);
+      expect(pnt.getMemberByName('x').type).to.equal('getter');
+      expect(pnt.getMemberByName('setX').type).to.equal('setter');
     });
   });
 
@@ -151,7 +154,7 @@ describe('Wrapper configuration', () => {
 
       var pntCtor = pnt.getMemberByName('Pnt');
       expect(pntCtor.type).to.equal('constructor');
-      expect(pntCtor.overloads.length).to.equal(2);
+      expect(pntCtor.overloads.length).to.equal(3);
     });
   });
 

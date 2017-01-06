@@ -15,11 +15,8 @@ gulp.task('pre-test', function () {
 });
 
 function getSources() {
-  var specSources = ['spec/*Spec.js'];
-  var arg = yargs.argv.spec;
-  if (arg)
-    specSources = `spec/${arg}Spec.js`;
-  return specSources;
+  var arg = yargs.argv.spec || '*';
+  return `spec/${arg}Spec.js`;
 }
 
 gulp.task('test', function() {

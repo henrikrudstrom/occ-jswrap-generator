@@ -71,12 +71,15 @@ class ContainerConfiguration extends containerMixin(DeclarationConfiguration) {
   }
 
   wrap(fn, ...rest) {
-    var conf = fn(this, ...rest.slice(0, fn.length - 1));
-    var cb = rest[fn.length - 1];
-    if (cb) cb(conf);
-    if (!Array.isArray(conf)) conf = [conf];
+    var members = fn(this, ...rest.slice(0, fn.length - 1));
+    if (!Array.isArray(members)) members = [members];
 
-    this.members = this.members.concat(conf);
+    // execute callback function to access wrapped result
+    var cb = rest[fn.length - 1];
+    if (cb) members.forEach(cb);
+
+    members.forEach(member => this.excludeByName(member.name));
+    this.members = this.members.concat(members);
     return this;
   }
 }
