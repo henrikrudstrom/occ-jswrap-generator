@@ -1,7 +1,7 @@
 const chai = require('chai');
 const configure = require('../src/configure.js');
 var Factory = require('../src/factory.js').Definition;
-var definitions = require('../src/model');
+var definitions = require('../src/definition');
 
 const expect = chai.expect;
 chai.use(require('chai-things'));
@@ -9,7 +9,7 @@ chai.use(require('chai-things'));
 describe('typemap', () => {
   it('can recognize builtin types', () => {
     var conf = configure(() => {});
-    var wrapper = new Factory(definitions).create(conf);
+    var wrapper = new Factory(definitions.all).create(conf);
     var typemap = wrapper.typemap;
 
     expect(typemap.wrapped).to.include.keys('Standard_Real');
@@ -25,7 +25,7 @@ describe('typemap', () => {
       mod.wrapClass('gp_Pnt', 'Pnt');
     });
 
-    var typemap = new Factory(definitions).create(conf).typemap;
+    var typemap = new Factory(definitions.all).create(conf).typemap;
 
     expect(typemap.getWrappedType('Geom_Point').name).to.equal('Point');
     expect(typemap.getWrappedType('gp_Pnt').name).to.equal('Pnt');

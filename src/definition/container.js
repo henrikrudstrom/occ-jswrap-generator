@@ -1,5 +1,6 @@
+'use strict'
 const createRegexp = require('./../util.js').createRegexp;
-const Declaration = require('./declaration.js');
+const DeclarationDefinition = require('./declaration.js');
 const upperCamelCase = require('uppercamelcase');
 
 function matchDeclByKey(exp) {
@@ -40,7 +41,7 @@ var containerMixin = Base => class extends Base {
   }
 };
 
-class ContainerDefinition extends containerMixin(Declaration.Definition) {
+class ContainerDefinition extends containerMixin(DeclarationDefinition) {
   constructor(conf, parent, factory, typemap) {
     super(conf, parent, factory, typemap);
     this.members = conf.members.map(decl =>
@@ -48,49 +49,4 @@ class ContainerDefinition extends containerMixin(Declaration.Definition) {
   }
 }
 
-
-class ContainerConfiguration extends containerMixin(Declaration.Configuration) {
-  constructor(name, type) {
-    super(name);
-    this.members = [];
-  }
-
-  excludeByKey(key) {
-    var exp = createRegexp(key);
-    this.members = this.members.filter(not(matchDeclByKey(exp)));
-    return this;
-  }
-
-  excludeByName(key) {
-    var exp = createRegexp(key);
-    this.members = this.members.filter(not(matchDeclByName(exp)));
-    return this;
-  }
-
-  rename(name, newName) {
-    var decl = this.getMemberByName(name);
-    decl.name = newName;
-    return this;
-  }
-
-  static registerType(typename, fn) {
-    this.prototype[`wrap${upperCamelCase(typename)}`] = function (...args) {
-      return this.wrap(fn, ...args);
-    };
-  }
-
-  wrap(fn, ...rest) {
-    var conf = fn(this, ...rest.slice(0, fn.length - 1));
-    var cb = rest[fn.length - 1];
-    if (cb) cb(conf);
-    if (!Array.isArray(conf)) conf = [conf];
-
-    this.members = this.members.concat(conf);
-    return this;
-  }
-}
-
-module.exports = {
-  Configuration: ContainerConfiguration,
-  Definition: ContainerDefinition
-};
+module.exports = ContainerDefinition;

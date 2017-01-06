@@ -1,12 +1,12 @@
 const fs = require('fs');
 const mkdirp = require('mkdirp');
 const path = require('path');
-const definitions = require('./model');
+const definitions = require('./definition');
 
 const Factory = require('./factory.js');
 
 module.exports = function render(configuration, renderers) {
-  var model = new Factory.Definition(definitions).create(configuration);
+  var model = new Factory.Definition(definitions.all).create(configuration);
   var renderer = new Factory.Renderer(renderers).create(model);
 
   return renderer.renderMain();

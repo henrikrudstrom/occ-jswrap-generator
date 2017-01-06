@@ -1,8 +1,8 @@
-const Container = require('./container.js');
+const ContainerDefinition = require('./container.js');
 const nativeAPI = require('../nativeAPI.js');
 
 
-class ClassDefinition extends Container.Definition {
+class ClassDefinition extends ContainerDefinition {
   constructor(conf, parent, factory, typemap) {
     super(conf, parent, factory, typemap);
     this.nativeName = conf.nativeName;
@@ -49,21 +49,4 @@ class ClassDefinition extends Container.Definition {
 }
 ClassDefinition.prototype.type = 'class';
 
-class ClassConfiguration extends Container.Configuration {
-  constructor(name, key) {
-    super(name);
-    this.nativeName = key;
-    this.isType = true;
-  }
-
-
-  getKeys() {
-    return [this.nativeName];
-  }
-}
-ClassConfiguration.prototype.type = 'class';
-
-module.exports = {
-  Configuration: ClassConfiguration,
-  Definition: ClassDefinition
-};
+module.exports = ClassDefinition;

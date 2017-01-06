@@ -1,7 +1,7 @@
 const nativeAPI = require('../nativeAPI');
-const Declaration = require('./declaration.js');
+const DeclarationDefinition = require('./declaration.js');
 
-class MethodOverloadDefinition extends Declaration.Definition {
+class MethodOverloadDefinition extends DeclarationDefinition {
   constructor(conf, parent, factory, typemap) {
     super(conf, parent, factory, typemap);
     this.methodKey = conf.methodKey;
@@ -28,16 +28,4 @@ class MethodOverloadDefinition extends Declaration.Definition {
 }
 MethodOverloadDefinition.prototype.type = 'methodOverload';
 
-class MethodOverloadConfiguration extends Declaration.Configuration {
-  constructor(name, methodKey) {
-    super(name);
-    this.methodKey = methodKey;
-  }
-}
-MethodOverloadConfiguration.prototype.type = 'methodOverload';
-
-
-module.exports = {
-  Configuration: MethodOverloadConfiguration,
-  Definition: MethodOverloadDefinition
-};
+module.exports = MethodOverloadDefinition;

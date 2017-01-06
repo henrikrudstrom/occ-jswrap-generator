@@ -2,7 +2,7 @@ const chai = require('chai');
 const configure = require('../src/configure.js');
 const util = require('../src/util.js');
 
-require('../src/model');
+require('../src/definition');
 
 const expect = chai.expect;
 chai.use(require('chai-things'));

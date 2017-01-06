@@ -2,7 +2,7 @@ const chai = require('chai');
 const configure = require('../src/configure.js');
 const dummyRenderers = require('./renderers/dummy.js');
 const render = require('../src/render.js');
-const definitions = require('../src/model');
+const definitions = require('../src/definition');
 const DefinitionFactory = require('../src/factory.js').Definition;
 
 const expect = chai.expect;
@@ -20,10 +20,10 @@ describe('Wrapper definition', () => {
     }, (mod) => {
       mod.name = 'mod_b';
       mod.wrapClass('gp_Pnt', 'Pnt')
-        .wrapMethod('X');
+        .wrapMethod('X', 'x');
     });
 
-    var wrapper = new DefinitionFactory(definitions).create(conf);
+    var wrapper = new DefinitionFactory(definitions.all).create(conf);
     var method = wrapper.getMemberByName('mod_b').getMemberByName('Pnt');
     expect(method.canBeWrapped()).to.equal(true);
     var files = render(wrapper, dummyRenderers);

@@ -1,27 +1,18 @@
-const Container = require('./container.js');
-const Class = require('./class.js');
+const ContainerConfiguration = require('./container.js');
+const ClassConfiguration = require('./class.js');
 const nativeAPI = require('../nativeAPI.js');
 
-class ModuleDefinition extends Container.Definition {
-  constructor(conf, parent, factory, typemap) {
-    super(conf, parent, factory, typemap);
-  }
-
-}
-ModuleDefinition.prototype.type = 'module';
-
-class ModuleConfiguration extends Container.Configuration {
+class ModuleConfiguration extends ContainerConfiguration {
   constructor(name) {
     super(name || 'unnamed-module');
   }
-
 
   wrapClass(clsKey, name) {
     var cls = this.getMemberByKey(clsKey);
     if (cls !== undefined) {
       throw new Error(`Class '${clsKey} has already been wrapped'`);
     }
-    cls = new Class.Configuration(name, clsKey);
+    cls = new ClassConfiguration(name, clsKey);
     this.members.push(cls);
     return cls;
   }
@@ -33,7 +24,4 @@ class ModuleConfiguration extends Container.Configuration {
 }
 ModuleConfiguration.prototype.type = 'module';
 
-module.exports = {
-  Configuration: ModuleConfiguration,
-  Definition: ModuleDefinition
-};
+module.exports = ModuleConfiguration;
