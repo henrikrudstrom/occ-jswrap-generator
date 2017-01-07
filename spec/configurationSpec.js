@@ -16,17 +16,17 @@ describe('Wrapper configuration', () => {
 
   it('can define specific classes to be wrapped', () => {
     configure((mod) => {
-      var cls = mod.wrapClass('gp_Pnt', 'Pnt');
-      expect(cls.name).to.equal('Pnt');
+      mod.wrapClass('gp_Pnt', 'Pnt');
       expect(mod.members.length).to.equal(1);
-      expect(mod.getMemberByKey('gp_Pnt')).to.not.equal(undefined);
       expect(mod.getMemberByName('Pnt')).to.not.equal(undefined);
+      expect(mod.getMemberByName('Pnt').name).to.equal('Pnt');
+      expect(mod.getMemberByName('Pnt').type).to.equal('class');
     });
   });
 
   it('can define many wrapped classes with a naming function', () => {
     configure((mod) => {
-      mod.wrapClasses('gp_*', util.renameClass);
+      mod.wrapClass('gp_*', util.renameClass);
       expect(mod.getMemberByKey('gp_Pnt').name).to.equal('Pnt');
       expect(mod.members.length).to.equal(41);
     });
@@ -34,7 +34,7 @@ describe('Wrapper configuration', () => {
 
   it('can exclude or override already wrapped classes', () => {
     configure((mod) => {
-      mod.wrapClasses('gp_*', util.renameClass);
+      mod.wrapClass('gp_*', util.renameClass);
       mod.excludeByKey('gp_XYZ');
       expect(mod.members.length).to.equal(40);
       expect(mod.getMemberByKey('gp_XYZ')).to.equal(undefined);
@@ -43,7 +43,7 @@ describe('Wrapper configuration', () => {
 
   it('can override already wrapped classes', () => {
     configure((mod) => {
-      mod.wrapClasses('gp_*', util.renameClass);
+      mod.wrapClass('gp_*', util.renameClass);
       mod.rename('Pnt', 'Point');
       expect(mod.members.length).to.equal(41);
       expect(mod.getMemberByKey('gp_Pnt').name).to.equal('Point');
@@ -52,10 +52,11 @@ describe('Wrapper configuration', () => {
 
   it('can define methods to be wrapped', () => {
     configure((mod) => {
-      var cls = mod.wrapClass('gp_Pnt', 'Point')
-        .wrapMethod('Distance', 'distance')
-        .wrapMethod('X', 'x');
-
+      mod.wrapClass('gp_Pnt', 'Point', (cls) => {
+        cls.wrapMethod('Distance', 'distance')
+         .wrapMethod('X', 'x');
+      });
+      var cls = mod.getMemberByName('Point');
       expect(cls.members.length).to.equal(2);
       expect(cls.members[0].name).to.equal('distance');
     });
@@ -63,8 +64,10 @@ describe('Wrapper configuration', () => {
 
   it('can define many wrapped methods at once', () => {
     configure((mod) => {
-      var cls = mod.wrapClass('gp_Pnt', 'Point')
-        .wrapMethod('Set*', util.renameMember);
+      mod.wrapClass('gp_Pnt', 'Point', (cls) => {
+        cls.wrapMethod('Set*', util.renameMember);
+      });
+      var cls = mod.getMemberByName('Point');
       expect(cls.members.length).to.equal(5);
       expect(cls.getMemberByName('setX').name).to.equal('setX');
     });
@@ -72,10 +75,12 @@ describe('Wrapper configuration', () => {
 
   it('can override specific methods', () => {
     configure((mod) => {
-      var cls = mod.wrapClass('gp_Pnt', 'Point')
-        .wrapMethod('Set*', util.renameMember)
-        .rename('setX', 'specialName');
+      mod.wrapClass('gp_Pnt', 'Point', (cls) => {
+        cls.wrapMethod('Set*', util.renameMember)
+           .rename('setX', 'specialName');
+      });
 
+      var cls = mod.getMemberByName('Point');
       expect(cls.getMemberByName('specialName').name).to.equal('specialName');
       expect(cls.getMemberByName('setX')).to.equal(undefined);
       expect(cls.members.length).to.equal(5);
@@ -84,10 +89,12 @@ describe('Wrapper configuration', () => {
 
   it('can exclude wrapped methods', () => {
     configure((mod) => {
-      var cls = mod.wrapClass('gp_Pnt', 'Point')
-        .wrapMethod('Set*', util.renameMember)
-        .excludeByName('setX');
+      mod.wrapClass('gp_Pnt', 'Point', (cls) => {
+        cls.wrapMethod('Set*', util.renameMember)
+           .excludeByName('setX');
+      });
 
+      var cls = mod.getMemberByName('Point');
       expect(cls.members.length).to.equal(4);
       expect(cls.getMemberByName('setX')).to.equal(undefined);
     });
@@ -95,9 +102,11 @@ describe('Wrapper configuration', () => {
 
   it('can define overloaded methods', () => {
     configure((mod) => {
-      var cls = mod.wrapClass('gp_Pln', 'Plane')
-        .wrapMethod('Distance', 'distance');
+      mod.wrapClass('gp_Pln', 'Plane', (cls) => {
+        cls.wrapMethod('Distance', 'distance');
+      });
 
+      var cls = mod.getMemberByName('Plane');
       expect(cls.members.length).to.equal(1);
       expect(cls.members[0].overloads.length).to.equal(3);
     });
@@ -105,47 +114,56 @@ describe('Wrapper configuration', () => {
 
   it('can define wrapped properties', () => {
     configure((mod) => {
-      var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
-        .wrapProperty('X', 'SetX', 'x');
+      mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
+        cls.wrapProperty('X', 'SetX', 'x');
+      });
 
-      expect(pnt.getMemberByName('x').type).to.equal('getter');
-      expect(pnt.getMemberByName('setX').type).to.equal('setter');
-      //expect(pnt.getMemberByName('x').readOnly).to.equal(false);
+      var cls = mod.getMemberByName('Pnt');
+      expect(cls.getMemberByName('x').type).to.equal('getter');
+      expect(cls.getMemberByName('setX').type).to.equal('setter');
     });
   });
 
   it('can define wrapped read-only properties', () => {
     configure((mod) => {
-      var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
-        .wrapReadOnlyProperty('X', 'x', (prop) => {
+      mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
+        cls.wrapReadOnlyProperty('X', 'x', (prop) => {
           prop.myProperty = 'hello';
         });
+      });
 
-      expect(pnt.getMemberByName('x').type).to.equal('getter');
-      expect(pnt.getMemberByName('x').readOnly).to.equal(true);
-      expect(pnt.getMemberByName('x').myProperty).to.equal('hello');
+      var cls = mod.getMemberByName('Pnt');
+      expect(cls.getMemberByName('x').type).to.equal('getter');
+      expect(cls.getMemberByName('x').readOnly).to.equal(true);
+      expect(cls.getMemberByName('x').myProperty).to.equal('hello');
     });
   });
 
   it('removes methods that are accessors to property', () => {
     configure((mod) => {
-      var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
-        .wrapMethod('*', util.renameMember)
-        .wrapProperty('X', 'SetX', 'x');
+      mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
+        cls.wrapMethod('*', util.renameMember)
+           .wrapProperty('X', 'SetX', 'x');
+      });
 
-      expect(pnt.getMemberByName('x').type).to.equal('getter');
-      expect(pnt.getMemberByName('setX').type).to.equal('setter');
+      var cls = mod.getMemberByName('Pnt');
+      expect(cls.getMemberByName('x').type).to.equal('getter');
+      expect(cls.getMemberByName('setX').type).to.equal('setter');
     });
   });
 
   it('can wrap specific constructors', () => {
     configure((mod) => {
-      var point = mod.wrapClass('Geom_CartesianPoint', 'Point')
-        .wrapConstructor('gp_Pnt');
-      var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
-        .wrapConstructor('Standard_Real, Standard_Real, Standard_Real')
-        .wrapConstructor('');
+      mod.wrapClass('Geom_CartesianPoint', 'Point', (cls) => {
+        cls.wrapConstructor('gp_Pnt');
+      });
+      mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
+        cls.wrapConstructor('Standard_Real, Standard_Real, Standard_Real')
+           .wrapConstructor('');
+      });
 
+      var point = mod.getMemberByName('Point');
+      var pnt = mod.getMemberByName('Pnt');
       var pointCtor = point.getMemberByName('Point');
       expect(pointCtor.type).to.equal('constructor');
       expect(pointCtor.overloads.length).to.equal(1);
@@ -158,9 +176,11 @@ describe('Wrapper configuration', () => {
 
   it('can wrap all constructors of a class and exclude copy-constructors', () => {
     configure((mod) => {
-      var pnt = mod.wrapClass('gp_Pnt', 'Pnt')
-        .wrapConstructor('*');
+      mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
+        cls.wrapConstructor('*');
+      });
 
+      var pnt = mod.getMemberByName('Pnt');
       var pntCtor = pnt.getMemberByName('Pnt');
       expect(pntCtor.type).to.equal('constructor');
       expect(pntCtor.overloads.length).to.equal(3);

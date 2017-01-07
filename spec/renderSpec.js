@@ -14,15 +14,18 @@ describe('Renderer', () => {
   it('it can render', () => {
     var conf = configure((mod) => {
       mod.name = 'mod_a';
-      mod.wrapClass('Geom_CartesianPoint', 'Point')
-        .wrapMethod('SetX', 'setX')
-        .wrapConstructor('Standard_Real, Standard_Real, Standard_Real');
-      mod.wrapClass('Geom_Geometry', 'Geometry')
-        .wrapMethod('Mirror', 'mirror');
+      mod.wrapClass('Geom_CartesianPoint', 'Point', (cls) => {
+        cls.wrapMethod('SetX', 'setX')
+          .wrapConstructor('Standard_Real, Standard_Real, Standard_Real');
+      });
+      mod.wrapClass('Geom_Geometry', 'Geometry', (cls) => {
+        cls.wrapMethod('Mirror', 'mirror');
+      });
     }, (mod) => {
       mod.name = 'mod_b';
-      mod.wrapClass('gp_Pnt', 'Pnt')
-        .wrapMethod('X', 'x');
+      mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
+        cls.wrapMethod('X', 'x');
+      });
     });
     var wrapper = new factory.Definition(definitions.all).create(conf);
     var method = wrapper.getMemberByName('mod_b').getMemberByName('Pnt');
@@ -37,10 +40,11 @@ describe('Renderer', () => {
   it('creates the correct renderers for a configuration', () => {
     var conf = configure((mod) => {
       mod.name = 'a';
-      mod.wrapClass('gp_Pnt', 'Pnt')
-        .wrapMethod('Distance', 'distance')
+      mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
+        cls.wrapMethod('Distance', 'distance')
         .wrapProperty('X', 'SetX', 'x')
         .wrapConstructor('Standard_Real, Standard_Real, Standard_Real');
+      });
     });
     var model = new factory.Definition(definitions.all).create(conf);
     var wrapper = new factory.Renderer(renderers.all).create(model);

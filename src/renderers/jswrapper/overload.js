@@ -31,13 +31,12 @@ class MethodOverloadRenderer extends Renderer {
     var overloadName = this.overloadName();
 
     var argValues = nativeMethod.arguments.map((arg, i) => {
-      console.log(arg)
       return this.typemap
         .getWrappedType(arg.type)
         .toNative('arg' + i, `info[${i}]`, 'return NULL;');
     }
     ).join('\n  ');
-    console.log(this.def)
+    console.log(this.def.name, this.def.type)
     return `\
       ${this.def.returnType} ${overloadName}(const Nan::FunctionCallbackInfo<v8::Value>& info, bool & success){
         if(info.Length() != ${nativeMethod.arguments.length}) {

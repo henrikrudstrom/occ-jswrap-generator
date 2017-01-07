@@ -47,10 +47,11 @@ describe('Wrapper definition', () => {
     var conf = configure((mod) => {
       mod.name = 'test';
       mod.wrapClass('gp_Pnt', 'Pnt');
-      mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint')
-        .wrapMethod('X', 'x')
-        .wrapMethod('Pnt', 'pnt')
-        .wrapMethod('Transform', 'transform');
+      mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint', (cls) => {
+        cls.wrapMethod('X', 'x')
+          .wrapMethod('Pnt', 'pnt')
+          .wrapMethod('Transform', 'transform');
+      });
     });
     var def = new Factory(definitions.all).create(conf).getMemberByName('test');
     var pointClass = def.getMemberByName('CartesianPoint');
@@ -71,10 +72,11 @@ describe('Wrapper definition', () => {
   it('can determine if property dependencies are wrapped', () => {
     var conf = configure((mod) => {
       mod.name = 'test';
-      mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint')
-        .wrapProperty('X', 'SetX', 'x')
-        .wrapReadOnlyProperty('Pnt', 'pnt')
-        .wrapConstructor('*');
+      mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint', (cls) => {
+        cls.wrapProperty('X', 'SetX', 'x')
+          .wrapReadOnlyProperty('Pnt', 'pnt')
+          .wrapConstructor('*');
+      });
     });
     var def = new Factory(definitions.all).create(conf).getMemberByName('test');
     var pointClass = def.getMemberByName('CartesianPoint');
@@ -99,15 +101,18 @@ describe('Wrapper definition', () => {
   it('can determine which wrapper classes needs to be included', () => {
     var conf = configure((mod) => {
       mod.name = 'test';
-      mod.wrapClass('gp_Pnt', 'Pnt')
-        .wrapConstructor('*');
+      mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
+        cls.wrapConstructor('*');
+      });
       mod.wrapClass('gp_Trsf', 'Trsf');
       mod.wrapClass('Geom_Point', 'Point');
-      mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint')
-        .wrapProperty('X', 'SetX', 'x')
-        .wrapReadOnlyProperty('Pnt', 'pnt')
-        .wrapMethod('Transform', 'transform');
+      mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint', (cls) => {
+        cls.wrapProperty('X', 'SetX', 'x')
+          .wrapReadOnlyProperty('Pnt', 'pnt')
+          .wrapMethod('Transform', 'transform');
+      });
     });
+
     var def = new Factory(definitions.all).create(conf).getMemberByName('test');
     var pointClass = def.getMemberByName('CartesianPoint');
     var propX = pointClass.getMemberByName('x');
@@ -127,10 +132,12 @@ describe('Wrapper definition', () => {
   it('should not get wrong objects in declarations list', () => {
     var conf = configure((mod) => {
       mod.name = 'test'
-      mod.wrapClass('gp_Pnt', 'Pnt')
-        .wrapMethod('SetX', 'x')
-        .wrapConstructor('Standard_Real, Standard_Real, Standard_Real');
+      mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
+        cls.wrapMethod('SetX', 'x')
+          .wrapConstructor('Standard_Real, Standard_Real, Standard_Real');
+      });
     });
+
     var def = new Factory(definitions.all).create(conf).getMemberByName('test');
     var pnt = def.getMemberByName('Pnt');
     var ctor = pnt.getConstructor();
@@ -144,8 +151,9 @@ describe('Wrapper definition', () => {
   it('should not get wrong objects in declarations list', () => {
     var conf = configure((mod) => {
       mod.name = 'test';
-      mod.wrapClass('gp_Pnt', 'Pnt')
-        .wrapConstructor('Standard_Real, Standard_Real, Standard_Real');
+      mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
+        cls.wrapConstructor('Standard_Real, Standard_Real, Standard_Real');
+      });
     });
     var def = new Factory(definitions.all).create(conf).getMemberByName('test');
     var pnt = def.getMemberByName('Pnt');

@@ -77,7 +77,6 @@ class ContainerConfiguration extends containerMixin(DeclarationConfiguration) {
     // execute callback function to access wrapped result
     var cb = rest[fn.length - 1];
     if (cb) members.forEach(cb);
-
     members.forEach(member => this.excludeByName(member.name));
     this.members = this.members.concat(members);
     return this;

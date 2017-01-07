@@ -7,20 +7,20 @@ class ModuleConfiguration extends ContainerConfiguration {
     super(name || 'unnamed-module');
   }
 
-  wrapClass(clsKey, name) {
-    var cls = this.getMemberByKey(clsKey);
-    if (cls !== undefined) {
-      throw new Error(`Class '${clsKey} has already been wrapped'`);
-    }
-    cls = new ClassConfiguration(name, clsKey);
-    this.members.push(cls);
-    return cls;
-  }
-
-  wrapClasses(query, fn) {
-    var res = nativeAPI.find(query);
-    res.forEach(decl => this.wrapClass(decl.name, fn(decl.name)));
-  }
+  // wrapClass(clsKey, name) {
+  //   var cls = this.getMemberByKey(clsKey);
+  //   if (cls !== undefined) {
+  //     throw new Error(`Class '${clsKey} has already been wrapped'`);
+  //   }
+  //   cls = new ClassConfiguration(name, clsKey);
+  //   this.members.push(cls);
+  //   return cls;
+  // }
+  //
+  // wrapClasses(query, fn) {
+  //   var res = nativeAPI.find(query);
+  //   res.forEach(decl => this.wrapClass(decl.name, fn(decl.name)));
+  // }
 }
 ModuleConfiguration.prototype.type = 'module';
 

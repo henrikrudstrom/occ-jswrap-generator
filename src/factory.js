@@ -11,7 +11,6 @@ class Factory {
 
 class RendererFactory extends Factory {
   create(def, typemap, ...rest) {
-    console.log(def.type)
     typemap = typemap || new Typemap.Renderer();
     var renderer = new this.constructors[def.type](def, this, typemap, ...rest);
     typemap.populate(renderer);
