@@ -29,7 +29,7 @@ T* CheckedUnWrap(v8::Handle<v8::Value> value){
                 return NULL;
         }
 
-        v8::Handle<v8::Value> objproto = handle->GetPrototype;
+        v8::Handle<v8::Value> objproto = handle->GetPrototype();
         v8::Handle<v8::Value> targetProto = Nan::New(T::prototype);
         Nan::MaybeLocal<v8::Object> maybeProto;
 
@@ -39,7 +39,7 @@ T* CheckedUnWrap(v8::Handle<v8::Value> value){
                         Nan::ThrowError("Argument error");
                         return NULL;
                 }
-                objproto = maybeProto.ToLocalChecked()->GetPrototype;
+                objproto = maybeProto.ToLocalChecked()->GetPrototype();
                 if(objproto.IsEmpty()) {
                         Nan::ThrowError("Argument error");
                         return NULL;

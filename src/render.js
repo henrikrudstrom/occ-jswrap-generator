@@ -16,7 +16,7 @@ module.exports.write = function write(content, settings) {
   var paths = {
     '[inc]': settings.paths.inc,
     '[src]': settings.paths.src,
-    '[root]': '.'
+    '[build]': settings.paths.build
   };
 
   function replace(filename) {

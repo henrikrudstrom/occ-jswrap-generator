@@ -27,7 +27,7 @@ class ClassRenderer extends base.ContainerRenderer {
   }
 
   renderIncludeClass() {
-    return `#include <${this.def.qualifiedName}.h>`;
+    return `#include <${this.def.parent.name}/${this.def.name}.h>`;
   }
 
   renderModuleInitCall() {
@@ -81,13 +81,14 @@ class ClassRenderer extends base.ContainerRenderer {
           static Nan::Persistent<v8::FunctionTemplate> constructor;
           static v8::Local<v8::Object> BuildWrapper(void * res);
           ${base ? '' : `${wrappedType} wrappedObject;`}
-        protected:
           ${emptyCtor}
           ${ptrCtor}
           ${valueCtor}
+        protected:
+
 
         private:
-          ${this.emit('memberDeclarations').join('\n')}
+          ${this.emit('renderMemberDeclarations').join('\n')}
         };
       }
 
@@ -140,7 +141,7 @@ class ClassRenderer extends base.ContainerRenderer {
       return val;
     }
 
-    ${this.emit('memberImplementation').join('\n')}
+    ${this.emit('renderMemberImplementation').join('\n')}
 
     NAN_MODULE_INIT(${qualifiedName}::Init) {
       auto qualifiedName = Nan::New("${qualifiedName}").ToLocalChecked();
@@ -151,10 +152,10 @@ class ClassRenderer extends base.ContainerRenderer {
       ctorInst->SetInternalFieldCount(1); // for ObjectWrap, it should set 1
       ${inherit}
 
-      ${this.emit('memberInitialization').join('\n')}
+      ${this.emit('renderMemberInitialization').join('\n')}
 
       Nan::Set(target, className, Nan::GetFunction(ctor).ToLocalChecked());
-      v8::Local<v8::Object> obj = Nan::To<v8::Object>(ctor->GetFunction()->NewInstance()->GetPrototype).ToLocalChecked();
+      v8::Local<v8::Object> obj = Nan::To<v8::Object>(ctor->GetFunction()->NewInstance()->GetPrototype()).ToLocalChecked();
       prototype.Reset(obj);
       constructor.Reset(ctor);
 

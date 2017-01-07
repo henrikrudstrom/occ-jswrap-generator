@@ -22,7 +22,7 @@ class ModuleRenderer extends base.ContainerRenderer {
   renderMain(files, parent) {
     files[`src/${this.def.name}.cc`] = `\
 init {
-  ${this.emit('moduleInit').join('\n')}
+  ${this.emit('renderModuleInit').join('\n')}
 }`;
 return super.renderMain(files, parent);
   }
@@ -41,7 +41,7 @@ class ClassRenderer extends base.ContainerRenderer {
   renderMain(files, parent) {
     files[`src/${this.def.name}.cc`] = `\
 implementation {
-  ${this.emit('memberImpl').join('\n')}
+  ${this.emit('renderMemberImpl').join('\n')}
 }`;
 
   return super.renderMain(files, parent);
@@ -63,7 +63,7 @@ class MethodRenderer extends base.ContainerRenderer {
   }
 
   renderMemberImpl(parent) {
-    return `${parent.def.name}::${this.def.name} { ${this.emit('call').join(',')} }`;
+    return `${parent.def.name}::${this.def.name} { ${this.emit('renderCall').join(',')} }`;
   }
 }
 
@@ -81,7 +81,7 @@ class ConstructorOverloadRenderer extends base.Renderer {
 
 class ConstructorRenderer extends MethodRenderer {
   renderMemberImpl(parent) {
-    return `${parent.def.name}::Constructor { ${this.emit('call').join(',')} }`;
+    return `${parent.def.name}::Constructor { ${this.emit('renderCall').join(',')} }`;
   }
 }
 

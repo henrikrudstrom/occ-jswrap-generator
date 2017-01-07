@@ -8,7 +8,7 @@ var generatorPath = path.join(__dirname, '..');
 
 var defaultsettings = {
   paths: {
-    build: 'build',
+    build: '../opencascade-js',
     dist: 'dist',
     definition: 'configuration',
     cache: 'cache',

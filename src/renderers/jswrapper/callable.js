@@ -3,7 +3,7 @@ const base = require('../base.js');
 class CallableRenderer extends base.ContainerRenderer {
   constructor(def, factory, typemap) {
     super(def, factory, typemap);
-    this.nativeName = def.overloads[0].nativeMethod.name;
+    this.nativeName = def.cppName;
     this.renderers = def.overloads.map(overload => factory.create(overload, typemap));
     this.methodName = def.cppName;
   }
@@ -13,20 +13,22 @@ class CallableRenderer extends base.ContainerRenderer {
   }
 
   renderMemberDeclarations() {
-    return `static ${this.nanMacro}(${this.methodName});`;
+    return `\
+      ${this.emit('renderMemberDeclarations').join('\n')}
+      static ${this.nanMacro}(${this.methodName});`;
   }
 
   renderMethodBody() {
     return `\
-    ${this.emit('overloadCalls').join('\n')}`;
+    ${this.emit('renderOverloadCalls').join('\n')}`;
   }
 
   renderMemberImplementation() {
     return `\
-      ${this.emit('overloadFunctions').join('\n')}
+      ${this.emit('renderOverloadFunctions').join('\n')}
 
       ${this.nanMacro}(${this.def.parent.qualifiedName}::${this.methodName}) {
-        ${this.renderMethodBody()};
+        ${this.renderMethodBody()}
       }`;
   }
 }
@@ -46,11 +48,18 @@ MethodRenderer.prototype.type = 'method';
 
 
 class ConstructorRenderer extends MethodRenderer {
+  constructor(def, factory, typemap) {
+    super(def, factory, typemap);
+    this.nativeName = def.parent.name;
+    this.renderers = def.overloads.map(overload => factory.create(overload, typemap));
+    this.methodName = 'New';
+  }
+
   renderMemberDeclarations() {
     return `\
       static bool firstCall;
 
-      static NAN_METHOD(New);`;
+      ${super.renderMemberDeclarations()}`;
   }
 
   renderMemberImplementation() {
@@ -59,7 +68,12 @@ class ConstructorRenderer extends MethodRenderer {
       ${super.renderMemberImplementation()}`;
   }
 
+  renderMemberInitialization() {
+    return '';
+  }
+
   renderMethodBody() {
+    if (this.def.overloads.length === 0) return '';
     return `\
       if (!info.IsConstructCall()) {
         std::vector<v8::Local<v8::Value> > args(info.Length());
@@ -87,8 +101,8 @@ class GetterRenderer extends CallableRenderer {
   }
 
   renderMemberInitialization() {
-    var setterArg = this.setterName ? `, ${this.setterName}` : '';
-    return `Nan::SetAccessor(ctorInst, "${this.def.name}", ${this.name}${setterArg});`;
+    var setterArg = this.def.setterName ? `, ${this.def.setterName}` : '';
+    return `Nan::SetAccessor(ctorInst, Nan::New("${this.def.name}").ToLocalChecked(), ${this.def.cppName}${setterArg});`;
   }
 }
 GetterRenderer.prototype.type = 'getter';

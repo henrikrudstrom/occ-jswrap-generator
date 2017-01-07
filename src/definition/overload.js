@@ -38,4 +38,18 @@ class ConstructorOverloadDefinition extends MethodOverloadDefinition {
 }
 ConstructorOverloadDefinition.prototype.type = 'constructorOverload';
 
-module.exports = { MethodOverloadDefinition, ConstructorOverloadDefinition };
+class GetterOverloadDefinition extends MethodOverloadDefinition {
+}
+GetterOverloadDefinition.prototype.type = 'getterOverload';
+
+class SetterOverloadDefinition extends MethodOverloadDefinition {
+}
+SetterOverloadDefinition.prototype.type = 'setterOverload';
+
+
+module.exports = {
+  MethodOverloadDefinition,
+  ConstructorOverloadDefinition,
+  GetterOverloadDefinition,
+  SetterOverloadDefinition
+};

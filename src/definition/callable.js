@@ -9,7 +9,7 @@ class CallableDefinition extends DeclarationDefinition {
     );
     this.overloads.forEach((overload, index) => { overload.index = index; });
     this.type = conf.type;
-    this.cppName = this.overloads[0].nativeMethod.name;
+
   }
 
   getWrappedDependencies() {
@@ -27,28 +27,39 @@ class CallableDefinition extends DeclarationDefinition {
 }
 
 class MethodDefinition extends CallableDefinition {
-
+  constructor(conf, parent, factory, typemap) {
+    super(conf, parent, factory, typemap);
+    this.cppName = this.overloads[0].nativeMethod.name;
+  }
 }
 MethodDefinition.prototype.type = 'method';
 
 class ConstructorDefinition extends CallableDefinition {
   constructor(conf, parent, factory, typemap) {
     super(conf, parent, factory, typemap);
-    this.overloads.forEach((overload) => {
-      overload.type = 'constructorOverload';
-      overload.returnType = parent.nativeName;
-    });
+    this.cppName = parent.name;
+  }
+  canBeWrapped() {
+    return this.overloads.length === 0 || super.canBeWrapped();
   }
 }
 ConstructorDefinition.prototype.type = 'constructor';
 
 class GetterDefinition extends CallableDefinition {
+  constructor(conf, parent, factory, typemap) {
+    super(conf, parent, factory, typemap);
+    this.setterName = conf.setterName;
+    this.cppName = this.overloads[0].nativeMethod.name;
+  }
 
 }
 GetterDefinition.prototype.type = 'getter';
 
 class SetterDefinition extends CallableDefinition {
-
+  constructor(conf, parent, factory, typemap) {
+    super(conf, parent, factory, typemap);
+    this.cppName = this.overloads[0].nativeMethod.name;
+  }
 }
 SetterDefinition.prototype.type = 'setter';
 

@@ -7,11 +7,11 @@ module.exports = function (mod) {
       .wrapProperty('X', 'SetX', 'x')
       .wrapProperty('Y', 'SetY', 'y')
       .wrapProperty('Z', 'SetZ', 'z')
-      .excludeByName('coord')
-      .excludeByName('Xyz')
-      .excludeByName('changeCoord')
+      .exclude('coord')
+      .exclude('Xyz')
+      .exclude('changeCoord')
       .wrapConstructor('*');
-  })
+  });
   mod.wrapClass('Geom_Geometry', 'Geometry', (cls) => {
     cls.wrapMethod('Mirrored', 'mirrored');
   });

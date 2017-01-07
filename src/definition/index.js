@@ -15,6 +15,8 @@ module.exports = {
   Module,
   MethodOverload: overload.MethodOverloadDefinition,
   ConstructorOverload: overload.ConstructorOverloadDefinition,
+  GetterOverload: overload.GetterOverloadDefinition,
+  SetterOverload: overload.SetterOverloadDefinition,
   Wrapper
 };
 

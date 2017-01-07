@@ -8,7 +8,7 @@ class WrapperRenderer extends base.ContainerRenderer {
 
   renderMain(content, parent) {
     if (!content) content = {};
-    content['[root]/CMakeLists.txt'] = this.renderCMake();
+    content['[build]/CMakeLists.txt'] = this.renderCMake();
     return super.renderMain(content, parent);
   }
 
@@ -19,18 +19,18 @@ cmake_minimum_required(VERSION 2.8)
 # Name of the project (will be the name of the plugin)
 project("opencascade-js")
 
-include_directories("./build/inc")
+include_directories("./inc")
 include_directories("/usr/local/include/opencascade")
 link_directories("/usr/local/lib")
 
 # common runtime
-file(GLOB COMMON_SOURCE_FILES "./build/src/common/*.cc")
+file(GLOB COMMON_SOURCE_FILES "./src/common/*.cc")
 add_library(common SHARED \${COMMON_SOURCE_FILES})
 set_target_properties(common PROPERTIES PREFIX "" SUFFIX ".node")
 target_include_directories(common PRIVATE \${CMAKE_JS_INC})
 target_link_libraries(common \${CMAKE_JS_LIB})
 
-${this.emit('CMake').join('\n\n')}
+${this.emit('renderCMake').join('\n\n')}
   `;
   }
 }

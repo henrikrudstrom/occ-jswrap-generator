@@ -49,41 +49,20 @@ class ConstructorConfiguration extends CallableConfiguration {
 ConstructorConfiguration.prototype.type = 'constructor';
 ClassConfiguration.registerType('constructor', ConstructorConfiguration.wrap);
 
-
-class SetterConfiguration extends CallableConfiguration {
-  // static wrap(parent, query, renameFunc) {
-  //   var rename = renameFunc;
-  //   if (typeof (renameFunc) === 'string')
-  //     rename = () => renameFunc;
-  //
-  //   query = `${parent.nativeName}::${query}`;
-  //   var methods = nativeAPI.find(query, 'method');
-  //   var grouped = groupBy(methods, method => method.name, {});
-  //   return Object.keys(grouped).map(group =>
-  //       new MethodConfiguration(rename(group), grouped[group]));
-  // }
-}
-SetterConfiguration.prototype.type = 'setter';
-
-
 class GetterConfiguration extends CallableConfiguration {
   constructor(name, methods) {
-    super(name, methods);
+    super(name, methods, 'getterOverload');
     this.readOnly = true;
   }
-    // static wrap(parent, query, renameFunc) {
-    //   var rename = renameFunc;
-    //   if (typeof (renameFunc) === 'string')
-    //     rename = () => renameFunc;
-    //
-    //   query = `${parent.nativeName}::${query}`;
-    //   var methods = nativeAPI.find(query, 'method');
-    //   var grouped = groupBy(methods, method => method.name, {});
-    //   return Object.keys(grouped).map(group =>
-    //       new MethodConfiguration(rename(group), grouped[group]));
-    // }
 }
 GetterConfiguration.prototype.type = 'getter';
+
+class SetterConfiguration extends CallableConfiguration {
+  constructor(name, methods) {
+    super(name, methods, 'setterOverload');
+  }
+}
+SetterConfiguration.prototype.type = 'setter';
 
 
 function wrapProperty(parent, getterKey, setterKey, name) {
@@ -95,7 +74,7 @@ function wrapProperty(parent, getterKey, setterKey, name) {
   query = `${parent.nativeName}::${setterKey}`;
   methods = nativeAPI.find(query, 'method');
   var setter = new SetterConfiguration(renameMember(setterKey), methods);
-  getter.setterName = setter.name;
+  getter.setterName = methods[0].name;
   getter.readOnly = false;
 
   return [getter, setter];
@@ -108,5 +87,9 @@ function wrapReadOnlyProperty(parent, getterKey, name) {
 ClassConfiguration.registerType('property', wrapProperty);
 ClassConfiguration.registerType('readOnlyProperty', wrapReadOnlyProperty);
 
-
-module.exports = { MethodConfiguration, GetterConfiguration, SetterConfiguration };
+module.exports = {
+  MethodConfiguration,
+  ConstructorConfiguration,
+  GetterConfiguration,
+  SetterConfiguration
+};

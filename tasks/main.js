@@ -49,13 +49,13 @@ module.exports = function(gulp) {
     return gulp.src([
       'src/cpp/inc/**/*.h', 'src/cpp/src/**/*.cc'
     ], { base: 'src/cpp' })
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest(settings.paths.build));
   });
 
   gulp.task('clean-wrapper', function (done) {
     return gulp.src(
       [settings.paths.inc, settings.paths.src],
       { read: false }
-    ).pipe(clean(done));
+    ).pipe(clean({force: true}, done));
   });
 };

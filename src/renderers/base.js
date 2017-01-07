@@ -8,8 +8,7 @@ class Renderer {
     this.typemap = typemap;
   }
 
-  emit(part, context) {
-    var fnName = `render${upperCamelCase(part)}`;
+  emit(fnName, context) {
     return this.renderers
       .filter(renderer => !renderer.def.isBuiltIn)
       .filter(renderer => renderer.def.canBeWrapped())

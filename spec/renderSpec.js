@@ -34,7 +34,7 @@ describe('Renderer', () => {
     expect(files['./makefile']).to.equal('dummy makefile content');
     expect(files['src/mod_a.cc']).to.equal('init {\n  Geometry::init()\nPoint::init()\n}');
     expect(files['src/Point.cc']).to.equal('implementation {\n  Point::Constructor { constructorCall }\nPoint::setX { methodCall }\n}');
-    expect(files['src/Geometry.cc']).to.equal('implementation {\n  Geometry::mirror { methodCall }\n}');
+    expect(files['src/Geometry.cc']).to.equal('implementation {\n  Geometry::Constructor {  }\nGeometry::mirror { methodCall }\n}');
   });
 
   it('creates the correct renderers for a configuration', () => {
@@ -65,7 +65,7 @@ describe('Renderer', () => {
     expect(getter.type).to.equal('getter');
     expect(method.renderers[0].type).to.equal('methodOverload');
     expect(ctor.renderers[0].type).to.equal('constructorOverload');
-    expect(setter.renderers[0].type).to.equal('methodOverload');
-    expect(getter.renderers[0].type).to.equal('methodOverload');
+    expect(setter.renderers[0].type).to.equal('setterOverload');
+    expect(getter.renderers[0].type).to.equal('getterOverload');
   });
 });

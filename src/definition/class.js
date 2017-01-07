@@ -1,4 +1,5 @@
 const ContainerDefinition = require('./container.js');
+const ConstructorConfiguration = require('../configuration/callable.js').ConstructorConfiguration;
 const nativeAPI = require('../nativeAPI.js');
 
 
@@ -11,6 +12,12 @@ class ClassDefinition extends ContainerDefinition {
     this.nativeClass = nativeAPI.get(this.nativeName);
     this.hasHandle = this.$hasHandle(this.nativeClass);
     this.isType = true;
+    if (!this.getConstructor()) {
+      // include empty constructor by default
+      var ctor = factory.create(
+        new ConstructorConfiguration(this.name, [], 'constructorOverload'), this, typemap);
+      this.members = [ctor].concat(this.members);
+    }
   }
 
 

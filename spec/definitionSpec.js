@@ -129,9 +129,21 @@ describe('Wrapper definition', () => {
     expect(deps).not.to.include('double');
   });
 
+  it('it includes empty constructor by default', () => {
+    var conf = configure((mod) => {
+      mod.name = 'test';
+      mod.wrapClass('gp_Pnt', 'Pnt');
+    });
+    var def = new Factory(definitions.all).create(conf).getMember('test');
+    var ctor = def.getMember('Pnt').getConstructor();
+    expect(ctor).to.not.equal(undefined);
+    expect(ctor.overloads.length).to.equal(0);
+    expect(ctor.canBeWrapped()).to.equal(true);
+  });
+
   it('should not get wrong objects in declarations list', () => {
     var conf = configure((mod) => {
-      mod.name = 'test'
+      mod.name = 'test';
       mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
         cls.wrapMethod('SetX', 'x')
           .wrapConstructor('Standard_Real, Standard_Real, Standard_Real');
@@ -148,7 +160,7 @@ describe('Wrapper definition', () => {
     expect(ctor.overloads[0].canBeWrapped()).to.equal(true);
   });
 
-  it('should not get wrong objects in declarations list', () => {
+  it('it should include correct overload for constructor', () => {
     var conf = configure((mod) => {
       mod.name = 'test';
       mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {

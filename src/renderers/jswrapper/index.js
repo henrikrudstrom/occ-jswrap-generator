@@ -15,6 +15,8 @@ module.exports = {
   SetterRenderer: callable.SetterRenderer,
   OverloadMethodRenderer: Overload.MethodRenderer,
   OverloadConstructorRenderer: Overload.ConstructorRenderer,
+  GetterPropertyRenderer: Overload.GetterRenderer,
+  SetterPropertyRenderer: Overload.SetterRenderer,
   BuiltinRenderer
 };
 
