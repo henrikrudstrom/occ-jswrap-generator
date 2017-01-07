@@ -28,4 +28,17 @@ module.exports.groupBy = function groupBy(arr, fn, initial) {
   }
   arr.forEach((value, index) => add(value, fn(value, index)));
   return grouped;
-}
+};
+
+
+module.exports.matchByKey = function matchByKey(exp) {
+  return decl => decl.getKeys().every(k => exp.test(k));
+};
+
+module.exports.match = function match(exp) {
+  return decl => exp.test(decl.name);
+};
+
+module.exports.not = function not(fn) {
+  return decl => !fn(decl);
+};

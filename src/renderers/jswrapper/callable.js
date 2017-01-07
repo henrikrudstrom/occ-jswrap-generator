@@ -1,11 +1,15 @@
-const Renderer = require('../renderer.js');
+const base = require('../base.js');
 
-class CallableRenderer extends Renderer {
+class CallableRenderer extends base.ContainerRenderer {
   constructor(def, factory, typemap) {
     super(def, factory, typemap);
     this.nativeName = def.overloads[0].nativeMethod.name;
     this.renderers = def.overloads.map(overload => factory.create(overload, typemap));
     this.methodName = def.cppName;
+  }
+
+  containerMixinGetChildren() {
+    return this.overloads;
   }
 
   renderMemberDeclarations() {

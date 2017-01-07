@@ -1,6 +1,6 @@
-const Renderer = require('../renderer.js');
+const base = require('../base.js');
 
-class MethodOverloadRenderer extends Renderer {
+class MethodOverloadRenderer extends base.Renderer {
   parentClass() {
     return this.def.parent.parent;
   }

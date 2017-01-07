@@ -28,7 +28,7 @@ describe('Renderer', () => {
       });
     });
     var wrapper = new factory.Definition(definitions.all).create(conf);
-    var method = wrapper.getMemberByName('mod_b').getMemberByName('Pnt');
+    var method = wrapper.getMember('mod_b').getMember('Pnt');
     expect(method.canBeWrapped()).to.equal(true);
     var files = render(wrapper, dummyRenderers);
     expect(files['./makefile']).to.equal('dummy makefile content');
@@ -39,21 +39,22 @@ describe('Renderer', () => {
 
   it('creates the correct renderers for a configuration', () => {
     var conf = configure((mod) => {
-      mod.name = 'a';
+      mod.name = 'test';
       mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
         cls.wrapMethod('Distance', 'distance')
-        .wrapProperty('X', 'SetX', 'x')
-        .wrapConstructor('Standard_Real, Standard_Real, Standard_Real');
+          .wrapProperty('X', 'SetX', 'x')
+          .wrapConstructor('Standard_Real, Standard_Real, Standard_Real');
       });
     });
+
     var model = new factory.Definition(definitions.all).create(conf);
     var wrapper = new factory.Renderer(renderers.all).create(model);
-    var mod = wrapper.renderers[0];
-    var cls = mod.renderers[0];
-    var ctor = cls.renderers[0];
-    var getter = cls.renderers[1];
-    var method = cls.renderers[2];
-    var setter = cls.renderers[3];
+    var mod = wrapper.getMember('test');
+    var cls = mod.getMember('Pnt');
+    var ctor = cls.getMember('Pnt');
+    var getter = cls.getMember('x');
+    var method = cls.getMember('distance');
+    var setter = cls.getMember('setX');
 
     expect(wrapper.type).to.equal('wrapper');
     expect(mod.type).to.equal('module');

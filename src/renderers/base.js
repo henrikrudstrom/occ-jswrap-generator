@@ -1,4 +1,6 @@
 const upperCamelCase = require('uppercamelcase');
+const containerMixin = require('../containerMixin.js');
+
 
 class Renderer {
   constructor(def, factory, typemap) {
@@ -19,11 +21,21 @@ class Renderer {
   renderMain(content) {
     if (!this.renderers) return content;
     this.renderers
-        .filter(renderer => !renderer.def.isBuiltIn)
-        .filter(renderer => renderer.def.canBeWrapped())
-        .forEach(renderer => renderer.renderMain(content, this));
+      .filter(renderer => !renderer.def.isBuiltIn)
+      .filter(renderer => renderer.def.canBeWrapped())
+      .forEach(renderer => renderer.renderMain(content, this));
     return content;
   }
 }
 
-module.exports = Renderer;
+class ContainerRenderer extends containerMixin(Renderer) {
+  containerMixinGetChildren() {
+    return this.renderers;
+  }
+
+  containerMixinGetObject(obj) {
+    return obj.def;
+  }
+}
+
+module.exports = { Renderer, ContainerRenderer };

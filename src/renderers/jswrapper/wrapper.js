@@ -1,6 +1,6 @@
-const Renderer = require('../renderer.js');
+const base = require('../base.js');
 
-class WrapperRenderer extends Renderer {
+class WrapperRenderer extends base.ContainerRenderer {
   constructor(def, factory, typemap) {
     super(def, factory, typemap);
     this.renderers = def.members.map(mod => factory.create(mod, typemap));

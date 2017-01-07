@@ -1,6 +1,6 @@
-const Renderer = require('../../src/renderers/renderer.js');
+const base = require('../../src/renderers/base.js');
 
-class WrapperRenderer extends Renderer {
+class WrapperRenderer extends base.ContainerRenderer {
   constructor(def, factory, typemap) {
     super(def, factory, typemap);
     this.renderers = def.members.map(mod => factory.create(mod, typemap));
@@ -13,7 +13,7 @@ class WrapperRenderer extends Renderer {
   }
 }
 
-class ModuleRenderer extends Renderer {
+class ModuleRenderer extends base.ContainerRenderer {
   constructor(def, factory, typemap) {
     super(def, factory, typemap);
     this.renderers = def.members.map(mod => factory.create(mod, typemap));
@@ -28,7 +28,7 @@ return super.renderMain(files, parent);
   }
 }
 
-class ClassRenderer extends Renderer {
+class ClassRenderer extends base.ContainerRenderer {
   constructor(def, factory, typemap) {
     super(def, factory, typemap);
     this.renderers = def.members.map(mod => factory.create(mod, typemap));
@@ -52,10 +52,14 @@ implementation {
   }
 }
 
-class MethodRenderer extends Renderer {
+class MethodRenderer extends base.ContainerRenderer {
   constructor(def, factory, typemap) {
     super(def, factory, typemap);
     this.renderers = def.overloads.map(overload => factory.create(overload, typemap));
+  }
+
+  containerMixinGetChildren() {
+    return this.overloads;
   }
 
   renderMemberImpl(parent) {
@@ -63,13 +67,13 @@ class MethodRenderer extends Renderer {
   }
 }
 
-class MethodOverloadRenderer extends Renderer {
+class MethodOverloadRenderer extends base.Renderer {
   renderCall() {
     return 'methodCall';
   }
 }
 
-class ConstructorOverloadRenderer extends Renderer {
+class ConstructorOverloadRenderer extends base.Renderer {
   renderCall() {
     return 'constructorCall';
   }
@@ -81,7 +85,7 @@ class ConstructorRenderer extends MethodRenderer {
   }
 }
 
-class BuiltinRenderer extends Renderer {
+class BuiltinRenderer extends base.Renderer {
   constructor(def) {
     super();
     this.def = def;

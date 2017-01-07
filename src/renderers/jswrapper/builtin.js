@@ -1,6 +1,6 @@
-const Renderer = require('../renderer.js');
+const base = require('../base.js');
 
-class BuiltinRenderer extends Renderer {
+class BuiltinRenderer extends base.Renderer {
   toNative(resVar, inVar, failClause) {
     return `\
       ${this.def.nativeName} ${resVar};
