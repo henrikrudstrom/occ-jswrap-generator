@@ -1,18 +1,21 @@
 const chai = require('chai');
-const configure = require('../lib/configure.js');
-const dummyRenderers = require('./renderers/dummy.js');
-const render = require('../lib/render.js');
-const definitions = require('../lib/definition');
-const factory = require('../lib/factory.js');
-const renderers = require('../lib/renderers/jswrapper');
+const configurator = require('../lib/configurator.js');
+const dummyRenderer = require('./renderers/dummy.js');
+const Factory = require('../lib/factory.js');
+const typemap = require('../lib/typemap.js');
+const jsWrapperRenderer = require('../lib/renderers/jswrapper');
 
+function createRenderer(conf, renderers) {
+  var def = new Factory(renderers.all, new typemap.Definition()).create(conf);
+  return new Factory(renderers.all, new typemap.Renderers()).create(conf);
+}
 
 const expect = chai.expect;
 chai.use(require('chai-things'));
 
 describe('Renderer', () => {
   it('it can render', () => {
-    var conf = configure((mod) => {
+    var conf = configurator.configure((mod) => {
       mod.name = 'mod_a';
       mod.wrapClass('Geom_CartesianPoint', 'Point', (cls) => {
         cls.wrapMethod('SetX', 'setX')
@@ -27,10 +30,9 @@ describe('Renderer', () => {
         cls.wrapMethod('X', 'x');
       });
     });
-    var wrapper = new factory.Definition(definitions.all).create(conf);
-    var method = wrapper.getMember('mod_b').getMember('Pnt');
-    expect(method.canBeWrapped()).to.equal(true);
-    var files = render(wrapper, dummyRenderers);
+    var model = configurator.createModel(conf);
+    var renderer = dummyRenderer.create(model);
+    var files = renderer.renderMain();
     expect(files['./makefile']).to.equal('dummy makefile content');
     expect(files['src/mod_a.cc']).to.equal('init {\n  Geometry::init()\nPoint::init()\n}');
     expect(files['src/Point.cc']).to.equal('implementation {\n  Point::Constructor { constructorCall }\nPoint::setX { methodCall }\n}');
@@ -38,7 +40,7 @@ describe('Renderer', () => {
   });
 
   it('creates the correct renderers for a configuration', () => {
-    var conf = configure((mod) => {
+    var conf = configurator.configure((mod) => {
       mod.name = 'test';
       mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
         cls.wrapMethod('Distance', 'distance')
@@ -47,8 +49,8 @@ describe('Renderer', () => {
       });
     });
 
-    var model = new factory.Definition(definitions.all).create(conf);
-    var wrapper = new factory.Renderer(renderers.all).create(model);
+    var model = configurator.createModel(conf);
+    var wrapper = jsWrapperRenderer.create(model);
     var mod = wrapper.getMember('test');
     var cls = mod.getMember('Pnt');
     var ctor = cls.getMember('Pnt');
@@ -69,7 +71,7 @@ describe('Renderer', () => {
     expect(getter.renderers[0].declType).to.equal('getterOverload');
   });
   it('creates the correct renderers for abstract classes', () => {
-    var conf = configure((mod) => {
+    var conf = configurator.configure((mod) => {
       mod.name = 'test';
       mod.wrapClass('Geom_Point', 'Point', (cls) => {
         cls.wrapMethod('Distance', 'distance')
@@ -78,8 +80,8 @@ describe('Renderer', () => {
       mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint');
     });
 
-    var model = new factory.Definition(definitions.all).create(conf);
-    var wrapper = new factory.Renderer(renderers.all).create(model);
+    var model = configurator.createModel(conf);
+    var wrapper = jsWrapperRenderer.create(model);
     var mod = wrapper.getMember('test');
     var cls = mod.getMember('Point');
     var ctor = cls.getMember('Point');

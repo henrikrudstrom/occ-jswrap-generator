@@ -1,28 +1,26 @@
 const chai = require('chai');
-const configure = require('../lib/configure.js');
-var Factory = require('../lib/factory.js').Definition;
-var definitions = require('../lib/definition');
+const configurator = require('../lib/configurator.js');
 
 const expect = chai.expect;
 chai.use(require('chai-things'));
 
 describe('Wrapper definition', () => {
   it('includes builtin types by default', () => {
-    var conf = configure(() => {});
-    var mod = new Factory(definitions.all).create(conf).getMember('builtins');
+    var conf = configurator.configure(() => {});
+    var mod = configurator.createModel(conf).getMember('builtins');
 
     expect(mod).to.not.equal(undefined);
     expect(mod.members.length).to.equal(3);
   });
 
   it('it can deduce base classes', () => {
-    var conf = configure((mod) => {
+    var conf = configurator.configure((mod) => {
       mod.name = 'test';
       mod.wrapClass('Geom_Point', 'Point');
       mod.wrapClass('Geom_Geometry', 'Geometry');
     });
 
-    var def = new Factory(definitions.all).create(conf).getMember('test');
+    var def = configurator.createModel(conf).getMember('test');
     var pointClass = def.getMember('Point');
     var geometryClass = def.getMember('Geometry');
 
@@ -31,20 +29,20 @@ describe('Wrapper definition', () => {
   });
 
   it('can distinguish if a class is derived from Standard_Transient or not', () => {
-    var conf = configure((mod) => {
+    var conf = configurator.configure((mod) => {
       mod.name = 'test';
       mod.wrapClass('gp_Pln', 'Pln');
       mod.wrapClass('Geom_Plane', 'Plane');
     });
 
-    var def = new Factory(definitions.all).create(conf).getMember('test');
+    var def = configurator.createModel(conf).getMember('test');
 
     expect(def.getMember('Pln').hasHandle).to.equal(false);
     expect(def.getMember('Plane').hasHandle).to.equal(true);
   });
 
   it('knows if method dependencies are wrapped', () => {
-    var conf = configure((mod) => {
+    var conf = configurator.configure((mod) => {
       mod.name = 'test';
       mod.wrapClass('gp_Pnt', 'Pnt');
       mod.wrapClass('Geom_Point', 'Point', (cls) => {
@@ -56,7 +54,7 @@ describe('Wrapper definition', () => {
           .wrapMethod('Transform', 'transform');
       });
     });
-    var def = new Factory(definitions.all).create(conf).getMember('test');
+    var def = configurator.createModel(conf).getMember('test');
     var pointClass = def.getMember('CartesianPoint');
     var methodX = pointClass.getMember('x');
     var methodPnt = pointClass.getMember('pnt');
@@ -77,7 +75,7 @@ describe('Wrapper definition', () => {
   });
 
   it('can determine if property dependencies are wrapped', () => {
-    var conf = configure((mod) => {
+    var conf = configurator.configure((mod) => {
       mod.name = 'test';
       mod.wrapClass('Geom_Point', 'Point', (cls) => {
         cls.wrapMethod('Distance', 'distance');
@@ -88,7 +86,7 @@ describe('Wrapper definition', () => {
           .wrapConstructor('*');
       });
     });
-    var def = new Factory(definitions.all).create(conf).getMember('test');
+    var def = configurator.createModel(conf).getMember('test');
     var cartesianPointClass = def.getMember('CartesianPoint');
     var pointClass = def.getMember('Point');
     var propX = cartesianPointClass.getMember('x');
@@ -114,7 +112,7 @@ describe('Wrapper definition', () => {
   });
 
   it('can determine which wrapper classes needs to be included', () => {
-    var conf = configure((mod) => {
+    var conf = configurator.configure((mod) => {
       mod.name = 'test';
       mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
         cls.wrapConstructor('*');
@@ -128,11 +126,11 @@ describe('Wrapper definition', () => {
       });
     });
 
-    var def = new Factory(definitions.all).create(conf).getMember('test');
+    var def = configurator.createModel(conf).getMember('test');
     var cartesianPointClass = def.getMember('CartesianPoint');
     var propX = cartesianPointClass.getMember('x');
     var propPnt = cartesianPointClass.getMember('pnt');
-    console.log(propX.overloads[0].getWrappedDependencies())
+
     expect(propX.overloads[0].getWrappedDependencies().length).to.equal(0);
     expect(propPnt.overloads[0].getWrappedDependencies().map(d => d.name)).to.include('Pnt');
     expect(propPnt.getWrappedDependencies().map(d => d.name)).to.include('Pnt');
@@ -145,11 +143,11 @@ describe('Wrapper definition', () => {
   });
 
   it('it includes empty constructor by default', () => {
-    var conf = configure((mod) => {
+    var conf = configurator.configure((mod) => {
       mod.name = 'test';
       mod.wrapClass('gp_Pnt', 'Pnt');
     });
-    var def = new Factory(definitions.all).create(conf).getMember('test');
+    var def = configurator.createModel(conf).getMember('test');
     var ctor = def.getMember('Pnt').getConstructor();
     expect(ctor).to.not.equal(undefined);
     expect(ctor.overloads.length).to.equal(0);
@@ -157,7 +155,7 @@ describe('Wrapper definition', () => {
   });
 
   it('should not get wrong objects in declarations list', () => {
-    var conf = configure((mod) => {
+    var conf = configurator.configure((mod) => {
       mod.name = 'test';
       mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
         cls.wrapMethod('SetX', 'x')
@@ -165,7 +163,7 @@ describe('Wrapper definition', () => {
       });
     });
 
-    var def = new Factory(definitions.all).create(conf).getMember('test');
+    var def = configurator.createModel(conf).getMember('test');
     var pnt = def.getMember('Pnt');
     var ctor = pnt.getConstructor();
 
@@ -176,18 +174,18 @@ describe('Wrapper definition', () => {
   });
 
   it('should include correct overload for constructor', () => {
-    var conf = configure((mod) => {
+    var conf = configurator.configure((mod) => {
       mod.name = 'test';
       mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
         cls.wrapConstructor('Standard_Real, Standard_Real, Standard_Real');
       });
     });
-    var def = new Factory(definitions.all).create(conf).getMember('test');
+    var def = configurator.createModel(conf).getMember('test');
     var pnt = def.getMember('Pnt');
     expect(pnt.getMember('Pnt').overloads[0].declType).to.equal('constructorOverload');
   });
   it('should sort classes by inheritance', () => {
-    var conf = configure((mod) => {
+    var conf = configurator.configure((mod) => {
       mod.name = 'test';
       mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint');
       mod.wrapClass('Geom_Direction', 'Direction');
@@ -195,7 +193,7 @@ describe('Wrapper definition', () => {
       mod.wrapClass('Geom_Geometry', 'Geometry');
       mod.wrapClass('Geom_Point', 'Point');
     });
-    var mod = new Factory(definitions.all).create(conf).getMember('test');
+    var mod = configurator.createModel(conf).getMember('test');
     expect(mod.members[0].name).to.equal('Geometry');
     expect(mod.members[1].name).to.equal('Point');
     expect(mod.members[2].name).to.equal('Vector');
@@ -204,7 +202,7 @@ describe('Wrapper definition', () => {
   });
 
   it('can define methods with out args and return them', () => {
-    var conf = configure((mod) => {
+    var conf = configurator.configure((mod) => {
       mod.name = 'test';
       mod.wrapClass('gp_Pnt', 'Pnt');
       mod.wrapClass('gp_Vec', 'Vec');
@@ -218,7 +216,7 @@ describe('Wrapper definition', () => {
         });
       });
     });
-    var mod = new Factory(definitions.all).create(conf).getMember('test');
+    var mod = configurator.createModel(conf).getMember('test');
     var curve = mod.getMember('Curve');
     var d0 = curve.getMember('d0');
     var d1 = curve.getMember('d1');

@@ -1,9 +1,11 @@
 const base = require('../../lib/renderers/base.js');
+const typemap = require('../../lib/typemap.js');
+const Factory = require('../../lib/factory.js');
 
 class WrapperRenderer extends base.ContainerRenderer {
   constructor(def, factory, typemap) {
     super(def, factory, typemap);
-    this.renderers = def.members.map(mod => factory.create(mod, typemap));
+    this.renderers = def.members.map(mod => factory.create(mod));
   }
 
   renderMain(files, parent) {
@@ -16,7 +18,7 @@ class WrapperRenderer extends base.ContainerRenderer {
 class ModuleRenderer extends base.ContainerRenderer {
   constructor(def, factory, typemap) {
     super(def, factory, typemap);
-    this.renderers = def.members.map(mod => factory.create(mod, typemap));
+    this.renderers = def.members.map(mod => factory.create(mod));
   }
 
   renderMain(files, parent) {
@@ -31,7 +33,7 @@ return super.renderMain(files, parent);
 class ClassRenderer extends base.ContainerRenderer {
   constructor(def, factory, typemap) {
     super(def, factory, typemap);
-    this.renderers = def.members.map(mod => factory.create(mod, typemap));
+    this.renderers = def.members.map(mod => factory.create(mod));
   }
 
   static register() {
@@ -55,7 +57,7 @@ implementation {
 class MethodRenderer extends base.ContainerRenderer {
   constructor(def, factory, typemap) {
     super(def, factory, typemap);
-    this.renderers = def.overloads.map(overload => factory.create(overload, typemap));
+    this.renderers = def.overloads.map(overload => factory.create(overload));
   }
 
   containerMixinGetChildren() {
@@ -101,6 +103,13 @@ MethodOverloadRenderer.prototype.declType = 'methodOverload';
 ConstructorOverloadRenderer.prototype.declType = 'constructorOverload';
 BuiltinRenderer.prototype.declType = 'builtin';
 
-module.exports = [WrapperRenderer, ModuleRenderer,
-  ClassRenderer, MethodRenderer, BuiltinRenderer, ConstructorRenderer,
-  ConstructorOverloadRenderer, MethodOverloadRenderer];
+module.exports.all = [
+  WrapperRenderer, ModuleRenderer,
+  ClassRenderer, MethodRenderer,
+  BuiltinRenderer, ConstructorRenderer,
+  ConstructorOverloadRenderer, MethodOverloadRenderer
+];
+
+module.exports.create = function create(model) {
+  return new Factory(module.exports.all, new typemap.Renderer()).create(model);
+};

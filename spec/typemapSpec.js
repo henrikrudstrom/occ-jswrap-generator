@@ -1,5 +1,5 @@
 const chai = require('chai');
-const configure = require('../lib/configure.js');
+const configurator = require('../lib/configurator.js');
 var Factory = require('../lib/factory.js').Definition;
 var definitions = require('../lib/definition');
 
@@ -8,8 +8,8 @@ chai.use(require('chai-things'));
 
 describe('typemap', () => {
   it('can recognize builtin types', () => {
-    var conf = configure(() => {});
-    var wrapper = new Factory(definitions.all).create(conf);
+    var conf = configurator.configure(() => {});
+    var wrapper = configurator.createModel(conf);
     var typemap = wrapper.typemap;
 
     expect(typemap.wrapped).to.include.keys('Standard_Real');
@@ -18,14 +18,15 @@ describe('typemap', () => {
   });
 
   it('can figure out mappings', () => {
-    var conf = configure((mod) => {
+    var conf = configurator.configure((mod) => {
       mod.name = 'moduleA';
       mod.wrapClass('Geom_Point', 'Point');
       mod.wrapClass('Geom_Geometry', 'Geometry');
       mod.wrapClass('gp_Pnt', 'Pnt');
     });
 
-    var typemap = new Factory(definitions.all).create(conf).typemap;
+    var wrapper = configurator.createModel(conf);
+    var typemap = wrapper.typemap;
 
     expect(typemap.getWrappedType('Geom_Point').name).to.equal('Point');
     expect(typemap.getWrappedType('gp_Pnt').name).to.equal('Pnt');
@@ -35,13 +36,14 @@ describe('typemap', () => {
   });
 
   it('can resolve handle<> types', () => {
-    var conf = configure((mod) => {
+    var conf = configurator.configure((mod) => {
       mod.name = 'moduleA';
       mod.wrapClass('Geom_Point', 'Point');
       mod.wrapClass('Geom_Geometry', 'Geometry');
       mod.wrapClass('gp_Pnt', 'Pnt');
     });
-    var typemap = new Factory(definitions.all).create(conf).typemap;
+    var wrapper = configurator.createModel(conf);
+    var typemap = wrapper.typemap;
     expect(typemap.getWrappedType('opencascade::handle<Geom_Point>').name).to.equal('Point');
   });
 });

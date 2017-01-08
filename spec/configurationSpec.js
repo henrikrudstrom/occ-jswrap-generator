@@ -1,5 +1,5 @@
 const chai = require('chai');
-const configure = require('../lib/configure.js');
+const configurator = require('../lib/configurator.js');
 const util = require('../lib/util.js');
 const definition = require('../lib/definition');
 
@@ -8,13 +8,13 @@ chai.use(require('chai-things'));
 
 describe('Wrapper configuration', () => {
   it('includes builtin types by default', () => {
-    var conf = configure(() => {});
+    var conf = configurator.configure(() => {});
     expect(conf.getMember('builtins')).to.not.equal(undefined);
     expect(conf.getMember('builtins').members.length).to.equal(3);
   });
 
   it('can define specific classes to be wrapped', () => {
-    configure((mod) => {
+    configurator.configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Pnt');
       expect(mod.members.length).to.equal(1);
       expect(mod.getMember('Pnt')).to.not.equal(undefined);
@@ -24,7 +24,7 @@ describe('Wrapper configuration', () => {
   });
 
   it('can define many wrapped classes with a naming function', () => {
-    configure((mod) => {
+    configurator.configure((mod) => {
       mod.wrapClass('gp_*', util.renameClass);
       expect(mod.getMemberByKey('gp_Pnt').name).to.equal('Pnt');
       expect(mod.members.length).to.equal(41);
@@ -32,7 +32,7 @@ describe('Wrapper configuration', () => {
   });
 
   it('can exclude or override already wrapped classes', () => {
-    configure((mod) => {
+    configurator.configure((mod) => {
       mod.wrapClass('gp_*', util.renameClass);
       mod.excludeByKey('gp_XYZ');
       expect(mod.members.length).to.equal(40);
@@ -41,7 +41,7 @@ describe('Wrapper configuration', () => {
   });
 
   it('can override already wrapped classes', () => {
-    configure((mod) => {
+    configurator.configure((mod) => {
       mod.wrapClass('gp_*', util.renameClass);
       mod.rename('Pnt', 'Point');
       expect(mod.members.length).to.equal(41);
@@ -50,7 +50,7 @@ describe('Wrapper configuration', () => {
   });
 
   it('can define methods to be wrapped', () => {
-    configure((mod) => {
+    configurator.configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Point', (cls) => {
         cls.wrapMethod('Distance', 'distance')
           .wrapMethod('X', 'x');
@@ -62,7 +62,7 @@ describe('Wrapper configuration', () => {
   });
 
   it('can define many wrapped methods at once', () => {
-    configure((mod) => {
+    configurator.configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Point', (cls) => {
         cls.wrapMethod('Set*', util.renameMember);
       });
@@ -73,7 +73,7 @@ describe('Wrapper configuration', () => {
   });
 
   it('can override specific methods', () => {
-    configure((mod) => {
+    configurator.configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Point', (cls) => {
         cls.wrapMethod('Set*', util.renameMember)
           .rename('setX', 'specialName');
@@ -87,7 +87,7 @@ describe('Wrapper configuration', () => {
   });
 
   it('can exclude wrapped methods', () => {
-    configure((mod) => {
+    configurator.configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Point', (cls) => {
         cls.wrapMethod('Set*', util.renameMember)
           .exclude('setX');
@@ -100,7 +100,7 @@ describe('Wrapper configuration', () => {
   });
 
   it('can define overloaded methods', () => {
-    configure((mod) => {
+    configurator.configure((mod) => {
       mod.wrapClass('gp_Pln', 'Plane', (cls) => {
         cls.wrapMethod('Distance', 'distance');
       });
@@ -112,7 +112,7 @@ describe('Wrapper configuration', () => {
   });
 
   it('can define wrapped properties', () => {
-    configure((mod) => {
+    configurator.configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
         cls.wrapProperty('X', 'SetX', 'x');
       });
@@ -124,7 +124,7 @@ describe('Wrapper configuration', () => {
   });
 
   it('can define wrapped read-only properties', () => {
-    configure((mod) => {
+    configurator.configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
         cls.wrapReadOnlyProperty('X', 'x', (prop) => {
           prop.myProperty = 'hello';
@@ -139,7 +139,7 @@ describe('Wrapper configuration', () => {
   });
 
   it('removes methods that are accessors to property', () => {
-    configure((mod) => {
+    configurator.configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
         cls.wrapMethod('*', util.renameMember)
           .wrapProperty('X', 'SetX', 'x');
@@ -152,7 +152,7 @@ describe('Wrapper configuration', () => {
   });
 
   it('can wrap specific constructors', () => {
-    configure((mod) => {
+    configurator.configure((mod) => {
       mod.wrapClass('Geom_CartesianPoint', 'Point', (cls) => {
         cls.wrapConstructor('gp_Pnt');
       });
@@ -174,7 +174,7 @@ describe('Wrapper configuration', () => {
   });
 
   it('can wrap all constructors of a class and exclude copy-constructors', () => {
-    configure((mod) => {
+    configurator.configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
         cls.wrapConstructor('*');
       });
@@ -187,7 +187,7 @@ describe('Wrapper configuration', () => {
   });
 
   it('can define methods with out args and return them', () => {
-    configure((mod) => {
+    configurator.configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Pnt');
       mod.wrapClass('gp_Vec', 'Vec');
       mod.wrapClass('Geom_Geometry', 'Geometry');
