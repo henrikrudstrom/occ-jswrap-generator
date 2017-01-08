@@ -53,7 +53,7 @@ describe('Wrapper configuration', () => {
     configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Point', (cls) => {
         cls.wrapMethod('Distance', 'distance')
-         .wrapMethod('X', 'x');
+          .wrapMethod('X', 'x');
       });
       var cls = mod.getMember('Point');
       expect(cls.members.length).to.equal(2);
@@ -76,7 +76,7 @@ describe('Wrapper configuration', () => {
     configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Point', (cls) => {
         cls.wrapMethod('Set*', util.renameMember)
-           .rename('setX', 'specialName');
+          .rename('setX', 'specialName');
       });
 
       var cls = mod.getMember('Point');
@@ -90,7 +90,7 @@ describe('Wrapper configuration', () => {
     configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Point', (cls) => {
         cls.wrapMethod('Set*', util.renameMember)
-           .exclude('setX');
+          .exclude('setX');
       });
 
       var cls = mod.getMember('Point');
@@ -142,7 +142,7 @@ describe('Wrapper configuration', () => {
     configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
         cls.wrapMethod('*', util.renameMember)
-           .wrapProperty('X', 'SetX', 'x');
+          .wrapProperty('X', 'SetX', 'x');
       });
 
       var cls = mod.getMember('Pnt');
@@ -158,7 +158,7 @@ describe('Wrapper configuration', () => {
       });
       mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
         cls.wrapConstructor('Standard_Real, Standard_Real, Standard_Real')
-           .wrapConstructor('');
+          .wrapConstructor('');
       });
 
       var point = mod.getMember('Point');
@@ -183,6 +183,25 @@ describe('Wrapper configuration', () => {
       var pntCtor = pnt.getMember('Pnt');
       expect(pntCtor.type).to.equal('constructor');
       expect(pntCtor.overloads.length).to.equal(3);
+    });
+  });
+
+  it('can define methods with out args and return them', () => {
+    configure((mod) => {
+      mod.wrapClass('gp_Pnt', 'Pnt');
+      mod.wrapClass('gp_Vec', 'Vec');
+      mod.wrapClass('Geom_Geometry', 'Geometry');
+      mod.wrapClass('Geom_Curve', 'Curve', (cls) => {
+        cls.wrapMethod('D0', 'd0', (method) => {
+          method.setOutArgs({ P: 'p', V1: 'v1' });
+        });
+      });
+
+      var curve = mod.getMember('Curve');
+      var method = curve.getMember('d0');
+      var overload = method.overloads[0];
+      expect(overload.outArgs.P).to.equal('p');
+      expect(overload.outArgs.v1).to.equal('v1');
     });
   });
 });
