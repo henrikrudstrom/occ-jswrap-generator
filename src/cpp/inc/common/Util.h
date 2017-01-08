@@ -68,7 +68,7 @@ bool ConvertWrappedValue<int>(v8::Handle<v8::Value> value, int & result);
 
 
 template<class T>
-bool ConvertWrappedTransientValue(v8::Handle<v8::Value> value, opencascade::handle<T> * result){
+bool ConvertWrappedTransientValue(v8::Handle<v8::Value> value, opencascade::handle<T>& result){
         auto wrapper = Util::CheckedUnWrap<typename wrapper_for_type<T>::type>(value);
         if(wrapper == NULL) return false;
         result = opencascade::handle<T>::DownCast(wrapper->wrappedObject);

@@ -33,4 +33,15 @@ describe('typemap', () => {
     expect(typemap.isBuiltIn('gp_Pnt')).to.equal(false);
     expect(typemap.getWrappedType('Standard_Real').name).to.equal('double');
   });
+
+  it('can resolve handle<> types', () => {
+    var conf = configure((mod) => {
+      mod.name = 'moduleA';
+      mod.wrapClass('Geom_Point', 'Point');
+      mod.wrapClass('Geom_Geometry', 'Geometry');
+      mod.wrapClass('gp_Pnt', 'Pnt');
+    });
+    var typemap = new Factory(definitions.all).create(conf).typemap;
+    expect(typemap.getWrappedType('opencascade::handle<Geom_Point>').name).to.equal('Point');
+  });
 });

@@ -47,6 +47,9 @@ describe('Wrapper definition', () => {
     var conf = configure((mod) => {
       mod.name = 'test';
       mod.wrapClass('gp_Pnt', 'Pnt');
+      mod.wrapClass('Geom_Point', 'Point', (cls) => {
+        cls.wrapMethod('Distance', 'distance');
+      });
       mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint', (cls) => {
         cls.wrapMethod('X', 'x')
           .wrapMethod('Pnt', 'pnt')
@@ -58,7 +61,8 @@ describe('Wrapper definition', () => {
     var methodX = pointClass.getMember('x');
     var methodPnt = pointClass.getMember('pnt');
     var methodTransform = pointClass.getMember('transform');
-
+    var baseClass = def.getMember('Point');
+    var methodDistance = baseClass.getMember('distance');
     expect(methodX.overloads[0].canBeWrapped()).to.equal(true);
     expect(methodX.canBeWrapped()).to.equal(true);
 
@@ -67,11 +71,17 @@ describe('Wrapper definition', () => {
 
     expect(methodTransform.overloads[0].canBeWrapped()).to.equal(false);
     expect(methodTransform.canBeWrapped()).to.equal(false);
+
+    expect(methodDistance.overloads[0].canBeWrapped()).to.equal(true);
+    expect(methodDistance.canBeWrapped()).to.equal(true);
   });
 
   it('can determine if property dependencies are wrapped', () => {
     var conf = configure((mod) => {
       mod.name = 'test';
+      mod.wrapClass('Geom_Point', 'Point', (cls) => {
+        cls.wrapMethod('Distance', 'distance');
+      });
       mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint', (cls) => {
         cls.wrapProperty('X', 'SetX', 'x')
           .wrapReadOnlyProperty('Pnt', 'pnt')
@@ -79,11 +89,16 @@ describe('Wrapper definition', () => {
       });
     });
     var def = new Factory(definitions.all).create(conf).getMember('test');
-    var pointClass = def.getMember('CartesianPoint');
-    var propX = pointClass.getMember('x');
-    var setPropX = pointClass.getMember('setX');
-    var propPnt = pointClass.getMember('pnt');
-    var ctor = pointClass.getConstructor();
+    var cartesianPointClass = def.getMember('CartesianPoint');
+    var pointClass = def.getMember('Point');
+    var propX = cartesianPointClass.getMember('x');
+    var setPropX = cartesianPointClass.getMember('setX');
+    var propPnt = cartesianPointClass.getMember('pnt');
+    var ctor = cartesianPointClass.getConstructor();
+
+    var distance = pointClass.getMember('distance');
+    expect(distance.overloads[0].canBeWrapped()).to.equal(true);
+    expect(distance.canBeWrapped()).to.equal(true);
 
     expect(propX.overloads[0].canBeWrapped()).to.equal(true);
     expect(propX.canBeWrapped()).to.equal(true);
@@ -114,15 +129,15 @@ describe('Wrapper definition', () => {
     });
 
     var def = new Factory(definitions.all).create(conf).getMember('test');
-    var pointClass = def.getMember('CartesianPoint');
-    var propX = pointClass.getMember('x');
-    var propPnt = pointClass.getMember('pnt');
+    var cartesianPointClass = def.getMember('CartesianPoint');
+    var propX = cartesianPointClass.getMember('x');
+    var propPnt = cartesianPointClass.getMember('pnt');
 
     expect(propX.overloads[0].getWrappedDependencies().length).to.equal(0);
     expect(propPnt.overloads[0].getWrappedDependencies().map(d => d.name)).to.include('Pnt');
     expect(propPnt.getWrappedDependencies().map(d => d.name)).to.include('Pnt');
 
-    var deps = pointClass.getWrappedDependencies().map(dep => dep.name);
+    var deps = cartesianPointClass.getWrappedDependencies().map(dep => dep.name);
     expect(deps).to.include('Pnt');
     expect(deps).to.include('Point');
     expect(deps).to.include('Trsf');

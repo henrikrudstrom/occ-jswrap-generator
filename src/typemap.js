@@ -19,6 +19,7 @@ class Typemap {
   }
 
   getWrappedType(key) {
+    key = key.replace('opencascade::handle<', '').replace('>', '');
     var typeName = this.wrapped[key];
     return this.types[typeName];
   }

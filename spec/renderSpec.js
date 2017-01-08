@@ -68,4 +68,32 @@ describe('Renderer', () => {
     expect(setter.renderers[0].type).to.equal('setterOverload');
     expect(getter.renderers[0].type).to.equal('getterOverload');
   });
+  it('creates the correct renderers for abstract classes', () => {
+    var conf = configure((mod) => {
+      mod.name = 'test';
+      mod.wrapClass('Geom_Point', 'Point', (cls) => {
+        cls.wrapMethod('Distance', 'distance')
+          .wrapReadOnlyProperty('X', 'x');
+      });
+      mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint');
+    });
+
+    var model = new factory.Definition(definitions.all).create(conf);
+    var wrapper = new factory.Renderer(renderers.all).create(model);
+    var mod = wrapper.getMember('test');
+    var cls = mod.getMember('Point');
+    var ctor = cls.getMember('Point');
+    var getter = cls.getMember('x');
+    var method = cls.getMember('distance');
+
+    expect(wrapper.type).to.equal('wrapper');
+    expect(mod.type).to.equal('module');
+    expect(cls.type).to.equal('class');
+    expect(method.type).to.equal('method');
+    expect(ctor.type).to.equal('constructor');
+    expect(getter.type).to.equal('getter');
+    expect(method.renderers[0].type).to.equal('methodOverload');
+    expect(getter.renderers[0].type).to.equal('getterOverload');
+    expect(ctor.renderers.length).to.equal(0);
+  });
 });
