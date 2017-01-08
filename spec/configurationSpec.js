@@ -196,16 +196,19 @@ describe('Wrapper configuration', () => {
           method.setOutArgs();
         });
         cls.wrapMethod('D1', 'd1', (method) => {
-          method.setOutArgs({ P: 'customNameForP', V1: 'customNameForV1' });
+          method.setOutArgs({ P: 'customNameForP' });
         });
       });
 
       var curve = mod.getMember('Curve');
-      var methodD0 = curve.getMember('d0');
-      var methodD1 = curve.getMember('d1');
-      expect(methodD0.overloads[0].argouts.P).to.equal('p');
-      expect(methodD1.overloads[0].argouts.P).to.equal('customNameForP');
-      expect(methodD1.overloads[0].argouts.V1).to.equal('customNameForV1');
+      var methodD0 = curve.getMember('d0').overloads[0];
+      var methodD1 = curve.getMember('d1').overloads[0];
+      expect(methodD0.arguments[0].declType).to.equal('argument');
+      expect(methodD0.arguments[1].declType).to.equal('outArgument');
+      expect(methodD1.arguments[0].declType).to.equal('argument');
+      expect(methodD1.arguments[1].declType).to.equal('outArgument');
+      expect(methodD1.arguments[2].declType).to.equal('outArgument');
+      expect(methodD1.arguments[1].name).to.equal('customNameForP');
     });
   });
 });
