@@ -134,12 +134,26 @@ def include_member(member):
             return False
     return True;
 
+# def w_arg(arg):
+#     tp = str(arg.decl_type)
+#     if("const" in tp):
+#         tp = "const " + tp.replace(" const", "") #consts are on the wrong side for some reason
+#     d = Dict(name=arg.name, type=clean_name(type(arg.decl_type)), decl=tp)
+#     add_if(d, arg.default_value, "default")
+#     return d
+
+
 def w_arg(arg):
+    from pprint import pprint
     tp = str(arg.decl_type)
-    if("const" in tp):
-        tp = "const " + tp.replace(" const", "") #consts are on the wrong side for some reason
-    d = Dict(name=arg.name, type=clean_name(type(arg.decl_type)), decl=tp)
+    const = 'const' in tp and tp.split(' ')[1] == 'const'
+    ref = '&' in tp
+    constRef = ref and tp.endswith('const')
+    d = Dict(name=arg.name, type=clean_name(type(arg.decl_type)))
     add_if(d, arg.default_value, "default")
+    add_if(d, const, "const")
+    add_if(d, ref, "ref")
+    add_if(d, constRef, "constRef")
     return d
 
 def w_member_function(cd, parent):
@@ -148,7 +162,7 @@ def w_member_function(cd, parent):
         name=clean_name(cd.name),
         key=parent.name + '::' + cd.name + "(" + ", ".join([a['type'] for a in args]) + ")",
         parent=parent.name,
-        type="method",
+        declType="method",
         arguments=args,
         returnType=str(cd.return_type) if cd.return_type else ""
 
@@ -172,12 +186,12 @@ def w_constructor(cc, parent):
 def w_enum(e):
     return Dict(
         name=clean_name(e.name),
-        type="enum",
+        declType="enum",
         key=clean_name(e.name),
         values=e.values)
 
 def w_typedef(td):
-    return Dict(name=clean_name(td.name), type=str(td.decl_type), key=clean_name(td.name), type="typedef")
+    return Dict(name=clean_name(td.name), type=str(td.decl_type), key=clean_name(td.name), declType="typedef")
 
 
 
@@ -211,7 +225,7 @@ def w_class(cls):
         abstract=cls.is_abstract,
         artificial=cls.is_artificial,
         location=cls.location.as_tuple(),
-        type="class",
+        declType="class",
         key=cls.name,
         declarations=constructors + members
         #operators=iter(cls.operators(), w_operator),

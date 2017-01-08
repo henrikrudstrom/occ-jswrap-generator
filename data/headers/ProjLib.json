@@ -26,29 +26,32 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Projector", 
           "parent": "ProjLib_Projector", 
           "arguments": [], 
           "key": "ProjLib_Projector::ProjLib_Projector()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Projector", 
           "parent": "ProjLib_Projector", 
           "arguments": [
             {
-              "decl": "const ProjLib_Projector &", 
               "type": "ProjLib_Projector", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Projector::ProjLib_Projector(ProjLib_Projector)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -86,9 +89,10 @@
           "parent": "ProjLib_Projector", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Geom2d_BSplineCurve> &", 
               "type": "opencascade::handle<Geom2d_BSplineCurve>", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Projector::SetBSpline(opencascade::handle<Geom2d_BSplineCurve>)", 
@@ -101,9 +105,10 @@
           "parent": "ProjLib_Projector", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Geom2d_BezierCurve> &", 
               "type": "opencascade::handle<Geom2d_BezierCurve>", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Projector::SetBezier(opencascade::handle<Geom2d_BezierCurve>)", 
@@ -116,9 +121,9 @@
           "parent": "ProjLib_Projector", 
           "arguments": [
             {
-              "decl": "const GeomAbs_CurveType", 
               "type": "GeomAbs_CurveType", 
-              "name": "Type"
+              "name": "Type", 
+              "const": true
             }
           ], 
           "key": "ProjLib_Projector::SetType(GeomAbs_CurveType)", 
@@ -220,9 +225,10 @@
           "parent": "ProjLib_Projector", 
           "arguments": [
             {
-              "decl": "const gp_Lin &", 
               "type": "gp_Lin", 
-              "name": "L"
+              "name": "L", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Projector::Project(gp_Lin)", 
@@ -236,9 +242,10 @@
           "parent": "ProjLib_Projector", 
           "arguments": [
             {
-              "decl": "const gp_Circ &", 
               "type": "gp_Circ", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Projector::Project(gp_Circ)", 
@@ -252,9 +259,10 @@
           "parent": "ProjLib_Projector", 
           "arguments": [
             {
-              "decl": "const gp_Elips &", 
               "type": "gp_Elips", 
-              "name": "E"
+              "name": "E", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Projector::Project(gp_Elips)", 
@@ -268,9 +276,10 @@
           "parent": "ProjLib_Projector", 
           "arguments": [
             {
-              "decl": "const gp_Parab &", 
               "type": "gp_Parab", 
-              "name": "P"
+              "name": "P", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Projector::Project(gp_Parab)", 
@@ -284,9 +293,10 @@
           "parent": "ProjLib_Projector", 
           "arguments": [
             {
-              "decl": "const gp_Hypr &", 
               "type": "gp_Hypr", 
-              "name": "H"
+              "name": "H", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Projector::Project(gp_Hypr)", 
@@ -300,24 +310,24 @@
           "parent": "ProjLib_Projector", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "CFirst"
+              "name": "CFirst", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "CLast"
+              "name": "CLast", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "UFirst"
+              "name": "UFirst", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "Period"
+              "name": "Period", 
+              "const": true
             }
           ], 
           "key": "ProjLib_Projector::UFrame(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
@@ -330,24 +340,24 @@
           "parent": "ProjLib_Projector", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "CFirst"
+              "name": "CFirst", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "CLast"
+              "name": "CLast", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "VFirst"
+              "name": "VFirst", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "Period"
+              "name": "Period", 
+              "const": true
             }
           ], 
           "key": "ProjLib_Projector::VFrame(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
@@ -369,64 +379,72 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Sphere", 
           "parent": "ProjLib_Sphere", 
           "arguments": [], 
           "key": "ProjLib_Sphere::ProjLib_Sphere()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Sphere", 
           "parent": "ProjLib_Sphere", 
           "arguments": [
             {
-              "decl": "const gp_Sphere &", 
               "type": "gp_Sphere", 
-              "name": "Sp"
+              "name": "Sp", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Sphere::ProjLib_Sphere(gp_Sphere)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Sphere", 
           "parent": "ProjLib_Sphere", 
           "arguments": [
             {
-              "decl": "const gp_Sphere &", 
               "type": "gp_Sphere", 
-              "name": "Sp"
+              "name": "Sp", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const gp_Circ &", 
               "type": "gp_Circ", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Sphere::ProjLib_Sphere(gp_Sphere, gp_Circ)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Sphere", 
           "parent": "ProjLib_Sphere", 
           "arguments": [
             {
-              "decl": "const ProjLib_Sphere &", 
               "type": "ProjLib_Sphere", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Sphere::ProjLib_Sphere(ProjLib_Sphere)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -435,9 +453,10 @@
           "parent": "ProjLib_Sphere", 
           "arguments": [
             {
-              "decl": "const gp_Sphere &", 
               "type": "gp_Sphere", 
-              "name": "Sp"
+              "name": "Sp", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Sphere::Init(gp_Sphere)", 
@@ -450,9 +469,10 @@
           "parent": "ProjLib_Sphere", 
           "arguments": [
             {
-              "decl": "const gp_Lin &", 
               "type": "gp_Lin", 
-              "name": "L"
+              "name": "L", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Sphere::Project(gp_Lin)", 
@@ -466,9 +486,10 @@
           "parent": "ProjLib_Sphere", 
           "arguments": [
             {
-              "decl": "const gp_Circ &", 
               "type": "gp_Circ", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Sphere::Project(gp_Circ)", 
@@ -482,9 +503,10 @@
           "parent": "ProjLib_Sphere", 
           "arguments": [
             {
-              "decl": "const gp_Elips &", 
               "type": "gp_Elips", 
-              "name": "E"
+              "name": "E", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Sphere::Project(gp_Elips)", 
@@ -498,9 +520,10 @@
           "parent": "ProjLib_Sphere", 
           "arguments": [
             {
-              "decl": "const gp_Parab &", 
               "type": "gp_Parab", 
-              "name": "P"
+              "name": "P", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Sphere::Project(gp_Parab)", 
@@ -514,9 +537,10 @@
           "parent": "ProjLib_Sphere", 
           "arguments": [
             {
-              "decl": "const gp_Hypr &", 
               "type": "gp_Hypr", 
-              "name": "H"
+              "name": "H", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Sphere::Project(gp_Hypr)", 
@@ -530,9 +554,9 @@
           "parent": "ProjLib_Sphere", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }
           ], 
           "key": "ProjLib_Sphere::SetInBounds(Standard_Real)", 
@@ -559,44 +583,49 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_HSequenceOfHSequenceOfPnt", 
           "parent": "ProjLib_HSequenceOfHSequenceOfPnt", 
           "arguments": [], 
           "key": "ProjLib_HSequenceOfHSequenceOfPnt::ProjLib_HSequenceOfHSequenceOfPnt()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_HSequenceOfHSequenceOfPnt", 
           "parent": "ProjLib_HSequenceOfHSequenceOfPnt", 
           "arguments": [
             {
-              "decl": "const ProjLib_SequenceOfHSequenceOfPnt &", 
               "type": "ProjLib_SequenceOfHSequenceOfPnt", 
-              "name": "theOther"
+              "name": "theOther", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_HSequenceOfHSequenceOfPnt::ProjLib_HSequenceOfHSequenceOfPnt(ProjLib_SequenceOfHSequenceOfPnt)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_HSequenceOfHSequenceOfPnt", 
           "parent": "ProjLib_HSequenceOfHSequenceOfPnt", 
           "arguments": [
             {
-              "decl": "const ProjLib_HSequenceOfHSequenceOfPnt &", 
               "type": "ProjLib_HSequenceOfHSequenceOfPnt", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_HSequenceOfHSequenceOfPnt::ProjLib_HSequenceOfHSequenceOfPnt(ProjLib_HSequenceOfHSequenceOfPnt)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -615,9 +644,9 @@
           "parent": "ProjLib_HSequenceOfHSequenceOfPnt", 
           "arguments": [
             {
-              "decl": "const NCollection_Sequence<opencascade::handle<TColgp_HSequenceOfPnt> >::value_type &", 
               "type": "NCollection_Sequence<opencascade::handle<TColgp_HSequenceOfPnt> >::value_type", 
-              "name": "theItem"
+              "name": "theItem", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_HSequenceOfHSequenceOfPnt::Append(NCollection_Sequence<opencascade::handle<TColgp_HSequenceOfPnt> >::value_type)", 
@@ -630,9 +659,9 @@
           "parent": "ProjLib_HSequenceOfHSequenceOfPnt", 
           "arguments": [
             {
-              "decl": "ProjLib_SequenceOfHSequenceOfPnt &", 
               "type": "ProjLib_SequenceOfHSequenceOfPnt", 
-              "name": "theSequence"
+              "name": "theSequence", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_HSequenceOfHSequenceOfPnt::Append(ProjLib_SequenceOfHSequenceOfPnt)", 
@@ -703,45 +732,50 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ComputeApprox", 
           "parent": "ProjLib_ComputeApprox", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
               "type": "opencascade::handle<Adaptor3d_HCurve>", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
               "type": "opencascade::handle<Adaptor3d_HSurface>", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "Tol"
+              "name": "Tol", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ComputeApprox::ProjLib_ComputeApprox(opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor3d_HSurface>, Standard_Real)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ComputeApprox", 
           "parent": "ProjLib_ComputeApprox", 
           "arguments": [
             {
-              "decl": "const ProjLib_ComputeApprox &", 
               "type": "ProjLib_ComputeApprox", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ComputeApprox::ProjLib_ComputeApprox(ProjLib_ComputeApprox)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -789,50 +823,55 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_PrjFunc", 
           "parent": "ProjLib_PrjFunc", 
           "arguments": [
             {
-              "decl": "const Adaptor3d_CurvePtr &", 
               "type": "Adaptor3d_CurvePtr", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "FixVal"
+              "name": "FixVal", 
+              "const": true
             }, 
             {
-              "decl": "const Adaptor3d_SurfacePtr &", 
               "type": "Adaptor3d_SurfacePtr", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "Fix"
+              "name": "Fix", 
+              "const": true
             }
           ], 
           "key": "ProjLib_PrjFunc::ProjLib_PrjFunc(Adaptor3d_CurvePtr, Standard_Real, Adaptor3d_SurfacePtr, Standard_Integer)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_PrjFunc", 
           "parent": "ProjLib_PrjFunc", 
           "arguments": [
             {
-              "decl": "const ProjLib_PrjFunc &", 
               "type": "ProjLib_PrjFunc", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_PrjFunc::ProjLib_PrjFunc(ProjLib_PrjFunc)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -863,14 +902,15 @@
           "parent": "ProjLib_PrjFunc", 
           "arguments": [
             {
-              "decl": "const math_Vector &", 
               "type": "math_Vector", 
-              "name": "X"
+              "name": "X", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "math_Vector &", 
               "type": "math_Vector", 
-              "name": "F"
+              "name": "F", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_PrjFunc::Value(math_Vector, math_Vector)", 
@@ -884,14 +924,15 @@
           "parent": "ProjLib_PrjFunc", 
           "arguments": [
             {
-              "decl": "const math_Vector &", 
               "type": "math_Vector", 
-              "name": "X"
+              "name": "X", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "math_Matrix &", 
               "type": "math_Matrix", 
-              "name": "D"
+              "name": "D", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_PrjFunc::Derivatives(math_Vector, math_Matrix)", 
@@ -905,19 +946,20 @@
           "parent": "ProjLib_PrjFunc", 
           "arguments": [
             {
-              "decl": "const math_Vector &", 
               "type": "math_Vector", 
-              "name": "X"
+              "name": "X", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "math_Vector &", 
               "type": "math_Vector", 
-              "name": "F"
+              "name": "F", 
+              "ref": true
             }, 
             {
-              "decl": "math_Matrix &", 
               "type": "math_Matrix", 
-              "name": "D"
+              "name": "D", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_PrjFunc::Values(math_Vector, math_Vector, math_Matrix)", 
@@ -955,104 +997,118 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Cylinder", 
           "parent": "ProjLib_Cylinder", 
           "arguments": [], 
           "key": "ProjLib_Cylinder::ProjLib_Cylinder()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Cylinder", 
           "parent": "ProjLib_Cylinder", 
           "arguments": [
             {
-              "decl": "const gp_Cylinder &", 
               "type": "gp_Cylinder", 
-              "name": "Cyl"
+              "name": "Cyl", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cylinder::ProjLib_Cylinder(gp_Cylinder)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Cylinder", 
           "parent": "ProjLib_Cylinder", 
           "arguments": [
             {
-              "decl": "const gp_Cylinder &", 
               "type": "gp_Cylinder", 
-              "name": "Cyl"
+              "name": "Cyl", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const gp_Lin &", 
               "type": "gp_Lin", 
-              "name": "L"
+              "name": "L", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cylinder::ProjLib_Cylinder(gp_Cylinder, gp_Lin)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Cylinder", 
           "parent": "ProjLib_Cylinder", 
           "arguments": [
             {
-              "decl": "const gp_Cylinder &", 
               "type": "gp_Cylinder", 
-              "name": "Cyl"
+              "name": "Cyl", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const gp_Circ &", 
               "type": "gp_Circ", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cylinder::ProjLib_Cylinder(gp_Cylinder, gp_Circ)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Cylinder", 
           "parent": "ProjLib_Cylinder", 
           "arguments": [
             {
-              "decl": "const gp_Cylinder &", 
               "type": "gp_Cylinder", 
-              "name": "Cyl"
+              "name": "Cyl", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const gp_Elips &", 
               "type": "gp_Elips", 
-              "name": "E"
+              "name": "E", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cylinder::ProjLib_Cylinder(gp_Cylinder, gp_Elips)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Cylinder", 
           "parent": "ProjLib_Cylinder", 
           "arguments": [
             {
-              "decl": "const ProjLib_Cylinder &", 
               "type": "ProjLib_Cylinder", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cylinder::ProjLib_Cylinder(ProjLib_Cylinder)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -1061,9 +1117,10 @@
           "parent": "ProjLib_Cylinder", 
           "arguments": [
             {
-              "decl": "const gp_Cylinder &", 
               "type": "gp_Cylinder", 
-              "name": "Cyl"
+              "name": "Cyl", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cylinder::Init(gp_Cylinder)", 
@@ -1076,9 +1133,10 @@
           "parent": "ProjLib_Cylinder", 
           "arguments": [
             {
-              "decl": "const gp_Lin &", 
               "type": "gp_Lin", 
-              "name": "L"
+              "name": "L", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cylinder::Project(gp_Lin)", 
@@ -1092,9 +1150,10 @@
           "parent": "ProjLib_Cylinder", 
           "arguments": [
             {
-              "decl": "const gp_Circ &", 
               "type": "gp_Circ", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cylinder::Project(gp_Circ)", 
@@ -1108,9 +1167,10 @@
           "parent": "ProjLib_Cylinder", 
           "arguments": [
             {
-              "decl": "const gp_Elips &", 
               "type": "gp_Elips", 
-              "name": "E"
+              "name": "E", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cylinder::Project(gp_Elips)", 
@@ -1124,9 +1184,10 @@
           "parent": "ProjLib_Cylinder", 
           "arguments": [
             {
-              "decl": "const gp_Parab &", 
               "type": "gp_Parab", 
-              "name": "P"
+              "name": "P", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cylinder::Project(gp_Parab)", 
@@ -1140,9 +1201,10 @@
           "parent": "ProjLib_Cylinder", 
           "arguments": [
             {
-              "decl": "const gp_Hypr &", 
               "type": "gp_Hypr", 
-              "name": "H"
+              "name": "H", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cylinder::Project(gp_Hypr)", 
@@ -1170,89 +1232,100 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ProjectedCurve", 
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [], 
           "key": "ProjLib_ProjectedCurve::ProjLib_ProjectedCurve()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ProjectedCurve", 
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
               "type": "opencascade::handle<Adaptor3d_HSurface>", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::ProjLib_ProjectedCurve(opencascade::handle<Adaptor3d_HSurface>)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ProjectedCurve", 
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
               "type": "opencascade::handle<Adaptor3d_HSurface>", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
               "type": "opencascade::handle<Adaptor3d_HCurve>", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::ProjLib_ProjectedCurve(opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor3d_HCurve>)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ProjectedCurve", 
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
               "type": "opencascade::handle<Adaptor3d_HSurface>", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
               "type": "opencascade::handle<Adaptor3d_HCurve>", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "Tol"
+              "name": "Tol", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::ProjLib_ProjectedCurve(opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor3d_HCurve>, Standard_Real)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ProjectedCurve", 
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "const ProjLib_ProjectedCurve &", 
               "type": "ProjLib_ProjectedCurve", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::ProjLib_ProjectedCurve(ProjLib_ProjectedCurve)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -1261,9 +1334,9 @@
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "Tolerance"
+              "name": "Tolerance", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::Load(Standard_Real)", 
@@ -1276,9 +1349,10 @@
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
               "type": "opencascade::handle<Adaptor3d_HSurface>", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::Load(opencascade::handle<Adaptor3d_HSurface>)", 
@@ -1291,9 +1365,10 @@
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
               "type": "opencascade::handle<Adaptor3d_HCurve>", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::Load(opencascade::handle<Adaptor3d_HCurve>)", 
@@ -1369,9 +1444,9 @@
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "const GeomAbs_Shape", 
               "type": "GeomAbs_Shape", 
-              "name": "S"
+              "name": "S", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::NbIntervals(GeomAbs_Shape)", 
@@ -1386,14 +1461,14 @@
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "TColStd_Array1OfReal &", 
               "type": "TColStd_Array1OfReal", 
-              "name": "T"
+              "name": "T", 
+              "ref": true
             }, 
             {
-              "decl": "const GeomAbs_Shape", 
               "type": "GeomAbs_Shape", 
-              "name": "S"
+              "name": "S", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
@@ -1408,19 +1483,19 @@
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "First"
+              "name": "First", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "Last"
+              "name": "Last", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "Tol"
+              "name": "Tol", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::Trim(Standard_Real, Standard_Real, Standard_Real)", 
@@ -1468,9 +1543,9 @@
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::Value(Standard_Real)", 
@@ -1485,14 +1560,14 @@
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }, 
             {
-              "decl": "gp_Pnt2d &", 
               "type": "gp_Pnt2d", 
-              "name": "P"
+              "name": "P", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::D0(Standard_Real, gp_Pnt2d)", 
@@ -1507,19 +1582,19 @@
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }, 
             {
-              "decl": "gp_Pnt2d &", 
               "type": "gp_Pnt2d", 
-              "name": "P"
+              "name": "P", 
+              "ref": true
             }, 
             {
-              "decl": "gp_Vec2d &", 
               "type": "gp_Vec2d", 
-              "name": "V"
+              "name": "V", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::D1(Standard_Real, gp_Pnt2d, gp_Vec2d)", 
@@ -1534,24 +1609,24 @@
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }, 
             {
-              "decl": "gp_Pnt2d &", 
               "type": "gp_Pnt2d", 
-              "name": "P"
+              "name": "P", 
+              "ref": true
             }, 
             {
-              "decl": "gp_Vec2d &", 
               "type": "gp_Vec2d", 
-              "name": "V1"
+              "name": "V1", 
+              "ref": true
             }, 
             {
-              "decl": "gp_Vec2d &", 
               "type": "gp_Vec2d", 
-              "name": "V2"
+              "name": "V2", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::D2(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d)", 
@@ -1566,29 +1641,29 @@
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }, 
             {
-              "decl": "gp_Pnt2d &", 
               "type": "gp_Pnt2d", 
-              "name": "P"
+              "name": "P", 
+              "ref": true
             }, 
             {
-              "decl": "gp_Vec2d &", 
               "type": "gp_Vec2d", 
-              "name": "V1"
+              "name": "V1", 
+              "ref": true
             }, 
             {
-              "decl": "gp_Vec2d &", 
               "type": "gp_Vec2d", 
-              "name": "V2"
+              "name": "V2", 
+              "ref": true
             }, 
             {
-              "decl": "gp_Vec2d &", 
               "type": "gp_Vec2d", 
-              "name": "V3"
+              "name": "V3", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::D3(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d, gp_Vec2d)", 
@@ -1603,14 +1678,14 @@
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "N"
+              "name": "N", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::DN(Standard_Real, Standard_Integer)", 
@@ -1625,9 +1700,9 @@
           "parent": "ProjLib_ProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "R3d"
+              "name": "R3d", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ProjectedCurve::Resolution(Standard_Real)", 
@@ -1788,64 +1863,72 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ProjectOnPlane", 
           "parent": "ProjLib_ProjectOnPlane", 
           "arguments": [], 
           "key": "ProjLib_ProjectOnPlane::ProjLib_ProjectOnPlane()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ProjectOnPlane", 
           "parent": "ProjLib_ProjectOnPlane", 
           "arguments": [
             {
-              "decl": "const gp_Ax3 &", 
               "type": "gp_Ax3", 
-              "name": "Pl"
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectOnPlane::ProjLib_ProjectOnPlane(gp_Ax3)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ProjectOnPlane", 
           "parent": "ProjLib_ProjectOnPlane", 
           "arguments": [
             {
-              "decl": "const gp_Ax3 &", 
               "type": "gp_Ax3", 
-              "name": "Pl"
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const gp_Dir &", 
               "type": "gp_Dir", 
-              "name": "D"
+              "name": "D", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectOnPlane::ProjLib_ProjectOnPlane(gp_Ax3, gp_Dir)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ProjectOnPlane", 
           "parent": "ProjLib_ProjectOnPlane", 
           "arguments": [
             {
-              "decl": "const ProjLib_ProjectOnPlane &", 
               "type": "ProjLib_ProjectOnPlane", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectOnPlane::ProjLib_ProjectOnPlane(ProjLib_ProjectOnPlane)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -1854,20 +1937,21 @@
           "parent": "ProjLib_ProjectOnPlane", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
               "type": "opencascade::handle<Adaptor3d_HCurve>", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "Tolerance"
+              "name": "Tolerance", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Boolean", 
               "type": "Standard_Boolean", 
               "name": "KeepParametrization", 
-              "default": "true"
+              "default": "true", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ProjectOnPlane::Load(opencascade::handle<Adaptor3d_HCurve>, Standard_Real, Standard_Boolean)", 
@@ -1943,9 +2027,9 @@
           "parent": "ProjLib_ProjectOnPlane", 
           "arguments": [
             {
-              "decl": "const GeomAbs_Shape", 
               "type": "GeomAbs_Shape", 
-              "name": "S"
+              "name": "S", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ProjectOnPlane::NbIntervals(GeomAbs_Shape)", 
@@ -1960,14 +2044,14 @@
           "parent": "ProjLib_ProjectOnPlane", 
           "arguments": [
             {
-              "decl": "TColStd_Array1OfReal &", 
               "type": "TColStd_Array1OfReal", 
-              "name": "T"
+              "name": "T", 
+              "ref": true
             }, 
             {
-              "decl": "const GeomAbs_Shape", 
               "type": "GeomAbs_Shape", 
-              "name": "S"
+              "name": "S", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ProjectOnPlane::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
@@ -1982,19 +2066,19 @@
           "parent": "ProjLib_ProjectOnPlane", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "First"
+              "name": "First", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "Last"
+              "name": "Last", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "Tol"
+              "name": "Tol", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ProjectOnPlane::Trim(Standard_Real, Standard_Real, Standard_Real)", 
@@ -2042,9 +2126,9 @@
           "parent": "ProjLib_ProjectOnPlane", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ProjectOnPlane::Value(Standard_Real)", 
@@ -2059,14 +2143,14 @@
           "parent": "ProjLib_ProjectOnPlane", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }, 
             {
-              "decl": "gp_Pnt &", 
               "type": "gp_Pnt", 
-              "name": "P"
+              "name": "P", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectOnPlane::D0(Standard_Real, gp_Pnt)", 
@@ -2081,19 +2165,19 @@
           "parent": "ProjLib_ProjectOnPlane", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }, 
             {
-              "decl": "gp_Pnt &", 
               "type": "gp_Pnt", 
-              "name": "P"
+              "name": "P", 
+              "ref": true
             }, 
             {
-              "decl": "gp_Vec &", 
               "type": "gp_Vec", 
-              "name": "V"
+              "name": "V", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectOnPlane::D1(Standard_Real, gp_Pnt, gp_Vec)", 
@@ -2108,24 +2192,24 @@
           "parent": "ProjLib_ProjectOnPlane", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }, 
             {
-              "decl": "gp_Pnt &", 
               "type": "gp_Pnt", 
-              "name": "P"
+              "name": "P", 
+              "ref": true
             }, 
             {
-              "decl": "gp_Vec &", 
               "type": "gp_Vec", 
-              "name": "V1"
+              "name": "V1", 
+              "ref": true
             }, 
             {
-              "decl": "gp_Vec &", 
               "type": "gp_Vec", 
-              "name": "V2"
+              "name": "V2", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectOnPlane::D2(Standard_Real, gp_Pnt, gp_Vec, gp_Vec)", 
@@ -2140,29 +2224,29 @@
           "parent": "ProjLib_ProjectOnPlane", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }, 
             {
-              "decl": "gp_Pnt &", 
               "type": "gp_Pnt", 
-              "name": "P"
+              "name": "P", 
+              "ref": true
             }, 
             {
-              "decl": "gp_Vec &", 
               "type": "gp_Vec", 
-              "name": "V1"
+              "name": "V1", 
+              "ref": true
             }, 
             {
-              "decl": "gp_Vec &", 
               "type": "gp_Vec", 
-              "name": "V2"
+              "name": "V2", 
+              "ref": true
             }, 
             {
-              "decl": "gp_Vec &", 
               "type": "gp_Vec", 
-              "name": "V3"
+              "name": "V3", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectOnPlane::D3(Standard_Real, gp_Pnt, gp_Vec, gp_Vec, gp_Vec)", 
@@ -2177,14 +2261,14 @@
           "parent": "ProjLib_ProjectOnPlane", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "N"
+              "name": "N", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ProjectOnPlane::DN(Standard_Real, Standard_Integer)", 
@@ -2199,9 +2283,9 @@
           "parent": "ProjLib_ProjectOnPlane", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "R3d"
+              "name": "R3d", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ProjectOnPlane::Resolution(Standard_Real)", 
@@ -2362,144 +2446,164 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Plane", 
           "parent": "ProjLib_Plane", 
           "arguments": [], 
           "key": "ProjLib_Plane::ProjLib_Plane()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Plane", 
           "parent": "ProjLib_Plane", 
           "arguments": [
             {
-              "decl": "const gp_Pln &", 
               "type": "gp_Pln", 
-              "name": "Pl"
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Plane::ProjLib_Plane(gp_Pln)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Plane", 
           "parent": "ProjLib_Plane", 
           "arguments": [
             {
-              "decl": "const gp_Pln &", 
               "type": "gp_Pln", 
-              "name": "Pl"
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const gp_Lin &", 
               "type": "gp_Lin", 
-              "name": "L"
+              "name": "L", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Plane::ProjLib_Plane(gp_Pln, gp_Lin)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Plane", 
           "parent": "ProjLib_Plane", 
           "arguments": [
             {
-              "decl": "const gp_Pln &", 
               "type": "gp_Pln", 
-              "name": "Pl"
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const gp_Circ &", 
               "type": "gp_Circ", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Plane::ProjLib_Plane(gp_Pln, gp_Circ)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Plane", 
           "parent": "ProjLib_Plane", 
           "arguments": [
             {
-              "decl": "const gp_Pln &", 
               "type": "gp_Pln", 
-              "name": "Pl"
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const gp_Elips &", 
               "type": "gp_Elips", 
-              "name": "E"
+              "name": "E", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Plane::ProjLib_Plane(gp_Pln, gp_Elips)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Plane", 
           "parent": "ProjLib_Plane", 
           "arguments": [
             {
-              "decl": "const gp_Pln &", 
               "type": "gp_Pln", 
-              "name": "Pl"
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const gp_Parab &", 
               "type": "gp_Parab", 
-              "name": "P"
+              "name": "P", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Plane::ProjLib_Plane(gp_Pln, gp_Parab)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Plane", 
           "parent": "ProjLib_Plane", 
           "arguments": [
             {
-              "decl": "const gp_Pln &", 
               "type": "gp_Pln", 
-              "name": "Pl"
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const gp_Hypr &", 
               "type": "gp_Hypr", 
-              "name": "H"
+              "name": "H", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Plane::ProjLib_Plane(gp_Pln, gp_Hypr)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Plane", 
           "parent": "ProjLib_Plane", 
           "arguments": [
             {
-              "decl": "const ProjLib_Plane &", 
               "type": "ProjLib_Plane", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Plane::ProjLib_Plane(ProjLib_Plane)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -2508,9 +2612,10 @@
           "parent": "ProjLib_Plane", 
           "arguments": [
             {
-              "decl": "const gp_Pln &", 
               "type": "gp_Pln", 
-              "name": "Pl"
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Plane::Init(gp_Pln)", 
@@ -2523,9 +2628,10 @@
           "parent": "ProjLib_Plane", 
           "arguments": [
             {
-              "decl": "const gp_Lin &", 
               "type": "gp_Lin", 
-              "name": "L"
+              "name": "L", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Plane::Project(gp_Lin)", 
@@ -2539,9 +2645,10 @@
           "parent": "ProjLib_Plane", 
           "arguments": [
             {
-              "decl": "const gp_Circ &", 
               "type": "gp_Circ", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Plane::Project(gp_Circ)", 
@@ -2555,9 +2662,10 @@
           "parent": "ProjLib_Plane", 
           "arguments": [
             {
-              "decl": "const gp_Elips &", 
               "type": "gp_Elips", 
-              "name": "E"
+              "name": "E", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Plane::Project(gp_Elips)", 
@@ -2571,9 +2679,10 @@
           "parent": "ProjLib_Plane", 
           "arguments": [
             {
-              "decl": "const gp_Parab &", 
               "type": "gp_Parab", 
-              "name": "P"
+              "name": "P", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Plane::Project(gp_Parab)", 
@@ -2587,9 +2696,10 @@
           "parent": "ProjLib_Plane", 
           "arguments": [
             {
-              "decl": "const gp_Hypr &", 
               "type": "gp_Hypr", 
-              "name": "H"
+              "name": "H", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Plane::Project(gp_Hypr)", 
@@ -2617,84 +2727,95 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Cone", 
           "parent": "ProjLib_Cone", 
           "arguments": [], 
           "key": "ProjLib_Cone::ProjLib_Cone()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Cone", 
           "parent": "ProjLib_Cone", 
           "arguments": [
             {
-              "decl": "const gp_Cone &", 
               "type": "gp_Cone", 
-              "name": "Co"
+              "name": "Co", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cone::ProjLib_Cone(gp_Cone)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Cone", 
           "parent": "ProjLib_Cone", 
           "arguments": [
             {
-              "decl": "const gp_Cone &", 
               "type": "gp_Cone", 
-              "name": "Co"
+              "name": "Co", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const gp_Lin &", 
               "type": "gp_Lin", 
-              "name": "L"
+              "name": "L", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cone::ProjLib_Cone(gp_Cone, gp_Lin)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Cone", 
           "parent": "ProjLib_Cone", 
           "arguments": [
             {
-              "decl": "const gp_Cone &", 
               "type": "gp_Cone", 
-              "name": "Co"
+              "name": "Co", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const gp_Circ &", 
               "type": "gp_Circ", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cone::ProjLib_Cone(gp_Cone, gp_Circ)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Cone", 
           "parent": "ProjLib_Cone", 
           "arguments": [
             {
-              "decl": "const ProjLib_Cone &", 
               "type": "ProjLib_Cone", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cone::ProjLib_Cone(ProjLib_Cone)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -2703,9 +2824,10 @@
           "parent": "ProjLib_Cone", 
           "arguments": [
             {
-              "decl": "const gp_Cone &", 
               "type": "gp_Cone", 
-              "name": "Co"
+              "name": "Co", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cone::Init(gp_Cone)", 
@@ -2718,9 +2840,10 @@
           "parent": "ProjLib_Cone", 
           "arguments": [
             {
-              "decl": "const gp_Lin &", 
               "type": "gp_Lin", 
-              "name": "L"
+              "name": "L", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cone::Project(gp_Lin)", 
@@ -2734,9 +2857,10 @@
           "parent": "ProjLib_Cone", 
           "arguments": [
             {
-              "decl": "const gp_Circ &", 
               "type": "gp_Circ", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cone::Project(gp_Circ)", 
@@ -2750,9 +2874,10 @@
           "parent": "ProjLib_Cone", 
           "arguments": [
             {
-              "decl": "const gp_Elips &", 
               "type": "gp_Elips", 
-              "name": "E"
+              "name": "E", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cone::Project(gp_Elips)", 
@@ -2766,9 +2891,10 @@
           "parent": "ProjLib_Cone", 
           "arguments": [
             {
-              "decl": "const gp_Parab &", 
               "type": "gp_Parab", 
-              "name": "P"
+              "name": "P", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cone::Project(gp_Parab)", 
@@ -2782,9 +2908,10 @@
           "parent": "ProjLib_Cone", 
           "arguments": [
             {
-              "decl": "const gp_Hypr &", 
               "type": "gp_Hypr", 
-              "name": "H"
+              "name": "H", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Cone::Project(gp_Hypr)", 
@@ -2812,44 +2939,49 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_HProjectedCurve", 
           "parent": "ProjLib_HProjectedCurve", 
           "arguments": [], 
           "key": "ProjLib_HProjectedCurve::ProjLib_HProjectedCurve()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_HProjectedCurve", 
           "parent": "ProjLib_HProjectedCurve", 
           "arguments": [
             {
-              "decl": "const ProjLib_ProjectedCurve &", 
               "type": "ProjLib_ProjectedCurve", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_HProjectedCurve::ProjLib_HProjectedCurve(ProjLib_ProjectedCurve)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_HProjectedCurve", 
           "parent": "ProjLib_HProjectedCurve", 
           "arguments": [
             {
-              "decl": "const ProjLib_HProjectedCurve &", 
               "type": "ProjLib_HProjectedCurve", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_HProjectedCurve::ProjLib_HProjectedCurve(ProjLib_HProjectedCurve)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -2858,9 +2990,10 @@
           "parent": "ProjLib_HProjectedCurve", 
           "arguments": [
             {
-              "decl": "const ProjLib_ProjectedCurve &", 
               "type": "ProjLib_ProjectedCurve", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_HProjectedCurve::Set(ProjLib_ProjectedCurve)", 
@@ -2938,44 +3071,49 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ProjectOnSurface", 
           "parent": "ProjLib_ProjectOnSurface", 
           "arguments": [], 
           "key": "ProjLib_ProjectOnSurface::ProjLib_ProjectOnSurface()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ProjectOnSurface", 
           "parent": "ProjLib_ProjectOnSurface", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
               "type": "opencascade::handle<Adaptor3d_HSurface>", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectOnSurface::ProjLib_ProjectOnSurface(opencascade::handle<Adaptor3d_HSurface>)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ProjectOnSurface", 
           "parent": "ProjLib_ProjectOnSurface", 
           "arguments": [
             {
-              "decl": "const ProjLib_ProjectOnSurface &", 
               "type": "ProjLib_ProjectOnSurface", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectOnSurface::ProjLib_ProjectOnSurface(ProjLib_ProjectOnSurface)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -2984,9 +3122,10 @@
           "parent": "ProjLib_ProjectOnSurface", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
               "type": "opencascade::handle<Adaptor3d_HSurface>", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ProjectOnSurface::Load(opencascade::handle<Adaptor3d_HSurface>)", 
@@ -2999,14 +3138,15 @@
           "parent": "ProjLib_ProjectOnSurface", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
               "type": "opencascade::handle<Adaptor3d_HCurve>", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "Tolerance"
+              "name": "Tolerance", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ProjectOnSurface::Load(opencascade::handle<Adaptor3d_HCurve>, Standard_Real)", 
@@ -3048,94 +3188,103 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_CompProjectedCurve", 
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [], 
           "key": "ProjLib_CompProjectedCurve::ProjLib_CompProjectedCurve()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_CompProjectedCurve", 
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
               "type": "opencascade::handle<Adaptor3d_HSurface>", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
               "type": "opencascade::handle<Adaptor3d_HCurve>", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "TolU"
+              "name": "TolU", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "TolV"
+              "name": "TolV", 
+              "const": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::ProjLib_CompProjectedCurve(opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor3d_HCurve>, Standard_Real, Standard_Real)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_CompProjectedCurve", 
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
               "type": "opencascade::handle<Adaptor3d_HSurface>", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
               "type": "opencascade::handle<Adaptor3d_HCurve>", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "TolU"
+              "name": "TolU", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "TolV"
+              "name": "TolV", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "MaxDist"
+              "name": "MaxDist", 
+              "const": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::ProjLib_CompProjectedCurve(opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor3d_HCurve>, Standard_Real, Standard_Real, Standard_Real)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_CompProjectedCurve", 
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const ProjLib_CompProjectedCurve &", 
               "type": "ProjLib_CompProjectedCurve", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::ProjLib_CompProjectedCurve(ProjLib_CompProjectedCurve)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -3153,9 +3302,10 @@
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
               "type": "opencascade::handle<Adaptor3d_HSurface>", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::Load(opencascade::handle<Adaptor3d_HSurface>)", 
@@ -3168,9 +3318,10 @@
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
               "type": "opencascade::handle<Adaptor3d_HCurve>", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::Load(opencascade::handle<Adaptor3d_HCurve>)", 
@@ -3203,14 +3354,14 @@
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "Standard_Real &", 
               "type": "Standard_Real", 
-              "name": "TolU"
+              "name": "TolU", 
+              "ref": true
             }, 
             {
-              "decl": "Standard_Real &", 
               "type": "Standard_Real", 
-              "name": "TolV"
+              "name": "TolV", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::GetTolerance(Standard_Real, Standard_Real)", 
@@ -3234,19 +3385,19 @@
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "Index"
+              "name": "Index", 
+              "const": true
             }, 
             {
-              "decl": "Standard_Real &", 
               "type": "Standard_Real", 
-              "name": "Udeb"
+              "name": "Udeb", 
+              "ref": true
             }, 
             {
-              "decl": "Standard_Real &", 
               "type": "Standard_Real", 
-              "name": "Ufin"
+              "name": "Ufin", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::Bounds(Standard_Integer, Standard_Real, Standard_Real)", 
@@ -3260,14 +3411,14 @@
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "Index"
+              "name": "Index", 
+              "const": true
             }, 
             {
-              "decl": "gp_Pnt2d &", 
               "type": "gp_Pnt2d", 
-              "name": "P"
+              "name": "P", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::IsSinglePnt(Standard_Integer, gp_Pnt2d)", 
@@ -3281,14 +3432,14 @@
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "Index"
+              "name": "Index", 
+              "const": true
             }, 
             {
-              "decl": "Standard_Real &", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::IsUIso(Standard_Integer, Standard_Real)", 
@@ -3302,14 +3453,14 @@
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "Index"
+              "name": "Index", 
+              "const": true
             }, 
             {
-              "decl": "Standard_Real &", 
               "type": "Standard_Real", 
-              "name": "V"
+              "name": "V", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::IsVIso(Standard_Integer, Standard_Real)", 
@@ -3323,9 +3474,9 @@
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::Value(Standard_Real)", 
@@ -3340,14 +3491,14 @@
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }, 
             {
-              "decl": "gp_Pnt2d &", 
               "type": "gp_Pnt2d", 
-              "name": "P"
+              "name": "P", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::D0(Standard_Real, gp_Pnt2d)", 
@@ -3362,19 +3513,19 @@
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }, 
             {
-              "decl": "gp_Pnt2d &", 
               "type": "gp_Pnt2d", 
-              "name": "P"
+              "name": "P", 
+              "ref": true
             }, 
             {
-              "decl": "gp_Vec2d &", 
               "type": "gp_Vec2d", 
-              "name": "V"
+              "name": "V", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::D1(Standard_Real, gp_Pnt2d, gp_Vec2d)", 
@@ -3389,24 +3540,24 @@
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }, 
             {
-              "decl": "gp_Pnt2d &", 
               "type": "gp_Pnt2d", 
-              "name": "P"
+              "name": "P", 
+              "ref": true
             }, 
             {
-              "decl": "gp_Vec2d &", 
               "type": "gp_Vec2d", 
-              "name": "V1"
+              "name": "V1", 
+              "ref": true
             }, 
             {
-              "decl": "gp_Vec2d &", 
               "type": "gp_Vec2d", 
-              "name": "V2"
+              "name": "V2", 
+              "ref": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::D2(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d)", 
@@ -3421,14 +3572,14 @@
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "N"
+              "name": "N", 
+              "const": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::DN(Standard_Real, Standard_Integer)", 
@@ -3465,9 +3616,9 @@
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const GeomAbs_Shape", 
               "type": "GeomAbs_Shape", 
-              "name": "S"
+              "name": "S", 
+              "const": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::NbIntervals(GeomAbs_Shape)", 
@@ -3482,19 +3633,19 @@
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "FirstParam"
+              "name": "FirstParam", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "LastParam"
+              "name": "LastParam", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "Tol"
+              "name": "Tol", 
+              "const": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::Trim(Standard_Real, Standard_Real, Standard_Real)", 
@@ -3509,14 +3660,14 @@
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "TColStd_Array1OfReal &", 
               "type": "TColStd_Array1OfReal", 
-              "name": "T"
+              "name": "T", 
+              "ref": true
             }, 
             {
-              "decl": "const GeomAbs_Shape", 
               "type": "GeomAbs_Shape", 
-              "name": "S"
+              "name": "S", 
+              "const": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
@@ -3531,9 +3682,9 @@
           "parent": "ProjLib_CompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "Index"
+              "name": "Index", 
+              "const": true
             }
           ], 
           "key": "ProjLib_CompProjectedCurve::MaxDistance(Standard_Integer)", 
@@ -3582,64 +3733,72 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Torus", 
           "parent": "ProjLib_Torus", 
           "arguments": [], 
           "key": "ProjLib_Torus::ProjLib_Torus()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Torus", 
           "parent": "ProjLib_Torus", 
           "arguments": [
             {
-              "decl": "const gp_Torus &", 
               "type": "gp_Torus", 
-              "name": "To"
+              "name": "To", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Torus::ProjLib_Torus(gp_Torus)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Torus", 
           "parent": "ProjLib_Torus", 
           "arguments": [
             {
-              "decl": "const gp_Torus &", 
               "type": "gp_Torus", 
-              "name": "To"
+              "name": "To", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const gp_Circ &", 
               "type": "gp_Circ", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Torus::ProjLib_Torus(gp_Torus, gp_Circ)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_Torus", 
           "parent": "ProjLib_Torus", 
           "arguments": [
             {
-              "decl": "const ProjLib_Torus &", 
               "type": "ProjLib_Torus", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Torus::ProjLib_Torus(ProjLib_Torus)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -3648,9 +3807,10 @@
           "parent": "ProjLib_Torus", 
           "arguments": [
             {
-              "decl": "const gp_Torus &", 
               "type": "gp_Torus", 
-              "name": "To"
+              "name": "To", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Torus::Init(gp_Torus)", 
@@ -3663,9 +3823,10 @@
           "parent": "ProjLib_Torus", 
           "arguments": [
             {
-              "decl": "const gp_Lin &", 
               "type": "gp_Lin", 
-              "name": "L"
+              "name": "L", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Torus::Project(gp_Lin)", 
@@ -3679,9 +3840,10 @@
           "parent": "ProjLib_Torus", 
           "arguments": [
             {
-              "decl": "const gp_Circ &", 
               "type": "gp_Circ", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Torus::Project(gp_Circ)", 
@@ -3695,9 +3857,10 @@
           "parent": "ProjLib_Torus", 
           "arguments": [
             {
-              "decl": "const gp_Elips &", 
               "type": "gp_Elips", 
-              "name": "E"
+              "name": "E", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Torus::Project(gp_Elips)", 
@@ -3711,9 +3874,10 @@
           "parent": "ProjLib_Torus", 
           "arguments": [
             {
-              "decl": "const gp_Parab &", 
               "type": "gp_Parab", 
-              "name": "P"
+              "name": "P", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Torus::Project(gp_Parab)", 
@@ -3727,9 +3891,10 @@
           "parent": "ProjLib_Torus", 
           "arguments": [
             {
-              "decl": "const gp_Hypr &", 
               "type": "gp_Hypr", 
-              "name": "H"
+              "name": "H", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_Torus::Project(gp_Hypr)", 
@@ -3757,44 +3922,49 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_HCompProjectedCurve", 
           "parent": "ProjLib_HCompProjectedCurve", 
           "arguments": [], 
           "key": "ProjLib_HCompProjectedCurve::ProjLib_HCompProjectedCurve()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_HCompProjectedCurve", 
           "parent": "ProjLib_HCompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const ProjLib_CompProjectedCurve &", 
               "type": "ProjLib_CompProjectedCurve", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_HCompProjectedCurve::ProjLib_HCompProjectedCurve(ProjLib_CompProjectedCurve)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_HCompProjectedCurve", 
           "parent": "ProjLib_HCompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const ProjLib_HCompProjectedCurve &", 
               "type": "ProjLib_HCompProjectedCurve", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_HCompProjectedCurve::ProjLib_HCompProjectedCurve(ProjLib_HCompProjectedCurve)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -3803,9 +3973,10 @@
           "parent": "ProjLib_HCompProjectedCurve", 
           "arguments": [
             {
-              "decl": "const ProjLib_CompProjectedCurve &", 
               "type": "ProjLib_CompProjectedCurve", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_HCompProjectedCurve::Set(ProjLib_CompProjectedCurve)", 
@@ -3883,120 +4054,135 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ComputeApproxOnPolarSurface", 
           "parent": "ProjLib_ComputeApproxOnPolarSurface", 
           "arguments": [], 
           "key": "ProjLib_ComputeApproxOnPolarSurface::ProjLib_ComputeApproxOnPolarSurface()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ComputeApproxOnPolarSurface", 
           "parent": "ProjLib_ComputeApproxOnPolarSurface", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
               "type": "opencascade::handle<Adaptor3d_HCurve>", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
               "type": "opencascade::handle<Adaptor3d_HSurface>", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
               "name": "Tol", 
-              "default": "1.0E-4"
+              "default": "1.0E-4", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ComputeApproxOnPolarSurface::ProjLib_ComputeApproxOnPolarSurface(opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor3d_HSurface>, Standard_Real)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ComputeApproxOnPolarSurface", 
           "parent": "ProjLib_ComputeApproxOnPolarSurface", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
               "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
-              "name": "InitCurve2d"
+              "name": "InitCurve2d", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
               "type": "opencascade::handle<Adaptor3d_HCurve>", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
               "type": "opencascade::handle<Adaptor3d_HSurface>", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "Tol"
+              "name": "Tol", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ComputeApproxOnPolarSurface::ProjLib_ComputeApproxOnPolarSurface(opencascade::handle<Adaptor2d_HCurve2d>, opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor3d_HSurface>, Standard_Real)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ComputeApproxOnPolarSurface", 
           "parent": "ProjLib_ComputeApproxOnPolarSurface", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
               "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
-              "name": "InitCurve2d"
+              "name": "InitCurve2d", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
               "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
-              "name": "InitCurve2dBis"
+              "name": "InitCurve2dBis", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
               "type": "opencascade::handle<Adaptor3d_HCurve>", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
               "type": "opencascade::handle<Adaptor3d_HSurface>", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "Tol"
+              "name": "Tol", 
+              "const": true
             }
           ], 
           "key": "ProjLib_ComputeApproxOnPolarSurface::ProjLib_ComputeApproxOnPolarSurface(opencascade::handle<Adaptor2d_HCurve2d>, opencascade::handle<Adaptor2d_HCurve2d>, opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor3d_HSurface>, Standard_Real)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_ComputeApproxOnPolarSurface", 
           "parent": "ProjLib_ComputeApproxOnPolarSurface", 
           "arguments": [
             {
-              "decl": "const ProjLib_ComputeApproxOnPolarSurface &", 
               "type": "ProjLib_ComputeApproxOnPolarSurface", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ComputeApproxOnPolarSurface::ProjLib_ComputeApproxOnPolarSurface(ProjLib_ComputeApproxOnPolarSurface)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -4005,19 +4191,22 @@
           "parent": "ProjLib_ComputeApproxOnPolarSurface", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
               "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
-              "name": "InitCurve2d"
+              "name": "InitCurve2d", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
               "type": "opencascade::handle<Adaptor3d_HCurve>", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
               "type": "opencascade::handle<Adaptor3d_HSurface>", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ComputeApproxOnPolarSurface::Perform(opencascade::handle<Adaptor2d_HCurve2d>, opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor3d_HSurface>)", 
@@ -4030,14 +4219,16 @@
           "parent": "ProjLib_ComputeApproxOnPolarSurface", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
               "type": "opencascade::handle<Adaptor3d_HCurve>", 
-              "name": "Curve"
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
               "type": "opencascade::handle<Adaptor3d_HSurface>", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ComputeApproxOnPolarSurface::BuildInitialCurve2d(opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor3d_HSurface>)", 
@@ -4050,19 +4241,22 @@
           "parent": "ProjLib_ComputeApproxOnPolarSurface", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Adaptor3d_HCurve> &", 
               "type": "opencascade::handle<Adaptor3d_HCurve>", 
-              "name": "Curve"
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Adaptor3d_HSurface> &", 
               "type": "opencascade::handle<Adaptor3d_HSurface>", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Adaptor2d_HCurve2d> &", 
               "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
-              "name": "InitCurve2d"
+              "name": "InitCurve2d", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_ComputeApproxOnPolarSurface::ProjectUsingInitialCurve2d(opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor2d_HCurve2d>)", 
@@ -4114,45 +4308,50 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_PrjResolve", 
           "parent": "ProjLib_PrjResolve", 
           "arguments": [
             {
-              "decl": "const Adaptor3d_Curve &", 
               "type": "Adaptor3d_Curve", 
-              "name": "C"
+              "name": "C", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Adaptor3d_Surface &", 
               "type": "Adaptor3d_Surface", 
-              "name": "S"
+              "name": "S", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "Fix"
+              "name": "Fix", 
+              "const": true
             }
           ], 
           "key": "ProjLib_PrjResolve::ProjLib_PrjResolve(Adaptor3d_Curve, Adaptor3d_Surface, Standard_Integer)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "ProjLib_PrjResolve", 
           "parent": "ProjLib_PrjResolve", 
           "arguments": [
             {
-              "decl": "const ProjLib_PrjResolve &", 
               "type": "ProjLib_PrjResolve", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "ProjLib_PrjResolve::ProjLib_PrjResolve(ProjLib_PrjResolve)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -4161,46 +4360,49 @@
           "parent": "ProjLib_PrjResolve", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "t"
+              "name": "t", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U"
+              "name": "U", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "V"
+              "name": "V", 
+              "const": true
             }, 
             {
-              "decl": "const gp_Pnt2d &", 
               "type": "gp_Pnt2d", 
-              "name": "Tol"
+              "name": "Tol", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const gp_Pnt2d &", 
               "type": "gp_Pnt2d", 
-              "name": "Inf"
+              "name": "Inf", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const gp_Pnt2d &", 
               "type": "gp_Pnt2d", 
-              "name": "Sup"
+              "name": "Sup", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
               "name": "FTol", 
-              "default": "-1"
+              "default": "-1", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Boolean", 
               "type": "Standard_Boolean", 
               "name": "StrictInside", 
-              "default": "false"
+              "default": "false", 
+              "const": true
             }
           ], 
           "key": "ProjLib_PrjResolve::Perform(Standard_Real, Standard_Real, Standard_Real, gp_Pnt2d, gp_Pnt2d, gp_Pnt2d, Standard_Real, Standard_Boolean)", 

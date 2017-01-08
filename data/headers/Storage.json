@@ -45,29 +45,32 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_Schema", 
           "parent": "Storage_Schema", 
           "arguments": [], 
           "key": "Storage_Schema::Storage_Schema()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_Schema", 
           "parent": "Storage_Schema", 
           "arguments": [
             {
-              "decl": "const Storage_Schema &", 
               "type": "Storage_Schema", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Schema::Storage_Schema(Storage_Schema)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -76,9 +79,10 @@
           "parent": "Storage_Schema", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aVersion"
+              "name": "aVersion", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Schema::SetVersion(TCollection_AsciiString)", 
@@ -101,9 +105,10 @@
           "parent": "Storage_Schema", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aSchemaName"
+              "name": "aSchemaName", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Schema::SetName(TCollection_AsciiString)", 
@@ -126,14 +131,15 @@
           "parent": "Storage_Schema", 
           "arguments": [
             {
-              "decl": "Storage_BaseDriver &", 
               "type": "Storage_BaseDriver", 
-              "name": "s"
+              "name": "s", 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Storage_Data> &", 
               "type": "opencascade::handle<Storage_Data>", 
-              "name": "aData"
+              "name": "aData", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Schema::Write(Storage_BaseDriver, opencascade::handle<Storage_Data>)", 
@@ -157,14 +163,15 @@
           "parent": "Storage_Schema", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "theTypeName"
+              "name": "theTypeName", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "theNewName"
+              "name": "theNewName", 
+              "ref": true
             }
           ], 
           "key": "Storage_Schema::CheckTypeMigration(TCollection_AsciiString, TCollection_AsciiString)", 
@@ -178,14 +185,16 @@
           "parent": "Storage_Schema", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aTypeName"
+              "name": "aTypeName", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Storage_CallBack> &", 
               "type": "opencascade::handle<Storage_CallBack>", 
-              "name": "aCallBack"
+              "name": "aCallBack", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Schema::AddReadUnknownTypeCallBack(TCollection_AsciiString, opencascade::handle<Storage_CallBack>)", 
@@ -198,9 +207,10 @@
           "parent": "Storage_Schema", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aTypeName"
+              "name": "aTypeName", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Schema::RemoveReadUnknownTypeCallBack(TCollection_AsciiString)", 
@@ -260,9 +270,10 @@
           "parent": "Storage_Schema", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Storage_CallBack> &", 
               "type": "opencascade::handle<Storage_CallBack>", 
-              "name": "f"
+              "name": "f", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Schema::SetDefaultCallBack(opencascade::handle<Storage_CallBack>)", 
@@ -294,14 +305,15 @@
           "parent": "Storage_Schema", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Standard_Persistent> &", 
               "type": "opencascade::handle<Standard_Persistent>", 
-              "name": "sp"
+              "name": "sp", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "Storage_BaseDriver &", 
               "type": "Storage_BaseDriver", 
-              "name": "s"
+              "name": "s", 
+              "ref": true
             }
           ], 
           "key": "Storage_Schema::WritePersistentObjectHeader(opencascade::handle<Standard_Persistent>, Storage_BaseDriver)", 
@@ -314,14 +326,15 @@
           "parent": "Storage_Schema", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Standard_Persistent> &", 
               "type": "opencascade::handle<Standard_Persistent>", 
-              "name": "sp"
+              "name": "sp", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "Storage_BaseDriver &", 
               "type": "Storage_BaseDriver", 
-              "name": "s"
+              "name": "s", 
+              "ref": true
             }
           ], 
           "key": "Storage_Schema::WritePersistentReference(opencascade::handle<Standard_Persistent>, Storage_BaseDriver)", 
@@ -334,14 +347,15 @@
           "parent": "Storage_Schema", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Standard_Persistent> &", 
               "type": "opencascade::handle<Standard_Persistent>", 
-              "name": "sp"
+              "name": "sp", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
-              "name": "tName"
+              "name": "tName", 
+              "const": true
             }
           ], 
           "key": "Storage_Schema::AddPersistent(opencascade::handle<Standard_Persistent>, Standard_CString)", 
@@ -355,9 +369,10 @@
           "parent": "Storage_Schema", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Standard_Persistent> &", 
               "type": "opencascade::handle<Standard_Persistent>", 
-              "name": "sp"
+              "name": "sp", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Schema::PersistentToAdd(opencascade::handle<Standard_Persistent>)", 
@@ -416,80 +431,86 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HPArray", 
           "parent": "Storage_HPArray", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "theLower"
+              "name": "theLower", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "theUpper"
+              "name": "theUpper", 
+              "const": true
             }
           ], 
           "key": "Storage_HPArray::Storage_HPArray(Standard_Integer, Standard_Integer)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HPArray", 
           "parent": "Storage_HPArray", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "theLower"
+              "name": "theLower", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "theUpper"
+              "name": "theUpper", 
+              "const": true
             }, 
             {
-              "decl": "const NCollection_Array1<opencascade::handle<Standard_Persistent> >::value_type &", 
               "type": "NCollection_Array1<opencascade::handle<Standard_Persistent> >::value_type", 
-              "name": "theValue"
+              "name": "theValue", 
+              "ref": true
             }
           ], 
           "key": "Storage_HPArray::Storage_HPArray(Standard_Integer, Standard_Integer, NCollection_Array1<opencascade::handle<Standard_Persistent> >::value_type)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HPArray", 
           "parent": "Storage_HPArray", 
           "arguments": [
             {
-              "decl": "const Storage_PArray &", 
               "type": "Storage_PArray", 
-              "name": "theOther"
+              "name": "theOther", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HPArray::Storage_HPArray(Storage_PArray)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HPArray", 
           "parent": "Storage_HPArray", 
           "arguments": [
             {
-              "decl": "const Storage_HPArray &", 
               "type": "Storage_HPArray", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HPArray::Storage_HPArray(Storage_HPArray)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -582,14 +603,16 @@
           "parent": "Storage_CallBack", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Standard_Persistent> &", 
               "type": "opencascade::handle<Standard_Persistent>", 
-              "name": "aPers"
+              "name": "aPers", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Storage_Schema> &", 
               "type": "opencascade::handle<Storage_Schema>", 
-              "name": "aSchema"
+              "name": "aSchema", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_CallBack::Add(opencascade::handle<Standard_Persistent>, opencascade::handle<Storage_Schema>)", 
@@ -604,19 +627,21 @@
           "parent": "Storage_CallBack", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Standard_Persistent> &", 
               "type": "opencascade::handle<Standard_Persistent>", 
-              "name": "aPers"
+              "name": "aPers", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "Storage_BaseDriver &", 
               "type": "Storage_BaseDriver", 
-              "name": "aDriver"
+              "name": "aDriver", 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Storage_Schema> &", 
               "type": "opencascade::handle<Storage_Schema>", 
-              "name": "aSchema"
+              "name": "aSchema", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_CallBack::Write(opencascade::handle<Standard_Persistent>, Storage_BaseDriver, opencascade::handle<Storage_Schema>)", 
@@ -631,19 +656,21 @@
           "parent": "Storage_CallBack", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Standard_Persistent> &", 
               "type": "opencascade::handle<Standard_Persistent>", 
-              "name": "aPers"
+              "name": "aPers", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "Storage_BaseDriver &", 
               "type": "Storage_BaseDriver", 
-              "name": "aDriver"
+              "name": "aDriver", 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Storage_Schema> &", 
               "type": "opencascade::handle<Storage_Schema>", 
-              "name": "aSchema"
+              "name": "aSchema", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_CallBack::Read(opencascade::handle<Standard_Persistent>, Storage_BaseDriver, opencascade::handle<Storage_Schema>)", 
@@ -703,49 +730,55 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_TypedCallBack", 
           "parent": "Storage_TypedCallBack", 
           "arguments": [], 
           "key": "Storage_TypedCallBack::Storage_TypedCallBack()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_TypedCallBack", 
           "parent": "Storage_TypedCallBack", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aTypeName"
+              "name": "aTypeName", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Storage_CallBack> &", 
               "type": "opencascade::handle<Storage_CallBack>", 
-              "name": "aCallBack"
+              "name": "aCallBack", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_TypedCallBack::Storage_TypedCallBack(TCollection_AsciiString, opencascade::handle<Storage_CallBack>)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_TypedCallBack", 
           "parent": "Storage_TypedCallBack", 
           "arguments": [
             {
-              "decl": "const Storage_TypedCallBack &", 
               "type": "Storage_TypedCallBack", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_TypedCallBack::Storage_TypedCallBack(Storage_TypedCallBack)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -754,9 +787,10 @@
           "parent": "Storage_TypedCallBack", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aType"
+              "name": "aType", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_TypedCallBack::SetType(TCollection_AsciiString)", 
@@ -779,9 +813,10 @@
           "parent": "Storage_TypedCallBack", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Storage_CallBack> &", 
               "type": "opencascade::handle<Storage_CallBack>", 
-              "name": "aCallBack"
+              "name": "aCallBack", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_TypedCallBack::SetCallBack(opencascade::handle<Storage_CallBack>)", 
@@ -804,9 +839,9 @@
           "parent": "Storage_TypedCallBack", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "anIndex"
+              "name": "anIndex", 
+              "const": true
             }
           ], 
           "key": "Storage_TypedCallBack::SetIndex(Standard_Integer)", 
@@ -874,29 +909,32 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_InternalData", 
           "parent": "Storage_InternalData", 
           "arguments": [], 
           "key": "Storage_InternalData::Storage_InternalData()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_InternalData", 
           "parent": "Storage_InternalData", 
           "arguments": [
             {
-              "decl": "const Storage_InternalData &", 
               "type": "Storage_InternalData", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_InternalData::Storage_InternalData(Storage_InternalData)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -968,44 +1006,48 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamFormatError", 
           "parent": "Storage_StreamFormatError", 
           "arguments": [], 
           "key": "Storage_StreamFormatError::Storage_StreamFormatError()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamFormatError", 
           "parent": "Storage_StreamFormatError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
-              "name": "theMessage"
+              "name": "theMessage", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamFormatError::Storage_StreamFormatError(Standard_CString)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamFormatError", 
           "parent": "Storage_StreamFormatError", 
           "arguments": [
             {
-              "decl": "const Storage_StreamFormatError &", 
               "type": "Storage_StreamFormatError", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_StreamFormatError::Storage_StreamFormatError(Storage_StreamFormatError)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -1014,10 +1056,10 @@
           "parent": "Storage_StreamFormatError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
               "name": "theMessage", 
-              "default": "\"\""
+              "default": "\"\"", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamFormatError::Raise(Standard_CString)", 
@@ -1031,9 +1073,9 @@
           "parent": "Storage_StreamFormatError", 
           "arguments": [
             {
-              "decl": "Standard_SStream &", 
               "type": "Standard_SStream", 
-              "name": "theMessage"
+              "name": "theMessage", 
+              "ref": true
             }
           ], 
           "key": "Storage_StreamFormatError::Raise(Standard_SStream)", 
@@ -1047,10 +1089,10 @@
           "parent": "Storage_StreamFormatError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
               "name": "theMessage", 
-              "default": "\"\""
+              "default": "\"\"", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamFormatError::NewInstance(Standard_CString)", 
@@ -1109,44 +1151,48 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamReadError", 
           "parent": "Storage_StreamReadError", 
           "arguments": [], 
           "key": "Storage_StreamReadError::Storage_StreamReadError()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamReadError", 
           "parent": "Storage_StreamReadError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
-              "name": "theMessage"
+              "name": "theMessage", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamReadError::Storage_StreamReadError(Standard_CString)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamReadError", 
           "parent": "Storage_StreamReadError", 
           "arguments": [
             {
-              "decl": "const Storage_StreamReadError &", 
               "type": "Storage_StreamReadError", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_StreamReadError::Storage_StreamReadError(Storage_StreamReadError)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -1155,10 +1201,10 @@
           "parent": "Storage_StreamReadError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
               "name": "theMessage", 
-              "default": "\"\""
+              "default": "\"\"", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamReadError::Raise(Standard_CString)", 
@@ -1172,9 +1218,9 @@
           "parent": "Storage_StreamReadError", 
           "arguments": [
             {
-              "decl": "Standard_SStream &", 
               "type": "Standard_SStream", 
-              "name": "theMessage"
+              "name": "theMessage", 
+              "ref": true
             }
           ], 
           "key": "Storage_StreamReadError::Raise(Standard_SStream)", 
@@ -1188,10 +1234,10 @@
           "parent": "Storage_StreamReadError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
               "name": "theMessage", 
-              "default": "\"\""
+              "default": "\"\"", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamReadError::NewInstance(Standard_CString)", 
@@ -1250,44 +1296,48 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamExtCharParityError", 
           "parent": "Storage_StreamExtCharParityError", 
           "arguments": [], 
           "key": "Storage_StreamExtCharParityError::Storage_StreamExtCharParityError()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamExtCharParityError", 
           "parent": "Storage_StreamExtCharParityError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
-              "name": "theMessage"
+              "name": "theMessage", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamExtCharParityError::Storage_StreamExtCharParityError(Standard_CString)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamExtCharParityError", 
           "parent": "Storage_StreamExtCharParityError", 
           "arguments": [
             {
-              "decl": "const Storage_StreamExtCharParityError &", 
               "type": "Storage_StreamExtCharParityError", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_StreamExtCharParityError::Storage_StreamExtCharParityError(Storage_StreamExtCharParityError)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -1296,10 +1346,10 @@
           "parent": "Storage_StreamExtCharParityError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
               "name": "theMessage", 
-              "default": "\"\""
+              "default": "\"\"", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamExtCharParityError::Raise(Standard_CString)", 
@@ -1313,9 +1363,9 @@
           "parent": "Storage_StreamExtCharParityError", 
           "arguments": [
             {
-              "decl": "Standard_SStream &", 
               "type": "Standard_SStream", 
-              "name": "theMessage"
+              "name": "theMessage", 
+              "ref": true
             }
           ], 
           "key": "Storage_StreamExtCharParityError::Raise(Standard_SStream)", 
@@ -1329,10 +1379,10 @@
           "parent": "Storage_StreamExtCharParityError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
               "name": "theMessage", 
-              "default": "\"\""
+              "default": "\"\"", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamExtCharParityError::NewInstance(Standard_CString)", 
@@ -1391,44 +1441,48 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamModeError", 
           "parent": "Storage_StreamModeError", 
           "arguments": [], 
           "key": "Storage_StreamModeError::Storage_StreamModeError()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamModeError", 
           "parent": "Storage_StreamModeError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
-              "name": "theMessage"
+              "name": "theMessage", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamModeError::Storage_StreamModeError(Standard_CString)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamModeError", 
           "parent": "Storage_StreamModeError", 
           "arguments": [
             {
-              "decl": "const Storage_StreamModeError &", 
               "type": "Storage_StreamModeError", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_StreamModeError::Storage_StreamModeError(Storage_StreamModeError)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -1437,10 +1491,10 @@
           "parent": "Storage_StreamModeError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
               "name": "theMessage", 
-              "default": "\"\""
+              "default": "\"\"", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamModeError::Raise(Standard_CString)", 
@@ -1454,9 +1508,9 @@
           "parent": "Storage_StreamModeError", 
           "arguments": [
             {
-              "decl": "Standard_SStream &", 
               "type": "Standard_SStream", 
-              "name": "theMessage"
+              "name": "theMessage", 
+              "ref": true
             }
           ], 
           "key": "Storage_StreamModeError::Raise(Standard_SStream)", 
@@ -1470,10 +1524,10 @@
           "parent": "Storage_StreamModeError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
               "name": "theMessage", 
-              "default": "\"\""
+              "default": "\"\"", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamModeError::NewInstance(Standard_CString)", 
@@ -1537,14 +1591,15 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aName"
+              "name": "aName", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Storage_OpenMode", 
               "type": "Storage_OpenMode", 
-              "name": "aMode"
+              "name": "aMode", 
+              "const": true
             }
           ], 
           "key": "Storage_BaseDriver::Open(TCollection_AsciiString, Storage_OpenMode)", 
@@ -1578,9 +1633,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "Standard_IStream &", 
               "type": "Standard_IStream", 
-              "name": "theIStream"
+              "name": "theIStream", 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::ReadMagicNumber(Standard_IStream)", 
@@ -1624,49 +1679,57 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "nbObj"
+              "name": "nbObj", 
+              "const": true
             }, 
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "dbVersion"
+              "name": "dbVersion", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "date"
+              "name": "date", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "schemaName"
+              "name": "schemaName", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "schemaVersion"
+              "name": "schemaVersion", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const TCollection_ExtendedString &", 
               "type": "TCollection_ExtendedString", 
-              "name": "appName"
+              "name": "appName", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "appVersion"
+              "name": "appVersion", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const TCollection_ExtendedString &", 
               "type": "TCollection_ExtendedString", 
-              "name": "objectType"
+              "name": "objectType", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const TColStd_SequenceOfAsciiString &", 
               "type": "TColStd_SequenceOfAsciiString", 
-              "name": "userInfo"
+              "name": "userInfo", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::WriteInfo(Standard_Integer, TCollection_AsciiString, TCollection_AsciiString, TCollection_AsciiString, TCollection_AsciiString, TCollection_ExtendedString, TCollection_AsciiString, TCollection_ExtendedString, TColStd_SequenceOfAsciiString)", 
@@ -1700,49 +1763,49 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "Standard_Integer &", 
               "type": "Standard_Integer", 
-              "name": "nbObj"
+              "name": "nbObj", 
+              "ref": true
             }, 
             {
-              "decl": "TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "dbVersion"
+              "name": "dbVersion", 
+              "ref": true
             }, 
             {
-              "decl": "TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "date"
+              "name": "date", 
+              "ref": true
             }, 
             {
-              "decl": "TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "schemaName"
+              "name": "schemaName", 
+              "ref": true
             }, 
             {
-              "decl": "TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "schemaVersion"
+              "name": "schemaVersion", 
+              "ref": true
             }, 
             {
-              "decl": "TCollection_ExtendedString &", 
               "type": "TCollection_ExtendedString", 
-              "name": "appName"
+              "name": "appName", 
+              "ref": true
             }, 
             {
-              "decl": "TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "appVersion"
+              "name": "appVersion", 
+              "ref": true
             }, 
             {
-              "decl": "TCollection_ExtendedString &", 
               "type": "TCollection_ExtendedString", 
-              "name": "objectType"
+              "name": "objectType", 
+              "ref": true
             }, 
             {
-              "decl": "TColStd_SequenceOfAsciiString &", 
               "type": "TColStd_SequenceOfAsciiString", 
-              "name": "userInfo"
+              "name": "userInfo", 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::ReadInfo(Standard_Integer, TCollection_AsciiString, TCollection_AsciiString, TCollection_AsciiString, TCollection_AsciiString, TCollection_ExtendedString, TCollection_AsciiString, TCollection_ExtendedString, TColStd_SequenceOfAsciiString)", 
@@ -1756,14 +1819,14 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "Standard_IStream &", 
               "type": "Standard_IStream", 
-              "name": "theIStream"
+              "name": "theIStream", 
+              "ref": true
             }, 
             {
-              "decl": "opencascade::handle<Storage_Data> &", 
               "type": "opencascade::handle<Storage_Data>", 
-              "name": "theData"
+              "name": "theData", 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::ReadCompleteInfo(Standard_IStream, opencascade::handle<Storage_Data>)", 
@@ -1797,9 +1860,10 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const TColStd_SequenceOfExtendedString &", 
               "type": "TColStd_SequenceOfExtendedString", 
-              "name": "userComments"
+              "name": "userComments", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::WriteComment(TColStd_SequenceOfExtendedString)", 
@@ -1833,9 +1897,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "TColStd_SequenceOfExtendedString &", 
               "type": "TColStd_SequenceOfExtendedString", 
-              "name": "userComments"
+              "name": "userComments", 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::ReadComment(TColStd_SequenceOfExtendedString)", 
@@ -1869,9 +1933,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "aSize"
+              "name": "aSize", 
+              "const": true
             }
           ], 
           "key": "Storage_BaseDriver::SetTypeSectionSize(Standard_Integer)", 
@@ -1885,14 +1949,15 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "typeNum"
+              "name": "typeNum", 
+              "const": true
             }, 
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "typeName"
+              "name": "typeName", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::WriteTypeInformations(Standard_Integer, TCollection_AsciiString)", 
@@ -1936,14 +2001,14 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "Standard_Integer &", 
               "type": "Standard_Integer", 
-              "name": "typeNum"
+              "name": "typeNum", 
+              "ref": true
             }, 
             {
-              "decl": "TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "typeName"
+              "name": "typeName", 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::ReadTypeInformations(Standard_Integer, TCollection_AsciiString)", 
@@ -1977,9 +2042,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "aSize"
+              "name": "aSize", 
+              "const": true
             }
           ], 
           "key": "Storage_BaseDriver::SetRootSectionSize(Standard_Integer)", 
@@ -1993,19 +2058,21 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "rootName"
+              "name": "rootName", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "aRef"
+              "name": "aRef", 
+              "const": true
             }, 
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aType"
+              "name": "aType", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::WriteRoot(TCollection_AsciiString, Standard_Integer, TCollection_AsciiString)", 
@@ -2049,19 +2116,19 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "rootName"
+              "name": "rootName", 
+              "ref": true
             }, 
             {
-              "decl": "Standard_Integer &", 
               "type": "Standard_Integer", 
-              "name": "aRef"
+              "name": "aRef", 
+              "ref": true
             }, 
             {
-              "decl": "TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aType"
+              "name": "aType", 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::ReadRoot(TCollection_AsciiString, Standard_Integer, TCollection_AsciiString)", 
@@ -2095,9 +2162,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "aSize"
+              "name": "aSize", 
+              "const": true
             }
           ], 
           "key": "Storage_BaseDriver::SetRefSectionSize(Standard_Integer)", 
@@ -2111,14 +2178,14 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "reference"
+              "name": "reference", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "typeNum"
+              "name": "typeNum", 
+              "const": true
             }
           ], 
           "key": "Storage_BaseDriver::WriteReferenceType(Standard_Integer, Standard_Integer)", 
@@ -2162,14 +2229,14 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "Standard_Integer &", 
               "type": "Standard_Integer", 
-              "name": "reference"
+              "name": "reference", 
+              "ref": true
             }, 
             {
-              "decl": "Standard_Integer &", 
               "type": "Standard_Integer", 
-              "name": "typeNum"
+              "name": "typeNum", 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::ReadReferenceType(Standard_Integer, Standard_Integer)", 
@@ -2203,14 +2270,14 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "aRef"
+              "name": "aRef", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "aType"
+              "name": "aType", 
+              "const": true
             }
           ], 
           "key": "Storage_BaseDriver::WritePersistentObjectHeader(Standard_Integer, Standard_Integer)", 
@@ -2284,14 +2351,14 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "Standard_Integer &", 
               "type": "Standard_Integer", 
-              "name": "aRef"
+              "name": "aRef", 
+              "ref": true
             }, 
             {
-              "decl": "Standard_Integer &", 
               "type": "Standard_Integer", 
-              "name": "aType"
+              "name": "aType", 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::ReadPersistentObjectHeader(Standard_Integer, Standard_Integer)", 
@@ -2365,9 +2432,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "aValue"
+              "name": "aValue", 
+              "const": true
             }
           ], 
           "key": "Storage_BaseDriver::PutReference(Standard_Integer)", 
@@ -2381,9 +2448,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const char", 
               "type": "char", 
-              "name": "aValue"
+              "name": "aValue", 
+              "const": true
             }
           ], 
           "key": "Storage_BaseDriver::PutCharacter(char)", 
@@ -2397,9 +2464,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const Standard_ExtCharacter", 
               "type": "Standard_ExtCharacter", 
-              "name": "aValue"
+              "name": "aValue", 
+              "const": true
             }
           ], 
           "key": "Storage_BaseDriver::PutExtCharacter(Standard_ExtCharacter)", 
@@ -2413,9 +2480,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "aValue"
+              "name": "aValue", 
+              "const": true
             }
           ], 
           "key": "Storage_BaseDriver::PutInteger(Standard_Integer)", 
@@ -2429,9 +2496,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const Standard_Boolean", 
               "type": "Standard_Boolean", 
-              "name": "aValue"
+              "name": "aValue", 
+              "const": true
             }
           ], 
           "key": "Storage_BaseDriver::PutBoolean(Standard_Boolean)", 
@@ -2445,9 +2512,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "aValue"
+              "name": "aValue", 
+              "const": true
             }
           ], 
           "key": "Storage_BaseDriver::PutReal(Standard_Real)", 
@@ -2461,9 +2528,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "const Standard_ShortReal", 
               "type": "Standard_ShortReal", 
-              "name": "aValue"
+              "name": "aValue", 
+              "const": true
             }
           ], 
           "key": "Storage_BaseDriver::PutShortReal(Standard_ShortReal)", 
@@ -2477,9 +2544,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "Standard_Integer &", 
               "type": "Standard_Integer", 
-              "name": "aValue"
+              "name": "aValue", 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::GetReference(Standard_Integer)", 
@@ -2493,9 +2560,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "Standard_Character &", 
               "type": "Standard_Character", 
-              "name": "aValue"
+              "name": "aValue", 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::GetCharacter(Standard_Character)", 
@@ -2509,9 +2576,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "Standard_ExtCharacter &", 
               "type": "Standard_ExtCharacter", 
-              "name": "aValue"
+              "name": "aValue", 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::GetExtCharacter(Standard_ExtCharacter)", 
@@ -2525,9 +2592,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "Standard_Integer &", 
               "type": "Standard_Integer", 
-              "name": "aValue"
+              "name": "aValue", 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::GetInteger(Standard_Integer)", 
@@ -2541,9 +2608,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "Standard_Boolean &", 
               "type": "Standard_Boolean", 
-              "name": "aValue"
+              "name": "aValue", 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::GetBoolean(Standard_Boolean)", 
@@ -2557,9 +2624,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "Standard_Real &", 
               "type": "Standard_Real", 
-              "name": "aValue"
+              "name": "aValue", 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::GetReal(Standard_Real)", 
@@ -2573,9 +2640,9 @@
           "parent": "Storage_BaseDriver", 
           "arguments": [
             {
-              "decl": "Standard_ShortReal &", 
               "type": "Standard_ShortReal", 
-              "name": "aValue"
+              "name": "aValue", 
+              "ref": true
             }
           ], 
           "key": "Storage_BaseDriver::GetShortReal(Standard_ShortReal)", 
@@ -2608,80 +2675,86 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HArrayOfCallBack", 
           "parent": "Storage_HArrayOfCallBack", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "theLower"
+              "name": "theLower", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "theUpper"
+              "name": "theUpper", 
+              "const": true
             }
           ], 
           "key": "Storage_HArrayOfCallBack::Storage_HArrayOfCallBack(Standard_Integer, Standard_Integer)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HArrayOfCallBack", 
           "parent": "Storage_HArrayOfCallBack", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "theLower"
+              "name": "theLower", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "theUpper"
+              "name": "theUpper", 
+              "const": true
             }, 
             {
-              "decl": "const NCollection_Array1<opencascade::handle<Storage_CallBack> >::value_type &", 
               "type": "NCollection_Array1<opencascade::handle<Storage_CallBack> >::value_type", 
-              "name": "theValue"
+              "name": "theValue", 
+              "ref": true
             }
           ], 
           "key": "Storage_HArrayOfCallBack::Storage_HArrayOfCallBack(Standard_Integer, Standard_Integer, NCollection_Array1<opencascade::handle<Storage_CallBack> >::value_type)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HArrayOfCallBack", 
           "parent": "Storage_HArrayOfCallBack", 
           "arguments": [
             {
-              "decl": "const Storage_ArrayOfCallBack &", 
               "type": "Storage_ArrayOfCallBack", 
-              "name": "theOther"
+              "name": "theOther", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HArrayOfCallBack::Storage_HArrayOfCallBack(Storage_ArrayOfCallBack)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HArrayOfCallBack", 
           "parent": "Storage_HArrayOfCallBack", 
           "arguments": [
             {
-              "decl": "const Storage_HArrayOfCallBack &", 
               "type": "Storage_HArrayOfCallBack", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HArrayOfCallBack::Storage_HArrayOfCallBack(Storage_HArrayOfCallBack)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -2758,44 +2831,48 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamUnknownTypeError", 
           "parent": "Storage_StreamUnknownTypeError", 
           "arguments": [], 
           "key": "Storage_StreamUnknownTypeError::Storage_StreamUnknownTypeError()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamUnknownTypeError", 
           "parent": "Storage_StreamUnknownTypeError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
-              "name": "theMessage"
+              "name": "theMessage", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamUnknownTypeError::Storage_StreamUnknownTypeError(Standard_CString)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamUnknownTypeError", 
           "parent": "Storage_StreamUnknownTypeError", 
           "arguments": [
             {
-              "decl": "const Storage_StreamUnknownTypeError &", 
               "type": "Storage_StreamUnknownTypeError", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_StreamUnknownTypeError::Storage_StreamUnknownTypeError(Storage_StreamUnknownTypeError)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -2804,10 +2881,10 @@
           "parent": "Storage_StreamUnknownTypeError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
               "name": "theMessage", 
-              "default": "\"\""
+              "default": "\"\"", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamUnknownTypeError::Raise(Standard_CString)", 
@@ -2821,9 +2898,9 @@
           "parent": "Storage_StreamUnknownTypeError", 
           "arguments": [
             {
-              "decl": "Standard_SStream &", 
               "type": "Standard_SStream", 
-              "name": "theMessage"
+              "name": "theMessage", 
+              "ref": true
             }
           ], 
           "key": "Storage_StreamUnknownTypeError::Raise(Standard_SStream)", 
@@ -2837,10 +2914,10 @@
           "parent": "Storage_StreamUnknownTypeError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
               "name": "theMessage", 
-              "default": "\"\""
+              "default": "\"\"", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamUnknownTypeError::NewInstance(Standard_CString)", 
@@ -2899,74 +2976,83 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_Root", 
           "parent": "Storage_Root", 
           "arguments": [], 
           "key": "Storage_Root::Storage_Root()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_Root", 
           "parent": "Storage_Root", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "theName"
+              "name": "theName", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Standard_Persistent> &", 
               "type": "opencascade::handle<Standard_Persistent>", 
-              "name": "theObject"
+              "name": "theObject", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Root::Storage_Root(TCollection_AsciiString, opencascade::handle<Standard_Persistent>)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_Root", 
           "parent": "Storage_Root", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "theName"
+              "name": "theName", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "theRef"
+              "name": "theRef", 
+              "const": true
             }, 
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "theType"
+              "name": "theType", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Root::Storage_Root(TCollection_AsciiString, Standard_Integer, TCollection_AsciiString)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_Root", 
           "parent": "Storage_Root", 
           "arguments": [
             {
-              "decl": "const Storage_Root &", 
               "type": "Storage_Root", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Root::Storage_Root(Storage_Root)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -2975,9 +3061,10 @@
           "parent": "Storage_Root", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "theName"
+              "name": "theName", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Root::SetName(TCollection_AsciiString)", 
@@ -3000,9 +3087,10 @@
           "parent": "Storage_Root", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Standard_Persistent> &", 
               "type": "opencascade::handle<Standard_Persistent>", 
-              "name": "anObject"
+              "name": "anObject", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Root::SetObject(opencascade::handle<Standard_Persistent>)", 
@@ -3035,9 +3123,9 @@
           "parent": "Storage_Root", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "aRef"
+              "name": "aRef", 
+              "const": true
             }
           ], 
           "key": "Storage_Root::SetReference(Standard_Integer)", 
@@ -3060,9 +3148,10 @@
           "parent": "Storage_Root", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aType"
+              "name": "aType", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Root::SetType(TCollection_AsciiString)", 
@@ -3120,44 +3209,48 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamTypeMismatchError", 
           "parent": "Storage_StreamTypeMismatchError", 
           "arguments": [], 
           "key": "Storage_StreamTypeMismatchError::Storage_StreamTypeMismatchError()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamTypeMismatchError", 
           "parent": "Storage_StreamTypeMismatchError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
-              "name": "theMessage"
+              "name": "theMessage", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamTypeMismatchError::Storage_StreamTypeMismatchError(Standard_CString)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamTypeMismatchError", 
           "parent": "Storage_StreamTypeMismatchError", 
           "arguments": [
             {
-              "decl": "const Storage_StreamTypeMismatchError &", 
               "type": "Storage_StreamTypeMismatchError", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_StreamTypeMismatchError::Storage_StreamTypeMismatchError(Storage_StreamTypeMismatchError)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -3166,10 +3259,10 @@
           "parent": "Storage_StreamTypeMismatchError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
               "name": "theMessage", 
-              "default": "\"\""
+              "default": "\"\"", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamTypeMismatchError::Raise(Standard_CString)", 
@@ -3183,9 +3276,9 @@
           "parent": "Storage_StreamTypeMismatchError", 
           "arguments": [
             {
-              "decl": "Standard_SStream &", 
               "type": "Standard_SStream", 
-              "name": "theMessage"
+              "name": "theMessage", 
+              "ref": true
             }
           ], 
           "key": "Storage_StreamTypeMismatchError::Raise(Standard_SStream)", 
@@ -3199,10 +3292,10 @@
           "parent": "Storage_StreamTypeMismatchError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
               "name": "theMessage", 
-              "default": "\"\""
+              "default": "\"\"", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamTypeMismatchError::NewInstance(Standard_CString)", 
@@ -3261,44 +3354,49 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HSeqOfRoot", 
           "parent": "Storage_HSeqOfRoot", 
           "arguments": [], 
           "key": "Storage_HSeqOfRoot::Storage_HSeqOfRoot()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HSeqOfRoot", 
           "parent": "Storage_HSeqOfRoot", 
           "arguments": [
             {
-              "decl": "const Storage_SeqOfRoot &", 
               "type": "Storage_SeqOfRoot", 
-              "name": "theOther"
+              "name": "theOther", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HSeqOfRoot::Storage_HSeqOfRoot(Storage_SeqOfRoot)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HSeqOfRoot", 
           "parent": "Storage_HSeqOfRoot", 
           "arguments": [
             {
-              "decl": "const Storage_HSeqOfRoot &", 
               "type": "Storage_HSeqOfRoot", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HSeqOfRoot::Storage_HSeqOfRoot(Storage_HSeqOfRoot)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -3317,9 +3415,9 @@
           "parent": "Storage_HSeqOfRoot", 
           "arguments": [
             {
-              "decl": "const NCollection_Sequence<opencascade::handle<Storage_Root> >::value_type &", 
               "type": "NCollection_Sequence<opencascade::handle<Storage_Root> >::value_type", 
-              "name": "theItem"
+              "name": "theItem", 
+              "ref": true
             }
           ], 
           "key": "Storage_HSeqOfRoot::Append(NCollection_Sequence<opencascade::handle<Storage_Root> >::value_type)", 
@@ -3332,9 +3430,9 @@
           "parent": "Storage_HSeqOfRoot", 
           "arguments": [
             {
-              "decl": "Storage_SeqOfRoot &", 
               "type": "Storage_SeqOfRoot", 
-              "name": "theSequence"
+              "name": "theSequence", 
+              "ref": true
             }
           ], 
           "key": "Storage_HSeqOfRoot::Append(Storage_SeqOfRoot)", 
@@ -3405,29 +3503,32 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_RootData", 
           "parent": "Storage_RootData", 
           "arguments": [], 
           "key": "Storage_RootData::Storage_RootData()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_RootData", 
           "parent": "Storage_RootData", 
           "arguments": [
             {
-              "decl": "const Storage_RootData &", 
               "type": "Storage_RootData", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_RootData::Storage_RootData(Storage_RootData)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -3436,9 +3537,9 @@
           "parent": "Storage_RootData", 
           "arguments": [
             {
-              "decl": "Storage_BaseDriver &", 
               "type": "Storage_BaseDriver", 
-              "name": "theDriver"
+              "name": "theDriver", 
+              "ref": true
             }
           ], 
           "key": "Storage_RootData::Read(Storage_BaseDriver)", 
@@ -3461,9 +3562,10 @@
           "parent": "Storage_RootData", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Storage_Root> &", 
               "type": "opencascade::handle<Storage_Root>", 
-              "name": "aRoot"
+              "name": "aRoot", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_RootData::AddRoot(opencascade::handle<Storage_Root>)", 
@@ -3486,9 +3588,10 @@
           "parent": "Storage_RootData", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aName"
+              "name": "aName", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_RootData::Find(TCollection_AsciiString)", 
@@ -3502,9 +3605,10 @@
           "parent": "Storage_RootData", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aName"
+              "name": "aName", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_RootData::IsRoot(TCollection_AsciiString)", 
@@ -3518,9 +3622,10 @@
           "parent": "Storage_RootData", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aName"
+              "name": "aName", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_RootData::RemoveRoot(TCollection_AsciiString)", 
@@ -3562,14 +3667,16 @@
           "parent": "Storage_RootData", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aName"
+              "name": "aName", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Standard_Persistent> &", 
               "type": "opencascade::handle<Standard_Persistent>", 
-              "name": "aPers"
+              "name": "aPers", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_RootData::UpdateRoot(TCollection_AsciiString, opencascade::handle<Standard_Persistent>)", 
@@ -3627,29 +3734,32 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HeaderData", 
           "parent": "Storage_HeaderData", 
           "arguments": [], 
           "key": "Storage_HeaderData::Storage_HeaderData()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HeaderData", 
           "parent": "Storage_HeaderData", 
           "arguments": [
             {
-              "decl": "const Storage_HeaderData &", 
               "type": "Storage_HeaderData", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HeaderData::Storage_HeaderData(Storage_HeaderData)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -3658,9 +3768,9 @@
           "parent": "Storage_HeaderData", 
           "arguments": [
             {
-              "decl": "Storage_BaseDriver &", 
               "type": "Storage_BaseDriver", 
-              "name": "theDriver"
+              "name": "theDriver", 
+              "ref": true
             }
           ], 
           "key": "Storage_HeaderData::Read(Storage_BaseDriver)", 
@@ -3713,9 +3823,10 @@
           "parent": "Storage_HeaderData", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aVersion"
+              "name": "aVersion", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HeaderData::SetApplicationVersion(TCollection_AsciiString)", 
@@ -3738,9 +3849,10 @@
           "parent": "Storage_HeaderData", 
           "arguments": [
             {
-              "decl": "const TCollection_ExtendedString &", 
               "type": "TCollection_ExtendedString", 
-              "name": "aName"
+              "name": "aName", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HeaderData::SetApplicationName(TCollection_ExtendedString)", 
@@ -3763,9 +3875,10 @@
           "parent": "Storage_HeaderData", 
           "arguments": [
             {
-              "decl": "const TCollection_ExtendedString &", 
               "type": "TCollection_ExtendedString", 
-              "name": "aType"
+              "name": "aType", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HeaderData::SetDataType(TCollection_ExtendedString)", 
@@ -3788,9 +3901,10 @@
           "parent": "Storage_HeaderData", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "theUserInfo"
+              "name": "theUserInfo", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HeaderData::AddToUserInfo(TCollection_AsciiString)", 
@@ -3813,9 +3927,10 @@
           "parent": "Storage_HeaderData", 
           "arguments": [
             {
-              "decl": "const TCollection_ExtendedString &", 
               "type": "TCollection_ExtendedString", 
-              "name": "aComment"
+              "name": "aComment", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HeaderData::AddToComments(TCollection_ExtendedString)", 
@@ -3908,9 +4023,9 @@
           "parent": "Storage_HeaderData", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "anObjectNumber"
+              "name": "anObjectNumber", 
+              "const": true
             }
           ], 
           "key": "Storage_HeaderData::SetNumberOfObjects(Standard_Integer)", 
@@ -3923,9 +4038,10 @@
           "parent": "Storage_HeaderData", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aVersion"
+              "name": "aVersion", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HeaderData::SetStorageVersion(TCollection_AsciiString)", 
@@ -3938,9 +4054,10 @@
           "parent": "Storage_HeaderData", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aDate"
+              "name": "aDate", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HeaderData::SetCreationDate(TCollection_AsciiString)", 
@@ -3953,9 +4070,10 @@
           "parent": "Storage_HeaderData", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aVersion"
+              "name": "aVersion", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HeaderData::SetSchemaVersion(TCollection_AsciiString)", 
@@ -3968,9 +4086,10 @@
           "parent": "Storage_HeaderData", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aName"
+              "name": "aName", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HeaderData::SetSchemaName(TCollection_AsciiString)", 
@@ -3997,29 +4116,32 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_TypeData", 
           "parent": "Storage_TypeData", 
           "arguments": [], 
           "key": "Storage_TypeData::Storage_TypeData()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_TypeData", 
           "parent": "Storage_TypeData", 
           "arguments": [
             {
-              "decl": "const Storage_TypeData &", 
               "type": "Storage_TypeData", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_TypeData::Storage_TypeData(Storage_TypeData)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -4028,9 +4150,9 @@
           "parent": "Storage_TypeData", 
           "arguments": [
             {
-              "decl": "Storage_BaseDriver &", 
               "type": "Storage_BaseDriver", 
-              "name": "theDriver"
+              "name": "theDriver", 
+              "ref": true
             }
           ], 
           "key": "Storage_TypeData::Read(Storage_BaseDriver)", 
@@ -4053,14 +4175,15 @@
           "parent": "Storage_TypeData", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aName"
+              "name": "aName", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "aTypeNum"
+              "name": "aTypeNum", 
+              "const": true
             }
           ], 
           "key": "Storage_TypeData::AddType(TCollection_AsciiString, Standard_Integer)", 
@@ -4073,9 +4196,9 @@
           "parent": "Storage_TypeData", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "aTypeNum"
+              "name": "aTypeNum", 
+              "const": true
             }
           ], 
           "key": "Storage_TypeData::Type(Standard_Integer)", 
@@ -4089,9 +4212,10 @@
           "parent": "Storage_TypeData", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aTypeName"
+              "name": "aTypeName", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_TypeData::Type(TCollection_AsciiString)", 
@@ -4105,9 +4229,10 @@
           "parent": "Storage_TypeData", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aName"
+              "name": "aName", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_TypeData::IsType(TCollection_AsciiString)", 
@@ -4214,29 +4339,32 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_Data", 
           "parent": "Storage_Data", 
           "arguments": [], 
           "key": "Storage_Data::Storage_Data()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_Data", 
           "parent": "Storage_Data", 
           "arguments": [
             {
-              "decl": "const Storage_Data &", 
               "type": "Storage_Data", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Data::Storage_Data(Storage_Data)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -4314,9 +4442,10 @@
           "parent": "Storage_Data", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aVersion"
+              "name": "aVersion", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Data::SetApplicationVersion(TCollection_AsciiString)", 
@@ -4339,9 +4468,10 @@
           "parent": "Storage_Data", 
           "arguments": [
             {
-              "decl": "const TCollection_ExtendedString &", 
               "type": "TCollection_ExtendedString", 
-              "name": "aName"
+              "name": "aName", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Data::SetApplicationName(TCollection_ExtendedString)", 
@@ -4364,9 +4494,10 @@
           "parent": "Storage_Data", 
           "arguments": [
             {
-              "decl": "const TCollection_ExtendedString &", 
               "type": "TCollection_ExtendedString", 
-              "name": "aType"
+              "name": "aType", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Data::SetDataType(TCollection_ExtendedString)", 
@@ -4389,9 +4520,10 @@
           "parent": "Storage_Data", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "anInfo"
+              "name": "anInfo", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Data::AddToUserInfo(TCollection_AsciiString)", 
@@ -4414,9 +4546,10 @@
           "parent": "Storage_Data", 
           "arguments": [
             {
-              "decl": "const TCollection_ExtendedString &", 
               "type": "TCollection_ExtendedString", 
-              "name": "aComment"
+              "name": "aComment", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Data::AddToComments(TCollection_ExtendedString)", 
@@ -4459,9 +4592,10 @@
           "parent": "Storage_Data", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Standard_Persistent> &", 
               "type": "opencascade::handle<Standard_Persistent>", 
-              "name": "anObject"
+              "name": "anObject", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Data::AddRoot(opencascade::handle<Standard_Persistent>)", 
@@ -4475,14 +4609,16 @@
           "parent": "Storage_Data", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aName"
+              "name": "aName", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Standard_Persistent> &", 
               "type": "opencascade::handle<Standard_Persistent>", 
-              "name": "anObject"
+              "name": "anObject", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Data::AddRoot(TCollection_AsciiString, opencascade::handle<Standard_Persistent>)", 
@@ -4496,9 +4632,10 @@
           "parent": "Storage_Data", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aName"
+              "name": "aName", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Data::RemoveRoot(TCollection_AsciiString)", 
@@ -4521,9 +4658,10 @@
           "parent": "Storage_Data", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aName"
+              "name": "aName", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Data::Find(TCollection_AsciiString)", 
@@ -4537,9 +4675,10 @@
           "parent": "Storage_Data", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aName"
+              "name": "aName", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Data::IsRoot(TCollection_AsciiString)", 
@@ -4563,9 +4702,10 @@
           "parent": "Storage_Data", 
           "arguments": [
             {
-              "decl": "const TCollection_AsciiString &", 
               "type": "TCollection_AsciiString", 
-              "name": "aName"
+              "name": "aName", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_Data::IsType(TCollection_AsciiString)", 
@@ -4684,44 +4824,48 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamWriteError", 
           "parent": "Storage_StreamWriteError", 
           "arguments": [], 
           "key": "Storage_StreamWriteError::Storage_StreamWriteError()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamWriteError", 
           "parent": "Storage_StreamWriteError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
-              "name": "theMessage"
+              "name": "theMessage", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamWriteError::Storage_StreamWriteError(Standard_CString)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_StreamWriteError", 
           "parent": "Storage_StreamWriteError", 
           "arguments": [
             {
-              "decl": "const Storage_StreamWriteError &", 
               "type": "Storage_StreamWriteError", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_StreamWriteError::Storage_StreamWriteError(Storage_StreamWriteError)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -4730,10 +4874,10 @@
           "parent": "Storage_StreamWriteError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
               "name": "theMessage", 
-              "default": "\"\""
+              "default": "\"\"", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamWriteError::Raise(Standard_CString)", 
@@ -4747,9 +4891,9 @@
           "parent": "Storage_StreamWriteError", 
           "arguments": [
             {
-              "decl": "Standard_SStream &", 
               "type": "Standard_SStream", 
-              "name": "theMessage"
+              "name": "theMessage", 
+              "ref": true
             }
           ], 
           "key": "Storage_StreamWriteError::Raise(Standard_SStream)", 
@@ -4763,10 +4907,10 @@
           "parent": "Storage_StreamWriteError", 
           "arguments": [
             {
-              "decl": "const Standard_CString", 
               "type": "Standard_CString", 
               "name": "theMessage", 
-              "default": "\"\""
+              "default": "\"\"", 
+              "const": true
             }
           ], 
           "key": "Storage_StreamWriteError::NewInstance(Standard_CString)", 
@@ -4825,30 +4969,33 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_stCONSTclCOM", 
           "parent": "Storage_stCONSTclCOM", 
           "arguments": [], 
           "key": "Storage_stCONSTclCOM::Storage_stCONSTclCOM()", 
           "returnType": "", 
           "artificial": "1", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_stCONSTclCOM", 
           "parent": "Storage_stCONSTclCOM", 
           "arguments": [
             {
-              "decl": "const Storage_stCONSTclCOM &", 
               "type": "Storage_stCONSTclCOM", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_stCONSTclCOM::Storage_stCONSTclCOM(Storage_stCONSTclCOM)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }
       ], 
@@ -4866,80 +5013,86 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HArrayOfSchema", 
           "parent": "Storage_HArrayOfSchema", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "theLower"
+              "name": "theLower", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "theUpper"
+              "name": "theUpper", 
+              "const": true
             }
           ], 
           "key": "Storage_HArrayOfSchema::Storage_HArrayOfSchema(Standard_Integer, Standard_Integer)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HArrayOfSchema", 
           "parent": "Storage_HArrayOfSchema", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "theLower"
+              "name": "theLower", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "theUpper"
+              "name": "theUpper", 
+              "const": true
             }, 
             {
-              "decl": "const NCollection_Array1<opencascade::handle<Storage_Schema> >::value_type &", 
               "type": "NCollection_Array1<opencascade::handle<Storage_Schema> >::value_type", 
-              "name": "theValue"
+              "name": "theValue", 
+              "ref": true
             }
           ], 
           "key": "Storage_HArrayOfSchema::Storage_HArrayOfSchema(Standard_Integer, Standard_Integer, NCollection_Array1<opencascade::handle<Storage_Schema> >::value_type)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HArrayOfSchema", 
           "parent": "Storage_HArrayOfSchema", 
           "arguments": [
             {
-              "decl": "const Storage_ArrayOfSchema &", 
               "type": "Storage_ArrayOfSchema", 
-              "name": "theOther"
+              "name": "theOther", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HArrayOfSchema::Storage_HArrayOfSchema(Storage_ArrayOfSchema)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_HArrayOfSchema", 
           "parent": "Storage_HArrayOfSchema", 
           "arguments": [
             {
-              "decl": "const Storage_HArrayOfSchema &", 
               "type": "Storage_HArrayOfSchema", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_HArrayOfSchema::Storage_HArrayOfSchema(Storage_HArrayOfSchema)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -5016,29 +5169,32 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_DefaultCallBack", 
           "parent": "Storage_DefaultCallBack", 
           "arguments": [], 
           "key": "Storage_DefaultCallBack::Storage_DefaultCallBack()", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "Storage_DefaultCallBack", 
           "parent": "Storage_DefaultCallBack", 
           "arguments": [
             {
-              "decl": "const Storage_DefaultCallBack &", 
               "type": "Storage_DefaultCallBack", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_DefaultCallBack::Storage_DefaultCallBack(Storage_DefaultCallBack)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -5058,14 +5214,16 @@
           "parent": "Storage_DefaultCallBack", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Standard_Persistent> &", 
               "type": "opencascade::handle<Standard_Persistent>", 
-              "name": "aPers"
+              "name": "aPers", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Storage_Schema> &", 
               "type": "opencascade::handle<Storage_Schema>", 
-              "name": "aSchema"
+              "name": "aSchema", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_DefaultCallBack::Add(opencascade::handle<Standard_Persistent>, opencascade::handle<Storage_Schema>)", 
@@ -5080,19 +5238,21 @@
           "parent": "Storage_DefaultCallBack", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Standard_Persistent> &", 
               "type": "opencascade::handle<Standard_Persistent>", 
-              "name": "aPers"
+              "name": "aPers", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "Storage_BaseDriver &", 
               "type": "Storage_BaseDriver", 
-              "name": "aDriver"
+              "name": "aDriver", 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Storage_Schema> &", 
               "type": "opencascade::handle<Storage_Schema>", 
-              "name": "aSchema"
+              "name": "aSchema", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_DefaultCallBack::Write(opencascade::handle<Standard_Persistent>, Storage_BaseDriver, opencascade::handle<Storage_Schema>)", 
@@ -5107,19 +5267,21 @@
           "parent": "Storage_DefaultCallBack", 
           "arguments": [
             {
-              "decl": "const opencascade::handle<Standard_Persistent> &", 
               "type": "opencascade::handle<Standard_Persistent>", 
-              "name": "aPers"
+              "name": "aPers", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "Storage_BaseDriver &", 
               "type": "Storage_BaseDriver", 
-              "name": "aDriver"
+              "name": "aDriver", 
+              "ref": true
             }, 
             {
-              "decl": "const opencascade::handle<Storage_Schema> &", 
               "type": "opencascade::handle<Storage_Schema>", 
-              "name": "aSchema"
+              "name": "aSchema", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "Storage_DefaultCallBack::Read(opencascade::handle<Standard_Persistent>, Storage_BaseDriver, opencascade::handle<Storage_Schema>)", 

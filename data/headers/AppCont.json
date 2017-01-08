@@ -16,14 +16,14 @@
           "parent": "AppCont_Function", 
           "arguments": [
             {
-              "decl": "Standard_Integer &", 
               "type": "Standard_Integer", 
-              "name": "theNbPnt"
+              "name": "theNbPnt", 
+              "ref": true
             }, 
             {
-              "decl": "Standard_Integer &", 
               "type": "Standard_Integer", 
-              "name": "theNbPnt2d"
+              "name": "theNbPnt2d", 
+              "ref": true
             }
           ], 
           "key": "AppCont_Function::GetNumberOfPoints(Standard_Integer, Standard_Integer)", 
@@ -79,19 +79,19 @@
           "parent": "AppCont_Function", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "theU"
+              "name": "theU", 
+              "const": true
             }, 
             {
-              "decl": "NCollection_Array1<gp_Pnt2d> &", 
               "type": "NCollection_Array1<gp_Pnt2d>", 
-              "name": "thePnt2d"
+              "name": "thePnt2d", 
+              "ref": true
             }, 
             {
-              "decl": "NCollection_Array1<gp_Pnt> &", 
               "type": "NCollection_Array1<gp_Pnt>", 
-              "name": "thePnt"
+              "name": "thePnt", 
+              "ref": true
             }
           ], 
           "key": "AppCont_Function::Value(Standard_Real, NCollection_Array1<gp_Pnt2d>, NCollection_Array1<gp_Pnt>)", 
@@ -106,19 +106,19 @@
           "parent": "AppCont_Function", 
           "arguments": [
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "theU"
+              "name": "theU", 
+              "const": true
             }, 
             {
-              "decl": "NCollection_Array1<gp_Vec2d> &", 
               "type": "NCollection_Array1<gp_Vec2d>", 
-              "name": "theVec2d"
+              "name": "theVec2d", 
+              "ref": true
             }, 
             {
-              "decl": "NCollection_Array1<gp_Vec> &", 
               "type": "NCollection_Array1<gp_Vec>", 
-              "name": "theVec"
+              "name": "theVec", 
+              "ref": true
             }
           ], 
           "key": "AppCont_Function::D1(Standard_Real, NCollection_Array1<gp_Vec2d>, NCollection_Array1<gp_Vec>)", 
@@ -133,19 +133,19 @@
           "parent": "AppCont_Function", 
           "arguments": [
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true
             }, 
             {
-              "decl": "Standard_Boolean &", 
               "type": "Standard_Boolean", 
-              "name": "IsPeriodic"
+              "name": "IsPeriodic", 
+              "ref": true
             }, 
             {
-              "decl": "Standard_Real &", 
               "type": "Standard_Real", 
-              "name": "thePeriod"
+              "name": "thePeriod", 
+              "ref": true
             }
           ], 
           "key": "AppCont_Function::PeriodInformation(Standard_Integer, Standard_Boolean, Standard_Real)", 
@@ -169,65 +169,69 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "AppCont_LeastSquare", 
           "parent": "AppCont_LeastSquare", 
           "arguments": [
             {
-              "decl": "const AppCont_Function &", 
               "type": "AppCont_Function", 
-              "name": "SSP"
+              "name": "SSP", 
+              "const": true, 
+              "ref": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U0"
+              "name": "U0", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Real", 
               "type": "Standard_Real", 
-              "name": "U1"
+              "name": "U1", 
+              "const": true
             }, 
             {
-              "decl": "const AppParCurves_Constraint", 
               "type": "AppParCurves_Constraint", 
-              "name": "FirstCons"
+              "name": "FirstCons", 
+              "const": true
             }, 
             {
-              "decl": "const AppParCurves_Constraint", 
               "type": "AppParCurves_Constraint", 
-              "name": "LastCons"
+              "name": "LastCons", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "Deg"
+              "name": "Deg", 
+              "const": true
             }, 
             {
-              "decl": "const Standard_Integer", 
               "type": "Standard_Integer", 
-              "name": "NbPoints"
+              "name": "NbPoints", 
+              "const": true
             }
           ], 
           "key": "AppCont_LeastSquare::AppCont_LeastSquare(AppCont_Function, Standard_Real, Standard_Real, AppParCurves_Constraint, AppParCurves_Constraint, Standard_Integer, Standard_Integer)", 
           "returnType": "", 
-          "throws": true
+          "throws": true, 
+          "type": "constructor"
         }, 
         {
-          "declType": "constructor", 
+          "declType": "method", 
           "name": "AppCont_LeastSquare", 
           "parent": "AppCont_LeastSquare", 
           "arguments": [
             {
-              "decl": "const AppCont_LeastSquare &", 
               "type": "AppCont_LeastSquare", 
-              "name": "arg0"
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
             }
           ], 
           "key": "AppCont_LeastSquare::AppCont_LeastSquare(AppCont_LeastSquare)", 
           "returnType": "", 
           "artificial": "1", 
           "throws": true, 
+          "type": "constructor", 
           "copyConstructor": true
         }, 
         {
@@ -245,19 +249,19 @@
           "parent": "AppCont_LeastSquare", 
           "arguments": [
             {
-              "decl": "Standard_Real &", 
               "type": "Standard_Real", 
-              "name": "F"
+              "name": "F", 
+              "ref": true
             }, 
             {
-              "decl": "Standard_Real &", 
               "type": "Standard_Real", 
-              "name": "MaxE3d"
+              "name": "MaxE3d", 
+              "ref": true
             }, 
             {
-              "decl": "Standard_Real &", 
               "type": "Standard_Real", 
-              "name": "MaxE2d"
+              "name": "MaxE2d", 
+              "ref": true
             }
           ], 
           "key": "AppCont_LeastSquare::Error(Standard_Real, Standard_Real, Standard_Real)", 
