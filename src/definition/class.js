@@ -46,6 +46,11 @@ class ClassDefinition extends ContainerDefinition {
     return this.typemap.getWrappedType(this.getNativeBaseClass());
   }
 
+  getBaseLevel() {
+    if (!this.getBaseClass()) return 0;
+    return this.getBaseClass().getBaseLevel() + 1
+  }
+
   getKeys() {
     return [this.nativeName];
   }

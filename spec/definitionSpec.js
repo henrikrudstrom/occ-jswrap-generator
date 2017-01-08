@@ -160,7 +160,7 @@ describe('Wrapper definition', () => {
     expect(ctor.overloads[0].canBeWrapped()).to.equal(true);
   });
 
-  it('it should include correct overload for constructor', () => {
+  it('should include correct overload for constructor', () => {
     var conf = configure((mod) => {
       mod.name = 'test';
       mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
@@ -170,5 +170,21 @@ describe('Wrapper definition', () => {
     var def = new Factory(definitions.all).create(conf).getMember('test');
     var pnt = def.getMember('Pnt');
     expect(pnt.getMember('Pnt').overloads[0].type).to.equal('constructorOverload');
+  });
+  it('should sort classes by inheritance', () => {
+    var conf = configure((mod) => {
+      mod.name = 'test';
+      mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint');
+      mod.wrapClass('Geom_Direction', 'Direction');
+      mod.wrapClass('Geom_Vector', 'Vector');
+      mod.wrapClass('Geom_Geometry', 'Geometry');
+      mod.wrapClass('Geom_Point', 'Point');
+    });
+    var mod = new Factory(definitions.all).create(conf).getMember('test');
+    expect(mod.members[0].name).to.equal('Geometry');
+    expect(mod.members[1].name).to.equal('Point');
+    expect(mod.members[2].name).to.equal('Vector');
+    expect(mod.members[3].name).to.equal('CartesianPoint');
+    expect(mod.members[4].name).to.equal('Direction');
   });
 });
