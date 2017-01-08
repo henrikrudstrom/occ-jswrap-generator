@@ -193,15 +193,19 @@ describe('Wrapper configuration', () => {
       mod.wrapClass('Geom_Geometry', 'Geometry');
       mod.wrapClass('Geom_Curve', 'Curve', (cls) => {
         cls.wrapMethod('D0', 'd0', (method) => {
-          method.setOutArgs({ P: 'p', V1: 'v1' });
+          method.setOutArgs();
+        });
+        cls.wrapMethod('D1', 'd1', (method) => {
+          method.setOutArgs({ P: 'customNameForP', V1: 'customNameForV1' });
         });
       });
 
       var curve = mod.getMember('Curve');
-      var method = curve.getMember('d0');
-      var overload = method.overloads[0];
-      expect(overload.outArgs.P).to.equal('p');
-      expect(overload.outArgs.v1).to.equal('v1');
+      var methodD0 = curve.getMember('d0');
+      var methodD1 = curve.getMember('d1');
+      expect(methodD0.overloads[0].argouts.P).to.equal('p');
+      expect(methodD1.overloads[0].argouts.P).to.equal('customNameForP');
+      expect(methodD1.overloads[0].argouts.V1).to.equal('customNameForV1');
     });
   });
 });
