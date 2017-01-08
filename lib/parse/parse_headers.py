@@ -178,7 +178,7 @@ def w_member_function(cd, parent):
 
 def w_constructor(cc, parent):
     member = w_member_function(cc, parent)
-    member['type']="constructor"
+    member['declType']="constructor"
     add_if(member, declarations.is_copy_constructor(cc), "copyConstructor")
     #member["trivialConstructor"] = cc.is_trivial_constructor
     return member
