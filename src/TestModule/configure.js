@@ -12,6 +12,24 @@ module.exports = function (mod) {
       .exclude('changeCoord')
       .wrapConstructor('*');
   });
+  mod.wrapClass('gp_Dir', 'Dir', (cls) => {
+    cls.wrapConstructor('*')
+      .wrapProperty('X', 'SetX', 'x')
+      .wrapProperty('Y', 'SetY', 'y')
+      .wrapProperty('Z', 'SetZ', 'z');
+  });
+  mod.wrapClass('gp_Vec', 'Vec', (cls) => {
+    cls.wrapConstructor('*')
+      .wrapProperty('X', 'SetX', 'x')
+      .wrapProperty('Y', 'SetY', 'y')
+      .wrapProperty('Z', 'SetZ', 'z');
+  });
+
+  mod.wrapClass('gp_Ax1', 'Ax1', (cls) => {
+    cls.wrapConstructor('*')
+      .wrapProperty('Direction', 'SetDirection', 'direction')
+      .wrapProperty('Location', 'SetLocation', 'location');
+  });
   mod.wrapClass('Geom_Geometry', 'Geometry', (cls) => {
     cls.wrapMethod('Mirrored', 'mirrored');
   });
@@ -23,5 +41,14 @@ module.exports = function (mod) {
       .wrapProperty('Y', 'SetY', 'y')
       .wrapProperty('Z', 'SetZ', 'z')
       .wrapConstructor('*');
+  });
+  mod.wrapClass('Geom_Curve', 'Curve', (cls) => {
+    cls.wrapMethod('D0', 'd0', method => method.setOutArgs());
+    cls.wrapMethod('D1', 'd1', method => method.setOutArgs());
+    console.log(cls);
+  });
+  mod.wrapClass('Geom_Line', 'Line', (cls) => {
+    cls.wrapProperty('Position', 'SetPosition', 'position');
+    cls.wrapConstructor('*');
   });
 };

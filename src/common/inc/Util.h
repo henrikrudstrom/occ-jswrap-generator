@@ -13,19 +13,16 @@ namespace Util {
 template<class T>
 T* CheckedUnWrap(v8::Handle<v8::Value> value){
         if(!value->IsObject()) {
-                Nan::ThrowError("Argument is not an object");
                 return NULL;
         }
 
         auto maybeHandle = Nan::To<v8::Object>(value);
         if(maybeHandle.IsEmpty()) {
-                Nan::ThrowError("Argument cannot be empty");
                 return NULL;
         }
 
         auto handle = maybeHandle.ToLocalChecked();
         if (handle->InternalFieldCount() < 1) {
-                Nan::ThrowError("Argument error");
                 return NULL;
         }
 
@@ -36,12 +33,10 @@ T* CheckedUnWrap(v8::Handle<v8::Value> value){
         while (objproto != targetProto) {
                 maybeProto = Nan::To<v8::Object>(objproto);
                 if(maybeProto.IsEmpty()) {
-                        Nan::ThrowError("Argument error");
                         return NULL;
                 }
                 objproto = maybeProto.ToLocalChecked()->GetPrototype();
                 if(objproto.IsEmpty()) {
-                        Nan::ThrowError("Argument error");
                         return NULL;
                 }
         }

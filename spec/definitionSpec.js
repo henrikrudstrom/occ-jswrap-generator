@@ -202,4 +202,29 @@ describe('Wrapper definition', () => {
     expect(mod.members[3].name).to.equal('CartesianPoint');
     expect(mod.members[4].name).to.equal('Direction');
   });
+
+  it('can define methods with out args and return them', () => {
+    var conf = configure((mod) => {
+      mod.name = 'test';
+      mod.wrapClass('gp_Pnt', 'Pnt');
+      mod.wrapClass('gp_Vec', 'Vec');
+      mod.wrapClass('Geom_Geometry', 'Geometry');
+      mod.wrapClass('Geom_Curve', 'Curve', (cls) => {
+        cls.wrapMethod('D0', 'd0', (method) => {
+          method.setOutArgs();
+        });
+        cls.wrapMethod('D1', 'd1', (method) => {
+          method.setOutArgs({ P: 'customNameForP' });
+        });
+      });
+    });
+    var mod = new Factory(definitions.all).create(conf).getMember('test');
+    var curve = mod.getMember('Curve');
+    var d0 = curve.getMember('d0');
+    var d1 = curve.getMember('d1');
+    expect(d0.overloads[0].getOutputArguments().length).to.equal(1);
+    expect(d1.overloads[0].getOutputArguments().length).to.equal(2);
+    expect(d0.overloads[0].getInputArguments().length).to.equal(1);
+    expect(d1.overloads[0].getInputArguments().length).to.equal(1);
+  });
 });
