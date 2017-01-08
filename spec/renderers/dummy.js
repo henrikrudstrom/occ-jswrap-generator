@@ -1,4 +1,4 @@
-const base = require('../../src/renderers/base.js');
+const base = require('../../lib/renderers/base.js');
 
 class WrapperRenderer extends base.ContainerRenderer {
   constructor(def, factory, typemap) {

@@ -1,8 +1,7 @@
 const chai = require('chai');
-const configure = require('../src/configure.js');
-const util = require('../src/util.js');
-
-require('../src/definition');
+const configure = require('../lib/configure.js');
+const util = require('../lib/util.js');
+const definition = require('../lib/definition');
 
 const expect = chai.expect;
 chai.use(require('chai-things'));

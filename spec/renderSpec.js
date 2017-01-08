@@ -1,10 +1,10 @@
 const chai = require('chai');
-const configure = require('../src/configure.js');
+const configure = require('../lib/configure.js');
 const dummyRenderers = require('./renderers/dummy.js');
-const render = require('../src/render.js');
-const definitions = require('../src/definition');
-const factory = require('../src/factory.js');
-const renderers = require('../src/renderers/jswrapper');
+const render = require('../lib/render.js');
+const definitions = require('../lib/definition');
+const factory = require('../lib/factory.js');
+const renderers = require('../lib/renderers/jswrapper');
 
 
 const expect = chai.expect;

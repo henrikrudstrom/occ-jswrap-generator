@@ -1,7 +1,7 @@
 const chai = require('chai');
-const configure = require('../src/configure.js');
-var Factory = require('../src/factory.js').Definition;
-var definitions = require('../src/definition');
+const configure = require('../lib/configure.js');
+var Factory = require('../lib/factory.js').Definition;
+var definitions = require('../lib/definition');
 
 const expect = chai.expect;
 chai.use(require('chai-things'));

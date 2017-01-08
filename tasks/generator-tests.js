@@ -1,4 +1,4 @@
-const settings = require('../src/settings.js');
+const settings = require('../lib/settings.js');
 settings.initialize();
 
 const yargs = require('yargs');

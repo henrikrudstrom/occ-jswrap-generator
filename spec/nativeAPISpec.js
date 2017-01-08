@@ -1,5 +1,5 @@
 const chai = require('chai');
-const nativeAPI = require('../src/nativeAPI.js');
+const nativeAPI = require('../lib/nativeAPI.js');
 
 const expect = chai.expect;
 chai.use(require('chai-things'));
