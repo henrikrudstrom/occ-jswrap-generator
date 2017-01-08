@@ -19,7 +19,7 @@ describe('Wrapper configuration', () => {
       expect(mod.members.length).to.equal(1);
       expect(mod.getMember('Pnt')).to.not.equal(undefined);
       expect(mod.getMember('Pnt').name).to.equal('Pnt');
-      expect(mod.getMember('Pnt').type).to.equal('class');
+      expect(mod.getMember('Pnt').declType).to.equal('class');
     });
   });
 
@@ -118,8 +118,8 @@ describe('Wrapper configuration', () => {
       });
 
       var cls = mod.getMember('Pnt');
-      expect(cls.getMember('x').type).to.equal('getter');
-      expect(cls.getMember('setX').type).to.equal('setter');
+      expect(cls.getMember('x').declType).to.equal('getter');
+      expect(cls.getMember('setX').declType).to.equal('setter');
     });
   });
 
@@ -132,7 +132,7 @@ describe('Wrapper configuration', () => {
       });
 
       var cls = mod.getMember('Pnt');
-      expect(cls.getMember('x').type).to.equal('getter');
+      expect(cls.getMember('x').declType).to.equal('getter');
       expect(cls.getMember('x').readOnly).to.equal(true);
       expect(cls.getMember('x').myProperty).to.equal('hello');
     });
@@ -146,8 +146,8 @@ describe('Wrapper configuration', () => {
       });
 
       var cls = mod.getMember('Pnt');
-      expect(cls.getMember('x').type).to.equal('getter');
-      expect(cls.getMember('setX').type).to.equal('setter');
+      expect(cls.getMember('x').declType).to.equal('getter');
+      expect(cls.getMember('setX').declType).to.equal('setter');
     });
   });
 
@@ -164,11 +164,11 @@ describe('Wrapper configuration', () => {
       var point = mod.getMember('Point');
       var pnt = mod.getMember('Pnt');
       var pointCtor = point.getMember('Point');
-      expect(pointCtor.type).to.equal('constructor');
+      expect(pointCtor.declType).to.equal('constructor');
       expect(pointCtor.overloads.length).to.equal(1);
-      expect(pointCtor.overloads[0].type).to.equal('constructorOverload');
+      expect(pointCtor.overloads[0].declType).to.equal('constructorOverload');
       var pntCtor = pnt.getMember('Pnt');
-      expect(pntCtor.type).to.equal('constructor');
+      expect(pntCtor.declType).to.equal('constructor');
       expect(pntCtor.overloads.length).to.equal(3);
     });
   });
@@ -181,7 +181,7 @@ describe('Wrapper configuration', () => {
 
       var pnt = mod.getMember('Pnt');
       var pntCtor = pnt.getMember('Pnt');
-      expect(pntCtor.type).to.equal('constructor');
+      expect(pntCtor.declType).to.equal('constructor');
       expect(pntCtor.overloads.length).to.equal(3);
     });
   });

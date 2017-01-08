@@ -132,7 +132,7 @@ describe('Wrapper definition', () => {
     var cartesianPointClass = def.getMember('CartesianPoint');
     var propX = cartesianPointClass.getMember('x');
     var propPnt = cartesianPointClass.getMember('pnt');
-
+    console.log(propX.overloads[0].getWrappedDependencies())
     expect(propX.overloads[0].getWrappedDependencies().length).to.equal(0);
     expect(propPnt.overloads[0].getWrappedDependencies().map(d => d.name)).to.include('Pnt');
     expect(propPnt.getWrappedDependencies().map(d => d.name)).to.include('Pnt');
@@ -170,7 +170,7 @@ describe('Wrapper definition', () => {
     var ctor = pnt.getConstructor();
 
     expect(ctor).to.not.equal(undefined);
-    expect(ctor.type).to.equal('constructor');
+    expect(ctor.declType).to.equal('constructor');
     expect(ctor.overloads.length).to.equal(1);
     expect(ctor.overloads[0].canBeWrapped()).to.equal(true);
   });
@@ -184,7 +184,7 @@ describe('Wrapper definition', () => {
     });
     var def = new Factory(definitions.all).create(conf).getMember('test');
     var pnt = def.getMember('Pnt');
-    expect(pnt.getMember('Pnt').overloads[0].type).to.equal('constructorOverload');
+    expect(pnt.getMember('Pnt').overloads[0].declType).to.equal('constructorOverload');
   });
   it('should sort classes by inheritance', () => {
     var conf = configure((mod) => {

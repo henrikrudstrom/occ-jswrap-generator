@@ -92,14 +92,14 @@ class BuiltinRenderer extends base.Renderer {
   }
 }
 
-WrapperRenderer.prototype.type = 'wrapper';
-ModuleRenderer.prototype.type = 'module';
-ClassRenderer.prototype.type = 'class';
-MethodRenderer.prototype.type = 'method';
-ConstructorRenderer.prototype.type = 'constructor';
-MethodOverloadRenderer.prototype.type = 'methodOverload';
-ConstructorOverloadRenderer.prototype.type = 'constructorOverload';
-BuiltinRenderer.prototype.type = 'builtin';
+WrapperRenderer.prototype.declType = 'wrapper';
+ModuleRenderer.prototype.declType = 'module';
+ClassRenderer.prototype.declType = 'class';
+MethodRenderer.prototype.declType = 'method';
+ConstructorRenderer.prototype.declType = 'constructor';
+MethodOverloadRenderer.prototype.declType = 'methodOverload';
+ConstructorOverloadRenderer.prototype.declType = 'constructorOverload';
+BuiltinRenderer.prototype.declType = 'builtin';
 
 module.exports = [WrapperRenderer, ModuleRenderer,
   ClassRenderer, MethodRenderer, BuiltinRenderer, ConstructorRenderer,

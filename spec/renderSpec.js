@@ -56,17 +56,17 @@ describe('Renderer', () => {
     var method = cls.getMember('distance');
     var setter = cls.getMember('setX');
 
-    expect(wrapper.type).to.equal('wrapper');
-    expect(mod.type).to.equal('module');
-    expect(cls.type).to.equal('class');
-    expect(method.type).to.equal('method');
-    expect(ctor.type).to.equal('constructor');
-    expect(setter.type).to.equal('setter');
-    expect(getter.type).to.equal('getter');
-    expect(method.renderers[0].type).to.equal('methodOverload');
-    expect(ctor.renderers[0].type).to.equal('constructorOverload');
-    expect(setter.renderers[0].type).to.equal('setterOverload');
-    expect(getter.renderers[0].type).to.equal('getterOverload');
+    expect(wrapper.declType).to.equal('wrapper');
+    expect(mod.declType).to.equal('module');
+    expect(cls.declType).to.equal('class');
+    expect(method.declType).to.equal('method');
+    expect(ctor.declType).to.equal('constructor');
+    expect(setter.declType).to.equal('setter');
+    expect(getter.declType).to.equal('getter');
+    expect(method.renderers[0].declType).to.equal('methodOverload');
+    expect(ctor.renderers[0].declType).to.equal('constructorOverload');
+    expect(setter.renderers[0].declType).to.equal('setterOverload');
+    expect(getter.renderers[0].declType).to.equal('getterOverload');
   });
   it('creates the correct renderers for abstract classes', () => {
     var conf = configure((mod) => {
@@ -86,14 +86,14 @@ describe('Renderer', () => {
     var getter = cls.getMember('x');
     var method = cls.getMember('distance');
 
-    expect(wrapper.type).to.equal('wrapper');
-    expect(mod.type).to.equal('module');
-    expect(cls.type).to.equal('class');
-    expect(method.type).to.equal('method');
-    expect(ctor.type).to.equal('constructor');
-    expect(getter.type).to.equal('getter');
-    expect(method.renderers[0].type).to.equal('methodOverload');
-    expect(getter.renderers[0].type).to.equal('getterOverload');
+    expect(wrapper.declType).to.equal('wrapper');
+    expect(mod.declType).to.equal('module');
+    expect(cls.declType).to.equal('class');
+    expect(method.declType).to.equal('method');
+    expect(ctor.declType).to.equal('constructor');
+    expect(getter.declType).to.equal('getter');
+    expect(method.renderers[0].declType).to.equal('methodOverload');
+    expect(getter.renderers[0].declType).to.equal('getterOverload');
     expect(ctor.renderers.length).to.equal(0);
   });
 });
