@@ -7,6 +7,7 @@ const rename = require('gulp-rename');
 const mkdirp = require('mkdirp');
 const fs = require('fs');
 const beautify = require('gulp-beautify');
+const filelog = require('gulp-filelog');
 
 const configurator = require('../lib/configurator.js');
 const settings = require('../lib/settings.js');
@@ -81,9 +82,11 @@ module.exports = function (gulp) {
 
   gulp.task('format-js', function () {
     return gulp.src([
-      `${settings.paths.build}/**/*.js, !${settings.paths.build}/node_modules/**/*.js`
-    ]).pipe(beautify({ indent_size: 2 }))
-      .pipe(gulp.dest(settings.paths.build));
+      `${settings.paths.build}/spec/**/*.js`, 
+      //`!${settings.paths.build}/node_modules/**/*.js`
+    ]).pipe(filelog())
+      .pipe(beautify({ indent_size: 2 }))
+      .pipe(gulp.dest(settings.paths.build + '/spec'));
   });
 
   gulp.task('copy-headers', function () {
@@ -94,7 +97,7 @@ module.exports = function (gulp) {
         var parts = pth.dirname.split('/');
         pth.dirname = [parts[1], parts[0]].concat(parts.slice(2)).join('/');
       }))
-      .pipe(gulp.dest(settings.paths.build));
+      .pipe(gulp.dest(settings.paths.build ));
   });
 
   gulp.task('clean-wrapper', function (done) {

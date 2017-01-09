@@ -225,4 +225,32 @@ describe('Wrapper definition', () => {
     expect(d0.overloads[0].getInputArguments().length).to.equal(1);
     expect(d1.overloads[0].getInputArguments().length).to.equal(1);
   });
+  
+  it('can figure out module dependencies', () => {
+    var conf = configurator.configure((mod) => {
+      mod.name = 'gp';
+      mod.wrapClass('gp_Vec', 'Vec');
+      mod.wrapClass('gp_Dir', 'Dir');
+      mod.wrapClass('gp_Pln', 'Pln');
+      mod.wrapClass('gp_Pnt', 'Pnt');
+    }, (mod) => {
+      mod.name = 'Geom';
+      mod.wrapClass('Geom_Point', 'Point', (cls) => {
+        cls.wrapMethod('Distance', 'distance');
+      })
+      mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint', (cls) => {
+        cls.wrapConstructor('*');
+        
+      })
+      mod.wrapClass('Geom_Plane', 'Plane', (cls) => {
+        cls.wrapConstructor('*')
+      });
+    });
+    var wrapper = configurator.createModel(conf);
+    var modGp = wrapper.getMember('gp');
+    var modGeom = wrapper.getMember('Geom');
+    expect(modGeom.getDependencies().map(dep => dep.name)).to.include('gp');
+    expect(modGeom.getDependencies().map(dep => dep.name)).to.not.include('Geom');
+    
+  })
 });
