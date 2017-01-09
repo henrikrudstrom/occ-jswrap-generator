@@ -6,6 +6,7 @@ const path = require('path');
 const rename = require('gulp-rename');
 const mkdirp = require('mkdirp');
 const fs = require('fs');
+const beautify = require('gulp-beautify');
 
 const configurator = require('../lib/configurator.js');
 const settings = require('../lib/settings.js');
@@ -24,7 +25,8 @@ function write(content) {
     '[inc]': settings.paths.inc,
     '[src]': settings.paths.src,
     '[build]': settings.paths.build,
-    '[lib]': settings.paths.build + '/lib'
+    '[lib]': settings.paths.build + '/lib',
+    '[spec]': settings.paths.build + '/spec'
   };
 
   function replace(filename) {
@@ -59,7 +61,7 @@ module.exports = function (gulp) {
   });
 
   gulp.task('render', (done) => {
-    runSequence('clean-wrapper', 'copy-headers', 'render-wrapper', 'format-cpp', done);
+    runSequence('clean-wrapper', 'copy-headers', 'render-wrapper', 'format-cpp', 'format-js', done);
   });
 
   gulp.task('render-wrapper', () => {
@@ -67,6 +69,7 @@ module.exports = function (gulp) {
     var model = configurator.createModel(configuration);
     render(model, 'jswrapper');
     render(model, 'js');
+    render(model, 'spec');
   });
 
   gulp.task('format-cpp', function (done) {
@@ -74,6 +77,13 @@ module.exports = function (gulp) {
     var headers = glob.sync(`${settings.paths.inc}/**/*.*`);
     var files = headers.concat(sources).join(' ');
     run(`clang-format -style="{BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 110}" -i ${files}`).exec(done);
+  });
+
+  gulp.task('format-js', function () {
+    return gulp.src([
+      `${settings.paths.build}/**/*.js, !${settings.paths.build}/node_modules/**/*.js`
+    ]).pipe(beautify({ indent_size: 2 }))
+      .pipe(gulp.dest(settings.paths.build));
   });
 
   gulp.task('copy-headers', function () {
