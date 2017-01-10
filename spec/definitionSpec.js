@@ -225,7 +225,7 @@ describe('Wrapper definition', () => {
     expect(d0.overloads[0].getInputArguments().length).to.equal(1);
     expect(d1.overloads[0].getInputArguments().length).to.equal(1);
   });
-  
+
   it('can figure out module dependencies', () => {
     var conf = configurator.configure((mod) => {
       mod.name = 'gp';
@@ -237,20 +237,47 @@ describe('Wrapper definition', () => {
       mod.name = 'Geom';
       mod.wrapClass('Geom_Point', 'Point', (cls) => {
         cls.wrapMethod('Distance', 'distance');
-      })
+      });
       mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint', (cls) => {
         cls.wrapConstructor('*');
-        
-      })
+      });
       mod.wrapClass('Geom_Plane', 'Plane', (cls) => {
-        cls.wrapConstructor('*')
+        cls.wrapConstructor('*');
       });
     });
     var wrapper = configurator.createModel(conf);
-    var modGp = wrapper.getMember('gp');
     var modGeom = wrapper.getMember('Geom');
     expect(modGeom.getDependencies().map(dep => dep.name)).to.include('gp');
     expect(modGeom.getDependencies().map(dep => dep.name)).to.not.include('Geom');
-    
-  })
+  });
+
+  it('can get inherited wrapped members', () => {
+    var conf = configurator.configure((mod) => {
+      mod.name = 'test';
+      mod.wrapClass('gp_Pnt', 'Pnt');
+      mod.wrapClass('Geom_Geometry', 'Geometry', (cls) => {
+        cls.wrapMethod('Mirrored', 'mirrored');
+      });
+      mod.wrapClass('Geom_Curve', 'Curve', (cls) => {
+        cls.wrapMethod('Reverse', 'reverse');
+      });
+      mod.wrapClass('Geom_Line', 'Line', (cls) => {
+        cls.wrapMethod('Reverse', 'reverse');
+        cls.wrapMethod('FirstParameter', 'firstParameter');
+      });
+    });
+    var mod = configurator.createModel(conf).getMember('test');
+    var curve = mod.getMember('Curve');
+    var line = mod.getMember('Line');
+
+    expect(curve.getAllMembers().map(mem => mem.name)).to.include('mirrored');
+    expect(line.getAllMembers().map(mem => mem.name)).to.include('mirrored');
+    console.log(line.getAllMembers().map(mem => mem.name))
+    expect(line.getAllMembers().map(mem => mem.name)).to.include('reverse');
+    expect(line.getAllMembers().filter(mem => mem.name === 'reverse').length).to.equal(1);
+    expect(line.getAllMembers().map(mem => mem.name)).to.include('firstParameter');
+    expect(line.getInheritedMembers().map(mem => mem.name)).to.include('mirrored');
+    expect(line.getInheritedMembers().map(mem => mem.name)).to.include('reverse');
+    expect(line.getInheritedMembers().map(mem => mem.name)).to.not.include('firstParameter');
+  });
 });
