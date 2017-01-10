@@ -85,7 +85,7 @@ module.exports = function (gulp) {
       `${settings.paths.build}/spec/**/*.js`, 
       //`!${settings.paths.build}/node_modules/**/*.js`
     ]).pipe(filelog())
-      .pipe(beautify({ indent_size: 2 }))
+      .pipe(beautify({ indent_size: 2, jslint_happy: true,  }))
       .pipe(gulp.dest(settings.paths.build + '/spec'));
   });
 
@@ -102,7 +102,9 @@ module.exports = function (gulp) {
 
   gulp.task('clean-wrapper', function (done) {
     return gulp.src(
-      [settings.paths.inc, settings.paths.src], { read: false }
+      [settings.paths.inc, settings.paths.src, 
+      settings.paths.build + '/spec/*', 
+      '!' + settings.paths.build + '/spec/lib'], { read: false }
     ).pipe(clean({ force: true }, done));
   });
 };

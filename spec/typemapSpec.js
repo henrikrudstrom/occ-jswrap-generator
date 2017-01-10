@@ -13,8 +13,8 @@ describe('typemap', () => {
     var typemap = wrapper.typemap;
 
     expect(typemap.wrapped).to.include.keys('Standard_Real');
-    expect(typemap.types).to.include.keys('double');
-    expect(typemap.getWrappedType('Standard_Real').name).to.equal('double');
+    expect(typemap.types).to.include.keys('Number');
+    expect(typemap.getWrappedType('Standard_Real').name).to.equal('Number');
   });
 
   it('can figure out mappings', () => {
@@ -32,7 +32,7 @@ describe('typemap', () => {
     expect(typemap.getWrappedType('gp_Pnt').name).to.equal('Pnt');
     expect(typemap.isBuiltIn('Standard_Real')).to.equal(true);
     expect(typemap.isBuiltIn('gp_Pnt')).to.equal(false);
-    expect(typemap.getWrappedType('Standard_Real').name).to.equal('double');
+    expect(typemap.getWrappedType('Standard_Real').name).to.equal('Number');
   });
 
   it('can resolve handle<> types', () => {
