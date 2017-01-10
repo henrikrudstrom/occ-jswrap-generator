@@ -45,7 +45,6 @@ module.exports = function (mod) {
   mod.wrapClass('Geom_Curve', 'Curve', (cls) => {
     cls.wrapMethod('D0', 'd0', method => method.setOutArgs());
     cls.wrapMethod('D1', 'd1', method => method.setOutArgs());
-    console.log(cls);
   });
   mod.wrapClass('Geom_Line', 'Line', (cls) => {
     cls.wrapProperty('Position', 'SetPosition', 'position');
