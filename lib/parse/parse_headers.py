@@ -143,17 +143,37 @@ def include_member(member):
 #     return d
 
 
+def is_const(decl_str):
+    return 'const' in decl_str and decl_str.split(' ')[1] == 'const'
+
+def is_ref(decl_str):
+    return '&' in decl_str
+
+def is_ptr(decl_str):
+    return '*' in decl_str
+
+
+def is_const_ref(decl_str):
+    return '&' in decl_str and decl_str.endswith('const')
+
 def w_arg(arg):
     from pprint import pprint
     tp = str(arg.decl_type)
-    const = 'const' in tp and tp.split(' ')[1] == 'const'
-    ref = '&' in tp
-    constRef = ref and tp.endswith('const')
     d = Dict(name=arg.name, type=clean_name(type(arg.decl_type)))
     add_if(d, arg.default_value, "default")
-    add_if(d, const, "const")
-    add_if(d, ref, "ref")
-    add_if(d, constRef, "constRef")
+    add_if(d, is_const(tp), "const")
+    add_if(d, is_ref(tp), "ref")
+    add_if(d, is_const_ref(tp), "constRef")
+    add_if(d, is_ptr(tp), "ptr")
+    return d
+
+def w_return_type(cd):
+    tp = str(cd.return_type)
+    d = Dict(type=clean_name(type(cd.return_type)))
+    add_if(d, is_const(tp), "const")
+    add_if(d, is_ref(tp), "ref")
+    add_if(d, is_const_ref(tp), "constRef")
+    add_if(d, is_ptr(tp), "ptr")
     return d
 
 def w_member_function(cd, parent):
@@ -164,12 +184,12 @@ def w_member_function(cd, parent):
         parent=parent.name,
         declType="method",
         arguments=args,
-        returnType=str(cd.return_type) if cd.return_type else ""
-
+        #eturnType=str(cd.return_type) if cd.return_type else ""
         )
+    d['return'] = w_return_type(cd)
     add_if(d, cd.has_static, "static")
     add_if(d, cd.has_extern, "extern")
-    add_if(d, cd.has_const, "const")
+    add_if(d, cd.has_const == 1, "const")
     add_if(d, cd.is_artificial, "artificial")
     add_if(d, cd.does_throw, "throws") #TODO
     add_if(d, cd.exceptions, "exceptions") #TODO
@@ -179,6 +199,7 @@ def w_member_function(cd, parent):
 def w_constructor(cc, parent):
     member = w_member_function(cc, parent)
     member['declType']="constructor"
+    member['return'] = Dict(type=parent.name, ptr=True)
     add_if(member, declarations.is_copy_constructor(cc), "copyConstructor")
     #member["trivialConstructor"] = cc.is_trivial_constructor
     return member

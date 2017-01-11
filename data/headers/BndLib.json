@@ -11,19 +11,21 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
-          "name": "BndLib_Add3dCurve", 
-          "parent": "BndLib_Add3dCurve", 
-          "arguments": [], 
           "key": "BndLib_Add3dCurve::BndLib_Add3dCurve()", 
-          "returnType": "", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BndLib_Add3dCurve", 
+          "name": "BndLib_Add3dCurve", 
+          "return": {
+            "type": "BndLib_Add3dCurve", 
+            "ptr": true
+          }, 
           "artificial": "1", 
           "throws": true
         }, 
         {
+          "key": "BndLib_Add3dCurve::BndLib_Add3dCurve(BndLib_Add3dCurve)", 
           "declType": "constructor", 
-          "name": "BndLib_Add3dCurve", 
-          "parent": "BndLib_Add3dCurve", 
           "arguments": [
             {
               "type": "BndLib_Add3dCurve", 
@@ -32,107 +34,48 @@
               "ref": true
             }
           ], 
-          "key": "BndLib_Add3dCurve::BndLib_Add3dCurve(BndLib_Add3dCurve)", 
-          "returnType": "", 
+          "parent": "BndLib_Add3dCurve", 
+          "name": "BndLib_Add3dCurve", 
+          "return": {
+            "type": "BndLib_Add3dCurve", 
+            "ptr": true
+          }, 
           "artificial": "1", 
           "throws": true, 
           "copyConstructor": true
         }, 
         {
-          "declType": "method", 
-          "name": "Add", 
-          "parent": "BndLib_Add3dCurve", 
-          "arguments": [
-            {
-              "type": "Adaptor3d_Curve", 
-              "name": "C", 
-              "const": true, 
-              "ref": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "Tol", 
-              "const": true
-            }, 
-            {
-              "type": "Bnd_Box", 
-              "name": "B", 
-              "ref": true
-            }
-          ], 
           "key": "BndLib_Add3dCurve::Add(Adaptor3d_Curve, Standard_Real, Bnd_Box)", 
-          "returnType": "void", 
-          "static": "1", 
-          "throws": true
-        }, 
-        {
           "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor3d_Curve", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Bnd_Box", 
+              "name": "B", 
+              "ref": true
+            }
+          ], 
+          "parent": "BndLib_Add3dCurve", 
           "name": "Add", 
-          "parent": "BndLib_Add3dCurve", 
-          "arguments": [
-            {
-              "type": "Adaptor3d_Curve", 
-              "name": "C", 
-              "const": true, 
-              "ref": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "U1", 
-              "const": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "U2", 
-              "const": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "Tol", 
-              "const": true
-            }, 
-            {
-              "type": "Bnd_Box", 
-              "name": "B", 
-              "ref": true
-            }
-          ], 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
           "key": "BndLib_Add3dCurve::Add(Adaptor3d_Curve, Standard_Real, Standard_Real, Standard_Real, Bnd_Box)", 
-          "returnType": "void", 
-          "static": "1", 
-          "throws": true
-        }, 
-        {
           "declType": "method", 
-          "name": "AddOptimal", 
-          "parent": "BndLib_Add3dCurve", 
-          "arguments": [
-            {
-              "type": "Adaptor3d_Curve", 
-              "name": "C", 
-              "const": true, 
-              "ref": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "Tol", 
-              "const": true
-            }, 
-            {
-              "type": "Bnd_Box", 
-              "name": "B", 
-              "ref": true
-            }
-          ], 
-          "key": "BndLib_Add3dCurve::AddOptimal(Adaptor3d_Curve, Standard_Real, Bnd_Box)", 
-          "returnType": "void", 
-          "static": "1", 
-          "throws": true
-        }, 
-        {
-          "declType": "method", 
-          "name": "AddOptimal", 
-          "parent": "BndLib_Add3dCurve", 
           "arguments": [
             {
               "type": "Adaptor3d_Curve", 
@@ -161,15 +104,85 @@
               "ref": true
             }
           ], 
-          "key": "BndLib_Add3dCurve::AddOptimal(Adaptor3d_Curve, Standard_Real, Standard_Real, Standard_Real, Bnd_Box)", 
-          "returnType": "void", 
+          "parent": "BndLib_Add3dCurve", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
           "static": "1", 
           "throws": true
         }, 
         {
+          "key": "BndLib_Add3dCurve::AddOptimal(Adaptor3d_Curve, Standard_Real, Bnd_Box)", 
           "declType": "method", 
-          "name": "AddGenCurv", 
+          "arguments": [
+            {
+              "type": "Adaptor3d_Curve", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Bnd_Box", 
+              "name": "B", 
+              "ref": true
+            }
+          ], 
           "parent": "BndLib_Add3dCurve", 
+          "name": "AddOptimal", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BndLib_Add3dCurve::AddOptimal(Adaptor3d_Curve, Standard_Real, Standard_Real, Standard_Real, Bnd_Box)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor3d_Curve", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Bnd_Box", 
+              "name": "B", 
+              "ref": true
+            }
+          ], 
+          "parent": "BndLib_Add3dCurve", 
+          "name": "AddOptimal", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BndLib_Add3dCurve::AddGenCurv(Adaptor3d_Curve, Standard_Real, Standard_Real, Standard_Real, Bnd_Box)", 
+          "declType": "method", 
           "arguments": [
             {
               "type": "Adaptor3d_Curve", 
@@ -198,8 +211,11 @@
               "ref": true
             }
           ], 
-          "key": "BndLib_Add3dCurve::AddGenCurv(Adaptor3d_Curve, Standard_Real, Standard_Real, Standard_Real, Bnd_Box)", 
-          "returnType": "void", 
+          "parent": "BndLib_Add3dCurve", 
+          "name": "AddGenCurv", 
+          "return": {
+            "type": "void"
+          }, 
           "static": "1", 
           "throws": true
         }
@@ -218,19 +234,21 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
-          "name": "BndLib_AddSurface", 
-          "parent": "BndLib_AddSurface", 
-          "arguments": [], 
           "key": "BndLib_AddSurface::BndLib_AddSurface()", 
-          "returnType": "", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BndLib_AddSurface", 
+          "name": "BndLib_AddSurface", 
+          "return": {
+            "type": "BndLib_AddSurface", 
+            "ptr": true
+          }, 
           "artificial": "1", 
           "throws": true
         }, 
         {
+          "key": "BndLib_AddSurface::BndLib_AddSurface(BndLib_AddSurface)", 
           "declType": "constructor", 
-          "name": "BndLib_AddSurface", 
-          "parent": "BndLib_AddSurface", 
           "arguments": [
             {
               "type": "BndLib_AddSurface", 
@@ -239,96 +257,74 @@
               "ref": true
             }
           ], 
-          "key": "BndLib_AddSurface::BndLib_AddSurface(BndLib_AddSurface)", 
-          "returnType": "", 
+          "parent": "BndLib_AddSurface", 
+          "name": "BndLib_AddSurface", 
+          "return": {
+            "type": "BndLib_AddSurface", 
+            "ptr": true
+          }, 
           "artificial": "1", 
           "throws": true, 
           "copyConstructor": true
         }, 
         {
-          "declType": "method", 
-          "name": "Add", 
-          "parent": "BndLib_AddSurface", 
-          "arguments": [
-            {
-              "type": "Adaptor3d_Surface", 
-              "name": "S", 
-              "const": true, 
-              "ref": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "Tol", 
-              "const": true
-            }, 
-            {
-              "type": "Bnd_Box", 
-              "name": "B", 
-              "ref": true
-            }
-          ], 
           "key": "BndLib_AddSurface::Add(Adaptor3d_Surface, Standard_Real, Bnd_Box)", 
-          "returnType": "void", 
-          "static": "1", 
-          "throws": true
-        }, 
-        {
           "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor3d_Surface", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Bnd_Box", 
+              "name": "B", 
+              "ref": true
+            }
+          ], 
+          "parent": "BndLib_AddSurface", 
           "name": "Add", 
-          "parent": "BndLib_AddSurface", 
-          "arguments": [
-            {
-              "type": "Adaptor3d_Surface", 
-              "name": "S", 
-              "const": true, 
-              "ref": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "UMin", 
-              "const": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "UMax", 
-              "const": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "VMin", 
-              "const": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "VMax", 
-              "const": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "Tol", 
-              "const": true
-            }, 
-            {
-              "type": "Bnd_Box", 
-              "name": "B", 
-              "ref": true
-            }
-          ], 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
           "key": "BndLib_AddSurface::Add(Adaptor3d_Surface, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Bnd_Box)", 
-          "returnType": "void", 
-          "static": "1", 
-          "throws": true
-        }, 
-        {
           "declType": "method", 
-          "name": "AddOptimal", 
-          "parent": "BndLib_AddSurface", 
           "arguments": [
             {
               "type": "Adaptor3d_Surface", 
               "name": "S", 
               "const": true, 
               "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
             }, 
             {
               "type": "Standard_Real", 
@@ -341,62 +337,46 @@
               "ref": true
             }
           ], 
+          "parent": "BndLib_AddSurface", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
           "key": "BndLib_AddSurface::AddOptimal(Adaptor3d_Surface, Standard_Real, Bnd_Box)", 
-          "returnType": "void", 
-          "static": "1", 
-          "throws": true
-        }, 
-        {
           "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor3d_Surface", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Bnd_Box", 
+              "name": "B", 
+              "ref": true
+            }
+          ], 
+          "parent": "BndLib_AddSurface", 
           "name": "AddOptimal", 
-          "parent": "BndLib_AddSurface", 
-          "arguments": [
-            {
-              "type": "Adaptor3d_Surface", 
-              "name": "S", 
-              "const": true, 
-              "ref": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "UMin", 
-              "const": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "UMax", 
-              "const": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "VMin", 
-              "const": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "VMax", 
-              "const": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "Tol", 
-              "const": true
-            }, 
-            {
-              "type": "Bnd_Box", 
-              "name": "B", 
-              "ref": true
-            }
-          ], 
-          "key": "BndLib_AddSurface::AddOptimal(Adaptor3d_Surface, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Bnd_Box)", 
-          "returnType": "void", 
+          "return": {
+            "type": "void"
+          }, 
           "static": "1", 
           "throws": true
         }, 
         {
+          "key": "BndLib_AddSurface::AddOptimal(Adaptor3d_Surface, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Bnd_Box)", 
           "declType": "method", 
-          "name": "AddGenSurf", 
-          "parent": "BndLib_AddSurface", 
           "arguments": [
             {
               "type": "Adaptor3d_Surface", 
@@ -435,8 +415,60 @@
               "ref": true
             }
           ], 
+          "parent": "BndLib_AddSurface", 
+          "name": "AddOptimal", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
           "key": "BndLib_AddSurface::AddGenSurf(Adaptor3d_Surface, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Bnd_Box)", 
-          "returnType": "void", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor3d_Surface", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Bnd_Box", 
+              "name": "B", 
+              "ref": true
+            }
+          ], 
+          "parent": "BndLib_AddSurface", 
+          "name": "AddGenSurf", 
+          "return": {
+            "type": "void"
+          }, 
           "static": "1", 
           "throws": true
         }
@@ -455,19 +487,21 @@
       "abstract": false, 
       "declarations": [
         {
-          "declType": "constructor", 
-          "name": "BndLib_Add2dCurve", 
-          "parent": "BndLib_Add2dCurve", 
-          "arguments": [], 
           "key": "BndLib_Add2dCurve::BndLib_Add2dCurve()", 
-          "returnType": "", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BndLib_Add2dCurve", 
+          "name": "BndLib_Add2dCurve", 
+          "return": {
+            "type": "BndLib_Add2dCurve", 
+            "ptr": true
+          }, 
           "artificial": "1", 
           "throws": true
         }, 
         {
+          "key": "BndLib_Add2dCurve::BndLib_Add2dCurve(BndLib_Add2dCurve)", 
           "declType": "constructor", 
-          "name": "BndLib_Add2dCurve", 
-          "parent": "BndLib_Add2dCurve", 
           "arguments": [
             {
               "type": "BndLib_Add2dCurve", 
@@ -476,16 +510,19 @@
               "ref": true
             }
           ], 
-          "key": "BndLib_Add2dCurve::BndLib_Add2dCurve(BndLib_Add2dCurve)", 
-          "returnType": "", 
+          "parent": "BndLib_Add2dCurve", 
+          "name": "BndLib_Add2dCurve", 
+          "return": {
+            "type": "BndLib_Add2dCurve", 
+            "ptr": true
+          }, 
           "artificial": "1", 
           "throws": true, 
           "copyConstructor": true
         }, 
         {
+          "key": "BndLib_Add2dCurve::Add(Adaptor2d_Curve2d, Standard_Real, Bnd_Box2d)", 
           "declType": "method", 
-          "name": "Add", 
-          "parent": "BndLib_Add2dCurve", 
           "arguments": [
             {
               "type": "Adaptor2d_Curve2d", 
@@ -504,15 +541,17 @@
               "ref": true
             }
           ], 
-          "key": "BndLib_Add2dCurve::Add(Adaptor2d_Curve2d, Standard_Real, Bnd_Box2d)", 
-          "returnType": "void", 
+          "parent": "BndLib_Add2dCurve", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
           "static": "1", 
           "throws": true
         }, 
         {
+          "key": "BndLib_Add2dCurve::Add(Adaptor2d_Curve2d, Standard_Real, Standard_Real, Standard_Real, Bnd_Box2d)", 
           "declType": "method", 
-          "name": "Add", 
-          "parent": "BndLib_Add2dCurve", 
           "arguments": [
             {
               "type": "Adaptor2d_Curve2d", 
@@ -541,15 +580,17 @@
               "ref": true
             }
           ], 
-          "key": "BndLib_Add2dCurve::Add(Adaptor2d_Curve2d, Standard_Real, Standard_Real, Standard_Real, Bnd_Box2d)", 
-          "returnType": "void", 
+          "parent": "BndLib_Add2dCurve", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
           "static": "1", 
           "throws": true
         }, 
         {
+          "key": "BndLib_Add2dCurve::Add(opencascade::handle<Geom2d_Curve>, Standard_Real, Bnd_Box2d)", 
           "declType": "method", 
-          "name": "Add", 
-          "parent": "BndLib_Add2dCurve", 
           "arguments": [
             {
               "type": "opencascade::handle<Geom2d_Curve>", 
@@ -568,52 +609,17 @@
               "ref": true
             }
           ], 
-          "key": "BndLib_Add2dCurve::Add(opencascade::handle<Geom2d_Curve>, Standard_Real, Bnd_Box2d)", 
-          "returnType": "void", 
-          "static": "1", 
-          "throws": true
-        }, 
-        {
-          "declType": "method", 
+          "parent": "BndLib_Add2dCurve", 
           "name": "Add", 
-          "parent": "BndLib_Add2dCurve", 
-          "arguments": [
-            {
-              "type": "opencascade::handle<Geom2d_Curve>", 
-              "name": "C", 
-              "const": true, 
-              "ref": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "U1", 
-              "const": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "U2", 
-              "const": true
-            }, 
-            {
-              "type": "Standard_Real", 
-              "name": "Tol", 
-              "const": true
-            }, 
-            {
-              "type": "Bnd_Box2d", 
-              "name": "B", 
-              "ref": true
-            }
-          ], 
-          "key": "BndLib_Add2dCurve::Add(opencascade::handle<Geom2d_Curve>, Standard_Real, Standard_Real, Standard_Real, Bnd_Box2d)", 
-          "returnType": "void", 
+          "return": {
+            "type": "void"
+          }, 
           "static": "1", 
           "throws": true
         }, 
         {
+          "key": "BndLib_Add2dCurve::Add(opencascade::handle<Geom2d_Curve>, Standard_Real, Standard_Real, Standard_Real, Bnd_Box2d)", 
           "declType": "method", 
-          "name": "AddOptimal", 
-          "parent": "BndLib_Add2dCurve", 
           "arguments": [
             {
               "type": "opencascade::handle<Geom2d_Curve>", 
@@ -642,8 +648,50 @@
               "ref": true
             }
           ], 
+          "parent": "BndLib_Add2dCurve", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
           "key": "BndLib_Add2dCurve::AddOptimal(opencascade::handle<Geom2d_Curve>, Standard_Real, Standard_Real, Standard_Real, Bnd_Box2d)", 
-          "returnType": "void", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Bnd_Box2d", 
+              "name": "B", 
+              "ref": true
+            }
+          ], 
+          "parent": "BndLib_Add2dCurve", 
+          "name": "AddOptimal", 
+          "return": {
+            "type": "void"
+          }, 
           "static": "1", 
           "throws": true
         }

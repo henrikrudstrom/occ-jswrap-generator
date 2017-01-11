@@ -251,6 +251,24 @@ describe('Wrapper definition', () => {
     expect(modGeom.getDependencies().map(dep => dep.name)).to.not.include('Geom');
   });
 
+  it('can wrap properties with wrapped values', () => {
+    var conf = configurator.configure((mod) => {
+      mod.name = 'test';
+      mod.wrapClass('gp_Pnt', 'Pnt');
+      mod.wrapClass('gp_Dir', 'Dir');
+      mod.wrapClass('gp_Ax1', 'Ax1', (cls) => {
+        cls.wrapConstructor('*')
+          .wrapProperty('Direction', 'SetDirection', 'direction')
+          .wrapProperty('Location', 'SetLocation', 'location');
+      });
+    });
+    var mod = configurator.createModel(conf).getMember('test');
+    var ax1 = mod.getMember('Ax1');
+    console.log(ax1.getMember('direction').overloads);
+    expect(ax1.getMember('direction').canBeWrapped()).to.equal(true);
+    expect(ax1.getMember('direction').overloads.every(overload => overload.canBeWrapped())).to.equal(true);
+  })
+
   it('can get inherited wrapped members', () => {
     var conf = configurator.configure((mod) => {
       mod.name = 'test';
