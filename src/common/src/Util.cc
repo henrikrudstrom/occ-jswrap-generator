@@ -2,14 +2,13 @@
 
 template<>
 bool Util::ConvertWrappedValue<double>(v8::Handle<v8::Value> value, double & result){
+        Nan::HandleScope scope;
         if(!value->IsNumber()) {
-                Nan::ThrowError("Argument is not a double.");
                 return false;
         }
 
         auto maybe = Nan::To<double>(value);
         if(!maybe.IsJust()){
-                Nan::ThrowError("Argument double is not Just.");
                 return false;
         }
         result = maybe.FromJust();
@@ -18,14 +17,13 @@ bool Util::ConvertWrappedValue<double>(v8::Handle<v8::Value> value, double & res
 
 template<>
 bool Util::ConvertWrappedValue<int>(v8::Handle<v8::Value> value, int & result){
+        Nan::HandleScope scope;
         if(!value->IsNumber()) {
-                Nan::ThrowError("Argument is not a double.");
                 return false;
         }
-
+        
         auto maybe = Nan::To<int32_t>(value);
         if(!maybe.IsJust()){
-                Nan::ThrowError("Argument double is not Just.");
                 return false;
         }
         result = maybe.FromJust();

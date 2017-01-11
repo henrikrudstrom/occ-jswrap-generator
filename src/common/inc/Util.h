@@ -15,7 +15,8 @@ T* CheckedUnWrap(v8::Handle<v8::Value> value){
         if(!value->IsObject()) {
                 return NULL;
         }
-
+        
+        Nan::HandleScope scope;
         auto maybeHandle = Nan::To<v8::Object>(value);
         if(maybeHandle.IsEmpty()) {
                 return NULL;

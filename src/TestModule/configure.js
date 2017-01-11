@@ -9,27 +9,48 @@ module.exports = function (mod) {
       .wrapProperty('Z', 'SetZ', 'z')
       .exclude('coord')
       .exclude('Xyz')
-      .exclude('changeCoord')
+      .exclude('*Coord')
       .wrapConstructor('*');
   });
   mod.wrapClass('gp_Dir', 'Dir', (cls) => {
-    cls.wrapConstructor('*')
+    cls
+      .wrapMethod('*', camelCase)
+      .wrapConstructor('*')
+      .exclude('coord')
+      .exclude('Xyz')
+      .exclude('*Coord')
       .wrapProperty('X', 'SetX', 'x')
       .wrapProperty('Y', 'SetY', 'y')
       .wrapProperty('Z', 'SetZ', 'z');
   });
   mod.wrapClass('gp_Vec', 'Vec', (cls) => {
-    cls.wrapConstructor('*')
+    cls
+      .wrapConstructor('*')
+      .wrapMethod('*', camelCase)
+      .exclude('coord')
+      .exclude('Xyz')
+      .exclude('*Coord')
       .wrapProperty('X', 'SetX', 'x')
       .wrapProperty('Y', 'SetY', 'y')
       .wrapProperty('Z', 'SetZ', 'z');
   });
 
   mod.wrapClass('gp_Ax1', 'Ax1', (cls) => {
-    cls.wrapConstructor('*')
+    cls
+      .wrapMethod('*', camelCase)
+      .wrapConstructor('*')
       .wrapProperty('Direction', 'SetDirection', 'direction')
       .wrapProperty('Location', 'SetLocation', 'location');
   });
+  mod.wrapClass('gp_Ax2', 'Ax2', (cls) => {
+  cls
+    .wrapMethod('*', camelCase)
+    .wrapConstructor('*')
+    .wrapProperty('Direction', 'SetDirection', 'direction')
+    .wrapProperty('Location', 'SetLocation', 'location');
+});
+
+  
   mod.wrapClass('Geom_Geometry', 'Geometry', (cls) => {
     cls.wrapMethod('Mirrored', 'mirrored');
   });
