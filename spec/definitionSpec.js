@@ -298,4 +298,36 @@ describe('Wrapper definition', () => {
     expect(line.getInheritedMembers().map(mem => mem.name)).to.include('reverse');
     expect(line.getInheritedMembers().map(mem => mem.name)).to.not.include('firstParameter');
   });
+
+  it('can can find all permutations of concrete arguments for abstract arguments', () => {
+    var conf = configurator.configure((mod) => {
+      mod.name = 'test';
+      mod.wrapClass('Geom_Geometry', 'Geometry');
+      mod.wrapClass('Geom_Curve', 'Curve');
+      mod.wrapClass('Geom_OffsetCurve', 'OffsetCurve', (cls) => {
+        cls.wrapMethod('SetBasisCurve', 'setBasisCurve');
+      });
+      mod.wrapClass('Geom_Line', 'Line');
+      mod.wrapClass('Geom_BoundedCurve', 'BoundedCurve');
+      mod.wrapClass('Geom_BezierCurve', 'BezierCurve');
+      mod.wrapClass('Geom_Point', 'Point', (cls) => {
+        cls.wrapMethod('Distance', 'distance');
+      });
+      mod.wrapClass('Geom_CartesianPoint', 'CartesianPoint');
+    });
+    var mod = configurator.createModel(conf).getMember('test');
+    var distanceFunc = mod.getMember('Point').getMember('distance').overloads[0];
+    var distAlts = distanceFunc.getAbstractArgumentAlternatives();
+
+    expect(distAlts.length).to.equal(1);
+    expect(distAlts[0].map(arg => arg.type)).to.include('Geom_CartesianPoint');
+
+    var setBasisFunc = mod.getMember('OffsetCurve').getMember('setBasisCurve').overloads[0];
+    var basisAlts = setBasisFunc.getAbstractArgumentAlternatives();
+    var firstArgs = basisAlts.map(alt => alt[0].type);
+    expect(basisAlts.length).to.equal(3);
+    expect(firstArgs).to.include('Geom_Line');
+    expect(firstArgs).to.include('Geom_BezierCurve');
+    expect(firstArgs).to.include('Geom_OffsetCurve');
+  });
 });

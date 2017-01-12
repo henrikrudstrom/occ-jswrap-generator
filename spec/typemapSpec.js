@@ -46,7 +46,7 @@ describe('typemap', () => {
     var typemap = wrapper.typemap;
     expect(typemap.getWrappedType('opencascade::handle<Geom_Point>').name).to.equal('Point');
   });
-  
+
   it('can find inherited classes', () => {
     var conf = configurator.configure((mod) => {
       mod.name = 'moduleA';
@@ -56,8 +56,9 @@ describe('typemap', () => {
     });
     var wrapper = configurator.createModel(conf);
     var typemap = wrapper.typemap;
-    
+
     expect(typemap.getInheritedTypes('Geom_Point')).to.include('Geom_CartesianPoint');
+    expect(typemap.getInheritedTypes('opencascade::handle<Geom_Point>')).to.include('Geom_CartesianPoint');
     expect(typemap.getInheritedTypes('Geom_Geometry')).to.include('Geom_Point');
     expect(typemap.getInheritedTypes('Geom_Geometry')).to.include('Geom_CartesianPoint');
     expect(typemap.getInheritedTypes('Geom_Geometry').length).to.equal(2);
