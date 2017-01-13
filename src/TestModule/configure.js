@@ -52,7 +52,7 @@ module.exports = function (mod) {
 
   
   mod.wrapClass('Geom_Geometry', 'Geometry', (cls) => {
-    cls.wrapMethod('Mirrored', 'mirrored');
+    cls.wrapMethod('Mirrored', 'mirrored', (method) => method.downcast('this'));
   });
   mod.wrapClass('Geom_Point', 'Point', (cls) => {
     cls.wrapMethod('Distance', 'distance');
