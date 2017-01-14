@@ -43,14 +43,14 @@ module.exports = function (mod) {
       .wrapProperty('Location', 'SetLocation', 'location');
   });
   mod.wrapClass('gp_Ax2', 'Ax2', (cls) => {
-  cls
-    .wrapMethod('*', camelCase)
-    .wrapConstructor('*')
-    .wrapProperty('Direction', 'SetDirection', 'direction')
-    .wrapProperty('Location', 'SetLocation', 'location');
-});
+    cls
+      .wrapMethod('*', camelCase)
+      .wrapConstructor('*')
+      .wrapProperty('Direction', 'SetDirection', 'direction')
+      .wrapProperty('Location', 'SetLocation', 'location');
+  });
 
-  
+
   mod.wrapClass('Geom_Geometry', 'Geometry', (cls) => {
     cls.wrapMethod('Mirrored', 'mirrored', (method) => method.downcast('this'));
   });
@@ -71,4 +71,7 @@ module.exports = function (mod) {
     cls.wrapProperty('Position', 'SetPosition', 'position');
     cls.wrapConstructor('*');
   });
+
+  mod.wrapCollection('TColgp_Array1OfPnt', 'Array1OfPnt', 'Array1', 'gp_Pnt');
+  mod.wrapCollection('TColStd_Array1OfReal', 'Array1OfReal', 'Array1', 'Standard_Real');
 };

@@ -330,4 +330,28 @@ describe('Wrapper definition', () => {
     expect(firstArgs).to.include('Geom_BezierCurve');
     expect(firstArgs).to.include('Geom_OffsetCurve');
   });
+
+
+  it('can can define collection classes', () => {
+    var conf = configurator.configure((mod) => {
+      mod.name = 'test';
+      mod.wrapClass('gp_Pnt', 'Pnt');
+      mod.wrapClass('Geom_BezierCurve', 'BezierCurve', (cls) => {
+        cls.wrapConstructor('*');
+        cls.wrapMethod('Poles', 'poles');
+        cls.wrapMethod('Weights', 'weights');
+      });
+      mod.wrapCollection('TColgp_Array1OfPnt', 'Array1OfPnt', 'Array1', 'Pnt');
+      mod.wrapCollection('TColStd_Array1OfReal', 'Array1OfReal', 'Array1', 'double');
+    });
+    var mod = configurator.createModel(conf).getMember('test');
+    expect(mod.getMember('Array1OfPnt')).not.to.equal(undefined);
+    expect(mod.getMember('Array1OfReal')).not.to.equal(undefined);
+    var bezier = mod.getMember('BezierCurve');
+
+    expect(bezier.getMember('poles').canBeWrapped()).to.equal(true);
+    expect(bezier.getMember('weights').canBeWrapped()).to.equal(true);
+    expect(bezier.getConstructor()
+      .overloads.every(overload => overload.canBeWrapped())).to.equal(true);
+  });
 });

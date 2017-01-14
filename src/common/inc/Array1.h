@@ -19,6 +19,7 @@ class Array1 : public Nan::ObjectWrap {
     NCollection_Array1<WrappedT> array;
 
    private:
+    static NAN_METHOD(__cptr__);
     static void New(const Nan::FunctionCallbackInfo<v8::Value>& info);
     v8::Local<v8::Value> get(uint32_t index);
     static void GetIndex(uint32_t index, const Nan::PropertyCallbackInfo<v8::Value>& info);
@@ -27,6 +28,13 @@ class Array1 : public Nan::ObjectWrap {
     static NAN_GETTER(length);
     static NAN_METHOD(toArray);
 };
+
+template <class T>
+NAN_METHOD(Array1<T>::__cptr__) {
+  auto wrapped = Nan::ObjectWrap::Unwrap<Array1<T>>(info.Holder());
+  int addr = reinterpret_cast<std::uintptr_t>(&wrapped->array);
+  info.GetReturnValue().Set(Nan::New<v8::Int32>(addr));
+}
 
 template <class T>
 void Array1<T>::New(const Nan::FunctionCallbackInfo<v8::Value>& info) {
@@ -141,7 +149,7 @@ NAN_MODULE_INIT(Array1<T>::Init) {
     auto ctorInst = ctor->InstanceTemplate();  // target for member functions
     ctor->SetClassName(cname);                 // as `ctor.name` in JS
     ctorInst->SetInternalFieldCount(1);        // for ObjectWrap, it should set 1
-
+    Nan::SetPrototypeMethod(ctor, "__cptr__", __cptr__);
     Nan::SetIndexedPropertyHandler(ctorInst, GetIndex, SetIndex);
     Nan::SetAccessor(ctorInst, Nan::New("length").ToLocalChecked(), length);
 
