@@ -203,12 +203,8 @@ describe('Wrapper configuration', () => {
       var curve = mod.getMember('Curve');
       var methodD0 = curve.getMember('d0').overloads[0];
       var methodD1 = curve.getMember('d1').overloads[0];
-      expect(methodD0.arguments[0].declType).to.equal('argument');
-      expect(methodD0.arguments[1].declType).to.equal('outArgument');
+      expect(!methodD0.arguments[0].out).to.equal(true);
       expect(methodD0.arguments[1].out).to.equal(true);
-      expect(methodD1.arguments[0].declType).to.equal('argument');
-      expect(methodD1.arguments[1].declType).to.equal('outArgument');
-      expect(methodD1.arguments[2].declType).to.equal('outArgument');
       expect(methodD1.arguments[1].out).to.equal(true);
       expect(methodD1.arguments[2].out).to.equal(true);
       expect(methodD1.arguments[1].name).to.equal('customNameForP');

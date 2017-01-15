@@ -70,6 +70,7 @@ module.exports = function (mod) {
   mod.wrapClass('Geom_Line', 'Line', (cls) => {
     cls.wrapProperty('Position', 'SetPosition', 'position');
     cls.wrapConstructor('*');
+    cls.wrapBuilder('GC_MakeLine', 'makeLine', { name: 'value', method: 'Value' });
   });
 
   mod.wrapCollection('TColgp_Array1OfPnt', 'Array1OfPnt', 'Array1', 'gp_Pnt');

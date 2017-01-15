@@ -355,4 +355,22 @@ describe('Wrapper definition', () => {
     expect(bezier.getConstructor()
       .overloads.every(overload => overload.canBeWrapped())).to.equal(true);
   });
+
+  it('can define builder methods', () => {
+    var conf = configurator.configure((mod) => {
+      mod.name = 'test';
+      mod.wrapClass('gp_Pnt', 'Pnt');
+      mod.wrapClass('gp_Dir', 'Dir');
+      mod.wrapClass('gp_Ax1', 'Ax1');
+      mod.wrapClass('Geom_Line', 'Line', (cls) => {
+        cls.wrapBuilder('GC_MakeLine', 'line', { name: 'value', method: 'Value' });
+      });
+    });
+    var mod = configurator.createModel(conf).getMember('test');
+    var lineCls = mod.getMember('Line');
+    var line = lineCls.getMember('line');
+    expect(line.overloads.length).to.equal(5);
+    expect(line.resultGetters.length).to.equal(1);
+    expect(line.canBeWrapped()).to.equal(true);
+  });
 });
