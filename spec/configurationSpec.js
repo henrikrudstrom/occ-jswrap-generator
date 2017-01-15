@@ -163,11 +163,11 @@ describe('Wrapper configuration', () => {
 
       var point = mod.getMember('Point');
       var pnt = mod.getMember('Pnt');
-      var pointCtor = point.getMember('Point');
+      var pointCtor = point.getMember('New');
       expect(pointCtor.declType).to.equal('constructor');
       expect(pointCtor.overloads.length).to.equal(1);
       expect(pointCtor.overloads[0].declType).to.equal('constructorOverload');
-      var pntCtor = pnt.getMember('Pnt');
+      var pntCtor = pnt.getMember('New');
       expect(pntCtor.declType).to.equal('constructor');
       expect(pntCtor.overloads.length).to.equal(3);
     });
@@ -180,7 +180,7 @@ describe('Wrapper configuration', () => {
       });
 
       var pnt = mod.getMember('Pnt');
-      var pntCtor = pnt.getMember('Pnt');
+      var pntCtor = pnt.getMember('New');
       expect(pntCtor.declType).to.equal('constructor');
       expect(pntCtor.overloads.length).to.equal(3);
     });

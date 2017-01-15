@@ -150,6 +150,7 @@ describe('Wrapper definition', () => {
     var def = configurator.createModel(conf).getMember('test');
     var ctor = def.getMember('Pnt').getConstructor();
     expect(ctor).to.not.equal(undefined);
+    expect(ctor.name).to.equal('New');
     expect(ctor.overloads.length).to.equal(0);
     expect(ctor.canBeWrapped()).to.equal(true);
   });
@@ -182,7 +183,7 @@ describe('Wrapper definition', () => {
     });
     var def = configurator.createModel(conf).getMember('test');
     var pnt = def.getMember('Pnt');
-    expect(pnt.getMember('Pnt').overloads[0].declType).to.equal('constructorOverload');
+    expect(pnt.getMember('New').overloads[0].declType).to.equal('constructorOverload');
   });
   it('should sort classes by inheritance', () => {
     var conf = configurator.configure((mod) => {

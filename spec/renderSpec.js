@@ -53,7 +53,7 @@ describe('Renderer', () => {
     var wrapper = jsWrapperRenderer.create(model);
     var mod = wrapper.getMember('test');
     var cls = mod.getMember('Pnt');
-    var ctor = cls.getMember('Pnt');
+    var ctor = cls.getMember('New');
     var getter = cls.getMember('x');
     var method = cls.getMember('distance');
     var setter = cls.getMember('setX');
@@ -84,7 +84,7 @@ describe('Renderer', () => {
     var wrapper = jsWrapperRenderer.create(model);
     var mod = wrapper.getMember('test');
     var cls = mod.getMember('Point');
-    var ctor = cls.getMember('Point');
+    var ctor = cls.getMember('New');
     var getter = cls.getMember('x');
     var method = cls.getMember('distance');
 
