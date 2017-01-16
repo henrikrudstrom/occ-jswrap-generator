@@ -373,4 +373,18 @@ describe('Wrapper definition', () => {
     expect(line.resultGetters.length).to.equal(1);
     expect(line.canBeWrapped()).to.equal(true);
   });
+
+  it('can define enums', () => {
+    var conf = configurator.configure((mod) => {
+      mod.name = 'test';
+      mod.wrapClass('TopoDS_Shape', 'Shape', (cls) => {
+        cls.wrapMethod('Orientation', 'orientation');
+      });
+      mod.wrapEnum('TopAbs_Orientation', 'Orientation');
+    });
+    var mod = configurator.createModel(conf).getMember('test');
+    var enumObj = mod.getMember('Orientation');
+    expect(enumObj.values.map(val => val.name)).to.include('FORWARD');
+    expect(mod.getMember('Shape').getMember('orientation').canBeWrapped()).to.equal(true);
+  });
 });

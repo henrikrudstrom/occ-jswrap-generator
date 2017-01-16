@@ -75,4 +75,11 @@ module.exports = function (mod) {
 
   mod.wrapCollection('TColgp_Array1OfPnt', 'Array1OfPnt', 'Array1', 'gp_Pnt');
   mod.wrapCollection('TColStd_Array1OfReal', 'Array1OfReal', 'Array1', 'Standard_Real');
+
+  mod.wrapEnum('TopAbs_Orientation', 'Orientation');
+
+  mod.wrapClass('TopoDS_Shape', 'Shape', (cls) => {
+    cls.wrapMethod('Orientation', 'orientation');
+    cls.wrapConstructor('*');
+  });
 };
