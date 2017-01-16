@@ -1,0 +1,2734 @@
+{
+  "headers": [
+    "IntCurve_PConicTool.hxx", 
+    "IntCurve_PConic.hxx", 
+    "IntCurve_IntConicConic_Tool.hxx", 
+    "IntCurve_IntConicConic.hxx", 
+    "IntCurve_IntImpConicParConic.hxx", 
+    "IntCurve_MyImpParToolOfIntImpConicParConic.hxx", 
+    "IntCurve_IConicTool.hxx", 
+    "IntCurve_ProjectOnPConicTool.hxx", 
+    "IntCurve_IntConicConic_1.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "IntCurve_PConic", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurve_PConic::IntCurve_PConic(IntCurve_PConic)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurve_PConic", 
+              "name": "PC", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_PConic", 
+          "name": "IntCurve_PConic", 
+          "return": {
+            "type": "IntCurve_PConic", 
+            "ptr": true
+          }, 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurve_PConic::IntCurve_PConic(gp_Elips2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_PConic", 
+          "name": "IntCurve_PConic", 
+          "return": {
+            "type": "IntCurve_PConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConic::IntCurve_PConic(gp_Circ2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_PConic", 
+          "name": "IntCurve_PConic", 
+          "return": {
+            "type": "IntCurve_PConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConic::IntCurve_PConic(gp_Parab2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Parab2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_PConic", 
+          "name": "IntCurve_PConic", 
+          "return": {
+            "type": "IntCurve_PConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConic::IntCurve_PConic(gp_Hypr2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_PConic", 
+          "name": "IntCurve_PConic", 
+          "return": {
+            "type": "IntCurve_PConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConic::IntCurve_PConic(gp_Lin2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_PConic", 
+          "name": "IntCurve_PConic", 
+          "return": {
+            "type": "IntCurve_PConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConic::SetEpsX(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "EpsDist", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_PConic", 
+          "name": "SetEpsX", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConic::SetAccuracy(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Nb", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_PConic", 
+          "name": "SetAccuracy", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConic::Accuracy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurve_PConic", 
+          "name": "Accuracy", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConic::EpsX()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurve_PConic", 
+          "name": "EpsX", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConic::TypeCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurve_PConic", 
+          "name": "TypeCurve", 
+          "return": {
+            "type": "GeomAbs_CurveType"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConic::Axis2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurve_PConic", 
+          "name": "Axis2", 
+          "return": {
+            "type": "gp_Ax22d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConic::Param1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurve_PConic", 
+          "name": "Param1", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConic::Param2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurve_PConic", 
+          "name": "Param2", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurve_PConic.hxx", 
+        39
+      ], 
+      "key": "IntCurve_PConic"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurve_PConicTool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurve_PConicTool::IntCurve_PConicTool()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntCurve_PConicTool", 
+          "name": "IntCurve_PConicTool", 
+          "return": {
+            "type": "IntCurve_PConicTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConicTool::IntCurve_PConicTool(IntCurve_PConicTool)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurve_PConicTool", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_PConicTool", 
+          "name": "IntCurve_PConicTool", 
+          "return": {
+            "type": "IntCurve_PConicTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurve_PConicTool::EpsX(IntCurve_PConic)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurve_PConic", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_PConicTool", 
+          "name": "EpsX", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConicTool::NbSamples(IntCurve_PConic)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurve_PConic", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_PConicTool", 
+          "name": "NbSamples", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConicTool::NbSamples(IntCurve_PConic, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurve_PConic", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_PConicTool", 
+          "name": "NbSamples", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConicTool::Value(IntCurve_PConic, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurve_PConic", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_PConicTool", 
+          "name": "Value", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConicTool::D1(IntCurve_PConic, Standard_Real, gp_Pnt2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurve_PConic", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "T", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_PConicTool", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_PConicTool::D2(IntCurve_PConic, Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurve_PConic", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "N", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_PConicTool", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurve_PConicTool.hxx", 
+        33
+      ], 
+      "key": "IntCurve_PConicTool"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurve_IConicTool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurve_IConicTool::IntCurve_IConicTool()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntCurve_IConicTool", 
+          "name": "IntCurve_IConicTool", 
+          "return": {
+            "type": "IntCurve_IConicTool", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IConicTool::IntCurve_IConicTool(IntCurve_IConicTool)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurve_IConicTool", 
+              "name": "IT", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_IConicTool", 
+          "name": "IntCurve_IConicTool", 
+          "return": {
+            "type": "IntCurve_IConicTool", 
+            "ptr": true
+          }, 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurve_IConicTool::IntCurve_IConicTool(gp_Elips2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_IConicTool", 
+          "name": "IntCurve_IConicTool", 
+          "return": {
+            "type": "IntCurve_IConicTool", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IConicTool::IntCurve_IConicTool(gp_Lin2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_IConicTool", 
+          "name": "IntCurve_IConicTool", 
+          "return": {
+            "type": "IntCurve_IConicTool", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IConicTool::IntCurve_IConicTool(gp_Circ2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_IConicTool", 
+          "name": "IntCurve_IConicTool", 
+          "return": {
+            "type": "IntCurve_IConicTool", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IConicTool::IntCurve_IConicTool(gp_Parab2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Parab2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_IConicTool", 
+          "name": "IntCurve_IConicTool", 
+          "return": {
+            "type": "IntCurve_IConicTool", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IConicTool::IntCurve_IConicTool(gp_Hypr2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_IConicTool", 
+          "name": "IntCurve_IConicTool", 
+          "return": {
+            "type": "IntCurve_IConicTool", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IConicTool::Value(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IConicTool", 
+          "name": "Value", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IConicTool::D1(Standard_Real, gp_Pnt2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "T", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_IConicTool", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IConicTool::D2(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "N", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_IConicTool", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IConicTool::Distance(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_IConicTool", 
+          "name": "Distance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IConicTool::GradDistance(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_IConicTool", 
+          "name": "GradDistance", 
+          "return": {
+            "type": "gp_Vec2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IConicTool::FindParameter(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_IConicTool", 
+          "name": "FindParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurve_IConicTool.hxx", 
+        39
+      ], 
+      "key": "IntCurve_IConicTool"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurve_ProjectOnPConicTool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurve_ProjectOnPConicTool::IntCurve_ProjectOnPConicTool()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntCurve_ProjectOnPConicTool", 
+          "name": "IntCurve_ProjectOnPConicTool", 
+          "return": {
+            "type": "IntCurve_ProjectOnPConicTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_ProjectOnPConicTool::IntCurve_ProjectOnPConicTool(IntCurve_ProjectOnPConicTool)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurve_ProjectOnPConicTool", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_ProjectOnPConicTool", 
+          "name": "IntCurve_ProjectOnPConicTool", 
+          "return": {
+            "type": "IntCurve_ProjectOnPConicTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurve_ProjectOnPConicTool::FindParameter(IntCurve_PConic, gp_Pnt2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurve_PConic", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Pnt", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_ProjectOnPConicTool", 
+          "name": "FindParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_ProjectOnPConicTool::FindParameter(IntCurve_PConic, gp_Pnt2d, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurve_PConic", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Pnt", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "LowParameter", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "HighParameter", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_ProjectOnPConicTool", 
+          "name": "FindParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurve_ProjectOnPConicTool.hxx", 
+        31
+      ], 
+      "key": "IntCurve_ProjectOnPConicTool"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurve_MyImpParToolOfIntImpConicParConic", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurve_MyImpParToolOfIntImpConicParConic::IntCurve_MyImpParToolOfIntImpConicParConic(IntCurve_IConicTool, IntCurve_PConic)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurve_IConicTool", 
+              "name": "IT", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurve_PConic", 
+              "name": "PC", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_MyImpParToolOfIntImpConicParConic", 
+          "name": "IntCurve_MyImpParToolOfIntImpConicParConic", 
+          "return": {
+            "type": "IntCurve_MyImpParToolOfIntImpConicParConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_MyImpParToolOfIntImpConicParConic::IntCurve_MyImpParToolOfIntImpConicParConic(IntCurve_MyImpParToolOfIntImpConicParConic)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurve_MyImpParToolOfIntImpConicParConic", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_MyImpParToolOfIntImpConicParConic", 
+          "name": "IntCurve_MyImpParToolOfIntImpConicParConic", 
+          "return": {
+            "type": "IntCurve_MyImpParToolOfIntImpConicParConic", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurve_MyImpParToolOfIntImpConicParConic::Value(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_MyImpParToolOfIntImpConicParConic", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "IntCurve_MyImpParToolOfIntImpConicParConic::Derivative(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_MyImpParToolOfIntImpConicParConic", 
+          "name": "Derivative", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "IntCurve_MyImpParToolOfIntImpConicParConic::Values(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_MyImpParToolOfIntImpConicParConic", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionWithDerivative"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurve_MyImpParToolOfIntImpConicParConic.hxx", 
+        35
+      ], 
+      "key": "IntCurve_MyImpParToolOfIntImpConicParConic"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurve_IntImpConicParConic", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurve_IntImpConicParConic::IntCurve_IntImpConicParConic()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntCurve_IntImpConicParConic", 
+          "name": "IntCurve_IntImpConicParConic", 
+          "return": {
+            "type": "IntCurve_IntImpConicParConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntImpConicParConic::IntCurve_IntImpConicParConic(IntCurve_IConicTool, IntRes2d_Domain, IntCurve_PConic, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurve_IConicTool", 
+              "name": "ITool", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "Dom1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurve_PConic", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "Dom2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntImpConicParConic", 
+          "name": "IntCurve_IntImpConicParConic", 
+          "return": {
+            "type": "IntCurve_IntImpConicParConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntImpConicParConic::IntCurve_IntImpConicParConic(IntCurve_IntImpConicParConic)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurve_IntImpConicParConic", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_IntImpConicParConic", 
+          "name": "IntCurve_IntImpConicParConic", 
+          "return": {
+            "type": "IntCurve_IntImpConicParConic", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurve_IntImpConicParConic::Perform(IntCurve_IConicTool, IntRes2d_Domain, IntCurve_PConic, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurve_IConicTool", 
+              "name": "ITool", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "Dom1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurve_PConic", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "Dom2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntImpConicParConic", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntImpConicParConic::FindU(Standard_Real, gp_Pnt2d, IntCurve_PConic, IntCurve_IConicTool)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "parameter", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "point", 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurve_PConic", 
+              "name": "TheParCurev", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurve_IConicTool", 
+              "name": "TheImpTool", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_IntImpConicParConic", 
+          "name": "FindU", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntImpConicParConic::FindV(Standard_Real, gp_Pnt2d, IntCurve_IConicTool, IntCurve_PConic, IntRes2d_Domain, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "parameter", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "point", 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurve_IConicTool", 
+              "name": "TheImpTool", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurve_PConic", 
+              "name": "ParCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "TheParCurveDomain", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntImpConicParConic", 
+          "name": "FindV", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntImpConicParConic::And_Domaine_Objet1_Intersections(IntCurve_IConicTool, IntCurve_PConic, IntRes2d_Domain, IntRes2d_Domain, Standard_Integer, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurve_IConicTool", 
+              "name": "TheImpTool", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurve_PConic", 
+              "name": "TheParCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "TheImpCurveDomain", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "TheParCurveDomain", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbResultats", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Inter2_And_Domain2", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Inter1", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Resultat1", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Resultat2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsNul", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntImpConicParConic", 
+          "name": "And_Domaine_Objet1_Intersections", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "IntRes2d_Intersection"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurve_IntImpConicParConic.hxx", 
+        39
+      ], 
+      "key": "IntCurve_IntImpConicParConic"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurve_IntConicConic", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic(gp_Lin2d, IntRes2d_Domain, gp_Lin2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "L2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic(gp_Lin2d, IntRes2d_Domain, gp_Circ2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DL", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DC", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic(gp_Lin2d, IntRes2d_Domain, gp_Elips2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DL", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Elips2d", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic(gp_Lin2d, IntRes2d_Domain, gp_Parab2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DL", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Parab2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DP", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic(gp_Lin2d, IntRes2d_Domain, gp_Hypr2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DL", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DH", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic(gp_Circ2d, IntRes2d_Domain, gp_Circ2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic(gp_Circ2d, IntRes2d_Domain, gp_Elips2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DC", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Elips2d", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic(gp_Circ2d, IntRes2d_Domain, gp_Parab2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DC", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Parab2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DP", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic(gp_Circ2d, IntRes2d_Domain, gp_Hypr2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DC", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DH", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic(gp_Elips2d, IntRes2d_Domain, gp_Elips2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "E1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Elips2d", 
+              "name": "E2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic(gp_Elips2d, IntRes2d_Domain, gp_Parab2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Parab2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DP", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic(gp_Elips2d, IntRes2d_Domain, gp_Hypr2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DH", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic(gp_Parab2d, IntRes2d_Domain, gp_Parab2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Parab2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Parab2d", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic(gp_Parab2d, IntRes2d_Domain, gp_Hypr2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Parab2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DP", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DH", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic(gp_Hypr2d, IntRes2d_Domain, gp_Hypr2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::IntCurve_IntConicConic(IntCurve_IntConicConic)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurve_IntConicConic", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "IntCurve_IntConicConic", 
+          "return": {
+            "type": "IntCurve_IntConicConic", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::Perform(gp_Lin2d, IntRes2d_Domain, gp_Lin2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "L2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::Perform(gp_Lin2d, IntRes2d_Domain, gp_Circ2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DL", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DC", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::Perform(gp_Lin2d, IntRes2d_Domain, gp_Elips2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DL", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Elips2d", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::Perform(gp_Lin2d, IntRes2d_Domain, gp_Parab2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DL", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Parab2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DP", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::Perform(gp_Lin2d, IntRes2d_Domain, gp_Hypr2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DL", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DH", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::Perform(gp_Circ2d, IntRes2d_Domain, gp_Circ2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::Perform(gp_Circ2d, IntRes2d_Domain, gp_Elips2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DC", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Elips2d", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::Perform(gp_Circ2d, IntRes2d_Domain, gp_Parab2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DC", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Parab2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DP", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::Perform(gp_Circ2d, IntRes2d_Domain, gp_Hypr2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DC", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DH", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::Perform(gp_Elips2d, IntRes2d_Domain, gp_Elips2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "E1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Elips2d", 
+              "name": "E2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::Perform(gp_Elips2d, IntRes2d_Domain, gp_Parab2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Parab2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DP", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::Perform(gp_Elips2d, IntRes2d_Domain, gp_Hypr2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DH", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::Perform(gp_Parab2d, IntRes2d_Domain, gp_Parab2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Parab2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Parab2d", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::Perform(gp_Parab2d, IntRes2d_Domain, gp_Hypr2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Parab2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DP", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "DH", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurve_IntConicConic::Perform(gp_Hypr2d, IntRes2d_Domain, gp_Hypr2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurve_IntConicConic", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "IntRes2d_Intersection"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurve_IntConicConic.hxx", 
+        43
+      ], 
+      "key": "IntCurve_IntConicConic"
+    }
+  ], 
+  "name": "IntCurve"
+}

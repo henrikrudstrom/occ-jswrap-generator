@@ -1,0 +1,1890 @@
+{
+  "headers": [
+    "MAT2d_MiniPath.hxx", 
+    "MAT2d_DataMapOfIntegerBisec.hxx", 
+    "MAT2d_DataMapIteratorOfDataMapOfBiIntSequenceOfInteger.hxx", 
+    "MAT2d_Mat2d.hxx", 
+    "MAT2d_DataMapOfIntegerPnt2d.hxx", 
+    "MAT2d_DataMapIteratorOfDataMapOfIntegerPnt2d.hxx", 
+    "MAT2d_Tool2d.hxx", 
+    "MAT2d_DataMapIteratorOfDataMapOfBiIntInteger.hxx", 
+    "MAT2d_Array2OfConnexion.hxx", 
+    "MAT2d_MapBiIntHasher.hxx", 
+    "MAT2d_DataMapIteratorOfDataMapOfIntegerVec2d.hxx", 
+    "MAT2d_DataMapOfIntegerSequenceOfConnexion.hxx", 
+    "MAT2d_BiInt.hxx", 
+    "MAT2d_SequenceOfConnexion.hxx", 
+    "MAT2d_DataMapIteratorOfDataMapOfIntegerBisec.hxx", 
+    "MAT2d_SequenceOfSequenceOfCurve.hxx", 
+    "MAT2d_DataMapOfBiIntInteger.hxx", 
+    "MAT2d_Connexion.hxx", 
+    "MAT2d_DataMapOfBiIntSequenceOfInteger.hxx", 
+    "MAT2d_DataMapIteratorOfDataMapOfIntegerConnexion.hxx", 
+    "MAT2d_DataMapIteratorOfDataMapOfIntegerSequenceOfConnexion.hxx", 
+    "MAT2d_DataMapOfIntegerVec2d.hxx", 
+    "MAT2d_DataMapOfIntegerConnexion.hxx", 
+    "MAT2d_SequenceOfSequenceOfGeometry.hxx", 
+    "MAT2d_Circuit.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "MAT2d_Connexion", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT2d_Connexion::MAT2d_Connexion()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "MAT2d_Connexion", 
+          "name": "MAT2d_Connexion", 
+          "return": {
+            "type": "MAT2d_Connexion", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::MAT2d_Connexion(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Real, Standard_Real, Standard_Real, gp_Pnt2d, gp_Pnt2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "LineA", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "LineB", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ItemA", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ItemB", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Distance", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParameterOnA", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParameterOnB", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PointA", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PointB", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_Connexion", 
+          "name": "MAT2d_Connexion", 
+          "return": {
+            "type": "MAT2d_Connexion", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::MAT2d_Connexion(MAT2d_Connexion)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT2d_Connexion", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_Connexion", 
+          "name": "MAT2d_Connexion", 
+          "return": {
+            "type": "MAT2d_Connexion", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::IndexFirstLine()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Connexion", 
+          "name": "IndexFirstLine", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::IndexSecondLine()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Connexion", 
+          "name": "IndexSecondLine", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::IndexItemOnFirst()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Connexion", 
+          "name": "IndexItemOnFirst", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::IndexItemOnSecond()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Connexion", 
+          "name": "IndexItemOnSecond", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::ParameterOnFirst()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Connexion", 
+          "name": "ParameterOnFirst", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::ParameterOnSecond()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Connexion", 
+          "name": "ParameterOnSecond", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::PointOnFirst()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Connexion", 
+          "name": "PointOnFirst", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::PointOnSecond()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Connexion", 
+          "name": "PointOnSecond", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::Distance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Connexion", 
+          "name": "Distance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::IndexFirstLine(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anIndex", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Connexion", 
+          "name": "IndexFirstLine", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::IndexSecondLine(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anIndex", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Connexion", 
+          "name": "IndexSecondLine", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::IndexItemOnFirst(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anIndex", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Connexion", 
+          "name": "IndexItemOnFirst", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::IndexItemOnSecond(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anIndex", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Connexion", 
+          "name": "IndexItemOnSecond", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::ParameterOnFirst(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "aParameter", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Connexion", 
+          "name": "ParameterOnFirst", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::ParameterOnSecond(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "aParameter", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Connexion", 
+          "name": "ParameterOnSecond", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::PointOnFirst(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "aPoint", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_Connexion", 
+          "name": "PointOnFirst", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::PointOnSecond(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "aPoint", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_Connexion", 
+          "name": "PointOnSecond", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::Distance(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "aDistance", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Connexion", 
+          "name": "Distance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::Reverse()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Connexion", 
+          "name": "Reverse", 
+          "return": {
+            "type": "opencascade::handle<MAT2d_Connexion>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::IsAfter(opencascade::handle<MAT2d_Connexion>, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT2d_Connexion>", 
+              "name": "aConnexion", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "aSense", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Connexion", 
+          "name": "IsAfter", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::Dump(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Deep", 
+              "default": "0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Offset", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Connexion", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Connexion", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Connexion", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Connexion::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Connexion", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/MAT2d_Connexion.hxx", 
+        38
+      ], 
+      "key": "MAT2d_Connexion"
+    }, 
+    {
+      "declType": "class", 
+      "name": "MAT2d_MiniPath", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT2d_MiniPath::MAT2d_MiniPath()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "MAT2d_MiniPath", 
+          "name": "MAT2d_MiniPath", 
+          "return": {
+            "type": "MAT2d_MiniPath", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_MiniPath::MAT2d_MiniPath(MAT2d_MiniPath)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT2d_MiniPath", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_MiniPath", 
+          "name": "MAT2d_MiniPath", 
+          "return": {
+            "type": "MAT2d_MiniPath", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT2d_MiniPath::Perform(MAT2d_SequenceOfSequenceOfGeometry, Standard_Integer, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "MAT2d_SequenceOfSequenceOfGeometry", 
+              "name": "Figure", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IndStart", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Sense", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_MiniPath", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_MiniPath::RunOnConnexions()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_MiniPath", 
+          "name": "RunOnConnexions", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_MiniPath::Path()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_MiniPath", 
+          "name": "Path", 
+          "return": {
+            "type": "MAT2d_SequenceOfConnexion", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_MiniPath::IsConnexionsFrom(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_MiniPath", 
+          "name": "IsConnexionsFrom", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_MiniPath::ConnexionsFrom(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_MiniPath", 
+          "name": "ConnexionsFrom", 
+          "return": {
+            "type": "MAT2d_SequenceOfConnexion", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_MiniPath::IsRoot(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_MiniPath", 
+          "name": "IsRoot", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_MiniPath::Father(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_MiniPath", 
+          "name": "Father", 
+          "return": {
+            "type": "opencascade::handle<MAT2d_Connexion>"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/MAT2d_MiniPath.hxx", 
+        47
+      ], 
+      "key": "MAT2d_MiniPath"
+    }, 
+    {
+      "declType": "class", 
+      "name": "MAT2d_BiInt", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT2d_BiInt::MAT2d_BiInt(Standard_Integer, Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "I2", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_BiInt", 
+          "name": "MAT2d_BiInt", 
+          "return": {
+            "type": "MAT2d_BiInt", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_BiInt::MAT2d_BiInt(MAT2d_BiInt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT2d_BiInt", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_BiInt", 
+          "name": "MAT2d_BiInt", 
+          "return": {
+            "type": "MAT2d_BiInt", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT2d_BiInt::FirstIndex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_BiInt", 
+          "name": "FirstIndex", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_BiInt::SecondIndex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_BiInt", 
+          "name": "SecondIndex", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_BiInt::FirstIndex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I1", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_BiInt", 
+          "name": "FirstIndex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_BiInt::SecondIndex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I2", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_BiInt", 
+          "name": "SecondIndex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_BiInt::IsEqual(MAT2d_BiInt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "MAT2d_BiInt", 
+              "name": "B", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_BiInt", 
+          "name": "IsEqual", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/MAT2d_BiInt.hxx", 
+        29
+      ], 
+      "key": "MAT2d_BiInt"
+    }, 
+    {
+      "declType": "class", 
+      "name": "MAT2d_MapBiIntHasher", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT2d_MapBiIntHasher::MAT2d_MapBiIntHasher()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "MAT2d_MapBiIntHasher", 
+          "name": "MAT2d_MapBiIntHasher", 
+          "return": {
+            "type": "MAT2d_MapBiIntHasher", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_MapBiIntHasher::MAT2d_MapBiIntHasher(MAT2d_MapBiIntHasher)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT2d_MapBiIntHasher", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_MapBiIntHasher", 
+          "name": "MAT2d_MapBiIntHasher", 
+          "return": {
+            "type": "MAT2d_MapBiIntHasher", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT2d_MapBiIntHasher::HashCode(MAT2d_BiInt, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "MAT2d_BiInt", 
+              "name": "Key1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Upper", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_MapBiIntHasher", 
+          "name": "HashCode", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_MapBiIntHasher::IsEqual(MAT2d_BiInt, MAT2d_BiInt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "MAT2d_BiInt", 
+              "name": "Key1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "MAT2d_BiInt", 
+              "name": "Key2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_MapBiIntHasher", 
+          "name": "IsEqual", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/MAT2d_MapBiIntHasher.hxx", 
+        30
+      ], 
+      "key": "MAT2d_MapBiIntHasher"
+    }, 
+    {
+      "declType": "class", 
+      "name": "MAT2d_Tool2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT2d_Tool2d::MAT2d_Tool2d()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "MAT2d_Tool2d", 
+          "return": {
+            "type": "MAT2d_Tool2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::MAT2d_Tool2d(MAT2d_Tool2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT2d_Tool2d", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "MAT2d_Tool2d", 
+          "return": {
+            "type": "MAT2d_Tool2d", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::Sense(MAT_Side)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "MAT_Side", 
+              "name": "aside", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "Sense", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::SetJoinType(GeomAbs_JoinType)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GeomAbs_JoinType", 
+              "name": "aJoinType", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "SetJoinType", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::InitItems(opencascade::handle<MAT2d_Circuit>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT2d_Circuit>", 
+              "name": "aCircuit", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "InitItems", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::NumberOfItems()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "NumberOfItems", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::ToleranceOfConfusion()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "ToleranceOfConfusion", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::FirstPoint(Standard_Integer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anitem", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dist", 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "FirstPoint", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::TangentBefore(Standard_Integer, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anitem", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsOpenResult", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "TangentBefore", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::TangentAfter(Standard_Integer, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anitem", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsOpenResult", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "TangentAfter", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::Tangent(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "bisector", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "Tangent", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::CreateBisector(opencascade::handle<MAT_Bisector>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "abisector", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "CreateBisector", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::TrimBisector(opencascade::handle<MAT_Bisector>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "abisector", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "TrimBisector", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::TrimBisector(opencascade::handle<MAT_Bisector>, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "abisector", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "apoint", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "TrimBisector", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::IntersectBisector(opencascade::handle<MAT_Bisector>, opencascade::handle<MAT_Bisector>, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "bisectorone", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "bisectortwo", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "intpnt", 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "IntersectBisector", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::Distance(opencascade::handle<MAT_Bisector>, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "abisector", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "param1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "param2", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "Distance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::Dump(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "bisector", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "erease", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::GeomBis(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "GeomBis", 
+          "return": {
+            "type": "Bisector_Bisec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::GeomElt(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "GeomElt", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Geometry>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::GeomPnt(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "GeomPnt", 
+          "return": {
+            "type": "gp_Pnt2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::GeomVec(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "GeomVec", 
+          "return": {
+            "type": "gp_Vec2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::Circuit()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "Circuit", 
+          "return": {
+            "type": "opencascade::handle<MAT2d_Circuit>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::BisecFusion(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index2", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "BisecFusion", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Tool2d::ChangeGeomBis(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Tool2d", 
+          "name": "ChangeGeomBis", 
+          "return": {
+            "type": "Bisector_Bisec", 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/MAT2d_Tool2d.hxx", 
+        43
+      ], 
+      "key": "MAT2d_Tool2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "MAT2d_Mat2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT2d_Mat2d::MAT2d_Mat2d(Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsOpenResult", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Mat2d", 
+          "name": "MAT2d_Mat2d", 
+          "return": {
+            "type": "MAT2d_Mat2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Mat2d::MAT2d_Mat2d(MAT2d_Mat2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT2d_Mat2d", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_Mat2d", 
+          "name": "MAT2d_Mat2d", 
+          "return": {
+            "type": "MAT2d_Mat2d", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT2d_Mat2d::CreateMat(MAT2d_Tool2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "MAT2d_Tool2d", 
+              "name": "aTool", 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_Mat2d", 
+          "name": "CreateMat", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Mat2d::CreateMatOpen(MAT2d_Tool2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "MAT2d_Tool2d", 
+              "name": "aTool", 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_Mat2d", 
+          "name": "CreateMatOpen", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Mat2d::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Mat2d", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Mat2d::Init()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Mat2d", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Mat2d::More()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Mat2d", 
+          "name": "More", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Mat2d::Next()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Mat2d", 
+          "name": "Next", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Mat2d::Bisector()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Mat2d", 
+          "name": "Bisector", 
+          "return": {
+            "type": "opencascade::handle<MAT_Bisector>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Mat2d::SemiInfinite()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Mat2d", 
+          "name": "SemiInfinite", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Mat2d::NumberOfBisectors()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Mat2d", 
+          "name": "NumberOfBisectors", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/MAT2d_Mat2d.hxx", 
+        37
+      ], 
+      "key": "MAT2d_Mat2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "MAT2d_Circuit", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT2d_Circuit::MAT2d_Circuit(GeomAbs_JoinType, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomAbs_JoinType", 
+              "name": "aJoinType", 
+              "default": "::GeomAbs_JoinType::GeomAbs_Arc", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsOpenResult", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Circuit", 
+          "name": "MAT2d_Circuit", 
+          "return": {
+            "type": "MAT2d_Circuit", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Circuit::MAT2d_Circuit(MAT2d_Circuit)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT2d_Circuit", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT2d_Circuit", 
+          "name": "MAT2d_Circuit", 
+          "return": {
+            "type": "MAT2d_Circuit", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT2d_Circuit::Perform(MAT2d_SequenceOfSequenceOfGeometry, TColStd_SequenceOfBoolean, Standard_Integer, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "MAT2d_SequenceOfSequenceOfGeometry", 
+              "name": "aFigure", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_SequenceOfBoolean", 
+              "name": "IsClosed", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IndRefLine", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Trigo", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Circuit", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Circuit::NumberOfItems()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Circuit", 
+          "name": "NumberOfItems", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Circuit::Value(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Circuit", 
+          "name": "Value", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Geometry>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Circuit::LineLength(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexLine", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Circuit", 
+          "name": "LineLength", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Circuit::RefToEqui(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndLine", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IndCurve", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Circuit", 
+          "name": "RefToEqui", 
+          "return": {
+            "type": "TColStd_SequenceOfInteger", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Circuit::Connexion(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Circuit", 
+          "name": "Connexion", 
+          "return": {
+            "type": "opencascade::handle<MAT2d_Connexion>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Circuit::ConnexionOn(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT2d_Circuit", 
+          "name": "ConnexionOn", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Circuit::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Circuit", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Circuit::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Circuit", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT2d_Circuit::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT2d_Circuit", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/MAT2d_Circuit.hxx", 
+        47
+      ], 
+      "key": "MAT2d_Circuit"
+    }, 
+    {
+      "type": "opencascade::handle<MAT2d_Connexion>", 
+      "declType": "typedef", 
+      "name": "Handle_MAT2d_Connexion", 
+      "key": "Handle_MAT2d_Connexion"
+    }, 
+    {
+      "type": "NCollection_Sequence<opencascade::handle<MAT2d_Connexion> >", 
+      "declType": "typedef", 
+      "name": "MAT2d_SequenceOfConnexion", 
+      "key": "MAT2d_SequenceOfConnexion"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, NCollection_Sequence<opencascade::handle<MAT2d_Connexion> >, NCollection_DefaultHasher<int> >", 
+      "declType": "typedef", 
+      "name": "MAT2d_DataMapOfIntegerSequenceOfConnexion", 
+      "key": "MAT2d_DataMapOfIntegerSequenceOfConnexion"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, NCollection_Sequence<opencascade::handle<MAT2d_Connexion> >, NCollection_DefaultHasher<int> >::Iterator", 
+      "declType": "typedef", 
+      "name": "MAT2d_DataMapIteratorOfDataMapOfIntegerSequenceOfConnexion", 
+      "key": "MAT2d_DataMapIteratorOfDataMapOfIntegerSequenceOfConnexion"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, opencascade::handle<MAT2d_Connexion>, NCollection_DefaultHasher<int> >", 
+      "declType": "typedef", 
+      "name": "MAT2d_DataMapOfIntegerConnexion", 
+      "key": "MAT2d_DataMapOfIntegerConnexion"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, opencascade::handle<MAT2d_Connexion>, NCollection_DefaultHasher<int> >::Iterator", 
+      "declType": "typedef", 
+      "name": "MAT2d_DataMapIteratorOfDataMapOfIntegerConnexion", 
+      "key": "MAT2d_DataMapIteratorOfDataMapOfIntegerConnexion"
+    }, 
+    {
+      "type": "NCollection_Sequence<NCollection_Sequence<opencascade::handle<Geom2d_Geometry> > >", 
+      "declType": "typedef", 
+      "name": "MAT2d_SequenceOfSequenceOfGeometry", 
+      "key": "MAT2d_SequenceOfSequenceOfGeometry"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, Bisector_Bisec, NCollection_DefaultHasher<int> >", 
+      "declType": "typedef", 
+      "name": "MAT2d_DataMapOfIntegerBisec", 
+      "key": "MAT2d_DataMapOfIntegerBisec"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, Bisector_Bisec, NCollection_DefaultHasher<int> >::Iterator", 
+      "declType": "typedef", 
+      "name": "MAT2d_DataMapIteratorOfDataMapOfIntegerBisec", 
+      "key": "MAT2d_DataMapIteratorOfDataMapOfIntegerBisec"
+    }, 
+    {
+      "type": "NCollection_DataMap<MAT2d_BiInt, NCollection_Sequence<int>, MAT2d_MapBiIntHasher>", 
+      "declType": "typedef", 
+      "name": "MAT2d_DataMapOfBiIntSequenceOfInteger", 
+      "key": "MAT2d_DataMapOfBiIntSequenceOfInteger"
+    }, 
+    {
+      "type": "NCollection_DataMap<MAT2d_BiInt, NCollection_Sequence<int>, MAT2d_MapBiIntHasher>::Iterator", 
+      "declType": "typedef", 
+      "name": "MAT2d_DataMapIteratorOfDataMapOfBiIntSequenceOfInteger", 
+      "key": "MAT2d_DataMapIteratorOfDataMapOfBiIntSequenceOfInteger"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, gp_Pnt2d, NCollection_DefaultHasher<int> >", 
+      "declType": "typedef", 
+      "name": "MAT2d_DataMapOfIntegerPnt2d", 
+      "key": "MAT2d_DataMapOfIntegerPnt2d"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, gp_Pnt2d, NCollection_DefaultHasher<int> >::Iterator", 
+      "declType": "typedef", 
+      "name": "MAT2d_DataMapIteratorOfDataMapOfIntegerPnt2d", 
+      "key": "MAT2d_DataMapIteratorOfDataMapOfIntegerPnt2d"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, gp_Vec2d, NCollection_DefaultHasher<int> >", 
+      "declType": "typedef", 
+      "name": "MAT2d_DataMapOfIntegerVec2d", 
+      "key": "MAT2d_DataMapOfIntegerVec2d"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, gp_Vec2d, NCollection_DefaultHasher<int> >::Iterator", 
+      "declType": "typedef", 
+      "name": "MAT2d_DataMapIteratorOfDataMapOfIntegerVec2d", 
+      "key": "MAT2d_DataMapIteratorOfDataMapOfIntegerVec2d"
+    }, 
+    {
+      "type": "NCollection_DataMap<MAT2d_BiInt, int, MAT2d_MapBiIntHasher>", 
+      "declType": "typedef", 
+      "name": "MAT2d_DataMapOfBiIntInteger", 
+      "key": "MAT2d_DataMapOfBiIntInteger"
+    }, 
+    {
+      "type": "NCollection_DataMap<MAT2d_BiInt, int, MAT2d_MapBiIntHasher>::Iterator", 
+      "declType": "typedef", 
+      "name": "MAT2d_DataMapIteratorOfDataMapOfBiIntInteger", 
+      "key": "MAT2d_DataMapIteratorOfDataMapOfBiIntInteger"
+    }, 
+    {
+      "type": "NCollection_Array2<opencascade::handle<MAT2d_Connexion> >", 
+      "declType": "typedef", 
+      "name": "MAT2d_Array2OfConnexion", 
+      "key": "MAT2d_Array2OfConnexion"
+    }, 
+    {
+      "type": "NCollection_Sequence<NCollection_Sequence<opencascade::handle<Geom2d_Curve> > >", 
+      "declType": "typedef", 
+      "name": "MAT2d_SequenceOfSequenceOfCurve", 
+      "key": "MAT2d_SequenceOfSequenceOfCurve"
+    }, 
+    {
+      "type": "opencascade::handle<MAT2d_Circuit>", 
+      "declType": "typedef", 
+      "name": "Handle_MAT2d_Circuit", 
+      "key": "Handle_MAT2d_Circuit"
+    }
+  ], 
+  "name": "MAT2d"
+}

@@ -1,0 +1,3589 @@
+{
+  "headers": [
+    "MAT_Graph.hxx", 
+    "MAT_ListOfBisector.hxx", 
+    "MAT_SequenceOfArc.hxx", 
+    "MAT_DataMapOfIntegerNode.hxx", 
+    "MAT_Bisector.hxx", 
+    "MAT_TListNodeOfListOfBisector.hxx", 
+    "MAT_Side.hxx", 
+    "MAT_DataMapIteratorOfDataMapOfIntegerNode.hxx", 
+    "MAT_BasicElt.hxx", 
+    "MAT_ListOfEdge.hxx", 
+    "MAT_TListNodeOfListOfEdge.hxx", 
+    "MAT_DataMapIteratorOfDataMapOfIntegerArc.hxx", 
+    "MAT_DataMapIteratorOfDataMapOfIntegerBisector.hxx", 
+    "MAT_DataMapIteratorOfDataMapOfIntegerBasicElt.hxx", 
+    "MAT_DataMapOfIntegerBasicElt.hxx", 
+    "MAT_Node.hxx", 
+    "MAT_Arc.hxx", 
+    "MAT_DataMapOfIntegerBisector.hxx", 
+    "MAT_Zone.hxx", 
+    "MAT_SequenceOfBasicElt.hxx", 
+    "MAT_DataMapOfIntegerArc.hxx", 
+    "MAT_Edge.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "MAT_BasicElt", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT_BasicElt::MAT_BasicElt(Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anInteger", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_BasicElt", 
+          "name": "MAT_BasicElt", 
+          "return": {
+            "type": "MAT_BasicElt", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_BasicElt::MAT_BasicElt(MAT_BasicElt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT_BasicElt", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_BasicElt", 
+          "name": "MAT_BasicElt", 
+          "return": {
+            "type": "MAT_BasicElt", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT_BasicElt::StartArc()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_BasicElt", 
+          "name": "StartArc", 
+          "return": {
+            "type": "opencascade::handle<MAT_Arc>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_BasicElt::EndArc()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_BasicElt", 
+          "name": "EndArc", 
+          "return": {
+            "type": "opencascade::handle<MAT_Arc>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_BasicElt::Index()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_BasicElt", 
+          "name": "Index", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_BasicElt::GeomIndex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_BasicElt", 
+          "name": "GeomIndex", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_BasicElt::SetStartArc(opencascade::handle<MAT_Arc>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Arc>", 
+              "name": "anArc", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_BasicElt", 
+          "name": "SetStartArc", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_BasicElt::SetEndArc(opencascade::handle<MAT_Arc>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Arc>", 
+              "name": "anArc", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_BasicElt", 
+          "name": "SetEndArc", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_BasicElt::SetIndex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anInteger", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_BasicElt", 
+          "name": "SetIndex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_BasicElt::SetGeomIndex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anInteger", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_BasicElt", 
+          "name": "SetGeomIndex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_BasicElt::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_BasicElt", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_BasicElt::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_BasicElt", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_BasicElt::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_BasicElt", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/MAT_BasicElt.hxx", 
+        34
+      ], 
+      "key": "MAT_BasicElt"
+    }, 
+    {
+      "declType": "class", 
+      "name": "MAT_Node", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT_Node::MAT_Node(Standard_Integer, opencascade::handle<MAT_Arc>, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "GeomIndex", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<MAT_Arc>", 
+              "name": "LinkedArc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Distance", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Node", 
+          "name": "MAT_Node", 
+          "return": {
+            "type": "MAT_Node", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Node::MAT_Node(MAT_Node)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT_Node", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Node", 
+          "name": "MAT_Node", 
+          "return": {
+            "type": "MAT_Node", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT_Node::GeomIndex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Node", 
+          "name": "GeomIndex", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Node::Index()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Node", 
+          "name": "Index", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Node::LinkedArcs(MAT_SequenceOfArc)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "MAT_SequenceOfArc", 
+              "name": "S", 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Node", 
+          "name": "LinkedArcs", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Node::NearElts(MAT_SequenceOfBasicElt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "MAT_SequenceOfBasicElt", 
+              "name": "S", 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Node", 
+          "name": "NearElts", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Node::Distance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Node", 
+          "name": "Distance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Node::PendingNode()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Node", 
+          "name": "PendingNode", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Node::OnBasicElt()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Node", 
+          "name": "OnBasicElt", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Node::Infinite()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Node", 
+          "name": "Infinite", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Node::SetIndex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anIndex", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Node", 
+          "name": "SetIndex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Node::SetLinkedArc(opencascade::handle<MAT_Arc>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Arc>", 
+              "name": "anArc", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Node", 
+          "name": "SetLinkedArc", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Node::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Node", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Node::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Node", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Node::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Node", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/MAT_Node.hxx", 
+        37
+      ], 
+      "key": "MAT_Node"
+    }, 
+    {
+      "declType": "class", 
+      "name": "MAT_Arc", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT_Arc::MAT_Arc(Standard_Integer, Standard_Integer, opencascade::handle<MAT_BasicElt>, opencascade::handle<MAT_BasicElt>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "ArcIndex", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "GeomIndex", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<MAT_BasicElt>", 
+              "name": "FirstElement", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<MAT_BasicElt>", 
+              "name": "SecondElement", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Arc", 
+          "name": "MAT_Arc", 
+          "return": {
+            "type": "MAT_Arc", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::MAT_Arc(MAT_Arc)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT_Arc", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Arc", 
+          "name": "MAT_Arc", 
+          "return": {
+            "type": "MAT_Arc", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT_Arc::Index()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Arc", 
+          "name": "Index", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::GeomIndex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Arc", 
+          "name": "GeomIndex", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::FirstElement()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Arc", 
+          "name": "FirstElement", 
+          "return": {
+            "type": "opencascade::handle<MAT_BasicElt>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::SecondElement()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Arc", 
+          "name": "SecondElement", 
+          "return": {
+            "type": "opencascade::handle<MAT_BasicElt>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::FirstNode()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Arc", 
+          "name": "FirstNode", 
+          "return": {
+            "type": "opencascade::handle<MAT_Node>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::SecondNode()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Arc", 
+          "name": "SecondNode", 
+          "return": {
+            "type": "opencascade::handle<MAT_Node>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::TheOtherNode(opencascade::handle<MAT_Node>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Node>", 
+              "name": "aNode", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Arc", 
+          "name": "TheOtherNode", 
+          "return": {
+            "type": "opencascade::handle<MAT_Node>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::HasNeighbour(opencascade::handle<MAT_Node>, MAT_Side)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Node>", 
+              "name": "aNode", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "MAT_Side", 
+              "name": "aSide", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Arc", 
+          "name": "HasNeighbour", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::Neighbour(opencascade::handle<MAT_Node>, MAT_Side)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Node>", 
+              "name": "aNode", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "MAT_Side", 
+              "name": "aSide", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Arc", 
+          "name": "Neighbour", 
+          "return": {
+            "type": "opencascade::handle<MAT_Arc>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::SetIndex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anInteger", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Arc", 
+          "name": "SetIndex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::SetGeomIndex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anInteger", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Arc", 
+          "name": "SetGeomIndex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::SetFirstElement(opencascade::handle<MAT_BasicElt>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_BasicElt>", 
+              "name": "aBasicElt", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Arc", 
+          "name": "SetFirstElement", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::SetSecondElement(opencascade::handle<MAT_BasicElt>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_BasicElt>", 
+              "name": "aBasicElt", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Arc", 
+          "name": "SetSecondElement", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::SetFirstNode(opencascade::handle<MAT_Node>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Node>", 
+              "name": "aNode", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Arc", 
+          "name": "SetFirstNode", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::SetSecondNode(opencascade::handle<MAT_Node>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Node>", 
+              "name": "aNode", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Arc", 
+          "name": "SetSecondNode", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::SetFirstArc(MAT_Side, opencascade::handle<MAT_Arc>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "MAT_Side", 
+              "name": "aSide", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<MAT_Arc>", 
+              "name": "anArc", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Arc", 
+          "name": "SetFirstArc", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::SetSecondArc(MAT_Side, opencascade::handle<MAT_Arc>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "MAT_Side", 
+              "name": "aSide", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<MAT_Arc>", 
+              "name": "anArc", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Arc", 
+          "name": "SetSecondArc", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::SetNeighbour(MAT_Side, opencascade::handle<MAT_Node>, opencascade::handle<MAT_Arc>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "MAT_Side", 
+              "name": "aSide", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<MAT_Node>", 
+              "name": "aNode", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<MAT_Arc>", 
+              "name": "anArc", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Arc", 
+          "name": "SetNeighbour", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Arc", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Arc", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Arc::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Arc", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/MAT_Arc.hxx", 
+        37
+      ], 
+      "key": "MAT_Arc"
+    }, 
+    {
+      "declType": "class", 
+      "name": "MAT_ListOfBisector", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT_ListOfBisector::MAT_ListOfBisector()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "MAT_ListOfBisector", 
+          "return": {
+            "type": "MAT_ListOfBisector", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::MAT_ListOfBisector(MAT_ListOfBisector)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT_ListOfBisector", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "MAT_ListOfBisector", 
+          "return": {
+            "type": "MAT_ListOfBisector", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::First()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "First", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::Last()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "Last", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::Init(opencascade::handle<MAT_Bisector>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "aniten", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::Next()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "Next", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::Previous()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "Previous", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::More()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "More", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::Current()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "Current", 
+          "return": {
+            "type": "opencascade::handle<MAT_Bisector>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::Current(opencascade::handle<MAT_Bisector>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "anitem", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "Current", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::FirstItem()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "FirstItem", 
+          "return": {
+            "type": "opencascade::handle<MAT_Bisector>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::LastItem()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "LastItem", 
+          "return": {
+            "type": "opencascade::handle<MAT_Bisector>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::PreviousItem()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "PreviousItem", 
+          "return": {
+            "type": "opencascade::handle<MAT_Bisector>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::NextItem()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "NextItem", 
+          "return": {
+            "type": "opencascade::handle<MAT_Bisector>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::Number()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "Number", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::Index()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "Index", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::Brackets(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anindex", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "Brackets", 
+          "return": {
+            "type": "opencascade::handle<MAT_Bisector>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::Unlink()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "Unlink", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::LinkBefore(opencascade::handle<MAT_Bisector>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "anitem", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "LinkBefore", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::LinkAfter(opencascade::handle<MAT_Bisector>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "anitem", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "LinkAfter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::FrontAdd(opencascade::handle<MAT_Bisector>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "anitem", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "FrontAdd", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::BackAdd(opencascade::handle<MAT_Bisector>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "anitem", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "BackAdd", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::Permute()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "Permute", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::Loop()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "Loop", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::IsEmpty()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "IsEmpty", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::Dump(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "ashift", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "alevel", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfBisector::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfBisector", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/MAT_ListOfBisector.hxx", 
+        34
+      ], 
+      "key": "MAT_ListOfBisector"
+    }, 
+    {
+      "declType": "class", 
+      "name": "MAT_Graph", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT_Graph::MAT_Graph()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "MAT_Graph", 
+          "name": "MAT_Graph", 
+          "return": {
+            "type": "MAT_Graph", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Graph::MAT_Graph(MAT_Graph)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT_Graph", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Graph", 
+          "name": "MAT_Graph", 
+          "return": {
+            "type": "MAT_Graph", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT_Graph::Perform(Standard_Boolean, opencascade::handle<MAT_ListOfBisector>, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "SemiInfinite", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<MAT_ListOfBisector>", 
+              "name": "TheRoots", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbBasicElts", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbArcs", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Graph", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Graph::Arc(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Graph", 
+          "name": "Arc", 
+          "return": {
+            "type": "opencascade::handle<MAT_Arc>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Graph::BasicElt(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Graph", 
+          "name": "BasicElt", 
+          "return": {
+            "type": "opencascade::handle<MAT_BasicElt>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Graph::Node(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Graph", 
+          "name": "Node", 
+          "return": {
+            "type": "opencascade::handle<MAT_Node>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Graph::NumberOfArcs()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Graph", 
+          "name": "NumberOfArcs", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Graph::NumberOfNodes()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Graph", 
+          "name": "NumberOfNodes", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Graph::NumberOfBasicElts()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Graph", 
+          "name": "NumberOfBasicElts", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Graph::NumberOfInfiniteNodes()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Graph", 
+          "name": "NumberOfInfiniteNodes", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Graph::FusionOfBasicElts(Standard_Integer, Standard_Integer, Standard_Boolean, Standard_Integer, Standard_Integer, Standard_Boolean, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexElt1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexElt2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "MergeArc1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "GeomIndexArc1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "GeomIndexArc2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "MergeArc2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "GeomIndexArc3", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "GeomIndexArc4", 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Graph", 
+          "name": "FusionOfBasicElts", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Graph::CompactArcs()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Graph", 
+          "name": "CompactArcs", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Graph::CompactNodes()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Graph", 
+          "name": "CompactNodes", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Graph::ChangeBasicElts(MAT_DataMapOfIntegerBasicElt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "MAT_DataMapOfIntegerBasicElt", 
+              "name": "NewMap", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Graph", 
+          "name": "ChangeBasicElts", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Graph::ChangeBasicElt(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Graph", 
+          "name": "ChangeBasicElt", 
+          "return": {
+            "type": "opencascade::handle<MAT_BasicElt>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Graph::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Graph", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Graph::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Graph", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Graph::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Graph", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/MAT_Graph.hxx", 
+        40
+      ], 
+      "key": "MAT_Graph"
+    }, 
+    {
+      "declType": "class", 
+      "name": "MAT_TListNodeOfListOfBisector", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT_TListNodeOfListOfBisector::MAT_TListNodeOfListOfBisector()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "MAT_TListNodeOfListOfBisector", 
+          "name": "MAT_TListNodeOfListOfBisector", 
+          "return": {
+            "type": "MAT_TListNodeOfListOfBisector", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfBisector::MAT_TListNodeOfListOfBisector(opencascade::handle<MAT_Bisector>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "anitem", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_TListNodeOfListOfBisector", 
+          "name": "MAT_TListNodeOfListOfBisector", 
+          "return": {
+            "type": "MAT_TListNodeOfListOfBisector", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfBisector::MAT_TListNodeOfListOfBisector(MAT_TListNodeOfListOfBisector)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT_TListNodeOfListOfBisector", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_TListNodeOfListOfBisector", 
+          "name": "MAT_TListNodeOfListOfBisector", 
+          "return": {
+            "type": "MAT_TListNodeOfListOfBisector", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfBisector::GetItem()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_TListNodeOfListOfBisector", 
+          "name": "GetItem", 
+          "return": {
+            "type": "opencascade::handle<MAT_Bisector>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfBisector::Next()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_TListNodeOfListOfBisector", 
+          "name": "Next", 
+          "return": {
+            "type": "opencascade::handle<MAT_TListNodeOfListOfBisector>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfBisector::Previous()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_TListNodeOfListOfBisector", 
+          "name": "Previous", 
+          "return": {
+            "type": "opencascade::handle<MAT_TListNodeOfListOfBisector>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfBisector::SetItem(opencascade::handle<MAT_Bisector>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "anitem", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_TListNodeOfListOfBisector", 
+          "name": "SetItem", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfBisector::Next(opencascade::handle<MAT_TListNodeOfListOfBisector>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_TListNodeOfListOfBisector>", 
+              "name": "atlistnode", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_TListNodeOfListOfBisector", 
+          "name": "Next", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfBisector::Previous(opencascade::handle<MAT_TListNodeOfListOfBisector>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_TListNodeOfListOfBisector>", 
+              "name": "atlistnode", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_TListNodeOfListOfBisector", 
+          "name": "Previous", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfBisector::Dummy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_TListNodeOfListOfBisector", 
+          "name": "Dummy", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfBisector::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_TListNodeOfListOfBisector", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfBisector::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_TListNodeOfListOfBisector", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfBisector::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_TListNodeOfListOfBisector", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/MAT_TListNodeOfListOfBisector.hxx", 
+        32
+      ], 
+      "key": "MAT_TListNodeOfListOfBisector"
+    }, 
+    {
+      "declType": "class", 
+      "name": "MAT_Bisector", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT_Bisector::MAT_Bisector()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "MAT_Bisector", 
+          "return": {
+            "type": "MAT_Bisector", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::MAT_Bisector(MAT_Bisector)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT_Bisector", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Bisector", 
+          "name": "MAT_Bisector", 
+          "return": {
+            "type": "MAT_Bisector", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT_Bisector::AddBisector(opencascade::handle<MAT_Bisector>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "abisector", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Bisector", 
+          "name": "AddBisector", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::List()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "List", 
+          "return": {
+            "type": "opencascade::handle<MAT_ListOfBisector>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::FirstBisector()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "FirstBisector", 
+          "return": {
+            "type": "opencascade::handle<MAT_Bisector>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::LastBisector()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "LastBisector", 
+          "return": {
+            "type": "opencascade::handle<MAT_Bisector>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::BisectorNumber(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anumber", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Bisector", 
+          "name": "BisectorNumber", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::IndexNumber(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anumber", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Bisector", 
+          "name": "IndexNumber", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::FirstEdge(opencascade::handle<MAT_Edge>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Edge>", 
+              "name": "anedge", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Bisector", 
+          "name": "FirstEdge", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::SecondEdge(opencascade::handle<MAT_Edge>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Edge>", 
+              "name": "anedge", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Bisector", 
+          "name": "SecondEdge", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::IssuePoint(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "apoint", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Bisector", 
+          "name": "IssuePoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::EndPoint(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "apoint", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Bisector", 
+          "name": "EndPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::DistIssuePoint(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "areal", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Bisector", 
+          "name": "DistIssuePoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::FirstVector(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "avector", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Bisector", 
+          "name": "FirstVector", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::SecondVector(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "avector", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Bisector", 
+          "name": "SecondVector", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::Sense(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "asense", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Bisector", 
+          "name": "Sense", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::FirstParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "aparameter", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Bisector", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::SecondParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "aparameter", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Bisector", 
+          "name": "SecondParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::BisectorNumber()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "BisectorNumber", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::IndexNumber()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "IndexNumber", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::FirstEdge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "FirstEdge", 
+          "return": {
+            "type": "opencascade::handle<MAT_Edge>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::SecondEdge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "SecondEdge", 
+          "return": {
+            "type": "opencascade::handle<MAT_Edge>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::IssuePoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "IssuePoint", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::EndPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "EndPoint", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::DistIssuePoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "DistIssuePoint", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::FirstVector()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "FirstVector", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::SecondVector()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "SecondVector", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::Sense()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "Sense", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::FirstParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::SecondParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "SecondParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::Dump(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "ashift", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "alevel", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Bisector", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Bisector::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Bisector", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/MAT_Bisector.hxx", 
+        34
+      ], 
+      "key": "MAT_Bisector"
+    }, 
+    {
+      "declType": "class", 
+      "name": "MAT_Edge", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT_Edge::MAT_Edge()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "MAT_Edge", 
+          "name": "MAT_Edge", 
+          "return": {
+            "type": "MAT_Edge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Edge::MAT_Edge(MAT_Edge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT_Edge", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Edge", 
+          "name": "MAT_Edge", 
+          "return": {
+            "type": "MAT_Edge", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT_Edge::EdgeNumber(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anumber", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Edge", 
+          "name": "EdgeNumber", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Edge::FirstBisector(opencascade::handle<MAT_Bisector>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "abisector", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Edge", 
+          "name": "FirstBisector", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Edge::SecondBisector(opencascade::handle<MAT_Bisector>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Bisector>", 
+              "name": "abisector", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Edge", 
+          "name": "SecondBisector", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Edge::Distance(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "adistance", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Edge", 
+          "name": "Distance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Edge::IntersectionPoint(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "apoint", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Edge", 
+          "name": "IntersectionPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Edge::EdgeNumber()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Edge", 
+          "name": "EdgeNumber", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Edge::FirstBisector()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Edge", 
+          "name": "FirstBisector", 
+          "return": {
+            "type": "opencascade::handle<MAT_Bisector>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Edge::SecondBisector()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Edge", 
+          "name": "SecondBisector", 
+          "return": {
+            "type": "opencascade::handle<MAT_Bisector>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Edge::Distance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Edge", 
+          "name": "Distance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Edge::IntersectionPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Edge", 
+          "name": "IntersectionPoint", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Edge::Dump(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "ashift", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "alevel", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Edge", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Edge::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Edge", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Edge::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Edge", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Edge::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Edge", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/MAT_Edge.hxx", 
+        33
+      ], 
+      "key": "MAT_Edge"
+    }, 
+    {
+      "declType": "class", 
+      "name": "MAT_TListNodeOfListOfEdge", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT_TListNodeOfListOfEdge::MAT_TListNodeOfListOfEdge()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "MAT_TListNodeOfListOfEdge", 
+          "name": "MAT_TListNodeOfListOfEdge", 
+          "return": {
+            "type": "MAT_TListNodeOfListOfEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfEdge::MAT_TListNodeOfListOfEdge(opencascade::handle<MAT_Edge>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Edge>", 
+              "name": "anitem", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_TListNodeOfListOfEdge", 
+          "name": "MAT_TListNodeOfListOfEdge", 
+          "return": {
+            "type": "MAT_TListNodeOfListOfEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfEdge::MAT_TListNodeOfListOfEdge(MAT_TListNodeOfListOfEdge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT_TListNodeOfListOfEdge", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_TListNodeOfListOfEdge", 
+          "name": "MAT_TListNodeOfListOfEdge", 
+          "return": {
+            "type": "MAT_TListNodeOfListOfEdge", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfEdge::GetItem()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_TListNodeOfListOfEdge", 
+          "name": "GetItem", 
+          "return": {
+            "type": "opencascade::handle<MAT_Edge>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfEdge::Next()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_TListNodeOfListOfEdge", 
+          "name": "Next", 
+          "return": {
+            "type": "opencascade::handle<MAT_TListNodeOfListOfEdge>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfEdge::Previous()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_TListNodeOfListOfEdge", 
+          "name": "Previous", 
+          "return": {
+            "type": "opencascade::handle<MAT_TListNodeOfListOfEdge>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfEdge::SetItem(opencascade::handle<MAT_Edge>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Edge>", 
+              "name": "anitem", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_TListNodeOfListOfEdge", 
+          "name": "SetItem", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfEdge::Next(opencascade::handle<MAT_TListNodeOfListOfEdge>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_TListNodeOfListOfEdge>", 
+              "name": "atlistnode", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_TListNodeOfListOfEdge", 
+          "name": "Next", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfEdge::Previous(opencascade::handle<MAT_TListNodeOfListOfEdge>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_TListNodeOfListOfEdge>", 
+              "name": "atlistnode", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_TListNodeOfListOfEdge", 
+          "name": "Previous", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfEdge::Dummy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_TListNodeOfListOfEdge", 
+          "name": "Dummy", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfEdge::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_TListNodeOfListOfEdge", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfEdge::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_TListNodeOfListOfEdge", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_TListNodeOfListOfEdge::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_TListNodeOfListOfEdge", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/MAT_TListNodeOfListOfEdge.hxx", 
+        32
+      ], 
+      "key": "MAT_TListNodeOfListOfEdge"
+    }, 
+    {
+      "declType": "class", 
+      "name": "MAT_ListOfEdge", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT_ListOfEdge::MAT_ListOfEdge()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "MAT_ListOfEdge", 
+          "return": {
+            "type": "MAT_ListOfEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::MAT_ListOfEdge(MAT_ListOfEdge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT_ListOfEdge", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "MAT_ListOfEdge", 
+          "return": {
+            "type": "MAT_ListOfEdge", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::First()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "First", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::Last()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "Last", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::Init(opencascade::handle<MAT_Edge>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Edge>", 
+              "name": "aniten", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::Next()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "Next", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::Previous()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "Previous", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::More()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "More", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::Current()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "Current", 
+          "return": {
+            "type": "opencascade::handle<MAT_Edge>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::Current(opencascade::handle<MAT_Edge>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Edge>", 
+              "name": "anitem", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "Current", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::FirstItem()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "FirstItem", 
+          "return": {
+            "type": "opencascade::handle<MAT_Edge>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::LastItem()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "LastItem", 
+          "return": {
+            "type": "opencascade::handle<MAT_Edge>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::PreviousItem()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "PreviousItem", 
+          "return": {
+            "type": "opencascade::handle<MAT_Edge>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::NextItem()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "NextItem", 
+          "return": {
+            "type": "opencascade::handle<MAT_Edge>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::Number()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "Number", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::Index()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "Index", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::Brackets(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anindex", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "Brackets", 
+          "return": {
+            "type": "opencascade::handle<MAT_Edge>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::Unlink()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "Unlink", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::LinkBefore(opencascade::handle<MAT_Edge>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Edge>", 
+              "name": "anitem", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "LinkBefore", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::LinkAfter(opencascade::handle<MAT_Edge>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Edge>", 
+              "name": "anitem", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "LinkAfter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::FrontAdd(opencascade::handle<MAT_Edge>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Edge>", 
+              "name": "anitem", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "FrontAdd", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::BackAdd(opencascade::handle<MAT_Edge>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Edge>", 
+              "name": "anitem", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "BackAdd", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::Permute()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "Permute", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::Loop()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "Loop", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::IsEmpty()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "IsEmpty", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::Dump(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "ashift", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "alevel", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_ListOfEdge::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_ListOfEdge", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/MAT_ListOfEdge.hxx", 
+        34
+      ], 
+      "key": "MAT_ListOfEdge"
+    }, 
+    {
+      "declType": "class", 
+      "name": "MAT_Zone", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "MAT_Zone::MAT_Zone()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "MAT_Zone", 
+          "name": "MAT_Zone", 
+          "return": {
+            "type": "MAT_Zone", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Zone::MAT_Zone(opencascade::handle<MAT_BasicElt>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_BasicElt>", 
+              "name": "aBasicElt", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Zone", 
+          "name": "MAT_Zone", 
+          "return": {
+            "type": "MAT_Zone", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Zone::MAT_Zone(MAT_Zone)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "MAT_Zone", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Zone", 
+          "name": "MAT_Zone", 
+          "return": {
+            "type": "MAT_Zone", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "MAT_Zone::Perform(opencascade::handle<MAT_BasicElt>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_BasicElt>", 
+              "name": "aBasicElt", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "MAT_Zone", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Zone::NumberOfArcs()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Zone", 
+          "name": "NumberOfArcs", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Zone::ArcOnFrontier(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "MAT_Zone", 
+          "name": "ArcOnFrontier", 
+          "return": {
+            "type": "opencascade::handle<MAT_Arc>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Zone::NoEmptyZone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Zone", 
+          "name": "NoEmptyZone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Zone::Limited()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Zone", 
+          "name": "Limited", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Zone::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Zone", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Zone::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Zone", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "MAT_Zone::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "MAT_Zone", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/MAT_Zone.hxx", 
+        41
+      ], 
+      "key": "MAT_Zone"
+    }, 
+    {
+      "type": "opencascade::handle<MAT_Arc>", 
+      "declType": "typedef", 
+      "name": "Handle_MAT_Arc", 
+      "key": "Handle_MAT_Arc"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, opencascade::handle<MAT_Arc>, NCollection_DefaultHasher<int> >", 
+      "declType": "typedef", 
+      "name": "MAT_DataMapOfIntegerArc", 
+      "key": "MAT_DataMapOfIntegerArc"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, opencascade::handle<MAT_Arc>, NCollection_DefaultHasher<int> >::Iterator", 
+      "declType": "typedef", 
+      "name": "MAT_DataMapIteratorOfDataMapOfIntegerArc", 
+      "key": "MAT_DataMapIteratorOfDataMapOfIntegerArc"
+    }, 
+    {
+      "type": "opencascade::handle<MAT_BasicElt>", 
+      "declType": "typedef", 
+      "name": "Handle_MAT_BasicElt", 
+      "key": "Handle_MAT_BasicElt"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, opencascade::handle<MAT_BasicElt>, NCollection_DefaultHasher<int> >", 
+      "declType": "typedef", 
+      "name": "MAT_DataMapOfIntegerBasicElt", 
+      "key": "MAT_DataMapOfIntegerBasicElt"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, opencascade::handle<MAT_BasicElt>, NCollection_DefaultHasher<int> >::Iterator", 
+      "declType": "typedef", 
+      "name": "MAT_DataMapIteratorOfDataMapOfIntegerBasicElt", 
+      "key": "MAT_DataMapIteratorOfDataMapOfIntegerBasicElt"
+    }, 
+    {
+      "type": "NCollection_Sequence<opencascade::handle<MAT_Arc> >", 
+      "declType": "typedef", 
+      "name": "MAT_SequenceOfArc", 
+      "key": "MAT_SequenceOfArc"
+    }, 
+    {
+      "type": "NCollection_Sequence<opencascade::handle<MAT_BasicElt> >", 
+      "declType": "typedef", 
+      "name": "MAT_SequenceOfBasicElt", 
+      "key": "MAT_SequenceOfBasicElt"
+    }, 
+    {
+      "type": "opencascade::handle<MAT_Node>", 
+      "declType": "typedef", 
+      "name": "Handle_MAT_Node", 
+      "key": "Handle_MAT_Node"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, opencascade::handle<MAT_Node>, NCollection_DefaultHasher<int> >", 
+      "declType": "typedef", 
+      "name": "MAT_DataMapOfIntegerNode", 
+      "key": "MAT_DataMapOfIntegerNode"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, opencascade::handle<MAT_Node>, NCollection_DefaultHasher<int> >::Iterator", 
+      "declType": "typedef", 
+      "name": "MAT_DataMapIteratorOfDataMapOfIntegerNode", 
+      "key": "MAT_DataMapIteratorOfDataMapOfIntegerNode"
+    }, 
+    {
+      "type": "opencascade::handle<MAT_Graph>", 
+      "declType": "typedef", 
+      "name": "Handle_MAT_Graph", 
+      "key": "Handle_MAT_Graph"
+    }, 
+    {
+      "type": "opencascade::handle<MAT_ListOfBisector>", 
+      "declType": "typedef", 
+      "name": "Handle_MAT_ListOfBisector", 
+      "key": "Handle_MAT_ListOfBisector"
+    }, 
+    {
+      "type": "opencascade::handle<MAT_Bisector>", 
+      "declType": "typedef", 
+      "name": "Handle_MAT_Bisector", 
+      "key": "Handle_MAT_Bisector"
+    }, 
+    {
+      "type": "opencascade::handle<MAT_TListNodeOfListOfBisector>", 
+      "declType": "typedef", 
+      "name": "Handle_MAT_TListNodeOfListOfBisector", 
+      "key": "Handle_MAT_TListNodeOfListOfBisector"
+    }, 
+    {
+      "type": "opencascade::handle<MAT_ListOfEdge>", 
+      "declType": "typedef", 
+      "name": "Handle_MAT_ListOfEdge", 
+      "key": "Handle_MAT_ListOfEdge"
+    }, 
+    {
+      "type": "opencascade::handle<MAT_TListNodeOfListOfEdge>", 
+      "declType": "typedef", 
+      "name": "Handle_MAT_TListNodeOfListOfEdge", 
+      "key": "Handle_MAT_TListNodeOfListOfEdge"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, opencascade::handle<MAT_Bisector>, NCollection_DefaultHasher<int> >", 
+      "declType": "typedef", 
+      "name": "MAT_DataMapOfIntegerBisector", 
+      "key": "MAT_DataMapOfIntegerBisector"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, opencascade::handle<MAT_Bisector>, NCollection_DefaultHasher<int> >::Iterator", 
+      "declType": "typedef", 
+      "name": "MAT_DataMapIteratorOfDataMapOfIntegerBisector", 
+      "key": "MAT_DataMapIteratorOfDataMapOfIntegerBisector"
+    }, 
+    {
+      "type": "opencascade::handle<MAT_Zone>", 
+      "declType": "typedef", 
+      "name": "Handle_MAT_Zone", 
+      "key": "Handle_MAT_Zone"
+    }, 
+    {
+      "type": "opencascade::handle<MAT_Edge>", 
+      "declType": "typedef", 
+      "name": "Handle_MAT_Edge", 
+      "key": "Handle_MAT_Edge"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "MAT_Left", 
+          0
+        ], 
+        [
+          "MAT_Right", 
+          1
+        ]
+      ], 
+      "name": "MAT_Side", 
+      "key": "MAT_Side"
+    }
+  ], 
+  "name": "MAT"
+}

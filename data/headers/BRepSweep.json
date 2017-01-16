@@ -1,0 +1,3614 @@
+{
+  "headers": [
+    "BRepSweep_Tool.hxx", 
+    "BRepSweep_Rotation.hxx", 
+    "BRepSweep_Translation.hxx", 
+    "BRepSweep_Trsf.hxx", 
+    "BRepSweep_Builder.hxx", 
+    "BRepSweep_NumLinearRegularSweep.hxx", 
+    "BRepSweep_Revol.hxx", 
+    "BRepSweep_Iterator.hxx", 
+    "BRepSweep_Prism.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "BRepSweep_Tool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepSweep_Tool::BRepSweep_Tool(TopoDS_Shape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Tool", 
+          "name": "BRepSweep_Tool", 
+          "return": {
+            "type": "BRepSweep_Tool", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Tool::BRepSweep_Tool(BRepSweep_Tool)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepSweep_Tool", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Tool", 
+          "name": "BRepSweep_Tool", 
+          "return": {
+            "type": "BRepSweep_Tool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepSweep_Tool::NbShapes()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Tool", 
+          "name": "NbShapes", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Tool::Index(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Tool", 
+          "name": "Index", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Tool::Shape(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anIndex", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Tool", 
+          "name": "Shape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Tool::Type(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Tool", 
+          "name": "Type", 
+          "return": {
+            "type": "TopAbs_ShapeEnum"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Tool::Orientation(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Tool", 
+          "name": "Orientation", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Tool::SetOrientation(TopoDS_Shape, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aShape", 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Tool", 
+          "name": "SetOrientation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepSweep_Tool.hxx", 
+        34
+      ], 
+      "key": "BRepSweep_Tool"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepSweep_Builder", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepSweep_Builder::BRepSweep_Builder(BRep_Builder)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRep_Builder", 
+              "name": "aBuilder", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Builder", 
+          "name": "BRepSweep_Builder", 
+          "return": {
+            "type": "BRepSweep_Builder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Builder::BRepSweep_Builder(BRepSweep_Builder)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepSweep_Builder", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Builder", 
+          "name": "BRepSweep_Builder", 
+          "return": {
+            "type": "BRepSweep_Builder", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepSweep_Builder::Builder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Builder", 
+          "name": "Builder", 
+          "return": {
+            "type": "BRep_Builder", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Builder::MakeCompound(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aCompound", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Builder", 
+          "name": "MakeCompound", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Builder::MakeCompSolid(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aCompSolid", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Builder", 
+          "name": "MakeCompSolid", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Builder::MakeSolid(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aSolid", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Builder", 
+          "name": "MakeSolid", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Builder::MakeShell(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aShell", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Builder", 
+          "name": "MakeShell", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Builder::MakeWire(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aWire", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Builder", 
+          "name": "MakeWire", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Builder::Add(TopoDS_Shape, TopoDS_Shape, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aShape1", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aShape2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Orient", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Builder", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Builder::Add(TopoDS_Shape, TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aShape1", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aShape2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Builder", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepSweep_Builder.hxx", 
+        31
+      ], 
+      "key": "BRepSweep_Builder"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepSweep_NumLinearRegularSweep", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::MakeEmptyVertex(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "MakeEmptyVertex", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::MakeEmptyDirectingEdge(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirE", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "MakeEmptyDirectingEdge", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::MakeEmptyGeneratingEdge(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "MakeEmptyGeneratingEdge", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::SetParameters(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewVertex", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenF", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "SetParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::SetDirectingParameter(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewVertex", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "SetDirectingParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::SetGeneratingParameter(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewVertex", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "SetGeneratingParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::MakeEmptyFace(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "MakeEmptyFace", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::SetPCurve(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenF", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "orien", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "SetPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::SetGeneratingPCurve(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, Sweep_NumShape, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "orien", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "SetGeneratingPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::SetDirectingPCurve(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "orien", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "SetDirectingPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::DirectSolid(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "DirectSolid", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::GGDShapeIsToAdd(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewSubShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aSubGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "GGDShapeIsToAdd", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::GDDShapeIsToAdd(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewSubShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aSubDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "GDDShapeIsToAdd", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::SeparatedWires(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewSubShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aSubGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "SeparatedWires", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::SplitShell(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "SplitShell", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::SetContinuity(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "SetContinuity", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::HasShape(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "HasShape", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::Shape(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "Shape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::Shape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "Shape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::Shape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "Shape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::FirstShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "FirstShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::LastShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "LastShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::FirstShape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "FirstShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::LastShape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "LastShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_NumLinearRegularSweep::Closed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_NumLinearRegularSweep", 
+          "name": "Closed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepSweep_NumLinearRegularSweep.hxx", 
+        79
+      ], 
+      "key": "BRepSweep_NumLinearRegularSweep"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepSweep_Trsf", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "BRepSweep_Trsf::Init()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Trsf::Process(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "Process", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Trsf::MakeEmptyVertex(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "MakeEmptyVertex", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_Trsf::MakeEmptyDirectingEdge(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirE", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "MakeEmptyDirectingEdge", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_Trsf::MakeEmptyGeneratingEdge(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "MakeEmptyGeneratingEdge", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_Trsf::SetParameters(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewVertex", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenF", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "SetParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_Trsf::SetDirectingParameter(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewVertex", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "SetDirectingParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_Trsf::SetGeneratingParameter(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewVertex", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "SetGeneratingParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_Trsf::MakeEmptyFace(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "MakeEmptyFace", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_Trsf::SetPCurve(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenF", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "orien", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "SetPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_Trsf::SetGeneratingPCurve(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, Sweep_NumShape, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "orien", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "SetGeneratingPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_Trsf::SetDirectingPCurve(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "orien", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "SetDirectingPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_Trsf::GGDShapeIsToAdd(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewSubShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aSubGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "GGDShapeIsToAdd", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_Trsf::GDDShapeIsToAdd(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewSubShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aSubDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "GDDShapeIsToAdd", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_Trsf::SeparatedWires(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewSubShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aSubGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "SeparatedWires", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_Trsf::HasShape(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "HasShape", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_Trsf::IsInvariant(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "IsInvariant", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepSweep_Trsf::SetContinuity(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Trsf", 
+          "name": "SetContinuity", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepSweep_NumLinearRegularSweep"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepSweep_Trsf.hxx", 
+        47
+      ], 
+      "key": "BRepSweep_Trsf"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepSweep_Rotation", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepSweep_Rotation::BRepSweep_Rotation(TopoDS_Shape, Sweep_NumShape, TopLoc_Location, gp_Ax1, Quantity_PlaneAngle, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "N", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopLoc_Location", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Ax1", 
+              "name": "A", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_PlaneAngle", 
+              "name": "D", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "C", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "BRepSweep_Rotation", 
+          "return": {
+            "type": "BRepSweep_Rotation", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Rotation::BRepSweep_Rotation(BRepSweep_Rotation)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepSweep_Rotation", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "BRepSweep_Rotation", 
+          "return": {
+            "type": "BRepSweep_Rotation", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepSweep_Rotation::MakeEmptyVertex(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "MakeEmptyVertex", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::MakeEmptyDirectingEdge(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirE", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "MakeEmptyDirectingEdge", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::MakeEmptyGeneratingEdge(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "MakeEmptyGeneratingEdge", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::SetParameters(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewVertex", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenF", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "SetParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::SetDirectingParameter(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewVertex", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "SetDirectingParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::SetGeneratingParameter(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewVertex", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "SetGeneratingParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::MakeEmptyFace(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "MakeEmptyFace", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::SetPCurve(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenF", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "orien", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "SetPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::SetGeneratingPCurve(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, Sweep_NumShape, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "orien", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "SetGeneratingPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::SetDirectingPCurve(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "orien", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "SetDirectingPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::DirectSolid(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "DirectSolid", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::GGDShapeIsToAdd(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewSubShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aSubGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "GGDShapeIsToAdd", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::GDDShapeIsToAdd(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewSubShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aSubDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "GDDShapeIsToAdd", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::SeparatedWires(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewSubShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aSubGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "SeparatedWires", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::SplitShell(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "SplitShell", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::HasShape(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "HasShape", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::IsInvariant(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "IsInvariant", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Rotation::Axe()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "Axe", 
+          "return": {
+            "type": "gp_Ax1"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Rotation::Angle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Rotation", 
+          "name": "Angle", 
+          "return": {
+            "type": "Quantity_PlaneAngle"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepSweep_Trsf"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepSweep_Rotation.hxx", 
+        39
+      ], 
+      "key": "BRepSweep_Rotation"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepSweep_Translation", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepSweep_Translation::BRepSweep_Translation(TopoDS_Shape, Sweep_NumShape, TopLoc_Location, gp_Vec, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "N", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopLoc_Location", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "C", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Canonize", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "BRepSweep_Translation", 
+          "return": {
+            "type": "BRepSweep_Translation", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Translation::BRepSweep_Translation(BRepSweep_Translation)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepSweep_Translation", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "BRepSweep_Translation", 
+          "return": {
+            "type": "BRepSweep_Translation", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepSweep_Translation::MakeEmptyVertex(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "MakeEmptyVertex", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Translation::MakeEmptyDirectingEdge(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirE", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "MakeEmptyDirectingEdge", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Translation::MakeEmptyGeneratingEdge(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "MakeEmptyGeneratingEdge", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Translation::SetParameters(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewVertex", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenF", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "SetParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Translation::SetDirectingParameter(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewVertex", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "SetDirectingParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Translation::SetGeneratingParameter(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewVertex", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "SetGeneratingParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Translation::MakeEmptyFace(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "MakeEmptyFace", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Translation::SetPCurve(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenF", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "orien", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "SetPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Translation::SetGeneratingPCurve(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, Sweep_NumShape, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "orien", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "SetGeneratingPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Translation::SetDirectingPCurve(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewEdge", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "orien", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "SetDirectingPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Translation::DirectSolid(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "DirectSolid", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Translation::GGDShapeIsToAdd(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewSubShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aSubGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "GGDShapeIsToAdd", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Translation::GDDShapeIsToAdd(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewSubShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aSubDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "GDDShapeIsToAdd", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Translation::SeparatedWires(TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aNewSubShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aSubGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "SeparatedWires", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Translation::HasShape(TopoDS_Shape, Sweep_NumShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Sweep_NumShape", 
+              "name": "aDirS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "HasShape", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Translation::IsInvariant(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Translation", 
+          "name": "IsInvariant", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepSweep_Translation::Vec()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Translation", 
+          "name": "Vec", 
+          "return": {
+            "type": "gp_Vec"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepSweep_Trsf"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepSweep_Translation.hxx", 
+        37
+      ], 
+      "key": "BRepSweep_Translation"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepSweep_Revol", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepSweep_Revol::BRepSweep_Revol(TopoDS_Shape, gp_Ax1, Quantity_PlaneAngle, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Ax1", 
+              "name": "A", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_PlaneAngle", 
+              "name": "D", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "C", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Revol", 
+          "name": "BRepSweep_Revol", 
+          "return": {
+            "type": "BRepSweep_Revol", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Revol::BRepSweep_Revol(TopoDS_Shape, gp_Ax1, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Ax1", 
+              "name": "A", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "C", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Revol", 
+          "name": "BRepSweep_Revol", 
+          "return": {
+            "type": "BRepSweep_Revol", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Revol::BRepSweep_Revol(BRepSweep_Revol)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepSweep_Revol", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Revol", 
+          "name": "BRepSweep_Revol", 
+          "return": {
+            "type": "BRepSweep_Revol", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepSweep_Revol::Shape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Revol", 
+          "name": "Shape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Revol::Shape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Revol", 
+          "name": "Shape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Revol::FirstShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Revol", 
+          "name": "FirstShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Revol::FirstShape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Revol", 
+          "name": "FirstShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Revol::LastShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Revol", 
+          "name": "LastShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Revol::LastShape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Revol", 
+          "name": "LastShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Revol::Axe()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Revol", 
+          "name": "Axe", 
+          "return": {
+            "type": "gp_Ax1"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Revol::Angle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Revol", 
+          "name": "Angle", 
+          "return": {
+            "type": "Quantity_PlaneAngle"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepSweep_Revol.hxx", 
+        37
+      ], 
+      "key": "BRepSweep_Revol"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepSweep_Iterator", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepSweep_Iterator::BRepSweep_Iterator()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepSweep_Iterator", 
+          "name": "BRepSweep_Iterator", 
+          "return": {
+            "type": "BRepSweep_Iterator", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Iterator::BRepSweep_Iterator(BRepSweep_Iterator)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepSweep_Iterator", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Iterator", 
+          "name": "BRepSweep_Iterator", 
+          "return": {
+            "type": "BRepSweep_Iterator", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepSweep_Iterator::Init(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Iterator", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Iterator::More()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Iterator", 
+          "name": "More", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Iterator::Next()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Iterator", 
+          "name": "Next", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Iterator::Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Iterator", 
+          "name": "Value", 
+          "return": {
+            "type": "TopoDS_Shape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Iterator::Orientation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Iterator", 
+          "name": "Orientation", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepSweep_Iterator.hxx", 
+        36
+      ], 
+      "key": "BRepSweep_Iterator"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepSweep_Prism", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepSweep_Prism::BRepSweep_Prism(TopoDS_Shape, gp_Vec, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Copy", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Canonize", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Prism", 
+          "name": "BRepSweep_Prism", 
+          "return": {
+            "type": "BRepSweep_Prism", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Prism::BRepSweep_Prism(TopoDS_Shape, gp_Dir, Standard_Boolean, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Dir", 
+              "name": "D", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Inf", 
+              "default": "true", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Copy", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Canonize", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepSweep_Prism", 
+          "name": "BRepSweep_Prism", 
+          "return": {
+            "type": "BRepSweep_Prism", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Prism::BRepSweep_Prism(BRepSweep_Prism)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepSweep_Prism", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Prism", 
+          "name": "BRepSweep_Prism", 
+          "return": {
+            "type": "BRepSweep_Prism", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepSweep_Prism::Shape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Prism", 
+          "name": "Shape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Prism::Shape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Prism", 
+          "name": "Shape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Prism::FirstShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Prism", 
+          "name": "FirstShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Prism::FirstShape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Prism", 
+          "name": "FirstShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Prism::LastShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Prism", 
+          "name": "LastShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Prism::LastShape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aGenS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepSweep_Prism", 
+          "name": "LastShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepSweep_Prism::Vec()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepSweep_Prism", 
+          "name": "Vec", 
+          "return": {
+            "type": "gp_Vec"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepSweep_Prism.hxx", 
+        36
+      ], 
+      "key": "BRepSweep_Prism"
+    }
+  ], 
+  "name": "BRepSweep"
+}

@@ -1,0 +1,3670 @@
+{
+  "headers": [
+    "Bisector_FunctionInter.hxx", 
+    "Bisector_Curve.hxx", 
+    "Bisector_PolyBis.hxx", 
+    "Bisector_PointOnBis.hxx", 
+    "Bisector_FunctionH.hxx", 
+    "Bisector_BisecPC.hxx", 
+    "Bisector_BisecAna.hxx", 
+    "Bisector_Inter.hxx", 
+    "Bisector_Bisec.hxx", 
+    "Bisector_BisecCC.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Bisector_Curve", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "Bisector_Curve::Parameter(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_Curve", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Bisector_Curve::IsExtendAtStart()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_Curve", 
+          "name": "IsExtendAtStart", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Bisector_Curve::IsExtendAtEnd()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_Curve", 
+          "name": "IsExtendAtEnd", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Bisector_Curve::NbIntervals()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_Curve", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Bisector_Curve::IntervalFirst(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_Curve", 
+          "name": "IntervalFirst", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Bisector_Curve::IntervalLast(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_Curve", 
+          "name": "IntervalLast", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Bisector_Curve::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_Curve", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_Curve::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_Curve", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_Curve::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_Curve", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Geom2d_Curve"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Bisector_Curve.hxx", 
+        34
+      ], 
+      "key": "Bisector_Curve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bisector_FunctionInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Bisector_FunctionInter::Bisector_FunctionInter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Bisector_FunctionInter", 
+          "name": "Bisector_FunctionInter", 
+          "return": {
+            "type": "Bisector_FunctionInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_FunctionInter::Bisector_FunctionInter(opencascade::handle<Geom2d_Curve>, opencascade::handle<Bisector_Curve>, opencascade::handle<Bisector_Curve>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Bisector_Curve>", 
+              "name": "Bis1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Bisector_Curve>", 
+              "name": "Bis2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_FunctionInter", 
+          "name": "Bisector_FunctionInter", 
+          "return": {
+            "type": "Bisector_FunctionInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_FunctionInter::Bisector_FunctionInter(Bisector_FunctionInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Bisector_FunctionInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_FunctionInter", 
+          "name": "Bisector_FunctionInter", 
+          "return": {
+            "type": "Bisector_FunctionInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Bisector_FunctionInter::Perform(opencascade::handle<Geom2d_Curve>, opencascade::handle<Bisector_Curve>, opencascade::handle<Bisector_Curve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Bisector_Curve>", 
+              "name": "Bis1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Bisector_Curve>", 
+              "name": "Bis2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_FunctionInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_FunctionInter::Value(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_FunctionInter", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_FunctionInter::Derivative(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_FunctionInter", 
+          "name": "Derivative", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_FunctionInter::Values(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_FunctionInter", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionWithDerivative"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Bisector_FunctionInter.hxx", 
+        33
+      ], 
+      "key": "Bisector_FunctionInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bisector_PointOnBis", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Bisector_PointOnBis::Bisector_PointOnBis()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Bisector_PointOnBis", 
+          "name": "Bisector_PointOnBis", 
+          "return": {
+            "type": "Bisector_PointOnBis", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PointOnBis::Bisector_PointOnBis(Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParamBis", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Distance", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_PointOnBis", 
+          "name": "Bisector_PointOnBis", 
+          "return": {
+            "type": "Bisector_PointOnBis", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PointOnBis::Bisector_PointOnBis(Bisector_PointOnBis)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Bisector_PointOnBis", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_PointOnBis", 
+          "name": "Bisector_PointOnBis", 
+          "return": {
+            "type": "Bisector_PointOnBis", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Bisector_PointOnBis::ParamOnC1(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_PointOnBis", 
+          "name": "ParamOnC1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PointOnBis::ParamOnC2(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_PointOnBis", 
+          "name": "ParamOnC2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PointOnBis::ParamOnBis(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_PointOnBis", 
+          "name": "ParamOnBis", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PointOnBis::Distance(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Distance", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_PointOnBis", 
+          "name": "Distance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PointOnBis::IsInfinite(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Infinite", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_PointOnBis", 
+          "name": "IsInfinite", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PointOnBis::Point(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_PointOnBis", 
+          "name": "Point", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PointOnBis::ParamOnC1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_PointOnBis", 
+          "name": "ParamOnC1", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PointOnBis::ParamOnC2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_PointOnBis", 
+          "name": "ParamOnC2", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PointOnBis::ParamOnBis()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_PointOnBis", 
+          "name": "ParamOnBis", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PointOnBis::Distance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_PointOnBis", 
+          "name": "Distance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PointOnBis::Point()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_PointOnBis", 
+          "name": "Point", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PointOnBis::IsInfinite()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_PointOnBis", 
+          "name": "IsInfinite", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PointOnBis::Dump()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_PointOnBis", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Bisector_PointOnBis.hxx", 
+        31
+      ], 
+      "key": "Bisector_PointOnBis"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bisector_PolyBis", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Bisector_PolyBis::Bisector_PolyBis()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Bisector_PolyBis", 
+          "name": "Bisector_PolyBis", 
+          "return": {
+            "type": "Bisector_PolyBis", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PolyBis::Bisector_PolyBis(Bisector_PolyBis)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Bisector_PolyBis", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_PolyBis", 
+          "name": "Bisector_PolyBis", 
+          "return": {
+            "type": "Bisector_PolyBis", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Bisector_PolyBis::Append(Bisector_PointOnBis)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Bisector_PointOnBis", 
+              "name": "Point", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_PolyBis", 
+          "name": "Append", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PolyBis::Length()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_PolyBis", 
+          "name": "Length", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PolyBis::IsEmpty()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_PolyBis", 
+          "name": "IsEmpty", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PolyBis::Value(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_PolyBis", 
+          "name": "Value", 
+          "return": {
+            "type": "Bisector_PointOnBis", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PolyBis::First()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_PolyBis", 
+          "name": "First", 
+          "return": {
+            "type": "Bisector_PointOnBis", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PolyBis::Last()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_PolyBis", 
+          "name": "Last", 
+          "return": {
+            "type": "Bisector_PointOnBis", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PolyBis::Interval(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_PolyBis", 
+          "name": "Interval", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_PolyBis::Transform(gp_Trsf2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Trsf2d", 
+              "name": "T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_PolyBis", 
+          "name": "Transform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Bisector_PolyBis.hxx", 
+        33
+      ], 
+      "key": "Bisector_PolyBis"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bisector_FunctionH", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Bisector_FunctionH::Bisector_FunctionH(opencascade::handle<Geom2d_Curve>, gp_Pnt2d, gp_Vec2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "T1", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_FunctionH", 
+          "name": "Bisector_FunctionH", 
+          "return": {
+            "type": "Bisector_FunctionH", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_FunctionH::Bisector_FunctionH(Bisector_FunctionH)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Bisector_FunctionH", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_FunctionH", 
+          "name": "Bisector_FunctionH", 
+          "return": {
+            "type": "Bisector_FunctionH", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Bisector_FunctionH::Value(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_FunctionH", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_FunctionH::Derivative(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_FunctionH", 
+          "name": "Derivative", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_FunctionH::Values(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_FunctionH", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionWithDerivative"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Bisector_FunctionH.hxx", 
+        37
+      ], 
+      "key": "Bisector_FunctionH"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bisector_BisecPC", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Bisector_BisecPC::Bisector_BisecPC()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Bisector_BisecPC", 
+          "name": "Bisector_BisecPC", 
+          "return": {
+            "type": "Bisector_BisecPC", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecPC::Bisector_BisecPC(opencascade::handle<Geom2d_Curve>, gp_Pnt2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Cu", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Side", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "DistMax", 
+              "default": "500", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "Bisector_BisecPC", 
+          "return": {
+            "type": "Bisector_BisecPC", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecPC::Bisector_BisecPC(opencascade::handle<Geom2d_Curve>, gp_Pnt2d, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Cu", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Side", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMax", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "Bisector_BisecPC", 
+          "return": {
+            "type": "Bisector_BisecPC", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecPC::Bisector_BisecPC(Bisector_BisecPC)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Bisector_BisecPC", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "Bisector_BisecPC", 
+          "return": {
+            "type": "Bisector_BisecPC", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Bisector_BisecPC::Perform(opencascade::handle<Geom2d_Curve>, gp_Pnt2d, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Cu", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Side", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "DistMax", 
+              "default": "500", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecPC::IsExtendAtStart()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecPC", 
+          "name": "IsExtendAtStart", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::IsExtendAtEnd()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecPC", 
+          "name": "IsExtendAtEnd", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::Reverse()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecPC", 
+          "name": "Reverse", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::ReversedParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "ReversedParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::Copy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecPC", 
+          "name": "Copy", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Geometry>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::Transform(gp_Trsf2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Trsf2d", 
+              "name": "T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "Transform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::IsCN(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "IsCN", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::FirstParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecPC", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::LastParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecPC", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::Continuity()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecPC", 
+          "name": "Continuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::NbIntervals()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecPC", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::IntervalFirst(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "IntervalFirst", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::IntervalLast(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "IntervalLast", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::IntervalContinuity()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecPC", 
+          "name": "IntervalContinuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecPC::IsClosed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecPC", 
+          "name": "IsClosed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::IsPeriodic()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecPC", 
+          "name": "IsPeriodic", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::Distance(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "Distance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecPC::D0(Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "D0", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::D1(Standard_Real, gp_Pnt2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::D2(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::D3(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V2", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V3", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "D3", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::DN(Standard_Real, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "DN", 
+          "return": {
+            "type": "gp_Vec2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::Dump(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Deep", 
+              "default": "0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Offset", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecPC::LinkBisCurve(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "LinkBisCurve", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecPC::LinkCurveBis(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "LinkCurveBis", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecPC::Parameter(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecPC", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecPC::IsEmpty()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecPC", 
+          "name": "IsEmpty", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecPC::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecPC", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecPC::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecPC", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecPC::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecPC", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Bisector_Curve"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Bisector_BisecPC.hxx", 
+        45
+      ], 
+      "key": "Bisector_BisecPC"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bisector_BisecAna", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Bisector_BisecAna::Bisector_BisecAna()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "Bisector_BisecAna", 
+          "return": {
+            "type": "Bisector_BisecAna", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecAna::Bisector_BisecAna(Bisector_BisecAna)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Bisector_BisecAna", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "Bisector_BisecAna", 
+          "return": {
+            "type": "Bisector_BisecAna", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Bisector_BisecAna::Perform(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom2d_Curve>, gp_Pnt2d, gp_Vec2d, gp_Vec2d, Standard_Real, GeomAbs_JoinType, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Cu1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Cu2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Sense", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_JoinType", 
+              "name": "jointype", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "oncurve", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecAna::Perform(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom2d_Point>, gp_Pnt2d, gp_Vec2d, gp_Vec2d, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Cu", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Point>", 
+              "name": "Pnt", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Sense", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "oncurve", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecAna::Perform(opencascade::handle<Geom2d_Point>, opencascade::handle<Geom2d_Curve>, gp_Pnt2d, gp_Vec2d, gp_Vec2d, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Point>", 
+              "name": "Pnt", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Cu", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Sense", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "oncurve", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecAna::Perform(opencascade::handle<Geom2d_Point>, opencascade::handle<Geom2d_Point>, gp_Pnt2d, gp_Vec2d, gp_Vec2d, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Point>", 
+              "name": "Pnt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Point>", 
+              "name": "Pnt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Sense", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "default": "0.", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "oncurve", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecAna::Init(opencascade::handle<Geom2d_TrimmedCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_TrimmedCurve>", 
+              "name": "bisector", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecAna::IsExtendAtStart()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "IsExtendAtStart", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::IsExtendAtEnd()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "IsExtendAtEnd", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::SetTrim(opencascade::handle<Geom2d_Curve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Cu", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "SetTrim", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecAna::SetTrim(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "uf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ul", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "SetTrim", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecAna::Reverse()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "Reverse", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::ReversedParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "ReversedParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::IsCN(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "IsCN", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::Copy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "Copy", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Geometry>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::Transform(gp_Trsf2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Trsf2d", 
+              "name": "T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "Transform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::FirstParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::LastParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::IsClosed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "IsClosed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::IsPeriodic()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "IsPeriodic", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::Continuity()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "Continuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::D0(Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "D0", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::D1(Standard_Real, gp_Pnt2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V1", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::D2(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::D3(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V2", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V3", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "D3", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::DN(Standard_Real, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "DN", 
+          "return": {
+            "type": "gp_Vec2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::Geom2dCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "Geom2dCurve", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecAna::Parameter(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::ParameterOfStartPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "ParameterOfStartPoint", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecAna::ParameterOfEndPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "ParameterOfEndPoint", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecAna::NbIntervals()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::IntervalFirst(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "IntervalFirst", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::IntervalLast(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "IntervalLast", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecAna::Dump(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Deep", 
+              "default": "0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Offset", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecAna", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecAna::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecAna::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecAna::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecAna", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Bisector_Curve"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Bisector_BisecAna.hxx", 
+        47
+      ], 
+      "key": "Bisector_BisecAna"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bisector_Bisec", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Bisector_Bisec::Bisector_Bisec()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Bisector_Bisec", 
+          "name": "Bisector_Bisec", 
+          "return": {
+            "type": "Bisector_Bisec", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_Bisec::Bisector_Bisec(Bisector_Bisec)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Bisector_Bisec", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_Bisec", 
+          "name": "Bisector_Bisec", 
+          "return": {
+            "type": "Bisector_Bisec", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Bisector_Bisec::Perform(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom2d_Curve>, gp_Pnt2d, gp_Vec2d, gp_Vec2d, Standard_Real, GeomAbs_JoinType, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Cu1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Cu2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Sense", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_JoinType", 
+              "name": "ajointype", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "oncurve", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_Bisec", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_Bisec::Perform(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom2d_Point>, gp_Pnt2d, gp_Vec2d, gp_Vec2d, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Cu", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Point>", 
+              "name": "Pnt", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Sense", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "oncurve", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_Bisec", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_Bisec::Perform(opencascade::handle<Geom2d_Point>, opencascade::handle<Geom2d_Curve>, gp_Pnt2d, gp_Vec2d, gp_Vec2d, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Point>", 
+              "name": "Pnt", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Cu", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Sense", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "oncurve", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_Bisec", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_Bisec::Perform(opencascade::handle<Geom2d_Point>, opencascade::handle<Geom2d_Point>, gp_Pnt2d, gp_Vec2d, gp_Vec2d, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Point>", 
+              "name": "Pnt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Point>", 
+              "name": "Pnt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Sense", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "default": "0.", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "oncurve", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_Bisec", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_Bisec::Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_Bisec", 
+          "name": "Value", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_TrimmedCurve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_Bisec::ChangeValue()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_Bisec", 
+          "name": "ChangeValue", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_TrimmedCurve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Bisector_Bisec.hxx", 
+        54
+      ], 
+      "key": "Bisector_Bisec"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bisector_BisecCC", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Bisector_BisecCC::Bisector_BisecCC()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "Bisector_BisecCC", 
+          "return": {
+            "type": "Bisector_BisecCC", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecCC::Bisector_BisecCC(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom2d_Curve>, Standard_Real, Standard_Real, gp_Pnt2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Cu1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Cu2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Side1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Side2", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Origin", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "DistMax", 
+              "default": "500", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "Bisector_BisecCC", 
+          "return": {
+            "type": "Bisector_BisecCC", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecCC::Bisector_BisecCC(Bisector_BisecCC)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Bisector_BisecCC", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "Bisector_BisecCC", 
+          "return": {
+            "type": "Bisector_BisecCC", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Bisector_BisecCC::Perform(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom2d_Curve>, Standard_Real, Standard_Real, gp_Pnt2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Cu1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Cu2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Side1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Side2", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Origin", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "DistMax", 
+              "default": "500", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecCC::IsExtendAtStart()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "IsExtendAtStart", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::IsExtendAtEnd()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "IsExtendAtEnd", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::Reverse()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "Reverse", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::ReversedParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "ReversedParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::IsCN(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "IsCN", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::ChangeGuide()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "ChangeGuide", 
+          "return": {
+            "type": "opencascade::handle<Bisector_BisecCC>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecCC::Copy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "Copy", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Geometry>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::Transform(gp_Trsf2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Trsf2d", 
+              "name": "T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "Transform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::FirstParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::LastParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::Continuity()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "Continuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::NbIntervals()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::IntervalFirst(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "IntervalFirst", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::IntervalLast(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "IntervalLast", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::IntervalContinuity()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "IntervalContinuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecCC::IsClosed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "IsClosed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::IsPeriodic()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "IsPeriodic", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::ValueAndDist(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Distance", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "ValueAndDist", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecCC::ValueByInt(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Distance", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "ValueByInt", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecCC::D0(Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "D0", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::D1(Standard_Real, gp_Pnt2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::D2(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::D3(Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V2", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V3", 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "D3", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::DN(Standard_Real, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "DN", 
+          "return": {
+            "type": "gp_Vec2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::IsEmpty()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "IsEmpty", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecCC::LinkBisCurve(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "LinkBisCurve", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecCC::LinkCurveBis(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "LinkCurveBis", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecCC::Parameter(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Bisector_BisecCC::Curve(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndCurve", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "Curve", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecCC::Polygon()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "Polygon", 
+          "return": {
+            "type": "Bisector_PolyBis", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecCC::Dump(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Deep", 
+              "default": "0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Offset", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_BisecCC", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecCC::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecCC::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_BisecCC::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Bisector_BisecCC", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Bisector_Curve"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Bisector_BisecCC.hxx", 
+        46
+      ], 
+      "key": "Bisector_BisecCC"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Bisector_Inter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Bisector_Inter::Bisector_Inter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Bisector_Inter", 
+          "name": "Bisector_Inter", 
+          "return": {
+            "type": "Bisector_Inter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_Inter::Bisector_Inter(Bisector_Bisec, IntRes2d_Domain, Bisector_Bisec, IntRes2d_Domain, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Bisector_Bisec", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Bisector_Bisec", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "ComunElement", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_Inter", 
+          "name": "Bisector_Inter", 
+          "return": {
+            "type": "Bisector_Inter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Bisector_Inter::Bisector_Inter(Bisector_Inter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Bisector_Inter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Bisector_Inter", 
+          "name": "Bisector_Inter", 
+          "return": {
+            "type": "Bisector_Inter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Bisector_Inter::Perform(Bisector_Bisec, IntRes2d_Domain, Bisector_Bisec, IntRes2d_Domain, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Bisector_Bisec", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Bisector_Bisec", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "ComunElement", 
+              "const": true
+            }
+          ], 
+          "parent": "Bisector_Inter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "IntRes2d_Intersection"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Bisector_Inter.hxx", 
+        36
+      ], 
+      "key": "Bisector_Inter"
+    }, 
+    {
+      "type": "opencascade::handle<Bisector_Curve>", 
+      "declType": "typedef", 
+      "name": "Handle_Bisector_Curve", 
+      "key": "Handle_Bisector_Curve"
+    }, 
+    {
+      "type": "opencascade::handle<Bisector_BisecPC>", 
+      "declType": "typedef", 
+      "name": "Handle_Bisector_BisecPC", 
+      "key": "Handle_Bisector_BisecPC"
+    }, 
+    {
+      "type": "opencascade::handle<Bisector_BisecAna>", 
+      "declType": "typedef", 
+      "name": "Handle_Bisector_BisecAna", 
+      "key": "Handle_Bisector_BisecAna"
+    }, 
+    {
+      "type": "opencascade::handle<Bisector_BisecCC>", 
+      "declType": "typedef", 
+      "name": "Handle_Bisector_BisecCC", 
+      "key": "Handle_Bisector_BisecCC"
+    }
+  ], 
+  "name": "Bisector"
+}

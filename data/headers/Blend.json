@@ -1,0 +1,5933 @@
+{
+  "headers": [
+    "Blend_FuncInv.hxx", 
+    "Blend_AppFunction.hxx", 
+    "Blend_RstRstFunction.hxx", 
+    "Blend_SequenceOfPoint.hxx", 
+    "Blend_Point.hxx", 
+    "Blend_SurfPointFuncInv.hxx", 
+    "Blend_SurfCurvFuncInv.hxx", 
+    "Blend_Status.hxx", 
+    "Blend_SurfRstFunction.hxx", 
+    "Blend_CSFunction.hxx", 
+    "Blend_DecrochStatus.hxx", 
+    "Blend_CurvPointFuncInv.hxx", 
+    "Blend_Function.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Blend_FuncInv", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "Blend_FuncInv::NbVariables()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_FuncInv", 
+          "name": "NbVariables", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_FuncInv::NbEquations()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_FuncInv", 
+          "name": "NbEquations", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_FuncInv::Value(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_FuncInv", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_FuncInv::Derivatives(math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_FuncInv", 
+          "name": "Derivatives", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_FuncInv::Values(math_Vector, math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_FuncInv", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_FuncInv::Set(Standard_Boolean, opencascade::handle<Adaptor2d_HCurve2d>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "OnFirst", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "COnSurf", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_FuncInv", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_FuncInv::GetTolerance(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Tolerance", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_FuncInv", 
+          "name": "GetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_FuncInv::GetBounds(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "InfBound", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "SupBound", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_FuncInv", 
+          "name": "GetBounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_FuncInv::IsSolution(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Sol", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_FuncInv", 
+          "name": "IsSolution", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionSetWithDerivatives"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Blend_FuncInv.hxx", 
+        43
+      ], 
+      "key": "Blend_FuncInv"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Blend_Point", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Blend_Point::Blend_Point()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "Blend_Point", 
+          "return": {
+            "type": "Blend_Point", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::Blend_Point(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Vec, gp_Vec, gp_Vec2d, gp_Vec2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Tg1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Tg2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "Tg12d", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "Tg22d", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "Blend_Point", 
+          "return": {
+            "type": "Blend_Point", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::Blend_Point(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "Blend_Point", 
+          "return": {
+            "type": "Blend_Point", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::Blend_Point(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Vec, gp_Vec, gp_Vec2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pts", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Ptc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "W", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Tgs", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Tgc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "Tg2d", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "Blend_Point", 
+          "return": {
+            "type": "Blend_Point", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::Blend_Point(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pts", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Ptc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "W", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "Blend_Point", 
+          "return": {
+            "type": "Blend_Point", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::Blend_Point(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Vec, gp_Vec, gp_Vec2d, gp_Vec2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PC", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Tg1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Tg2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "Tg12d", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "Tg22d", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "Blend_Point", 
+          "return": {
+            "type": "Blend_Point", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::Blend_Point(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PC", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "Blend_Point", 
+          "return": {
+            "type": "Blend_Point", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::Blend_Point(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Vec, gp_Vec, gp_Vec2d, gp_Vec2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PC1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PC2", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Tg1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Tg2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "Tg12d", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "Tg22d", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "Blend_Point", 
+          "return": {
+            "type": "Blend_Point", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::Blend_Point(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PC1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PC2", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "Blend_Point", 
+          "return": {
+            "type": "Blend_Point", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::Blend_Point(Blend_Point)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "Blend_Point", 
+          "return": {
+            "type": "Blend_Point", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Blend_Point::SetValue(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Vec, gp_Vec, gp_Vec2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Tg1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Tg2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "Tg12d", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "Tg22d", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::SetValue(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::SetValue(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Vec, gp_Vec, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pts", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Ptc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "W", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Tgs", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Tgc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "Tg2d", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::SetValue(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pts", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Ptc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "W", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::SetValue(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Vec, gp_Vec, gp_Vec2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PC", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Tg1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Tg2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "Tg12d", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "Tg22d", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::SetValue(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PC", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::SetValue(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Vec, gp_Vec, gp_Vec2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PC1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PC2", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Tg1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Tg2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "Tg12d", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "Tg22d", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::SetValue(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PC1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PC2", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::SetValue(gp_Pnt, gp_Pnt, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PC1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PC2", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::SetParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "SetParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::Parameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::IsTangencyPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "IsTangencyPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::PointOnS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "PointOnS1", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::PointOnS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "PointOnS2", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::ParametersOnS1(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "ParametersOnS1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::ParametersOnS2(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "ParametersOnS2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::TangentOnS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "TangentOnS1", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::TangentOnS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "TangentOnS2", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::Tangent2dOnS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "Tangent2dOnS1", 
+          "return": {
+            "type": "gp_Vec2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::Tangent2dOnS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "Tangent2dOnS2", 
+          "return": {
+            "type": "gp_Vec2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::PointOnS()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "PointOnS", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::PointOnC()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "PointOnC", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::ParametersOnS(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Point", 
+          "name": "ParametersOnS", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::ParameterOnC()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "ParameterOnC", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::TangentOnS()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "TangentOnS", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::TangentOnC()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "TangentOnC", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::Tangent2d()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "Tangent2d", 
+          "return": {
+            "type": "gp_Vec2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::PointOnC1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "PointOnC1", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::PointOnC2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "PointOnC2", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::ParameterOnC1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "ParameterOnC1", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::ParameterOnC2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "ParameterOnC2", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::TangentOnC1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "TangentOnC1", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Blend_Point::TangentOnC2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Point", 
+          "name": "TangentOnC2", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Blend_Point.hxx", 
+        36
+      ], 
+      "key": "Blend_Point"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Blend_AppFunction", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "Blend_AppFunction::NbVariables()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_AppFunction", 
+          "name": "NbVariables", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::NbEquations()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_AppFunction", 
+          "name": "NbEquations", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::Value(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::Derivatives(math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "Derivatives", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::Values(math_Vector, math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::Set(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::Set(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Last", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::GetTolerance(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Tolerance", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "GetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::GetBounds(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "InfBound", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "SupBound", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "GetBounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::IsSolution(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Sol", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "IsSolution", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::GetMinimalDistance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_AppFunction", 
+          "name": "GetMinimalDistance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::Pnt1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_AppFunction", 
+          "name": "Pnt1", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::Pnt2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_AppFunction", 
+          "name": "Pnt2", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::IsRational()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_AppFunction", 
+          "name": "IsRational", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::GetSectionSize()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_AppFunction", 
+          "name": "GetSectionSize", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::GetMinimalWeight(TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "GetMinimalWeight", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::NbIntervals(GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "Intervals", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::GetShape(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "NbPoles", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbKnots", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Degree", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbPoles2d", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "GetShape", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::GetTolerance(Standard_Real, Standard_Real, Standard_Real, math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "BoundTol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "SurfTol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "AngleTol", 
+              "const": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Tol3d", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Tol1D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "GetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::Knots(TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "TKnots", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "Knots", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::Mults(TColStd_Array1OfInteger)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfInteger", 
+              "name": "TMults", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "Mults", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::Section(Blend_Point, TColgp_Array1OfPnt, TColgp_Array1OfVec, TColgp_Array1OfPnt2d, TColgp_Array1OfVec2d, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec", 
+              "name": "DPoles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "DPoles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "DWeigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "Section", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::Section(Blend_Point, TColgp_Array1OfPnt, TColgp_Array1OfPnt2d, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "Section", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::Section(Blend_Point, TColgp_Array1OfPnt, TColgp_Array1OfVec, TColgp_Array1OfVec, TColgp_Array1OfPnt2d, TColgp_Array1OfVec2d, TColgp_Array1OfVec2d, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec", 
+              "name": "DPoles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec", 
+              "name": "D2Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "DPoles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "D2Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "DWeigths", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "D2Weigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "Section", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::Resolution(Standard_Integer, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC2d", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolU", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolV", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "Resolution", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_AppFunction::Parameter(Blend_Point)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_AppFunction", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionSetWithDerivatives"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Blend_AppFunction.hxx", 
+        48
+      ], 
+      "key": "Blend_AppFunction"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Blend_RstRstFunction", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "Blend_RstRstFunction::NbVariables()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "NbVariables", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::NbEquations()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "NbEquations", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Value(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Derivatives(math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Derivatives", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Values(math_Vector, math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Set(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Set(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Last", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::GetTolerance(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Tolerance", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "GetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::GetBounds(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "InfBound", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "SupBound", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "GetBounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::IsSolution(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Sol", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "IsSolution", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::GetMinimalDistance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "GetMinimalDistance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Pnt1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Pnt1", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Pnt2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Pnt2", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::PointOnRst1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "PointOnRst1", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::PointOnRst2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "PointOnRst2", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Pnt2dOnRst1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Pnt2dOnRst1", 
+          "return": {
+            "type": "gp_Pnt2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Pnt2dOnRst2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Pnt2dOnRst2", 
+          "return": {
+            "type": "gp_Pnt2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::ParameterOnRst1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "ParameterOnRst1", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::ParameterOnRst2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "ParameterOnRst2", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::IsTangencyPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "IsTangencyPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::TangentOnRst1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "TangentOnRst1", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Tangent2dOnRst1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Tangent2dOnRst1", 
+          "return": {
+            "type": "gp_Vec2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::TangentOnRst2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "TangentOnRst2", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Tangent2dOnRst2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Tangent2dOnRst2", 
+          "return": {
+            "type": "gp_Vec2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Decroch(math_Vector, gp_Vec, gp_Vec, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Sol", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "NRst1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "TgRst1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "NRst2", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "TgRst2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Decroch", 
+          "return": {
+            "type": "Blend_DecrochStatus"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::IsRational()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "IsRational", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::GetSectionSize()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "GetSectionSize", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::GetMinimalWeight(TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "GetMinimalWeight", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::NbIntervals(GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Intervals", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::GetShape(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "NbPoles", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbKnots", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Degree", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbPoles2d", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "GetShape", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::GetTolerance(Standard_Real, Standard_Real, Standard_Real, math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "BoundTol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "SurfTol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "AngleTol", 
+              "const": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Tol3d", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Tol1D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "GetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Knots(TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "TKnots", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Knots", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Mults(TColStd_Array1OfInteger)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfInteger", 
+              "name": "TMults", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Mults", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Section(Blend_Point, TColgp_Array1OfPnt, TColgp_Array1OfPnt2d, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Section", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Section(Blend_Point, TColgp_Array1OfPnt, TColgp_Array1OfVec, TColgp_Array1OfPnt2d, TColgp_Array1OfVec2d, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec", 
+              "name": "DPoles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "DPoles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "DWeigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Section", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_RstRstFunction::Section(Blend_Point, TColgp_Array1OfPnt, TColgp_Array1OfVec, TColgp_Array1OfVec, TColgp_Array1OfPnt2d, TColgp_Array1OfVec2d, TColgp_Array1OfVec2d, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec", 
+              "name": "DPoles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec", 
+              "name": "D2Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "DPoles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "D2Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "DWeigths", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "D2Weigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_RstRstFunction", 
+          "name": "Section", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Blend_AppFunction"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Blend_RstRstFunction.hxx", 
+        52
+      ], 
+      "key": "Blend_RstRstFunction"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Blend_SurfPointFuncInv", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "Blend_SurfPointFuncInv::NbVariables()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfPointFuncInv", 
+          "name": "NbVariables", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_SurfPointFuncInv::NbEquations()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfPointFuncInv", 
+          "name": "NbEquations", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfPointFuncInv::Value(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfPointFuncInv", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfPointFuncInv::Derivatives(math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfPointFuncInv", 
+          "name": "Derivatives", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfPointFuncInv::Values(math_Vector, math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfPointFuncInv", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfPointFuncInv::Set(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfPointFuncInv", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfPointFuncInv::GetTolerance(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Tolerance", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_SurfPointFuncInv", 
+          "name": "GetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfPointFuncInv::GetBounds(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "InfBound", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "SupBound", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfPointFuncInv", 
+          "name": "GetBounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfPointFuncInv::IsSolution(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Sol", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_SurfPointFuncInv", 
+          "name": "IsSolution", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionSetWithDerivatives"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Blend_SurfPointFuncInv.hxx", 
+        43
+      ], 
+      "key": "Blend_SurfPointFuncInv"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Blend_SurfCurvFuncInv", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "Blend_SurfCurvFuncInv::NbVariables()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfCurvFuncInv", 
+          "name": "NbVariables", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_SurfCurvFuncInv::NbEquations()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfCurvFuncInv", 
+          "name": "NbEquations", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfCurvFuncInv::Value(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfCurvFuncInv", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfCurvFuncInv::Derivatives(math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfCurvFuncInv", 
+          "name": "Derivatives", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfCurvFuncInv::Values(math_Vector, math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfCurvFuncInv", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfCurvFuncInv::Set(opencascade::handle<Adaptor2d_HCurve2d>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "Rst", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfCurvFuncInv", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfCurvFuncInv::GetTolerance(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Tolerance", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_SurfCurvFuncInv", 
+          "name": "GetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfCurvFuncInv::GetBounds(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "InfBound", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "SupBound", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfCurvFuncInv", 
+          "name": "GetBounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfCurvFuncInv::IsSolution(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Sol", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_SurfCurvFuncInv", 
+          "name": "IsSolution", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionSetWithDerivatives"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Blend_SurfCurvFuncInv.hxx", 
+        44
+      ], 
+      "key": "Blend_SurfCurvFuncInv"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Blend_SurfRstFunction", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "Blend_SurfRstFunction::NbVariables()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "NbVariables", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::NbEquations()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "NbEquations", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Value(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Derivatives(math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Derivatives", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Values(math_Vector, math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Set(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Set(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Last", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::GetTolerance(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Tolerance", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "GetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::GetBounds(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "InfBound", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "SupBound", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "GetBounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::IsSolution(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Sol", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "IsSolution", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::GetMinimalDistance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "GetMinimalDistance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Pnt1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Pnt1", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Pnt2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Pnt2", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::PointOnS()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "PointOnS", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::PointOnRst()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "PointOnRst", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Pnt2dOnS()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Pnt2dOnS", 
+          "return": {
+            "type": "gp_Pnt2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Pnt2dOnRst()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Pnt2dOnRst", 
+          "return": {
+            "type": "gp_Pnt2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::ParameterOnRst()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "ParameterOnRst", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::IsTangencyPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "IsTangencyPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::TangentOnS()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "TangentOnS", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Tangent2dOnS()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Tangent2dOnS", 
+          "return": {
+            "type": "gp_Vec2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::TangentOnRst()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "TangentOnRst", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Tangent2dOnRst()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Tangent2dOnRst", 
+          "return": {
+            "type": "gp_Vec2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Decroch(math_Vector, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Sol", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "NS", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "TgS", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Decroch", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::IsRational()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "IsRational", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::GetSectionSize()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "GetSectionSize", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::GetMinimalWeight(TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "GetMinimalWeight", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::NbIntervals(GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Intervals", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::GetShape(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "NbPoles", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbKnots", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Degree", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbPoles2d", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "GetShape", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::GetTolerance(Standard_Real, Standard_Real, Standard_Real, math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "BoundTol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "SurfTol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "AngleTol", 
+              "const": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Tol3d", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Tol1D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "GetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Knots(TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "TKnots", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Knots", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Mults(TColStd_Array1OfInteger)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfInteger", 
+              "name": "TMults", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Mults", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Section(Blend_Point, TColgp_Array1OfPnt, TColgp_Array1OfVec, TColgp_Array1OfPnt2d, TColgp_Array1OfVec2d, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec", 
+              "name": "DPoles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "DPoles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "DWeigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Section", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Section(Blend_Point, TColgp_Array1OfPnt, TColgp_Array1OfVec, TColgp_Array1OfVec, TColgp_Array1OfPnt2d, TColgp_Array1OfVec2d, TColgp_Array1OfVec2d, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec", 
+              "name": "DPoles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec", 
+              "name": "D2Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "DPoles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "D2Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "DWeigths", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "D2Weigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Section", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_SurfRstFunction::Section(Blend_Point, TColgp_Array1OfPnt, TColgp_Array1OfPnt2d, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_SurfRstFunction", 
+          "name": "Section", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Blend_AppFunction"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Blend_SurfRstFunction.hxx", 
+        51
+      ], 
+      "key": "Blend_SurfRstFunction"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Blend_CSFunction", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "Blend_CSFunction::NbVariables()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_CSFunction", 
+          "name": "NbVariables", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::NbEquations()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_CSFunction", 
+          "name": "NbEquations", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::Value(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CSFunction", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::Derivatives(math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CSFunction", 
+          "name": "Derivatives", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::Values(math_Vector, math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CSFunction", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::Set(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_CSFunction", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::Set(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Last", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_CSFunction", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::GetTolerance(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Tolerance", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_CSFunction", 
+          "name": "GetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::GetBounds(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "InfBound", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "SupBound", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CSFunction", 
+          "name": "GetBounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::IsSolution(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Sol", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_CSFunction", 
+          "name": "IsSolution", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::GetMinimalDistance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_CSFunction", 
+          "name": "GetMinimalDistance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::Pnt1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_CSFunction", 
+          "name": "Pnt1", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::Pnt2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_CSFunction", 
+          "name": "Pnt2", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::PointOnS()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_CSFunction", 
+          "name": "PointOnS", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::PointOnC()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_CSFunction", 
+          "name": "PointOnC", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::Pnt2d()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_CSFunction", 
+          "name": "Pnt2d", 
+          "return": {
+            "type": "gp_Pnt2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::ParameterOnC()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_CSFunction", 
+          "name": "ParameterOnC", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::IsTangencyPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_CSFunction", 
+          "name": "IsTangencyPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::TangentOnS()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_CSFunction", 
+          "name": "TangentOnS", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::Tangent2d()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_CSFunction", 
+          "name": "Tangent2d", 
+          "return": {
+            "type": "gp_Vec2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::TangentOnC()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_CSFunction", 
+          "name": "TangentOnC", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::Tangent(Standard_Real, Standard_Real, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "TgS", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "NormS", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CSFunction", 
+          "name": "Tangent", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::GetShape(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "NbPoles", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbKnots", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Degree", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbPoles2d", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CSFunction", 
+          "name": "GetShape", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::GetTolerance(Standard_Real, Standard_Real, Standard_Real, math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "BoundTol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "SurfTol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "AngleTol", 
+              "const": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Tol3d", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Tol1D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CSFunction", 
+          "name": "GetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::Knots(TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "TKnots", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CSFunction", 
+          "name": "Knots", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::Mults(TColStd_Array1OfInteger)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfInteger", 
+              "name": "TMults", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CSFunction", 
+          "name": "Mults", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::Section(Blend_Point, TColgp_Array1OfPnt, TColgp_Array1OfVec, TColgp_Array1OfPnt2d, TColgp_Array1OfVec2d, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec", 
+              "name": "DPoles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "DPoles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "DWeigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CSFunction", 
+          "name": "Section", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::Section(Blend_Point, TColgp_Array1OfPnt, TColgp_Array1OfPnt2d, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CSFunction", 
+          "name": "Section", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CSFunction::Section(Blend_Point, TColgp_Array1OfPnt, TColgp_Array1OfVec, TColgp_Array1OfVec, TColgp_Array1OfPnt2d, TColgp_Array1OfVec2d, TColgp_Array1OfVec2d, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec", 
+              "name": "DPoles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec", 
+              "name": "D2Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "DPoles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "D2Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "DWeigths", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "D2Weigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CSFunction", 
+          "name": "Section", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Blend_AppFunction"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Blend_CSFunction.hxx", 
+        50
+      ], 
+      "key": "Blend_CSFunction"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Blend_CurvPointFuncInv", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "Blend_CurvPointFuncInv::NbVariables()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_CurvPointFuncInv", 
+          "name": "NbVariables", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_CurvPointFuncInv::NbEquations()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_CurvPointFuncInv", 
+          "name": "NbEquations", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CurvPointFuncInv::Value(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CurvPointFuncInv", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CurvPointFuncInv::Derivatives(math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CurvPointFuncInv", 
+          "name": "Derivatives", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CurvPointFuncInv::Values(math_Vector, math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CurvPointFuncInv", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CurvPointFuncInv::Set(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CurvPointFuncInv", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CurvPointFuncInv::GetTolerance(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Tolerance", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_CurvPointFuncInv", 
+          "name": "GetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CurvPointFuncInv::GetBounds(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "InfBound", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "SupBound", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_CurvPointFuncInv", 
+          "name": "GetBounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_CurvPointFuncInv::IsSolution(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Sol", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_CurvPointFuncInv", 
+          "name": "IsSolution", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionSetWithDerivatives"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Blend_CurvPointFuncInv.hxx", 
+        42
+      ], 
+      "key": "Blend_CurvPointFuncInv"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Blend_Function", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "Blend_Function::NbVariables()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Function", 
+          "name": "NbVariables", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_Function::NbEquations()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Function", 
+          "name": "NbEquations", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::Value(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Function", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::Derivatives(math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Function", 
+          "name": "Derivatives", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::Values(math_Vector, math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Function", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::Set(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_Function", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::Set(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Last", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_Function", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::GetTolerance(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Tolerance", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_Function", 
+          "name": "GetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::GetBounds(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "InfBound", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "SupBound", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Function", 
+          "name": "GetBounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::IsSolution(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "Sol", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Blend_Function", 
+          "name": "IsSolution", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::Pnt1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Function", 
+          "name": "Pnt1", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_Function::Pnt2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Function", 
+          "name": "Pnt2", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_Function::PointOnS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Function", 
+          "name": "PointOnS1", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::PointOnS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Function", 
+          "name": "PointOnS2", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::IsTangencyPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Function", 
+          "name": "IsTangencyPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::TangentOnS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Function", 
+          "name": "TangentOnS1", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::Tangent2dOnS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Function", 
+          "name": "Tangent2dOnS1", 
+          "return": {
+            "type": "gp_Vec2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::TangentOnS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Function", 
+          "name": "TangentOnS2", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::Tangent2dOnS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Function", 
+          "name": "Tangent2dOnS2", 
+          "return": {
+            "type": "gp_Vec2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::Tangent(Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Vec, gp_Vec, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "TgFirst", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "TgLast", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "NormFirst", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "NormLast", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Function", 
+          "name": "Tangent", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::TwistOnS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Function", 
+          "name": "TwistOnS1", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_Function::TwistOnS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Blend_Function", 
+          "name": "TwistOnS2", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Blend_Function::GetShape(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "NbPoles", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbKnots", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Degree", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbPoles2d", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Function", 
+          "name": "GetShape", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::GetTolerance(Standard_Real, Standard_Real, Standard_Real, math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "BoundTol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "SurfTol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "AngleTol", 
+              "const": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Tol3d", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Tol1D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Function", 
+          "name": "GetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::Knots(TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "TKnots", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Function", 
+          "name": "Knots", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::Mults(TColStd_Array1OfInteger)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfInteger", 
+              "name": "TMults", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Function", 
+          "name": "Mults", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::Section(Blend_Point, TColgp_Array1OfPnt, TColgp_Array1OfVec, TColgp_Array1OfPnt2d, TColgp_Array1OfVec2d, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec", 
+              "name": "DPoles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "DPoles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "DWeigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Function", 
+          "name": "Section", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::Section(Blend_Point, TColgp_Array1OfPnt, TColgp_Array1OfPnt2d, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Function", 
+          "name": "Section", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Blend_Function::Section(Blend_Point, TColgp_Array1OfPnt, TColgp_Array1OfVec, TColgp_Array1OfVec, TColgp_Array1OfPnt2d, TColgp_Array1OfVec2d, TColgp_Array1OfVec2d, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Blend_Point", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec", 
+              "name": "DPoles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec", 
+              "name": "D2Poles", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "DPoles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "D2Poles2d", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weigths", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "DWeigths", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "D2Weigths", 
+              "ref": true
+            }
+          ], 
+          "parent": "Blend_Function", 
+          "name": "Section", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Blend_AppFunction"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Blend_Function.hxx", 
+        49
+      ], 
+      "key": "Blend_Function"
+    }, 
+    {
+      "type": "NCollection_Sequence<Blend_Point>", 
+      "declType": "typedef", 
+      "name": "Blend_SequenceOfPoint", 
+      "key": "Blend_SequenceOfPoint"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "Blend_NoDecroch", 
+          0
+        ], 
+        [
+          "Blend_DecrochRst1", 
+          1
+        ], 
+        [
+          "Blend_DecrochRst2", 
+          2
+        ], 
+        [
+          "Blend_DecrochBoth", 
+          3
+        ]
+      ], 
+      "name": "Blend_DecrochStatus", 
+      "key": "Blend_DecrochStatus"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "Blend_StepTooLarge", 
+          0
+        ], 
+        [
+          "Blend_StepTooSmall", 
+          1
+        ], 
+        [
+          "Blend_Backward", 
+          2
+        ], 
+        [
+          "Blend_SamePoints", 
+          3
+        ], 
+        [
+          "Blend_OnRst1", 
+          4
+        ], 
+        [
+          "Blend_OnRst2", 
+          5
+        ], 
+        [
+          "Blend_OnRst12", 
+          6
+        ], 
+        [
+          "Blend_OK", 
+          7
+        ]
+      ], 
+      "name": "Blend_Status", 
+      "key": "Blend_Status"
+    }
+  ], 
+  "name": "Blend"
+}

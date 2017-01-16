@@ -1,0 +1,3058 @@
+{
+  "headers": [
+    "IntPolyh_SeqOfStartPoints.hxx", 
+    "IntPolyh_ArrayOfTriangles.hxx", 
+    "IntPolyh_Point.hxx", 
+    "IntPolyh_ArrayOfStartPoints.hxx", 
+    "IntPolyh_Couple.hxx", 
+    "IntPolyh_ArrayOfTangentZones.hxx", 
+    "IntPolyh_PMaillageAffinage.hxx", 
+    "IntPolyh_ArrayOfSectionLines.hxx", 
+    "IntPolyh_ArrayOfPoints.hxx", 
+    "IntPolyh_SectionLine.hxx", 
+    "IntPolyh_Edge.hxx", 
+    "IntPolyh_StartPoint.hxx", 
+    "IntPolyh_Triangle.hxx", 
+    "IntPolyh_ArrayOfEdges.hxx", 
+    "IntPolyh_Intersection.hxx", 
+    "IntPolyh_ArrayOfCouples.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "IntPolyh_Triangle", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntPolyh_Triangle::IntPolyh_Triangle()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "IntPolyh_Triangle", 
+          "return": {
+            "type": "IntPolyh_Triangle", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::IntPolyh_Triangle(Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "i1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "i2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "i3", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "IntPolyh_Triangle", 
+          "return": {
+            "type": "IntPolyh_Triangle", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::IntPolyh_Triangle(IntPolyh_Triangle)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntPolyh_Triangle", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "IntPolyh_Triangle", 
+          "return": {
+            "type": "IntPolyh_Triangle", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::FirstPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "FirstPoint", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::SecondPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "SecondPoint", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::ThirdPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "ThirdPoint", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::FirstEdge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "FirstEdge", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::FirstEdgeOrientation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "FirstEdgeOrientation", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::SecondEdge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "SecondEdge", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::SecondEdgeOrientation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "SecondEdgeOrientation", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::ThirdEdge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "ThirdEdge", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::ThirdEdgeOrientation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "ThirdEdgeOrientation", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::GetFleche()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "GetFleche", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::IndiceIntersectionPossible()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "IndiceIntersectionPossible", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::IndiceIntersection()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "IndiceIntersection", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::SetFirstPoint(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "SetFirstPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::SetSecondPoint(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "SetSecondPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::SetThirdPoint(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "SetThirdPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::SetFirstEdge(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "s", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "SetFirstEdge", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::SetSecondEdge(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "s", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "SetSecondEdge", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::SetThirdEdge(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "s", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "SetThirdEdge", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::SetFleche(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "SetFleche", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::SetIndiceIntersectionPossible(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "SetIndiceIntersectionPossible", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::SetIndiceIntersection(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "SetIndiceIntersection", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::GetEdgeNumber(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "GetEdgeNumber", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::SetEdge(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "en", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "SetEdge", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::GetEdgeOrientation(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "GetEdgeOrientation", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::SetEdgeOrientation(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "oe", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "SetEdgeOrientation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::TriangleDeflection(opencascade::handle<Adaptor3d_HSurface>, IntPolyh_ArrayOfPoints)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "MaSurface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfPoints", 
+              "name": "TP", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "TriangleDeflection", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::CheckCommonEdge(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, IntPolyh_ArrayOfTriangles)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "PE1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "PE2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "P3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfTriangles", 
+              "name": "TTriangles", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "CheckCommonEdge", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::GetNextTriangle2(Standard_Integer, Standard_Integer, IntPolyh_ArrayOfEdges)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "NumTri", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NumEdge", 
+              "const": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfEdges", 
+              "name": "TEdges", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "GetNextTriangle2", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::MiddleRefinement(Standard_Integer, opencascade::handle<Adaptor3d_HSurface>, IntPolyh_ArrayOfPoints, IntPolyh_ArrayOfTriangles, IntPolyh_ArrayOfEdges)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "TriangleNumber", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "MySurface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfPoints", 
+              "name": "TPoints", 
+              "ref": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfTriangles", 
+              "name": "TTriangles", 
+              "ref": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfEdges", 
+              "name": "TEdges", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "MiddleRefinement", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::MultipleMiddleRefinement(Standard_Integer, Standard_Integer, opencascade::handle<Adaptor3d_HSurface>, IntPolyh_ArrayOfPoints, IntPolyh_ArrayOfTriangles, IntPolyh_ArrayOfEdges)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "NombreAffinages", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "TriangleNumber", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "MySurface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfPoints", 
+              "name": "TPoints", 
+              "ref": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfTriangles", 
+              "name": "TTriangles", 
+              "ref": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfEdges", 
+              "name": "TEdges", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "MultipleMiddleRefinement", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::CompareBoxTriangle(Bnd_Box, IntPolyh_ArrayOfPoints)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Bnd_Box", 
+              "name": "b", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfPoints", 
+              "name": "TPoints", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "CompareBoxTriangle", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::MultipleMiddleRefinement2(Standard_Real, Bnd_Box, Standard_Integer, opencascade::handle<Adaptor3d_HSurface>, IntPolyh_ArrayOfPoints, IntPolyh_ArrayOfTriangles, IntPolyh_ArrayOfEdges)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "RefineCriterion", 
+              "const": true
+            }, 
+            {
+              "type": "Bnd_Box", 
+              "name": "thebox", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "TriangleNumber", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "MySurface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfPoints", 
+              "name": "TPoints", 
+              "ref": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfTriangles", 
+              "name": "TTriangles", 
+              "ref": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfEdges", 
+              "name": "TEdges", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "MultipleMiddleRefinement2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::GetNextChainTriangle(IntPolyh_StartPoint, Standard_Integer, IntPolyh_ArrayOfCouples, IntPolyh_ArrayOfTriangles, IntPolyh_ArrayOfTriangles, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntPolyh_StartPoint", 
+              "name": "SPIni", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "LastTTC", 
+              "const": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfCouples", 
+              "name": "TriContactsArray", 
+              "ref": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfTriangles", 
+              "name": "TTriangles1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfTriangles", 
+              "name": "TTriangles2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NumContact", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NextTriangle", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "GetNextChainTriangle", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::LinkEdges2Triangle(IntPolyh_ArrayOfEdges, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntPolyh_ArrayOfEdges", 
+              "name": "TEdges", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ed1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ed2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ed3", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "LinkEdges2Triangle", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::SetEdgeandOrientation(Standard_Integer, IntPolyh_ArrayOfEdges)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Edge", 
+              "const": true
+            }, 
+            {
+              "type": "IntPolyh_ArrayOfEdges", 
+              "name": "TEdges", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "SetEdgeandOrientation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::Dump(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Triangle::DumpFleche(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Triangle", 
+          "name": "DumpFleche", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntPolyh_Triangle.hxx", 
+        36
+      ], 
+      "key": "IntPolyh_Triangle"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntPolyh_StartPoint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntPolyh_StartPoint::IntPolyh_StartPoint()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "IntPolyh_StartPoint", 
+          "return": {
+            "type": "IntPolyh_StartPoint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::IntPolyh_StartPoint(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Integer, Standard_Integer, Standard_Real, Standard_Integer, Standard_Integer, Standard_Real, Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "xx", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "yy", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "zz", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "uu1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "vv1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "uu2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "vv2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "T1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "E1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "LAM1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "T2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "E2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "LAM2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "List", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "IntPolyh_StartPoint", 
+          "return": {
+            "type": "IntPolyh_StartPoint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::IntPolyh_StartPoint(IntPolyh_StartPoint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntPolyh_StartPoint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "IntPolyh_StartPoint", 
+          "return": {
+            "type": "IntPolyh_StartPoint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::X()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "X", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::Y()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "Y", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::Z()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "Z", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::U1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "U1", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::V1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "V1", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::U2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "U2", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::V2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "V2", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::T1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "T1", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::E1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "E1", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::Lambda1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "Lambda1", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::T2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "T2", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::E2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "E2", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::Lambda2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "Lambda2", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::GetAngle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "GetAngle", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::ChainList()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "ChainList", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::GetEdgePoints(IntPolyh_Triangle, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntPolyh_Triangle", 
+              "name": "Triangle", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "FirstEdgePoint", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "SecondEdgePoint", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "LastPoint", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "GetEdgePoints", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::SetXYZ(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "XX", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "YY", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ZZ", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "SetXYZ", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::SetUV1(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "UU1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VV1", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "SetUV1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::SetUV2(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "UU2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VV2", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "SetUV2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::SetEdge1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IE1", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "SetEdge1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::SetLambda1(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "LAM1", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "SetLambda1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::SetEdge2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IE2", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "SetEdge2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::SetLambda2(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "LAM2", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "SetLambda2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::SetCoupleValue(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IT1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IT2", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "SetCoupleValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::SetAngle(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "ang", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "SetAngle", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::SetChainList(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "ChList", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "SetChainList", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::CheckSameSP(IntPolyh_StartPoint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntPolyh_StartPoint", 
+              "name": "SP", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "CheckSameSP", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::Dump()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_StartPoint::Dump(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "i", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_StartPoint", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntPolyh_StartPoint.hxx", 
+        24
+      ], 
+      "key": "IntPolyh_StartPoint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntPolyh_Point", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntPolyh_Point::IntPolyh_Point()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntPolyh_Point", 
+          "name": "IntPolyh_Point", 
+          "return": {
+            "type": "IntPolyh_Point", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::IntPolyh_Point(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "xx", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "yy", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "zz", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "uu", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "vv", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "IntPolyh_Point", 
+          "return": {
+            "type": "IntPolyh_Point", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::IntPolyh_Point(IntPolyh_Point)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntPolyh_Point", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "IntPolyh_Point", 
+          "return": {
+            "type": "IntPolyh_Point", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntPolyh_Point::X()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Point", 
+          "name": "X", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::Y()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Point", 
+          "name": "Y", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::Z()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Point", 
+          "name": "Z", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::U()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Point", 
+          "name": "U", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::V()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Point", 
+          "name": "V", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::PartOfCommon()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Point", 
+          "name": "PartOfCommon", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::Equal(IntPolyh_Point)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntPolyh_Point", 
+              "name": "Pt", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "Equal", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::Set(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "v1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v4", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v5", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "II", 
+              "default": "1", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::SetX(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "SetX", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::SetY(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "SetY", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::SetZ(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "SetZ", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::SetU(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "SetU", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::SetV(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "SetV", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::SetPartOfCommon(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "ii", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "SetPartOfCommon", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::Middle(opencascade::handle<Adaptor3d_HSurface>, IntPolyh_Point, IntPolyh_Point)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "MySurface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntPolyh_Point", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntPolyh_Point", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "Middle", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::Add(IntPolyh_Point)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntPolyh_Point", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "Add", 
+          "return": {
+            "type": "IntPolyh_Point"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::Sub(IntPolyh_Point)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntPolyh_Point", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "Sub", 
+          "return": {
+            "type": "IntPolyh_Point"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::Divide(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "rr", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "Divide", 
+          "return": {
+            "type": "IntPolyh_Point"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::Multiplication(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "rr", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "Multiplication", 
+          "return": {
+            "type": "IntPolyh_Point"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::SquareModulus()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Point", 
+          "name": "SquareModulus", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::SquareDistance(IntPolyh_Point)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntPolyh_Point", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "SquareDistance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::Dot(IntPolyh_Point)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntPolyh_Point", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "Dot", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::Cross(IntPolyh_Point, IntPolyh_Point)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntPolyh_Point", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntPolyh_Point", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "Cross", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::Dump()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Point", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::Dump(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "i", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::SetDegenerated(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "theFlag", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Point", 
+          "name": "SetDegenerated", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Point::Degenerated()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Point", 
+          "name": "Degenerated", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntPolyh_Point.hxx", 
+        31
+      ], 
+      "key": "IntPolyh_Point"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntPolyh_Couple", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntPolyh_Couple::IntPolyh_Couple()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntPolyh_Couple", 
+          "name": "IntPolyh_Couple", 
+          "return": {
+            "type": "IntPolyh_Couple", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Couple::IntPolyh_Couple(Standard_Integer, Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "i1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "i2", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Couple", 
+          "name": "IntPolyh_Couple", 
+          "return": {
+            "type": "IntPolyh_Couple", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Couple::IntPolyh_Couple(IntPolyh_Couple)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntPolyh_Couple", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Couple", 
+          "name": "IntPolyh_Couple", 
+          "return": {
+            "type": "IntPolyh_Couple", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntPolyh_Couple::FirstValue()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Couple", 
+          "name": "FirstValue", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Couple::SecondValue()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Couple", 
+          "name": "SecondValue", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Couple::AnalyseFlagValue()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Couple", 
+          "name": "AnalyseFlagValue", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Couple::AngleValue()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Couple", 
+          "name": "AngleValue", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Couple::SetCoupleValue(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "w", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Couple", 
+          "name": "SetCoupleValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Couple::SetAnalyseFlag(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Couple", 
+          "name": "SetAnalyseFlag", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Couple::SetAngleValue(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "ang", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Couple", 
+          "name": "SetAngleValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Couple::Dump(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Couple", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntPolyh_Couple.hxx", 
+        29
+      ], 
+      "key": "IntPolyh_Couple"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntPolyh_SectionLine", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntPolyh_SectionLine::IntPolyh_SectionLine()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntPolyh_SectionLine", 
+          "name": "IntPolyh_SectionLine", 
+          "return": {
+            "type": "IntPolyh_SectionLine", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_SectionLine::IntPolyh_SectionLine(Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "nn", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_SectionLine", 
+          "name": "IntPolyh_SectionLine", 
+          "return": {
+            "type": "IntPolyh_SectionLine", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_SectionLine::IntPolyh_SectionLine(IntPolyh_SectionLine)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntPolyh_SectionLine", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_SectionLine", 
+          "name": "IntPolyh_SectionLine", 
+          "return": {
+            "type": "IntPolyh_SectionLine", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntPolyh_SectionLine::Init(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "nn", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_SectionLine", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_SectionLine::Value(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "nn", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_SectionLine", 
+          "name": "Value", 
+          "return": {
+            "type": "IntPolyh_StartPoint", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_SectionLine::ChangeValue(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "nn", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_SectionLine", 
+          "name": "ChangeValue", 
+          "return": {
+            "type": "IntPolyh_StartPoint", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_SectionLine::Copy(IntPolyh_SectionLine)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntPolyh_SectionLine", 
+              "name": "Other", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_SectionLine", 
+          "name": "Copy", 
+          "return": {
+            "type": "IntPolyh_SectionLine", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_SectionLine::GetN()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_SectionLine", 
+          "name": "GetN", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_SectionLine::NbStartPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_SectionLine", 
+          "name": "NbStartPoints", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_SectionLine::IncrementNbStartPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_SectionLine", 
+          "name": "IncrementNbStartPoints", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_SectionLine::Destroy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_SectionLine", 
+          "name": "Destroy", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_SectionLine::Dump()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_SectionLine", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_SectionLine::Prepend(IntPolyh_StartPoint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntPolyh_StartPoint", 
+              "name": "SP", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_SectionLine", 
+          "name": "Prepend", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntPolyh_SectionLine.hxx", 
+        30
+      ], 
+      "key": "IntPolyh_SectionLine"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntPolyh_Edge", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntPolyh_Edge::IntPolyh_Edge()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntPolyh_Edge", 
+          "name": "IntPolyh_Edge", 
+          "return": {
+            "type": "IntPolyh_Edge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Edge::IntPolyh_Edge(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "i1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "i2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "i3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "i4", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Edge", 
+          "name": "IntPolyh_Edge", 
+          "return": {
+            "type": "IntPolyh_Edge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Edge::IntPolyh_Edge(IntPolyh_Edge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntPolyh_Edge", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Edge", 
+          "name": "IntPolyh_Edge", 
+          "return": {
+            "type": "IntPolyh_Edge", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntPolyh_Edge::FirstPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Edge", 
+          "name": "FirstPoint", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Edge::SecondPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Edge", 
+          "name": "SecondPoint", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Edge::FirstTriangle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Edge", 
+          "name": "FirstTriangle", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Edge::SecondTriangle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Edge", 
+          "name": "SecondTriangle", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Edge::AnalysisFlag()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Edge", 
+          "name": "AnalysisFlag", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Edge::SetFirstPoint(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Edge", 
+          "name": "SetFirstPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Edge::SetSecondPoint(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Edge", 
+          "name": "SetSecondPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Edge::SetFirstTriangle(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Edge", 
+          "name": "SetFirstTriangle", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Edge::SetSecondTriangle(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Edge", 
+          "name": "SetSecondTriangle", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Edge::SetAnalysisFlag(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Edge", 
+          "name": "SetAnalysisFlag", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Edge::Dump(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "v", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Edge", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntPolyh_Edge.hxx", 
+        28
+      ], 
+      "key": "IntPolyh_Edge"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntPolyh_Intersection", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntPolyh_Intersection::IntPolyh_Intersection(opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor3d_HSurface>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Intersection", 
+          "name": "IntPolyh_Intersection", 
+          "return": {
+            "type": "IntPolyh_Intersection", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Intersection::IntPolyh_Intersection(opencascade::handle<Adaptor3d_HSurface>, Standard_Integer, Standard_Integer, opencascade::handle<Adaptor3d_HSurface>, Standard_Integer, Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbSU1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbSV1", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbSU2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbSV2", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Intersection", 
+          "name": "IntPolyh_Intersection", 
+          "return": {
+            "type": "IntPolyh_Intersection", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Intersection::IntPolyh_Intersection(opencascade::handle<Adaptor3d_HSurface>, TColStd_Array1OfReal, TColStd_Array1OfReal, opencascade::handle<Adaptor3d_HSurface>, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "anUpars1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "aVpars1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "anUpars2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "aVpars2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Intersection", 
+          "name": "IntPolyh_Intersection", 
+          "return": {
+            "type": "IntPolyh_Intersection", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Intersection::IntPolyh_Intersection(IntPolyh_Intersection)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntPolyh_Intersection", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Intersection", 
+          "name": "IntPolyh_Intersection", 
+          "return": {
+            "type": "IntPolyh_Intersection", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntPolyh_Intersection::Perform()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Intersection", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Intersection::Perform(TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Upars1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Vpars1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Upars2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Vpars2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Intersection", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Intersection::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Intersection", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Intersection::NbSectionLines()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Intersection", 
+          "name": "NbSectionLines", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Intersection::NbPointsInLine(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexLine", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Intersection", 
+          "name": "NbPointsInLine", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Intersection::GetLinePoint(Standard_Integer, Standard_Integer, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexLine", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexPoint", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "x", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "y", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "z", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "incidence", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Intersection", 
+          "name": "GetLinePoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Intersection::NbTangentZones()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntPolyh_Intersection", 
+          "name": "NbTangentZones", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Intersection::NbPointsInTangentZone(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexLine", 
+              "const": true
+            }
+          ], 
+          "parent": "IntPolyh_Intersection", 
+          "name": "NbPointsInTangentZone", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntPolyh_Intersection::GetTangentZonePoint(Standard_Integer, Standard_Integer, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexLine", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexPoint", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "x", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "y", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "z", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v2", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntPolyh_Intersection", 
+          "name": "GetTangentZonePoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntPolyh_Intersection.hxx", 
+        41
+      ], 
+      "key": "IntPolyh_Intersection"
+    }, 
+    {
+      "type": "NCollection_Sequence<IntPolyh_StartPoint>", 
+      "declType": "typedef", 
+      "name": "IntPolyh_SeqOfStartPoints", 
+      "key": "IntPolyh_SeqOfStartPoints"
+    }, 
+    {
+      "type": "NCollection_Vector<IntPolyh_StartPoint>", 
+      "declType": "typedef", 
+      "name": "IntPolyh_VectorOfType", 
+      "key": "IntPolyh_VectorOfType"
+    }, 
+    {
+      "type": "NCollection_Vector<IntPolyh_SectionLine>", 
+      "declType": "typedef", 
+      "name": "IntPolyh_VectorOfType", 
+      "key": "IntPolyh_VectorOfType"
+    }, 
+    {
+      "type": "IntPolyh_Array<IntPolyh_Triangle>", 
+      "declType": "typedef", 
+      "name": "IntPolyh_ArrayOfTriangles", 
+      "key": "IntPolyh_ArrayOfTriangles"
+    }, 
+    {
+      "type": "IntPolyh_Array<IntPolyh_StartPoint>", 
+      "declType": "typedef", 
+      "name": "IntPolyh_ArrayOfStartPoints", 
+      "key": "IntPolyh_ArrayOfStartPoints"
+    }, 
+    {
+      "type": "IntPolyh_Array<IntPolyh_StartPoint>", 
+      "declType": "typedef", 
+      "name": "IntPolyh_ArrayOfTangentZones", 
+      "key": "IntPolyh_ArrayOfTangentZones"
+    }, 
+    {
+      "type": "IntPolyh_MaillageAffinage *", 
+      "declType": "typedef", 
+      "name": "IntPolyh_PMaillageAffinage", 
+      "key": "IntPolyh_PMaillageAffinage"
+    }, 
+    {
+      "type": "IntPolyh_Array<IntPolyh_SectionLine>", 
+      "declType": "typedef", 
+      "name": "IntPolyh_ArrayOfSectionLines", 
+      "key": "IntPolyh_ArrayOfSectionLines"
+    }, 
+    {
+      "type": "IntPolyh_Array<IntPolyh_Point>", 
+      "declType": "typedef", 
+      "name": "IntPolyh_ArrayOfPoints", 
+      "key": "IntPolyh_ArrayOfPoints"
+    }, 
+    {
+      "type": "IntPolyh_Array<IntPolyh_Edge>", 
+      "declType": "typedef", 
+      "name": "IntPolyh_ArrayOfEdges", 
+      "key": "IntPolyh_ArrayOfEdges"
+    }, 
+    {
+      "type": "IntPolyh_Array<IntPolyh_Couple>", 
+      "declType": "typedef", 
+      "name": "IntPolyh_ArrayOfCouples", 
+      "key": "IntPolyh_ArrayOfCouples"
+    }
+  ], 
+  "name": "IntPolyh"
+}

@@ -1,0 +1,1544 @@
+{
+  "headers": [
+    "Geom2dAPI_ExtremaCurveCurve.hxx", 
+    "Geom2dAPI_InterCurveCurve.hxx", 
+    "Geom2dAPI_ProjectPointOnCurve.hxx", 
+    "Geom2dAPI_Interpolate.hxx", 
+    "Geom2dAPI_PointsToBSpline.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Geom2dAPI_ExtremaCurveCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dAPI_ExtremaCurveCurve::Geom2dAPI_ExtremaCurveCurve(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom2d_Curve>, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1min", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1max", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2min", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2max", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_ExtremaCurveCurve", 
+          "name": "Geom2dAPI_ExtremaCurveCurve", 
+          "return": {
+            "type": "Geom2dAPI_ExtremaCurveCurve", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ExtremaCurveCurve::Geom2dAPI_ExtremaCurveCurve(Geom2dAPI_ExtremaCurveCurve)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dAPI_ExtremaCurveCurve", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dAPI_ExtremaCurveCurve", 
+          "name": "Geom2dAPI_ExtremaCurveCurve", 
+          "return": {
+            "type": "Geom2dAPI_ExtremaCurveCurve", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dAPI_ExtremaCurveCurve::NbExtrema()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_ExtremaCurveCurve", 
+          "name": "NbExtrema", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ExtremaCurveCurve::Points(Standard_Integer, gp_Pnt2d, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dAPI_ExtremaCurveCurve", 
+          "name": "Points", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ExtremaCurveCurve::Parameters(Standard_Integer, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dAPI_ExtremaCurveCurve", 
+          "name": "Parameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ExtremaCurveCurve::Distance(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_ExtremaCurveCurve", 
+          "name": "Distance", 
+          "return": {
+            "type": "Quantity_Length"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ExtremaCurveCurve::NearestPoints(gp_Pnt2d, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dAPI_ExtremaCurveCurve", 
+          "name": "NearestPoints", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ExtremaCurveCurve::LowerDistanceParameters(Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dAPI_ExtremaCurveCurve", 
+          "name": "LowerDistanceParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ExtremaCurveCurve::LowerDistance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_ExtremaCurveCurve", 
+          "name": "LowerDistance", 
+          "return": {
+            "type": "Quantity_Length"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ExtremaCurveCurve::Extrema()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_ExtremaCurveCurve", 
+          "name": "Extrema", 
+          "return": {
+            "type": "Extrema_ExtCC2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dAPI_ExtremaCurveCurve.hxx", 
+        60
+      ], 
+      "key": "Geom2dAPI_ExtremaCurveCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dAPI_InterCurveCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dAPI_InterCurveCurve::Geom2dAPI_InterCurveCurve()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_InterCurveCurve", 
+          "name": "Geom2dAPI_InterCurveCurve", 
+          "return": {
+            "type": "Geom2dAPI_InterCurveCurve", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_InterCurveCurve::Geom2dAPI_InterCurveCurve(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom2d_Curve>, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "default": "9.9999999999999995E-7", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_InterCurveCurve", 
+          "name": "Geom2dAPI_InterCurveCurve", 
+          "return": {
+            "type": "Geom2dAPI_InterCurveCurve", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_InterCurveCurve::Geom2dAPI_InterCurveCurve(opencascade::handle<Geom2d_Curve>, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "default": "9.9999999999999995E-7", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_InterCurveCurve", 
+          "name": "Geom2dAPI_InterCurveCurve", 
+          "return": {
+            "type": "Geom2dAPI_InterCurveCurve", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_InterCurveCurve::Geom2dAPI_InterCurveCurve(Geom2dAPI_InterCurveCurve)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dAPI_InterCurveCurve", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dAPI_InterCurveCurve", 
+          "name": "Geom2dAPI_InterCurveCurve", 
+          "return": {
+            "type": "Geom2dAPI_InterCurveCurve", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dAPI_InterCurveCurve::Init(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom2d_Curve>, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "default": "9.9999999999999995E-7", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_InterCurveCurve", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_InterCurveCurve::Init(opencascade::handle<Geom2d_Curve>, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "default": "9.9999999999999995E-7", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_InterCurveCurve", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_InterCurveCurve::NbPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_InterCurveCurve", 
+          "name": "NbPoints", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_InterCurveCurve::Point(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_InterCurveCurve", 
+          "name": "Point", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_InterCurveCurve::NbSegments()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_InterCurveCurve", 
+          "name": "NbSegments", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_InterCurveCurve::Segment(Standard_Integer, opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom2d_Curve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Curve1", 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Curve2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dAPI_InterCurveCurve", 
+          "name": "Segment", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_InterCurveCurve::Segment(Standard_Integer, opencascade::handle<Geom2d_Curve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Curve1", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dAPI_InterCurveCurve", 
+          "name": "Segment", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_InterCurveCurve::Intersector()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_InterCurveCurve", 
+          "name": "Intersector", 
+          "return": {
+            "type": "Geom2dInt_GInter", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dAPI_InterCurveCurve.hxx", 
+        42
+      ], 
+      "key": "Geom2dAPI_InterCurveCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dAPI_ProjectPointOnCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dAPI_ProjectPointOnCurve::Geom2dAPI_ProjectPointOnCurve()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_ProjectPointOnCurve", 
+          "name": "Geom2dAPI_ProjectPointOnCurve", 
+          "return": {
+            "type": "Geom2dAPI_ProjectPointOnCurve", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ProjectPointOnCurve::Geom2dAPI_ProjectPointOnCurve(gp_Pnt2d, opencascade::handle<Geom2d_Curve>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dAPI_ProjectPointOnCurve", 
+          "name": "Geom2dAPI_ProjectPointOnCurve", 
+          "return": {
+            "type": "Geom2dAPI_ProjectPointOnCurve", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ProjectPointOnCurve::Geom2dAPI_ProjectPointOnCurve(gp_Pnt2d, opencascade::handle<Geom2d_Curve>, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Usup", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_ProjectPointOnCurve", 
+          "name": "Geom2dAPI_ProjectPointOnCurve", 
+          "return": {
+            "type": "Geom2dAPI_ProjectPointOnCurve", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ProjectPointOnCurve::Geom2dAPI_ProjectPointOnCurve(Geom2dAPI_ProjectPointOnCurve)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dAPI_ProjectPointOnCurve", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dAPI_ProjectPointOnCurve", 
+          "name": "Geom2dAPI_ProjectPointOnCurve", 
+          "return": {
+            "type": "Geom2dAPI_ProjectPointOnCurve", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dAPI_ProjectPointOnCurve::Init(gp_Pnt2d, opencascade::handle<Geom2d_Curve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dAPI_ProjectPointOnCurve", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ProjectPointOnCurve::Init(gp_Pnt2d, opencascade::handle<Geom2d_Curve>, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Usup", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_ProjectPointOnCurve", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ProjectPointOnCurve::NbPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_ProjectPointOnCurve", 
+          "name": "NbPoints", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ProjectPointOnCurve::Point(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_ProjectPointOnCurve", 
+          "name": "Point", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ProjectPointOnCurve::Parameter(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_ProjectPointOnCurve", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Quantity_Parameter"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ProjectPointOnCurve::Parameter(Standard_Integer, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dAPI_ProjectPointOnCurve", 
+          "name": "Parameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ProjectPointOnCurve::Distance(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_ProjectPointOnCurve", 
+          "name": "Distance", 
+          "return": {
+            "type": "Quantity_Length"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ProjectPointOnCurve::NearestPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_ProjectPointOnCurve", 
+          "name": "NearestPoint", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ProjectPointOnCurve::LowerDistanceParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_ProjectPointOnCurve", 
+          "name": "LowerDistanceParameter", 
+          "return": {
+            "type": "Quantity_Parameter"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ProjectPointOnCurve::LowerDistance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_ProjectPointOnCurve", 
+          "name": "LowerDistance", 
+          "return": {
+            "type": "Quantity_Length"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_ProjectPointOnCurve::Extrema()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_ProjectPointOnCurve", 
+          "name": "Extrema", 
+          "return": {
+            "type": "Extrema_ExtPC2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dAPI_ProjectPointOnCurve.hxx", 
+        40
+      ], 
+      "key": "Geom2dAPI_ProjectPointOnCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dAPI_Interpolate", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dAPI_Interpolate::Geom2dAPI_Interpolate(opencascade::handle<TColgp_HArray1OfPnt2d>, Standard_Boolean, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<TColgp_HArray1OfPnt2d>", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "PeriodicFlag", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_Interpolate", 
+          "name": "Geom2dAPI_Interpolate", 
+          "return": {
+            "type": "Geom2dAPI_Interpolate", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_Interpolate::Geom2dAPI_Interpolate(opencascade::handle<TColgp_HArray1OfPnt2d>, opencascade::handle<TColStd_HArray1OfReal>, Standard_Boolean, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<TColgp_HArray1OfPnt2d>", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "Parameters", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "PeriodicFlag", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_Interpolate", 
+          "name": "Geom2dAPI_Interpolate", 
+          "return": {
+            "type": "Geom2dAPI_Interpolate", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_Interpolate::Geom2dAPI_Interpolate(Geom2dAPI_Interpolate)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dAPI_Interpolate", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dAPI_Interpolate", 
+          "name": "Geom2dAPI_Interpolate", 
+          "return": {
+            "type": "Geom2dAPI_Interpolate", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dAPI_Interpolate::Load(gp_Vec2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Vec2d", 
+              "name": "InitialTangent", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "FinalTangent", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dAPI_Interpolate", 
+          "name": "Load", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_Interpolate::Load(TColgp_Array1OfVec2d, opencascade::handle<TColStd_HArray1OfBoolean>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfVec2d", 
+              "name": "Tangents", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfBoolean>", 
+              "name": "TangentFlags", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dAPI_Interpolate", 
+          "name": "Load", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_Interpolate::ClearTangents()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_Interpolate", 
+          "name": "ClearTangents", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_Interpolate::Perform()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_Interpolate", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_Interpolate::Curve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_Interpolate", 
+          "name": "Curve", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_BSplineCurve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_Interpolate::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_Interpolate", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dAPI_Interpolate.hxx", 
+        48
+      ], 
+      "key": "Geom2dAPI_Interpolate"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dAPI_PointsToBSpline", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_PointsToBSpline", 
+          "name": "Geom2dAPI_PointsToBSpline", 
+          "return": {
+            "type": "Geom2dAPI_PointsToBSpline", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline(TColgp_Array1OfPnt2d, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2D", 
+              "default": "9.9999999999999995E-7", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_PointsToBSpline", 
+          "name": "Geom2dAPI_PointsToBSpline", 
+          "return": {
+            "type": "Geom2dAPI_PointsToBSpline", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline(TColStd_Array1OfReal, Standard_Real, Standard_Real, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "YValues", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "X0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "DX", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2D", 
+              "default": "9.9999999999999995E-7", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_PointsToBSpline", 
+          "name": "Geom2dAPI_PointsToBSpline", 
+          "return": {
+            "type": "Geom2dAPI_PointsToBSpline", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline(TColgp_Array1OfPnt2d, Approx_ParametrizationType, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Approx_ParametrizationType", 
+              "name": "ParType", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_PointsToBSpline", 
+          "name": "Geom2dAPI_PointsToBSpline", 
+          "return": {
+            "type": "Geom2dAPI_PointsToBSpline", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline(TColgp_Array1OfPnt2d, TColStd_Array1OfReal, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Parameters", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_PointsToBSpline", 
+          "name": "Geom2dAPI_PointsToBSpline", 
+          "return": {
+            "type": "Geom2dAPI_PointsToBSpline", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline(TColgp_Array1OfPnt2d, Standard_Real, Standard_Real, Standard_Real, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_PointsToBSpline", 
+          "name": "Geom2dAPI_PointsToBSpline", 
+          "return": {
+            "type": "Geom2dAPI_PointsToBSpline", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline(Geom2dAPI_PointsToBSpline)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dAPI_PointsToBSpline", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dAPI_PointsToBSpline", 
+          "name": "Geom2dAPI_PointsToBSpline", 
+          "return": {
+            "type": "Geom2dAPI_PointsToBSpline", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dAPI_PointsToBSpline::Init(TColgp_Array1OfPnt2d, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2D", 
+              "default": "9.9999999999999995E-7", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_PointsToBSpline", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_PointsToBSpline::Init(TColStd_Array1OfReal, Standard_Real, Standard_Real, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "YValues", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "X0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "DX", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2D", 
+              "default": "9.9999999999999995E-7", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_PointsToBSpline", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_PointsToBSpline::Init(TColgp_Array1OfPnt2d, Approx_ParametrizationType, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Approx_ParametrizationType", 
+              "name": "ParType", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_PointsToBSpline", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_PointsToBSpline::Init(TColgp_Array1OfPnt2d, TColStd_Array1OfReal, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Parameters", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_PointsToBSpline", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_PointsToBSpline::Init(TColgp_Array1OfPnt2d, Standard_Real, Standard_Real, Standard_Real, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dAPI_PointsToBSpline", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_PointsToBSpline::Curve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_PointsToBSpline", 
+          "name": "Curve", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_BSplineCurve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dAPI_PointsToBSpline::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dAPI_PointsToBSpline", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dAPI_PointsToBSpline.hxx", 
+        45
+      ], 
+      "key": "Geom2dAPI_PointsToBSpline"
+    }
+  ], 
+  "name": "Geom2dAPI"
+}

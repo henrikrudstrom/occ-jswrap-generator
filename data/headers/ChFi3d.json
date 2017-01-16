@@ -1,0 +1,2828 @@
+{
+  "headers": [
+    "ChFi3d_SearchSing.hxx", 
+    "ChFi3d_Builder_0.hxx", 
+    "ChFi3d_FilletShape.hxx", 
+    "ChFi3d_Builder.hxx", 
+    "ChFi3d_ChBuilder.hxx", 
+    "ChFi3d_FilBuilder.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "ChFi3d_SearchSing", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFi3d_SearchSing::ChFi3d_SearchSing(opencascade::handle<Geom_Curve>, opencascade::handle<Geom_Curve>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_SearchSing", 
+          "name": "ChFi3d_SearchSing", 
+          "return": {
+            "type": "ChFi3d_SearchSing", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_SearchSing::ChFi3d_SearchSing(ChFi3d_SearchSing)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFi3d_SearchSing", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_SearchSing", 
+          "name": "ChFi3d_SearchSing", 
+          "return": {
+            "type": "ChFi3d_SearchSing", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFi3d_SearchSing::Value(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_SearchSing", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFi3d_SearchSing::Derivative(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_SearchSing", 
+          "name": "Derivative", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFi3d_SearchSing::Values(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_SearchSing", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionWithDerivative"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ChFi3d_SearchSing.hxx", 
+        32
+      ], 
+      "key": "ChFi3d_SearchSing"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFi3d_Builder", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "ChFi3d_Builder::SetParams(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Tang", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tesp", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "T2d", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TApp3d", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolApp2d", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Fleche", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "SetParams", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::SetContinuity(GeomAbs_Shape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "InternalContinuity", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "AngularTolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "SetContinuity", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::Remove(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "Remove", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::Contains(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "Contains", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::Contains(TopoDS_Edge, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexInSpine", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "Contains", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::NbElements()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi3d_Builder", 
+          "name": "NbElements", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::Value(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "Value", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_Spine>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::Length(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "Length", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::FirstVertex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "FirstVertex", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::LastVertex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "LastVertex", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::Abscissa(Standard_Integer, TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "Abscissa", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::RelativeAbscissa(Standard_Integer, TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "RelativeAbscissa", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::ClosedAndTangent(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "ClosedAndTangent", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::Closed(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "Closed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::Compute()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi3d_Builder", 
+          "name": "Compute", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi3d_Builder", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::Shape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi3d_Builder", 
+          "name": "Shape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::Generated(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "EouV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "Generated", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::NbFaultyContours()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi3d_Builder", 
+          "name": "NbFaultyContours", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::FaultyContour(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "FaultyContour", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::NbComputedSurfaces(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "NbComputedSurfaces", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::ComputedSurface(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IS", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "ComputedSurface", 
+          "return": {
+            "type": "opencascade::handle<Geom_Surface>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::NbFaultyVertices()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi3d_Builder", 
+          "name": "NbFaultyVertices", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::FaultyVertex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IV", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "FaultyVertex", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::HasResult()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi3d_Builder", 
+          "name": "HasResult", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::BadShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi3d_Builder", 
+          "name": "BadShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::StripeStatus(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "StripeStatus", 
+          "return": {
+            "type": "ChFiDS_ErrorStatus"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::Reset()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi3d_Builder", 
+          "name": "Reset", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::Builder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi3d_Builder", 
+          "name": "Builder", 
+          "return": {
+            "type": "opencascade::handle<TopOpeBRepBuild_HBuilder>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::SplitKPart(opencascade::handle<ChFiDS_SurfData>, ChFiDS_SequenceOfSurfData, opencascade::handle<ChFiDS_Spine>, Standard_Integer, opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor3d_TopolTool>, opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor3d_TopolTool>, Standard_Boolean, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<ChFiDS_SurfData>", 
+              "name": "Data", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "ChFiDS_SequenceOfSurfData", 
+              "name": "SetData", 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<ChFiDS_Spine>", 
+              "name": "Spine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Iedge", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_TopolTool>", 
+              "name": "I1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_TopolTool>", 
+              "name": "I2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Intf", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Intl", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "SplitKPart", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_Builder::PerformTwoCornerbyInter(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_Builder", 
+          "name": "PerformTwoCornerbyInter", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ChFi3d_Builder.hxx", 
+        77
+      ], 
+      "key": "ChFi3d_Builder"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFi3d_ChBuilder", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFi3d_ChBuilder::ChFi3d_ChBuilder(TopoDS_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Ta", 
+              "default": "0.01", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "ChFi3d_ChBuilder", 
+          "return": {
+            "type": "ChFi3d_ChBuilder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::ChFi3d_ChBuilder(ChFi3d_ChBuilder)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFi3d_ChBuilder", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "ChFi3d_ChBuilder", 
+          "return": {
+            "type": "ChFi3d_ChBuilder", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::Add(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::Add(Standard_Real, TopoDS_Edge, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::SetDist(Standard_Real, Standard_Integer, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "SetDist", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::GetDist(Standard_Integer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dis", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "GetDist", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::Add(Standard_Real, Standard_Real, TopoDS_Edge, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dis2", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::SetDists(Standard_Real, Standard_Real, Standard_Integer, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dis2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "SetDists", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::Dists(Standard_Integer, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dis1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dis2", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "Dists", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::AddDA(Standard_Real, Standard_Real, TopoDS_Edge, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Angle", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "AddDA", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::SetDistAngle(Standard_Real, Standard_Real, Standard_Integer, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Angle", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "SetDistAngle", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::GetDistAngle(Standard_Integer, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dis", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Angle", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "DisOnFace1", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "GetDistAngle", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::IsChamfer(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "IsChamfer", 
+          "return": {
+            "type": "ChFiDS_ChamfMethod"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::ResetContour(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "ResetContour", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::Simulate(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "Simulate", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::NbSurf(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "NbSurf", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::Sect(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IS", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "Sect", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_SecHArray1>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::SimulSurf(opencascade::handle<ChFiDS_SurfData>, opencascade::handle<ChFiDS_HElSpine>, opencascade::handle<ChFiDS_Spine>, Standard_Integer, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<Adaptor3d_TopolTool>, opencascade::handle<BRepAdaptor_HCurve2d>, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<BRepAdaptor_HCurve2d>, Standard_Boolean, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<Adaptor3d_TopolTool>, TopAbs_Orientation, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<ChFiDS_SurfData>", 
+              "name": "Data", 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<ChFiDS_HElSpine>", 
+              "name": "Guide", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<ChFiDS_Spine>", 
+              "name": "Spine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Choix", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_TopolTool>", 
+              "name": "I1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "PC1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "Sref1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "PCref1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Decroch1", 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_TopolTool>", 
+              "name": "I2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Fleche", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolGuide", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "First", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Last", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Inside", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Appro", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Forward", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecP", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecS", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecRst", 
+              "const": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Soldep", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "SimulSurf", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::SimulSurf(opencascade::handle<ChFiDS_SurfData>, opencascade::handle<ChFiDS_HElSpine>, opencascade::handle<ChFiDS_Spine>, Standard_Integer, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<Adaptor3d_TopolTool>, TopAbs_Orientation, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<Adaptor3d_TopolTool>, opencascade::handle<BRepAdaptor_HCurve2d>, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<BRepAdaptor_HCurve2d>, Standard_Boolean, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<ChFiDS_SurfData>", 
+              "name": "Data", 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<ChFiDS_HElSpine>", 
+              "name": "Guide", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<ChFiDS_Spine>", 
+              "name": "Spine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Choix", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_TopolTool>", 
+              "name": "I1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or1", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_TopolTool>", 
+              "name": "I2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "PC2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "Sref2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "PCref2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Decroch2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Fleche", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolGuide", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "First", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Last", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Inside", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Appro", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Forward", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecP", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecS", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecRst", 
+              "const": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Soldep", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "SimulSurf", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::SimulSurf(opencascade::handle<ChFiDS_SurfData>, opencascade::handle<ChFiDS_HElSpine>, opencascade::handle<ChFiDS_Spine>, Standard_Integer, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<Adaptor3d_TopolTool>, opencascade::handle<BRepAdaptor_HCurve2d>, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<BRepAdaptor_HCurve2d>, Standard_Boolean, TopAbs_Orientation, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<Adaptor3d_TopolTool>, opencascade::handle<BRepAdaptor_HCurve2d>, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<BRepAdaptor_HCurve2d>, Standard_Boolean, TopAbs_Orientation, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<ChFiDS_SurfData>", 
+              "name": "Data", 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<ChFiDS_HElSpine>", 
+              "name": "Guide", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<ChFiDS_Spine>", 
+              "name": "Spine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Choix", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_TopolTool>", 
+              "name": "I1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "PC1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "Sref1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "PCref1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Decroch1", 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or1", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_TopolTool>", 
+              "name": "I2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "PC2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "Sref2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "PCref2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Decroch2", 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Fleche", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolGuide", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "First", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Last", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Inside", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Appro", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Forward", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecP1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecRst1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecP2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecRst2", 
+              "const": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Soldep", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "SimulSurf", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::PerformSurf(ChFiDS_SequenceOfSurfData, opencascade::handle<ChFiDS_HElSpine>, opencascade::handle<ChFiDS_Spine>, Standard_Integer, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<Adaptor3d_TopolTool>, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<Adaptor3d_TopolTool>, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, math_Vector, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "ChFiDS_SequenceOfSurfData", 
+              "name": "Data", 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<ChFiDS_HElSpine>", 
+              "name": "Guide", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<ChFiDS_Spine>", 
+              "name": "Spine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Choix", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_TopolTool>", 
+              "name": "I1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_TopolTool>", 
+              "name": "I2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "MaxStep", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Fleche", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolGuide", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "First", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Last", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Inside", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Appro", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Forward", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecOnS1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecOnS2", 
+              "const": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Soldep", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Intf", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Intl", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "PerformSurf", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::PerformSurf(ChFiDS_SequenceOfSurfData, opencascade::handle<ChFiDS_HElSpine>, opencascade::handle<ChFiDS_Spine>, Standard_Integer, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<Adaptor3d_TopolTool>, opencascade::handle<BRepAdaptor_HCurve2d>, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<BRepAdaptor_HCurve2d>, Standard_Boolean, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<Adaptor3d_TopolTool>, TopAbs_Orientation, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "ChFiDS_SequenceOfSurfData", 
+              "name": "Data", 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<ChFiDS_HElSpine>", 
+              "name": "Guide", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<ChFiDS_Spine>", 
+              "name": "Spine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Choix", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_TopolTool>", 
+              "name": "I1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "PC1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "Sref1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "PCref1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Decroch1", 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_TopolTool>", 
+              "name": "I2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "MaxStep", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Fleche", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolGuide", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "First", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Last", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Inside", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Appro", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Forward", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecP", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecS", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecRst", 
+              "const": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Soldep", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "PerformSurf", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::PerformSurf(ChFiDS_SequenceOfSurfData, opencascade::handle<ChFiDS_HElSpine>, opencascade::handle<ChFiDS_Spine>, Standard_Integer, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<Adaptor3d_TopolTool>, TopAbs_Orientation, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<Adaptor3d_TopolTool>, opencascade::handle<BRepAdaptor_HCurve2d>, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<BRepAdaptor_HCurve2d>, Standard_Boolean, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "ChFiDS_SequenceOfSurfData", 
+              "name": "Data", 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<ChFiDS_HElSpine>", 
+              "name": "Guide", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<ChFiDS_Spine>", 
+              "name": "Spine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Choix", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_TopolTool>", 
+              "name": "I1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or1", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_TopolTool>", 
+              "name": "I2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "PC2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "Sref2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "PCref2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Decroch2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "MaxStep", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Fleche", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolGuide", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "First", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Last", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Inside", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Appro", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Forward", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecP", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecS", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecRst", 
+              "const": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Soldep", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "PerformSurf", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::PerformSurf(ChFiDS_SequenceOfSurfData, opencascade::handle<ChFiDS_HElSpine>, opencascade::handle<ChFiDS_Spine>, Standard_Integer, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<Adaptor3d_TopolTool>, opencascade::handle<BRepAdaptor_HCurve2d>, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<BRepAdaptor_HCurve2d>, Standard_Boolean, TopAbs_Orientation, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<Adaptor3d_TopolTool>, opencascade::handle<BRepAdaptor_HCurve2d>, opencascade::handle<BRepAdaptor_HSurface>, opencascade::handle<BRepAdaptor_HCurve2d>, Standard_Boolean, TopAbs_Orientation, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, Standard_Boolean, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "ChFiDS_SequenceOfSurfData", 
+              "name": "Data", 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<ChFiDS_HElSpine>", 
+              "name": "Guide", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<ChFiDS_Spine>", 
+              "name": "Spine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Choix", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_TopolTool>", 
+              "name": "I1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "PC1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "Sref1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "PCref1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Decroch1", 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or1", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_TopolTool>", 
+              "name": "I2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "PC2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "Sref2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "PCref2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Decroch2", 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "MaxStep", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Fleche", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolGuide", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "First", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Last", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Inside", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Appro", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Forward", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecP1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecRst1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecP2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecRst2", 
+              "const": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "Soldep", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "PerformSurf", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFi3d_ChBuilder::FindChoiceDistAngle(Standard_Integer, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Choice", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "DisOnF1", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_ChBuilder", 
+          "name": "FindChoiceDistAngle", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "ChFi3d_Builder"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ChFi3d_ChBuilder.hxx", 
+        51
+      ], 
+      "key": "ChFi3d_ChBuilder"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFi3d_FilBuilder", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFi3d_FilBuilder::ChFi3d_FilBuilder(TopoDS_Shape, ChFi3d_FilletShape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "ChFi3d_FilletShape", 
+              "name": "FShape", 
+              "default": "::ChFi3d_FilletShape::ChFi3d_Rational", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Ta", 
+              "default": "0.01", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "ChFi3d_FilBuilder", 
+          "return": {
+            "type": "ChFi3d_FilBuilder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::ChFi3d_FilBuilder(ChFi3d_FilBuilder)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFi3d_FilBuilder", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "ChFi3d_FilBuilder", 
+          "return": {
+            "type": "ChFi3d_FilBuilder", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::SetFilletShape(ChFi3d_FilletShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "ChFi3d_FilletShape", 
+              "name": "FShape", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "SetFilletShape", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::GetFilletShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "GetFilletShape", 
+          "return": {
+            "type": "ChFi3d_FilletShape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::Add(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::Add(Standard_Real, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::SetRadius(opencascade::handle<Law_Function>, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Law_Function>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IinC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "SetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::IsConstant(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "IsConstant", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::Radius(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "Radius", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::ResetContour(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "ResetContour", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::SetRadius(Standard_Real, Standard_Integer, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "SetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::UnSet(Standard_Integer, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "UnSet", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::SetRadius(Standard_Real, Standard_Integer, TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "SetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::UnSet(Standard_Integer, TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "UnSet", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::SetRadius(gp_XY, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_XY", 
+              "name": "UandR", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IinC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "SetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::IsConstant(Standard_Integer, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "IsConstant", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::Radius(Standard_Integer, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "Radius", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::GetBounds(Standard_Integer, TopoDS_Edge, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "First", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Last", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "GetBounds", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::GetLaw(Standard_Integer, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "GetLaw", 
+          "return": {
+            "type": "opencascade::handle<Law_Function>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::SetLaw(Standard_Integer, TopoDS_Edge, opencascade::handle<Law_Function>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Law_Function>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "SetLaw", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::Simulate(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "Simulate", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::NbSurf(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "NbSurf", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi3d_FilBuilder::Sect(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IS", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi3d_FilBuilder", 
+          "name": "Sect", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_SecHArray1>"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "ChFi3d_Builder"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ChFi3d_FilBuilder.hxx", 
+        52
+      ], 
+      "key": "ChFi3d_FilBuilder"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "ChFi3d_Rational", 
+          0
+        ], 
+        [
+          "ChFi3d_QuasiAngular", 
+          1
+        ], 
+        [
+          "ChFi3d_Polynomial", 
+          2
+        ]
+      ], 
+      "name": "ChFi3d_FilletShape", 
+      "key": "ChFi3d_FilletShape"
+    }
+  ], 
+  "name": "ChFi3d"
+}

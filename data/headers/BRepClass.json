@@ -1,0 +1,1001 @@
+{
+  "headers": [
+    "BRepClass_FacePassiveClassifier.hxx", 
+    "BRepClass_Intersector.hxx", 
+    "BRepClass_FClass2dOfFClassifier.hxx", 
+    "BRepClass_FaceExplorer.hxx", 
+    "BRepClass_FClassifier.hxx", 
+    "BRepClass_Edge.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "BRepClass_Edge", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepClass_Edge::BRepClass_Edge()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepClass_Edge", 
+          "name": "BRepClass_Edge", 
+          "return": {
+            "type": "BRepClass_Edge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_Edge::BRepClass_Edge(TopoDS_Edge, TopoDS_Face)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass_Edge", 
+          "name": "BRepClass_Edge", 
+          "return": {
+            "type": "BRepClass_Edge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_Edge::BRepClass_Edge(BRepClass_Edge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepClass_Edge", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass_Edge", 
+          "name": "BRepClass_Edge", 
+          "return": {
+            "type": "BRepClass_Edge", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepClass_Edge::Edge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_Edge", 
+          "name": "Edge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_Edge::Edge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_Edge", 
+          "name": "Edge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_Edge::Face()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_Edge", 
+          "name": "Face", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_Edge::Face()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_Edge", 
+          "name": "Face", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepClass_Edge.hxx", 
+        33
+      ], 
+      "key": "BRepClass_Edge"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepClass_Intersector", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepClass_Intersector::BRepClass_Intersector()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepClass_Intersector", 
+          "name": "BRepClass_Intersector", 
+          "return": {
+            "type": "BRepClass_Intersector", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_Intersector::BRepClass_Intersector(BRepClass_Intersector)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepClass_Intersector", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass_Intersector", 
+          "name": "BRepClass_Intersector", 
+          "return": {
+            "type": "BRepClass_Intersector", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepClass_Intersector::Perform(gp_Lin2d, Standard_Real, Standard_Real, BRepClass_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "BRepClass_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass_Intersector", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_Intersector::LocalGeometry(BRepClass_Edge, Standard_Real, gp_Dir2d, gp_Dir2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepClass_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Dir2d", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Dir2d", 
+              "name": "N", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "C", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass_Intersector", 
+          "name": "LocalGeometry", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Geom2dInt_IntConicCurveOfGInter"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepClass_Intersector.hxx", 
+        33
+      ], 
+      "key": "BRepClass_Intersector"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepClass_FacePassiveClassifier", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepClass_FacePassiveClassifier::BRepClass_FacePassiveClassifier()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepClass_FacePassiveClassifier", 
+          "name": "BRepClass_FacePassiveClassifier", 
+          "return": {
+            "type": "BRepClass_FacePassiveClassifier", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FacePassiveClassifier::BRepClass_FacePassiveClassifier(BRepClass_FacePassiveClassifier)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepClass_FacePassiveClassifier", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass_FacePassiveClassifier", 
+          "name": "BRepClass_FacePassiveClassifier", 
+          "return": {
+            "type": "BRepClass_FacePassiveClassifier", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepClass_FacePassiveClassifier::Reset(gp_Lin2d, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass_FacePassiveClassifier", 
+          "name": "Reset", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FacePassiveClassifier::Compare(BRepClass_Edge, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepClass_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass_FacePassiveClassifier", 
+          "name": "Compare", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FacePassiveClassifier::Parameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FacePassiveClassifier", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FacePassiveClassifier::Intersector()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FacePassiveClassifier", 
+          "name": "Intersector", 
+          "return": {
+            "type": "BRepClass_Intersector", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FacePassiveClassifier::ClosestIntersection()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FacePassiveClassifier", 
+          "name": "ClosestIntersection", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FacePassiveClassifier::State()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FacePassiveClassifier", 
+          "name": "State", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FacePassiveClassifier::IsHeadOrEnd()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FacePassiveClassifier", 
+          "name": "IsHeadOrEnd", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepClass_FacePassiveClassifier.hxx", 
+        39
+      ], 
+      "key": "BRepClass_FacePassiveClassifier"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepClass_FClass2dOfFClassifier", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepClass_FClass2dOfFClassifier::BRepClass_FClass2dOfFClassifier()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepClass_FClass2dOfFClassifier", 
+          "name": "BRepClass_FClass2dOfFClassifier", 
+          "return": {
+            "type": "BRepClass_FClass2dOfFClassifier", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FClass2dOfFClassifier::BRepClass_FClass2dOfFClassifier(BRepClass_FClass2dOfFClassifier)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepClass_FClass2dOfFClassifier", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass_FClass2dOfFClassifier", 
+          "name": "BRepClass_FClass2dOfFClassifier", 
+          "return": {
+            "type": "BRepClass_FClass2dOfFClassifier", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepClass_FClass2dOfFClassifier::Reset(gp_Lin2d, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass_FClass2dOfFClassifier", 
+          "name": "Reset", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FClass2dOfFClassifier::Compare(BRepClass_Edge, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepClass_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass_FClass2dOfFClassifier", 
+          "name": "Compare", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FClass2dOfFClassifier::Parameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FClass2dOfFClassifier", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FClass2dOfFClassifier::Intersector()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FClass2dOfFClassifier", 
+          "name": "Intersector", 
+          "return": {
+            "type": "BRepClass_Intersector", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FClass2dOfFClassifier::ClosestIntersection()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FClass2dOfFClassifier", 
+          "name": "ClosestIntersection", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FClass2dOfFClassifier::State()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FClass2dOfFClassifier", 
+          "name": "State", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FClass2dOfFClassifier::IsHeadOrEnd()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FClass2dOfFClassifier", 
+          "name": "IsHeadOrEnd", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepClass_FClass2dOfFClassifier.hxx", 
+        39
+      ], 
+      "key": "BRepClass_FClass2dOfFClassifier"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepClass_FaceExplorer", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepClass_FaceExplorer::BRepClass_FaceExplorer(TopoDS_Face)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass_FaceExplorer", 
+          "name": "BRepClass_FaceExplorer", 
+          "return": {
+            "type": "BRepClass_FaceExplorer", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FaceExplorer::BRepClass_FaceExplorer(BRepClass_FaceExplorer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepClass_FaceExplorer", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass_FaceExplorer", 
+          "name": "BRepClass_FaceExplorer", 
+          "return": {
+            "type": "BRepClass_FaceExplorer", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepClass_FaceExplorer::Reject(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass_FaceExplorer", 
+          "name": "Reject", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FaceExplorer::Segment(gp_Pnt2d, gp_Lin2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass_FaceExplorer", 
+          "name": "Segment", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FaceExplorer::OtherSegment(gp_Pnt2d, gp_Lin2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass_FaceExplorer", 
+          "name": "OtherSegment", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FaceExplorer::InitWires()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FaceExplorer", 
+          "name": "InitWires", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FaceExplorer::MoreWires()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FaceExplorer", 
+          "name": "MoreWires", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FaceExplorer::NextWire()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FaceExplorer", 
+          "name": "NextWire", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FaceExplorer::RejectWire(gp_Lin2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass_FaceExplorer", 
+          "name": "RejectWire", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FaceExplorer::InitEdges()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FaceExplorer", 
+          "name": "InitEdges", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FaceExplorer::MoreEdges()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FaceExplorer", 
+          "name": "MoreEdges", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FaceExplorer::NextEdge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FaceExplorer", 
+          "name": "NextEdge", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FaceExplorer::RejectEdge(gp_Lin2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass_FaceExplorer", 
+          "name": "RejectEdge", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FaceExplorer::CurrentEdge(BRepClass_Edge, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepClass_Edge", 
+              "name": "E", 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass_FaceExplorer", 
+          "name": "CurrentEdge", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepClass_FaceExplorer.hxx", 
+        38
+      ], 
+      "key": "BRepClass_FaceExplorer"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepClass_FClassifier", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepClass_FClassifier::BRepClass_FClassifier()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepClass_FClassifier", 
+          "name": "BRepClass_FClassifier", 
+          "return": {
+            "type": "BRepClass_FClassifier", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FClassifier::BRepClass_FClassifier(BRepClass_FaceExplorer, gp_Pnt2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepClass_FaceExplorer", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass_FClassifier", 
+          "name": "BRepClass_FClassifier", 
+          "return": {
+            "type": "BRepClass_FClassifier", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FClassifier::BRepClass_FClassifier(BRepClass_FClassifier)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepClass_FClassifier", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass_FClassifier", 
+          "name": "BRepClass_FClassifier", 
+          "return": {
+            "type": "BRepClass_FClassifier", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepClass_FClassifier::Perform(BRepClass_FaceExplorer, gp_Pnt2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepClass_FaceExplorer", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass_FClassifier", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FClassifier::State()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FClassifier", 
+          "name": "State", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FClassifier::Rejected()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FClassifier", 
+          "name": "Rejected", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FClassifier::NoWires()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FClassifier", 
+          "name": "NoWires", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FClassifier::Edge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FClassifier", 
+          "name": "Edge", 
+          "return": {
+            "type": "BRepClass_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FClassifier::EdgeParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FClassifier", 
+          "name": "EdgeParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass_FClassifier::Position()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass_FClassifier", 
+          "name": "Position", 
+          "return": {
+            "type": "IntRes2d_Position"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepClass_FClassifier.hxx", 
+        39
+      ], 
+      "key": "BRepClass_FClassifier"
+    }
+  ], 
+  "name": "BRepClass"
+}

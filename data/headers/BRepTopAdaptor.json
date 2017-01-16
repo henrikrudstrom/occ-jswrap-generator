@@ -1,0 +1,1140 @@
+{
+  "headers": [
+    "BRepTopAdaptor_SeqOfPtr.hxx", 
+    "BRepTopAdaptor_HVertex.hxx", 
+    "BRepTopAdaptor_TopolTool.hxx", 
+    "BRepTopAdaptor_Tool.hxx", 
+    "BRepTopAdaptor_MapOfShapeTool.hxx", 
+    "BRepTopAdaptor_DataMapIteratorOfMapOfShapeTool.hxx", 
+    "BRepTopAdaptor_FClass2d.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "BRepTopAdaptor_HVertex", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepTopAdaptor_HVertex::BRepTopAdaptor_HVertex(TopoDS_Vertex, opencascade::handle<BRepAdaptor_HCurve2d>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "Vtx", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HCurve2d>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_HVertex", 
+          "name": "BRepTopAdaptor_HVertex", 
+          "return": {
+            "type": "BRepTopAdaptor_HVertex", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_HVertex::BRepTopAdaptor_HVertex(BRepTopAdaptor_HVertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepTopAdaptor_HVertex", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_HVertex", 
+          "name": "BRepTopAdaptor_HVertex", 
+          "return": {
+            "type": "BRepTopAdaptor_HVertex", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_HVertex::Vertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_HVertex", 
+          "name": "Vertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_HVertex::ChangeVertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_HVertex", 
+          "name": "ChangeVertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_HVertex::Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_HVertex", 
+          "name": "Value", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_HVertex::Parameter(opencascade::handle<Adaptor2d_HCurve2d>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_HVertex", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_HVertex::Resolution(opencascade::handle<Adaptor2d_HCurve2d>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_HVertex", 
+          "name": "Resolution", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_HVertex::Orientation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_HVertex", 
+          "name": "Orientation", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_HVertex::IsSame(opencascade::handle<Adaptor3d_HVertex>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HVertex>", 
+              "name": "Other", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_HVertex", 
+          "name": "IsSame", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_HVertex::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_HVertex", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_HVertex::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_HVertex", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_HVertex::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_HVertex", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor3d_HVertex"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepTopAdaptor_HVertex.hxx", 
+        39
+      ], 
+      "key": "BRepTopAdaptor_HVertex"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepTopAdaptor_TopolTool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepTopAdaptor_TopolTool::BRepTopAdaptor_TopolTool()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "BRepTopAdaptor_TopolTool", 
+          "return": {
+            "type": "BRepTopAdaptor_TopolTool", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::BRepTopAdaptor_TopolTool(opencascade::handle<Adaptor3d_HSurface>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "BRepTopAdaptor_TopolTool", 
+          "return": {
+            "type": "BRepTopAdaptor_TopolTool", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::BRepTopAdaptor_TopolTool(BRepTopAdaptor_TopolTool)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepTopAdaptor_TopolTool", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "BRepTopAdaptor_TopolTool", 
+          "return": {
+            "type": "BRepTopAdaptor_TopolTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::Initialize()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "Initialize", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::Initialize(opencascade::handle<Adaptor3d_HSurface>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "Initialize", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::Initialize(opencascade::handle<Adaptor2d_HCurve2d>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "Initialize", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::Init()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::More()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "More", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "Value", 
+          "return": {
+            "type": "opencascade::handle<Adaptor2d_HCurve2d>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::Next()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "Next", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::Edge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "Edge", 
+          "return": {
+            "type": "Standard_Address"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::InitVertexIterator()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "InitVertexIterator", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::MoreVertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "MoreVertex", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::Vertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "Vertex", 
+          "return": {
+            "type": "opencascade::handle<Adaptor3d_HVertex>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::NextVertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "NextVertex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::Classify(gp_Pnt2d, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2d", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecadreOnPeriodic", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "Classify", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::IsThePointOn(gp_Pnt2d, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2d", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecadreOnPeriodic", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "IsThePointOn", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::Orientation(opencascade::handle<Adaptor2d_HCurve2d>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "Orientation", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::Orientation(opencascade::handle<Adaptor3d_HVertex>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HVertex>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "Orientation", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::Destroy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "Destroy", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::Has3d()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "Has3d", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::Tol3d(opencascade::handle<Adaptor2d_HCurve2d>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "Tol3d", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::Tol3d(opencascade::handle<Adaptor3d_HVertex>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HVertex>", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "Tol3d", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::Pnt(opencascade::handle<Adaptor3d_HVertex>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HVertex>", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "Pnt", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::ComputeSamplePoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "ComputeSamplePoints", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::NbSamplesU()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "NbSamplesU", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::NbSamplesV()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "NbSamplesV", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::NbSamples()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "NbSamples", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::SamplePoint(Standard_Integer, gp_Pnt2d, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2d", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P3d", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "SamplePoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::DomainIsInfinite()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "DomainIsInfinite", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_TopolTool::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_TopolTool", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor3d_TopolTool"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepTopAdaptor_TopolTool.hxx", 
+        47
+      ], 
+      "key": "BRepTopAdaptor_TopolTool"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepTopAdaptor_Tool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepTopAdaptor_Tool::BRepTopAdaptor_Tool()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_Tool", 
+          "name": "BRepTopAdaptor_Tool", 
+          "return": {
+            "type": "BRepTopAdaptor_Tool", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_Tool::BRepTopAdaptor_Tool(TopoDS_Face, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2d", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_Tool", 
+          "name": "BRepTopAdaptor_Tool", 
+          "return": {
+            "type": "BRepTopAdaptor_Tool", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_Tool::BRepTopAdaptor_Tool(opencascade::handle<Adaptor3d_HSurface>, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2d", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_Tool", 
+          "name": "BRepTopAdaptor_Tool", 
+          "return": {
+            "type": "BRepTopAdaptor_Tool", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_Tool::BRepTopAdaptor_Tool(BRepTopAdaptor_Tool)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepTopAdaptor_Tool", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_Tool", 
+          "name": "BRepTopAdaptor_Tool", 
+          "return": {
+            "type": "BRepTopAdaptor_Tool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_Tool::Init(TopoDS_Face, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2d", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_Tool", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_Tool::Init(opencascade::handle<Adaptor3d_HSurface>, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2d", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_Tool", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_Tool::GetTopolTool()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_Tool", 
+          "name": "GetTopolTool", 
+          "return": {
+            "type": "opencascade::handle<BRepTopAdaptor_TopolTool>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_Tool::SetTopolTool(opencascade::handle<BRepTopAdaptor_TopolTool>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<BRepTopAdaptor_TopolTool>", 
+              "name": "TT", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_Tool", 
+          "name": "SetTopolTool", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_Tool::GetSurface()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_Tool", 
+          "name": "GetSurface", 
+          "return": {
+            "type": "opencascade::handle<Adaptor3d_HSurface>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_Tool::Destroy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_Tool", 
+          "name": "Destroy", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepTopAdaptor_Tool.hxx", 
+        32
+      ], 
+      "key": "BRepTopAdaptor_Tool"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepTopAdaptor_FClass2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepTopAdaptor_FClass2d::BRepTopAdaptor_FClass2d(TopoDS_Face, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_FClass2d", 
+          "name": "BRepTopAdaptor_FClass2d", 
+          "return": {
+            "type": "BRepTopAdaptor_FClass2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_FClass2d::BRepTopAdaptor_FClass2d(BRepTopAdaptor_FClass2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepTopAdaptor_FClass2d", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_FClass2d", 
+          "name": "BRepTopAdaptor_FClass2d", 
+          "return": {
+            "type": "BRepTopAdaptor_FClass2d", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_FClass2d::PerformInfinitePoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_FClass2d", 
+          "name": "PerformInfinitePoint", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_FClass2d::Perform(gp_Pnt2d, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Puv", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecadreOnPeriodic", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_FClass2d", 
+          "name": "Perform", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_FClass2d::Destroy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTopAdaptor_FClass2d", 
+          "name": "Destroy", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_FClass2d::Copy(BRepTopAdaptor_FClass2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepTopAdaptor_FClass2d", 
+              "name": "Other", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_FClass2d", 
+          "name": "Copy", 
+          "return": {
+            "type": "BRepTopAdaptor_FClass2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTopAdaptor_FClass2d::TestOnRestriction(gp_Pnt2d, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Puv", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RecadreOnPeriodic", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTopAdaptor_FClass2d", 
+          "name": "TestOnRestriction", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepTopAdaptor_FClass2d.hxx", 
+        35
+      ], 
+      "key": "BRepTopAdaptor_FClass2d"
+    }, 
+    {
+      "type": "TColStd_SequenceOfAddress", 
+      "declType": "typedef", 
+      "name": "BRepTopAdaptor_SeqOfPtr", 
+      "key": "BRepTopAdaptor_SeqOfPtr"
+    }, 
+    {
+      "type": "opencascade::handle<BRepTopAdaptor_HVertex>", 
+      "declType": "typedef", 
+      "name": "Handle_BRepTopAdaptor_HVertex", 
+      "key": "Handle_BRepTopAdaptor_HVertex"
+    }, 
+    {
+      "type": "opencascade::handle<BRepTopAdaptor_TopolTool>", 
+      "declType": "typedef", 
+      "name": "Handle_BRepTopAdaptor_TopolTool", 
+      "key": "Handle_BRepTopAdaptor_TopolTool"
+    }, 
+    {
+      "type": "NCollection_DataMap<TopoDS_Shape, BRepTopAdaptor_Tool, TopTools_ShapeMapHasher>", 
+      "declType": "typedef", 
+      "name": "BRepTopAdaptor_MapOfShapeTool", 
+      "key": "BRepTopAdaptor_MapOfShapeTool"
+    }, 
+    {
+      "type": "NCollection_DataMap<TopoDS_Shape, BRepTopAdaptor_Tool, TopTools_ShapeMapHasher>::Iterator", 
+      "declType": "typedef", 
+      "name": "BRepTopAdaptor_DataMapIteratorOfMapOfShapeTool", 
+      "key": "BRepTopAdaptor_DataMapIteratorOfMapOfShapeTool"
+    }
+  ], 
+  "name": "BRepTopAdaptor"
+}

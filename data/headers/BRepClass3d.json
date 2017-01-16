@@ -1,0 +1,1860 @@
+{
+  "headers": [
+    "BRepClass3d_BndBoxTree.hxx", 
+    "BRepClass3d_SolidPassiveClassifier.hxx", 
+    "BRepClass3d_SClassifier.hxx", 
+    "BRepClass3d_SolidClassifier.hxx", 
+    "BRepClass3d_Intersector3d.hxx", 
+    "BRepClass3d_MapOfInter.hxx", 
+    "BRepClass3d_SolidExplorer.hxx", 
+    "BRepClass3d_DataMapIteratorOfMapOfInter.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "BRepClass3d_BndBoxTreeSelectorPoint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorPoint::BRepClass3d_BndBoxTreeSelectorPoint(TopTools_IndexedMapOfShape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopTools_IndexedMapOfShape", 
+              "name": "theMapOfShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorPoint", 
+          "name": "BRepClass3d_BndBoxTreeSelectorPoint", 
+          "return": {
+            "type": "BRepClass3d_BndBoxTreeSelectorPoint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorPoint::Reject(Bnd_Box)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Bnd_Box", 
+              "name": "theBox", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorPoint", 
+          "name": "Reject", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorPoint::Accept(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theObj", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorPoint", 
+          "name": "Accept", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorPoint::SetCurrentPoint(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "theP", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorPoint", 
+          "name": "SetCurrentPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Selector"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepClass3d_BndBoxTree.hxx", 
+        36
+      ], 
+      "key": "BRepClass3d_BndBoxTreeSelectorPoint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepClass3d_BndBoxTreeSelectorLine", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorLine::EdgeParam()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorLine", 
+          "name": "EdgeParam", 
+          "return": {
+            "type": "BRepClass3d_BndBoxTreeSelectorLine", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorLine::EdgeParam(BRepClass3d_BndBoxTreeSelectorLine::EdgeParam)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepClass3d_BndBoxTreeSelectorLine::EdgeParam", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorLine", 
+          "name": "EdgeParam", 
+          "return": {
+            "type": "BRepClass3d_BndBoxTreeSelectorLine", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorLine::VertParam()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorLine", 
+          "name": "VertParam", 
+          "return": {
+            "type": "BRepClass3d_BndBoxTreeSelectorLine", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorLine::VertParam(BRepClass3d_BndBoxTreeSelectorLine::VertParam)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepClass3d_BndBoxTreeSelectorLine::VertParam", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorLine", 
+          "name": "VertParam", 
+          "return": {
+            "type": "BRepClass3d_BndBoxTreeSelectorLine", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorLine::BRepClass3d_BndBoxTreeSelectorLine(TopTools_IndexedMapOfShape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopTools_IndexedMapOfShape", 
+              "name": "theMapOfShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorLine", 
+          "name": "BRepClass3d_BndBoxTreeSelectorLine", 
+          "return": {
+            "type": "BRepClass3d_BndBoxTreeSelectorLine", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorLine::Reject(Bnd_Box)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Bnd_Box", 
+              "name": "theBox", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorLine", 
+          "name": "Reject", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorLine::Accept(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theObj", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorLine", 
+          "name": "Accept", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorLine::SetCurrentLine(gp_Lin, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "theL", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theMaxParam", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorLine", 
+          "name": "SetCurrentLine", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorLine::GetEdgeParam(Standard_Integer, TopoDS_Edge, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "i", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theOutE", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theOutParam", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "outLParam", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorLine", 
+          "name": "GetEdgeParam", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorLine::GetVertParam(Standard_Integer, TopoDS_Vertex, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "i", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "theOutV", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "outLParam", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorLine", 
+          "name": "GetVertParam", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorLine::GetNbEdgeParam()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorLine", 
+          "name": "GetNbEdgeParam", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorLine::GetNbVertParam()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorLine", 
+          "name": "GetNbVertParam", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_BndBoxTreeSelectorLine::ClearResults()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_BndBoxTreeSelectorLine", 
+          "name": "ClearResults", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Selector"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepClass3d_BndBoxTree.hxx", 
+        66
+      ], 
+      "key": "BRepClass3d_BndBoxTreeSelectorLine"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepClass3d_Intersector3d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepClass3d_Intersector3d::BRepClass3d_Intersector3d()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepClass3d_Intersector3d", 
+          "name": "BRepClass3d_Intersector3d", 
+          "return": {
+            "type": "BRepClass3d_Intersector3d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_Intersector3d::BRepClass3d_Intersector3d(BRepClass3d_Intersector3d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepClass3d_Intersector3d", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_Intersector3d", 
+          "name": "BRepClass3d_Intersector3d", 
+          "return": {
+            "type": "BRepClass3d_Intersector3d", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepClass3d_Intersector3d::Perform(gp_Lin, Standard_Real, Standard_Real, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Prm", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_Intersector3d", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_Intersector3d::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_Intersector3d", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_Intersector3d::HasAPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_Intersector3d", 
+          "name": "HasAPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_Intersector3d::UParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_Intersector3d", 
+          "name": "UParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_Intersector3d::VParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_Intersector3d", 
+          "name": "VParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_Intersector3d::WParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_Intersector3d", 
+          "name": "WParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_Intersector3d::Pnt()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_Intersector3d", 
+          "name": "Pnt", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_Intersector3d::Transition()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_Intersector3d", 
+          "name": "Transition", 
+          "return": {
+            "type": "IntCurveSurface_TransitionOnCurve"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_Intersector3d::State()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_Intersector3d", 
+          "name": "State", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_Intersector3d::Face()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_Intersector3d", 
+          "name": "Face", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepClass3d_Intersector3d.hxx", 
+        36
+      ], 
+      "key": "BRepClass3d_Intersector3d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepClass3d_SolidPassiveClassifier", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepClass3d_SolidPassiveClassifier::BRepClass3d_SolidPassiveClassifier()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidPassiveClassifier", 
+          "name": "BRepClass3d_SolidPassiveClassifier", 
+          "return": {
+            "type": "BRepClass3d_SolidPassiveClassifier", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidPassiveClassifier::BRepClass3d_SolidPassiveClassifier(BRepClass3d_SolidPassiveClassifier)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepClass3d_SolidPassiveClassifier", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidPassiveClassifier", 
+          "name": "BRepClass3d_SolidPassiveClassifier", 
+          "return": {
+            "type": "BRepClass3d_SolidPassiveClassifier", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidPassiveClassifier::Reset(gp_Lin, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidPassiveClassifier", 
+          "name": "Reset", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidPassiveClassifier::Compare(TopoDS_Face, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidPassiveClassifier", 
+          "name": "Compare", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidPassiveClassifier::Parameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidPassiveClassifier", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidPassiveClassifier::HasIntersection()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidPassiveClassifier", 
+          "name": "HasIntersection", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidPassiveClassifier::Intersector()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidPassiveClassifier", 
+          "name": "Intersector", 
+          "return": {
+            "type": "BRepClass3d_Intersector3d", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidPassiveClassifier::State()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidPassiveClassifier", 
+          "name": "State", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepClass3d_SolidPassiveClassifier.hxx", 
+        38
+      ], 
+      "key": "BRepClass3d_SolidPassiveClassifier"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepClass3d_SolidExplorer", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepClass3d_SolidExplorer::BRepClass3d_SolidExplorer()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "BRepClass3d_SolidExplorer", 
+          "return": {
+            "type": "BRepClass3d_SolidExplorer", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::BRepClass3d_SolidExplorer(BRepClass3d_SolidExplorer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepClass3d_SolidExplorer", 
+              "name": "Oth", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "BRepClass3d_SolidExplorer", 
+          "return": {
+            "type": "BRepClass3d_SolidExplorer", 
+            "ptr": true
+          }, 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::BRepClass3d_SolidExplorer(TopoDS_Shape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "BRepClass3d_SolidExplorer", 
+          "return": {
+            "type": "BRepClass3d_SolidExplorer", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::InitShape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "InitShape", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::Reject(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "Reject", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::FindAPointInTheFace(TopoDS_Face, gp_Pnt, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "FindAPointInTheFace", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::FindAPointInTheFace(TopoDS_Face, gp_Pnt, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "FindAPointInTheFace", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::FindAPointInTheFace(TopoDS_Face, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "theVecD1U", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "theVecD1V", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "FindAPointInTheFace", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::FindAPointInTheFace(TopoDS_Face, gp_Pnt, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "FindAPointInTheFace", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::FindAPointInTheFace(TopoDS_Face, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "FindAPointInTheFace", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::FindAPointInTheFace(TopoDS_Face, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "FindAPointInTheFace", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::PointInTheFace(TopoDS_Face, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "PointInTheFace", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::PointInTheFace(TopoDS_Face, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Integer, opencascade::handle<BRepAdaptor_HSurface>, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "surf", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "PointInTheFace", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::PointInTheFace(TopoDS_Face, gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Integer, opencascade::handle<BRepAdaptor_HSurface>, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepAdaptor_HSurface>", 
+              "name": "surf", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v2", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "theVecD1U", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "theVecD1V", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "PointInTheFace", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::InitShell()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "InitShell", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::MoreShell()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "MoreShell", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::NextShell()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "NextShell", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::CurrentShell()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "CurrentShell", 
+          "return": {
+            "type": "TopoDS_Shell"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::RejectShell(gp_Lin)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "RejectShell", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::InitFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "InitFace", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::MoreFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "MoreFace", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::NextFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "NextFace", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::CurrentFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "CurrentFace", 
+          "return": {
+            "type": "TopoDS_Face"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::RejectFace(gp_Lin)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "RejectFace", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::Segment(gp_Pnt, gp_Lin, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "Segment", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::OtherSegment(gp_Pnt, gp_Lin, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "OtherSegment", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::GetFaceSegmentIndex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "GetFaceSegmentIndex", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::DumpSegment(gp_Pnt, gp_Lin, Standard_Real, TopAbs_State)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "const": true
+            }, 
+            {
+              "type": "TopAbs_State", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "DumpSegment", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::Box()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "Box", 
+          "return": {
+            "type": "Bnd_Box", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::GetShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "GetShape", 
+          "return": {
+            "type": "TopoDS_Shape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::Intersector(TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "Intersector", 
+          "return": {
+            "type": "IntCurvesFace_Intersector", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::GetTree()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "GetTree", 
+          "return": {
+            "type": "BRepClass3d_BndBoxTree", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::GetMapEV()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "GetMapEV", 
+          "return": {
+            "type": "TopTools_IndexedMapOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidExplorer::Destroy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidExplorer", 
+          "name": "Destroy", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepClass3d_SolidExplorer.hxx", 
+        47
+      ], 
+      "key": "BRepClass3d_SolidExplorer"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepClass3d_SClassifier", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepClass3d_SClassifier::BRepClass3d_SClassifier()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SClassifier", 
+          "name": "BRepClass3d_SClassifier", 
+          "return": {
+            "type": "BRepClass3d_SClassifier", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SClassifier::BRepClass3d_SClassifier(BRepClass3d_SolidExplorer, gp_Pnt, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepClass3d_SolidExplorer", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass3d_SClassifier", 
+          "name": "BRepClass3d_SClassifier", 
+          "return": {
+            "type": "BRepClass3d_SClassifier", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SClassifier::BRepClass3d_SClassifier(BRepClass3d_SClassifier)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepClass3d_SClassifier", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SClassifier", 
+          "name": "BRepClass3d_SClassifier", 
+          "return": {
+            "type": "BRepClass3d_SClassifier", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepClass3d_SClassifier::Perform(BRepClass3d_SolidExplorer, gp_Pnt, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepClass3d_SolidExplorer", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass3d_SClassifier", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SClassifier::PerformInfinitePoint(BRepClass3d_SolidExplorer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepClass3d_SolidExplorer", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass3d_SClassifier", 
+          "name": "PerformInfinitePoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SClassifier::Rejected()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SClassifier", 
+          "name": "Rejected", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SClassifier::State()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SClassifier", 
+          "name": "State", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SClassifier::IsOnAFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SClassifier", 
+          "name": "IsOnAFace", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SClassifier::Face()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SClassifier", 
+          "name": "Face", 
+          "return": {
+            "type": "TopoDS_Face"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepClass3d_SClassifier.hxx", 
+        36
+      ], 
+      "key": "BRepClass3d_SClassifier"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepClass3d_SolidClassifier", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepClass3d_SolidClassifier::BRepClass3d_SolidClassifier()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidClassifier", 
+          "name": "BRepClass3d_SolidClassifier", 
+          "return": {
+            "type": "BRepClass3d_SolidClassifier", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidClassifier::BRepClass3d_SolidClassifier(TopoDS_Shape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidClassifier", 
+          "name": "BRepClass3d_SolidClassifier", 
+          "return": {
+            "type": "BRepClass3d_SolidClassifier", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidClassifier::BRepClass3d_SolidClassifier(TopoDS_Shape, gp_Pnt, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidClassifier", 
+          "name": "BRepClass3d_SolidClassifier", 
+          "return": {
+            "type": "BRepClass3d_SolidClassifier", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidClassifier::BRepClass3d_SolidClassifier(BRepClass3d_SolidClassifier)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepClass3d_SolidClassifier", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidClassifier", 
+          "name": "BRepClass3d_SolidClassifier", 
+          "return": {
+            "type": "BRepClass3d_SolidClassifier", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidClassifier::Load(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidClassifier", 
+          "name": "Load", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidClassifier::Perform(gp_Pnt, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidClassifier", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidClassifier::PerformInfinitePoint(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepClass3d_SolidClassifier", 
+          "name": "PerformInfinitePoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepClass3d_SolidClassifier::Destroy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepClass3d_SolidClassifier", 
+          "name": "Destroy", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepClass3d_SClassifier"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepClass3d_SolidClassifier.hxx", 
+        34
+      ], 
+      "key": "BRepClass3d_SolidClassifier"
+    }, 
+    {
+      "type": "NCollection_UBTree<int, Bnd_Box>", 
+      "declType": "typedef", 
+      "name": "BRepClass3d_BndBoxTree", 
+      "key": "BRepClass3d_BndBoxTree"
+    }, 
+    {
+      "type": "NCollection_DataMap<TopoDS_Shape, void *, TopTools_ShapeMapHasher>", 
+      "declType": "typedef", 
+      "name": "BRepClass3d_MapOfInter", 
+      "key": "BRepClass3d_MapOfInter"
+    }, 
+    {
+      "type": "NCollection_DataMap<TopoDS_Shape, void *, TopTools_ShapeMapHasher>::Iterator", 
+      "declType": "typedef", 
+      "name": "BRepClass3d_DataMapIteratorOfMapOfInter", 
+      "key": "BRepClass3d_DataMapIteratorOfMapOfInter"
+    }
+  ], 
+  "name": "BRepClass3d"
+}

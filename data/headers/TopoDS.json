@@ -1,0 +1,3338 @@
+{
+  "headers": [
+    "TopoDS_TWire.hxx", 
+    "TopoDS_FrozenShape.hxx", 
+    "TopoDS_Vertex.hxx", 
+    "TopoDS_TCompound.hxx", 
+    "TopoDS_ListIteratorOfListOfShape.hxx", 
+    "TopoDS_LockedShape.hxx", 
+    "TopoDS_HShape.hxx", 
+    "TopoDS_TEdge.hxx", 
+    "TopoDS_Solid.hxx", 
+    "TopoDS_Builder.hxx", 
+    "TopoDS_Face.hxx", 
+    "TopoDS_Edge.hxx", 
+    "TopoDS_Iterator.hxx", 
+    "TopoDS_Compound.hxx", 
+    "TopoDS_TVertex.hxx", 
+    "TopoDS_Wire.hxx", 
+    "TopoDS_Shell.hxx", 
+    "TopoDS_TShape.hxx", 
+    "TopoDS_CompSolid.hxx", 
+    "TopoDS_Shape.hxx", 
+    "TopoDS_TShell.hxx", 
+    "TopoDS_UnCompatibleShapes.hxx", 
+    "TopoDS_TFace.hxx", 
+    "TopoDS_TCompSolid.hxx", 
+    "TopoDS_ListOfShape.hxx", 
+    "TopoDS_TSolid.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "TopoDS_Shape", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_Shape::TopoDS_Shape()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "TopoDS_Shape", 
+          "return": {
+            "type": "TopoDS_Shape", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::TopoDS_Shape(TopoDS_Shape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "TopoDS_Shape", 
+          "return": {
+            "type": "TopoDS_Shape", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "TopoDS_Shape::IsNull()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "IsNull", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Nullify()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "Nullify", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Location()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "Location", 
+          "return": {
+            "type": "TopLoc_Location", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Location(TopLoc_Location)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopLoc_Location", 
+              "name": "Loc", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "Location", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Located(TopLoc_Location)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopLoc_Location", 
+              "name": "Loc", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "Located", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Orientation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "Orientation", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Orientation(TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Orient", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "Orientation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Oriented(TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "Oriented", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::TShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "TShape", 
+          "return": {
+            "type": "opencascade::handle<TopoDS_TShape>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::ShapeType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "ShapeType", 
+          "return": {
+            "type": "TopAbs_ShapeEnum"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Free()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "Free", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Free(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "F", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "Free", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Locked()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "Locked", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Locked(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "F", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "Locked", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Modified()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "Modified", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Modified(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "M", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "Modified", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Checked()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "Checked", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Checked(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "C", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "Checked", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Orientable()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "Orientable", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Orientable(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "C", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "Orientable", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Closed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "Closed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Closed(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "C", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "Closed", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Infinite()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "Infinite", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Infinite(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "C", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "Infinite", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Convex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "Convex", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Convex(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "C", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "Convex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Move(TopLoc_Location)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopLoc_Location", 
+              "name": "position", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "Move", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Moved(TopLoc_Location)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopLoc_Location", 
+              "name": "position", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "Moved", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Reverse()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "Reverse", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Reversed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "Reversed", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Complement()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "Complement", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Complemented()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "Complemented", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Compose(TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Orient", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "Compose", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::Composed(TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Orient", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "Composed", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::IsPartner(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "other", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "IsPartner", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::IsSame(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "other", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "IsSame", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::IsEqual(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "other", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "IsEqual", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::IsNotEqual(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "other", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "IsNotEqual", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::HashCode(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Upper", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "HashCode", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::EmptyCopy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "EmptyCopy", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::EmptyCopied()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Shape", 
+          "name": "EmptyCopied", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shape::TShape(opencascade::handle<TopoDS_TShape>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<TopoDS_TShape>", 
+              "name": "T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Shape", 
+          "name": "TShape", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_Shape.hxx", 
+        46
+      ], 
+      "key": "TopoDS_Shape"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_Iterator", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_Iterator::TopoDS_Iterator()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_Iterator", 
+          "name": "TopoDS_Iterator", 
+          "return": {
+            "type": "TopoDS_Iterator", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Iterator::TopoDS_Iterator(TopoDS_Shape, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "cumOri", 
+              "default": "true", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "cumLoc", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_Iterator", 
+          "name": "TopoDS_Iterator", 
+          "return": {
+            "type": "TopoDS_Iterator", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Iterator::TopoDS_Iterator(TopoDS_Iterator)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Iterator", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Iterator", 
+          "name": "TopoDS_Iterator", 
+          "return": {
+            "type": "TopoDS_Iterator", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "TopoDS_Iterator::Initialize(TopoDS_Shape, Standard_Boolean, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "cumOri", 
+              "default": "true", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "cumLoc", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_Iterator", 
+          "name": "Initialize", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Iterator::More()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Iterator", 
+          "name": "More", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Iterator::Next()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Iterator", 
+          "name": "Next", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Iterator::Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_Iterator", 
+          "name": "Value", 
+          "return": {
+            "type": "TopoDS_Shape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_Iterator.hxx", 
+        39
+      ], 
+      "key": "TopoDS_Iterator"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_Builder", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_Builder::TopoDS_Builder()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_Builder", 
+          "name": "TopoDS_Builder", 
+          "return": {
+            "type": "TopoDS_Builder", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Builder::TopoDS_Builder(TopoDS_Builder)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Builder", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Builder", 
+          "name": "TopoDS_Builder", 
+          "return": {
+            "type": "TopoDS_Builder", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "TopoDS_Builder::MakeWire(TopoDS_Wire)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Builder", 
+          "name": "MakeWire", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Builder::MakeShell(TopoDS_Shell)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shell", 
+              "name": "S", 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Builder", 
+          "name": "MakeShell", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Builder::MakeSolid(TopoDS_Solid)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Solid", 
+              "name": "S", 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Builder", 
+          "name": "MakeSolid", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Builder::MakeCompSolid(TopoDS_CompSolid)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_CompSolid", 
+              "name": "C", 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Builder", 
+          "name": "MakeCompSolid", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Builder::MakeCompound(TopoDS_Compound)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Compound", 
+              "name": "C", 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Builder", 
+          "name": "MakeCompound", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Builder::Add(TopoDS_Shape, TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Builder", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Builder::Remove(TopoDS_Shape, TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Builder", 
+          "name": "Remove", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_Builder.hxx", 
+        75
+      ], 
+      "key": "TopoDS_Builder"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_TShape", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "TopoDS_TShape::Free()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShape", 
+          "name": "Free", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::Free(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "F", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_TShape", 
+          "name": "Free", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::Locked()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShape", 
+          "name": "Locked", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::Locked(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "F", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_TShape", 
+          "name": "Locked", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::Modified()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShape", 
+          "name": "Modified", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::Modified(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "M", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_TShape", 
+          "name": "Modified", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::Checked()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShape", 
+          "name": "Checked", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::Checked(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "C", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_TShape", 
+          "name": "Checked", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::Orientable()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShape", 
+          "name": "Orientable", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::Orientable(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "C", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_TShape", 
+          "name": "Orientable", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::Closed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShape", 
+          "name": "Closed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::Closed(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "C", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_TShape", 
+          "name": "Closed", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::Infinite()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShape", 
+          "name": "Infinite", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::Infinite(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "C", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_TShape", 
+          "name": "Infinite", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::Convex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShape", 
+          "name": "Convex", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::Convex(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "C", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_TShape", 
+          "name": "Convex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::ShapeType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShape", 
+          "name": "ShapeType", 
+          "return": {
+            "type": "TopAbs_ShapeEnum"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopoDS_TShape::EmptyCopy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShape", 
+          "name": "EmptyCopy", 
+          "return": {
+            "type": "opencascade::handle<TopoDS_TShape>"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopoDS_TShape::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShape", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShape", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShape::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShape", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_TShape.hxx", 
+        61
+      ], 
+      "key": "TopoDS_TShape"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_TWire", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_TWire::TopoDS_TWire()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_TWire", 
+          "name": "TopoDS_TWire", 
+          "return": {
+            "type": "TopoDS_TWire", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TWire::TopoDS_TWire(TopoDS_TWire)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_TWire", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_TWire", 
+          "name": "TopoDS_TWire", 
+          "return": {
+            "type": "TopoDS_TWire", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "TopoDS_TWire::ShapeType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TWire", 
+          "name": "ShapeType", 
+          "return": {
+            "type": "TopAbs_ShapeEnum"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "TopoDS_TWire::EmptyCopy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TWire", 
+          "name": "EmptyCopy", 
+          "return": {
+            "type": "opencascade::handle<TopoDS_TShape>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "TopoDS_TWire::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TWire", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TWire::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TWire", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TWire::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TWire", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopoDS_TShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_TWire.hxx", 
+        32
+      ], 
+      "key": "TopoDS_TWire"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_FrozenShape", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_FrozenShape::TopoDS_FrozenShape()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_FrozenShape", 
+          "name": "TopoDS_FrozenShape", 
+          "return": {
+            "type": "TopoDS_FrozenShape", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_FrozenShape::TopoDS_FrozenShape(Standard_CString)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_FrozenShape", 
+          "name": "TopoDS_FrozenShape", 
+          "return": {
+            "type": "TopoDS_FrozenShape", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_FrozenShape::TopoDS_FrozenShape(TopoDS_FrozenShape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_FrozenShape", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_FrozenShape", 
+          "name": "TopoDS_FrozenShape", 
+          "return": {
+            "type": "TopoDS_FrozenShape", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "TopoDS_FrozenShape::Raise(Standard_CString)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\"", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_FrozenShape", 
+          "name": "Raise", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_FrozenShape::Raise(Standard_SStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_SStream", 
+              "name": "theMessage", 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_FrozenShape", 
+          "name": "Raise", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_FrozenShape::NewInstance(Standard_CString)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\"", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_FrozenShape", 
+          "name": "NewInstance", 
+          "return": {
+            "type": "opencascade::handle<TopoDS_FrozenShape>"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_FrozenShape::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_FrozenShape", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_FrozenShape::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_FrozenShape", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_FrozenShape::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_FrozenShape", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_DomainError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_FrozenShape.hxx", 
+        38
+      ], 
+      "key": "TopoDS_FrozenShape"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_Vertex", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_Vertex::TopoDS_Vertex()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_Vertex", 
+          "name": "TopoDS_Vertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Vertex::TopoDS_Vertex(TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Vertex", 
+          "name": "TopoDS_Vertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopoDS_Shape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_Vertex.hxx", 
+        35
+      ], 
+      "key": "TopoDS_Vertex"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_TCompound", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_TCompound::TopoDS_TCompound()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_TCompound", 
+          "name": "TopoDS_TCompound", 
+          "return": {
+            "type": "TopoDS_TCompound", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TCompound::TopoDS_TCompound(TopoDS_TCompound)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_TCompound", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_TCompound", 
+          "name": "TopoDS_TCompound", 
+          "return": {
+            "type": "TopoDS_TCompound", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "TopoDS_TCompound::ShapeType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TCompound", 
+          "name": "ShapeType", 
+          "return": {
+            "type": "TopAbs_ShapeEnum"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "TopoDS_TCompound::EmptyCopy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TCompound", 
+          "name": "EmptyCopy", 
+          "return": {
+            "type": "opencascade::handle<TopoDS_TShape>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "TopoDS_TCompound::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TCompound", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TCompound::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TCompound", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TCompound::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TCompound", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopoDS_TShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_TCompound.hxx", 
+        32
+      ], 
+      "key": "TopoDS_TCompound"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_LockedShape", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_LockedShape::TopoDS_LockedShape()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_LockedShape", 
+          "name": "TopoDS_LockedShape", 
+          "return": {
+            "type": "TopoDS_LockedShape", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_LockedShape::TopoDS_LockedShape(Standard_CString)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_LockedShape", 
+          "name": "TopoDS_LockedShape", 
+          "return": {
+            "type": "TopoDS_LockedShape", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_LockedShape::TopoDS_LockedShape(TopoDS_LockedShape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_LockedShape", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_LockedShape", 
+          "name": "TopoDS_LockedShape", 
+          "return": {
+            "type": "TopoDS_LockedShape", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "TopoDS_LockedShape::Raise(Standard_CString)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\"", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_LockedShape", 
+          "name": "Raise", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_LockedShape::Raise(Standard_SStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_SStream", 
+              "name": "theMessage", 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_LockedShape", 
+          "name": "Raise", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_LockedShape::NewInstance(Standard_CString)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\"", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_LockedShape", 
+          "name": "NewInstance", 
+          "return": {
+            "type": "opencascade::handle<TopoDS_LockedShape>"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_LockedShape::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_LockedShape", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_LockedShape::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_LockedShape", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_LockedShape::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_LockedShape", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_DomainError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_LockedShape.hxx", 
+        38
+      ], 
+      "key": "TopoDS_LockedShape"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_HShape", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_HShape::TopoDS_HShape()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_HShape", 
+          "name": "TopoDS_HShape", 
+          "return": {
+            "type": "TopoDS_HShape", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_HShape::TopoDS_HShape(TopoDS_Shape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_HShape", 
+          "name": "TopoDS_HShape", 
+          "return": {
+            "type": "TopoDS_HShape", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_HShape::TopoDS_HShape(TopoDS_HShape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_HShape", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_HShape", 
+          "name": "TopoDS_HShape", 
+          "return": {
+            "type": "TopoDS_HShape", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "TopoDS_HShape::Shape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_HShape", 
+          "name": "Shape", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_HShape::Shape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_HShape", 
+          "name": "Shape", 
+          "return": {
+            "type": "TopoDS_Shape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_HShape::ChangeShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_HShape", 
+          "name": "ChangeShape", 
+          "return": {
+            "type": "TopoDS_Shape", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_HShape::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_HShape", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_HShape::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_HShape", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_HShape::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_HShape", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_HShape.hxx", 
+        32
+      ], 
+      "key": "TopoDS_HShape"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_TEdge", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "TopoDS_TEdge::ShapeType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TEdge", 
+          "name": "ShapeType", 
+          "return": {
+            "type": "TopAbs_ShapeEnum"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "TopoDS_TEdge::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TEdge", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TEdge::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TEdge", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TEdge::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TEdge", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopoDS_TShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_TEdge.hxx", 
+        32
+      ], 
+      "key": "TopoDS_TEdge"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_Solid", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_Solid::TopoDS_Solid()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_Solid", 
+          "name": "TopoDS_Solid", 
+          "return": {
+            "type": "TopoDS_Solid", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Solid::TopoDS_Solid(TopoDS_Solid)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Solid", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Solid", 
+          "name": "TopoDS_Solid", 
+          "return": {
+            "type": "TopoDS_Solid", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopoDS_Shape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_Solid.hxx", 
+        35
+      ], 
+      "key": "TopoDS_Solid"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_UnCompatibleShapes", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_UnCompatibleShapes::TopoDS_UnCompatibleShapes()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_UnCompatibleShapes", 
+          "name": "TopoDS_UnCompatibleShapes", 
+          "return": {
+            "type": "TopoDS_UnCompatibleShapes", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_UnCompatibleShapes::TopoDS_UnCompatibleShapes(Standard_CString)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_UnCompatibleShapes", 
+          "name": "TopoDS_UnCompatibleShapes", 
+          "return": {
+            "type": "TopoDS_UnCompatibleShapes", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_UnCompatibleShapes::TopoDS_UnCompatibleShapes(TopoDS_UnCompatibleShapes)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_UnCompatibleShapes", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_UnCompatibleShapes", 
+          "name": "TopoDS_UnCompatibleShapes", 
+          "return": {
+            "type": "TopoDS_UnCompatibleShapes", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "TopoDS_UnCompatibleShapes::Raise(Standard_CString)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\"", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_UnCompatibleShapes", 
+          "name": "Raise", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_UnCompatibleShapes::Raise(Standard_SStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_SStream", 
+              "name": "theMessage", 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_UnCompatibleShapes", 
+          "name": "Raise", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_UnCompatibleShapes::NewInstance(Standard_CString)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\"", 
+              "const": true
+            }
+          ], 
+          "parent": "TopoDS_UnCompatibleShapes", 
+          "name": "NewInstance", 
+          "return": {
+            "type": "opencascade::handle<TopoDS_UnCompatibleShapes>"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_UnCompatibleShapes::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_UnCompatibleShapes", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_UnCompatibleShapes::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_UnCompatibleShapes", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_UnCompatibleShapes::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_UnCompatibleShapes", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_DomainError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_UnCompatibleShapes.hxx", 
+        37
+      ], 
+      "key": "TopoDS_UnCompatibleShapes"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_Wire", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_Wire::TopoDS_Wire()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_Wire", 
+          "name": "TopoDS_Wire", 
+          "return": {
+            "type": "TopoDS_Wire", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Wire::TopoDS_Wire(TopoDS_Wire)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Wire", 
+          "name": "TopoDS_Wire", 
+          "return": {
+            "type": "TopoDS_Wire", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopoDS_Shape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_Wire.hxx", 
+        34
+      ], 
+      "key": "TopoDS_Wire"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_Shell", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_Shell::TopoDS_Shell()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_Shell", 
+          "name": "TopoDS_Shell", 
+          "return": {
+            "type": "TopoDS_Shell", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Shell::TopoDS_Shell(TopoDS_Shell)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shell", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Shell", 
+          "name": "TopoDS_Shell", 
+          "return": {
+            "type": "TopoDS_Shell", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopoDS_Shape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_Shell.hxx", 
+        34
+      ], 
+      "key": "TopoDS_Shell"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_CompSolid", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_CompSolid::TopoDS_CompSolid()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_CompSolid", 
+          "name": "TopoDS_CompSolid", 
+          "return": {
+            "type": "TopoDS_CompSolid", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_CompSolid::TopoDS_CompSolid(TopoDS_CompSolid)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_CompSolid", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_CompSolid", 
+          "name": "TopoDS_CompSolid", 
+          "return": {
+            "type": "TopoDS_CompSolid", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopoDS_Shape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_CompSolid.hxx", 
+        36
+      ], 
+      "key": "TopoDS_CompSolid"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_Compound", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_Compound::TopoDS_Compound()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_Compound", 
+          "name": "TopoDS_Compound", 
+          "return": {
+            "type": "TopoDS_Compound", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Compound::TopoDS_Compound(TopoDS_Compound)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Compound", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Compound", 
+          "name": "TopoDS_Compound", 
+          "return": {
+            "type": "TopoDS_Compound", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopoDS_Shape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_Compound.hxx", 
+        36
+      ], 
+      "key": "TopoDS_Compound"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_TShell", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_TShell::TopoDS_TShell()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_TShell", 
+          "name": "TopoDS_TShell", 
+          "return": {
+            "type": "TopoDS_TShell", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShell::TopoDS_TShell(TopoDS_TShell)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_TShell", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_TShell", 
+          "name": "TopoDS_TShell", 
+          "return": {
+            "type": "TopoDS_TShell", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "TopoDS_TShell::ShapeType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShell", 
+          "name": "ShapeType", 
+          "return": {
+            "type": "TopAbs_ShapeEnum"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "TopoDS_TShell::EmptyCopy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShell", 
+          "name": "EmptyCopy", 
+          "return": {
+            "type": "opencascade::handle<TopoDS_TShape>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "TopoDS_TShell::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShell", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShell::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShell", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TShell::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TShell", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopoDS_TShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_TShell.hxx", 
+        32
+      ], 
+      "key": "TopoDS_TShell"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_TSolid", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_TSolid::TopoDS_TSolid()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_TSolid", 
+          "name": "TopoDS_TSolid", 
+          "return": {
+            "type": "TopoDS_TSolid", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TSolid::TopoDS_TSolid(TopoDS_TSolid)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_TSolid", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_TSolid", 
+          "name": "TopoDS_TSolid", 
+          "return": {
+            "type": "TopoDS_TSolid", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "TopoDS_TSolid::ShapeType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TSolid", 
+          "name": "ShapeType", 
+          "return": {
+            "type": "TopAbs_ShapeEnum"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "TopoDS_TSolid::EmptyCopy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TSolid", 
+          "name": "EmptyCopy", 
+          "return": {
+            "type": "opencascade::handle<TopoDS_TShape>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "TopoDS_TSolid::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TSolid", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TSolid::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TSolid", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TSolid::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TSolid", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopoDS_TShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_TSolid.hxx", 
+        33
+      ], 
+      "key": "TopoDS_TSolid"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_TCompSolid", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_TCompSolid::TopoDS_TCompSolid()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_TCompSolid", 
+          "name": "TopoDS_TCompSolid", 
+          "return": {
+            "type": "TopoDS_TCompSolid", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TCompSolid::TopoDS_TCompSolid(TopoDS_TCompSolid)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_TCompSolid", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_TCompSolid", 
+          "name": "TopoDS_TCompSolid", 
+          "return": {
+            "type": "TopoDS_TCompSolid", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "TopoDS_TCompSolid::ShapeType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TCompSolid", 
+          "name": "ShapeType", 
+          "return": {
+            "type": "TopAbs_ShapeEnum"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "TopoDS_TCompSolid::EmptyCopy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TCompSolid", 
+          "name": "EmptyCopy", 
+          "return": {
+            "type": "opencascade::handle<TopoDS_TShape>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "TopoDS_TCompSolid::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TCompSolid", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TCompSolid::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TCompSolid", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TCompSolid::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TCompSolid", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopoDS_TShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_TCompSolid.hxx", 
+        32
+      ], 
+      "key": "TopoDS_TCompSolid"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_Face", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_Face::TopoDS_Face()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_Face", 
+          "name": "TopoDS_Face", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Face::TopoDS_Face(TopoDS_Face)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Face", 
+          "name": "TopoDS_Face", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopoDS_Shape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_Face.hxx", 
+        34
+      ], 
+      "key": "TopoDS_Face"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_Edge", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_Edge::TopoDS_Edge()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_Edge", 
+          "name": "TopoDS_Edge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_Edge::TopoDS_Edge(TopoDS_Edge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_Edge", 
+          "name": "TopoDS_Edge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopoDS_Shape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_Edge.hxx", 
+        35
+      ], 
+      "key": "TopoDS_Edge"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_TVertex", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "TopoDS_TVertex::ShapeType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TVertex", 
+          "name": "ShapeType", 
+          "return": {
+            "type": "TopAbs_ShapeEnum"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "TopoDS_TVertex::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TVertex", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TVertex::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TVertex", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TVertex::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TVertex", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopoDS_TShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_TVertex.hxx", 
+        32
+      ], 
+      "key": "TopoDS_TVertex"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopoDS_TFace", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopoDS_TFace::TopoDS_TFace()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopoDS_TFace", 
+          "name": "TopoDS_TFace", 
+          "return": {
+            "type": "TopoDS_TFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TFace::TopoDS_TFace(TopoDS_TFace)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_TFace", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopoDS_TFace", 
+          "name": "TopoDS_TFace", 
+          "return": {
+            "type": "TopoDS_TFace", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "TopoDS_TFace::ShapeType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TFace", 
+          "name": "ShapeType", 
+          "return": {
+            "type": "TopAbs_ShapeEnum"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "TopoDS_TFace::EmptyCopy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TFace", 
+          "name": "EmptyCopy", 
+          "return": {
+            "type": "opencascade::handle<TopoDS_TShape>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "TopoDS_TFace::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TFace", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TFace::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TFace", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "TopoDS_TFace::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopoDS_TFace", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopoDS_TShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/TopoDS_TFace.hxx", 
+        34
+      ], 
+      "key": "TopoDS_TFace"
+    }, 
+    {
+      "type": "NCollection_List<TopoDS_Shape>", 
+      "declType": "typedef", 
+      "name": "TopoDS_ListOfShape", 
+      "key": "TopoDS_ListOfShape"
+    }, 
+    {
+      "type": "NCollection_List<TopoDS_Shape>::Iterator", 
+      "declType": "typedef", 
+      "name": "TopoDS_ListIteratorOfListOfShape", 
+      "key": "TopoDS_ListIteratorOfListOfShape"
+    }, 
+    {
+      "type": "opencascade::handle<TopoDS_TShape>", 
+      "declType": "typedef", 
+      "name": "Handle_TopoDS_TShape", 
+      "key": "Handle_TopoDS_TShape"
+    }, 
+    {
+      "type": "opencascade::handle<TopoDS_TWire>", 
+      "declType": "typedef", 
+      "name": "Handle_TopoDS_TWire", 
+      "key": "Handle_TopoDS_TWire"
+    }, 
+    {
+      "type": "opencascade::handle<TopoDS_FrozenShape>", 
+      "declType": "typedef", 
+      "name": "Handle_TopoDS_FrozenShape", 
+      "key": "Handle_TopoDS_FrozenShape"
+    }, 
+    {
+      "type": "opencascade::handle<TopoDS_TCompound>", 
+      "declType": "typedef", 
+      "name": "Handle_TopoDS_TCompound", 
+      "key": "Handle_TopoDS_TCompound"
+    }, 
+    {
+      "type": "opencascade::handle<TopoDS_LockedShape>", 
+      "declType": "typedef", 
+      "name": "Handle_TopoDS_LockedShape", 
+      "key": "Handle_TopoDS_LockedShape"
+    }, 
+    {
+      "type": "opencascade::handle<TopoDS_HShape>", 
+      "declType": "typedef", 
+      "name": "Handle_TopoDS_HShape", 
+      "key": "Handle_TopoDS_HShape"
+    }, 
+    {
+      "type": "opencascade::handle<TopoDS_TEdge>", 
+      "declType": "typedef", 
+      "name": "Handle_TopoDS_TEdge", 
+      "key": "Handle_TopoDS_TEdge"
+    }, 
+    {
+      "type": "opencascade::handle<TopoDS_TShell>", 
+      "declType": "typedef", 
+      "name": "Handle_TopoDS_TShell", 
+      "key": "Handle_TopoDS_TShell"
+    }, 
+    {
+      "type": "opencascade::handle<TopoDS_TSolid>", 
+      "declType": "typedef", 
+      "name": "Handle_TopoDS_TSolid", 
+      "key": "Handle_TopoDS_TSolid"
+    }, 
+    {
+      "type": "opencascade::handle<TopoDS_TCompSolid>", 
+      "declType": "typedef", 
+      "name": "Handle_TopoDS_TCompSolid", 
+      "key": "Handle_TopoDS_TCompSolid"
+    }, 
+    {
+      "type": "opencascade::handle<TopoDS_TVertex>", 
+      "declType": "typedef", 
+      "name": "Handle_TopoDS_TVertex", 
+      "key": "Handle_TopoDS_TVertex"
+    }, 
+    {
+      "type": "opencascade::handle<TopoDS_UnCompatibleShapes>", 
+      "declType": "typedef", 
+      "name": "Handle_TopoDS_UnCompatibleShapes", 
+      "key": "Handle_TopoDS_UnCompatibleShapes"
+    }, 
+    {
+      "type": "opencascade::handle<TopoDS_TFace>", 
+      "declType": "typedef", 
+      "name": "Handle_TopoDS_TFace", 
+      "key": "Handle_TopoDS_TFace"
+    }
+  ], 
+  "name": "TopoDS"
+}

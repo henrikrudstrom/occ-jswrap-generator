@@ -1,0 +1,972 @@
+{
+  "headers": [
+    "HatchGen_PointsOnElement.hxx", 
+    "HatchGen_PointOnElement.hxx", 
+    "HatchGen_ErrorStatus.hxx", 
+    "HatchGen_IntersectionPoint.hxx", 
+    "HatchGen_PointOnHatching.hxx", 
+    "HatchGen_PointsOnHatching.hxx", 
+    "HatchGen_IntersectionType.hxx", 
+    "HatchGen_Domains.hxx", 
+    "HatchGen_Domain.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "HatchGen_IntersectionPoint", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "HatchGen_IntersectionPoint::SetIndex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_IntersectionPoint", 
+          "name": "SetIndex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_IntersectionPoint::Index()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_IntersectionPoint", 
+          "name": "Index", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_IntersectionPoint::SetParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Parameter", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_IntersectionPoint", 
+          "name": "SetParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_IntersectionPoint::Parameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_IntersectionPoint", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_IntersectionPoint::SetPosition(TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Position", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_IntersectionPoint", 
+          "name": "SetPosition", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_IntersectionPoint::Position()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_IntersectionPoint", 
+          "name": "Position", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_IntersectionPoint::SetStateBefore(TopAbs_State)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_State", 
+              "name": "State", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_IntersectionPoint", 
+          "name": "SetStateBefore", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_IntersectionPoint::StateBefore()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_IntersectionPoint", 
+          "name": "StateBefore", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_IntersectionPoint::SetStateAfter(TopAbs_State)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_State", 
+              "name": "State", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_IntersectionPoint", 
+          "name": "SetStateAfter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_IntersectionPoint::StateAfter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_IntersectionPoint", 
+          "name": "StateAfter", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_IntersectionPoint::SetSegmentBeginning(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "State", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_IntersectionPoint", 
+          "name": "SetSegmentBeginning", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_IntersectionPoint::SegmentBeginning()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_IntersectionPoint", 
+          "name": "SegmentBeginning", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_IntersectionPoint::SetSegmentEnd(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "State", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_IntersectionPoint", 
+          "name": "SetSegmentEnd", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_IntersectionPoint::SegmentEnd()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_IntersectionPoint", 
+          "name": "SegmentEnd", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_IntersectionPoint::Dump(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_IntersectionPoint", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/HatchGen_IntersectionPoint.hxx", 
+        32
+      ], 
+      "key": "HatchGen_IntersectionPoint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "HatchGen_PointOnElement", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "HatchGen_PointOnElement::HatchGen_PointOnElement()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "HatchGen_PointOnElement", 
+          "name": "HatchGen_PointOnElement", 
+          "return": {
+            "type": "HatchGen_PointOnElement", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_PointOnElement::HatchGen_PointOnElement(HatchGen_PointOnElement)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "HatchGen_PointOnElement", 
+              "name": "Point", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "HatchGen_PointOnElement", 
+          "name": "HatchGen_PointOnElement", 
+          "return": {
+            "type": "HatchGen_PointOnElement", 
+            "ptr": true
+          }, 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "HatchGen_PointOnElement::HatchGen_PointOnElement(IntRes2d_IntersectionPoint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntRes2d_IntersectionPoint", 
+              "name": "Point", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "HatchGen_PointOnElement", 
+          "name": "HatchGen_PointOnElement", 
+          "return": {
+            "type": "HatchGen_PointOnElement", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_PointOnElement::SetIntersectionType(HatchGen_IntersectionType)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "HatchGen_IntersectionType", 
+              "name": "Type", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_PointOnElement", 
+          "name": "SetIntersectionType", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_PointOnElement::IntersectionType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_PointOnElement", 
+          "name": "IntersectionType", 
+          "return": {
+            "type": "HatchGen_IntersectionType"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_PointOnElement::IsIdentical(HatchGen_PointOnElement, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "HatchGen_PointOnElement", 
+              "name": "Point", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Confusion", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_PointOnElement", 
+          "name": "IsIdentical", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_PointOnElement::IsDifferent(HatchGen_PointOnElement, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "HatchGen_PointOnElement", 
+              "name": "Point", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Confusion", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_PointOnElement", 
+          "name": "IsDifferent", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_PointOnElement::Dump(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_PointOnElement", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "HatchGen_IntersectionPoint"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/HatchGen_PointOnElement.hxx", 
+        33
+      ], 
+      "key": "HatchGen_PointOnElement"
+    }, 
+    {
+      "declType": "class", 
+      "name": "HatchGen_PointOnHatching", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "HatchGen_PointOnHatching::HatchGen_PointOnHatching()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "HatchGen_PointOnHatching", 
+          "name": "HatchGen_PointOnHatching", 
+          "return": {
+            "type": "HatchGen_PointOnHatching", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_PointOnHatching::HatchGen_PointOnHatching(HatchGen_PointOnHatching)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "HatchGen_PointOnHatching", 
+              "name": "Point", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "HatchGen_PointOnHatching", 
+          "name": "HatchGen_PointOnHatching", 
+          "return": {
+            "type": "HatchGen_PointOnHatching", 
+            "ptr": true
+          }, 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "HatchGen_PointOnHatching::HatchGen_PointOnHatching(IntRes2d_IntersectionPoint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntRes2d_IntersectionPoint", 
+              "name": "Point", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "HatchGen_PointOnHatching", 
+          "name": "HatchGen_PointOnHatching", 
+          "return": {
+            "type": "HatchGen_PointOnHatching", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_PointOnHatching::AddPoint(HatchGen_PointOnElement, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "HatchGen_PointOnElement", 
+              "name": "Point", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Confusion", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_PointOnHatching", 
+          "name": "AddPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_PointOnHatching::NbPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_PointOnHatching", 
+          "name": "NbPoints", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_PointOnHatching::Point(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_PointOnHatching", 
+          "name": "Point", 
+          "return": {
+            "type": "HatchGen_PointOnElement", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_PointOnHatching::RemPoint(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_PointOnHatching", 
+          "name": "RemPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_PointOnHatching::ClrPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_PointOnHatching", 
+          "name": "ClrPoints", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_PointOnHatching::IsLower(HatchGen_PointOnHatching, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "HatchGen_PointOnHatching", 
+              "name": "Point", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Confusion", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_PointOnHatching", 
+          "name": "IsLower", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_PointOnHatching::IsEqual(HatchGen_PointOnHatching, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "HatchGen_PointOnHatching", 
+              "name": "Point", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Confusion", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_PointOnHatching", 
+          "name": "IsEqual", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_PointOnHatching::IsGreater(HatchGen_PointOnHatching, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "HatchGen_PointOnHatching", 
+              "name": "Point", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Confusion", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_PointOnHatching", 
+          "name": "IsGreater", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_PointOnHatching::Dump(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_PointOnHatching", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "HatchGen_IntersectionPoint"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/HatchGen_PointOnHatching.hxx", 
+        35
+      ], 
+      "key": "HatchGen_PointOnHatching"
+    }, 
+    {
+      "declType": "class", 
+      "name": "HatchGen_Domain", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "HatchGen_Domain::HatchGen_Domain()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "HatchGen_Domain", 
+          "name": "HatchGen_Domain", 
+          "return": {
+            "type": "HatchGen_Domain", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_Domain::HatchGen_Domain(HatchGen_PointOnHatching, HatchGen_PointOnHatching)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "HatchGen_PointOnHatching", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "HatchGen_PointOnHatching", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "HatchGen_Domain", 
+          "name": "HatchGen_Domain", 
+          "return": {
+            "type": "HatchGen_Domain", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_Domain::HatchGen_Domain(HatchGen_PointOnHatching, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "HatchGen_PointOnHatching", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_Domain", 
+          "name": "HatchGen_Domain", 
+          "return": {
+            "type": "HatchGen_Domain", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_Domain::HatchGen_Domain(HatchGen_Domain)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "HatchGen_Domain", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "HatchGen_Domain", 
+          "name": "HatchGen_Domain", 
+          "return": {
+            "type": "HatchGen_Domain", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "HatchGen_Domain::SetPoints(HatchGen_PointOnHatching, HatchGen_PointOnHatching)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "HatchGen_PointOnHatching", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "HatchGen_PointOnHatching", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "HatchGen_Domain", 
+          "name": "SetPoints", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_Domain::SetPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_Domain", 
+          "name": "SetPoints", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_Domain::SetFirstPoint(HatchGen_PointOnHatching)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "HatchGen_PointOnHatching", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "HatchGen_Domain", 
+          "name": "SetFirstPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_Domain::SetFirstPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_Domain", 
+          "name": "SetFirstPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_Domain::SetSecondPoint(HatchGen_PointOnHatching)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "HatchGen_PointOnHatching", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "HatchGen_Domain", 
+          "name": "SetSecondPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_Domain::SetSecondPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_Domain", 
+          "name": "SetSecondPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_Domain::HasFirstPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_Domain", 
+          "name": "HasFirstPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_Domain::FirstPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_Domain", 
+          "name": "FirstPoint", 
+          "return": {
+            "type": "HatchGen_PointOnHatching", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_Domain::HasSecondPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_Domain", 
+          "name": "HasSecondPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_Domain::SecondPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "HatchGen_Domain", 
+          "name": "SecondPoint", 
+          "return": {
+            "type": "HatchGen_PointOnHatching", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "HatchGen_Domain::Dump(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "HatchGen_Domain", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/HatchGen_Domain.hxx", 
+        32
+      ], 
+      "key": "HatchGen_Domain"
+    }, 
+    {
+      "type": "NCollection_Sequence<HatchGen_PointOnElement>", 
+      "declType": "typedef", 
+      "name": "HatchGen_PointsOnElement", 
+      "key": "HatchGen_PointsOnElement"
+    }, 
+    {
+      "type": "NCollection_Sequence<HatchGen_PointOnHatching>", 
+      "declType": "typedef", 
+      "name": "HatchGen_PointsOnHatching", 
+      "key": "HatchGen_PointsOnHatching"
+    }, 
+    {
+      "type": "NCollection_Sequence<HatchGen_Domain>", 
+      "declType": "typedef", 
+      "name": "HatchGen_Domains", 
+      "key": "HatchGen_Domains"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "HatchGen_TRUE", 
+          0
+        ], 
+        [
+          "HatchGen_TOUCH", 
+          1
+        ], 
+        [
+          "HatchGen_TANGENT", 
+          2
+        ], 
+        [
+          "HatchGen_UNDETERMINED", 
+          3
+        ]
+      ], 
+      "name": "HatchGen_IntersectionType", 
+      "key": "HatchGen_IntersectionType"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "HatchGen_NoProblem", 
+          0
+        ], 
+        [
+          "HatchGen_TrimFailure", 
+          1
+        ], 
+        [
+          "HatchGen_TransitionFailure", 
+          2
+        ], 
+        [
+          "HatchGen_IncoherentParity", 
+          3
+        ], 
+        [
+          "HatchGen_IncompatibleStates", 
+          4
+        ]
+      ], 
+      "name": "HatchGen_ErrorStatus", 
+      "key": "HatchGen_ErrorStatus"
+    }
+  ], 
+  "name": "HatchGen"
+}

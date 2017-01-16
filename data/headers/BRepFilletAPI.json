@@ -1,0 +1,2888 @@
+{
+  "headers": [
+    "BRepFilletAPI_MakeFillet2d.hxx", 
+    "BRepFilletAPI_MakeChamfer.hxx", 
+    "BRepFilletAPI_MakeFillet.hxx", 
+    "BRepFilletAPI_LocalOperation.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "BRepFilletAPI_MakeFillet2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::BRepFilletAPI_MakeFillet2d()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "BRepFilletAPI_MakeFillet2d", 
+          "return": {
+            "type": "BRepFilletAPI_MakeFillet2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::BRepFilletAPI_MakeFillet2d(TopoDS_Face)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "BRepFilletAPI_MakeFillet2d", 
+          "return": {
+            "type": "BRepFilletAPI_MakeFillet2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::BRepFilletAPI_MakeFillet2d(BRepFilletAPI_MakeFillet2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepFilletAPI_MakeFillet2d", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "BRepFilletAPI_MakeFillet2d", 
+          "return": {
+            "type": "BRepFilletAPI_MakeFillet2d", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::Init(TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::Init(TopoDS_Face, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "RefFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "ModFace", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::AddFillet(TopoDS_Vertex, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "AddFillet", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::ModifyFillet(TopoDS_Edge, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "Fillet", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "ModifyFillet", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::RemoveFillet(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "Fillet", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "RemoveFillet", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::AddChamfer(TopoDS_Edge, TopoDS_Edge, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "AddChamfer", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::AddChamfer(TopoDS_Edge, TopoDS_Vertex, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Ang", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "AddChamfer", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::ModifyChamfer(TopoDS_Edge, TopoDS_Edge, TopoDS_Edge, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "Chamfer", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "ModifyChamfer", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::ModifyChamfer(TopoDS_Edge, TopoDS_Edge, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "Chamfer", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Ang", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "ModifyChamfer", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::RemoveChamfer(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "Chamfer", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "RemoveChamfer", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::IsModified(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "IsModified", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::FilletEdges()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "FilletEdges", 
+          "return": {
+            "type": "TopTools_SequenceOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::NbFillet()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "NbFillet", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::ChamferEdges()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "ChamferEdges", 
+          "return": {
+            "type": "TopTools_SequenceOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::NbChamfer()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "NbChamfer", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::Modified(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "Modified", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::NbCurves()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "NbCurves", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::NewEdges(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "NewEdges", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::HasDescendant(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "HasDescendant", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::DescendantEdge(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "DescendantEdge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::BasisEdge(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "BasisEdge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::Status()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "Status", 
+          "return": {
+            "type": "ChFi2d_ConstructionError"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet2d::Build()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet2d", 
+          "name": "Build", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepBuilderAPI_MakeShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepFilletAPI_MakeFillet2d.hxx", 
+        50
+      ], 
+      "key": "BRepFilletAPI_MakeFillet2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepFilletAPI_LocalOperation", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "BRepFilletAPI_LocalOperation::Add(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::ResetContour(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "ResetContour", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::NbContours()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "NbContours", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::Contour(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "Contour", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::NbEdges(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "NbEdges", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::Edge(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "J", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "Edge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::Remove(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "Remove", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::Length(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "Length", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::FirstVertex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "FirstVertex", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::LastVertex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "LastVertex", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::Abscissa(Standard_Integer, TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "Abscissa", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::RelativeAbscissa(Standard_Integer, TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "RelativeAbscissa", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::ClosedAndTangent(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "ClosedAndTangent", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::Closed(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "Closed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::Reset()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "Reset", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::Simulate(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "Simulate", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::NbSurf(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "NbSurf", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_LocalOperation::Sect(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IS", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_LocalOperation", 
+          "name": "Sect", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_SecHArray1>"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepBuilderAPI_MakeShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepFilletAPI_LocalOperation.hxx", 
+        34
+      ], 
+      "key": "BRepFilletAPI_LocalOperation"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepFilletAPI_MakeChamfer", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepFilletAPI_MakeChamfer::BRepFilletAPI_MakeChamfer(TopoDS_Shape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "BRepFilletAPI_MakeChamfer", 
+          "return": {
+            "type": "BRepFilletAPI_MakeChamfer", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::BRepFilletAPI_MakeChamfer(BRepFilletAPI_MakeChamfer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepFilletAPI_MakeChamfer", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "BRepFilletAPI_MakeChamfer", 
+          "return": {
+            "type": "BRepFilletAPI_MakeChamfer", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Add(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Add(Standard_Real, TopoDS_Edge, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::SetDist(Standard_Real, Standard_Integer, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "SetDist", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::GetDist(Standard_Integer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dis", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "GetDist", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Add(Standard_Real, Standard_Real, TopoDS_Edge, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dis2", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::SetDists(Standard_Real, Standard_Real, Standard_Integer, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dis2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "SetDists", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Dists(Standard_Integer, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dis1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dis2", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Dists", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::AddDA(Standard_Real, Standard_Real, TopoDS_Edge, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Angle", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "AddDA", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::SetDistAngle(Standard_Real, Standard_Real, Standard_Integer, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Angle", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "SetDistAngle", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::GetDistAngle(Standard_Integer, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dis", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Angle", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "DisOnFace1", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "GetDistAngle", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::IsSymetric(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "IsSymetric", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::IsTwoDistances(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "IsTwoDistances", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::IsDistanceAngle(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "IsDistanceAngle", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::ResetContour(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "ResetContour", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::NbContours()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "NbContours", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Contour(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Contour", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::NbEdges(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "NbEdges", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Edge(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "J", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Edge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Remove(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Remove", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Length(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Length", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::FirstVertex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "FirstVertex", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::LastVertex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "LastVertex", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Abscissa(Standard_Integer, TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Abscissa", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::RelativeAbscissa(Standard_Integer, TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "RelativeAbscissa", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::ClosedAndTangent(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "ClosedAndTangent", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Closed(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Closed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Build()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Build", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Reset()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Reset", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Builder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Builder", 
+          "return": {
+            "type": "opencascade::handle<TopOpeBRepBuild_HBuilder>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Generated(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "EorV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Generated", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Modified(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Modified", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::IsDeleted(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "IsDeleted", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Simulate(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Simulate", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::NbSurf(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "NbSurf", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeChamfer::Sect(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IS", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeChamfer", 
+          "name": "Sect", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_SecHArray1>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepFilletAPI_LocalOperation"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepFilletAPI_MakeChamfer.hxx", 
+        47
+      ], 
+      "key": "BRepFilletAPI_MakeChamfer"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepFilletAPI_MakeFillet", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepFilletAPI_MakeFillet::BRepFilletAPI_MakeFillet(TopoDS_Shape, ChFi3d_FilletShape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "ChFi3d_FilletShape", 
+              "name": "FShape", 
+              "default": "::ChFi3d_FilletShape::ChFi3d_Rational", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "BRepFilletAPI_MakeFillet", 
+          "return": {
+            "type": "BRepFilletAPI_MakeFillet", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::BRepFilletAPI_MakeFillet(BRepFilletAPI_MakeFillet)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepFilletAPI_MakeFillet", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "BRepFilletAPI_MakeFillet", 
+          "return": {
+            "type": "BRepFilletAPI_MakeFillet", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::SetParams(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Tang", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tesp", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "T2d", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TApp3d", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolApp2d", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Fleche", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "SetParams", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::SetContinuity(GeomAbs_Shape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "InternalContinuity", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "AngularTolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "SetContinuity", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Add(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Add(Standard_Real, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Add(Standard_Real, Standard_Real, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Add(opencascade::handle<Law_Function>, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Law_Function>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Add(TColgp_Array1OfPnt2d, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "UandR", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::SetRadius(Standard_Real, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IinC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "SetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::SetRadius(Standard_Real, Standard_Real, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IinC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "SetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::SetRadius(opencascade::handle<Law_Function>, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Law_Function>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IinC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "SetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::SetRadius(TColgp_Array1OfPnt2d, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "UandR", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IinC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "SetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::ResetContour(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "ResetContour", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::IsConstant(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "IsConstant", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Radius(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Radius", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::IsConstant(Standard_Integer, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "IsConstant", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Radius(Standard_Integer, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Radius", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::SetRadius(Standard_Real, Standard_Integer, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "SetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::SetRadius(Standard_Real, Standard_Integer, TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "SetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::GetBounds(Standard_Integer, TopoDS_Edge, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "L", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "GetBounds", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::GetLaw(Standard_Integer, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "GetLaw", 
+          "return": {
+            "type": "opencascade::handle<Law_Function>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::SetLaw(Standard_Integer, TopoDS_Edge, opencascade::handle<Law_Function>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Law_Function>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "SetLaw", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::SetFilletShape(ChFi3d_FilletShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "ChFi3d_FilletShape", 
+              "name": "FShape", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "SetFilletShape", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::GetFilletShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "GetFilletShape", 
+          "return": {
+            "type": "ChFi3d_FilletShape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::NbContours()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "NbContours", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Contour(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Contour", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::NbEdges(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "NbEdges", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Edge(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "J", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Edge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Remove(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Remove", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Length(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Length", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::FirstVertex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "FirstVertex", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::LastVertex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "LastVertex", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Abscissa(Standard_Integer, TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Abscissa", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::RelativeAbscissa(Standard_Integer, TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "RelativeAbscissa", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::ClosedAndTangent(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "ClosedAndTangent", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Closed(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Closed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Build()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Build", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Reset()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Reset", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Builder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Builder", 
+          "return": {
+            "type": "opencascade::handle<TopOpeBRepBuild_HBuilder>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Generated(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "EorV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Generated", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Modified(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Modified", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::IsDeleted(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "IsDeleted", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::NbSurfaces()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "NbSurfaces", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::NewFaces(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "NewFaces", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Simulate(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Simulate", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::NbSurf(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "NbSurf", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::Sect(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IS", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "Sect", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_SecHArray1>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::NbFaultyContours()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "NbFaultyContours", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::FaultyContour(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "FaultyContour", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::NbComputedSurfaces(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "NbComputedSurfaces", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::ComputedSurface(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IS", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "ComputedSurface", 
+          "return": {
+            "type": "opencascade::handle<Geom_Surface>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::NbFaultyVertices()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "NbFaultyVertices", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::FaultyVertex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IV", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "FaultyVertex", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::HasResult()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "HasResult", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::BadShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "BadShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepFilletAPI_MakeFillet::StripeStatus(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepFilletAPI_MakeFillet", 
+          "name": "StripeStatus", 
+          "return": {
+            "type": "ChFiDS_ErrorStatus"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepFilletAPI_LocalOperation"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepFilletAPI_MakeFillet.hxx", 
+        52
+      ], 
+      "key": "BRepFilletAPI_MakeFillet"
+    }
+  ], 
+  "name": "BRepFilletAPI"
+}

@@ -1,0 +1,3211 @@
+{
+  "headers": [
+    "BRepPrim_Revolution.hxx", 
+    "BRepPrim_Torus.hxx", 
+    "BRepPrim_Sphere.hxx", 
+    "BRepPrim_Cone.hxx", 
+    "BRepPrim_Direction.hxx", 
+    "BRepPrim_Wedge.hxx", 
+    "BRepPrim_FaceBuilder.hxx", 
+    "BRepPrim_GWedge.hxx", 
+    "BRepPrim_Builder.hxx", 
+    "BRepPrim_Cylinder.hxx", 
+    "BRepPrim_OneAxis.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "BRepPrim_Builder", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrim_Builder::BRepPrim_Builder()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepPrim_Builder", 
+          "name": "BRepPrim_Builder", 
+          "return": {
+            "type": "BRepPrim_Builder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::BRepPrim_Builder(BRep_Builder)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRep_Builder", 
+              "name": "B", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "BRepPrim_Builder", 
+          "return": {
+            "type": "BRepPrim_Builder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::BRepPrim_Builder(BRepPrim_Builder)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Builder", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "BRepPrim_Builder", 
+          "return": {
+            "type": "BRepPrim_Builder", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::Builder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_Builder", 
+          "name": "Builder", 
+          "return": {
+            "type": "BRep_Builder", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::MakeShell(TopoDS_Shell)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shell", 
+              "name": "S", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "MakeShell", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::MakeFace(TopoDS_Face, gp_Pln)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "MakeFace", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::MakeWire(TopoDS_Wire)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "MakeWire", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::MakeDegeneratedEdge(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "MakeDegeneratedEdge", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::MakeEdge(TopoDS_Edge, gp_Lin)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "MakeEdge", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::MakeEdge(TopoDS_Edge, gp_Circ)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "MakeEdge", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::SetPCurve(TopoDS_Edge, TopoDS_Face, gp_Lin2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "SetPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::SetPCurve(TopoDS_Edge, TopoDS_Face, gp_Lin2d, gp_Lin2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "L1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "L2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "SetPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::SetPCurve(TopoDS_Edge, TopoDS_Face, gp_Circ2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "SetPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::MakeVertex(TopoDS_Vertex, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "MakeVertex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::ReverseFace(TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "ReverseFace", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::AddEdgeVertex(TopoDS_Edge, TopoDS_Vertex, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "direct", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "AddEdgeVertex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::AddEdgeVertex(TopoDS_Edge, TopoDS_Vertex, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "AddEdgeVertex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::SetParameters(TopoDS_Edge, TopoDS_Vertex, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "SetParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::AddWireEdge(TopoDS_Wire, TopoDS_Edge, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "direct", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "AddWireEdge", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::AddFaceWire(TopoDS_Face, TopoDS_Wire)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "AddFaceWire", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::AddShellFace(TopoDS_Shell, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shell", 
+              "name": "Sh", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "AddShellFace", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::CompleteEdge(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "CompleteEdge", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::CompleteWire(TopoDS_Wire)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "CompleteWire", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::CompleteFace(TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "CompleteFace", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Builder::CompleteShell(TopoDS_Shell)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shell", 
+              "name": "S", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Builder", 
+          "name": "CompleteShell", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrim_Builder.hxx", 
+        42
+      ], 
+      "key": "BRepPrim_Builder"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrim_OneAxis", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "BRepPrim_OneAxis::SetMeridianOffset(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "MeridianOffset", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "SetMeridianOffset", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::Axes()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "Axes", 
+          "return": {
+            "type": "gp_Ax2", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::Axes(gp_Ax2)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "A", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "Axes", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::Angle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "Angle", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::Angle(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "A", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "Angle", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::VMin()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "VMin", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::VMin(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "VMin", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::VMax()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "VMax", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::VMax(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "VMax", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::MakeEmptyLateralFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "MakeEmptyLateralFace", 
+          "return": {
+            "type": "TopoDS_Face"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::MakeEmptyMeridianEdge(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Ang", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "MakeEmptyMeridianEdge", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::SetMeridianPCurve(TopoDS_Edge, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "SetMeridianPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::MeridianValue(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "MeridianValue", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::MeridianOnAxis(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "MeridianOnAxis", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::MeridianClosed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "MeridianClosed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::VMaxInfinite()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "VMaxInfinite", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::VMinInfinite()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "VMinInfinite", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::HasTop()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "HasTop", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::HasBottom()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "HasBottom", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::HasSides()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "HasSides", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::Shell()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "Shell", 
+          "return": {
+            "type": "TopoDS_Shell", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::LateralFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "LateralFace", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::TopFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "TopFace", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::BottomFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "BottomFace", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::StartFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "StartFace", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::EndFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "EndFace", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::LateralWire()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "LateralWire", 
+          "return": {
+            "type": "TopoDS_Wire", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::LateralStartWire()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "LateralStartWire", 
+          "return": {
+            "type": "TopoDS_Wire", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::LateralEndWire()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "LateralEndWire", 
+          "return": {
+            "type": "TopoDS_Wire", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::TopWire()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "TopWire", 
+          "return": {
+            "type": "TopoDS_Wire", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::BottomWire()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "BottomWire", 
+          "return": {
+            "type": "TopoDS_Wire", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::StartWire()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "StartWire", 
+          "return": {
+            "type": "TopoDS_Wire", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::AxisStartWire()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "AxisStartWire", 
+          "return": {
+            "type": "TopoDS_Wire", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::EndWire()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "EndWire", 
+          "return": {
+            "type": "TopoDS_Wire", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::AxisEndWire()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "AxisEndWire", 
+          "return": {
+            "type": "TopoDS_Wire", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::AxisEdge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "AxisEdge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::StartEdge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "StartEdge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::EndEdge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "EndEdge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::StartTopEdge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "StartTopEdge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::StartBottomEdge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "StartBottomEdge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::EndTopEdge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "EndTopEdge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::EndBottomEdge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "EndBottomEdge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::TopEdge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "TopEdge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::BottomEdge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "BottomEdge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::AxisTopVertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "AxisTopVertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::AxisBottomVertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "AxisBottomVertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::TopStartVertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "TopStartVertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::TopEndVertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "TopEndVertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::BottomStartVertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "BottomStartVertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_OneAxis::BottomEndVertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_OneAxis", 
+          "name": "BottomEndVertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrim_OneAxis.hxx", 
+        76
+      ], 
+      "key": "BRepPrim_OneAxis"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrim_Revolution", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrim_Revolution::BRepPrim_Revolution(gp_Ax2, Standard_Real, Standard_Real, opencascade::handle<Geom_Curve>, opencascade::handle<Geom2d_Curve>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "A", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "M", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "PM", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Revolution", 
+          "name": "BRepPrim_Revolution", 
+          "return": {
+            "type": "BRepPrim_Revolution", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Revolution::BRepPrim_Revolution(BRepPrim_Revolution)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Revolution", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Revolution", 
+          "name": "BRepPrim_Revolution", 
+          "return": {
+            "type": "BRepPrim_Revolution", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrim_Revolution::MakeEmptyLateralFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_Revolution", 
+          "name": "MakeEmptyLateralFace", 
+          "return": {
+            "type": "TopoDS_Face"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrim_Revolution::MakeEmptyMeridianEdge(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Ang", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Revolution", 
+          "name": "MakeEmptyMeridianEdge", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrim_Revolution::MeridianValue(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Revolution", 
+          "name": "MeridianValue", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrim_Revolution::SetMeridianPCurve(TopoDS_Edge, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Revolution", 
+          "name": "SetMeridianPCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepPrim_OneAxis"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrim_Revolution.hxx", 
+        36
+      ], 
+      "key": "BRepPrim_Revolution"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrim_Torus", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrim_Torus::BRepPrim_Torus(gp_Ax2, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Position", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Major", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Minor", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Torus", 
+          "name": "BRepPrim_Torus", 
+          "return": {
+            "type": "BRepPrim_Torus", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Torus::BRepPrim_Torus(Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Major", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Minor", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Torus", 
+          "name": "BRepPrim_Torus", 
+          "return": {
+            "type": "BRepPrim_Torus", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Torus::BRepPrim_Torus(gp_Pnt, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Center", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Major", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Minor", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Torus", 
+          "name": "BRepPrim_Torus", 
+          "return": {
+            "type": "BRepPrim_Torus", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Torus::BRepPrim_Torus(BRepPrim_Torus)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Torus", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Torus", 
+          "name": "BRepPrim_Torus", 
+          "return": {
+            "type": "BRepPrim_Torus", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrim_Torus::MakeEmptyLateralFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_Torus", 
+          "name": "MakeEmptyLateralFace", 
+          "return": {
+            "type": "TopoDS_Face"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepPrim_Revolution"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrim_Torus.hxx", 
+        33
+      ], 
+      "key": "BRepPrim_Torus"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrim_Sphere", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrim_Sphere::BRepPrim_Sphere(Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Sphere", 
+          "name": "BRepPrim_Sphere", 
+          "return": {
+            "type": "BRepPrim_Sphere", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Sphere::BRepPrim_Sphere(gp_Pnt, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Center", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Sphere", 
+          "name": "BRepPrim_Sphere", 
+          "return": {
+            "type": "BRepPrim_Sphere", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Sphere::BRepPrim_Sphere(gp_Ax2, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Sphere", 
+          "name": "BRepPrim_Sphere", 
+          "return": {
+            "type": "BRepPrim_Sphere", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Sphere::BRepPrim_Sphere(BRepPrim_Sphere)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Sphere", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Sphere", 
+          "name": "BRepPrim_Sphere", 
+          "return": {
+            "type": "BRepPrim_Sphere", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrim_Sphere::MakeEmptyLateralFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_Sphere", 
+          "name": "MakeEmptyLateralFace", 
+          "return": {
+            "type": "TopoDS_Face"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepPrim_Revolution"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrim_Sphere.hxx", 
+        33
+      ], 
+      "key": "BRepPrim_Sphere"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrim_Cone", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrim_Cone::BRepPrim_Cone(Standard_Real, gp_Ax2, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Angle", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Ax2", 
+              "name": "Position", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Height", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Cone", 
+          "name": "BRepPrim_Cone", 
+          "return": {
+            "type": "BRepPrim_Cone", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Cone::BRepPrim_Cone(Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Angle", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Cone", 
+          "name": "BRepPrim_Cone", 
+          "return": {
+            "type": "BRepPrim_Cone", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Cone::BRepPrim_Cone(Standard_Real, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Angle", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "Apex", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Cone", 
+          "name": "BRepPrim_Cone", 
+          "return": {
+            "type": "BRepPrim_Cone", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Cone::BRepPrim_Cone(Standard_Real, gp_Ax2)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Angle", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Cone", 
+          "name": "BRepPrim_Cone", 
+          "return": {
+            "type": "BRepPrim_Cone", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Cone::BRepPrim_Cone(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "H", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Cone", 
+          "name": "BRepPrim_Cone", 
+          "return": {
+            "type": "BRepPrim_Cone", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Cone::BRepPrim_Cone(gp_Pnt, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Center", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "H", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Cone", 
+          "name": "BRepPrim_Cone", 
+          "return": {
+            "type": "BRepPrim_Cone", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Cone::BRepPrim_Cone(gp_Ax2, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "H", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Cone", 
+          "name": "BRepPrim_Cone", 
+          "return": {
+            "type": "BRepPrim_Cone", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Cone::BRepPrim_Cone(BRepPrim_Cone)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Cone", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Cone", 
+          "name": "BRepPrim_Cone", 
+          "return": {
+            "type": "BRepPrim_Cone", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrim_Cone::MakeEmptyLateralFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_Cone", 
+          "name": "MakeEmptyLateralFace", 
+          "return": {
+            "type": "TopoDS_Face"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepPrim_Revolution"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrim_Cone.hxx", 
+        33
+      ], 
+      "key": "BRepPrim_Cone"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrim_GWedge", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrim_GWedge::BRepPrim_GWedge(BRepPrim_Builder, gp_Ax2, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Builder", 
+              "name": "B", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dx", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dy", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dz", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "BRepPrim_GWedge", 
+          "return": {
+            "type": "BRepPrim_GWedge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::BRepPrim_GWedge(BRepPrim_Builder, gp_Ax2, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Builder", 
+              "name": "B", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dx", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dy", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dz", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ltx", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "BRepPrim_GWedge", 
+          "return": {
+            "type": "BRepPrim_GWedge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::BRepPrim_GWedge(BRepPrim_Builder, gp_Ax2, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Builder", 
+              "name": "B", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "xmin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ymin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "zmin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "z2min", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "x2min", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "xmax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ymax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "zmax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "z2max", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "x2max", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "BRepPrim_GWedge", 
+          "return": {
+            "type": "BRepPrim_GWedge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::BRepPrim_GWedge(BRepPrim_GWedge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrim_GWedge", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "BRepPrim_GWedge", 
+          "return": {
+            "type": "BRepPrim_GWedge", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::Axes()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "Axes", 
+          "return": {
+            "type": "gp_Ax2"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::GetXMin()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "GetXMin", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::GetYMin()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "GetYMin", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::GetZMin()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "GetZMin", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::GetZ2Min()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "GetZ2Min", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::GetX2Min()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "GetX2Min", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::GetXMax()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "GetXMax", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::GetYMax()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "GetYMax", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::GetZMax()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "GetZMax", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::GetZ2Max()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "GetZ2Max", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::GetX2Max()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "GetX2Max", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::Open(BRepPrim_Direction)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d1", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "Open", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::Close(BRepPrim_Direction)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d1", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "Close", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::IsInfinite(BRepPrim_Direction)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d1", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "IsInfinite", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::Shell()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "Shell", 
+          "return": {
+            "type": "TopoDS_Shell", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::HasFace(BRepPrim_Direction)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d1", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "HasFace", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::Face(BRepPrim_Direction)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d1", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "Face", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::Plane(BRepPrim_Direction)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d1", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "Plane", 
+          "return": {
+            "type": "gp_Pln"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::HasWire(BRepPrim_Direction)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d1", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "HasWire", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::Wire(BRepPrim_Direction)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d1", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "Wire", 
+          "return": {
+            "type": "TopoDS_Wire", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::HasEdge(BRepPrim_Direction, BRepPrim_Direction)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d1", 
+              "const": true
+            }, 
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "HasEdge", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::Edge(BRepPrim_Direction, BRepPrim_Direction)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d1", 
+              "const": true
+            }, 
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "Edge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::Line(BRepPrim_Direction, BRepPrim_Direction)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d1", 
+              "const": true
+            }, 
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "Line", 
+          "return": {
+            "type": "gp_Lin"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::HasVertex(BRepPrim_Direction, BRepPrim_Direction, BRepPrim_Direction)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d1", 
+              "const": true
+            }, 
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d2", 
+              "const": true
+            }, 
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d3", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "HasVertex", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::Vertex(BRepPrim_Direction, BRepPrim_Direction, BRepPrim_Direction)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d1", 
+              "const": true
+            }, 
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d2", 
+              "const": true
+            }, 
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d3", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "Vertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_GWedge::Point(BRepPrim_Direction, BRepPrim_Direction, BRepPrim_Direction)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d1", 
+              "const": true
+            }, 
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d2", 
+              "const": true
+            }, 
+            {
+              "type": "BRepPrim_Direction", 
+              "name": "d3", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_GWedge", 
+          "name": "Point", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrim_GWedge.hxx", 
+        67
+      ], 
+      "key": "BRepPrim_GWedge"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrim_Wedge", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrim_Wedge::BRepPrim_Wedge(gp_Ax2, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dx", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dy", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dz", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Wedge", 
+          "name": "BRepPrim_Wedge", 
+          "return": {
+            "type": "BRepPrim_Wedge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Wedge::BRepPrim_Wedge(gp_Ax2, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dx", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dy", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dz", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ltx", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Wedge", 
+          "name": "BRepPrim_Wedge", 
+          "return": {
+            "type": "BRepPrim_Wedge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Wedge::BRepPrim_Wedge(gp_Ax2, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "xmin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ymin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "zmin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "z2min", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "x2min", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "xmax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ymax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "zmax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "z2max", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "x2max", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Wedge", 
+          "name": "BRepPrim_Wedge", 
+          "return": {
+            "type": "BRepPrim_Wedge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Wedge::BRepPrim_Wedge(BRepPrim_Wedge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Wedge", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Wedge", 
+          "name": "BRepPrim_Wedge", 
+          "return": {
+            "type": "BRepPrim_Wedge", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepPrim_GWedge"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrim_Wedge.hxx", 
+        31
+      ], 
+      "key": "BRepPrim_Wedge"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrim_FaceBuilder", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrim_FaceBuilder::BRepPrim_FaceBuilder()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepPrim_FaceBuilder", 
+          "name": "BRepPrim_FaceBuilder", 
+          "return": {
+            "type": "BRepPrim_FaceBuilder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_FaceBuilder::BRepPrim_FaceBuilder(BRep_Builder, opencascade::handle<Geom_Surface>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRep_Builder", 
+              "name": "B", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_FaceBuilder", 
+          "name": "BRepPrim_FaceBuilder", 
+          "return": {
+            "type": "BRepPrim_FaceBuilder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_FaceBuilder::BRepPrim_FaceBuilder(BRep_Builder, opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRep_Builder", 
+              "name": "B", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_FaceBuilder", 
+          "name": "BRepPrim_FaceBuilder", 
+          "return": {
+            "type": "BRepPrim_FaceBuilder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_FaceBuilder::BRepPrim_FaceBuilder(BRepPrim_FaceBuilder)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrim_FaceBuilder", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_FaceBuilder", 
+          "name": "BRepPrim_FaceBuilder", 
+          "return": {
+            "type": "BRepPrim_FaceBuilder", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrim_FaceBuilder::Init(BRep_Builder, opencascade::handle<Geom_Surface>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRep_Builder", 
+              "name": "B", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_FaceBuilder", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_FaceBuilder::Init(BRep_Builder, opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRep_Builder", 
+              "name": "B", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_FaceBuilder", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_FaceBuilder::Face()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_FaceBuilder", 
+          "name": "Face", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_FaceBuilder::Edge(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_FaceBuilder", 
+          "name": "Edge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_FaceBuilder::Vertex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_FaceBuilder", 
+          "name": "Vertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrim_FaceBuilder.hxx", 
+        43
+      ], 
+      "key": "BRepPrim_FaceBuilder"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrim_Cylinder", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrim_Cylinder::BRepPrim_Cylinder(gp_Ax2, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Position", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Height", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Cylinder", 
+          "name": "BRepPrim_Cylinder", 
+          "return": {
+            "type": "BRepPrim_Cylinder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Cylinder::BRepPrim_Cylinder(Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Cylinder", 
+          "name": "BRepPrim_Cylinder", 
+          "return": {
+            "type": "BRepPrim_Cylinder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Cylinder::BRepPrim_Cylinder(gp_Pnt, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Center", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Cylinder", 
+          "name": "BRepPrim_Cylinder", 
+          "return": {
+            "type": "BRepPrim_Cylinder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Cylinder::BRepPrim_Cylinder(gp_Ax2, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Cylinder", 
+          "name": "BRepPrim_Cylinder", 
+          "return": {
+            "type": "BRepPrim_Cylinder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Cylinder::BRepPrim_Cylinder(Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "H", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Cylinder", 
+          "name": "BRepPrim_Cylinder", 
+          "return": {
+            "type": "BRepPrim_Cylinder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Cylinder::BRepPrim_Cylinder(gp_Pnt, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Center", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "H", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrim_Cylinder", 
+          "name": "BRepPrim_Cylinder", 
+          "return": {
+            "type": "BRepPrim_Cylinder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrim_Cylinder::BRepPrim_Cylinder(BRepPrim_Cylinder)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrim_Cylinder", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrim_Cylinder", 
+          "name": "BRepPrim_Cylinder", 
+          "return": {
+            "type": "BRepPrim_Cylinder", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrim_Cylinder::MakeEmptyLateralFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrim_Cylinder", 
+          "name": "MakeEmptyLateralFace", 
+          "return": {
+            "type": "TopoDS_Face"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepPrim_Revolution"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrim_Cylinder.hxx", 
+        33
+      ], 
+      "key": "BRepPrim_Cylinder"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "BRepPrim_XMin", 
+          0
+        ], 
+        [
+          "BRepPrim_XMax", 
+          1
+        ], 
+        [
+          "BRepPrim_YMin", 
+          2
+        ], 
+        [
+          "BRepPrim_YMax", 
+          3
+        ], 
+        [
+          "BRepPrim_ZMin", 
+          4
+        ], 
+        [
+          "BRepPrim_ZMax", 
+          5
+        ]
+      ], 
+      "name": "BRepPrim_Direction", 
+      "key": "BRepPrim_Direction"
+    }
+  ], 
+  "name": "BRepPrim"
+}

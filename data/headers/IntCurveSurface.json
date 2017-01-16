@@ -1,0 +1,3424 @@
+{
+  "headers": [
+    "IntCurveSurface_TheCSFunctionOfHInter.hxx", 
+    "IntCurveSurface_TheHCurveTool.hxx", 
+    "IntCurveSurface_ThePolygonToolOfHInter.hxx", 
+    "IntCurveSurface_TheInterferenceOfHInter.hxx", 
+    "IntCurveSurface_TransitionOnCurve.hxx", 
+    "IntCurveSurface_SequenceOfPnt.hxx", 
+    "IntCurveSurface_ThePolygonOfHInter.hxx", 
+    "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter.hxx", 
+    "IntCurveSurface_TheQuadCurvExactHInter.hxx", 
+    "IntCurveSurface_IntersectionSegment.hxx", 
+    "IntCurveSurface_IntersectionPoint.hxx", 
+    "IntCurveSurface_HInter.hxx", 
+    "IntCurveSurface_TheExactHInter.hxx", 
+    "IntCurveSurface_SequenceOfSeg.hxx", 
+    "IntCurveSurface_ThePolyhedronToolOfHInter.hxx", 
+    "IntCurveSurface_Intersection.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "IntCurveSurface_TheHCurveTool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurveSurface_TheHCurveTool::IntCurveSurface_TheHCurveTool()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "IntCurveSurface_TheHCurveTool", 
+          "return": {
+            "type": "IntCurveSurface_TheHCurveTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::IntCurveSurface_TheHCurveTool(IntCurveSurface_TheHCurveTool)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_TheHCurveTool", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "IntCurveSurface_TheHCurveTool", 
+          "return": {
+            "type": "IntCurveSurface_TheHCurveTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::FirstParameter(opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::LastParameter(opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::Continuity(opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "Continuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::NbIntervals(opencascade::handle<Adaptor3d_HCurve>, GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::Intervals(opencascade::handle<Adaptor3d_HCurve>, TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "Intervals", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::IsClosed(opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "IsClosed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::IsPeriodic(opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "IsPeriodic", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::Period(opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "Period", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::Value(opencascade::handle<Adaptor3d_HCurve>, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "Value", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::D0(opencascade::handle<Adaptor3d_HCurve>, Standard_Real, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "D0", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::D1(opencascade::handle<Adaptor3d_HCurve>, Standard_Real, gp_Pnt, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::D2(opencascade::handle<Adaptor3d_HCurve>, Standard_Real, gp_Pnt, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::D3(opencascade::handle<Adaptor3d_HCurve>, Standard_Real, gp_Pnt, gp_Vec, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V2", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V3", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "D3", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::DN(opencascade::handle<Adaptor3d_HCurve>, Standard_Real, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "DN", 
+          "return": {
+            "type": "gp_Vec"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::Resolution(opencascade::handle<Adaptor3d_HCurve>, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R3d", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "Resolution", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::GetType(opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "GetType", 
+          "return": {
+            "type": "GeomAbs_CurveType"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::Line(opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "Line", 
+          "return": {
+            "type": "gp_Lin"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::Circle(opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "Circle", 
+          "return": {
+            "type": "gp_Circ"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::Ellipse(opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "Ellipse", 
+          "return": {
+            "type": "gp_Elips"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::Hyperbola(opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "Hyperbola", 
+          "return": {
+            "type": "gp_Hypr"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::Parabola(opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "Parabola", 
+          "return": {
+            "type": "gp_Parab"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::Bezier(opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "Bezier", 
+          "return": {
+            "type": "opencascade::handle<Geom_BezierCurve>"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::BSpline(opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "BSpline", 
+          "return": {
+            "type": "opencascade::handle<Geom_BSplineCurve>"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::NbSamples(opencascade::handle<Adaptor3d_HCurve>, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "NbSamples", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheHCurveTool::SamplePars(opencascade::handle<Adaptor3d_HCurve>, Standard_Real, Standard_Real, Standard_Real, Standard_Integer, opencascade::handle<TColStd_HArray1OfReal>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Defl", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbMin", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "Pars", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheHCurveTool", 
+          "name": "SamplePars", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurveSurface_TheHCurveTool.hxx", 
+        49
+      ], 
+      "key": "IntCurveSurface_TheHCurveTool"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurveSurface_TheCSFunctionOfHInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurveSurface_TheCSFunctionOfHInter::IntCurveSurface_TheCSFunctionOfHInter(opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheCSFunctionOfHInter", 
+          "name": "IntCurveSurface_TheCSFunctionOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheCSFunctionOfHInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheCSFunctionOfHInter::IntCurveSurface_TheCSFunctionOfHInter(IntCurveSurface_TheCSFunctionOfHInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_TheCSFunctionOfHInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheCSFunctionOfHInter", 
+          "name": "IntCurveSurface_TheCSFunctionOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheCSFunctionOfHInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheCSFunctionOfHInter::NbVariables()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_TheCSFunctionOfHInter", 
+          "name": "NbVariables", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "IntCurveSurface_TheCSFunctionOfHInter::NbEquations()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_TheCSFunctionOfHInter", 
+          "name": "NbEquations", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "IntCurveSurface_TheCSFunctionOfHInter::Value(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheCSFunctionOfHInter", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "IntCurveSurface_TheCSFunctionOfHInter::Derivatives(math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheCSFunctionOfHInter", 
+          "name": "Derivatives", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "IntCurveSurface_TheCSFunctionOfHInter::Values(math_Vector, math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheCSFunctionOfHInter", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "IntCurveSurface_TheCSFunctionOfHInter::Point()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_TheCSFunctionOfHInter", 
+          "name": "Point", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheCSFunctionOfHInter::Root()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_TheCSFunctionOfHInter", 
+          "name": "Root", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheCSFunctionOfHInter::AuxillarSurface()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_TheCSFunctionOfHInter", 
+          "name": "AuxillarSurface", 
+          "return": {
+            "type": "opencascade::handle<Adaptor3d_HSurface>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheCSFunctionOfHInter::AuxillarCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_TheCSFunctionOfHInter", 
+          "name": "AuxillarCurve", 
+          "return": {
+            "type": "opencascade::handle<Adaptor3d_HCurve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionSetWithDerivatives"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurveSurface_TheCSFunctionOfHInter.hxx", 
+        39
+      ], 
+      "key": "IntCurveSurface_TheCSFunctionOfHInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurveSurface_ThePolygonOfHInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurveSurface_ThePolygonOfHInter::IntCurveSurface_ThePolygonOfHInter(opencascade::handle<Adaptor3d_HCurve>, Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbPnt", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonOfHInter", 
+          "name": "IntCurveSurface_ThePolygonOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_ThePolygonOfHInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonOfHInter::IntCurveSurface_ThePolygonOfHInter(opencascade::handle<Adaptor3d_HCurve>, Standard_Real, Standard_Real, Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbPnt", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonOfHInter", 
+          "name": "IntCurveSurface_ThePolygonOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_ThePolygonOfHInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonOfHInter::IntCurveSurface_ThePolygonOfHInter(opencascade::handle<Adaptor3d_HCurve>, TColStd_Array1OfReal)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Upars", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonOfHInter", 
+          "name": "IntCurveSurface_ThePolygonOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_ThePolygonOfHInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonOfHInter::IntCurveSurface_ThePolygonOfHInter(IntCurveSurface_ThePolygonOfHInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonOfHInter", 
+          "name": "IntCurveSurface_ThePolygonOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_ThePolygonOfHInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonOfHInter::Bounding()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_ThePolygonOfHInter", 
+          "name": "Bounding", 
+          "return": {
+            "type": "Bnd_Box", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonOfHInter::DeflectionOverEstimation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_ThePolygonOfHInter", 
+          "name": "DeflectionOverEstimation", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonOfHInter::SetDeflectionOverEstimation(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "x", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonOfHInter", 
+          "name": "SetDeflectionOverEstimation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonOfHInter::Closed(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "clos", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonOfHInter", 
+          "name": "Closed", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonOfHInter::Closed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_ThePolygonOfHInter", 
+          "name": "Closed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonOfHInter::NbSegments()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_ThePolygonOfHInter", 
+          "name": "NbSegments", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonOfHInter::BeginOfSeg(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonOfHInter", 
+          "name": "BeginOfSeg", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonOfHInter::EndOfSeg(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonOfHInter", 
+          "name": "EndOfSeg", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonOfHInter::InfParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_ThePolygonOfHInter", 
+          "name": "InfParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonOfHInter::SupParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_ThePolygonOfHInter", 
+          "name": "SupParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonOfHInter::ApproxParamOnCurve(Standard_Integer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParamOnLine", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonOfHInter", 
+          "name": "ApproxParamOnCurve", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonOfHInter::Dump()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_ThePolygonOfHInter", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurveSurface_ThePolygonOfHInter.hxx", 
+        39
+      ], 
+      "key": "IntCurveSurface_ThePolygonOfHInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurveSurface_ThePolygonToolOfHInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurveSurface_ThePolygonToolOfHInter::IntCurveSurface_ThePolygonToolOfHInter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_ThePolygonToolOfHInter", 
+          "name": "IntCurveSurface_ThePolygonToolOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_ThePolygonToolOfHInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonToolOfHInter::IntCurveSurface_ThePolygonToolOfHInter(IntCurveSurface_ThePolygonToolOfHInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolygonToolOfHInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonToolOfHInter", 
+          "name": "IntCurveSurface_ThePolygonToolOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_ThePolygonToolOfHInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonToolOfHInter::Bounding(IntCurveSurface_ThePolygonOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "thePolygon", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonToolOfHInter", 
+          "name": "Bounding", 
+          "return": {
+            "type": "Bnd_Box", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonToolOfHInter::DeflectionOverEstimation(IntCurveSurface_ThePolygonOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "thePolygon", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonToolOfHInter", 
+          "name": "DeflectionOverEstimation", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonToolOfHInter::Closed(IntCurveSurface_ThePolygonOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "thePolygon", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonToolOfHInter", 
+          "name": "Closed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonToolOfHInter::NbSegments(IntCurveSurface_ThePolygonOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "thePolygon", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonToolOfHInter", 
+          "name": "NbSegments", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonToolOfHInter::BeginOfSeg(IntCurveSurface_ThePolygonOfHInter, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "thePolygon", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonToolOfHInter", 
+          "name": "BeginOfSeg", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonToolOfHInter::EndOfSeg(IntCurveSurface_ThePolygonOfHInter, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "thePolygon", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonToolOfHInter", 
+          "name": "EndOfSeg", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolygonToolOfHInter::Dump(IntCurveSurface_ThePolygonOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "thePolygon", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolygonToolOfHInter", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurveSurface_ThePolygonToolOfHInter.hxx", 
+        34
+      ], 
+      "key": "IntCurveSurface_ThePolygonToolOfHInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurveSurface_ThePolyhedronToolOfHInter::IntCurveSurface_ThePolyhedronToolOfHInter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+          "name": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolyhedronToolOfHInter::IntCurveSurface_ThePolyhedronToolOfHInter(IntCurveSurface_ThePolyhedronToolOfHInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+          "name": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolyhedronToolOfHInter::Bounding(IntCurveSurface_ThePolyhedronOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+          "name": "Bounding", 
+          "return": {
+            "type": "Bnd_Box", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolyhedronToolOfHInter::ComponentsBounding(IntCurveSurface_ThePolyhedronOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+          "name": "ComponentsBounding", 
+          "return": {
+            "type": "opencascade::handle<Bnd_HArray1OfBox>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolyhedronToolOfHInter::DeflectionOverEstimation(IntCurveSurface_ThePolyhedronOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+          "name": "DeflectionOverEstimation", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolyhedronToolOfHInter::NbTriangles(IntCurveSurface_ThePolyhedronOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+          "name": "NbTriangles", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolyhedronToolOfHInter::Triangle(IntCurveSurface_ThePolyhedronOfHInter, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "P1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "P2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "P3", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+          "name": "Triangle", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolyhedronToolOfHInter::Point(IntCurveSurface_ThePolyhedronOfHInter, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+          "name": "Point", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolyhedronToolOfHInter::TriConnex(IntCurveSurface_ThePolyhedronOfHInter, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Triang", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Pivot", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Pedge", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "TriCon", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "OtherP", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+          "name": "TriConnex", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolyhedronToolOfHInter::IsOnBound(IntCurveSurface_ThePolyhedronOfHInter, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index2", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+          "name": "IsOnBound", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolyhedronToolOfHInter::GetBorderDeflection(IntCurveSurface_ThePolyhedronOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+          "name": "GetBorderDeflection", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_ThePolyhedronToolOfHInter::Dump(IntCurveSurface_ThePolyhedronOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_ThePolyhedronToolOfHInter", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurveSurface_ThePolyhedronToolOfHInter.hxx", 
+        35
+      ], 
+      "key": "IntCurveSurface_ThePolyhedronToolOfHInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurveSurface_TheInterferenceOfHInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurveSurface_TheInterferenceOfHInter::IntCurveSurface_TheInterferenceOfHInter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_TheInterferenceOfHInter", 
+          "name": "IntCurveSurface_TheInterferenceOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheInterferenceOfHInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheInterferenceOfHInter::IntCurveSurface_TheInterferenceOfHInter(IntCurveSurface_ThePolygonOfHInter, IntCurveSurface_ThePolyhedronOfHInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "thePolyg", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheInterferenceOfHInter", 
+          "name": "IntCurveSurface_TheInterferenceOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheInterferenceOfHInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheInterferenceOfHInter::IntCurveSurface_TheInterferenceOfHInter(gp_Lin, IntCurveSurface_ThePolyhedronOfHInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "theLin", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheInterferenceOfHInter", 
+          "name": "IntCurveSurface_TheInterferenceOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheInterferenceOfHInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheInterferenceOfHInter::IntCurveSurface_TheInterferenceOfHInter(Intf_Array1OfLin, IntCurveSurface_ThePolyhedronOfHInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Intf_Array1OfLin", 
+              "name": "theLins", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheInterferenceOfHInter", 
+          "name": "IntCurveSurface_TheInterferenceOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheInterferenceOfHInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheInterferenceOfHInter::IntCurveSurface_TheInterferenceOfHInter(IntCurveSurface_ThePolygonOfHInter, IntCurveSurface_ThePolyhedronOfHInter, Bnd_BoundSortBox)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "thePolyg", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Bnd_BoundSortBox", 
+              "name": "theBoundSB", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheInterferenceOfHInter", 
+          "name": "IntCurveSurface_TheInterferenceOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheInterferenceOfHInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheInterferenceOfHInter::IntCurveSurface_TheInterferenceOfHInter(gp_Lin, IntCurveSurface_ThePolyhedronOfHInter, Bnd_BoundSortBox)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "theLin", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Bnd_BoundSortBox", 
+              "name": "theBoundSB", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheInterferenceOfHInter", 
+          "name": "IntCurveSurface_TheInterferenceOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheInterferenceOfHInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheInterferenceOfHInter::IntCurveSurface_TheInterferenceOfHInter(Intf_Array1OfLin, IntCurveSurface_ThePolyhedronOfHInter, Bnd_BoundSortBox)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Intf_Array1OfLin", 
+              "name": "theLins", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Bnd_BoundSortBox", 
+              "name": "theBoundSB", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheInterferenceOfHInter", 
+          "name": "IntCurveSurface_TheInterferenceOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheInterferenceOfHInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheInterferenceOfHInter::IntCurveSurface_TheInterferenceOfHInter(IntCurveSurface_TheInterferenceOfHInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_TheInterferenceOfHInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheInterferenceOfHInter", 
+          "name": "IntCurveSurface_TheInterferenceOfHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheInterferenceOfHInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheInterferenceOfHInter::Perform(IntCurveSurface_ThePolygonOfHInter, IntCurveSurface_ThePolyhedronOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "thePolyg", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheInterferenceOfHInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheInterferenceOfHInter::Perform(gp_Lin, IntCurveSurface_ThePolyhedronOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "theLin", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheInterferenceOfHInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheInterferenceOfHInter::Perform(Intf_Array1OfLin, IntCurveSurface_ThePolyhedronOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Intf_Array1OfLin", 
+              "name": "theLins", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheInterferenceOfHInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheInterferenceOfHInter::Perform(IntCurveSurface_ThePolygonOfHInter, IntCurveSurface_ThePolyhedronOfHInter, Bnd_BoundSortBox)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "thePolyg", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Bnd_BoundSortBox", 
+              "name": "theBoundSB", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheInterferenceOfHInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheInterferenceOfHInter::Perform(gp_Lin, IntCurveSurface_ThePolyhedronOfHInter, Bnd_BoundSortBox)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "theLin", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Bnd_BoundSortBox", 
+              "name": "theBoundSB", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheInterferenceOfHInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheInterferenceOfHInter::Perform(Intf_Array1OfLin, IntCurveSurface_ThePolyhedronOfHInter, Bnd_BoundSortBox)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Intf_Array1OfLin", 
+              "name": "theLins", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Bnd_BoundSortBox", 
+              "name": "theBoundSB", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheInterferenceOfHInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheInterferenceOfHInter::Interference(IntCurveSurface_ThePolygonOfHInter, IntCurveSurface_ThePolyhedronOfHInter, Bnd_BoundSortBox)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "thePolyg", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Bnd_BoundSortBox", 
+              "name": "theBoundSB", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheInterferenceOfHInter", 
+          "name": "Interference", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheInterferenceOfHInter::Interference(IntCurveSurface_ThePolygonOfHInter, IntCurveSurface_ThePolyhedronOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "thePolyg", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "thePolyh", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheInterferenceOfHInter", 
+          "name": "Interference", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Intf_Interference"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurveSurface_TheInterferenceOfHInter.hxx", 
+        40
+      ], 
+      "key": "IntCurveSurface_TheInterferenceOfHInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurveSurface_IntersectionPoint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurveSurface_IntersectionPoint::IntCurveSurface_IntersectionPoint()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_IntersectionPoint", 
+          "name": "IntCurveSurface_IntersectionPoint", 
+          "return": {
+            "type": "IntCurveSurface_IntersectionPoint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionPoint::IntCurveSurface_IntersectionPoint(gp_Pnt, Standard_Real, Standard_Real, Standard_Real, IntCurveSurface_TransitionOnCurve)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "USurf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VSurf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UCurv", 
+              "const": true
+            }, 
+            {
+              "type": "IntCurveSurface_TransitionOnCurve", 
+              "name": "TrCurv", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_IntersectionPoint", 
+          "name": "IntCurveSurface_IntersectionPoint", 
+          "return": {
+            "type": "IntCurveSurface_IntersectionPoint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionPoint::IntCurveSurface_IntersectionPoint(IntCurveSurface_IntersectionPoint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_IntersectionPoint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_IntersectionPoint", 
+          "name": "IntCurveSurface_IntersectionPoint", 
+          "return": {
+            "type": "IntCurveSurface_IntersectionPoint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionPoint::SetValues(gp_Pnt, Standard_Real, Standard_Real, Standard_Real, IntCurveSurface_TransitionOnCurve)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "USurf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VSurf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UCurv", 
+              "const": true
+            }, 
+            {
+              "type": "IntCurveSurface_TransitionOnCurve", 
+              "name": "TrCurv", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_IntersectionPoint", 
+          "name": "SetValues", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionPoint::Values(gp_Pnt, Standard_Real, Standard_Real, Standard_Real, IntCurveSurface_TransitionOnCurve)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "USurf", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VSurf", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UCurv", 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_TransitionOnCurve", 
+              "name": "TrCurv", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_IntersectionPoint", 
+          "name": "Values", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionPoint::Pnt()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_IntersectionPoint", 
+          "name": "Pnt", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionPoint::U()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_IntersectionPoint", 
+          "name": "U", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionPoint::V()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_IntersectionPoint", 
+          "name": "V", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionPoint::W()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_IntersectionPoint", 
+          "name": "W", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionPoint::Transition()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_IntersectionPoint", 
+          "name": "Transition", 
+          "return": {
+            "type": "IntCurveSurface_TransitionOnCurve"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionPoint::Dump()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_IntersectionPoint", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurveSurface_IntersectionPoint.hxx", 
+        32
+      ], 
+      "key": "IntCurveSurface_IntersectionPoint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter::IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter(IntSurf_Quadric, opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntSurf_Quadric", 
+              "name": "Q", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter", 
+          "name": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter::IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter(IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter", 
+          "name": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter::Value(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter::Derivative(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter", 
+          "name": "Derivative", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter::Values(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionWithDerivative"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter.hxx", 
+        34
+      ], 
+      "key": "IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurveSurface_TheQuadCurvExactHInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurveSurface_TheQuadCurvExactHInter::IntCurveSurface_TheQuadCurvExactHInter(opencascade::handle<Adaptor3d_HSurface>, opencascade::handle<Adaptor3d_HCurve>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheQuadCurvExactHInter", 
+          "name": "IntCurveSurface_TheQuadCurvExactHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheQuadCurvExactHInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheQuadCurvExactHInter::IntCurveSurface_TheQuadCurvExactHInter(IntCurveSurface_TheQuadCurvExactHInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_TheQuadCurvExactHInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheQuadCurvExactHInter", 
+          "name": "IntCurveSurface_TheQuadCurvExactHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheQuadCurvExactHInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheQuadCurvExactHInter::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_TheQuadCurvExactHInter", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheQuadCurvExactHInter::NbRoots()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_TheQuadCurvExactHInter", 
+          "name": "NbRoots", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheQuadCurvExactHInter::Root(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheQuadCurvExactHInter", 
+          "name": "Root", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheQuadCurvExactHInter::NbIntervals()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_TheQuadCurvExactHInter", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheQuadCurvExactHInter::Intervals(Standard_Integer, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheQuadCurvExactHInter", 
+          "name": "Intervals", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurveSurface_TheQuadCurvExactHInter.hxx", 
+        36
+      ], 
+      "key": "IntCurveSurface_TheQuadCurvExactHInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurveSurface_IntersectionSegment", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurveSurface_IntersectionSegment::IntCurveSurface_IntersectionSegment()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_IntersectionSegment", 
+          "name": "IntCurveSurface_IntersectionSegment", 
+          "return": {
+            "type": "IntCurveSurface_IntersectionSegment", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionSegment::IntCurveSurface_IntersectionSegment(IntCurveSurface_IntersectionPoint, IntCurveSurface_IntersectionPoint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_IntersectionPoint", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_IntersectionPoint", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_IntersectionSegment", 
+          "name": "IntCurveSurface_IntersectionSegment", 
+          "return": {
+            "type": "IntCurveSurface_IntersectionSegment", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionSegment::IntCurveSurface_IntersectionSegment(IntCurveSurface_IntersectionSegment)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_IntersectionSegment", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_IntersectionSegment", 
+          "name": "IntCurveSurface_IntersectionSegment", 
+          "return": {
+            "type": "IntCurveSurface_IntersectionSegment", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionSegment::SetValues(IntCurveSurface_IntersectionPoint, IntCurveSurface_IntersectionPoint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_IntersectionPoint", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_IntersectionPoint", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_IntersectionSegment", 
+          "name": "SetValues", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionSegment::Values(IntCurveSurface_IntersectionPoint, IntCurveSurface_IntersectionPoint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_IntersectionPoint", 
+              "name": "P1", 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_IntersectionPoint", 
+              "name": "P2", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_IntersectionSegment", 
+          "name": "Values", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionSegment::FirstPoint(IntCurveSurface_IntersectionPoint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_IntersectionPoint", 
+              "name": "P1", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_IntersectionSegment", 
+          "name": "FirstPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionSegment::SecondPoint(IntCurveSurface_IntersectionPoint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_IntersectionPoint", 
+              "name": "P2", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_IntersectionSegment", 
+          "name": "SecondPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionSegment::FirstPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_IntersectionSegment", 
+          "name": "FirstPoint", 
+          "return": {
+            "type": "IntCurveSurface_IntersectionPoint", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionSegment::SecondPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_IntersectionSegment", 
+          "name": "SecondPoint", 
+          "return": {
+            "type": "IntCurveSurface_IntersectionPoint", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_IntersectionSegment::Dump()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_IntersectionSegment", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurveSurface_IntersectionSegment.hxx", 
+        31
+      ], 
+      "key": "IntCurveSurface_IntersectionSegment"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurveSurface_Intersection", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurveSurface_Intersection::IntCurveSurface_Intersection(IntCurveSurface_Intersection)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_Intersection", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_Intersection", 
+          "name": "IntCurveSurface_Intersection", 
+          "return": {
+            "type": "IntCurveSurface_Intersection", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurveSurface_Intersection::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_Intersection", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_Intersection::NbPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_Intersection", 
+          "name": "NbPoints", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_Intersection::Point(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_Intersection", 
+          "name": "Point", 
+          "return": {
+            "type": "IntCurveSurface_IntersectionPoint", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_Intersection::NbSegments()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_Intersection", 
+          "name": "NbSegments", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_Intersection::Segment(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_Intersection", 
+          "name": "Segment", 
+          "return": {
+            "type": "IntCurveSurface_IntersectionSegment", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_Intersection::Dump()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_Intersection", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurveSurface_Intersection.hxx", 
+        36
+      ], 
+      "key": "IntCurveSurface_Intersection"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurveSurface_TheExactHInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurveSurface_TheExactHInter::IntCurveSurface_TheExactHInter(Standard_Real, Standard_Real, Standard_Real, IntCurveSurface_TheCSFunctionOfHInter, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "W", 
+              "const": true
+            }, 
+            {
+              "type": "IntCurveSurface_TheCSFunctionOfHInter", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolTangency", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "MarginCoef", 
+              "default": "0.", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheExactHInter", 
+          "name": "IntCurveSurface_TheExactHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheExactHInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheExactHInter::IntCurveSurface_TheExactHInter(IntCurveSurface_TheCSFunctionOfHInter, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_TheCSFunctionOfHInter", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolTangency", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheExactHInter", 
+          "name": "IntCurveSurface_TheExactHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheExactHInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheExactHInter::IntCurveSurface_TheExactHInter(IntCurveSurface_TheExactHInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_TheExactHInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheExactHInter", 
+          "name": "IntCurveSurface_TheExactHInter", 
+          "return": {
+            "type": "IntCurveSurface_TheExactHInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheExactHInter::Perform(Standard_Real, Standard_Real, Standard_Real, math_FunctionSetRoot, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "W", 
+              "const": true
+            }, 
+            {
+              "type": "math_FunctionSetRoot", 
+              "name": "Rsnld", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "w0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "w1", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheExactHInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheExactHInter::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_TheExactHInter", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheExactHInter::IsEmpty()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_TheExactHInter", 
+          "name": "IsEmpty", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheExactHInter::Point()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_TheExactHInter", 
+          "name": "Point", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheExactHInter::ParameterOnCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_TheExactHInter", 
+          "name": "ParameterOnCurve", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheExactHInter::ParameterOnSurface(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_TheExactHInter", 
+          "name": "ParameterOnSurface", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_TheExactHInter::Function()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_TheExactHInter", 
+          "name": "Function", 
+          "return": {
+            "type": "IntCurveSurface_TheCSFunctionOfHInter", 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurveSurface_TheExactHInter.hxx", 
+        39
+      ], 
+      "key": "IntCurveSurface_TheExactHInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurveSurface_HInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurveSurface_HInter::IntCurveSurface_HInter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntCurveSurface_HInter", 
+          "name": "IntCurveSurface_HInter", 
+          "return": {
+            "type": "IntCurveSurface_HInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_HInter::IntCurveSurface_HInter(IntCurveSurface_HInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurveSurface_HInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_HInter", 
+          "name": "IntCurveSurface_HInter", 
+          "return": {
+            "type": "IntCurveSurface_HInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurveSurface_HInter::Perform(opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor3d_HSurface>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_HInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_HInter::Perform(opencascade::handle<Adaptor3d_HCurve>, IntCurveSurface_ThePolygonOfHInter, opencascade::handle<Adaptor3d_HSurface>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "Polygon", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_HInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_HInter::Perform(opencascade::handle<Adaptor3d_HCurve>, IntCurveSurface_ThePolygonOfHInter, opencascade::handle<Adaptor3d_HSurface>, IntCurveSurface_ThePolyhedronOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "ThePolygon", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "Polyhedron", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_HInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_HInter::Perform(opencascade::handle<Adaptor3d_HCurve>, IntCurveSurface_ThePolygonOfHInter, opencascade::handle<Adaptor3d_HSurface>, IntCurveSurface_ThePolyhedronOfHInter, Bnd_BoundSortBox)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolygonOfHInter", 
+              "name": "ThePolygon", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "Polyhedron", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Bnd_BoundSortBox", 
+              "name": "BndBSB", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_HInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurveSurface_HInter::Perform(opencascade::handle<Adaptor3d_HCurve>, opencascade::handle<Adaptor3d_HSurface>, IntCurveSurface_ThePolyhedronOfHInter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Adaptor3d_HSurface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurveSurface_ThePolyhedronOfHInter", 
+              "name": "Polyhedron", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurveSurface_HInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "IntCurveSurface_Intersection"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurveSurface_HInter.hxx", 
+        52
+      ], 
+      "key": "IntCurveSurface_HInter"
+    }, 
+    {
+      "type": "NCollection_Sequence<IntCurveSurface_IntersectionPoint>", 
+      "declType": "typedef", 
+      "name": "IntCurveSurface_SequenceOfPnt", 
+      "key": "IntCurveSurface_SequenceOfPnt"
+    }, 
+    {
+      "type": "NCollection_Sequence<IntCurveSurface_IntersectionSegment>", 
+      "declType": "typedef", 
+      "name": "IntCurveSurface_SequenceOfSeg", 
+      "key": "IntCurveSurface_SequenceOfSeg"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "IntCurveSurface_Tangent", 
+          0
+        ], 
+        [
+          "IntCurveSurface_In", 
+          1
+        ], 
+        [
+          "IntCurveSurface_Out", 
+          2
+        ]
+      ], 
+      "name": "IntCurveSurface_TransitionOnCurve", 
+      "key": "IntCurveSurface_TransitionOnCurve"
+    }
+  ], 
+  "name": "IntCurveSurface"
+}

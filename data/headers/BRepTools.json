@@ -1,0 +1,3080 @@
+{
+  "headers": [
+    "BRepTools_Modification.hxx", 
+    "BRepTools_NurbsConvertModification.hxx", 
+    "BRepTools_DataMapIteratorOfMapOfVertexPnt2d.hxx", 
+    "BRepTools_Quilt.hxx", 
+    "BRepTools_ReShape.hxx", 
+    "BRepTools_MapOfVertexPnt2d.hxx", 
+    "BRepTools_Modifier.hxx", 
+    "BRepTools_TrsfModification.hxx", 
+    "BRepTools_WireExplorer.hxx", 
+    "BRepTools_ShapeSet.hxx", 
+    "BRepTools_Substitution.hxx", 
+    "BRepTools_GTrsfModification.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "BRepTools_Modification", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "BRepTools_Modification::NewSurface(TopoDS_Face, opencascade::handle<Geom_Surface>, TopLoc_Location, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "TopLoc_Location", 
+              "name": "L", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RevWires", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RevFace", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modification", 
+          "name": "NewSurface", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepTools_Modification::NewTriangulation(TopoDS_Face, opencascade::handle<Poly_Triangulation>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Poly_Triangulation>", 
+              "name": "T", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modification", 
+          "name": "NewTriangulation", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_Modification::NewCurve(TopoDS_Edge, opencascade::handle<Geom_Curve>, TopLoc_Location, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C", 
+              "ref": true
+            }, 
+            {
+              "type": "TopLoc_Location", 
+              "name": "L", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modification", 
+          "name": "NewCurve", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepTools_Modification::NewPolygon(TopoDS_Edge, opencascade::handle<Poly_Polygon3D>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Poly_Polygon3D>", 
+              "name": "P", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modification", 
+          "name": "NewPolygon", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_Modification::NewPolygonOnTriangulation(TopoDS_Edge, TopoDS_Face, opencascade::handle<Poly_PolygonOnTriangulation>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Poly_PolygonOnTriangulation>", 
+              "name": "P", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modification", 
+          "name": "NewPolygonOnTriangulation", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_Modification::NewPoint(TopoDS_Vertex, gp_Pnt, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modification", 
+          "name": "NewPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepTools_Modification::NewCurve2d(TopoDS_Edge, TopoDS_Face, TopoDS_Edge, TopoDS_Face, opencascade::handle<Geom2d_Curve>, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "NewE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "NewF", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modification", 
+          "name": "NewCurve2d", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepTools_Modification::NewParameter(TopoDS_Vertex, TopoDS_Edge, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modification", 
+          "name": "NewParameter", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepTools_Modification::Continuity(TopoDS_Edge, TopoDS_Face, TopoDS_Face, TopoDS_Edge, TopoDS_Face, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "NewE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "NewF1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "NewF2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modification", 
+          "name": "Continuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepTools_Modification::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_Modification", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Modification::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_Modification", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Modification::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_Modification", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepTools_Modification.hxx", 
+        46
+      ], 
+      "key": "BRepTools_Modification"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepTools_NurbsConvertModification", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepTools_NurbsConvertModification::BRepTools_NurbsConvertModification()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepTools_NurbsConvertModification", 
+          "name": "BRepTools_NurbsConvertModification", 
+          "return": {
+            "type": "BRepTools_NurbsConvertModification", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_NurbsConvertModification::BRepTools_NurbsConvertModification(BRepTools_NurbsConvertModification)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepTools_NurbsConvertModification", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_NurbsConvertModification", 
+          "name": "BRepTools_NurbsConvertModification", 
+          "return": {
+            "type": "BRepTools_NurbsConvertModification", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepTools_NurbsConvertModification::NewSurface(TopoDS_Face, opencascade::handle<Geom_Surface>, TopLoc_Location, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "TopLoc_Location", 
+              "name": "L", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RevWires", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RevFace", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_NurbsConvertModification", 
+          "name": "NewSurface", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_NurbsConvertModification::NewCurve(TopoDS_Edge, opencascade::handle<Geom_Curve>, TopLoc_Location, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C", 
+              "ref": true
+            }, 
+            {
+              "type": "TopLoc_Location", 
+              "name": "L", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_NurbsConvertModification", 
+          "name": "NewCurve", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_NurbsConvertModification::NewPoint(TopoDS_Vertex, gp_Pnt, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_NurbsConvertModification", 
+          "name": "NewPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_NurbsConvertModification::NewCurve2d(TopoDS_Edge, TopoDS_Face, TopoDS_Edge, TopoDS_Face, opencascade::handle<Geom2d_Curve>, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "NewE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "NewF", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_NurbsConvertModification", 
+          "name": "NewCurve2d", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_NurbsConvertModification::NewParameter(TopoDS_Vertex, TopoDS_Edge, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_NurbsConvertModification", 
+          "name": "NewParameter", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_NurbsConvertModification::Continuity(TopoDS_Edge, TopoDS_Face, TopoDS_Face, TopoDS_Edge, TopoDS_Face, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "NewE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "NewF1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "NewF2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_NurbsConvertModification", 
+          "name": "Continuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_NurbsConvertModification::GetUpdatedEdges()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_NurbsConvertModification", 
+          "name": "GetUpdatedEdges", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_NurbsConvertModification::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_NurbsConvertModification", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_NurbsConvertModification::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_NurbsConvertModification", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_NurbsConvertModification::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_NurbsConvertModification", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepTools_Modification"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepTools_NurbsConvertModification.hxx", 
+        46
+      ], 
+      "key": "BRepTools_NurbsConvertModification"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepTools_Quilt", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepTools_Quilt::BRepTools_Quilt()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepTools_Quilt", 
+          "name": "BRepTools_Quilt", 
+          "return": {
+            "type": "BRepTools_Quilt", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Quilt::BRepTools_Quilt(BRepTools_Quilt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepTools_Quilt", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Quilt", 
+          "name": "BRepTools_Quilt", 
+          "return": {
+            "type": "BRepTools_Quilt", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepTools_Quilt::Bind(TopoDS_Edge, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "Eold", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "Enew", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Quilt", 
+          "name": "Bind", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Quilt::Bind(TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "Vold", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "Vnew", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Quilt", 
+          "name": "Bind", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Quilt::Add(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Quilt", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Quilt::IsCopied(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Quilt", 
+          "name": "IsCopied", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Quilt::Copy(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Quilt", 
+          "name": "Copy", 
+          "return": {
+            "type": "TopoDS_Shape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Quilt::Shells()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_Quilt", 
+          "name": "Shells", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepTools_Quilt.hxx", 
+        51
+      ], 
+      "key": "BRepTools_Quilt"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepTools_ReShape", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepTools_ReShape::BRepTools_ReShape()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepTools_ReShape", 
+          "name": "BRepTools_ReShape", 
+          "return": {
+            "type": "BRepTools_ReShape", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_ReShape::BRepTools_ReShape(BRepTools_ReShape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepTools_ReShape", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ReShape", 
+          "name": "BRepTools_ReShape", 
+          "return": {
+            "type": "BRepTools_ReShape", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepTools_ReShape::Clear()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_ReShape", 
+          "name": "Clear", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ReShape::Remove(TopoDS_Shape, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "shape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "oriented", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTools_ReShape", 
+          "name": "Remove", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ReShape::Replace(TopoDS_Shape, TopoDS_Shape, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "shape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "newshape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "oriented", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTools_ReShape", 
+          "name": "Replace", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ReShape::IsRecorded(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "shape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ReShape", 
+          "name": "IsRecorded", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ReShape::Value(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "shape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ReShape", 
+          "name": "Value", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ReShape::Status(TopoDS_Shape, TopoDS_Shape, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "shape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "newsh", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "last", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTools_ReShape", 
+          "name": "Status", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ReShape::Apply(TopoDS_Shape, TopAbs_ShapeEnum, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "shape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_ShapeEnum", 
+              "name": "until", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "buildmode", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTools_ReShape", 
+          "name": "Apply", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ReShape::Apply(TopoDS_Shape, TopAbs_ShapeEnum)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "shape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_ShapeEnum", 
+              "name": "until", 
+              "default": "::TopAbs_ShapeEnum::TopAbs_SHAPE", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTools_ReShape", 
+          "name": "Apply", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ReShape::ModeConsiderLocation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_ReShape", 
+          "name": "ModeConsiderLocation", 
+          "return": {
+            "type": "Standard_Boolean", 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ReShape::ModeConsiderOrientation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_ReShape", 
+          "name": "ModeConsiderOrientation", 
+          "return": {
+            "type": "Standard_Boolean", 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ReShape::CopyVertex(TopoDS_Vertex, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "theV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTol", 
+              "default": "-1.", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTools_ReShape", 
+          "name": "CopyVertex", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_ReShape::CopyVertex(TopoDS_Vertex, gp_Pnt, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "theV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theNewPos", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "aTol", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTools_ReShape", 
+          "name": "CopyVertex", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_ReShape::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_ReShape", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_ReShape::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_ReShape", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_ReShape::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_ReShape", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepTools_ReShape.hxx", 
+        47
+      ], 
+      "key": "BRepTools_ReShape"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepTools_Modifier", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepTools_Modifier::BRepTools_Modifier(Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "theMutableInput", 
+              "default": "false"
+            }
+          ], 
+          "parent": "BRepTools_Modifier", 
+          "name": "BRepTools_Modifier", 
+          "return": {
+            "type": "BRepTools_Modifier", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Modifier::BRepTools_Modifier(TopoDS_Shape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modifier", 
+          "name": "BRepTools_Modifier", 
+          "return": {
+            "type": "BRepTools_Modifier", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Modifier::BRepTools_Modifier(TopoDS_Shape, opencascade::handle<BRepTools_Modification>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepTools_Modification>", 
+              "name": "M", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modifier", 
+          "name": "BRepTools_Modifier", 
+          "return": {
+            "type": "BRepTools_Modifier", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Modifier::BRepTools_Modifier(BRepTools_Modifier)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepTools_Modifier", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modifier", 
+          "name": "BRepTools_Modifier", 
+          "return": {
+            "type": "BRepTools_Modifier", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepTools_Modifier::NewCurveInfo()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepTools_Modifier", 
+          "name": "NewCurveInfo", 
+          "return": {
+            "type": "BRepTools_Modifier", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Modifier::NewCurveInfo(BRepTools_Modifier::NewCurveInfo)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepTools_Modifier::NewCurveInfo", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modifier", 
+          "name": "NewCurveInfo", 
+          "return": {
+            "type": "BRepTools_Modifier", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepTools_Modifier::NewSurfaceInfo()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepTools_Modifier", 
+          "name": "NewSurfaceInfo", 
+          "return": {
+            "type": "BRepTools_Modifier", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Modifier::NewSurfaceInfo(BRepTools_Modifier::NewSurfaceInfo)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepTools_Modifier::NewSurfaceInfo", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modifier", 
+          "name": "NewSurfaceInfo", 
+          "return": {
+            "type": "BRepTools_Modifier", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepTools_Modifier::Init(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modifier", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Modifier::Perform(opencascade::handle<BRepTools_Modification>, opencascade::handle<Message_ProgressIndicator>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<BRepTools_Modification>", 
+              "name": "M", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Message_ProgressIndicator>", 
+              "name": "aProgress", 
+              "default": "__null", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modifier", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Modifier::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_Modifier", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Modifier::IsMutableInput()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_Modifier", 
+          "name": "IsMutableInput", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Modifier::SetMutableInput(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "theMutableInput"
+            }
+          ], 
+          "parent": "BRepTools_Modifier", 
+          "name": "SetMutableInput", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Modifier::ModifiedShape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Modifier", 
+          "name": "ModifiedShape", 
+          "return": {
+            "type": "TopoDS_Shape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepTools_Modifier.hxx", 
+        47
+      ], 
+      "key": "BRepTools_Modifier"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepTools_TrsfModification", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepTools_TrsfModification::BRepTools_TrsfModification(gp_Trsf)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Trsf", 
+              "name": "T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_TrsfModification", 
+          "name": "BRepTools_TrsfModification", 
+          "return": {
+            "type": "BRepTools_TrsfModification", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_TrsfModification::BRepTools_TrsfModification(BRepTools_TrsfModification)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepTools_TrsfModification", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_TrsfModification", 
+          "name": "BRepTools_TrsfModification", 
+          "return": {
+            "type": "BRepTools_TrsfModification", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepTools_TrsfModification::Trsf()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_TrsfModification", 
+          "name": "Trsf", 
+          "return": {
+            "type": "gp_Trsf", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_TrsfModification::NewSurface(TopoDS_Face, opencascade::handle<Geom_Surface>, TopLoc_Location, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "TopLoc_Location", 
+              "name": "L", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RevWires", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RevFace", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_TrsfModification", 
+          "name": "NewSurface", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_TrsfModification::NewCurve(TopoDS_Edge, opencascade::handle<Geom_Curve>, TopLoc_Location, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C", 
+              "ref": true
+            }, 
+            {
+              "type": "TopLoc_Location", 
+              "name": "L", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_TrsfModification", 
+          "name": "NewCurve", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_TrsfModification::NewPoint(TopoDS_Vertex, gp_Pnt, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_TrsfModification", 
+          "name": "NewPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_TrsfModification::NewCurve2d(TopoDS_Edge, TopoDS_Face, TopoDS_Edge, TopoDS_Face, opencascade::handle<Geom2d_Curve>, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "NewE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "NewF", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_TrsfModification", 
+          "name": "NewCurve2d", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_TrsfModification::NewParameter(TopoDS_Vertex, TopoDS_Edge, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_TrsfModification", 
+          "name": "NewParameter", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_TrsfModification::Continuity(TopoDS_Edge, TopoDS_Face, TopoDS_Face, TopoDS_Edge, TopoDS_Face, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "NewE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "NewF1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "NewF2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_TrsfModification", 
+          "name": "Continuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_TrsfModification::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_TrsfModification", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_TrsfModification::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_TrsfModification", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_TrsfModification::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_TrsfModification", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepTools_Modification"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepTools_TrsfModification.hxx", 
+        45
+      ], 
+      "key": "BRepTools_TrsfModification"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepTools_WireExplorer", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepTools_WireExplorer::BRepTools_WireExplorer()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepTools_WireExplorer", 
+          "name": "BRepTools_WireExplorer", 
+          "return": {
+            "type": "BRepTools_WireExplorer", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_WireExplorer::BRepTools_WireExplorer(TopoDS_Wire)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_WireExplorer", 
+          "name": "BRepTools_WireExplorer", 
+          "return": {
+            "type": "BRepTools_WireExplorer", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_WireExplorer::BRepTools_WireExplorer(TopoDS_Wire, TopoDS_Face)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_WireExplorer", 
+          "name": "BRepTools_WireExplorer", 
+          "return": {
+            "type": "BRepTools_WireExplorer", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_WireExplorer::BRepTools_WireExplorer(BRepTools_WireExplorer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepTools_WireExplorer", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_WireExplorer", 
+          "name": "BRepTools_WireExplorer", 
+          "return": {
+            "type": "BRepTools_WireExplorer", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepTools_WireExplorer::Init(TopoDS_Wire)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_WireExplorer", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_WireExplorer::Init(TopoDS_Wire, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_WireExplorer", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_WireExplorer::More()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_WireExplorer", 
+          "name": "More", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_WireExplorer::Next()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_WireExplorer", 
+          "name": "Next", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_WireExplorer::Current()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_WireExplorer", 
+          "name": "Current", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_WireExplorer::Orientation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_WireExplorer", 
+          "name": "Orientation", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_WireExplorer::CurrentVertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_WireExplorer", 
+          "name": "CurrentVertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_WireExplorer::Clear()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_WireExplorer", 
+          "name": "Clear", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepTools_WireExplorer.hxx", 
+        54
+      ], 
+      "key": "BRepTools_WireExplorer"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepTools_ShapeSet", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepTools_ShapeSet::BRepTools_ShapeSet(Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "isWithTriangles", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "BRepTools_ShapeSet", 
+          "return": {
+            "type": "BRepTools_ShapeSet", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::BRepTools_ShapeSet(BRep_Builder, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRep_Builder", 
+              "name": "B", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "isWithTriangles", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "BRepTools_ShapeSet", 
+          "return": {
+            "type": "BRepTools_ShapeSet", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::BRepTools_ShapeSet(BRepTools_ShapeSet)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepTools_ShapeSet", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "BRepTools_ShapeSet", 
+          "return": {
+            "type": "BRepTools_ShapeSet", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::Clear()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "Clear", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::AddGeometry(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "AddGeometry", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::DumpGeometry(Standard_OStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_OStream", 
+              "name": "OS", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "DumpGeometry", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::WriteGeometry(Standard_OStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_OStream", 
+              "name": "OS", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "WriteGeometry", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::ReadGeometry(Standard_IStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_IStream", 
+              "name": "IS", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "ReadGeometry", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::DumpGeometry(TopoDS_Shape, Standard_OStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_OStream", 
+              "name": "OS", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "DumpGeometry", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::WriteGeometry(TopoDS_Shape, Standard_OStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_OStream", 
+              "name": "OS", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "WriteGeometry", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::ReadGeometry(TopAbs_ShapeEnum, Standard_IStream, TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_ShapeEnum", 
+              "name": "T", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_IStream", 
+              "name": "IS", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "ReadGeometry", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::AddShapes(TopoDS_Shape, TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S1", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "AddShapes", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::Check(TopAbs_ShapeEnum, TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_ShapeEnum", 
+              "name": "T", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "Check", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::ReadPolygon3D(Standard_IStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_IStream", 
+              "name": "IS", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "ReadPolygon3D", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::WritePolygon3D(Standard_OStream, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_OStream", 
+              "name": "OS", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Compact", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "WritePolygon3D", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::DumpPolygon3D(Standard_OStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_OStream", 
+              "name": "OS", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "DumpPolygon3D", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::ReadTriangulation(Standard_IStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_IStream", 
+              "name": "IS", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "ReadTriangulation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::WriteTriangulation(Standard_OStream, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_OStream", 
+              "name": "OS", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Compact", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "WriteTriangulation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::DumpTriangulation(Standard_OStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_OStream", 
+              "name": "OS", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "DumpTriangulation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::ReadPolygonOnTriangulation(Standard_IStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_IStream", 
+              "name": "IS", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "ReadPolygonOnTriangulation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::WritePolygonOnTriangulation(Standard_OStream, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_OStream", 
+              "name": "OS", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Compact", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "WritePolygonOnTriangulation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_ShapeSet::DumpPolygonOnTriangulation(Standard_OStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_OStream", 
+              "name": "OS", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_ShapeSet", 
+          "name": "DumpPolygonOnTriangulation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "TopTools_ShapeSet"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepTools_ShapeSet.hxx", 
+        42
+      ], 
+      "key": "BRepTools_ShapeSet"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepTools_Substitution", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepTools_Substitution::BRepTools_Substitution()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepTools_Substitution", 
+          "name": "BRepTools_Substitution", 
+          "return": {
+            "type": "BRepTools_Substitution", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Substitution::BRepTools_Substitution(BRepTools_Substitution)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepTools_Substitution", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Substitution", 
+          "name": "BRepTools_Substitution", 
+          "return": {
+            "type": "BRepTools_Substitution", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepTools_Substitution::Clear()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_Substitution", 
+          "name": "Clear", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Substitution::Substitute(TopoDS_Shape, TopTools_ListOfShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "OldShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopTools_ListOfShape", 
+              "name": "NewShapes", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Substitution", 
+          "name": "Substitute", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Substitution::Build(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Substitution", 
+          "name": "Build", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Substitution::IsCopied(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Substitution", 
+          "name": "IsCopied", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_Substitution::Copy(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_Substitution", 
+          "name": "Copy", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepTools_Substitution.hxx", 
+        41
+      ], 
+      "key": "BRepTools_Substitution"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepTools_GTrsfModification", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepTools_GTrsfModification::BRepTools_GTrsfModification(gp_GTrsf)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_GTrsf", 
+              "name": "T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_GTrsfModification", 
+          "name": "BRepTools_GTrsfModification", 
+          "return": {
+            "type": "BRepTools_GTrsfModification", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_GTrsfModification::BRepTools_GTrsfModification(BRepTools_GTrsfModification)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepTools_GTrsfModification", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_GTrsfModification", 
+          "name": "BRepTools_GTrsfModification", 
+          "return": {
+            "type": "BRepTools_GTrsfModification", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepTools_GTrsfModification::GTrsf()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_GTrsfModification", 
+          "name": "GTrsf", 
+          "return": {
+            "type": "gp_GTrsf", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_GTrsfModification::NewSurface(TopoDS_Face, opencascade::handle<Geom_Surface>, TopLoc_Location, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "TopLoc_Location", 
+              "name": "L", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RevWires", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "RevFace", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_GTrsfModification", 
+          "name": "NewSurface", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_GTrsfModification::NewCurve(TopoDS_Edge, opencascade::handle<Geom_Curve>, TopLoc_Location, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C", 
+              "ref": true
+            }, 
+            {
+              "type": "TopLoc_Location", 
+              "name": "L", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_GTrsfModification", 
+          "name": "NewCurve", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_GTrsfModification::NewPoint(TopoDS_Vertex, gp_Pnt, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_GTrsfModification", 
+          "name": "NewPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_GTrsfModification::NewCurve2d(TopoDS_Edge, TopoDS_Face, TopoDS_Edge, TopoDS_Face, opencascade::handle<Geom2d_Curve>, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "NewE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "NewF", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_GTrsfModification", 
+          "name": "NewCurve2d", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_GTrsfModification::NewParameter(TopoDS_Vertex, TopoDS_Edge, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_GTrsfModification", 
+          "name": "NewParameter", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_GTrsfModification::Continuity(TopoDS_Edge, TopoDS_Face, TopoDS_Face, TopoDS_Edge, TopoDS_Face, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "NewE", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "NewF1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "NewF2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepTools_GTrsfModification", 
+          "name": "Continuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepTools_GTrsfModification::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_GTrsfModification", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_GTrsfModification::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_GTrsfModification", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepTools_GTrsfModification::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepTools_GTrsfModification", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepTools_Modification"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepTools_GTrsfModification.hxx", 
+        45
+      ], 
+      "key": "BRepTools_GTrsfModification"
+    }, 
+    {
+      "type": "opencascade::handle<BRepTools_Modification>", 
+      "declType": "typedef", 
+      "name": "Handle_BRepTools_Modification", 
+      "key": "Handle_BRepTools_Modification"
+    }, 
+    {
+      "type": "opencascade::handle<BRepTools_NurbsConvertModification>", 
+      "declType": "typedef", 
+      "name": "Handle_BRepTools_NurbsConvertModification", 
+      "key": "Handle_BRepTools_NurbsConvertModification"
+    }, 
+    {
+      "type": "NCollection_DataMap<TopoDS_Shape, NCollection_Sequence<gp_Pnt2d>, TopTools_ShapeMapHasher>", 
+      "declType": "typedef", 
+      "name": "BRepTools_MapOfVertexPnt2d", 
+      "key": "BRepTools_MapOfVertexPnt2d"
+    }, 
+    {
+      "type": "NCollection_DataMap<TopoDS_Shape, NCollection_Sequence<gp_Pnt2d>, TopTools_ShapeMapHasher>::Iterator", 
+      "declType": "typedef", 
+      "name": "BRepTools_DataMapIteratorOfMapOfVertexPnt2d", 
+      "key": "BRepTools_DataMapIteratorOfMapOfVertexPnt2d"
+    }, 
+    {
+      "type": "opencascade::handle<BRepTools_ReShape>", 
+      "declType": "typedef", 
+      "name": "Handle_BRepTools_ReShape", 
+      "key": "Handle_BRepTools_ReShape"
+    }, 
+    {
+      "type": "opencascade::handle<BRepTools_TrsfModification>", 
+      "declType": "typedef", 
+      "name": "Handle_BRepTools_TrsfModification", 
+      "key": "Handle_BRepTools_TrsfModification"
+    }, 
+    {
+      "type": "opencascade::handle<BRepTools_GTrsfModification>", 
+      "declType": "typedef", 
+      "name": "Handle_BRepTools_GTrsfModification", 
+      "key": "Handle_BRepTools_GTrsfModification"
+    }
+  ], 
+  "name": "BRepTools"
+}

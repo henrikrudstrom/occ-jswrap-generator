@@ -1,0 +1,2632 @@
+{
+  "headers": [
+    "IntSurf_Transition.hxx", 
+    "IntSurf_Situation.hxx", 
+    "IntSurf_PntOn2S.hxx", 
+    "IntSurf_SequenceOfPathPoint.hxx", 
+    "IntSurf_Quadric.hxx", 
+    "IntSurf_ListOfPntOn2S.hxx", 
+    "IntSurf_SequenceOfInteriorPoint.hxx", 
+    "IntSurf_SequenceOfCouple.hxx", 
+    "IntSurf_InteriorPoint.hxx", 
+    "IntSurf_LineOn2S.hxx", 
+    "IntSurf_TypeTrans.hxx", 
+    "IntSurf_PathPointTool.hxx", 
+    "IntSurf_Couple.hxx", 
+    "IntSurf_QuadricTool.hxx", 
+    "IntSurf_SequenceOfPntOn2S.hxx", 
+    "IntSurf_PathPoint.hxx", 
+    "IntSurf_ListIteratorOfListOfPntOn2S.hxx", 
+    "IntSurf_Allocator.hxx", 
+    "IntSurf_InteriorPointTool.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "IntSurf_Transition", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntSurf_Transition::IntSurf_Transition()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntSurf_Transition", 
+          "name": "IntSurf_Transition", 
+          "return": {
+            "type": "IntSurf_Transition", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Transition::IntSurf_Transition(Standard_Boolean, IntSurf_TypeTrans)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Tangent", 
+              "const": true
+            }, 
+            {
+              "type": "IntSurf_TypeTrans", 
+              "name": "Type", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_Transition", 
+          "name": "IntSurf_Transition", 
+          "return": {
+            "type": "IntSurf_Transition", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Transition::IntSurf_Transition(Standard_Boolean, IntSurf_Situation, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Tangent", 
+              "const": true
+            }, 
+            {
+              "type": "IntSurf_Situation", 
+              "name": "Situ", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Oppos", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_Transition", 
+          "name": "IntSurf_Transition", 
+          "return": {
+            "type": "IntSurf_Transition", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Transition::IntSurf_Transition(IntSurf_Transition)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntSurf_Transition", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Transition", 
+          "name": "IntSurf_Transition", 
+          "return": {
+            "type": "IntSurf_Transition", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntSurf_Transition::SetValue(Standard_Boolean, IntSurf_TypeTrans)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Tangent", 
+              "const": true
+            }, 
+            {
+              "type": "IntSurf_TypeTrans", 
+              "name": "Type", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_Transition", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Transition::SetValue(Standard_Boolean, IntSurf_Situation, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Tangent", 
+              "const": true
+            }, 
+            {
+              "type": "IntSurf_Situation", 
+              "name": "Situ", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Oppos", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_Transition", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Transition::SetValue()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_Transition", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Transition::TransitionType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_Transition", 
+          "name": "TransitionType", 
+          "return": {
+            "type": "IntSurf_TypeTrans"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Transition::IsTangent()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_Transition", 
+          "name": "IsTangent", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Transition::Situation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_Transition", 
+          "name": "Situation", 
+          "return": {
+            "type": "IntSurf_Situation"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Transition::IsOpposite()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_Transition", 
+          "name": "IsOpposite", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntSurf_Transition.hxx", 
+        33
+      ], 
+      "key": "IntSurf_Transition"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntSurf_PntOn2S", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntSurf_PntOn2S::IntSurf_PntOn2S()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntSurf_PntOn2S", 
+          "name": "IntSurf_PntOn2S", 
+          "return": {
+            "type": "IntSurf_PntOn2S", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PntOn2S::IntSurf_PntOn2S(IntSurf_PntOn2S)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntSurf_PntOn2S", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PntOn2S", 
+          "name": "IntSurf_PntOn2S", 
+          "return": {
+            "type": "IntSurf_PntOn2S", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntSurf_PntOn2S::SetValue(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PntOn2S", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PntOn2S::SetValue(gp_Pnt, Standard_Boolean, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "OnFirst", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_PntOn2S", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PntOn2S::SetValue(gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_PntOn2S", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PntOn2S::SetValue(Standard_Boolean, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "OnFirst", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_PntOn2S", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PntOn2S::SetValue(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_PntOn2S", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PntOn2S::Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_PntOn2S", 
+          "name": "Value", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PntOn2S::ValueOnSurface(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "OnFirst", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_PntOn2S", 
+          "name": "ValueOnSurface", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PntOn2S::ParametersOnS1(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PntOn2S", 
+          "name": "ParametersOnS1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PntOn2S::ParametersOnS2(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PntOn2S", 
+          "name": "ParametersOnS2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PntOn2S::ParametersOnSurface(Standard_Boolean, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "OnFirst", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PntOn2S", 
+          "name": "ParametersOnSurface", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PntOn2S::Parameters(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PntOn2S", 
+          "name": "Parameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PntOn2S::IsSame(IntSurf_PntOn2S, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_PntOn2S", 
+              "name": "theOtherPoint", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTol3D", 
+              "default": "0.", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTol2D", 
+              "default": "-1.", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_PntOn2S", 
+          "name": "IsSame", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntSurf_PntOn2S.hxx", 
+        35
+      ], 
+      "key": "IntSurf_PntOn2S"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntSurf_PathPoint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntSurf_PathPoint::IntSurf_PathPoint()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntSurf_PathPoint", 
+          "name": "IntSurf_PathPoint", 
+          "return": {
+            "type": "IntSurf_PathPoint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPoint::IntSurf_PathPoint(gp_Pnt, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_PathPoint", 
+          "name": "IntSurf_PathPoint", 
+          "return": {
+            "type": "IntSurf_PathPoint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPoint::IntSurf_PathPoint(IntSurf_PathPoint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntSurf_PathPoint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PathPoint", 
+          "name": "IntSurf_PathPoint", 
+          "return": {
+            "type": "IntSurf_PathPoint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntSurf_PathPoint::SetValue(gp_Pnt, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_PathPoint", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPoint::AddUV(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_PathPoint", 
+          "name": "AddUV", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPoint::SetDirections(gp_Vec, gp_Dir2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Vec", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Dir2d", 
+              "name": "D", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PathPoint", 
+          "name": "SetDirections", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPoint::SetTangency(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Tang", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_PathPoint", 
+          "name": "SetTangency", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPoint::SetPassing(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Pass", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_PathPoint", 
+          "name": "SetPassing", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPoint::Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_PathPoint", 
+          "name": "Value", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPoint::Value2d(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PathPoint", 
+          "name": "Value2d", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPoint::IsPassingPnt()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_PathPoint", 
+          "name": "IsPassingPnt", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPoint::IsTangent()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_PathPoint", 
+          "name": "IsTangent", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPoint::Direction3d()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_PathPoint", 
+          "name": "Direction3d", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPoint::Direction2d()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_PathPoint", 
+          "name": "Direction2d", 
+          "return": {
+            "type": "gp_Dir2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPoint::Multiplicity()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_PathPoint", 
+          "name": "Multiplicity", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPoint::Parameters(Standard_Integer, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PathPoint", 
+          "name": "Parameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntSurf_PathPoint.hxx", 
+        39
+      ], 
+      "key": "IntSurf_PathPoint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntSurf_Quadric", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntSurf_Quadric::IntSurf_Quadric()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntSurf_Quadric", 
+          "name": "IntSurf_Quadric", 
+          "return": {
+            "type": "IntSurf_Quadric", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::IntSurf_Quadric(gp_Pln)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pln", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "IntSurf_Quadric", 
+          "return": {
+            "type": "IntSurf_Quadric", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::IntSurf_Quadric(gp_Cylinder)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Cylinder", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "IntSurf_Quadric", 
+          "return": {
+            "type": "IntSurf_Quadric", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::IntSurf_Quadric(gp_Sphere)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Sphere", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "IntSurf_Quadric", 
+          "return": {
+            "type": "IntSurf_Quadric", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::IntSurf_Quadric(gp_Cone)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Cone", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "IntSurf_Quadric", 
+          "return": {
+            "type": "IntSurf_Quadric", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::IntSurf_Quadric(gp_Torus)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Torus", 
+              "name": "T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "IntSurf_Quadric", 
+          "return": {
+            "type": "IntSurf_Quadric", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::IntSurf_Quadric(IntSurf_Quadric)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntSurf_Quadric", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "IntSurf_Quadric", 
+          "return": {
+            "type": "IntSurf_Quadric", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::SetValue(gp_Pln)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pln", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::SetValue(gp_Cylinder)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Cylinder", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::SetValue(gp_Sphere)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Sphere", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::SetValue(gp_Cone)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Cone", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::SetValue(gp_Torus)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Torus", 
+              "name": "T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::Distance(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "Distance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::Gradient(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "Gradient", 
+          "return": {
+            "type": "gp_Vec"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::ValAndGrad(gp_Pnt, Standard_Real, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dist", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Grad", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "ValAndGrad", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::TypeQuadric()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_Quadric", 
+          "name": "TypeQuadric", 
+          "return": {
+            "type": "GeomAbs_SurfaceType"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::Plane()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_Quadric", 
+          "name": "Plane", 
+          "return": {
+            "type": "gp_Pln"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::Sphere()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_Quadric", 
+          "name": "Sphere", 
+          "return": {
+            "type": "gp_Sphere"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::Cylinder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_Quadric", 
+          "name": "Cylinder", 
+          "return": {
+            "type": "gp_Cylinder"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::Cone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_Quadric", 
+          "name": "Cone", 
+          "return": {
+            "type": "gp_Cone"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::Torus()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_Quadric", 
+          "name": "Torus", 
+          "return": {
+            "type": "gp_Torus"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::Value(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "Value", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::D1(Standard_Real, Standard_Real, gp_Pnt, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D1U", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D1V", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::DN(Standard_Real, Standard_Real, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Nu", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Nv", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "DN", 
+          "return": {
+            "type": "gp_Vec"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::Normale(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "Normale", 
+          "return": {
+            "type": "gp_Vec"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::Parameters(gp_Pnt, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "Parameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Quadric::Normale(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Quadric", 
+          "name": "Normale", 
+          "return": {
+            "type": "gp_Vec"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntSurf_Quadric.hxx", 
+        45
+      ], 
+      "key": "IntSurf_Quadric"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntSurf_InteriorPoint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntSurf_InteriorPoint::IntSurf_InteriorPoint()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntSurf_InteriorPoint", 
+          "name": "IntSurf_InteriorPoint", 
+          "return": {
+            "type": "IntSurf_InteriorPoint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_InteriorPoint::IntSurf_InteriorPoint(gp_Pnt, Standard_Real, Standard_Real, gp_Vec, gp_Vec2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Direc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "Direc2d", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_InteriorPoint", 
+          "name": "IntSurf_InteriorPoint", 
+          "return": {
+            "type": "IntSurf_InteriorPoint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_InteriorPoint::IntSurf_InteriorPoint(IntSurf_InteriorPoint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntSurf_InteriorPoint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_InteriorPoint", 
+          "name": "IntSurf_InteriorPoint", 
+          "return": {
+            "type": "IntSurf_InteriorPoint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntSurf_InteriorPoint::SetValue(gp_Pnt, Standard_Real, Standard_Real, gp_Vec, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Direc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "Direc2d", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_InteriorPoint", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_InteriorPoint::Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_InteriorPoint", 
+          "name": "Value", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_InteriorPoint::Parameters(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_InteriorPoint", 
+          "name": "Parameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_InteriorPoint::UParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_InteriorPoint", 
+          "name": "UParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_InteriorPoint::VParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_InteriorPoint", 
+          "name": "VParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_InteriorPoint::Direction()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_InteriorPoint", 
+          "name": "Direction", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_InteriorPoint::Direction2d()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_InteriorPoint", 
+          "name": "Direction2d", 
+          "return": {
+            "type": "gp_Vec2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntSurf_InteriorPoint.hxx", 
+        39
+      ], 
+      "key": "IntSurf_InteriorPoint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntSurf_Couple", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntSurf_Couple::IntSurf_Couple()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntSurf_Couple", 
+          "name": "IntSurf_Couple", 
+          "return": {
+            "type": "IntSurf_Couple", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Couple::IntSurf_Couple(Standard_Integer, Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index2", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_Couple", 
+          "name": "IntSurf_Couple", 
+          "return": {
+            "type": "IntSurf_Couple", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Couple::IntSurf_Couple(IntSurf_Couple)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntSurf_Couple", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_Couple", 
+          "name": "IntSurf_Couple", 
+          "return": {
+            "type": "IntSurf_Couple", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntSurf_Couple::First()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_Couple", 
+          "name": "First", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_Couple::Second()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_Couple", 
+          "name": "Second", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntSurf_Couple.hxx", 
+        28
+      ], 
+      "key": "IntSurf_Couple"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntSurf_LineOn2S", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntSurf_LineOn2S::IntSurf_LineOn2S(IntSurf_Allocator)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntSurf_Allocator", 
+              "name": "theAllocator", 
+              "default": "0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_LineOn2S", 
+          "name": "IntSurf_LineOn2S", 
+          "return": {
+            "type": "IntSurf_LineOn2S", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_LineOn2S::IntSurf_LineOn2S(IntSurf_LineOn2S)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntSurf_LineOn2S", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_LineOn2S", 
+          "name": "IntSurf_LineOn2S", 
+          "return": {
+            "type": "IntSurf_LineOn2S", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntSurf_LineOn2S::Add(IntSurf_PntOn2S)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_PntOn2S", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_LineOn2S", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_LineOn2S::NbPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_LineOn2S", 
+          "name": "NbPoints", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_LineOn2S::Value(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_LineOn2S", 
+          "name": "Value", 
+          "return": {
+            "type": "IntSurf_PntOn2S", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_LineOn2S::Reverse()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_LineOn2S", 
+          "name": "Reverse", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_LineOn2S::Split(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_LineOn2S", 
+          "name": "Split", 
+          "return": {
+            "type": "opencascade::handle<IntSurf_LineOn2S>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_LineOn2S::Value(Standard_Integer, IntSurf_PntOn2S)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "IntSurf_PntOn2S", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_LineOn2S", 
+          "name": "Value", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_LineOn2S::SetUV(Standard_Integer, Standard_Boolean, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "OnFirst", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_LineOn2S", 
+          "name": "SetUV", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_LineOn2S::Clear()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_LineOn2S", 
+          "name": "Clear", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_LineOn2S::InsertBefore(Standard_Integer, IntSurf_PntOn2S)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }, 
+            {
+              "type": "IntSurf_PntOn2S", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_LineOn2S", 
+          "name": "InsertBefore", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_LineOn2S::RemovePoint(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_LineOn2S", 
+          "name": "RemovePoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_LineOn2S::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_LineOn2S", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_LineOn2S::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_LineOn2S", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_LineOn2S::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntSurf_LineOn2S", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/IntSurf_LineOn2S.hxx", 
+        37
+      ], 
+      "key": "IntSurf_LineOn2S"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntSurf_PathPointTool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntSurf_PathPointTool::IntSurf_PathPointTool()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntSurf_PathPointTool", 
+          "name": "IntSurf_PathPointTool", 
+          "return": {
+            "type": "IntSurf_PathPointTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPointTool::IntSurf_PathPointTool(IntSurf_PathPointTool)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntSurf_PathPointTool", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PathPointTool", 
+          "name": "IntSurf_PathPointTool", 
+          "return": {
+            "type": "IntSurf_PathPointTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntSurf_PathPointTool::Value3d(IntSurf_PathPoint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_PathPoint", 
+              "name": "PStart", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PathPointTool", 
+          "name": "Value3d", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPointTool::Value2d(IntSurf_PathPoint, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_PathPoint", 
+              "name": "PStart", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PathPointTool", 
+          "name": "Value2d", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPointTool::IsPassingPnt(IntSurf_PathPoint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_PathPoint", 
+              "name": "PStart", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PathPointTool", 
+          "name": "IsPassingPnt", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPointTool::IsTangent(IntSurf_PathPoint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_PathPoint", 
+              "name": "PStart", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PathPointTool", 
+          "name": "IsTangent", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPointTool::Direction3d(IntSurf_PathPoint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_PathPoint", 
+              "name": "PStart", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PathPointTool", 
+          "name": "Direction3d", 
+          "return": {
+            "type": "gp_Vec"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPointTool::Direction2d(IntSurf_PathPoint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_PathPoint", 
+              "name": "PStart", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PathPointTool", 
+          "name": "Direction2d", 
+          "return": {
+            "type": "gp_Dir2d"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPointTool::Multiplicity(IntSurf_PathPoint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_PathPoint", 
+              "name": "PStart", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PathPointTool", 
+          "name": "Multiplicity", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_PathPointTool::Parameters(IntSurf_PathPoint, Standard_Integer, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_PathPoint", 
+              "name": "PStart", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Mult", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_PathPointTool", 
+          "name": "Parameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntSurf_PathPointTool.hxx", 
+        36
+      ], 
+      "key": "IntSurf_PathPointTool"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntSurf_QuadricTool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntSurf_QuadricTool::IntSurf_QuadricTool()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntSurf_QuadricTool", 
+          "name": "IntSurf_QuadricTool", 
+          "return": {
+            "type": "IntSurf_QuadricTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_QuadricTool::IntSurf_QuadricTool(IntSurf_QuadricTool)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntSurf_QuadricTool", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_QuadricTool", 
+          "name": "IntSurf_QuadricTool", 
+          "return": {
+            "type": "IntSurf_QuadricTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntSurf_QuadricTool::Value(IntSurf_Quadric, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_Quadric", 
+              "name": "Quad", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Y", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Z", 
+              "const": true
+            }
+          ], 
+          "parent": "IntSurf_QuadricTool", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_QuadricTool::Gradient(IntSurf_Quadric, Standard_Real, Standard_Real, Standard_Real, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_Quadric", 
+              "name": "Quad", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Y", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Z", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_QuadricTool", 
+          "name": "Gradient", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_QuadricTool::ValueAndGradient(IntSurf_Quadric, Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_Quadric", 
+              "name": "Quad", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Y", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Z", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Val", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "Grad", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_QuadricTool", 
+          "name": "ValueAndGradient", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_QuadricTool::Tolerance(IntSurf_Quadric)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_Quadric", 
+              "name": "Quad", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_QuadricTool", 
+          "name": "Tolerance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntSurf_QuadricTool.hxx", 
+        33
+      ], 
+      "key": "IntSurf_QuadricTool"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntSurf_InteriorPointTool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntSurf_InteriorPointTool::IntSurf_InteriorPointTool()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntSurf_InteriorPointTool", 
+          "name": "IntSurf_InteriorPointTool", 
+          "return": {
+            "type": "IntSurf_InteriorPointTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_InteriorPointTool::IntSurf_InteriorPointTool(IntSurf_InteriorPointTool)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntSurf_InteriorPointTool", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_InteriorPointTool", 
+          "name": "IntSurf_InteriorPointTool", 
+          "return": {
+            "type": "IntSurf_InteriorPointTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntSurf_InteriorPointTool::Value3d(IntSurf_InteriorPoint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_InteriorPoint", 
+              "name": "PStart", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_InteriorPointTool", 
+          "name": "Value3d", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_InteriorPointTool::Value2d(IntSurf_InteriorPoint, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_InteriorPoint", 
+              "name": "PStart", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_InteriorPointTool", 
+          "name": "Value2d", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_InteriorPointTool::Direction3d(IntSurf_InteriorPoint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_InteriorPoint", 
+              "name": "PStart", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_InteriorPointTool", 
+          "name": "Direction3d", 
+          "return": {
+            "type": "gp_Vec"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "IntSurf_InteriorPointTool::Direction2d(IntSurf_InteriorPoint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntSurf_InteriorPoint", 
+              "name": "PStart", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntSurf_InteriorPointTool", 
+          "name": "Direction2d", 
+          "return": {
+            "type": "gp_Dir2d"
+          }, 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntSurf_InteriorPointTool.hxx", 
+        34
+      ], 
+      "key": "IntSurf_InteriorPointTool"
+    }, 
+    {
+      "type": "NCollection_Sequence<IntSurf_PathPoint>", 
+      "declType": "typedef", 
+      "name": "IntSurf_SequenceOfPathPoint", 
+      "key": "IntSurf_SequenceOfPathPoint"
+    }, 
+    {
+      "type": "NCollection_List<IntSurf_PntOn2S>", 
+      "declType": "typedef", 
+      "name": "IntSurf_ListOfPntOn2S", 
+      "key": "IntSurf_ListOfPntOn2S"
+    }, 
+    {
+      "type": "NCollection_List<IntSurf_PntOn2S>::Iterator", 
+      "declType": "typedef", 
+      "name": "IntSurf_ListIteratorOfListOfPntOn2S", 
+      "key": "IntSurf_ListIteratorOfListOfPntOn2S"
+    }, 
+    {
+      "type": "NCollection_Sequence<IntSurf_InteriorPoint>", 
+      "declType": "typedef", 
+      "name": "IntSurf_SequenceOfInteriorPoint", 
+      "key": "IntSurf_SequenceOfInteriorPoint"
+    }, 
+    {
+      "type": "NCollection_Sequence<IntSurf_Couple>", 
+      "declType": "typedef", 
+      "name": "IntSurf_SequenceOfCouple", 
+      "key": "IntSurf_SequenceOfCouple"
+    }, 
+    {
+      "type": "NCollection_Sequence<IntSurf_PntOn2S>", 
+      "declType": "typedef", 
+      "name": "IntSurf_SequenceOfPntOn2S", 
+      "key": "IntSurf_SequenceOfPntOn2S"
+    }, 
+    {
+      "type": "opencascade::handle<NCollection_BaseAllocator>", 
+      "declType": "typedef", 
+      "name": "IntSurf_Allocator", 
+      "key": "IntSurf_Allocator"
+    }, 
+    {
+      "type": "opencascade::handle<IntSurf_LineOn2S>", 
+      "declType": "typedef", 
+      "name": "Handle_IntSurf_LineOn2S", 
+      "key": "Handle_IntSurf_LineOn2S"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "IntSurf_In", 
+          0
+        ], 
+        [
+          "IntSurf_Out", 
+          1
+        ], 
+        [
+          "IntSurf_Touch", 
+          2
+        ], 
+        [
+          "IntSurf_Undecided", 
+          3
+        ]
+      ], 
+      "name": "IntSurf_TypeTrans", 
+      "key": "IntSurf_TypeTrans"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "IntSurf_Inside", 
+          0
+        ], 
+        [
+          "IntSurf_Outside", 
+          1
+        ], 
+        [
+          "IntSurf_Unknown", 
+          2
+        ]
+      ], 
+      "name": "IntSurf_Situation", 
+      "key": "IntSurf_Situation"
+    }
+  ], 
+  "name": "IntSurf"
+}

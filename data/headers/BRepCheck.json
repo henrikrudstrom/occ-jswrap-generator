@@ -1,0 +1,1932 @@
+{
+  "headers": [
+    "BRepCheck_Vertex.hxx", 
+    "BRepCheck_Analyzer.hxx", 
+    "BRepCheck_Status.hxx", 
+    "BRepCheck_Shell.hxx", 
+    "BRepCheck_ListOfStatus.hxx", 
+    "BRepCheck_DataMapOfShapeListOfStatus.hxx", 
+    "BRepCheck_Result.hxx", 
+    "BRepCheck_ListIteratorOfListOfStatus.hxx", 
+    "BRepCheck_DataMapIteratorOfDataMapOfShapeResult.hxx", 
+    "BRepCheck_Solid.hxx", 
+    "BRepCheck_Face.hxx", 
+    "BRepCheck_Wire.hxx", 
+    "BRepCheck_DataMapOfShapeResult.hxx", 
+    "BRepCheck_DataMapIteratorOfDataMapOfShapeListOfStatus.hxx", 
+    "BRepCheck_Edge.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "BRepCheck_Result", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "BRepCheck_Result::Init(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Result", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Result::InContext(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "ContextShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Result", 
+          "name": "InContext", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepCheck_Result::Minimum()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Result", 
+          "name": "Minimum", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepCheck_Result::Blind()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Result", 
+          "name": "Blind", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepCheck_Result::SetFailStatus(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Result", 
+          "name": "SetFailStatus", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Result::Status()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Result", 
+          "name": "Status", 
+          "return": {
+            "type": "BRepCheck_ListOfStatus", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Result::IsMinimum()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Result", 
+          "name": "IsMinimum", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Result::IsBlind()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Result", 
+          "name": "IsBlind", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Result::StatusOnShape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Result", 
+          "name": "StatusOnShape", 
+          "return": {
+            "type": "BRepCheck_ListOfStatus", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Result::InitContextIterator()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Result", 
+          "name": "InitContextIterator", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Result::MoreShapeInContext()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Result", 
+          "name": "MoreShapeInContext", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Result::ContextualShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Result", 
+          "name": "ContextualShape", 
+          "return": {
+            "type": "TopoDS_Shape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Result::StatusOnShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Result", 
+          "name": "StatusOnShape", 
+          "return": {
+            "type": "BRepCheck_ListOfStatus", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Result::NextShapeInContext()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Result", 
+          "name": "NextShapeInContext", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Result::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Result", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Result::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Result", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Result::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Result", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepCheck_Result.hxx", 
+        37
+      ], 
+      "key": "BRepCheck_Result"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepCheck_Vertex", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepCheck_Vertex::BRepCheck_Vertex(TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Vertex", 
+          "name": "BRepCheck_Vertex", 
+          "return": {
+            "type": "BRepCheck_Vertex", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Vertex::BRepCheck_Vertex(BRepCheck_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepCheck_Vertex", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Vertex", 
+          "name": "BRepCheck_Vertex", 
+          "return": {
+            "type": "BRepCheck_Vertex", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepCheck_Vertex::InContext(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "ContextShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Vertex", 
+          "name": "InContext", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Vertex::Minimum()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Vertex", 
+          "name": "Minimum", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Vertex::Blind()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Vertex", 
+          "name": "Blind", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Vertex::Tolerance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Vertex", 
+          "name": "Tolerance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Vertex::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Vertex", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Vertex::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Vertex", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Vertex::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Vertex", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepCheck_Result"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepCheck_Vertex.hxx", 
+        33
+      ], 
+      "key": "BRepCheck_Vertex"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepCheck_Analyzer", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepCheck_Analyzer::BRepCheck_Analyzer(TopoDS_Shape, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "GeomControls", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Analyzer", 
+          "name": "BRepCheck_Analyzer", 
+          "return": {
+            "type": "BRepCheck_Analyzer", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Analyzer::BRepCheck_Analyzer(BRepCheck_Analyzer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepCheck_Analyzer", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Analyzer", 
+          "name": "BRepCheck_Analyzer", 
+          "return": {
+            "type": "BRepCheck_Analyzer", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepCheck_Analyzer::Init(TopoDS_Shape, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "GeomControls", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Analyzer", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Analyzer::IsValid(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Analyzer", 
+          "name": "IsValid", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Analyzer::IsValid()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Analyzer", 
+          "name": "IsValid", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Analyzer::Result(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "SubS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Analyzer", 
+          "name": "Result", 
+          "return": {
+            "type": "opencascade::handle<BRepCheck_Result>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepCheck_Analyzer.hxx", 
+        41
+      ], 
+      "key": "BRepCheck_Analyzer"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepCheck_Shell", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepCheck_Shell::BRepCheck_Shell(TopoDS_Shell)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shell", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Shell", 
+          "name": "BRepCheck_Shell", 
+          "return": {
+            "type": "BRepCheck_Shell", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Shell::BRepCheck_Shell(BRepCheck_Shell)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepCheck_Shell", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Shell", 
+          "name": "BRepCheck_Shell", 
+          "return": {
+            "type": "BRepCheck_Shell", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepCheck_Shell::InContext(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "ContextShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Shell", 
+          "name": "InContext", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Shell::Minimum()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Shell", 
+          "name": "Minimum", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Shell::Blind()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Shell", 
+          "name": "Blind", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Shell::Closed(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Update", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Shell", 
+          "name": "Closed", 
+          "return": {
+            "type": "BRepCheck_Status"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Shell::Orientation(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Update", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Shell", 
+          "name": "Orientation", 
+          "return": {
+            "type": "BRepCheck_Status"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Shell::SetUnorientable()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Shell", 
+          "name": "SetUnorientable", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Shell::IsUnorientable()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Shell", 
+          "name": "IsUnorientable", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Shell::NbConnectedSet(TopTools_ListOfShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopTools_ListOfShape", 
+              "name": "theSets", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Shell", 
+          "name": "NbConnectedSet", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Shell::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Shell", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Shell::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Shell", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Shell::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Shell", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepCheck_Result"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepCheck_Shell.hxx", 
+        37
+      ], 
+      "key": "BRepCheck_Shell"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepCheck_Solid", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepCheck_Solid::BRepCheck_Solid(TopoDS_Solid)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Solid", 
+              "name": "theS", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Solid", 
+          "name": "BRepCheck_Solid", 
+          "return": {
+            "type": "BRepCheck_Solid", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Solid::BRepCheck_Solid(BRepCheck_Solid)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepCheck_Solid", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Solid", 
+          "name": "BRepCheck_Solid", 
+          "return": {
+            "type": "BRepCheck_Solid", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepCheck_Solid::InContext(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "theContextShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Solid", 
+          "name": "InContext", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Solid::Minimum()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Solid", 
+          "name": "Minimum", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Solid::Blind()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Solid", 
+          "name": "Blind", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Solid::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Solid", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Solid::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Solid", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Solid::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Solid", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepCheck_Result"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepCheck_Solid.hxx", 
+        30
+      ], 
+      "key": "BRepCheck_Solid"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepCheck_Face", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepCheck_Face::BRepCheck_Face(TopoDS_Face)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Face", 
+          "name": "BRepCheck_Face", 
+          "return": {
+            "type": "BRepCheck_Face", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Face::BRepCheck_Face(BRepCheck_Face)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepCheck_Face", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Face", 
+          "name": "BRepCheck_Face", 
+          "return": {
+            "type": "BRepCheck_Face", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepCheck_Face::InContext(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "ContextShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Face", 
+          "name": "InContext", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Face::Minimum()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Face", 
+          "name": "Minimum", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Face::Blind()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Face", 
+          "name": "Blind", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Face::IntersectWires(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Update", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Face", 
+          "name": "IntersectWires", 
+          "return": {
+            "type": "BRepCheck_Status"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Face::ClassifyWires(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Update", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Face", 
+          "name": "ClassifyWires", 
+          "return": {
+            "type": "BRepCheck_Status"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Face::OrientationOfWires(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Update", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Face", 
+          "name": "OrientationOfWires", 
+          "return": {
+            "type": "BRepCheck_Status"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Face::SetUnorientable()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Face", 
+          "name": "SetUnorientable", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Face::SetStatus(BRepCheck_Status)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepCheck_Status", 
+              "name": "theStatus", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Face", 
+          "name": "SetStatus", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Face::IsUnorientable()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Face", 
+          "name": "IsUnorientable", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Face::GeometricControls()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Face", 
+          "name": "GeometricControls", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Face::GeometricControls(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "B", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Face", 
+          "name": "GeometricControls", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Face::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Face", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Face::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Face", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Face::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Face", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepCheck_Result"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepCheck_Face.hxx", 
+        35
+      ], 
+      "key": "BRepCheck_Face"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepCheck_Wire", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepCheck_Wire::BRepCheck_Wire(TopoDS_Wire)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Wire", 
+          "name": "BRepCheck_Wire", 
+          "return": {
+            "type": "BRepCheck_Wire", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Wire::BRepCheck_Wire(BRepCheck_Wire)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepCheck_Wire", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Wire", 
+          "name": "BRepCheck_Wire", 
+          "return": {
+            "type": "BRepCheck_Wire", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepCheck_Wire::InContext(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "ContextShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Wire", 
+          "name": "InContext", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Wire::Minimum()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Wire", 
+          "name": "Minimum", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Wire::Blind()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Wire", 
+          "name": "Blind", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Wire::Closed(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Update", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Wire", 
+          "name": "Closed", 
+          "return": {
+            "type": "BRepCheck_Status"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Wire::Closed2d(TopoDS_Face, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Update", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Wire", 
+          "name": "Closed2d", 
+          "return": {
+            "type": "BRepCheck_Status"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Wire::Orientation(TopoDS_Face, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Update", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Wire", 
+          "name": "Orientation", 
+          "return": {
+            "type": "BRepCheck_Status"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Wire::SelfIntersect(TopoDS_Face, TopoDS_Edge, TopoDS_Edge, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E1", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Update", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Wire", 
+          "name": "SelfIntersect", 
+          "return": {
+            "type": "BRepCheck_Status"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Wire::GeometricControls()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Wire", 
+          "name": "GeometricControls", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Wire::GeometricControls(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "B", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Wire", 
+          "name": "GeometricControls", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Wire::SetStatus(BRepCheck_Status)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepCheck_Status", 
+              "name": "theStatus", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Wire", 
+          "name": "SetStatus", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Wire::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Wire", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Wire::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Wire", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Wire::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Wire", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepCheck_Result"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepCheck_Wire.hxx", 
+        37
+      ], 
+      "key": "BRepCheck_Wire"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepCheck_Edge", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepCheck_Edge::BRepCheck_Edge(TopoDS_Edge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Edge", 
+          "name": "BRepCheck_Edge", 
+          "return": {
+            "type": "BRepCheck_Edge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Edge::BRepCheck_Edge(BRepCheck_Edge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepCheck_Edge", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Edge", 
+          "name": "BRepCheck_Edge", 
+          "return": {
+            "type": "BRepCheck_Edge", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepCheck_Edge::InContext(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "ContextShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Edge", 
+          "name": "InContext", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Edge::Minimum()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Edge", 
+          "name": "Minimum", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Edge::Blind()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Edge", 
+          "name": "Blind", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepCheck_Edge::GeometricControls()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Edge", 
+          "name": "GeometricControls", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Edge::GeometricControls(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "B", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Edge", 
+          "name": "GeometricControls", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Edge::Tolerance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Edge", 
+          "name": "Tolerance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Edge::SetStatus(BRepCheck_Status)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepCheck_Status", 
+              "name": "theStatus", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepCheck_Edge", 
+          "name": "SetStatus", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Edge::CheckPolygonOnTriangulation(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepCheck_Edge", 
+          "name": "CheckPolygonOnTriangulation", 
+          "return": {
+            "type": "BRepCheck_Status"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Edge::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Edge", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Edge::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Edge", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepCheck_Edge::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepCheck_Edge", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepCheck_Result"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepCheck_Edge.hxx", 
+        37
+      ], 
+      "key": "BRepCheck_Edge"
+    }, 
+    {
+      "type": "NCollection_List<BRepCheck_Status>", 
+      "declType": "typedef", 
+      "name": "BRepCheck_ListOfStatus", 
+      "key": "BRepCheck_ListOfStatus"
+    }, 
+    {
+      "type": "NCollection_List<BRepCheck_Status>::Iterator", 
+      "declType": "typedef", 
+      "name": "BRepCheck_ListIteratorOfListOfStatus", 
+      "key": "BRepCheck_ListIteratorOfListOfStatus"
+    }, 
+    {
+      "type": "NCollection_DataMap<TopoDS_Shape, NCollection_List<BRepCheck_Status>, TopTools_ShapeMapHasher>", 
+      "declType": "typedef", 
+      "name": "BRepCheck_DataMapOfShapeListOfStatus", 
+      "key": "BRepCheck_DataMapOfShapeListOfStatus"
+    }, 
+    {
+      "type": "NCollection_DataMap<TopoDS_Shape, NCollection_List<BRepCheck_Status>, TopTools_ShapeMapHasher>::Iterator", 
+      "declType": "typedef", 
+      "name": "BRepCheck_DataMapIteratorOfDataMapOfShapeListOfStatus", 
+      "key": "BRepCheck_DataMapIteratorOfDataMapOfShapeListOfStatus"
+    }, 
+    {
+      "type": "opencascade::handle<BRepCheck_Result>", 
+      "declType": "typedef", 
+      "name": "Handle_BRepCheck_Result", 
+      "key": "Handle_BRepCheck_Result"
+    }, 
+    {
+      "type": "opencascade::handle<BRepCheck_Vertex>", 
+      "declType": "typedef", 
+      "name": "Handle_BRepCheck_Vertex", 
+      "key": "Handle_BRepCheck_Vertex"
+    }, 
+    {
+      "type": "NCollection_DataMap<TopoDS_Shape, opencascade::handle<BRepCheck_Result>, TopTools_OrientedShapeMapHasher>", 
+      "declType": "typedef", 
+      "name": "BRepCheck_DataMapOfShapeResult", 
+      "key": "BRepCheck_DataMapOfShapeResult"
+    }, 
+    {
+      "type": "NCollection_DataMap<TopoDS_Shape, opencascade::handle<BRepCheck_Result>, TopTools_OrientedShapeMapHasher>::Iterator", 
+      "declType": "typedef", 
+      "name": "BRepCheck_DataMapIteratorOfDataMapOfShapeResult", 
+      "key": "BRepCheck_DataMapIteratorOfDataMapOfShapeResult"
+    }, 
+    {
+      "type": "opencascade::handle<BRepCheck_Shell>", 
+      "declType": "typedef", 
+      "name": "Handle_BRepCheck_Shell", 
+      "key": "Handle_BRepCheck_Shell"
+    }, 
+    {
+      "type": "opencascade::handle<BRepCheck_Solid>", 
+      "declType": "typedef", 
+      "name": "Handle_BRepCheck_Solid", 
+      "key": "Handle_BRepCheck_Solid"
+    }, 
+    {
+      "type": "opencascade::handle<BRepCheck_Face>", 
+      "declType": "typedef", 
+      "name": "Handle_BRepCheck_Face", 
+      "key": "Handle_BRepCheck_Face"
+    }, 
+    {
+      "type": "opencascade::handle<BRepCheck_Wire>", 
+      "declType": "typedef", 
+      "name": "Handle_BRepCheck_Wire", 
+      "key": "Handle_BRepCheck_Wire"
+    }, 
+    {
+      "type": "opencascade::handle<BRepCheck_Edge>", 
+      "declType": "typedef", 
+      "name": "Handle_BRepCheck_Edge", 
+      "key": "Handle_BRepCheck_Edge"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "BRepCheck_NoError", 
+          0
+        ], 
+        [
+          "BRepCheck_InvalidPointOnCurve", 
+          1
+        ], 
+        [
+          "BRepCheck_InvalidPointOnCurveOnSurface", 
+          2
+        ], 
+        [
+          "BRepCheck_InvalidPointOnSurface", 
+          3
+        ], 
+        [
+          "BRepCheck_No3DCurve", 
+          4
+        ], 
+        [
+          "BRepCheck_Multiple3DCurve", 
+          5
+        ], 
+        [
+          "BRepCheck_Invalid3DCurve", 
+          6
+        ], 
+        [
+          "BRepCheck_NoCurveOnSurface", 
+          7
+        ], 
+        [
+          "BRepCheck_InvalidCurveOnSurface", 
+          8
+        ], 
+        [
+          "BRepCheck_InvalidCurveOnClosedSurface", 
+          9
+        ], 
+        [
+          "BRepCheck_InvalidSameRangeFlag", 
+          10
+        ], 
+        [
+          "BRepCheck_InvalidSameParameterFlag", 
+          11
+        ], 
+        [
+          "BRepCheck_InvalidDegeneratedFlag", 
+          12
+        ], 
+        [
+          "BRepCheck_FreeEdge", 
+          13
+        ], 
+        [
+          "BRepCheck_InvalidMultiConnexity", 
+          14
+        ], 
+        [
+          "BRepCheck_InvalidRange", 
+          15
+        ], 
+        [
+          "BRepCheck_EmptyWire", 
+          16
+        ], 
+        [
+          "BRepCheck_RedundantEdge", 
+          17
+        ], 
+        [
+          "BRepCheck_SelfIntersectingWire", 
+          18
+        ], 
+        [
+          "BRepCheck_NoSurface", 
+          19
+        ], 
+        [
+          "BRepCheck_InvalidWire", 
+          20
+        ], 
+        [
+          "BRepCheck_RedundantWire", 
+          21
+        ], 
+        [
+          "BRepCheck_IntersectingWires", 
+          22
+        ], 
+        [
+          "BRepCheck_InvalidImbricationOfWires", 
+          23
+        ], 
+        [
+          "BRepCheck_EmptyShell", 
+          24
+        ], 
+        [
+          "BRepCheck_RedundantFace", 
+          25
+        ], 
+        [
+          "BRepCheck_InvalidImbricationOfShells", 
+          26
+        ], 
+        [
+          "BRepCheck_UnorientableShape", 
+          27
+        ], 
+        [
+          "BRepCheck_NotClosed", 
+          28
+        ], 
+        [
+          "BRepCheck_NotConnected", 
+          29
+        ], 
+        [
+          "BRepCheck_SubshapeNotInShape", 
+          30
+        ], 
+        [
+          "BRepCheck_BadOrientation", 
+          31
+        ], 
+        [
+          "BRepCheck_BadOrientationOfSubshape", 
+          32
+        ], 
+        [
+          "BRepCheck_InvalidPolygonOnTriangulation", 
+          33
+        ], 
+        [
+          "BRepCheck_InvalidToleranceValue", 
+          34
+        ], 
+        [
+          "BRepCheck_EnclosedRegion", 
+          35
+        ], 
+        [
+          "BRepCheck_CheckFail", 
+          36
+        ]
+      ], 
+      "name": "BRepCheck_Status", 
+      "key": "BRepCheck_Status"
+    }
+  ], 
+  "name": "BRepCheck"
+}

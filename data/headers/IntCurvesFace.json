@@ -1,0 +1,674 @@
+{
+  "headers": [
+    "IntCurvesFace_ShapeIntersector.hxx", 
+    "IntCurvesFace_Intersector.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "IntCurvesFace_ShapeIntersector", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurvesFace_ShapeIntersector::IntCurvesFace_ShapeIntersector()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "IntCurvesFace_ShapeIntersector", 
+          "return": {
+            "type": "IntCurvesFace_ShapeIntersector", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_ShapeIntersector::IntCurvesFace_ShapeIntersector(IntCurvesFace_ShapeIntersector)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurvesFace_ShapeIntersector", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "IntCurvesFace_ShapeIntersector", 
+          "return": {
+            "type": "IntCurvesFace_ShapeIntersector", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurvesFace_ShapeIntersector::Load(TopoDS_Shape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "Sh", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "Load", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_ShapeIntersector::Perform(gp_Lin, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PInf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PSup", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_ShapeIntersector::PerformNearest(gp_Lin, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PInf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PSup", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "PerformNearest", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_ShapeIntersector::Perform(opencascade::handle<Adaptor3d_HCurve>, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "HCu", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PInf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PSup", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_ShapeIntersector::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_ShapeIntersector::NbPnt()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "NbPnt", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_ShapeIntersector::UParameter(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "UParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_ShapeIntersector::VParameter(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "VParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_ShapeIntersector::WParameter(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "WParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_ShapeIntersector::Pnt(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "Pnt", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_ShapeIntersector::Transition(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "Transition", 
+          "return": {
+            "type": "IntCurveSurface_TransitionOnCurve"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_ShapeIntersector::State(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "State", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_ShapeIntersector::Face(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "Face", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_ShapeIntersector::SortResult()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "SortResult", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_ShapeIntersector::Destroy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurvesFace_ShapeIntersector", 
+          "name": "Destroy", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurvesFace_ShapeIntersector.hxx", 
+        41
+      ], 
+      "key": "IntCurvesFace_ShapeIntersector"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntCurvesFace_Intersector", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntCurvesFace_Intersector::IntCurvesFace_Intersector(TopoDS_Face, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "aTol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "aRestr", 
+              "default": "true", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "UseBToler", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "IntCurvesFace_Intersector", 
+          "return": {
+            "type": "IntCurvesFace_Intersector", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::IntCurvesFace_Intersector(IntCurvesFace_Intersector)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurvesFace_Intersector", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "IntCurvesFace_Intersector", 
+          "return": {
+            "type": "IntCurvesFace_Intersector", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::Perform(gp_Lin, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PInf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PSup", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::Perform(opencascade::handle<Adaptor3d_HCurve>, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "HCu", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PInf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PSup", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::SurfaceType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "SurfaceType", 
+          "return": {
+            "type": "GeomAbs_SurfaceType"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::NbPnt()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "NbPnt", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::UParameter(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "UParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::VParameter(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "VParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::WParameter(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "WParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::Pnt(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "Pnt", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::Transition(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "Transition", 
+          "return": {
+            "type": "IntCurveSurface_TransitionOnCurve"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::State(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "State", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::Face()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "Face", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::ClassifyUVPoint(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Puv", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "ClassifyUVPoint", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::Bounding()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "Bounding", 
+          "return": {
+            "type": "Bnd_Box"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::SetUseBoundToler(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "UseBToler"
+            }
+          ], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "SetUseBoundToler", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::GetUseBoundToler()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "GetUseBoundToler", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntCurvesFace_Intersector::Destroy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntCurvesFace_Intersector", 
+          "name": "Destroy", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntCurvesFace_Intersector.hxx", 
+        46
+      ], 
+      "key": "IntCurvesFace_Intersector"
+    }
+  ], 
+  "name": "IntCurvesFace"
+}

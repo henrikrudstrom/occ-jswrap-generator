@@ -1,0 +1,3789 @@
+{
+  "headers": [
+    "GeomPlate_SequenceOfAij.hxx", 
+    "GeomPlate_HArray1OfSequenceOfReal.hxx", 
+    "GeomPlate_BuildAveragePlane.hxx", 
+    "GeomPlate_HSequenceOfPointConstraint.hxx", 
+    "GeomPlate_SequenceOfCurveConstraint.hxx", 
+    "GeomPlate_Array1OfHCurveOnSurface.hxx", 
+    "GeomPlate_Array1OfSequenceOfReal.hxx", 
+    "GeomPlate_HArray1OfHCurveOnSurface.hxx", 
+    "GeomPlate_SequenceOfPointConstraint.hxx", 
+    "GeomPlate_CurveConstraint.hxx", 
+    "GeomPlate_MakeApprox.hxx", 
+    "GeomPlate_PointConstraint.hxx", 
+    "GeomPlate_Surface.hxx", 
+    "GeomPlate_Aij.hxx", 
+    "GeomPlate_BuildPlateSurface.hxx", 
+    "GeomPlate_HSequenceOfCurveConstraint.hxx", 
+    "GeomPlate_PlateG1Criterion.hxx", 
+    "GeomPlate_PlateG0Criterion.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "GeomPlate_BuildAveragePlane", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomPlate_BuildAveragePlane::GeomPlate_BuildAveragePlane(opencascade::handle<TColgp_HArray1OfPnt>, Standard_Integer, Standard_Real, Standard_Integer, Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<TColgp_HArray1OfPnt>", 
+              "name": "Pts", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbBoundPoints", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "POption", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NOption", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildAveragePlane", 
+          "name": "GeomPlate_BuildAveragePlane", 
+          "return": {
+            "type": "GeomPlate_BuildAveragePlane", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildAveragePlane::GeomPlate_BuildAveragePlane(TColgp_SequenceOfVec, opencascade::handle<TColgp_HArray1OfPnt>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColgp_SequenceOfVec", 
+              "name": "Normals", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<TColgp_HArray1OfPnt>", 
+              "name": "Pts", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildAveragePlane", 
+          "name": "GeomPlate_BuildAveragePlane", 
+          "return": {
+            "type": "GeomPlate_BuildAveragePlane", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildAveragePlane::GeomPlate_BuildAveragePlane(GeomPlate_BuildAveragePlane)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_BuildAveragePlane", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildAveragePlane", 
+          "name": "GeomPlate_BuildAveragePlane", 
+          "return": {
+            "type": "GeomPlate_BuildAveragePlane", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomPlate_BuildAveragePlane::Plane()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_BuildAveragePlane", 
+          "name": "Plane", 
+          "return": {
+            "type": "opencascade::handle<Geom_Plane>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildAveragePlane::Line()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_BuildAveragePlane", 
+          "name": "Line", 
+          "return": {
+            "type": "opencascade::handle<Geom_Line>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildAveragePlane::IsPlane()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_BuildAveragePlane", 
+          "name": "IsPlane", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildAveragePlane::IsLine()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_BuildAveragePlane", 
+          "name": "IsLine", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildAveragePlane::MinMaxBox(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Umin", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Umax", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Vmin", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Vmax", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildAveragePlane", 
+          "name": "MinMaxBox", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildAveragePlane::HalfSpace(TColgp_SequenceOfVec, TColgp_SequenceOfVec, GeomPlate_SequenceOfAij, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_SequenceOfVec", 
+              "name": "NewNormals", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_SequenceOfVec", 
+              "name": "Normals", 
+              "ref": true
+            }, 
+            {
+              "type": "GeomPlate_SequenceOfAij", 
+              "name": "Bset", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "LinTol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "AngTol", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildAveragePlane", 
+          "name": "HalfSpace", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomPlate_BuildAveragePlane.hxx", 
+        42
+      ], 
+      "key": "GeomPlate_BuildAveragePlane"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomPlate_Aij", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomPlate_Aij::GeomPlate_Aij()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "GeomPlate_Aij", 
+          "name": "GeomPlate_Aij", 
+          "return": {
+            "type": "GeomPlate_Aij", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_Aij::GeomPlate_Aij(Standard_Integer, Standard_Integer, gp_Vec)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "anInd1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "anInd2", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "aVec", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_Aij", 
+          "name": "GeomPlate_Aij", 
+          "return": {
+            "type": "GeomPlate_Aij", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_Aij::GeomPlate_Aij(GeomPlate_Aij)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_Aij", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_Aij", 
+          "name": "GeomPlate_Aij", 
+          "return": {
+            "type": "GeomPlate_Aij", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomPlate_Aij.hxx", 
+        31
+      ], 
+      "key": "GeomPlate_Aij"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomPlate_HArray1OfSequenceOfReal", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomPlate_HArray1OfSequenceOfReal::GeomPlate_HArray1OfSequenceOfReal(Standard_Integer, Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theLower", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "theUpper", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_HArray1OfSequenceOfReal", 
+          "name": "GeomPlate_HArray1OfSequenceOfReal", 
+          "return": {
+            "type": "GeomPlate_HArray1OfSequenceOfReal", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HArray1OfSequenceOfReal::GeomPlate_HArray1OfSequenceOfReal(Standard_Integer, Standard_Integer, NCollection_Array1<NCollection_Sequence<double> >::value_type)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theLower", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "theUpper", 
+              "const": true
+            }, 
+            {
+              "type": "NCollection_Array1<NCollection_Sequence<double> >::value_type", 
+              "name": "theValue", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_HArray1OfSequenceOfReal", 
+          "name": "GeomPlate_HArray1OfSequenceOfReal", 
+          "return": {
+            "type": "GeomPlate_HArray1OfSequenceOfReal", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HArray1OfSequenceOfReal::GeomPlate_HArray1OfSequenceOfReal(GeomPlate_Array1OfSequenceOfReal)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_Array1OfSequenceOfReal", 
+              "name": "theOther", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_HArray1OfSequenceOfReal", 
+          "name": "GeomPlate_HArray1OfSequenceOfReal", 
+          "return": {
+            "type": "GeomPlate_HArray1OfSequenceOfReal", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HArray1OfSequenceOfReal::GeomPlate_HArray1OfSequenceOfReal(GeomPlate_HArray1OfSequenceOfReal)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_HArray1OfSequenceOfReal", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_HArray1OfSequenceOfReal", 
+          "name": "GeomPlate_HArray1OfSequenceOfReal", 
+          "return": {
+            "type": "GeomPlate_HArray1OfSequenceOfReal", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomPlate_HArray1OfSequenceOfReal::Array1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HArray1OfSequenceOfReal", 
+          "name": "Array1", 
+          "return": {
+            "type": "GeomPlate_Array1OfSequenceOfReal", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HArray1OfSequenceOfReal::ChangeArray1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HArray1OfSequenceOfReal", 
+          "name": "ChangeArray1", 
+          "return": {
+            "type": "GeomPlate_Array1OfSequenceOfReal", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HArray1OfSequenceOfReal::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HArray1OfSequenceOfReal", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HArray1OfSequenceOfReal::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HArray1OfSequenceOfReal", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HArray1OfSequenceOfReal::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HArray1OfSequenceOfReal", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Array1<NCollection_Sequence<double> >"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomPlate_HArray1OfSequenceOfReal.hxx", 
+        24
+      ], 
+      "key": "GeomPlate_HArray1OfSequenceOfReal"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomPlate_PointConstraint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomPlate_PointConstraint::GeomPlate_PointConstraint(gp_Pnt, Standard_Integer, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Pt", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Order", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolDist", 
+              "default": "1.0E-4", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "GeomPlate_PointConstraint", 
+          "return": {
+            "type": "GeomPlate_PointConstraint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::GeomPlate_PointConstraint(Standard_Real, Standard_Real, opencascade::handle<Geom_Surface>, Standard_Integer, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surf", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Order", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolDist", 
+              "default": "1.0E-4", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolAng", 
+              "default": "0.01", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolCurv", 
+              "default": "0.10000000000000001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "GeomPlate_PointConstraint", 
+          "return": {
+            "type": "GeomPlate_PointConstraint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::GeomPlate_PointConstraint(GeomPlate_PointConstraint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_PointConstraint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "GeomPlate_PointConstraint", 
+          "return": {
+            "type": "GeomPlate_PointConstraint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::SetOrder(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Order", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "SetOrder", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::Order()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "Order", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::SetG0Criterion(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "TolDist", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "SetG0Criterion", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::SetG1Criterion(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "TolAng", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "SetG1Criterion", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::SetG2Criterion(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "TolCurv", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "SetG2Criterion", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::G0Criterion()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "G0Criterion", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::G1Criterion()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "G1Criterion", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::G2Criterion()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "G2Criterion", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::D0(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "D0", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::D1(gp_Pnt, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::D2(gp_Pnt, gp_Vec, gp_Vec, gp_Vec, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V2", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V3", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V4", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V5", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::HasPnt2dOnSurf()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "HasPnt2dOnSurf", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::SetPnt2dOnSurf(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Pnt", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "SetPnt2dOnSurf", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::Pnt2dOnSurf()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "Pnt2dOnSurf", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::LPropSurf()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "LPropSurf", 
+          "return": {
+            "type": "GeomLProp_SLProps", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PointConstraint::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_PointConstraint", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomPlate_PointConstraint.hxx", 
+        44
+      ], 
+      "key": "GeomPlate_PointConstraint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomPlate_HSequenceOfPointConstraint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomPlate_HSequenceOfPointConstraint::GeomPlate_HSequenceOfPointConstraint()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "GeomPlate_HSequenceOfPointConstraint", 
+          "name": "GeomPlate_HSequenceOfPointConstraint", 
+          "return": {
+            "type": "GeomPlate_HSequenceOfPointConstraint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfPointConstraint::GeomPlate_HSequenceOfPointConstraint(GeomPlate_SequenceOfPointConstraint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_SequenceOfPointConstraint", 
+              "name": "theOther", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_HSequenceOfPointConstraint", 
+          "name": "GeomPlate_HSequenceOfPointConstraint", 
+          "return": {
+            "type": "GeomPlate_HSequenceOfPointConstraint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfPointConstraint::GeomPlate_HSequenceOfPointConstraint(GeomPlate_HSequenceOfPointConstraint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_HSequenceOfPointConstraint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_HSequenceOfPointConstraint", 
+          "name": "GeomPlate_HSequenceOfPointConstraint", 
+          "return": {
+            "type": "GeomPlate_HSequenceOfPointConstraint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfPointConstraint::Sequence()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HSequenceOfPointConstraint", 
+          "name": "Sequence", 
+          "return": {
+            "type": "GeomPlate_SequenceOfPointConstraint", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfPointConstraint::Append(NCollection_Sequence<opencascade::handle<GeomPlate_PointConstraint> >::value_type)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "NCollection_Sequence<opencascade::handle<GeomPlate_PointConstraint> >::value_type", 
+              "name": "theItem", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_HSequenceOfPointConstraint", 
+          "name": "Append", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfPointConstraint::Append(GeomPlate_SequenceOfPointConstraint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GeomPlate_SequenceOfPointConstraint", 
+              "name": "theSequence", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_HSequenceOfPointConstraint", 
+          "name": "Append", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfPointConstraint::ChangeSequence()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HSequenceOfPointConstraint", 
+          "name": "ChangeSequence", 
+          "return": {
+            "type": "GeomPlate_SequenceOfPointConstraint", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfPointConstraint::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HSequenceOfPointConstraint", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfPointConstraint::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HSequenceOfPointConstraint", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfPointConstraint::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HSequenceOfPointConstraint", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Sequence<opencascade::handle<GeomPlate_PointConstraint> >"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomPlate_HSequenceOfPointConstraint.hxx", 
+        24
+      ], 
+      "key": "GeomPlate_HSequenceOfPointConstraint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomPlate_CurveConstraint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomPlate_CurveConstraint::GeomPlate_CurveConstraint()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "GeomPlate_CurveConstraint", 
+          "return": {
+            "type": "GeomPlate_CurveConstraint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::GeomPlate_CurveConstraint(opencascade::handle<Adaptor3d_HCurve>, Standard_Integer, Standard_Integer, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor3d_HCurve>", 
+              "name": "Boundary", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Order", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NPt", 
+              "default": "10", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolDist", 
+              "default": "1.0E-4", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolAng", 
+              "default": "0.01", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolCurv", 
+              "default": "0.10000000000000001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "GeomPlate_CurveConstraint", 
+          "return": {
+            "type": "GeomPlate_CurveConstraint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::GeomPlate_CurveConstraint(GeomPlate_CurveConstraint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_CurveConstraint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "GeomPlate_CurveConstraint", 
+          "return": {
+            "type": "GeomPlate_CurveConstraint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::SetOrder(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Order", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "SetOrder", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::Order()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "Order", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::NbPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "NbPoints", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::SetNbPoints(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "NewNb", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "SetNbPoints", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::SetG0Criterion(opencascade::handle<Law_Function>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Law_Function>", 
+              "name": "G0Crit", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "SetG0Criterion", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::SetG1Criterion(opencascade::handle<Law_Function>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Law_Function>", 
+              "name": "G1Crit", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "SetG1Criterion", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::SetG2Criterion(opencascade::handle<Law_Function>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Law_Function>", 
+              "name": "G2Crit", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "SetG2Criterion", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::G0Criterion(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "G0Criterion", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::G1Criterion(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "G1Criterion", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::G2Criterion(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "G2Criterion", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::FirstParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::LastParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::Length()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "Length", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::LPropSurf(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "LPropSurf", 
+          "return": {
+            "type": "GeomLProp_SLProps", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::D0(Standard_Real, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "D0", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::D1(Standard_Real, gp_Pnt, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::D2(Standard_Real, gp_Pnt, gp_Vec, gp_Vec, gp_Vec, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V2", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V3", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V4", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V5", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::Curve3d()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "Curve3d", 
+          "return": {
+            "type": "opencascade::handle<Adaptor3d_HCurve>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::SetCurve2dOnSurf(opencascade::handle<Geom2d_Curve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Curve2d", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "SetCurve2dOnSurf", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::Curve2dOnSurf()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "Curve2dOnSurf", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::SetProjectedCurve(opencascade::handle<Adaptor2d_HCurve2d>, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Adaptor2d_HCurve2d>", 
+              "name": "Curve2d", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolU", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolV", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "SetProjectedCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::ProjectedCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "ProjectedCurve", 
+          "return": {
+            "type": "opencascade::handle<Adaptor2d_HCurve2d>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_CurveConstraint::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_CurveConstraint", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomPlate_CurveConstraint.hxx", 
+        44
+      ], 
+      "key": "GeomPlate_CurveConstraint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomPlate_HArray1OfHCurveOnSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomPlate_HArray1OfHCurveOnSurface::GeomPlate_HArray1OfHCurveOnSurface(Standard_Integer, Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theLower", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "theUpper", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_HArray1OfHCurveOnSurface", 
+          "name": "GeomPlate_HArray1OfHCurveOnSurface", 
+          "return": {
+            "type": "GeomPlate_HArray1OfHCurveOnSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HArray1OfHCurveOnSurface::GeomPlate_HArray1OfHCurveOnSurface(Standard_Integer, Standard_Integer, NCollection_Array1<opencascade::handle<Adaptor3d_HCurveOnSurface> >::value_type)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theLower", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "theUpper", 
+              "const": true
+            }, 
+            {
+              "type": "NCollection_Array1<opencascade::handle<Adaptor3d_HCurveOnSurface> >::value_type", 
+              "name": "theValue", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_HArray1OfHCurveOnSurface", 
+          "name": "GeomPlate_HArray1OfHCurveOnSurface", 
+          "return": {
+            "type": "GeomPlate_HArray1OfHCurveOnSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HArray1OfHCurveOnSurface::GeomPlate_HArray1OfHCurveOnSurface(GeomPlate_Array1OfHCurveOnSurface)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_Array1OfHCurveOnSurface", 
+              "name": "theOther", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_HArray1OfHCurveOnSurface", 
+          "name": "GeomPlate_HArray1OfHCurveOnSurface", 
+          "return": {
+            "type": "GeomPlate_HArray1OfHCurveOnSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HArray1OfHCurveOnSurface::GeomPlate_HArray1OfHCurveOnSurface(GeomPlate_HArray1OfHCurveOnSurface)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_HArray1OfHCurveOnSurface", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_HArray1OfHCurveOnSurface", 
+          "name": "GeomPlate_HArray1OfHCurveOnSurface", 
+          "return": {
+            "type": "GeomPlate_HArray1OfHCurveOnSurface", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomPlate_HArray1OfHCurveOnSurface::Array1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HArray1OfHCurveOnSurface", 
+          "name": "Array1", 
+          "return": {
+            "type": "GeomPlate_Array1OfHCurveOnSurface", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HArray1OfHCurveOnSurface::ChangeArray1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HArray1OfHCurveOnSurface", 
+          "name": "ChangeArray1", 
+          "return": {
+            "type": "GeomPlate_Array1OfHCurveOnSurface", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HArray1OfHCurveOnSurface::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HArray1OfHCurveOnSurface", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HArray1OfHCurveOnSurface::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HArray1OfHCurveOnSurface", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HArray1OfHCurveOnSurface::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HArray1OfHCurveOnSurface", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Array1<opencascade::handle<Adaptor3d_HCurveOnSurface> >"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomPlate_HArray1OfHCurveOnSurface.hxx", 
+        24
+      ], 
+      "key": "GeomPlate_HArray1OfHCurveOnSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomPlate_Surface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomPlate_Surface::GeomPlate_Surface(opencascade::handle<Geom_Surface>, Plate_Plate)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surfinit", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Plate_Plate", 
+              "name": "Surfinter", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "GeomPlate_Surface", 
+          "return": {
+            "type": "GeomPlate_Surface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_Surface::GeomPlate_Surface(GeomPlate_Surface)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_Surface", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "GeomPlate_Surface", 
+          "return": {
+            "type": "GeomPlate_Surface", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomPlate_Surface::UReverse()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_Surface", 
+          "name": "UReverse", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::UReversedParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "UReversedParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::VReverse()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_Surface", 
+          "name": "VReverse", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::VReversedParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "VReversedParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::TransformParameters(Standard_Real, Standard_Real, gp_Trsf)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Trsf", 
+              "name": "T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "TransformParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::ParametricTransformation(gp_Trsf)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Trsf", 
+              "name": "T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "ParametricTransformation", 
+          "return": {
+            "type": "gp_GTrsf2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::Bounds(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "Bounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::IsUClosed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_Surface", 
+          "name": "IsUClosed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::IsVClosed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_Surface", 
+          "name": "IsVClosed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::IsUPeriodic()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_Surface", 
+          "name": "IsUPeriodic", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::UPeriod()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_Surface", 
+          "name": "UPeriod", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::IsVPeriodic()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_Surface", 
+          "name": "IsVPeriodic", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::VPeriod()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_Surface", 
+          "name": "VPeriod", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::UIso(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "UIso", 
+          "return": {
+            "type": "opencascade::handle<Geom_Curve>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::VIso(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "VIso", 
+          "return": {
+            "type": "opencascade::handle<Geom_Curve>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::Continuity()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_Surface", 
+          "name": "Continuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::IsCNu(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "IsCNu", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::IsCNv(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "IsCNv", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::D0(Standard_Real, Standard_Real, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "D0", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::D1(Standard_Real, Standard_Real, gp_Pnt, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D1U", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D1V", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::D2(Standard_Real, Standard_Real, gp_Pnt, gp_Vec, gp_Vec, gp_Vec, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D1U", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D1V", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D2U", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D2V", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D2UV", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::D3(Standard_Real, Standard_Real, gp_Pnt, gp_Vec, gp_Vec, gp_Vec, gp_Vec, gp_Vec, gp_Vec, gp_Vec, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D1U", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D1V", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D2U", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D2V", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D2UV", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D3U", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D3V", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D3UUV", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "D3UVV", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "D3", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::DN(Standard_Real, Standard_Real, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Nu", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Nv", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "DN", 
+          "return": {
+            "type": "gp_Vec"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::Copy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_Surface", 
+          "name": "Copy", 
+          "return": {
+            "type": "opencascade::handle<Geom_Geometry>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::Transform(gp_Trsf)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Trsf", 
+              "name": "T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "Transform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_Surface::CallSurfinit()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_Surface", 
+          "name": "CallSurfinit", 
+          "return": {
+            "type": "opencascade::handle<Geom_Surface>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_Surface::SetBounds(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Umax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Vmin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Vmax", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "SetBounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_Surface::RealBounds(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "RealBounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_Surface::Constraints(TColgp_SequenceOfXY)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_SequenceOfXY", 
+              "name": "Seq", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_Surface", 
+          "name": "Constraints", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_Surface::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_Surface", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_Surface::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_Surface", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_Surface::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_Surface", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Geom_Surface"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomPlate_Surface.hxx", 
+        56
+      ], 
+      "key": "GeomPlate_Surface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomPlate_MakeApprox", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomPlate_MakeApprox::GeomPlate_MakeApprox(opencascade::handle<GeomPlate_Surface>, AdvApp2Var_Criterion, Standard_Real, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<GeomPlate_Surface>", 
+              "name": "SurfPlate", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "AdvApp2Var_Criterion", 
+              "name": "PlateCrit", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3d", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Nbmax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "dgmax", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EnlargeCoeff", 
+              "default": "1.1000000000000001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_MakeApprox", 
+          "name": "GeomPlate_MakeApprox", 
+          "return": {
+            "type": "GeomPlate_MakeApprox", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_MakeApprox::GeomPlate_MakeApprox(opencascade::handle<GeomPlate_Surface>, Standard_Real, Standard_Integer, Standard_Integer, Standard_Real, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<GeomPlate_Surface>", 
+              "name": "SurfPlate", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3d", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Nbmax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "dgmax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dmax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "CritOrder", 
+              "default": "0", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EnlargeCoeff", 
+              "default": "1.1000000000000001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_MakeApprox", 
+          "name": "GeomPlate_MakeApprox", 
+          "return": {
+            "type": "GeomPlate_MakeApprox", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_MakeApprox::GeomPlate_MakeApprox(GeomPlate_MakeApprox)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_MakeApprox", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_MakeApprox", 
+          "name": "GeomPlate_MakeApprox", 
+          "return": {
+            "type": "GeomPlate_MakeApprox", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomPlate_MakeApprox::Surface()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_MakeApprox", 
+          "name": "Surface", 
+          "return": {
+            "type": "opencascade::handle<Geom_BSplineSurface>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_MakeApprox::ApproxError()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_MakeApprox", 
+          "name": "ApproxError", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_MakeApprox::CriterionError()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_MakeApprox", 
+          "name": "CriterionError", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomPlate_MakeApprox.hxx", 
+        34
+      ], 
+      "key": "GeomPlate_MakeApprox"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomPlate_HSequenceOfCurveConstraint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomPlate_HSequenceOfCurveConstraint::GeomPlate_HSequenceOfCurveConstraint()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "GeomPlate_HSequenceOfCurveConstraint", 
+          "name": "GeomPlate_HSequenceOfCurveConstraint", 
+          "return": {
+            "type": "GeomPlate_HSequenceOfCurveConstraint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfCurveConstraint::GeomPlate_HSequenceOfCurveConstraint(GeomPlate_SequenceOfCurveConstraint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_SequenceOfCurveConstraint", 
+              "name": "theOther", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_HSequenceOfCurveConstraint", 
+          "name": "GeomPlate_HSequenceOfCurveConstraint", 
+          "return": {
+            "type": "GeomPlate_HSequenceOfCurveConstraint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfCurveConstraint::GeomPlate_HSequenceOfCurveConstraint(GeomPlate_HSequenceOfCurveConstraint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_HSequenceOfCurveConstraint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_HSequenceOfCurveConstraint", 
+          "name": "GeomPlate_HSequenceOfCurveConstraint", 
+          "return": {
+            "type": "GeomPlate_HSequenceOfCurveConstraint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfCurveConstraint::Sequence()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HSequenceOfCurveConstraint", 
+          "name": "Sequence", 
+          "return": {
+            "type": "GeomPlate_SequenceOfCurveConstraint", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfCurveConstraint::Append(NCollection_Sequence<opencascade::handle<GeomPlate_CurveConstraint> >::value_type)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "NCollection_Sequence<opencascade::handle<GeomPlate_CurveConstraint> >::value_type", 
+              "name": "theItem", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_HSequenceOfCurveConstraint", 
+          "name": "Append", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfCurveConstraint::Append(GeomPlate_SequenceOfCurveConstraint)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GeomPlate_SequenceOfCurveConstraint", 
+              "name": "theSequence", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_HSequenceOfCurveConstraint", 
+          "name": "Append", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfCurveConstraint::ChangeSequence()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HSequenceOfCurveConstraint", 
+          "name": "ChangeSequence", 
+          "return": {
+            "type": "GeomPlate_SequenceOfCurveConstraint", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfCurveConstraint::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HSequenceOfCurveConstraint", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfCurveConstraint::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HSequenceOfCurveConstraint", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_HSequenceOfCurveConstraint::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_HSequenceOfCurveConstraint", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Sequence<opencascade::handle<GeomPlate_CurveConstraint> >"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomPlate_HSequenceOfCurveConstraint.hxx", 
+        24
+      ], 
+      "key": "GeomPlate_HSequenceOfCurveConstraint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomPlate_BuildPlateSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomPlate_BuildPlateSurface::GeomPlate_BuildPlateSurface(opencascade::handle<TColStd_HArray1OfInteger>, opencascade::handle<GeomPlate_HArray1OfHCurveOnSurface>, opencascade::handle<TColStd_HArray1OfInteger>, Standard_Integer, Standard_Integer, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfInteger>", 
+              "name": "NPoints", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<GeomPlate_HArray1OfHCurveOnSurface>", 
+              "name": "TabCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfInteger>", 
+              "name": "Tang", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Degree", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbIter", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2d", 
+              "default": "1.0000000000000001E-5", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3d", 
+              "default": "1.0E-4", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolAng", 
+              "default": "0.01", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolCurv", 
+              "default": "0.10000000000000001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Anisotropie", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "GeomPlate_BuildPlateSurface", 
+          "return": {
+            "type": "GeomPlate_BuildPlateSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::GeomPlate_BuildPlateSurface(opencascade::handle<Geom_Surface>, Standard_Integer, Standard_Integer, Standard_Integer, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surf", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Degree", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbPtsOnCur", 
+              "default": "10", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbIter", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2d", 
+              "default": "1.0000000000000001E-5", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3d", 
+              "default": "1.0E-4", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolAng", 
+              "default": "0.01", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolCurv", 
+              "default": "0.10000000000000001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Anisotropie", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "GeomPlate_BuildPlateSurface", 
+          "return": {
+            "type": "GeomPlate_BuildPlateSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::GeomPlate_BuildPlateSurface(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Degree", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbPtsOnCur", 
+              "default": "10", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbIter", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2d", 
+              "default": "1.0000000000000001E-5", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3d", 
+              "default": "1.0E-4", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolAng", 
+              "default": "0.01", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolCurv", 
+              "default": "0.10000000000000001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Anisotropie", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "GeomPlate_BuildPlateSurface", 
+          "return": {
+            "type": "GeomPlate_BuildPlateSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::GeomPlate_BuildPlateSurface(GeomPlate_BuildPlateSurface)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_BuildPlateSurface", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "GeomPlate_BuildPlateSurface", 
+          "return": {
+            "type": "GeomPlate_BuildPlateSurface", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::Init()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::LoadInitSurface(opencascade::handle<Geom_Surface>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surf", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "LoadInitSurface", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::Add(opencascade::handle<GeomPlate_CurveConstraint>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<GeomPlate_CurveConstraint>", 
+              "name": "Cont", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::SetNbBounds(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "NbBounds", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "SetNbBounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::Add(opencascade::handle<GeomPlate_PointConstraint>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<GeomPlate_PointConstraint>", 
+              "name": "Cont", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::Perform()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::CurveConstraint(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "order", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "CurveConstraint", 
+          "return": {
+            "type": "opencascade::handle<GeomPlate_CurveConstraint>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::PointConstraint(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "order", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "PointConstraint", 
+          "return": {
+            "type": "opencascade::handle<GeomPlate_PointConstraint>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::Disc2dContour(Standard_Integer, TColgp_SequenceOfXY)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "nbp", 
+              "const": true
+            }, 
+            {
+              "type": "TColgp_SequenceOfXY", 
+              "name": "Seq2d", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "Disc2dContour", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::Disc3dContour(Standard_Integer, Standard_Integer, TColgp_SequenceOfXYZ)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "nbp", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "iordre", 
+              "const": true
+            }, 
+            {
+              "type": "TColgp_SequenceOfXYZ", 
+              "name": "Seq3d", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "Disc3dContour", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::Surface()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "Surface", 
+          "return": {
+            "type": "opencascade::handle<GeomPlate_Surface>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::SurfInit()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "SurfInit", 
+          "return": {
+            "type": "opencascade::handle<Geom_Surface>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::Sense()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "Sense", 
+          "return": {
+            "type": "opencascade::handle<TColStd_HArray1OfInteger>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::Curves2d()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "Curves2d", 
+          "return": {
+            "type": "opencascade::handle<TColGeom2d_HArray1OfCurve>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::Order()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "Order", 
+          "return": {
+            "type": "opencascade::handle<TColStd_HArray1OfInteger>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::G0Error()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "G0Error", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::G1Error()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "G1Error", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::G2Error()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "G2Error", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::G0Error(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "G0Error", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::G1Error(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "G1Error", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_BuildPlateSurface::G2Error(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_BuildPlateSurface", 
+          "name": "G2Error", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomPlate_BuildPlateSurface.hxx", 
+        61
+      ], 
+      "key": "GeomPlate_BuildPlateSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomPlate_PlateG1Criterion", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomPlate_PlateG1Criterion::GeomPlate_PlateG1Criterion(TColgp_SequenceOfXY, TColgp_SequenceOfXYZ, Standard_Real, AdvApp2Var_CriterionType, AdvApp2Var_CriterionRepartition)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColgp_SequenceOfXY", 
+              "name": "Data", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_SequenceOfXYZ", 
+              "name": "G1Data", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Maximum", 
+              "const": true
+            }, 
+            {
+              "type": "AdvApp2Var_CriterionType", 
+              "name": "Type", 
+              "default": "::AdvApp2Var_CriterionType::AdvApp2Var_Absolute", 
+              "const": true
+            }, 
+            {
+              "type": "AdvApp2Var_CriterionRepartition", 
+              "name": "Repart", 
+              "default": "::AdvApp2Var_CriterionRepartition::AdvApp2Var_Regular", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_PlateG1Criterion", 
+          "name": "GeomPlate_PlateG1Criterion", 
+          "return": {
+            "type": "GeomPlate_PlateG1Criterion", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PlateG1Criterion::GeomPlate_PlateG1Criterion(GeomPlate_PlateG1Criterion)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_PlateG1Criterion", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_PlateG1Criterion", 
+          "name": "GeomPlate_PlateG1Criterion", 
+          "return": {
+            "type": "GeomPlate_PlateG1Criterion", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomPlate_PlateG1Criterion::Value(AdvApp2Var_Patch, AdvApp2Var_Context)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "AdvApp2Var_Patch", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "AdvApp2Var_Context", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_PlateG1Criterion", 
+          "name": "Value", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_PlateG1Criterion::IsSatisfied(AdvApp2Var_Patch)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "AdvApp2Var_Patch", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_PlateG1Criterion", 
+          "name": "IsSatisfied", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "AdvApp2Var_Criterion"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomPlate_PlateG1Criterion.hxx", 
+        37
+      ], 
+      "key": "GeomPlate_PlateG1Criterion"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomPlate_PlateG0Criterion", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomPlate_PlateG0Criterion::GeomPlate_PlateG0Criterion(TColgp_SequenceOfXY, TColgp_SequenceOfXYZ, Standard_Real, AdvApp2Var_CriterionType, AdvApp2Var_CriterionRepartition)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColgp_SequenceOfXY", 
+              "name": "Data", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColgp_SequenceOfXYZ", 
+              "name": "G0Data", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Maximum", 
+              "const": true
+            }, 
+            {
+              "type": "AdvApp2Var_CriterionType", 
+              "name": "Type", 
+              "default": "::AdvApp2Var_CriterionType::AdvApp2Var_Absolute", 
+              "const": true
+            }, 
+            {
+              "type": "AdvApp2Var_CriterionRepartition", 
+              "name": "Repart", 
+              "default": "::AdvApp2Var_CriterionRepartition::AdvApp2Var_Regular", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomPlate_PlateG0Criterion", 
+          "name": "GeomPlate_PlateG0Criterion", 
+          "return": {
+            "type": "GeomPlate_PlateG0Criterion", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomPlate_PlateG0Criterion::GeomPlate_PlateG0Criterion(GeomPlate_PlateG0Criterion)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomPlate_PlateG0Criterion", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_PlateG0Criterion", 
+          "name": "GeomPlate_PlateG0Criterion", 
+          "return": {
+            "type": "GeomPlate_PlateG0Criterion", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomPlate_PlateG0Criterion::Value(AdvApp2Var_Patch, AdvApp2Var_Context)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "AdvApp2Var_Patch", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "AdvApp2Var_Context", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_PlateG0Criterion", 
+          "name": "Value", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GeomPlate_PlateG0Criterion::IsSatisfied(AdvApp2Var_Patch)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "AdvApp2Var_Patch", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomPlate_PlateG0Criterion", 
+          "name": "IsSatisfied", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "AdvApp2Var_Criterion"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GeomPlate_PlateG0Criterion.hxx", 
+        37
+      ], 
+      "key": "GeomPlate_PlateG0Criterion"
+    }, 
+    {
+      "type": "NCollection_Sequence<GeomPlate_Aij>", 
+      "declType": "typedef", 
+      "name": "GeomPlate_SequenceOfAij", 
+      "key": "GeomPlate_SequenceOfAij"
+    }, 
+    {
+      "type": "NCollection_Array1<NCollection_Sequence<double> >", 
+      "declType": "typedef", 
+      "name": "GeomPlate_Array1OfSequenceOfReal", 
+      "key": "GeomPlate_Array1OfSequenceOfReal"
+    }, 
+    {
+      "type": "opencascade::handle<GeomPlate_HArray1OfSequenceOfReal>", 
+      "declType": "typedef", 
+      "name": "Handle_GeomPlate_HArray1OfSequenceOfReal", 
+      "key": "Handle_GeomPlate_HArray1OfSequenceOfReal"
+    }, 
+    {
+      "type": "opencascade::handle<GeomPlate_PointConstraint>", 
+      "declType": "typedef", 
+      "name": "Handle_GeomPlate_PointConstraint", 
+      "key": "Handle_GeomPlate_PointConstraint"
+    }, 
+    {
+      "type": "NCollection_Sequence<opencascade::handle<GeomPlate_PointConstraint> >", 
+      "declType": "typedef", 
+      "name": "GeomPlate_SequenceOfPointConstraint", 
+      "key": "GeomPlate_SequenceOfPointConstraint"
+    }, 
+    {
+      "type": "opencascade::handle<GeomPlate_HSequenceOfPointConstraint>", 
+      "declType": "typedef", 
+      "name": "Handle_GeomPlate_HSequenceOfPointConstraint", 
+      "key": "Handle_GeomPlate_HSequenceOfPointConstraint"
+    }, 
+    {
+      "type": "opencascade::handle<GeomPlate_CurveConstraint>", 
+      "declType": "typedef", 
+      "name": "Handle_GeomPlate_CurveConstraint", 
+      "key": "Handle_GeomPlate_CurveConstraint"
+    }, 
+    {
+      "type": "NCollection_Sequence<opencascade::handle<GeomPlate_CurveConstraint> >", 
+      "declType": "typedef", 
+      "name": "GeomPlate_SequenceOfCurveConstraint", 
+      "key": "GeomPlate_SequenceOfCurveConstraint"
+    }, 
+    {
+      "type": "NCollection_Array1<opencascade::handle<Adaptor3d_HCurveOnSurface> >", 
+      "declType": "typedef", 
+      "name": "GeomPlate_Array1OfHCurveOnSurface", 
+      "key": "GeomPlate_Array1OfHCurveOnSurface"
+    }, 
+    {
+      "type": "opencascade::handle<GeomPlate_HArray1OfHCurveOnSurface>", 
+      "declType": "typedef", 
+      "name": "Handle_GeomPlate_HArray1OfHCurveOnSurface", 
+      "key": "Handle_GeomPlate_HArray1OfHCurveOnSurface"
+    }, 
+    {
+      "type": "opencascade::handle<GeomPlate_Surface>", 
+      "declType": "typedef", 
+      "name": "Handle_GeomPlate_Surface", 
+      "key": "Handle_GeomPlate_Surface"
+    }, 
+    {
+      "type": "opencascade::handle<GeomPlate_HSequenceOfCurveConstraint>", 
+      "declType": "typedef", 
+      "name": "Handle_GeomPlate_HSequenceOfCurveConstraint", 
+      "key": "Handle_GeomPlate_HSequenceOfCurveConstraint"
+    }
+  ], 
+  "name": "GeomPlate"
+}

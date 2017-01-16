@@ -1,0 +1,1376 @@
+{
+  "headers": [
+    "ChFi2d_ConstructionError.hxx", 
+    "ChFi2d_FilletAlgo.hxx", 
+    "ChFi2d_ChamferAPI.hxx", 
+    "ChFi2d_FilletAPI.hxx", 
+    "ChFi2d_AnaFilletAlgo.hxx", 
+    "ChFi2d_Builder.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "ChFi2d_FilletAlgo", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFi2d_FilletAlgo::ChFi2d_FilletAlgo()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFi2d_FilletAlgo", 
+          "name": "ChFi2d_FilletAlgo", 
+          "return": {
+            "type": "ChFi2d_FilletAlgo", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_FilletAlgo::ChFi2d_FilletAlgo(TopoDS_Wire, gp_Pln)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "theWire", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "thePlane", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_FilletAlgo", 
+          "name": "ChFi2d_FilletAlgo", 
+          "return": {
+            "type": "ChFi2d_FilletAlgo", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_FilletAlgo::ChFi2d_FilletAlgo(TopoDS_Edge, TopoDS_Edge, gp_Pln)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "thePlane", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_FilletAlgo", 
+          "name": "ChFi2d_FilletAlgo", 
+          "return": {
+            "type": "ChFi2d_FilletAlgo", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_FilletAlgo::ChFi2d_FilletAlgo(ChFi2d_FilletAlgo)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFi2d_FilletAlgo", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_FilletAlgo", 
+          "name": "ChFi2d_FilletAlgo", 
+          "return": {
+            "type": "ChFi2d_FilletAlgo", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFi2d_FilletAlgo::Init(TopoDS_Wire, gp_Pln)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "theWire", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "thePlane", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_FilletAlgo", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_FilletAlgo::Init(TopoDS_Edge, TopoDS_Edge, gp_Pln)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "thePlane", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_FilletAlgo", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_FilletAlgo::Perform(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theRadius", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi2d_FilletAlgo", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_FilletAlgo::NbResults(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "thePoint", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_FilletAlgo", 
+          "name": "NbResults", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_FilletAlgo::Result(gp_Pnt, TopoDS_Edge, TopoDS_Edge, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "thePoint", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge1", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "iSolution", 
+              "default": "-1", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi2d_FilletAlgo", 
+          "name": "Result", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ChFi2d_FilletAlgo.hxx", 
+        58
+      ], 
+      "key": "ChFi2d_FilletAlgo"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFi2d_ChamferAPI", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFi2d_ChamferAPI::ChFi2d_ChamferAPI()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFi2d_ChamferAPI", 
+          "name": "ChFi2d_ChamferAPI", 
+          "return": {
+            "type": "ChFi2d_ChamferAPI", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_ChamferAPI::ChFi2d_ChamferAPI(TopoDS_Wire)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "theWire", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_ChamferAPI", 
+          "name": "ChFi2d_ChamferAPI", 
+          "return": {
+            "type": "ChFi2d_ChamferAPI", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_ChamferAPI::ChFi2d_ChamferAPI(TopoDS_Edge, TopoDS_Edge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_ChamferAPI", 
+          "name": "ChFi2d_ChamferAPI", 
+          "return": {
+            "type": "ChFi2d_ChamferAPI", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_ChamferAPI::ChFi2d_ChamferAPI(ChFi2d_ChamferAPI)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFi2d_ChamferAPI", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_ChamferAPI", 
+          "name": "ChFi2d_ChamferAPI", 
+          "return": {
+            "type": "ChFi2d_ChamferAPI", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFi2d_ChamferAPI::Init(TopoDS_Wire)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "theWire", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_ChamferAPI", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_ChamferAPI::Init(TopoDS_Edge, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_ChamferAPI", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_ChamferAPI::Perform()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi2d_ChamferAPI", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_ChamferAPI::Result(TopoDS_Edge, TopoDS_Edge, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge1", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theLength1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theLength2", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi2d_ChamferAPI", 
+          "name": "Result", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ChFi2d_ChamferAPI.hxx", 
+        24
+      ], 
+      "key": "ChFi2d_ChamferAPI"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFi2d_AnaFilletAlgo", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFi2d_AnaFilletAlgo::ChFi2d_AnaFilletAlgo()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFi2d_AnaFilletAlgo", 
+          "name": "ChFi2d_AnaFilletAlgo", 
+          "return": {
+            "type": "ChFi2d_AnaFilletAlgo", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_AnaFilletAlgo::ChFi2d_AnaFilletAlgo(TopoDS_Wire, gp_Pln)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "theWire", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "thePlane", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_AnaFilletAlgo", 
+          "name": "ChFi2d_AnaFilletAlgo", 
+          "return": {
+            "type": "ChFi2d_AnaFilletAlgo", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_AnaFilletAlgo::ChFi2d_AnaFilletAlgo(TopoDS_Edge, TopoDS_Edge, gp_Pln)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "thePlane", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_AnaFilletAlgo", 
+          "name": "ChFi2d_AnaFilletAlgo", 
+          "return": {
+            "type": "ChFi2d_AnaFilletAlgo", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_AnaFilletAlgo::ChFi2d_AnaFilletAlgo(ChFi2d_AnaFilletAlgo)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFi2d_AnaFilletAlgo", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_AnaFilletAlgo", 
+          "name": "ChFi2d_AnaFilletAlgo", 
+          "return": {
+            "type": "ChFi2d_AnaFilletAlgo", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFi2d_AnaFilletAlgo::Init(TopoDS_Wire, gp_Pln)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "theWire", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "thePlane", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_AnaFilletAlgo", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_AnaFilletAlgo::Init(TopoDS_Edge, TopoDS_Edge, gp_Pln)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "thePlane", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_AnaFilletAlgo", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_AnaFilletAlgo::Perform(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "radius", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi2d_AnaFilletAlgo", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_AnaFilletAlgo::Result(TopoDS_Edge, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "e1", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "e2", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_AnaFilletAlgo", 
+          "name": "Result", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ChFi2d_AnaFilletAlgo.hxx", 
+        25
+      ], 
+      "key": "ChFi2d_AnaFilletAlgo"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFi2d_FilletAPI", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFi2d_FilletAPI::ChFi2d_FilletAPI()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFi2d_FilletAPI", 
+          "name": "ChFi2d_FilletAPI", 
+          "return": {
+            "type": "ChFi2d_FilletAPI", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_FilletAPI::ChFi2d_FilletAPI(TopoDS_Wire, gp_Pln)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "theWire", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "thePlane", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_FilletAPI", 
+          "name": "ChFi2d_FilletAPI", 
+          "return": {
+            "type": "ChFi2d_FilletAPI", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_FilletAPI::ChFi2d_FilletAPI(TopoDS_Edge, TopoDS_Edge, gp_Pln)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "thePlane", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_FilletAPI", 
+          "name": "ChFi2d_FilletAPI", 
+          "return": {
+            "type": "ChFi2d_FilletAPI", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_FilletAPI::ChFi2d_FilletAPI(ChFi2d_FilletAPI)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFi2d_FilletAPI", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_FilletAPI", 
+          "name": "ChFi2d_FilletAPI", 
+          "return": {
+            "type": "ChFi2d_FilletAPI", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFi2d_FilletAPI::Init(TopoDS_Wire, gp_Pln)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "theWire", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "thePlane", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_FilletAPI", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_FilletAPI::Init(TopoDS_Edge, TopoDS_Edge, gp_Pln)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "thePlane", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_FilletAPI", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_FilletAPI::Perform(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theRadius", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi2d_FilletAPI", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_FilletAPI::NbResults(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "thePoint", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_FilletAPI", 
+          "name": "NbResults", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_FilletAPI::Result(gp_Pnt, TopoDS_Edge, TopoDS_Edge, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "thePoint", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge1", 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "iSolution", 
+              "default": "-1", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi2d_FilletAPI", 
+          "name": "Result", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ChFi2d_FilletAPI.hxx", 
+        38
+      ], 
+      "key": "ChFi2d_FilletAPI"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFi2d_Builder", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFi2d_Builder::ChFi2d_Builder()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFi2d_Builder", 
+          "name": "ChFi2d_Builder", 
+          "return": {
+            "type": "ChFi2d_Builder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::ChFi2d_Builder(TopoDS_Face)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_Builder", 
+          "name": "ChFi2d_Builder", 
+          "return": {
+            "type": "ChFi2d_Builder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::ChFi2d_Builder(ChFi2d_Builder)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFi2d_Builder", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_Builder", 
+          "name": "ChFi2d_Builder", 
+          "return": {
+            "type": "ChFi2d_Builder", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::Init(TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_Builder", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::Init(TopoDS_Face, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "RefFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "ModFace", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_Builder", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::AddFillet(TopoDS_Vertex, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi2d_Builder", 
+          "name": "AddFillet", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::ModifyFillet(TopoDS_Edge, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "Fillet", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi2d_Builder", 
+          "name": "ModifyFillet", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::RemoveFillet(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "Fillet", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_Builder", 
+          "name": "RemoveFillet", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::AddChamfer(TopoDS_Edge, TopoDS_Edge, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D2", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi2d_Builder", 
+          "name": "AddChamfer", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::AddChamfer(TopoDS_Edge, TopoDS_Vertex, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Ang", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi2d_Builder", 
+          "name": "AddChamfer", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::ModifyChamfer(TopoDS_Edge, TopoDS_Edge, TopoDS_Edge, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "Chamfer", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D2", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi2d_Builder", 
+          "name": "ModifyChamfer", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::ModifyChamfer(TopoDS_Edge, TopoDS_Edge, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "Chamfer", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Ang", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFi2d_Builder", 
+          "name": "ModifyChamfer", 
+          "return": {
+            "type": "TopoDS_Edge"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::RemoveChamfer(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "Chamfer", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_Builder", 
+          "name": "RemoveChamfer", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::Result()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi2d_Builder", 
+          "name": "Result", 
+          "return": {
+            "type": "TopoDS_Face"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::IsModified(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_Builder", 
+          "name": "IsModified", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::FilletEdges()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi2d_Builder", 
+          "name": "FilletEdges", 
+          "return": {
+            "type": "TopTools_SequenceOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::NbFillet()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi2d_Builder", 
+          "name": "NbFillet", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::ChamferEdges()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi2d_Builder", 
+          "name": "ChamferEdges", 
+          "return": {
+            "type": "TopTools_SequenceOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::NbChamfer()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi2d_Builder", 
+          "name": "NbChamfer", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::HasDescendant(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_Builder", 
+          "name": "HasDescendant", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::DescendantEdge(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_Builder", 
+          "name": "DescendantEdge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::BasisEdge(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFi2d_Builder", 
+          "name": "BasisEdge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFi2d_Builder::Status()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFi2d_Builder", 
+          "name": "Status", 
+          "return": {
+            "type": "ChFi2d_ConstructionError"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ChFi2d_Builder.hxx", 
+        38
+      ], 
+      "key": "ChFi2d_Builder"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "ChFi2d_NotPlanar", 
+          0
+        ], 
+        [
+          "ChFi2d_NoFace", 
+          1
+        ], 
+        [
+          "ChFi2d_InitialisationError", 
+          2
+        ], 
+        [
+          "ChFi2d_ParametersError", 
+          3
+        ], 
+        [
+          "ChFi2d_Ready", 
+          4
+        ], 
+        [
+          "ChFi2d_IsDone", 
+          5
+        ], 
+        [
+          "ChFi2d_ComputationError", 
+          6
+        ], 
+        [
+          "ChFi2d_ConnexionError", 
+          7
+        ], 
+        [
+          "ChFi2d_TangencyError", 
+          8
+        ], 
+        [
+          "ChFi2d_FirstEdgeDegenerated", 
+          9
+        ], 
+        [
+          "ChFi2d_LastEdgeDegenerated", 
+          10
+        ], 
+        [
+          "ChFi2d_BothEdgesDegenerated", 
+          11
+        ], 
+        [
+          "ChFi2d_NotAuthorized", 
+          12
+        ]
+      ], 
+      "name": "ChFi2d_ConstructionError", 
+      "key": "ChFi2d_ConstructionError"
+    }
+  ], 
+  "name": "ChFi2d"
+}

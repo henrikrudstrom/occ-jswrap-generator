@@ -1,0 +1,3418 @@
+{
+  "headers": [
+    "BRepGProp_UFunction.hxx", 
+    "BRepGProp_Sinert.hxx", 
+    "BRepGProp_TFunction.hxx", 
+    "BRepGProp_Face.hxx", 
+    "BRepGProp_Domain.hxx", 
+    "BRepGProp_Vinert.hxx", 
+    "BRepGProp_VinertGK.hxx", 
+    "BRepGProp_Cinert.hxx", 
+    "BRepGProp_EdgeTool.hxx", 
+    "BRepGProp_Gauss.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "BRepGProp_Face", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepGProp_Face::BRepGProp_Face(Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsUseSpan", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "BRepGProp_Face", 
+          "return": {
+            "type": "BRepGProp_Face", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::BRepGProp_Face(TopoDS_Face, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsUseSpan", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "BRepGProp_Face", 
+          "return": {
+            "type": "BRepGProp_Face", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::BRepGProp_Face(BRepGProp_Face)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "BRepGProp_Face", 
+          "return": {
+            "type": "BRepGProp_Face", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepGProp_Face::Load(TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "Load", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::VIntegrationOrder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Face", 
+          "name": "VIntegrationOrder", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::NaturalRestriction()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Face", 
+          "name": "NaturalRestriction", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::GetFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Face", 
+          "name": "GetFace", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::Value2d(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "Value2d", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::SIntOrder(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "SIntOrder", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::SVIntSubs()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Face", 
+          "name": "SVIntSubs", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::SUIntSubs()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Face", 
+          "name": "SUIntSubs", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::UKnots(TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Knots", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "UKnots", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::VKnots(TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Knots", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "VKnots", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::LIntOrder(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "LIntOrder", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::LIntSubs()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Face", 
+          "name": "LIntSubs", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::LKnots(TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Knots", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "LKnots", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::UIntegrationOrder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Face", 
+          "name": "UIntegrationOrder", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::Bounds(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "Bounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::Normal(Standard_Real, Standard_Real, gp_Pnt, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "VNor", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "Normal", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::Load(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "Load", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::FirstParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Face", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::LastParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Face", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::IntegrationOrder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Face", 
+          "name": "IntegrationOrder", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::D12d(Standard_Real, gp_Pnt2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V1", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "D12d", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::Load(Standard_Boolean, GeomAbs_IsoType)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsFirstParam", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_IsoType", 
+              "name": "theIsoType", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "Load", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::GetUKnots(Standard_Real, Standard_Real, opencascade::handle<TColStd_HArray1OfReal>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theUMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theUMax", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "theUKnots", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "GetUKnots", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Face::GetTKnots(Standard_Real, Standard_Real, opencascade::handle<TColStd_HArray1OfReal>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theTMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTMax", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "theTKnots", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Face", 
+          "name": "GetTKnots", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepGProp_Face.hxx", 
+        42
+      ], 
+      "key": "BRepGProp_Face"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepGProp_UFunction", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepGProp_UFunction::BRepGProp_UFunction(BRepGProp_Face, gp_Pnt, Standard_Boolean, Standard_Address)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theVertex", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsByPoint", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Address", 
+              "name": "theCoeffs", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_UFunction", 
+          "name": "BRepGProp_UFunction", 
+          "return": {
+            "type": "BRepGProp_UFunction", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_UFunction::BRepGProp_UFunction(BRepGProp_UFunction)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_UFunction", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_UFunction", 
+          "name": "BRepGProp_UFunction", 
+          "return": {
+            "type": "BRepGProp_UFunction", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepGProp_UFunction::SetValueType(GProp_ValueType)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GProp_ValueType", 
+              "name": "theType", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_UFunction", 
+          "name": "SetValueType", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_UFunction::SetVParam(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theVParam", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_UFunction", 
+          "name": "SetVParam", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_UFunction::Value(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_UFunction", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_Function"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepGProp_UFunction.hxx", 
+        54
+      ], 
+      "key": "BRepGProp_UFunction"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepGProp_Domain", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepGProp_Domain::BRepGProp_Domain()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepGProp_Domain", 
+          "name": "BRepGProp_Domain", 
+          "return": {
+            "type": "BRepGProp_Domain", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Domain::BRepGProp_Domain(TopoDS_Face)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Domain", 
+          "name": "BRepGProp_Domain", 
+          "return": {
+            "type": "BRepGProp_Domain", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Domain::BRepGProp_Domain(BRepGProp_Domain)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Domain", 
+          "name": "BRepGProp_Domain", 
+          "return": {
+            "type": "BRepGProp_Domain", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepGProp_Domain::Init(TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Domain", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Domain::More()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Domain", 
+          "name": "More", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Domain::Init()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Domain", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Domain::Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Domain", 
+          "name": "Value", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Domain::Next()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Domain", 
+          "name": "Next", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepGProp_Domain.hxx", 
+        32
+      ], 
+      "key": "BRepGProp_Domain"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepGProp_Sinert", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepGProp_Sinert::BRepGProp_Sinert()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepGProp_Sinert", 
+          "name": "BRepGProp_Sinert", 
+          "return": {
+            "type": "BRepGProp_Sinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Sinert::BRepGProp_Sinert(BRepGProp_Face, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "SLocation", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Sinert", 
+          "name": "BRepGProp_Sinert", 
+          "return": {
+            "type": "BRepGProp_Sinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Sinert::BRepGProp_Sinert(BRepGProp_Face, BRepGProp_Domain, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "SLocation", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Sinert", 
+          "name": "BRepGProp_Sinert", 
+          "return": {
+            "type": "BRepGProp_Sinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Sinert::BRepGProp_Sinert(BRepGProp_Face, gp_Pnt, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "SLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Sinert", 
+          "name": "BRepGProp_Sinert", 
+          "return": {
+            "type": "BRepGProp_Sinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Sinert::BRepGProp_Sinert(BRepGProp_Face, BRepGProp_Domain, gp_Pnt, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "SLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Sinert", 
+          "name": "BRepGProp_Sinert", 
+          "return": {
+            "type": "BRepGProp_Sinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Sinert::BRepGProp_Sinert(BRepGProp_Sinert)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Sinert", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Sinert", 
+          "name": "BRepGProp_Sinert", 
+          "return": {
+            "type": "BRepGProp_Sinert", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepGProp_Sinert::SetLocation(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "SLocation", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Sinert", 
+          "name": "SetLocation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Sinert::Perform(BRepGProp_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Sinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Sinert::Perform(BRepGProp_Face, BRepGProp_Domain)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Sinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Sinert::Perform(BRepGProp_Face, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Sinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Sinert::Perform(BRepGProp_Face, BRepGProp_Domain, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Sinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Sinert::GetEpsilon()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Sinert", 
+          "name": "GetEpsilon", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GProp_GProps"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepGProp_Sinert.hxx", 
+        35
+      ], 
+      "key": "BRepGProp_Sinert"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepGProp_TFunction", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepGProp_TFunction::BRepGProp_TFunction(BRepGProp_Face, gp_Pnt, Standard_Boolean, Standard_Address, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theVertex", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsByPoint", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Address", 
+              "name": "theCoeffs", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theUMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_TFunction", 
+          "name": "BRepGProp_TFunction", 
+          "return": {
+            "type": "BRepGProp_TFunction", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_TFunction::BRepGProp_TFunction(BRepGProp_TFunction)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_TFunction", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_TFunction", 
+          "name": "BRepGProp_TFunction", 
+          "return": {
+            "type": "BRepGProp_TFunction", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepGProp_TFunction::Init()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_TFunction", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_TFunction::SetNbKronrodPoints(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theNbPoints", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_TFunction", 
+          "name": "SetNbKronrodPoints", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_TFunction::SetValueType(GProp_ValueType)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GProp_ValueType", 
+              "name": "aType", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_TFunction", 
+          "name": "SetValueType", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_TFunction::SetTolerance(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "aTol", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_TFunction", 
+          "name": "SetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_TFunction::ErrorReached()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_TFunction", 
+          "name": "ErrorReached", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_TFunction::AbsolutError()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_TFunction", 
+          "name": "AbsolutError", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_TFunction::Value(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_TFunction", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepGProp_TFunction::GetStateNumber()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_TFunction", 
+          "name": "GetStateNumber", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_Function"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepGProp_TFunction.hxx", 
+        39
+      ], 
+      "key": "BRepGProp_TFunction"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepGProp_Vinert", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepGProp_Vinert::BRepGProp_Vinert()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "BRepGProp_Vinert", 
+          "return": {
+            "type": "BRepGProp_Vinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::BRepGProp_Vinert(BRepGProp_Face, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "VLocation", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "BRepGProp_Vinert", 
+          "return": {
+            "type": "BRepGProp_Vinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::BRepGProp_Vinert(BRepGProp_Face, gp_Pnt, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "VLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "BRepGProp_Vinert", 
+          "return": {
+            "type": "BRepGProp_Vinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::BRepGProp_Vinert(BRepGProp_Face, gp_Pnt, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "O", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "VLocation", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "BRepGProp_Vinert", 
+          "return": {
+            "type": "BRepGProp_Vinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::BRepGProp_Vinert(BRepGProp_Face, gp_Pnt, gp_Pnt, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "O", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "VLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "BRepGProp_Vinert", 
+          "return": {
+            "type": "BRepGProp_Vinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::BRepGProp_Vinert(BRepGProp_Face, gp_Pln, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "VLocation", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "BRepGProp_Vinert", 
+          "return": {
+            "type": "BRepGProp_Vinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::BRepGProp_Vinert(BRepGProp_Face, gp_Pln, gp_Pnt, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "VLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "BRepGProp_Vinert", 
+          "return": {
+            "type": "BRepGProp_Vinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::BRepGProp_Vinert(BRepGProp_Face, BRepGProp_Domain, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "VLocation", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "BRepGProp_Vinert", 
+          "return": {
+            "type": "BRepGProp_Vinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::BRepGProp_Vinert(BRepGProp_Face, BRepGProp_Domain, gp_Pnt, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "VLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "BRepGProp_Vinert", 
+          "return": {
+            "type": "BRepGProp_Vinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::BRepGProp_Vinert(BRepGProp_Face, BRepGProp_Domain, gp_Pnt, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "O", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "VLocation", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "BRepGProp_Vinert", 
+          "return": {
+            "type": "BRepGProp_Vinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::BRepGProp_Vinert(BRepGProp_Face, BRepGProp_Domain, gp_Pnt, gp_Pnt, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "O", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "VLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "BRepGProp_Vinert", 
+          "return": {
+            "type": "BRepGProp_Vinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::BRepGProp_Vinert(BRepGProp_Face, BRepGProp_Domain, gp_Pln, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "VLocation", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "BRepGProp_Vinert", 
+          "return": {
+            "type": "BRepGProp_Vinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::BRepGProp_Vinert(BRepGProp_Face, BRepGProp_Domain, gp_Pln, gp_Pnt, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "VLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "BRepGProp_Vinert", 
+          "return": {
+            "type": "BRepGProp_Vinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::BRepGProp_Vinert(BRepGProp_Vinert)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Vinert", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "BRepGProp_Vinert", 
+          "return": {
+            "type": "BRepGProp_Vinert", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::SetLocation(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "VLocation", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "SetLocation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::Perform(BRepGProp_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::Perform(BRepGProp_Face, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::Perform(BRepGProp_Face, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "O", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::Perform(BRepGProp_Face, gp_Pnt, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "O", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::Perform(BRepGProp_Face, gp_Pln)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::Perform(BRepGProp_Face, gp_Pln, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::Perform(BRepGProp_Face, BRepGProp_Domain)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::Perform(BRepGProp_Face, BRepGProp_Domain, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::Perform(BRepGProp_Face, BRepGProp_Domain, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "O", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::Perform(BRepGProp_Face, BRepGProp_Domain, gp_Pnt, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "O", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::Perform(BRepGProp_Face, BRepGProp_Domain, gp_Pln)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::Perform(BRepGProp_Face, BRepGProp_Domain, gp_Pln, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "S", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "Pl", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Vinert::GetEpsilon()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Vinert", 
+          "name": "GetEpsilon", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GProp_GProps"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepGProp_Vinert.hxx", 
+        45
+      ], 
+      "key": "BRepGProp_Vinert"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepGProp_VinertGK", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepGProp_VinertGK::BRepGProp_VinertGK()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "BRepGProp_VinertGK", 
+          "return": {
+            "type": "BRepGProp_VinertGK", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_VinertGK::BRepGProp_VinertGK(BRepGProp_Face, gp_Pnt, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theCGFlag", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theIFlag", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "BRepGProp_VinertGK", 
+          "return": {
+            "type": "BRepGProp_VinertGK", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_VinertGK::BRepGProp_VinertGK(BRepGProp_Face, gp_Pnt, gp_Pnt, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "thePoint", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theCGFlag", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theIFlag", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "BRepGProp_VinertGK", 
+          "return": {
+            "type": "BRepGProp_VinertGK", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_VinertGK::BRepGProp_VinertGK(BRepGProp_Face, BRepGProp_Domain, gp_Pnt, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "theDomain", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theCGFlag", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theIFlag", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "BRepGProp_VinertGK", 
+          "return": {
+            "type": "BRepGProp_VinertGK", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_VinertGK::BRepGProp_VinertGK(BRepGProp_Face, BRepGProp_Domain, gp_Pnt, gp_Pnt, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "theDomain", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "thePoint", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theCGFlag", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theIFlag", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "BRepGProp_VinertGK", 
+          "return": {
+            "type": "BRepGProp_VinertGK", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_VinertGK::BRepGProp_VinertGK(BRepGProp_Face, gp_Pln, gp_Pnt, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "thePlane", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theCGFlag", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theIFlag", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "BRepGProp_VinertGK", 
+          "return": {
+            "type": "BRepGProp_VinertGK", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_VinertGK::BRepGProp_VinertGK(BRepGProp_Face, BRepGProp_Domain, gp_Pln, gp_Pnt, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "theDomain", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "thePlane", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theCGFlag", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theIFlag", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "BRepGProp_VinertGK", 
+          "return": {
+            "type": "BRepGProp_VinertGK", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_VinertGK::BRepGProp_VinertGK(BRepGProp_VinertGK)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_VinertGK", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "BRepGProp_VinertGK", 
+          "return": {
+            "type": "BRepGProp_VinertGK", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepGProp_VinertGK::SetLocation(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "theLocation", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "SetLocation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_VinertGK::Perform(BRepGProp_Face, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theCGFlag", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theIFlag", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_VinertGK::Perform(BRepGProp_Face, gp_Pnt, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "thePoint", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theCGFlag", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theIFlag", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_VinertGK::Perform(BRepGProp_Face, BRepGProp_Domain, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "theDomain", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theCGFlag", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theIFlag", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_VinertGK::Perform(BRepGProp_Face, BRepGProp_Domain, gp_Pnt, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "theDomain", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "thePoint", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theCGFlag", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theIFlag", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_VinertGK::Perform(BRepGProp_Face, gp_Pln, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "thePlane", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theCGFlag", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theIFlag", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_VinertGK::Perform(BRepGProp_Face, BRepGProp_Domain, gp_Pln, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "theDomain", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pln", 
+              "name": "thePlane", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theCGFlag", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theIFlag", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_VinertGK::GetErrorReached()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "GetErrorReached", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_VinertGK::GetAbsolutError()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_VinertGK", 
+          "name": "GetAbsolutError", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GProp_GProps"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepGProp_VinertGK.hxx", 
+        58
+      ], 
+      "key": "BRepGProp_VinertGK"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepGProp_Cinert", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepGProp_Cinert::BRepGProp_Cinert()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepGProp_Cinert", 
+          "name": "BRepGProp_Cinert", 
+          "return": {
+            "type": "BRepGProp_Cinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Cinert::BRepGProp_Cinert(BRepAdaptor_Curve, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepAdaptor_Curve", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "CLocation", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Cinert", 
+          "name": "BRepGProp_Cinert", 
+          "return": {
+            "type": "BRepGProp_Cinert", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Cinert::BRepGProp_Cinert(BRepGProp_Cinert)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Cinert", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Cinert", 
+          "name": "BRepGProp_Cinert", 
+          "return": {
+            "type": "BRepGProp_Cinert", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepGProp_Cinert::SetLocation(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "CLocation", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Cinert", 
+          "name": "SetLocation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Cinert::Perform(BRepAdaptor_Curve)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepAdaptor_Curve", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Cinert", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GProp_GProps"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepGProp_Cinert.hxx", 
+        36
+      ], 
+      "key": "BRepGProp_Cinert"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepGProp_EdgeTool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepGProp_EdgeTool::BRepGProp_EdgeTool()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepGProp_EdgeTool", 
+          "name": "BRepGProp_EdgeTool", 
+          "return": {
+            "type": "BRepGProp_EdgeTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_EdgeTool::BRepGProp_EdgeTool(BRepGProp_EdgeTool)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_EdgeTool", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_EdgeTool", 
+          "name": "BRepGProp_EdgeTool", 
+          "return": {
+            "type": "BRepGProp_EdgeTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepGProp_EdgeTool::FirstParameter(BRepAdaptor_Curve)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepAdaptor_Curve", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_EdgeTool", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_EdgeTool::LastParameter(BRepAdaptor_Curve)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepAdaptor_Curve", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_EdgeTool", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_EdgeTool::IntegrationOrder(BRepAdaptor_Curve)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepAdaptor_Curve", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_EdgeTool", 
+          "name": "IntegrationOrder", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_EdgeTool::Value(BRepAdaptor_Curve, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepAdaptor_Curve", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_EdgeTool", 
+          "name": "Value", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_EdgeTool::D1(BRepAdaptor_Curve, Standard_Real, gp_Pnt, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepAdaptor_Curve", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V1", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_EdgeTool", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_EdgeTool::NbIntervals(BRepAdaptor_Curve, GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepAdaptor_Curve", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_EdgeTool", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_EdgeTool::Intervals(BRepAdaptor_Curve, TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepAdaptor_Curve", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_EdgeTool", 
+          "name": "Intervals", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepGProp_EdgeTool.hxx", 
+        36
+      ], 
+      "key": "BRepGProp_EdgeTool"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepGProp_Gauss", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepGProp_Gauss::BRepGProp_Gauss(BRepGProp_Gauss::BRepGProp_GaussType)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Gauss::BRepGProp_GaussType", 
+              "name": "theType", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepGProp_Gauss", 
+          "name": "BRepGProp_Gauss", 
+          "return": {
+            "type": "BRepGProp_Gauss", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Gauss::Inertia()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepGProp_Gauss", 
+          "name": "Inertia", 
+          "return": {
+            "type": "BRepGProp_Gauss", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Gauss::Inertia(BRepGProp_Gauss::Inertia)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Gauss::Inertia", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Gauss", 
+          "name": "Inertia", 
+          "return": {
+            "type": "BRepGProp_Gauss", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepGProp_Gauss::Compute(BRepGProp_Face, gp_Pnt, Standard_Real, Standard_Boolean, Standard_Real, gp_Pnt, gp_Mat)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theCoeff", 
+              "const": true, 
+              "ptr": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theIsByPoint", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theOutMass", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theOutGravityCenter", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Mat", 
+              "name": "theOutInertia", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Gauss", 
+          "name": "Compute", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Gauss::Compute(BRepGProp_Face, gp_Pnt, Standard_Real, gp_Pnt, gp_Mat)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theOutMass", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theOutGravityCenter", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Mat", 
+              "name": "theOutInertia", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Gauss", 
+          "name": "Compute", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Gauss::Compute(BRepGProp_Face, BRepGProp_Domain, gp_Pnt, Standard_Real, Standard_Boolean, Standard_Real, gp_Pnt, gp_Mat)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "theDomain", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theCoeff", 
+              "const": true, 
+              "ptr": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theIsByPoint", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theOutMass", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theOutGravityCenter", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Mat", 
+              "name": "theOutInertia", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Gauss", 
+          "name": "Compute", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Gauss::Compute(BRepGProp_Face, BRepGProp_Domain, gp_Pnt, Standard_Real, gp_Pnt, gp_Mat)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "theDomain", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theOutMass", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theOutGravityCenter", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Mat", 
+              "name": "theOutInertia", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Gauss", 
+          "name": "Compute", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Gauss::Compute(BRepGProp_Face, BRepGProp_Domain, gp_Pnt, Standard_Real, Standard_Real, Standard_Boolean, Standard_Real, gp_Pnt, gp_Mat)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "theDomain", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theEps", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theCoeff", 
+              "const": true, 
+              "ptr": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theByPoint", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theOutMass", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theOutGravityCenter", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Mat", 
+              "name": "theOutInertia", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Gauss", 
+          "name": "Compute", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Gauss::Compute(BRepGProp_Face, BRepGProp_Domain, gp_Pnt, Standard_Real, Standard_Real, gp_Pnt, gp_Mat)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepGProp_Face", 
+              "name": "theSurface", 
+              "ref": true
+            }, 
+            {
+              "type": "BRepGProp_Domain", 
+              "name": "theDomain", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theLocation", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theEps", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theOutMass", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "theOutGravityCenter", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Mat", 
+              "name": "theOutInertia", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepGProp_Gauss", 
+          "name": "Compute", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepGProp_Gauss::Reset()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepGProp_Gauss", 
+          "name": "Reset", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepGProp_Gauss.hxx", 
+        25
+      ], 
+      "key": "BRepGProp_Gauss"
+    }, 
+    {
+      "type": "BRepGProp_Gauss::BRepGProp_GaussType", 
+      "declType": "typedef", 
+      "name": "BRepGProp_GaussType", 
+      "key": "BRepGProp_GaussType"
+    }, 
+    {
+      "type": "Standard_Real (*)( ::Standard_Real const,::Standard_Real const )", 
+      "declType": "typedef", 
+      "name": "BRepGProp_GaussFunc", 
+      "key": "BRepGProp_GaussFunc"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "Vinert", 
+          0
+        ], 
+        [
+          "Sinert", 
+          1
+        ]
+      ], 
+      "name": "BRepGProp_GaussType", 
+      "key": "BRepGProp_GaussType"
+    }
+  ], 
+  "name": "BRepGProp"
+}

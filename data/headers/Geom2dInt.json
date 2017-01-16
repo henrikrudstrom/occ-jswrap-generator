@@ -1,0 +1,4300 @@
+{
+  "headers": [
+    "Geom2dInt_TheIntPCurvePCurveOfGInter.hxx", 
+    "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter.hxx", 
+    "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter.hxx", 
+    "Geom2dInt_IntConicCurveOfGInter.hxx", 
+    "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter.hxx", 
+    "Geom2dInt_Geom2dCurveTool.hxx", 
+    "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter.hxx", 
+    "Geom2dInt_TheProjPCurOfGInter.hxx", 
+    "Geom2dInt_TheIntConicCurveOfGInter.hxx", 
+    "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter.hxx", 
+    "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter.hxx", 
+    "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter.hxx", 
+    "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter.hxx", 
+    "Geom2dInt_GInter.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Geom2dInt_Geom2dCurveTool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::Geom2dInt_Geom2dCurveTool()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "Geom2dInt_Geom2dCurveTool", 
+          "return": {
+            "type": "Geom2dInt_Geom2dCurveTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::Geom2dInt_Geom2dCurveTool(Geom2dInt_Geom2dCurveTool)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dInt_Geom2dCurveTool", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "Geom2dInt_Geom2dCurveTool", 
+          "return": {
+            "type": "Geom2dInt_Geom2dCurveTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::GetType(Adaptor2d_Curve2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "GetType", 
+          "return": {
+            "type": "GeomAbs_CurveType"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::IsComposite(Adaptor2d_Curve2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "IsComposite", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::Line(Adaptor2d_Curve2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "Line", 
+          "return": {
+            "type": "gp_Lin2d"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::Circle(Adaptor2d_Curve2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "Circle", 
+          "return": {
+            "type": "gp_Circ2d"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::Ellipse(Adaptor2d_Curve2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "Ellipse", 
+          "return": {
+            "type": "gp_Elips2d"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::Parabola(Adaptor2d_Curve2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "Parabola", 
+          "return": {
+            "type": "gp_Parab2d"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::Hyperbola(Adaptor2d_Curve2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "Hyperbola", 
+          "return": {
+            "type": "gp_Hypr2d"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::EpsX(Adaptor2d_Curve2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "EpsX", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::EpsX(Adaptor2d_Curve2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Eps_XYZ", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "EpsX", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::NbSamples(Adaptor2d_Curve2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "NbSamples", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::NbSamples(Adaptor2d_Curve2d, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "NbSamples", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::FirstParameter(Adaptor2d_Curve2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::LastParameter(Adaptor2d_Curve2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::Value(Adaptor2d_Curve2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "Value", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::D0(Adaptor2d_Curve2d, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "D0", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::D1(Adaptor2d_Curve2d, Standard_Real, gp_Pnt2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "T", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::D2(Adaptor2d_Curve2d, Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "N", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::D3(Adaptor2d_Curve2d, Standard_Real, gp_Pnt2d, gp_Vec2d, gp_Vec2d, gp_Vec2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "N", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec2d", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "D3", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::DN(Adaptor2d_Curve2d, Standard_Real, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "DN", 
+          "return": {
+            "type": "gp_Vec2d"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::NbIntervals(Adaptor2d_Curve2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::Intervals(Adaptor2d_Curve2d, TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Tab", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "Intervals", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::GetInterval(Adaptor2d_Curve2d, Standard_Integer, TColStd_Array1OfReal, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Tab", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "GetInterval", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_Geom2dCurveTool::Degree(Adaptor2d_Curve2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_Geom2dCurveTool", 
+          "name": "Degree", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dInt_Geom2dCurveTool.hxx", 
+        43
+      ], 
+      "key": "Geom2dInt_Geom2dCurveTool"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dInt_TheProjPCurOfGInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dInt_TheProjPCurOfGInter::Geom2dInt_TheProjPCurOfGInter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dInt_TheProjPCurOfGInter", 
+          "name": "Geom2dInt_TheProjPCurOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheProjPCurOfGInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheProjPCurOfGInter::Geom2dInt_TheProjPCurOfGInter(Geom2dInt_TheProjPCurOfGInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dInt_TheProjPCurOfGInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheProjPCurOfGInter", 
+          "name": "Geom2dInt_TheProjPCurOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheProjPCurOfGInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dInt_TheProjPCurOfGInter::FindParameter(Adaptor2d_Curve2d, gp_Pnt2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Pnt", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheProjPCurOfGInter", 
+          "name": "FindParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheProjPCurOfGInter::FindParameter(Adaptor2d_Curve2d, gp_Pnt2d, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Pnt", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "LowParameter", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "HighParameter", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheProjPCurOfGInter", 
+          "name": "FindParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dInt_TheProjPCurOfGInter.hxx", 
+        34
+      ], 
+      "key": "Geom2dInt_TheProjPCurOfGInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter::Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter(Adaptor2d_Curve2d, Standard_Integer, IntRes2d_Domain, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbPnt", 
+              "const": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "Domain", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "name": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter::Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter(Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "name": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter::ComputeWithBox(Adaptor2d_Curve2d, Bnd_Box2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Bnd_Box2d", 
+              "name": "OtherBox", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "name": "ComputeWithBox", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter::DeflectionOverEstimation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "name": "DeflectionOverEstimation", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter::SetDeflectionOverEstimation(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "x", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "name": "SetDeflectionOverEstimation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter::Closed(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "clos", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "name": "Closed", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter::Closed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "name": "Closed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter::NbSegments()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "name": "NbSegments", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter::Segment(Standard_Integer, gp_Pnt2d, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theIndex", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "theBegin", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "theEnd", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "name": "Segment", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter::InfParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "name": "InfParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter::SupParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "name": "SupParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter::AutoIntersectionIsPossible()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "name": "AutoIntersectionIsPossible", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter::ApproxParamOnCurve(Standard_Integer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParamOnLine", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "name": "ApproxParamOnCurve", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter::CalculRegion(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "x", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "y", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "x1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "x2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "y1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "y2", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "name": "CalculRegion", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter::Dump()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Intf_Polygon2d"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter.hxx", 
+        40
+      ], 
+      "key": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter::Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter(Adaptor2d_Curve2d, Adaptor2d_Curve2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "curve1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "curve2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter", 
+          "name": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter::Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter(Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter", 
+          "name": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter::NbVariables()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter", 
+          "name": "NbVariables", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter::NbEquations()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter", 
+          "name": "NbEquations", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter::Value(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter::Derivatives(math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter", 
+          "name": "Derivatives", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter::Values(math_Vector, math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionSetWithDerivatives"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter.hxx", 
+        35
+      ], 
+      "key": "Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter::Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter(Adaptor2d_Curve2d, Adaptor2d_Curve2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter", 
+          "name": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter::Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter(Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter", 
+          "name": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter::Perform(Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter, Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter, Standard_Integer, Standard_Integer, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+              "name": "Poly1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter", 
+              "name": "Poly2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NumSegOn1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NumSegOn2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParamOnSeg1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParamOnSeg2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter::Perform(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Uo", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Vo", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UInf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VInf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "USup", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VSup", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter::NbRoots()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter", 
+          "name": "NbRoots", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter::Roots(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter", 
+          "name": "Roots", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter::AnErrorOccurred()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter", 
+          "name": "AnErrorOccurred", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter.hxx", 
+        38
+      ], 
+      "key": "Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dInt_TheIntPCurvePCurveOfGInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dInt_TheIntPCurvePCurveOfGInter::Geom2dInt_TheIntPCurvePCurveOfGInter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dInt_TheIntPCurvePCurveOfGInter", 
+          "name": "Geom2dInt_TheIntPCurvePCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheIntPCurvePCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntPCurvePCurveOfGInter::Geom2dInt_TheIntPCurvePCurveOfGInter(Geom2dInt_TheIntPCurvePCurveOfGInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dInt_TheIntPCurvePCurveOfGInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntPCurvePCurveOfGInter", 
+          "name": "Geom2dInt_TheIntPCurvePCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheIntPCurvePCurveOfGInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntPCurvePCurveOfGInter::Perform(Adaptor2d_Curve2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "Curve1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "Domain1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "Curve2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "Domain2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntPCurvePCurveOfGInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntPCurvePCurveOfGInter::Perform(Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "Curve1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "Domain1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntPCurvePCurveOfGInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntPCurvePCurveOfGInter::SetMinNbSamples(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theMinNbSamples", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntPCurvePCurveOfGInter", 
+          "name": "SetMinNbSamples", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntPCurvePCurveOfGInter::GetMinNbSamples()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_TheIntPCurvePCurveOfGInter", 
+          "name": "GetMinNbSamples", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "IntRes2d_Intersection"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dInt_TheIntPCurvePCurveOfGInter.hxx", 
+        39
+      ], 
+      "key": "Geom2dInt_TheIntPCurvePCurveOfGInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter::Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter(IntCurve_IConicTool, Adaptor2d_Curve2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurve_IConicTool", 
+              "name": "IT", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PC", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter", 
+          "name": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter::Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter(Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter", 
+          "name": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter::Value(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter::Derivative(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter", 
+          "name": "Derivative", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter::Values(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionWithDerivative"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter.hxx", 
+        35
+      ], 
+      "key": "Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter::Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter", 
+          "name": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter::Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter(IntCurve_IConicTool, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntCurve_IConicTool", 
+              "name": "ITool", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "Dom1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "Dom2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter", 
+          "name": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter::Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter(Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter", 
+          "name": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter::Perform(IntCurve_IConicTool, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurve_IConicTool", 
+              "name": "ITool", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "Dom1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "Dom2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter::FindU(Standard_Real, gp_Pnt2d, Adaptor2d_Curve2d, IntCurve_IConicTool)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "parameter", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "point", 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "TheParCurev", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurve_IConicTool", 
+              "name": "TheImpTool", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter", 
+          "name": "FindU", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter::FindV(Standard_Real, gp_Pnt2d, IntCurve_IConicTool, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "parameter", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "point", 
+              "ref": true
+            }, 
+            {
+              "type": "IntCurve_IConicTool", 
+              "name": "TheImpTool", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "ParCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "TheParCurveDomain", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter", 
+          "name": "FindV", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter::And_Domaine_Objet1_Intersections(IntCurve_IConicTool, Adaptor2d_Curve2d, IntRes2d_Domain, IntRes2d_Domain, Standard_Integer, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntCurve_IConicTool", 
+              "name": "TheImpTool", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "TheParCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "TheImpCurveDomain", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "TheParCurveDomain", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbResultats", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Inter2_And_Domain2", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Inter1", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Resultat1", 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Resultat2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsNul", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter", 
+          "name": "And_Domaine_Objet1_Intersections", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "IntRes2d_Intersection"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter.hxx", 
+        39
+      ], 
+      "key": "Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dInt_TheIntConicCurveOfGInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dInt_TheIntConicCurveOfGInter::Geom2dInt_TheIntConicCurveOfGInter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "name": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheIntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntConicCurveOfGInter::Geom2dInt_TheIntConicCurveOfGInter(gp_Lin2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "name": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheIntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntConicCurveOfGInter::Geom2dInt_TheIntConicCurveOfGInter(gp_Circ2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "name": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheIntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntConicCurveOfGInter::Geom2dInt_TheIntConicCurveOfGInter(gp_Elips2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "name": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheIntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntConicCurveOfGInter::Geom2dInt_TheIntConicCurveOfGInter(gp_Parab2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Parab2d", 
+              "name": "Prb", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "name": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheIntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntConicCurveOfGInter::Geom2dInt_TheIntConicCurveOfGInter(gp_Hypr2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "name": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheIntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntConicCurveOfGInter::Geom2dInt_TheIntConicCurveOfGInter(Geom2dInt_TheIntConicCurveOfGInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dInt_TheIntConicCurveOfGInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "name": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheIntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntConicCurveOfGInter::Perform(gp_Lin2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntConicCurveOfGInter::Perform(gp_Circ2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntConicCurveOfGInter::Perform(gp_Elips2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntConicCurveOfGInter::Perform(gp_Parab2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Parab2d", 
+              "name": "Prb", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheIntConicCurveOfGInter::Perform(gp_Hypr2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheIntConicCurveOfGInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "IntRes2d_Intersection"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dInt_TheIntConicCurveOfGInter.hxx", 
+        41
+      ], 
+      "key": "Geom2dInt_TheIntConicCurveOfGInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dInt_IntConicCurveOfGInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dInt_IntConicCurveOfGInter::Geom2dInt_IntConicCurveOfGInter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dInt_IntConicCurveOfGInter", 
+          "name": "Geom2dInt_IntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_IntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_IntConicCurveOfGInter::Geom2dInt_IntConicCurveOfGInter(gp_Lin2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_IntConicCurveOfGInter", 
+          "name": "Geom2dInt_IntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_IntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_IntConicCurveOfGInter::Geom2dInt_IntConicCurveOfGInter(gp_Circ2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_IntConicCurveOfGInter", 
+          "name": "Geom2dInt_IntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_IntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_IntConicCurveOfGInter::Geom2dInt_IntConicCurveOfGInter(gp_Elips2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_IntConicCurveOfGInter", 
+          "name": "Geom2dInt_IntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_IntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_IntConicCurveOfGInter::Geom2dInt_IntConicCurveOfGInter(gp_Parab2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Parab2d", 
+              "name": "Prb", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_IntConicCurveOfGInter", 
+          "name": "Geom2dInt_IntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_IntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_IntConicCurveOfGInter::Geom2dInt_IntConicCurveOfGInter(gp_Hypr2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_IntConicCurveOfGInter", 
+          "name": "Geom2dInt_IntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_IntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_IntConicCurveOfGInter::Geom2dInt_IntConicCurveOfGInter(Geom2dInt_IntConicCurveOfGInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dInt_IntConicCurveOfGInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_IntConicCurveOfGInter", 
+          "name": "Geom2dInt_IntConicCurveOfGInter", 
+          "return": {
+            "type": "Geom2dInt_IntConicCurveOfGInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dInt_IntConicCurveOfGInter::Perform(gp_Lin2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_IntConicCurveOfGInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_IntConicCurveOfGInter::Perform(gp_Circ2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_IntConicCurveOfGInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_IntConicCurveOfGInter::Perform(gp_Elips2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_IntConicCurveOfGInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_IntConicCurveOfGInter::Perform(gp_Parab2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Parab2d", 
+              "name": "Prb", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_IntConicCurveOfGInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_IntConicCurveOfGInter::Perform(gp_Hypr2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Hypr2d", 
+              "name": "H", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "PCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_IntConicCurveOfGInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "IntRes2d_Intersection"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dInt_IntConicCurveOfGInter.hxx", 
+        43
+      ], 
+      "key": "Geom2dInt_IntConicCurveOfGInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter::Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "return": {
+            "type": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter::Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter(gp_Pnt2d, Adaptor2d_Curve2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "return": {
+            "type": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter::Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter(Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "return": {
+            "type": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter::Initialize(Adaptor2d_Curve2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "Initialize", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter::SetPoint(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "SetPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter::Value(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter::Derivative(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "DF", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "Derivative", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter::Values(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "DF", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter::GetStateNumber()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "GetStateNumber", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter::NbExt()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "NbExt", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter::SquareDistance(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "SquareDistance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter::IsMin(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "IsMin", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter::Point(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "Point", 
+          "return": {
+            "type": "Extrema_POnCurv2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter::SubIntervalInitialize(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theUfirst", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theUlast", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "SubIntervalInitialize", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter::SearchOfTolerance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "SearchOfTolerance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionWithDerivative"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter.hxx", 
+        41
+      ], 
+      "key": "Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter::Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter::Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter(gp_Pnt2d, Adaptor2d_Curve2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolU", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter::Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter(gp_Pnt2d, Adaptor2d_Curve2d, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Usup", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolU", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter::Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter(Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter::Initialize(Adaptor2d_Curve2d, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Usup", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolU", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "Initialize", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter::Perform(gp_Pnt2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U0", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter::SquareDistance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "SquareDistance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter::IsMin()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "IsMin", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter::Point()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter", 
+          "name": "Point", 
+          "return": {
+            "type": "Extrema_POnCurv2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter.hxx", 
+        36
+      ], 
+      "key": "Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter::Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter", 
+          "name": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter::Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter(Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter", 
+          "name": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter", 
+          "return": {
+            "type": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter::Locate(gp_Pnt2d, Adaptor2d_Curve2d, Standard_Integer, Extrema_POnCurv2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbU", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_POnCurv2d", 
+              "name": "Papp", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter", 
+          "name": "Locate", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter::Locate(gp_Pnt2d, Adaptor2d_Curve2d, Standard_Integer, Standard_Real, Standard_Real, Extrema_POnCurv2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbU", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Usup", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_POnCurv2d", 
+              "name": "Papp", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter", 
+          "name": "Locate", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter::Locate(Adaptor2d_Curve2d, Adaptor2d_Curve2d, Standard_Integer, Standard_Integer, Extrema_POnCurv2d, Extrema_POnCurv2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbU", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbV", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_POnCurv2d", 
+              "name": "Papp1", 
+              "ref": true
+            }, 
+            {
+              "type": "Extrema_POnCurv2d", 
+              "name": "Papp2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter", 
+          "name": "Locate", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter.hxx", 
+        33
+      ], 
+      "key": "Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dInt_GInter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dInt_GInter::Geom2dInt_GInter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "Geom2dInt_GInter", 
+          "return": {
+            "type": "Geom2dInt_GInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_GInter::Geom2dInt_GInter(Adaptor2d_Curve2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "Geom2dInt_GInter", 
+          "return": {
+            "type": "Geom2dInt_GInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_GInter::Geom2dInt_GInter(Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "Geom2dInt_GInter", 
+          "return": {
+            "type": "Geom2dInt_GInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_GInter::Geom2dInt_GInter(Adaptor2d_Curve2d, Adaptor2d_Curve2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "Geom2dInt_GInter", 
+          "return": {
+            "type": "Geom2dInt_GInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_GInter::Geom2dInt_GInter(Adaptor2d_Curve2d, IntRes2d_Domain, Adaptor2d_Curve2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "Geom2dInt_GInter", 
+          "return": {
+            "type": "Geom2dInt_GInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_GInter::Geom2dInt_GInter(Adaptor2d_Curve2d, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "Geom2dInt_GInter", 
+          "return": {
+            "type": "Geom2dInt_GInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_GInter::Geom2dInt_GInter(Adaptor2d_Curve2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "Geom2dInt_GInter", 
+          "return": {
+            "type": "Geom2dInt_GInter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_GInter::Geom2dInt_GInter(Geom2dInt_GInter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dInt_GInter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "Geom2dInt_GInter", 
+          "return": {
+            "type": "Geom2dInt_GInter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dInt_GInter::Perform(Adaptor2d_Curve2d, IntRes2d_Domain, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_GInter::Perform(Adaptor2d_Curve2d, Adaptor2d_Curve2d, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_GInter::Perform(Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_GInter::Perform(Adaptor2d_Curve2d, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_GInter::Perform(Adaptor2d_Curve2d, IntRes2d_Domain, Adaptor2d_Curve2d, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_GInter::Perform(Adaptor2d_Curve2d, Adaptor2d_Curve2d, IntRes2d_Domain, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "D2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolConf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_GInter::ComputeDomain(Adaptor2d_Curve2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Adaptor2d_Curve2d", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolDomain", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "ComputeDomain", 
+          "return": {
+            "type": "IntRes2d_Domain"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_GInter::SetMinNbSamples(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theMinNbSamples", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "SetMinNbSamples", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dInt_GInter::GetMinNbSamples()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dInt_GInter", 
+          "name": "GetMinNbSamples", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "IntRes2d_Intersection"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dInt_GInter.hxx", 
+        49
+      ], 
+      "key": "Geom2dInt_GInter"
+    }
+  ], 
+  "name": "Geom2dInt"
+}

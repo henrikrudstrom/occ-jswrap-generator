@@ -1,0 +1,3745 @@
+{
+  "headers": [
+    "GeomAPI_IntCS.hxx", 
+    "GeomAPI_ExtremaCurveCurve.hxx", 
+    "GeomAPI_PointsToBSplineSurface.hxx", 
+    "GeomAPI_Interpolate.hxx", 
+    "GeomAPI_ExtremaSurfaceSurface.hxx", 
+    "GeomAPI_IntSS.hxx", 
+    "GeomAPI_PointsToBSpline.hxx", 
+    "GeomAPI_ProjectPointOnCurve.hxx", 
+    "GeomAPI_ProjectPointOnSurf.hxx", 
+    "GeomAPI_ExtremaCurveSurface.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "GeomAPI_IntCS", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomAPI_IntCS::GeomAPI_IntCS()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "GeomAPI_IntCS", 
+          "name": "GeomAPI_IntCS", 
+          "return": {
+            "type": "GeomAPI_IntCS", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_IntCS::GeomAPI_IntCS(opencascade::handle<Geom_Curve>, opencascade::handle<Geom_Surface>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_IntCS", 
+          "name": "GeomAPI_IntCS", 
+          "return": {
+            "type": "GeomAPI_IntCS", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_IntCS::GeomAPI_IntCS(GeomAPI_IntCS)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomAPI_IntCS", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_IntCS", 
+          "name": "GeomAPI_IntCS", 
+          "return": {
+            "type": "GeomAPI_IntCS", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomAPI_IntCS::Perform(opencascade::handle<Geom_Curve>, opencascade::handle<Geom_Surface>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_IntCS", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_IntCS::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_IntCS", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_IntCS::NbPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_IntCS", 
+          "name": "NbPoints", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_IntCS::Point(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_IntCS", 
+          "name": "Point", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_IntCS::Parameters(Standard_Integer, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "W", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_IntCS", 
+          "name": "Parameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_IntCS::NbSegments()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_IntCS", 
+          "name": "NbSegments", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_IntCS::Segment(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_IntCS", 
+          "name": "Segment", 
+          "return": {
+            "type": "opencascade::handle<Geom_Curve>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_IntCS::Parameters(Standard_Integer, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_IntCS", 
+          "name": "Parameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAPI_IntCS.hxx", 
+        37
+      ], 
+      "key": "GeomAPI_IntCS"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAPI_ExtremaCurveCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::GeomAPI_ExtremaCurveCurve()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "GeomAPI_ExtremaCurveCurve", 
+          "return": {
+            "type": "GeomAPI_ExtremaCurveCurve", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::GeomAPI_ExtremaCurveCurve(opencascade::handle<Geom_Curve>, opencascade::handle<Geom_Curve>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "GeomAPI_ExtremaCurveCurve", 
+          "return": {
+            "type": "GeomAPI_ExtremaCurveCurve", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::GeomAPI_ExtremaCurveCurve(opencascade::handle<Geom_Curve>, opencascade::handle<Geom_Curve>, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1min", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1max", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2min", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2max", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "GeomAPI_ExtremaCurveCurve", 
+          "return": {
+            "type": "GeomAPI_ExtremaCurveCurve", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::GeomAPI_ExtremaCurveCurve(GeomAPI_ExtremaCurveCurve)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomAPI_ExtremaCurveCurve", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "GeomAPI_ExtremaCurveCurve", 
+          "return": {
+            "type": "GeomAPI_ExtremaCurveCurve", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::Init(opencascade::handle<Geom_Curve>, opencascade::handle<Geom_Curve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::Init(opencascade::handle<Geom_Curve>, opencascade::handle<Geom_Curve>, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1min", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1max", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2min", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2max", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::NbExtrema()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "NbExtrema", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::Points(Standard_Integer, gp_Pnt, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "Points", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::Parameters(Standard_Integer, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "Parameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::Distance(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "Distance", 
+          "return": {
+            "type": "Quantity_Length"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::NearestPoints(gp_Pnt, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "NearestPoints", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::LowerDistanceParameters(Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "LowerDistanceParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::LowerDistance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "LowerDistance", 
+          "return": {
+            "type": "Quantity_Length"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::Extrema()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "Extrema", 
+          "return": {
+            "type": "Extrema_ExtCC", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::TotalNearestPoints(gp_Pnt, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "TotalNearestPoints", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::TotalLowerDistanceParameters(Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "TotalLowerDistanceParameters", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveCurve::TotalLowerDistance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ExtremaCurveCurve", 
+          "name": "TotalLowerDistance", 
+          "return": {
+            "type": "Quantity_Length"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAPI_ExtremaCurveCurve.hxx", 
+        61
+      ], 
+      "key": "GeomAPI_ExtremaCurveCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAPI_PointsToBSplineSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomAPI_PointsToBSplineSurface::GeomAPI_PointsToBSplineSurface()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "GeomAPI_PointsToBSplineSurface", 
+          "name": "GeomAPI_PointsToBSplineSurface", 
+          "return": {
+            "type": "GeomAPI_PointsToBSplineSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSplineSurface::GeomAPI_PointsToBSplineSurface(TColgp_Array2OfPnt, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColgp_Array2OfPnt", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSplineSurface", 
+          "name": "GeomAPI_PointsToBSplineSurface", 
+          "return": {
+            "type": "GeomAPI_PointsToBSplineSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSplineSurface::GeomAPI_PointsToBSplineSurface(TColgp_Array2OfPnt, Approx_ParametrizationType, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColgp_Array2OfPnt", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Approx_ParametrizationType", 
+              "name": "ParType", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSplineSurface", 
+          "name": "GeomAPI_PointsToBSplineSurface", 
+          "return": {
+            "type": "GeomAPI_PointsToBSplineSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSplineSurface::GeomAPI_PointsToBSplineSurface(TColgp_Array2OfPnt, Standard_Real, Standard_Real, Standard_Real, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColgp_Array2OfPnt", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSplineSurface", 
+          "name": "GeomAPI_PointsToBSplineSurface", 
+          "return": {
+            "type": "GeomAPI_PointsToBSplineSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSplineSurface::GeomAPI_PointsToBSplineSurface(TColStd_Array2OfReal, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColStd_Array2OfReal", 
+              "name": "ZPoints", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "X0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dX", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Y0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dY", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSplineSurface", 
+          "name": "GeomAPI_PointsToBSplineSurface", 
+          "return": {
+            "type": "GeomAPI_PointsToBSplineSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSplineSurface::GeomAPI_PointsToBSplineSurface(GeomAPI_PointsToBSplineSurface)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomAPI_PointsToBSplineSurface", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSplineSurface", 
+          "name": "GeomAPI_PointsToBSplineSurface", 
+          "return": {
+            "type": "GeomAPI_PointsToBSplineSurface", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSplineSurface::Init(TColgp_Array2OfPnt, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array2OfPnt", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSplineSurface", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSplineSurface::Interpolate(TColgp_Array2OfPnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array2OfPnt", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSplineSurface", 
+          "name": "Interpolate", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSplineSurface::Interpolate(TColgp_Array2OfPnt, Approx_ParametrizationType)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array2OfPnt", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Approx_ParametrizationType", 
+              "name": "ParType", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSplineSurface", 
+          "name": "Interpolate", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSplineSurface::Init(TColStd_Array2OfReal, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array2OfReal", 
+              "name": "ZPoints", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "X0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dX", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Y0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dY", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSplineSurface", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSplineSurface::Interpolate(TColStd_Array2OfReal, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array2OfReal", 
+              "name": "ZPoints", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "X0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dX", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Y0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dY", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSplineSurface", 
+          "name": "Interpolate", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSplineSurface::Init(TColgp_Array2OfPnt, Approx_ParametrizationType, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array2OfPnt", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Approx_ParametrizationType", 
+              "name": "ParType", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSplineSurface", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSplineSurface::Init(TColgp_Array2OfPnt, Standard_Real, Standard_Real, Standard_Real, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array2OfPnt", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSplineSurface", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSplineSurface::Surface()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_PointsToBSplineSurface", 
+          "name": "Surface", 
+          "return": {
+            "type": "opencascade::handle<Geom_BSplineSurface>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSplineSurface::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_PointsToBSplineSurface", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAPI_PointsToBSplineSurface.hxx", 
+        44
+      ], 
+      "key": "GeomAPI_PointsToBSplineSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAPI_Interpolate", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomAPI_Interpolate::GeomAPI_Interpolate(opencascade::handle<TColgp_HArray1OfPnt>, Standard_Boolean, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<TColgp_HArray1OfPnt>", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "PeriodicFlag", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_Interpolate", 
+          "name": "GeomAPI_Interpolate", 
+          "return": {
+            "type": "GeomAPI_Interpolate", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_Interpolate::GeomAPI_Interpolate(opencascade::handle<TColgp_HArray1OfPnt>, opencascade::handle<TColStd_HArray1OfReal>, Standard_Boolean, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<TColgp_HArray1OfPnt>", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "Parameters", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "PeriodicFlag", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_Interpolate", 
+          "name": "GeomAPI_Interpolate", 
+          "return": {
+            "type": "GeomAPI_Interpolate", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_Interpolate::GeomAPI_Interpolate(GeomAPI_Interpolate)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomAPI_Interpolate", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_Interpolate", 
+          "name": "GeomAPI_Interpolate", 
+          "return": {
+            "type": "GeomAPI_Interpolate", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomAPI_Interpolate::Load(gp_Vec, gp_Vec, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Vec", 
+              "name": "InitialTangent", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "FinalTangent", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Scale", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_Interpolate", 
+          "name": "Load", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_Interpolate::Load(TColgp_Array1OfVec, opencascade::handle<TColStd_HArray1OfBoolean>, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfVec", 
+              "name": "Tangents", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfBoolean>", 
+              "name": "TangentFlags", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Scale", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_Interpolate", 
+          "name": "Load", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_Interpolate::ClearTangents()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_Interpolate", 
+          "name": "ClearTangents", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_Interpolate::Perform()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_Interpolate", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_Interpolate::Curve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_Interpolate", 
+          "name": "Curve", 
+          "return": {
+            "type": "opencascade::handle<Geom_BSplineCurve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_Interpolate::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_Interpolate", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAPI_Interpolate.hxx", 
+        54
+      ], 
+      "key": "GeomAPI_Interpolate"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAPI_ExtremaSurfaceSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomAPI_ExtremaSurfaceSurface::GeomAPI_ExtremaSurfaceSurface()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "GeomAPI_ExtremaSurfaceSurface", 
+          "name": "GeomAPI_ExtremaSurfaceSurface", 
+          "return": {
+            "type": "GeomAPI_ExtremaSurfaceSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaSurfaceSurface::GeomAPI_ExtremaSurfaceSurface(opencascade::handle<Geom_Surface>, opencascade::handle<Geom_Surface>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaSurfaceSurface", 
+          "name": "GeomAPI_ExtremaSurfaceSurface", 
+          "return": {
+            "type": "GeomAPI_ExtremaSurfaceSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaSurfaceSurface::GeomAPI_ExtremaSurfaceSurface(opencascade::handle<Geom_Surface>, opencascade::handle<Geom_Surface>, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1min", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1max", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V1min", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V1max", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2min", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2max", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V2min", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V2max", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaSurfaceSurface", 
+          "name": "GeomAPI_ExtremaSurfaceSurface", 
+          "return": {
+            "type": "GeomAPI_ExtremaSurfaceSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaSurfaceSurface::GeomAPI_ExtremaSurfaceSurface(GeomAPI_ExtremaSurfaceSurface)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomAPI_ExtremaSurfaceSurface", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaSurfaceSurface", 
+          "name": "GeomAPI_ExtremaSurfaceSurface", 
+          "return": {
+            "type": "GeomAPI_ExtremaSurfaceSurface", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaSurfaceSurface::Init(opencascade::handle<Geom_Surface>, opencascade::handle<Geom_Surface>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaSurfaceSurface", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaSurfaceSurface::Init(opencascade::handle<Geom_Surface>, opencascade::handle<Geom_Surface>, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1min", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1max", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V1min", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V1max", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2min", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2max", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V2min", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V2max", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaSurfaceSurface", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaSurfaceSurface::NbExtrema()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ExtremaSurfaceSurface", 
+          "name": "NbExtrema", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaSurfaceSurface::Points(Standard_Integer, gp_Pnt, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaSurfaceSurface", 
+          "name": "Points", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaSurfaceSurface::Parameters(Standard_Integer, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaSurfaceSurface", 
+          "name": "Parameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaSurfaceSurface::Distance(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaSurfaceSurface", 
+          "name": "Distance", 
+          "return": {
+            "type": "Quantity_Length"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaSurfaceSurface::NearestPoints(gp_Pnt, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaSurfaceSurface", 
+          "name": "NearestPoints", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaSurfaceSurface::LowerDistanceParameters(Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U1", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U2", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaSurfaceSurface", 
+          "name": "LowerDistanceParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaSurfaceSurface::LowerDistance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ExtremaSurfaceSurface", 
+          "name": "LowerDistance", 
+          "return": {
+            "type": "Quantity_Length"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaSurfaceSurface::Extrema()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ExtremaSurfaceSurface", 
+          "name": "Extrema", 
+          "return": {
+            "type": "Extrema_ExtSS", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAPI_ExtremaSurfaceSurface.hxx", 
+        56
+      ], 
+      "key": "GeomAPI_ExtremaSurfaceSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAPI_IntSS", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomAPI_IntSS::GeomAPI_IntSS()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "GeomAPI_IntSS", 
+          "name": "GeomAPI_IntSS", 
+          "return": {
+            "type": "GeomAPI_IntSS", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_IntSS::GeomAPI_IntSS(opencascade::handle<Geom_Surface>, opencascade::handle<Geom_Surface>, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_IntSS", 
+          "name": "GeomAPI_IntSS", 
+          "return": {
+            "type": "GeomAPI_IntSS", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_IntSS::GeomAPI_IntSS(GeomAPI_IntSS)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomAPI_IntSS", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_IntSS", 
+          "name": "GeomAPI_IntSS", 
+          "return": {
+            "type": "GeomAPI_IntSS", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomAPI_IntSS::Perform(opencascade::handle<Geom_Surface>, opencascade::handle<Geom_Surface>, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_IntSS", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_IntSS::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_IntSS", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_IntSS::NbLines()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_IntSS", 
+          "name": "NbLines", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_IntSS::Line(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_IntSS", 
+          "name": "Line", 
+          "return": {
+            "type": "opencascade::handle<Geom_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAPI_IntSS.hxx", 
+        40
+      ], 
+      "key": "GeomAPI_IntSS"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAPI_PointsToBSpline", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "GeomAPI_PointsToBSpline", 
+          "name": "GeomAPI_PointsToBSpline", 
+          "return": {
+            "type": "GeomAPI_PointsToBSpline", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline(TColgp_Array1OfPnt, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSpline", 
+          "name": "GeomAPI_PointsToBSpline", 
+          "return": {
+            "type": "GeomAPI_PointsToBSpline", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline(TColgp_Array1OfPnt, Approx_ParametrizationType, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Approx_ParametrizationType", 
+              "name": "ParType", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSpline", 
+          "name": "GeomAPI_PointsToBSpline", 
+          "return": {
+            "type": "GeomAPI_PointsToBSpline", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline(TColgp_Array1OfPnt, TColStd_Array1OfReal, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Parameters", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSpline", 
+          "name": "GeomAPI_PointsToBSpline", 
+          "return": {
+            "type": "GeomAPI_PointsToBSpline", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline(TColgp_Array1OfPnt, Standard_Real, Standard_Real, Standard_Real, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSpline", 
+          "name": "GeomAPI_PointsToBSpline", 
+          "return": {
+            "type": "GeomAPI_PointsToBSpline", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline(GeomAPI_PointsToBSpline)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomAPI_PointsToBSpline", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSpline", 
+          "name": "GeomAPI_PointsToBSpline", 
+          "return": {
+            "type": "GeomAPI_PointsToBSpline", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSpline::Init(TColgp_Array1OfPnt, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSpline", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSpline::Init(TColgp_Array1OfPnt, Approx_ParametrizationType, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Approx_ParametrizationType", 
+              "name": "ParType", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSpline", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSpline::Init(TColgp_Array1OfPnt, TColStd_Array1OfReal, Standard_Integer, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Parameters", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMin", 
+              "default": "3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSpline", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSpline::Init(TColgp_Array1OfPnt, Standard_Real, Standard_Real, Standard_Real, Standard_Integer, GeomAbs_Shape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight3", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DegMax", 
+              "default": "8", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Continuity", 
+              "default": "::GeomAbs_Shape::GeomAbs_C2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol3D", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_PointsToBSpline", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSpline::Curve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_PointsToBSpline", 
+          "name": "Curve", 
+          "return": {
+            "type": "opencascade::handle<Geom_BSplineCurve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_PointsToBSpline::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_PointsToBSpline", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAPI_PointsToBSpline.hxx", 
+        43
+      ], 
+      "key": "GeomAPI_PointsToBSpline"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAPI_ProjectPointOnCurve", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::GeomAPI_ProjectPointOnCurve()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "GeomAPI_ProjectPointOnCurve", 
+          "return": {
+            "type": "GeomAPI_ProjectPointOnCurve", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::GeomAPI_ProjectPointOnCurve(gp_Pnt, opencascade::handle<Geom_Curve>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "GeomAPI_ProjectPointOnCurve", 
+          "return": {
+            "type": "GeomAPI_ProjectPointOnCurve", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::GeomAPI_ProjectPointOnCurve(gp_Pnt, opencascade::handle<Geom_Curve>, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Usup", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "GeomAPI_ProjectPointOnCurve", 
+          "return": {
+            "type": "GeomAPI_ProjectPointOnCurve", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::GeomAPI_ProjectPointOnCurve(GeomAPI_ProjectPointOnCurve)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomAPI_ProjectPointOnCurve", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "GeomAPI_ProjectPointOnCurve", 
+          "return": {
+            "type": "GeomAPI_ProjectPointOnCurve", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::Init(gp_Pnt, opencascade::handle<Geom_Curve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::Init(gp_Pnt, opencascade::handle<Geom_Curve>, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Usup", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::Init(opencascade::handle<Geom_Curve>, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Usup", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::Perform(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::NbPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "NbPoints", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::Point(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "Point", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::Parameter(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Quantity_Parameter"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::Parameter(Standard_Integer, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "Parameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::Distance(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "Distance", 
+          "return": {
+            "type": "Quantity_Length"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::NearestPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "NearestPoint", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::LowerDistanceParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "LowerDistanceParameter", 
+          "return": {
+            "type": "Quantity_Parameter"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::LowerDistance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "LowerDistance", 
+          "return": {
+            "type": "Quantity_Length"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnCurve::Extrema()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ProjectPointOnCurve", 
+          "name": "Extrema", 
+          "return": {
+            "type": "Extrema_ExtPC", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAPI_ProjectPointOnCurve.hxx", 
+        40
+      ], 
+      "key": "GeomAPI_ProjectPointOnCurve"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAPI_ProjectPointOnSurf", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::GeomAPI_ProjectPointOnSurf()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "GeomAPI_ProjectPointOnSurf", 
+          "return": {
+            "type": "GeomAPI_ProjectPointOnSurf", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::GeomAPI_ProjectPointOnSurf(gp_Pnt, opencascade::handle<Geom_Surface>, Extrema_ExtAlgo)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "Algo", 
+              "default": "::Extrema_ExtAlgo::Extrema_ExtAlgo_Grad", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "GeomAPI_ProjectPointOnSurf", 
+          "return": {
+            "type": "GeomAPI_ProjectPointOnSurf", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::GeomAPI_ProjectPointOnSurf(gp_Pnt, opencascade::handle<Geom_Surface>, Standard_Real, Extrema_ExtAlgo)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "Algo", 
+              "default": "::Extrema_ExtAlgo::Extrema_ExtAlgo_Grad", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "GeomAPI_ProjectPointOnSurf", 
+          "return": {
+            "type": "GeomAPI_ProjectPointOnSurf", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::GeomAPI_ProjectPointOnSurf(gp_Pnt, opencascade::handle<Geom_Surface>, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Standard_Real, Extrema_ExtAlgo)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Usup", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Vmin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Vsup", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "Algo", 
+              "default": "::Extrema_ExtAlgo::Extrema_ExtAlgo_Grad", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "GeomAPI_ProjectPointOnSurf", 
+          "return": {
+            "type": "GeomAPI_ProjectPointOnSurf", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::GeomAPI_ProjectPointOnSurf(gp_Pnt, opencascade::handle<Geom_Surface>, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Extrema_ExtAlgo)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Usup", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Vmin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Vsup", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "Algo", 
+              "default": "::Extrema_ExtAlgo::Extrema_ExtAlgo_Grad", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "GeomAPI_ProjectPointOnSurf", 
+          "return": {
+            "type": "GeomAPI_ProjectPointOnSurf", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::GeomAPI_ProjectPointOnSurf(GeomAPI_ProjectPointOnSurf)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomAPI_ProjectPointOnSurf", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "GeomAPI_ProjectPointOnSurf", 
+          "return": {
+            "type": "GeomAPI_ProjectPointOnSurf", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::Init(gp_Pnt, opencascade::handle<Geom_Surface>, Standard_Real, Extrema_ExtAlgo)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "Algo", 
+              "default": "::Extrema_ExtAlgo::Extrema_ExtAlgo_Grad", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::Init(gp_Pnt, opencascade::handle<Geom_Surface>, Extrema_ExtAlgo)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "Algo", 
+              "default": "::Extrema_ExtAlgo::Extrema_ExtAlgo_Grad", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::Init(gp_Pnt, opencascade::handle<Geom_Surface>, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Standard_Real, Extrema_ExtAlgo)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Usup", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Vmin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Vsup", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "Algo", 
+              "default": "::Extrema_ExtAlgo::Extrema_ExtAlgo_Grad", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::Init(gp_Pnt, opencascade::handle<Geom_Surface>, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Extrema_ExtAlgo)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Usup", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Vmin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Vsup", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "Algo", 
+              "default": "::Extrema_ExtAlgo::Extrema_ExtAlgo_Grad", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::Init(opencascade::handle<Geom_Surface>, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Standard_Real, Extrema_ExtAlgo)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Usup", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Vmin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Vsup", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "Algo", 
+              "default": "::Extrema_ExtAlgo::Extrema_ExtAlgo_Grad", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::Init(opencascade::handle<Geom_Surface>, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Extrema_ExtAlgo)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Usup", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Vmin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Vsup", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "Algo", 
+              "default": "::Extrema_ExtAlgo::Extrema_ExtAlgo_Grad", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::Perform(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::NbPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "NbPoints", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::Point(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "Point", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::Parameters(Standard_Integer, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "Parameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::Distance(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "Distance", 
+          "return": {
+            "type": "Quantity_Length"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::NearestPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "NearestPoint", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::LowerDistanceParameters(Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "LowerDistanceParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::LowerDistance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "LowerDistance", 
+          "return": {
+            "type": "Quantity_Length"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ProjectPointOnSurf::Extrema()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ProjectPointOnSurf", 
+          "name": "Extrema", 
+          "return": {
+            "type": "Extrema_ExtPS", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAPI_ProjectPointOnSurf.hxx", 
+        42
+      ], 
+      "key": "GeomAPI_ProjectPointOnSurf"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GeomAPI_ExtremaCurveSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GeomAPI_ExtremaCurveSurface::GeomAPI_ExtremaCurveSurface()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "GeomAPI_ExtremaCurveSurface", 
+          "name": "GeomAPI_ExtremaCurveSurface", 
+          "return": {
+            "type": "GeomAPI_ExtremaCurveSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveSurface::GeomAPI_ExtremaCurveSurface(opencascade::handle<Geom_Curve>, opencascade::handle<Geom_Surface>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveSurface", 
+          "name": "GeomAPI_ExtremaCurveSurface", 
+          "return": {
+            "type": "GeomAPI_ExtremaCurveSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveSurface::GeomAPI_ExtremaCurveSurface(opencascade::handle<Geom_Curve>, opencascade::handle<Geom_Surface>, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Wmin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Wmax", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Umax", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Vmin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Vmax", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveSurface", 
+          "name": "GeomAPI_ExtremaCurveSurface", 
+          "return": {
+            "type": "GeomAPI_ExtremaCurveSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveSurface::GeomAPI_ExtremaCurveSurface(GeomAPI_ExtremaCurveSurface)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GeomAPI_ExtremaCurveSurface", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveSurface", 
+          "name": "GeomAPI_ExtremaCurveSurface", 
+          "return": {
+            "type": "GeomAPI_ExtremaCurveSurface", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveSurface::Init(opencascade::handle<Geom_Curve>, opencascade::handle<Geom_Surface>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveSurface", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveSurface::Init(opencascade::handle<Geom_Curve>, opencascade::handle<Geom_Surface>, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surface", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Wmin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Wmax", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Umin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Umax", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Vmin", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "Vmax", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveSurface", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveSurface::NbExtrema()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ExtremaCurveSurface", 
+          "name": "NbExtrema", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveSurface::Points(Standard_Integer, gp_Pnt, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveSurface", 
+          "name": "Points", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveSurface::Parameters(Standard_Integer, Quantity_Parameter, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "W", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveSurface", 
+          "name": "Parameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveSurface::Distance(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveSurface", 
+          "name": "Distance", 
+          "return": {
+            "type": "Quantity_Length"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveSurface::NearestPoints(gp_Pnt, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "PC", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "PS", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveSurface", 
+          "name": "NearestPoints", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveSurface::LowerDistanceParameters(Quantity_Parameter, Quantity_Parameter, Quantity_Parameter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Quantity_Parameter", 
+              "name": "W", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Quantity_Parameter", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "GeomAPI_ExtremaCurveSurface", 
+          "name": "LowerDistanceParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveSurface::LowerDistance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ExtremaCurveSurface", 
+          "name": "LowerDistance", 
+          "return": {
+            "type": "Quantity_Length"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GeomAPI_ExtremaCurveSurface::Extrema()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GeomAPI_ExtremaCurveSurface", 
+          "name": "Extrema", 
+          "return": {
+            "type": "Extrema_ExtCS", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GeomAPI_ExtremaCurveSurface.hxx", 
+        61
+      ], 
+      "key": "GeomAPI_ExtremaCurveSurface"
+    }
+  ], 
+  "name": "GeomAPI"
+}

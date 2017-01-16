@@ -1,0 +1,2115 @@
+{
+  "headers": [
+    "Geom2dHatch_Intersector.hxx", 
+    "Geom2dHatch_Classifier.hxx", 
+    "Geom2dHatch_Element.hxx", 
+    "Geom2dHatch_FClass2dOfClassifier.hxx", 
+    "Geom2dHatch_MapOfElements.hxx", 
+    "Geom2dHatch_DataMapIteratorOfHatchings.hxx", 
+    "Geom2dHatch_Elements.hxx", 
+    "Geom2dHatch_Hatcher.hxx", 
+    "Geom2dHatch_DataMapIteratorOfMapOfElements.hxx", 
+    "Geom2dHatch_Hatchings.hxx", 
+    "Geom2dHatch_Hatching.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Geom2dHatch_Intersector", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dHatch_Intersector::Geom2dHatch_Intersector(Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Confusion", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tangency", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Intersector", 
+          "name": "Geom2dHatch_Intersector", 
+          "return": {
+            "type": "Geom2dHatch_Intersector", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Intersector::Geom2dHatch_Intersector()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Intersector", 
+          "name": "Geom2dHatch_Intersector", 
+          "return": {
+            "type": "Geom2dHatch_Intersector", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Intersector::Geom2dHatch_Intersector(Geom2dHatch_Intersector)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dHatch_Intersector", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Intersector", 
+          "name": "Geom2dHatch_Intersector", 
+          "return": {
+            "type": "Geom2dHatch_Intersector", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dHatch_Intersector::ConfusionTolerance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Intersector", 
+          "name": "ConfusionTolerance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Intersector::SetConfusionTolerance(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Confusion", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Intersector", 
+          "name": "SetConfusionTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Intersector::TangencyTolerance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Intersector", 
+          "name": "TangencyTolerance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Intersector::SetTangencyTolerance(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Tangency", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Intersector", 
+          "name": "SetTangencyTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Intersector::Intersect(Geom2dAdaptor_Curve, Geom2dAdaptor_Curve)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Geom2dAdaptor_Curve", 
+              "name": "C1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Geom2dAdaptor_Curve", 
+              "name": "C2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Intersector", 
+          "name": "Intersect", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Intersector::Perform(gp_Lin2d, Standard_Real, Standard_Real, Geom2dAdaptor_Curve)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Geom2dAdaptor_Curve", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Intersector", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Intersector::LocalGeometry(Geom2dAdaptor_Curve, Standard_Real, gp_Dir2d, gp_Dir2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Geom2dAdaptor_Curve", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Dir2d", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Dir2d", 
+              "name": "N", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "C", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Intersector", 
+          "name": "LocalGeometry", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Geom2dInt_GInter"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dHatch_Intersector.hxx", 
+        32
+      ], 
+      "key": "Geom2dHatch_Intersector"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dHatch_FClass2dOfClassifier", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dHatch_FClass2dOfClassifier::Geom2dHatch_FClass2dOfClassifier()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_FClass2dOfClassifier", 
+          "name": "Geom2dHatch_FClass2dOfClassifier", 
+          "return": {
+            "type": "Geom2dHatch_FClass2dOfClassifier", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_FClass2dOfClassifier::Geom2dHatch_FClass2dOfClassifier(Geom2dHatch_FClass2dOfClassifier)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dHatch_FClass2dOfClassifier", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_FClass2dOfClassifier", 
+          "name": "Geom2dHatch_FClass2dOfClassifier", 
+          "return": {
+            "type": "Geom2dHatch_FClass2dOfClassifier", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dHatch_FClass2dOfClassifier::Reset(gp_Lin2d, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_FClass2dOfClassifier", 
+          "name": "Reset", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_FClass2dOfClassifier::Compare(Geom2dAdaptor_Curve, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Geom2dAdaptor_Curve", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_FClass2dOfClassifier", 
+          "name": "Compare", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_FClass2dOfClassifier::Parameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_FClass2dOfClassifier", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_FClass2dOfClassifier::Intersector()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_FClass2dOfClassifier", 
+          "name": "Intersector", 
+          "return": {
+            "type": "Geom2dHatch_Intersector", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_FClass2dOfClassifier::ClosestIntersection()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_FClass2dOfClassifier", 
+          "name": "ClosestIntersection", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_FClass2dOfClassifier::State()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_FClass2dOfClassifier", 
+          "name": "State", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_FClass2dOfClassifier::IsHeadOrEnd()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_FClass2dOfClassifier", 
+          "name": "IsHeadOrEnd", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dHatch_FClass2dOfClassifier.hxx", 
+        39
+      ], 
+      "key": "Geom2dHatch_FClass2dOfClassifier"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dHatch_Elements", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dHatch_Elements::Geom2dHatch_Elements()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "Geom2dHatch_Elements", 
+          "return": {
+            "type": "Geom2dHatch_Elements", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::Geom2dHatch_Elements(Geom2dHatch_Elements)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dHatch_Elements", 
+              "name": "Other", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "Geom2dHatch_Elements", 
+          "return": {
+            "type": "Geom2dHatch_Elements", 
+            "ptr": true
+          }, 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::Clear()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "Clear", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::Bind(Standard_Integer, Geom2dHatch_Element)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "K", 
+              "const": true
+            }, 
+            {
+              "type": "Geom2dHatch_Element", 
+              "name": "I", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "Bind", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::IsBound(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "K", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "IsBound", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::UnBind(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "K", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "UnBind", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::Find(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "K", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "Find", 
+          "return": {
+            "type": "Geom2dHatch_Element", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::ChangeFind(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "K", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "ChangeFind", 
+          "return": {
+            "type": "Geom2dHatch_Element", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::Reject(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "Reject", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::Segment(gp_Pnt2d, gp_Lin2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "Segment", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::OtherSegment(gp_Pnt2d, gp_Lin2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "OtherSegment", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::InitWires()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "InitWires", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::MoreWires()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "MoreWires", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::NextWire()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "NextWire", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::RejectWire(gp_Lin2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "RejectWire", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::InitEdges()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "InitEdges", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::MoreEdges()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "MoreEdges", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::NextEdge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "NextEdge", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::RejectEdge(gp_Lin2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "RejectEdge", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Elements::CurrentEdge(Geom2dAdaptor_Curve, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Geom2dAdaptor_Curve", 
+              "name": "E", 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or", 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Elements", 
+          "name": "CurrentEdge", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dHatch_Elements.hxx", 
+        39
+      ], 
+      "key": "Geom2dHatch_Elements"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dHatch_Classifier", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dHatch_Classifier::Geom2dHatch_Classifier()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Classifier", 
+          "name": "Geom2dHatch_Classifier", 
+          "return": {
+            "type": "Geom2dHatch_Classifier", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Classifier::Geom2dHatch_Classifier(Geom2dHatch_Elements, gp_Pnt2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dHatch_Elements", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Classifier", 
+          "name": "Geom2dHatch_Classifier", 
+          "return": {
+            "type": "Geom2dHatch_Classifier", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Classifier::Geom2dHatch_Classifier(Geom2dHatch_Classifier)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dHatch_Classifier", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Classifier", 
+          "name": "Geom2dHatch_Classifier", 
+          "return": {
+            "type": "Geom2dHatch_Classifier", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dHatch_Classifier::Perform(Geom2dHatch_Elements, gp_Pnt2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Geom2dHatch_Elements", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Classifier", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Classifier::State()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Classifier", 
+          "name": "State", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Classifier::Rejected()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Classifier", 
+          "name": "Rejected", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Classifier::NoWires()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Classifier", 
+          "name": "NoWires", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Classifier::Edge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Classifier", 
+          "name": "Edge", 
+          "return": {
+            "type": "Geom2dAdaptor_Curve", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Classifier::EdgeParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Classifier", 
+          "name": "EdgeParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Classifier::Position()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Classifier", 
+          "name": "Position", 
+          "return": {
+            "type": "IntRes2d_Position"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dHatch_Classifier.hxx", 
+        39
+      ], 
+      "key": "Geom2dHatch_Classifier"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dHatch_Element", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dHatch_Element::Geom2dHatch_Element()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Element", 
+          "name": "Geom2dHatch_Element", 
+          "return": {
+            "type": "Geom2dHatch_Element", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Element::Geom2dHatch_Element(Geom2dHatch_Element)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dHatch_Element", 
+              "name": "Other", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Element", 
+          "name": "Geom2dHatch_Element", 
+          "return": {
+            "type": "Geom2dHatch_Element", 
+            "ptr": true
+          }, 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dHatch_Element::Geom2dHatch_Element(Geom2dAdaptor_Curve, TopAbs_Orientation)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dAdaptor_Curve", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Orientation", 
+              "default": "::TopAbs_Orientation::TopAbs_FORWARD", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Element", 
+          "name": "Geom2dHatch_Element", 
+          "return": {
+            "type": "Geom2dHatch_Element", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Element::Curve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Element", 
+          "name": "Curve", 
+          "return": {
+            "type": "Geom2dAdaptor_Curve", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Element::ChangeCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Element", 
+          "name": "ChangeCurve", 
+          "return": {
+            "type": "Geom2dAdaptor_Curve", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Element::Orientation(TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Orientation", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Element", 
+          "name": "Orientation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Element::Orientation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Element", 
+          "name": "Orientation", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dHatch_Element.hxx", 
+        30
+      ], 
+      "key": "Geom2dHatch_Element"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dHatch_Hatching", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dHatch_Hatching::Geom2dHatch_Hatching()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "Geom2dHatch_Hatching", 
+          "return": {
+            "type": "Geom2dHatch_Hatching", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::Geom2dHatch_Hatching(Geom2dAdaptor_Curve)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dAdaptor_Curve", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "Geom2dHatch_Hatching", 
+          "return": {
+            "type": "Geom2dHatch_Hatching", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::Geom2dHatch_Hatching(Geom2dHatch_Hatching)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dHatch_Hatching", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "Geom2dHatch_Hatching", 
+          "return": {
+            "type": "Geom2dHatch_Hatching", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::Curve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "Curve", 
+          "return": {
+            "type": "Geom2dAdaptor_Curve", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::ChangeCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "ChangeCurve", 
+          "return": {
+            "type": "Geom2dAdaptor_Curve", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::TrimDone(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Flag", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "TrimDone", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::TrimDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "TrimDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::TrimFailed(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Flag", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "TrimFailed", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::TrimFailed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "TrimFailed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::IsDone(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Flag", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "IsDone", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::Status(HatchGen_ErrorStatus)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "HatchGen_ErrorStatus", 
+              "name": "Status", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "Status", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::Status()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "Status", 
+          "return": {
+            "type": "HatchGen_ErrorStatus"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::AddPoint(HatchGen_PointOnHatching, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "HatchGen_PointOnHatching", 
+              "name": "Point", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Confusion", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "AddPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::NbPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "NbPoints", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::Point(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "Point", 
+          "return": {
+            "type": "HatchGen_PointOnHatching", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::ChangePoint(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "ChangePoint", 
+          "return": {
+            "type": "HatchGen_PointOnHatching", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::RemPoint(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "RemPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::ClrPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "ClrPoints", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::AddDomain(HatchGen_Domain)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "HatchGen_Domain", 
+              "name": "Domain", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "AddDomain", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::NbDomains()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "NbDomains", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::Domain(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "Domain", 
+          "return": {
+            "type": "HatchGen_Domain", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::RemDomain(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "RemDomain", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::ClrDomains()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "ClrDomains", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatching::ClassificationPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatching", 
+          "name": "ClassificationPoint", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dHatch_Hatching.hxx", 
+        39
+      ], 
+      "key": "Geom2dHatch_Hatching"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Geom2dHatch_Hatcher", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Geom2dHatch_Hatcher::Geom2dHatch_Hatcher(Geom2dHatch_Intersector, Standard_Real, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dHatch_Intersector", 
+              "name": "Intersector", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Confusion2d", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Confusion3d", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "KeepPnt", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "KeepSeg", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "Geom2dHatch_Hatcher", 
+          "return": {
+            "type": "Geom2dHatch_Hatcher", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::Geom2dHatch_Hatcher(Geom2dHatch_Hatcher)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Geom2dHatch_Hatcher", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "Geom2dHatch_Hatcher", 
+          "return": {
+            "type": "Geom2dHatch_Hatcher", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::Intersector(Geom2dHatch_Intersector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Geom2dHatch_Intersector", 
+              "name": "Intersector", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "Intersector", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::Intersector()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "Intersector", 
+          "return": {
+            "type": "Geom2dHatch_Intersector", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::ChangeIntersector()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "ChangeIntersector", 
+          "return": {
+            "type": "Geom2dHatch_Intersector", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::Confusion2d(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Confusion", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "Confusion2d", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::Confusion2d()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "Confusion2d", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::Confusion3d(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Confusion", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "Confusion3d", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::Confusion3d()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "Confusion3d", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::KeepPoints(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Keep", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "KeepPoints", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::KeepPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "KeepPoints", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::KeepSegments(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Keep", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "KeepSegments", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::KeepSegments()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "KeepSegments", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::Clear()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "Clear", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::ElementCurve(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndE", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "ElementCurve", 
+          "return": {
+            "type": "Geom2dAdaptor_Curve", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::AddElement(Geom2dAdaptor_Curve, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Geom2dAdaptor_Curve", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Orientation", 
+              "default": "::TopAbs_Orientation::TopAbs_FORWARD", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "AddElement", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::AddElement(opencascade::handle<Geom2d_Curve>, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Orientation", 
+              "default": "::TopAbs_Orientation::TopAbs_FORWARD", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "AddElement", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::RemElement(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndE", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "RemElement", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::ClrElements()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "ClrElements", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::HatchingCurve(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndH", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "HatchingCurve", 
+          "return": {
+            "type": "Geom2dAdaptor_Curve", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::AddHatching(Geom2dAdaptor_Curve)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Geom2dAdaptor_Curve", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "AddHatching", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::RemHatching(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndH", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "RemHatching", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::ClrHatchings()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "ClrHatchings", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::NbPoints(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndH", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "NbPoints", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::Point(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndH", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IndP", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "Point", 
+          "return": {
+            "type": "HatchGen_PointOnHatching", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::Trim()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "Trim", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::Trim(Geom2dAdaptor_Curve)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Geom2dAdaptor_Curve", 
+              "name": "Curve", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "Trim", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::Trim(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndH", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "Trim", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::ComputeDomains()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "ComputeDomains", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::ComputeDomains(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndH", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "ComputeDomains", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::TrimDone(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndH", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "TrimDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::TrimFailed(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndH", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "TrimFailed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::IsDone(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndH", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::Status(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndH", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "Status", 
+          "return": {
+            "type": "HatchGen_ErrorStatus"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::NbDomains(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndH", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "NbDomains", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::Domain(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndH", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IDom", 
+              "const": true
+            }
+          ], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "Domain", 
+          "return": {
+            "type": "HatchGen_Domain", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Geom2dHatch_Hatcher::Dump()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Geom2dHatch_Hatcher", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Geom2dHatch_Hatcher.hxx", 
+        38
+      ], 
+      "key": "Geom2dHatch_Hatcher"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, Geom2dHatch_Element, NCollection_DefaultHasher<int> >", 
+      "declType": "typedef", 
+      "name": "Geom2dHatch_MapOfElements", 
+      "key": "Geom2dHatch_MapOfElements"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, Geom2dHatch_Element, NCollection_DefaultHasher<int> >::Iterator", 
+      "declType": "typedef", 
+      "name": "Geom2dHatch_DataMapIteratorOfMapOfElements", 
+      "key": "Geom2dHatch_DataMapIteratorOfMapOfElements"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, Geom2dHatch_Hatching, NCollection_DefaultHasher<int> >", 
+      "declType": "typedef", 
+      "name": "Geom2dHatch_Hatchings", 
+      "key": "Geom2dHatch_Hatchings"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, Geom2dHatch_Hatching, NCollection_DefaultHasher<int> >::Iterator", 
+      "declType": "typedef", 
+      "name": "Geom2dHatch_DataMapIteratorOfHatchings", 
+      "key": "Geom2dHatch_DataMapIteratorOfHatchings"
+    }
+  ], 
+  "name": "Geom2dHatch"
+}

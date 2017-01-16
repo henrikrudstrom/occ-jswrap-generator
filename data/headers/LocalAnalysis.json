@@ -1,0 +1,843 @@
+{
+  "headers": [
+    "LocalAnalysis_SurfaceContinuity.hxx", 
+    "LocalAnalysis_StatusErrorType.hxx", 
+    "LocalAnalysis_CurveContinuity.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "LocalAnalysis_SurfaceContinuity", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::LocalAnalysis_SurfaceContinuity(opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, GeomAbs_Shape, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surf1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v1", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surf2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v2", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Order", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsNul", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsC0", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsC1", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsC2", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsG1", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Percent", 
+              "default": "0.01", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Maxlen", 
+              "default": "10000", 
+              "const": true
+            }
+          ], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "LocalAnalysis_SurfaceContinuity", 
+          "return": {
+            "type": "LocalAnalysis_SurfaceContinuity", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::LocalAnalysis_SurfaceContinuity(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom2d_Curve>, Standard_Real, opencascade::handle<Geom_Surface>, opencascade::handle<Geom_Surface>, GeomAbs_Shape, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "curv1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "curv2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surf1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "Surf2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Order", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsNul", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsC0", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsC1", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsC2", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsG1", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Percent", 
+              "default": "0.01", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Maxlen", 
+              "default": "10000", 
+              "const": true
+            }
+          ], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "LocalAnalysis_SurfaceContinuity", 
+          "return": {
+            "type": "LocalAnalysis_SurfaceContinuity", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::LocalAnalysis_SurfaceContinuity(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "EpsNul", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsC0", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsC1", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsC2", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsG1", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Percent", 
+              "default": "0.01", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Maxlen", 
+              "default": "10000", 
+              "const": true
+            }
+          ], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "LocalAnalysis_SurfaceContinuity", 
+          "return": {
+            "type": "LocalAnalysis_SurfaceContinuity", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::LocalAnalysis_SurfaceContinuity(LocalAnalysis_SurfaceContinuity)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "LocalAnalysis_SurfaceContinuity", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "LocalAnalysis_SurfaceContinuity", 
+          "return": {
+            "type": "LocalAnalysis_SurfaceContinuity", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::ComputeAnalysis(GeomLProp_SLProps, GeomLProp_SLProps, GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GeomLProp_SLProps", 
+              "name": "Surf1", 
+              "ref": true
+            }, 
+            {
+              "type": "GeomLProp_SLProps", 
+              "name": "Surf2", 
+              "ref": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Order", 
+              "const": true
+            }
+          ], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "ComputeAnalysis", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::ContinuityStatus()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "ContinuityStatus", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::StatusError()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "StatusError", 
+          "return": {
+            "type": "LocalAnalysis_StatusErrorType"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::C0Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "C0Value", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::C1UAngle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "C1UAngle", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::C1URatio()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "C1URatio", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::C1VAngle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "C1VAngle", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::C1VRatio()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "C1VRatio", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::C2UAngle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "C2UAngle", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::C2URatio()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "C2URatio", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::C2VAngle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "C2VAngle", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::C2VRatio()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "C2VRatio", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::G1Angle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "G1Angle", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::G2CurvatureGap()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "G2CurvatureGap", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::IsC0()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "IsC0", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::IsC1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "IsC1", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::IsC2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "IsC2", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::IsG1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "IsG1", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_SurfaceContinuity::IsG2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_SurfaceContinuity", 
+          "name": "IsG2", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/LocalAnalysis_SurfaceContinuity.hxx", 
+        37
+      ], 
+      "key": "LocalAnalysis_SurfaceContinuity"
+    }, 
+    {
+      "declType": "class", 
+      "name": "LocalAnalysis_CurveContinuity", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "LocalAnalysis_CurveContinuity::LocalAnalysis_CurveContinuity(opencascade::handle<Geom_Curve>, Standard_Real, opencascade::handle<Geom_Curve>, Standard_Real, GeomAbs_Shape, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Curv1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u1", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Curv2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u2", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "Order", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsNul", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsC0", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsC1", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsC2", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsG1", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "EpsG2", 
+              "default": "0.001", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Percent", 
+              "default": "0.01", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Maxlen", 
+              "default": "10000", 
+              "const": true
+            }
+          ], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "LocalAnalysis_CurveContinuity", 
+          "return": {
+            "type": "LocalAnalysis_CurveContinuity", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::LocalAnalysis_CurveContinuity(LocalAnalysis_CurveContinuity)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "LocalAnalysis_CurveContinuity", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "LocalAnalysis_CurveContinuity", 
+          "return": {
+            "type": "LocalAnalysis_CurveContinuity", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::StatusError()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "StatusError", 
+          "return": {
+            "type": "LocalAnalysis_StatusErrorType"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::ContinuityStatus()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "ContinuityStatus", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::C0Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "C0Value", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::C1Angle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "C1Angle", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::C1Ratio()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "C1Ratio", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::C2Angle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "C2Angle", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::C2Ratio()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "C2Ratio", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::G1Angle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "G1Angle", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::G2Angle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "G2Angle", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::G2CurvatureVariation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "G2CurvatureVariation", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::IsC0()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "IsC0", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::IsC1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "IsC1", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::IsC2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "IsC2", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::IsG1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "IsG1", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "LocalAnalysis_CurveContinuity::IsG2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "LocalAnalysis_CurveContinuity", 
+          "name": "IsG2", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/LocalAnalysis_CurveContinuity.hxx", 
+        36
+      ], 
+      "key": "LocalAnalysis_CurveContinuity"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "LocalAnalysis_NullFirstDerivative", 
+          0
+        ], 
+        [
+          "LocalAnalysis_NullSecondDerivative", 
+          1
+        ], 
+        [
+          "LocalAnalysis_TangentNotDefined", 
+          2
+        ], 
+        [
+          "LocalAnalysis_NormalNotDefined", 
+          3
+        ], 
+        [
+          "LocalAnalysis_CurvatureNotDefined", 
+          4
+        ]
+      ], 
+      "name": "LocalAnalysis_StatusErrorType", 
+      "key": "LocalAnalysis_StatusErrorType"
+    }
+  ], 
+  "name": "LocalAnalysis"
+}

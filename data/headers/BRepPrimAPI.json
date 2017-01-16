@@ -1,0 +1,2689 @@
+{
+  "headers": [
+    "BRepPrimAPI_MakeOneAxis.hxx", 
+    "BRepPrimAPI_MakeRevolution.hxx", 
+    "BRepPrimAPI_MakeWedge.hxx", 
+    "BRepPrimAPI_MakeSweep.hxx", 
+    "BRepPrimAPI_MakePrism.hxx", 
+    "BRepPrimAPI_MakeCone.hxx", 
+    "BRepPrimAPI_MakeCylinder.hxx", 
+    "BRepPrimAPI_MakeRevol.hxx", 
+    "BRepPrimAPI_MakeHalfSpace.hxx", 
+    "BRepPrimAPI_MakeTorus.hxx", 
+    "BRepPrimAPI_MakeSphere.hxx", 
+    "BRepPrimAPI_MakeBox.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "BRepPrimAPI_MakeOneAxis", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "BRepPrimAPI_MakeOneAxis::OneAxis()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeOneAxis", 
+          "name": "OneAxis", 
+          "return": {
+            "type": "Standard_Address"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeOneAxis::Build()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeOneAxis", 
+          "name": "Build", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeOneAxis::Face()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeOneAxis", 
+          "name": "Face", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeOneAxis::Shell()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeOneAxis", 
+          "name": "Shell", 
+          "return": {
+            "type": "TopoDS_Shell", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeOneAxis::Solid()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeOneAxis", 
+          "name": "Solid", 
+          "return": {
+            "type": "TopoDS_Solid", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepBuilderAPI_MakeShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrimAPI_MakeOneAxis.hxx", 
+        34
+      ], 
+      "key": "BRepPrimAPI_MakeOneAxis"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrimAPI_MakeRevolution", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(opencascade::handle<Geom_Curve>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Meridian", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeRevolution", 
+          "name": "BRepPrimAPI_MakeRevolution", 
+          "return": {
+            "type": "BRepPrimAPI_MakeRevolution", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(opencascade::handle<Geom_Curve>, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Meridian", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeRevolution", 
+          "name": "BRepPrimAPI_MakeRevolution", 
+          "return": {
+            "type": "BRepPrimAPI_MakeRevolution", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(opencascade::handle<Geom_Curve>, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Meridian", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeRevolution", 
+          "name": "BRepPrimAPI_MakeRevolution", 
+          "return": {
+            "type": "BRepPrimAPI_MakeRevolution", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(opencascade::handle<Geom_Curve>, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Meridian", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeRevolution", 
+          "name": "BRepPrimAPI_MakeRevolution", 
+          "return": {
+            "type": "BRepPrimAPI_MakeRevolution", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(gp_Ax2, opencascade::handle<Geom_Curve>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Meridian", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeRevolution", 
+          "name": "BRepPrimAPI_MakeRevolution", 
+          "return": {
+            "type": "BRepPrimAPI_MakeRevolution", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(gp_Ax2, opencascade::handle<Geom_Curve>, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Meridian", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeRevolution", 
+          "name": "BRepPrimAPI_MakeRevolution", 
+          "return": {
+            "type": "BRepPrimAPI_MakeRevolution", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(gp_Ax2, opencascade::handle<Geom_Curve>, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Meridian", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeRevolution", 
+          "name": "BRepPrimAPI_MakeRevolution", 
+          "return": {
+            "type": "BRepPrimAPI_MakeRevolution", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(gp_Ax2, opencascade::handle<Geom_Curve>, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "Meridian", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeRevolution", 
+          "name": "BRepPrimAPI_MakeRevolution", 
+          "return": {
+            "type": "BRepPrimAPI_MakeRevolution", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(BRepPrimAPI_MakeRevolution)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrimAPI_MakeRevolution", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeRevolution", 
+          "name": "BRepPrimAPI_MakeRevolution", 
+          "return": {
+            "type": "BRepPrimAPI_MakeRevolution", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevolution::OneAxis()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeRevolution", 
+          "name": "OneAxis", 
+          "return": {
+            "type": "Standard_Address"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevolution::Revolution()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeRevolution", 
+          "name": "Revolution", 
+          "return": {
+            "type": "BRepPrim_Revolution", 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepPrimAPI_MakeOneAxis"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrimAPI_MakeRevolution.hxx", 
+        39
+      ], 
+      "key": "BRepPrimAPI_MakeRevolution"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrimAPI_MakeWedge", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrimAPI_MakeWedge::BRepPrimAPI_MakeWedge(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "dx", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dy", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dz", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ltx", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeWedge", 
+          "name": "BRepPrimAPI_MakeWedge", 
+          "return": {
+            "type": "BRepPrimAPI_MakeWedge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeWedge::BRepPrimAPI_MakeWedge(gp_Ax2, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dx", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dy", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dz", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ltx", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeWedge", 
+          "name": "BRepPrimAPI_MakeWedge", 
+          "return": {
+            "type": "BRepPrimAPI_MakeWedge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeWedge::BRepPrimAPI_MakeWedge(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "dx", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dy", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dz", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "xmin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "zmin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "xmax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "zmax", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeWedge", 
+          "name": "BRepPrimAPI_MakeWedge", 
+          "return": {
+            "type": "BRepPrimAPI_MakeWedge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeWedge::BRepPrimAPI_MakeWedge(gp_Ax2, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dx", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dy", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dz", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "xmin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "zmin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "xmax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "zmax", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeWedge", 
+          "name": "BRepPrimAPI_MakeWedge", 
+          "return": {
+            "type": "BRepPrimAPI_MakeWedge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeWedge::BRepPrimAPI_MakeWedge(BRepPrimAPI_MakeWedge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrimAPI_MakeWedge", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeWedge", 
+          "name": "BRepPrimAPI_MakeWedge", 
+          "return": {
+            "type": "BRepPrimAPI_MakeWedge", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeWedge::Wedge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeWedge", 
+          "name": "Wedge", 
+          "return": {
+            "type": "BRepPrim_Wedge", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeWedge::Build()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeWedge", 
+          "name": "Build", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeWedge::Shell()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeWedge", 
+          "name": "Shell", 
+          "return": {
+            "type": "TopoDS_Shell", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeWedge::Solid()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeWedge", 
+          "name": "Solid", 
+          "return": {
+            "type": "TopoDS_Solid", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepBuilderAPI_MakeShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrimAPI_MakeWedge.hxx", 
+        40
+      ], 
+      "key": "BRepPrimAPI_MakeWedge"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrimAPI_MakeSweep", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "BRepPrimAPI_MakeSweep::FirstShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeSweep", 
+          "name": "FirstShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeSweep::LastShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeSweep", 
+          "name": "LastShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepBuilderAPI_MakeShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrimAPI_MakeSweep.hxx", 
+        44
+      ], 
+      "key": "BRepPrimAPI_MakeSweep"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrimAPI_MakePrism", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrimAPI_MakePrism::BRepPrimAPI_MakePrism(TopoDS_Shape, gp_Vec, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Copy", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Canonize", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakePrism", 
+          "name": "BRepPrimAPI_MakePrism", 
+          "return": {
+            "type": "BRepPrimAPI_MakePrism", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakePrism::BRepPrimAPI_MakePrism(TopoDS_Shape, gp_Dir, Standard_Boolean, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Dir", 
+              "name": "D", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Inf", 
+              "default": "true", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Copy", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Canonize", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakePrism", 
+          "name": "BRepPrimAPI_MakePrism", 
+          "return": {
+            "type": "BRepPrimAPI_MakePrism", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakePrism::BRepPrimAPI_MakePrism(BRepPrimAPI_MakePrism)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrimAPI_MakePrism", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakePrism", 
+          "name": "BRepPrimAPI_MakePrism", 
+          "return": {
+            "type": "BRepPrimAPI_MakePrism", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakePrism::Prism()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakePrism", 
+          "name": "Prism", 
+          "return": {
+            "type": "BRepSweep_Prism", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakePrism::Build()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakePrism", 
+          "name": "Build", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakePrism::FirstShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakePrism", 
+          "name": "FirstShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakePrism::LastShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakePrism", 
+          "name": "LastShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakePrism::Generated(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakePrism", 
+          "name": "Generated", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakePrism::FirstShape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "theShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakePrism", 
+          "name": "FirstShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakePrism::LastShape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "theShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakePrism", 
+          "name": "LastShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepPrimAPI_MakeSweep"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrimAPI_MakePrism.hxx", 
+        51
+      ], 
+      "key": "BRepPrimAPI_MakePrism"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrimAPI_MakeCone", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrimAPI_MakeCone::BRepPrimAPI_MakeCone(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "H", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeCone", 
+          "name": "BRepPrimAPI_MakeCone", 
+          "return": {
+            "type": "BRepPrimAPI_MakeCone", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeCone::BRepPrimAPI_MakeCone(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "H", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeCone", 
+          "name": "BRepPrimAPI_MakeCone", 
+          "return": {
+            "type": "BRepPrimAPI_MakeCone", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeCone::BRepPrimAPI_MakeCone(gp_Ax2, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "H", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeCone", 
+          "name": "BRepPrimAPI_MakeCone", 
+          "return": {
+            "type": "BRepPrimAPI_MakeCone", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeCone::BRepPrimAPI_MakeCone(gp_Ax2, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "H", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeCone", 
+          "name": "BRepPrimAPI_MakeCone", 
+          "return": {
+            "type": "BRepPrimAPI_MakeCone", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeCone::BRepPrimAPI_MakeCone(BRepPrimAPI_MakeCone)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrimAPI_MakeCone", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeCone", 
+          "name": "BRepPrimAPI_MakeCone", 
+          "return": {
+            "type": "BRepPrimAPI_MakeCone", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeCone::OneAxis()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeCone", 
+          "name": "OneAxis", 
+          "return": {
+            "type": "Standard_Address"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeCone::Cone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeCone", 
+          "name": "Cone", 
+          "return": {
+            "type": "BRepPrim_Cone", 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepPrimAPI_MakeOneAxis"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrimAPI_MakeCone.hxx", 
+        38
+      ], 
+      "key": "BRepPrimAPI_MakeCone"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrimAPI_MakeCylinder", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrimAPI_MakeCylinder::BRepPrimAPI_MakeCylinder(Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "H", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeCylinder", 
+          "name": "BRepPrimAPI_MakeCylinder", 
+          "return": {
+            "type": "BRepPrimAPI_MakeCylinder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeCylinder::BRepPrimAPI_MakeCylinder(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "H", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Angle", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeCylinder", 
+          "name": "BRepPrimAPI_MakeCylinder", 
+          "return": {
+            "type": "BRepPrimAPI_MakeCylinder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeCylinder::BRepPrimAPI_MakeCylinder(gp_Ax2, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "H", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeCylinder", 
+          "name": "BRepPrimAPI_MakeCylinder", 
+          "return": {
+            "type": "BRepPrimAPI_MakeCylinder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeCylinder::BRepPrimAPI_MakeCylinder(gp_Ax2, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "H", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Angle", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeCylinder", 
+          "name": "BRepPrimAPI_MakeCylinder", 
+          "return": {
+            "type": "BRepPrimAPI_MakeCylinder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeCylinder::BRepPrimAPI_MakeCylinder(BRepPrimAPI_MakeCylinder)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrimAPI_MakeCylinder", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeCylinder", 
+          "name": "BRepPrimAPI_MakeCylinder", 
+          "return": {
+            "type": "BRepPrimAPI_MakeCylinder", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeCylinder::OneAxis()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeCylinder", 
+          "name": "OneAxis", 
+          "return": {
+            "type": "Standard_Address"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeCylinder::Cylinder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeCylinder", 
+          "name": "Cylinder", 
+          "return": {
+            "type": "BRepPrim_Cylinder", 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepPrimAPI_MakeOneAxis"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrimAPI_MakeCylinder.hxx", 
+        38
+      ], 
+      "key": "BRepPrimAPI_MakeCylinder"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrimAPI_MakeRevol", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrimAPI_MakeRevol::BRepPrimAPI_MakeRevol(TopoDS_Shape, gp_Ax1, Standard_Real, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Ax1", 
+              "name": "A", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Copy", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeRevol", 
+          "name": "BRepPrimAPI_MakeRevol", 
+          "return": {
+            "type": "BRepPrimAPI_MakeRevol", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevol::BRepPrimAPI_MakeRevol(TopoDS_Shape, gp_Ax1, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Ax1", 
+              "name": "A", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Copy", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeRevol", 
+          "name": "BRepPrimAPI_MakeRevol", 
+          "return": {
+            "type": "BRepPrimAPI_MakeRevol", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevol::BRepPrimAPI_MakeRevol(BRepPrimAPI_MakeRevol)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrimAPI_MakeRevol", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeRevol", 
+          "name": "BRepPrimAPI_MakeRevol", 
+          "return": {
+            "type": "BRepPrimAPI_MakeRevol", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevol::Revol()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeRevol", 
+          "name": "Revol", 
+          "return": {
+            "type": "BRepSweep_Revol", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevol::Build()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeRevol", 
+          "name": "Build", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevol::FirstShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeRevol", 
+          "name": "FirstShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevol::LastShape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeRevol", 
+          "name": "LastShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevol::Generated(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeRevol", 
+          "name": "Generated", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevol::FirstShape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "theShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeRevol", 
+          "name": "FirstShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevol::LastShape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "theShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeRevol", 
+          "name": "LastShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevol::HasDegenerated()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeRevol", 
+          "name": "HasDegenerated", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeRevol::Degenerated()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeRevol", 
+          "name": "Degenerated", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepPrimAPI_MakeSweep"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrimAPI_MakeRevol.hxx", 
+        65
+      ], 
+      "key": "BRepPrimAPI_MakeRevol"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrimAPI_MakeHalfSpace", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrimAPI_MakeHalfSpace::BRepPrimAPI_MakeHalfSpace(TopoDS_Face, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "Face", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "RefPnt", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeHalfSpace", 
+          "name": "BRepPrimAPI_MakeHalfSpace", 
+          "return": {
+            "type": "BRepPrimAPI_MakeHalfSpace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeHalfSpace::BRepPrimAPI_MakeHalfSpace(TopoDS_Shell, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shell", 
+              "name": "Shell", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "RefPnt", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeHalfSpace", 
+          "name": "BRepPrimAPI_MakeHalfSpace", 
+          "return": {
+            "type": "BRepPrimAPI_MakeHalfSpace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeHalfSpace::BRepPrimAPI_MakeHalfSpace(BRepPrimAPI_MakeHalfSpace)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrimAPI_MakeHalfSpace", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeHalfSpace", 
+          "name": "BRepPrimAPI_MakeHalfSpace", 
+          "return": {
+            "type": "BRepPrimAPI_MakeHalfSpace", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeHalfSpace::Solid()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeHalfSpace", 
+          "name": "Solid", 
+          "return": {
+            "type": "TopoDS_Solid", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepBuilderAPI_MakeShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrimAPI_MakeHalfSpace.hxx", 
+        43
+      ], 
+      "key": "BRepPrimAPI_MakeHalfSpace"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrimAPI_MakeTorus", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrimAPI_MakeTorus::BRepPrimAPI_MakeTorus(Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeTorus", 
+          "name": "BRepPrimAPI_MakeTorus", 
+          "return": {
+            "type": "BRepPrimAPI_MakeTorus", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeTorus::BRepPrimAPI_MakeTorus(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeTorus", 
+          "name": "BRepPrimAPI_MakeTorus", 
+          "return": {
+            "type": "BRepPrimAPI_MakeTorus", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeTorus::BRepPrimAPI_MakeTorus(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeTorus", 
+          "name": "BRepPrimAPI_MakeTorus", 
+          "return": {
+            "type": "BRepPrimAPI_MakeTorus", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeTorus::BRepPrimAPI_MakeTorus(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeTorus", 
+          "name": "BRepPrimAPI_MakeTorus", 
+          "return": {
+            "type": "BRepPrimAPI_MakeTorus", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeTorus::BRepPrimAPI_MakeTorus(gp_Ax2, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeTorus", 
+          "name": "BRepPrimAPI_MakeTorus", 
+          "return": {
+            "type": "BRepPrimAPI_MakeTorus", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeTorus::BRepPrimAPI_MakeTorus(gp_Ax2, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeTorus", 
+          "name": "BRepPrimAPI_MakeTorus", 
+          "return": {
+            "type": "BRepPrimAPI_MakeTorus", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeTorus::BRepPrimAPI_MakeTorus(gp_Ax2, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeTorus", 
+          "name": "BRepPrimAPI_MakeTorus", 
+          "return": {
+            "type": "BRepPrimAPI_MakeTorus", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeTorus::BRepPrimAPI_MakeTorus(gp_Ax2, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeTorus", 
+          "name": "BRepPrimAPI_MakeTorus", 
+          "return": {
+            "type": "BRepPrimAPI_MakeTorus", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeTorus::BRepPrimAPI_MakeTorus(BRepPrimAPI_MakeTorus)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrimAPI_MakeTorus", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeTorus", 
+          "name": "BRepPrimAPI_MakeTorus", 
+          "return": {
+            "type": "BRepPrimAPI_MakeTorus", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeTorus::OneAxis()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeTorus", 
+          "name": "OneAxis", 
+          "return": {
+            "type": "Standard_Address"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeTorus::Torus()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeTorus", 
+          "name": "Torus", 
+          "return": {
+            "type": "BRepPrim_Torus", 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepPrimAPI_MakeOneAxis"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrimAPI_MakeTorus.hxx", 
+        38
+      ], 
+      "key": "BRepPrimAPI_MakeTorus"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrimAPI_MakeSphere", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrimAPI_MakeSphere::BRepPrimAPI_MakeSphere(Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeSphere", 
+          "name": "BRepPrimAPI_MakeSphere", 
+          "return": {
+            "type": "BRepPrimAPI_MakeSphere", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeSphere::BRepPrimAPI_MakeSphere(Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeSphere", 
+          "name": "BRepPrimAPI_MakeSphere", 
+          "return": {
+            "type": "BRepPrimAPI_MakeSphere", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeSphere::BRepPrimAPI_MakeSphere(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeSphere", 
+          "name": "BRepPrimAPI_MakeSphere", 
+          "return": {
+            "type": "BRepPrimAPI_MakeSphere", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeSphere::BRepPrimAPI_MakeSphere(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle3", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeSphere", 
+          "name": "BRepPrimAPI_MakeSphere", 
+          "return": {
+            "type": "BRepPrimAPI_MakeSphere", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeSphere::BRepPrimAPI_MakeSphere(gp_Pnt, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Center", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeSphere", 
+          "name": "BRepPrimAPI_MakeSphere", 
+          "return": {
+            "type": "BRepPrimAPI_MakeSphere", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeSphere::BRepPrimAPI_MakeSphere(gp_Pnt, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Center", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeSphere", 
+          "name": "BRepPrimAPI_MakeSphere", 
+          "return": {
+            "type": "BRepPrimAPI_MakeSphere", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeSphere::BRepPrimAPI_MakeSphere(gp_Pnt, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Center", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeSphere", 
+          "name": "BRepPrimAPI_MakeSphere", 
+          "return": {
+            "type": "BRepPrimAPI_MakeSphere", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeSphere::BRepPrimAPI_MakeSphere(gp_Pnt, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Center", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle3", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeSphere", 
+          "name": "BRepPrimAPI_MakeSphere", 
+          "return": {
+            "type": "BRepPrimAPI_MakeSphere", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeSphere::BRepPrimAPI_MakeSphere(gp_Ax2, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axis", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeSphere", 
+          "name": "BRepPrimAPI_MakeSphere", 
+          "return": {
+            "type": "BRepPrimAPI_MakeSphere", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeSphere::BRepPrimAPI_MakeSphere(gp_Ax2, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axis", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeSphere", 
+          "name": "BRepPrimAPI_MakeSphere", 
+          "return": {
+            "type": "BRepPrimAPI_MakeSphere", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeSphere::BRepPrimAPI_MakeSphere(gp_Ax2, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axis", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeSphere", 
+          "name": "BRepPrimAPI_MakeSphere", 
+          "return": {
+            "type": "BRepPrimAPI_MakeSphere", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeSphere::BRepPrimAPI_MakeSphere(gp_Ax2, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axis", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "angle3", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeSphere", 
+          "name": "BRepPrimAPI_MakeSphere", 
+          "return": {
+            "type": "BRepPrimAPI_MakeSphere", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeSphere::BRepPrimAPI_MakeSphere(BRepPrimAPI_MakeSphere)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrimAPI_MakeSphere", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeSphere", 
+          "name": "BRepPrimAPI_MakeSphere", 
+          "return": {
+            "type": "BRepPrimAPI_MakeSphere", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeSphere::OneAxis()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeSphere", 
+          "name": "OneAxis", 
+          "return": {
+            "type": "Standard_Address"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeSphere::Sphere()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeSphere", 
+          "name": "Sphere", 
+          "return": {
+            "type": "BRepPrim_Sphere", 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepPrimAPI_MakeOneAxis"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrimAPI_MakeSphere.hxx", 
+        39
+      ], 
+      "key": "BRepPrimAPI_MakeSphere"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepPrimAPI_MakeBox", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepPrimAPI_MakeBox::BRepPrimAPI_MakeBox(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "dx", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dy", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dz", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeBox", 
+          "name": "BRepPrimAPI_MakeBox", 
+          "return": {
+            "type": "BRepPrimAPI_MakeBox", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeBox::BRepPrimAPI_MakeBox(gp_Pnt, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dx", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dy", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dz", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeBox", 
+          "name": "BRepPrimAPI_MakeBox", 
+          "return": {
+            "type": "BRepPrimAPI_MakeBox", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeBox::BRepPrimAPI_MakeBox(gp_Pnt, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeBox", 
+          "name": "BRepPrimAPI_MakeBox", 
+          "return": {
+            "type": "BRepPrimAPI_MakeBox", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeBox::BRepPrimAPI_MakeBox(gp_Ax2, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Ax2", 
+              "name": "Axes", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dx", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dy", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dz", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeBox", 
+          "name": "BRepPrimAPI_MakeBox", 
+          "return": {
+            "type": "BRepPrimAPI_MakeBox", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeBox::BRepPrimAPI_MakeBox(BRepPrimAPI_MakeBox)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepPrimAPI_MakeBox", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepPrimAPI_MakeBox", 
+          "name": "BRepPrimAPI_MakeBox", 
+          "return": {
+            "type": "BRepPrimAPI_MakeBox", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeBox::Wedge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeBox", 
+          "name": "Wedge", 
+          "return": {
+            "type": "BRepPrim_Wedge", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeBox::Build()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeBox", 
+          "name": "Build", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeBox::Shell()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeBox", 
+          "name": "Shell", 
+          "return": {
+            "type": "TopoDS_Shell", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeBox::Solid()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeBox", 
+          "name": "Solid", 
+          "return": {
+            "type": "TopoDS_Solid", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeBox::BottomFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeBox", 
+          "name": "BottomFace", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeBox::BackFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeBox", 
+          "name": "BackFace", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeBox::FrontFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeBox", 
+          "name": "FrontFace", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeBox::LeftFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeBox", 
+          "name": "LeftFace", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeBox::RightFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeBox", 
+          "name": "RightFace", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepPrimAPI_MakeBox::TopFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepPrimAPI_MakeBox", 
+          "name": "TopFace", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepBuilderAPI_MakeShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepPrimAPI_MakeBox.hxx", 
+        43
+      ], 
+      "key": "BRepPrimAPI_MakeBox"
+    }
+  ], 
+  "name": "BRepPrimAPI"
+}

@@ -1,0 +1,200 @@
+{
+  "headers": [
+    "TopExp_Explorer.hxx", 
+    "TopExp_Stack.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "TopExp_Explorer", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "TopExp_Explorer::TopExp_Explorer()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "TopExp_Explorer", 
+          "name": "TopExp_Explorer", 
+          "return": {
+            "type": "TopExp_Explorer", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopExp_Explorer::TopExp_Explorer(TopoDS_Shape, TopAbs_ShapeEnum, TopAbs_ShapeEnum)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_ShapeEnum", 
+              "name": "ToFind", 
+              "const": true
+            }, 
+            {
+              "type": "TopAbs_ShapeEnum", 
+              "name": "ToAvoid", 
+              "default": "::TopAbs_ShapeEnum::TopAbs_SHAPE", 
+              "const": true
+            }
+          ], 
+          "parent": "TopExp_Explorer", 
+          "name": "TopExp_Explorer", 
+          "return": {
+            "type": "TopExp_Explorer", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopExp_Explorer::TopExp_Explorer(TopExp_Explorer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopExp_Explorer", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopExp_Explorer", 
+          "name": "TopExp_Explorer", 
+          "return": {
+            "type": "TopExp_Explorer", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "TopExp_Explorer::Init(TopoDS_Shape, TopAbs_ShapeEnum, TopAbs_ShapeEnum)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_ShapeEnum", 
+              "name": "ToFind", 
+              "const": true
+            }, 
+            {
+              "type": "TopAbs_ShapeEnum", 
+              "name": "ToAvoid", 
+              "default": "::TopAbs_ShapeEnum::TopAbs_SHAPE", 
+              "const": true
+            }
+          ], 
+          "parent": "TopExp_Explorer", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopExp_Explorer::More()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopExp_Explorer", 
+          "name": "More", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopExp_Explorer::Next()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopExp_Explorer", 
+          "name": "Next", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopExp_Explorer::Current()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopExp_Explorer", 
+          "name": "Current", 
+          "return": {
+            "type": "TopoDS_Shape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopExp_Explorer::ReInit()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopExp_Explorer", 
+          "name": "ReInit", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopExp_Explorer::Depth()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopExp_Explorer", 
+          "name": "Depth", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopExp_Explorer::Clear()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopExp_Explorer", 
+          "name": "Clear", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "TopExp_Explorer::Destroy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopExp_Explorer", 
+          "name": "Destroy", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/TopExp_Explorer.hxx", 
+        91
+      ], 
+      "key": "TopExp_Explorer"
+    }, 
+    {
+      "type": "TopoDS_Iterator *", 
+      "declType": "typedef", 
+      "name": "TopExp_Stack", 
+      "key": "TopExp_Stack"
+    }
+  ], 
+  "name": "TopExp"
+}

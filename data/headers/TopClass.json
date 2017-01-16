@@ -1,0 +1,331 @@
+{
+  "headers": [
+    "TopClass_SolidExplorer.hxx", 
+    "TopClass_Intersection3d.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "TopClass_SolidExplorer", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "TopClass_SolidExplorer::Reject(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopClass_SolidExplorer", 
+          "name": "Reject", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopClass_SolidExplorer::Segment(gp_Pnt, gp_Lin, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "ref": true
+            }
+          ], 
+          "parent": "TopClass_SolidExplorer", 
+          "name": "Segment", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopClass_SolidExplorer::OtherSegment(gp_Pnt, gp_Lin, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "ref": true
+            }
+          ], 
+          "parent": "TopClass_SolidExplorer", 
+          "name": "OtherSegment", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopClass_SolidExplorer::InitShell()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopClass_SolidExplorer", 
+          "name": "InitShell", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopClass_SolidExplorer::MoreShells()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopClass_SolidExplorer", 
+          "name": "MoreShells", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopClass_SolidExplorer::NextShell()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopClass_SolidExplorer", 
+          "name": "NextShell", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopClass_SolidExplorer::RejectShell(gp_Lin, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "const": true
+            }
+          ], 
+          "parent": "TopClass_SolidExplorer", 
+          "name": "RejectShell", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopClass_SolidExplorer::InitFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopClass_SolidExplorer", 
+          "name": "InitFace", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopClass_SolidExplorer::MoreFaces()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopClass_SolidExplorer", 
+          "name": "MoreFaces", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopClass_SolidExplorer::NextFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopClass_SolidExplorer", 
+          "name": "NextFace", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopClass_SolidExplorer::CurrentFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopClass_SolidExplorer", 
+          "name": "CurrentFace", 
+          "return": {
+            "type": "TopoDS_Face"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopClass_SolidExplorer::RejectFace(gp_Lin, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "const": true
+            }
+          ], 
+          "parent": "TopClass_SolidExplorer", 
+          "name": "RejectFace", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/TopClass_SolidExplorer.hxx", 
+        34
+      ], 
+      "key": "TopClass_SolidExplorer"
+    }, 
+    {
+      "declType": "class", 
+      "name": "TopClass_Intersection3d", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "TopClass_Intersection3d::Perform(gp_Lin, Standard_Real, Standard_Real, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Prm", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "Face", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "TopClass_Intersection3d", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopClass_Intersection3d::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopClass_Intersection3d", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopClass_Intersection3d::HasAPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopClass_Intersection3d", 
+          "name": "HasAPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopClass_Intersection3d::Point()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopClass_Intersection3d", 
+          "name": "Point", 
+          "return": {
+            "type": "IntCurveSurface_IntersectionPoint", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "TopClass_Intersection3d::State()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "TopClass_Intersection3d", 
+          "name": "State", 
+          "return": {
+            "type": "TopAbs_State"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/TopClass_Intersection3d.hxx", 
+        38
+      ], 
+      "key": "TopClass_Intersection3d"
+    }
+  ], 
+  "name": "TopClass"
+}

@@ -1,0 +1,4062 @@
+{
+  "headers": [
+    "GccAna_Lin2dTanObl.hxx", 
+    "GccAna_Circ2d3Tan.hxx", 
+    "GccAna_Pnt2dBisec.hxx", 
+    "GccAna_CircPnt2dBisec.hxx", 
+    "GccAna_Circ2dBisec.hxx", 
+    "GccAna_Lin2dTanPer.hxx", 
+    "GccAna_Circ2dTanCen.hxx", 
+    "GccAna_NoSolution.hxx", 
+    "GccAna_Circ2d2TanOn.hxx", 
+    "GccAna_Circ2d2TanRad.hxx", 
+    "GccAna_LinPnt2dBisec.hxx", 
+    "GccAna_Lin2d2Tan.hxx", 
+    "GccAna_Lin2dTanPar.hxx", 
+    "GccAna_Circ2dTanOnRad.hxx", 
+    "GccAna_CircLin2dBisec.hxx", 
+    "GccAna_Lin2dBisec.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "GccAna_Lin2dTanObl", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccAna_Lin2dTanObl::GccAna_Lin2dTanObl(gp_Pnt2d, gp_Lin2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "ThePoint", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "TheLine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TheAngle", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanObl", 
+          "name": "GccAna_Lin2dTanObl", 
+          "return": {
+            "type": "GccAna_Lin2dTanObl", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanObl::GccAna_Lin2dTanObl(GccEnt_QualifiedCirc, gp_Lin2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "TheLine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TheAngle", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanObl", 
+          "name": "GccAna_Lin2dTanObl", 
+          "return": {
+            "type": "GccAna_Lin2dTanObl", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanObl::GccAna_Lin2dTanObl(GccAna_Lin2dTanObl)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccAna_Lin2dTanObl", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanObl", 
+          "name": "GccAna_Lin2dTanObl", 
+          "return": {
+            "type": "GccAna_Lin2dTanObl", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanObl::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Lin2dTanObl", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanObl::NbSolutions()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Lin2dTanObl", 
+          "name": "NbSolutions", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanObl::ThisSolution(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanObl", 
+          "name": "ThisSolution", 
+          "return": {
+            "type": "gp_Lin2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanObl::WhichQualifier(Standard_Integer, GccEnt_Position)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "GccEnt_Position", 
+              "name": "Qualif1", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanObl", 
+          "name": "WhichQualifier", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanObl::Tangency1(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanObl", 
+          "name": "Tangency1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanObl::Intersection2(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanObl", 
+          "name": "Intersection2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GccAna_Lin2dTanObl.hxx", 
+        48
+      ], 
+      "key": "GccAna_Lin2dTanObl"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccAna_Circ2d3Tan", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccAna_Circ2d3Tan::GccAna_Circ2d3Tan(GccEnt_QualifiedCirc, GccEnt_QualifiedCirc, GccEnt_QualifiedCirc, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified3", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "GccAna_Circ2d3Tan", 
+          "return": {
+            "type": "GccAna_Circ2d3Tan", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::GccAna_Circ2d3Tan(GccEnt_QualifiedCirc, GccEnt_QualifiedCirc, GccEnt_QualifiedLin, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified3", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "GccAna_Circ2d3Tan", 
+          "return": {
+            "type": "GccAna_Circ2d3Tan", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::GccAna_Circ2d3Tan(GccEnt_QualifiedCirc, GccEnt_QualifiedLin, GccEnt_QualifiedLin, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified3", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "GccAna_Circ2d3Tan", 
+          "return": {
+            "type": "GccAna_Circ2d3Tan", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::GccAna_Circ2d3Tan(GccEnt_QualifiedLin, GccEnt_QualifiedLin, GccEnt_QualifiedLin, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified3", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "GccAna_Circ2d3Tan", 
+          "return": {
+            "type": "GccAna_Circ2d3Tan", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::GccAna_Circ2d3Tan(GccEnt_QualifiedCirc, GccEnt_QualifiedCirc, gp_Pnt2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point3", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "GccAna_Circ2d3Tan", 
+          "return": {
+            "type": "GccAna_Circ2d3Tan", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::GccAna_Circ2d3Tan(GccEnt_QualifiedCirc, GccEnt_QualifiedLin, gp_Pnt2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point3", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "GccAna_Circ2d3Tan", 
+          "return": {
+            "type": "GccAna_Circ2d3Tan", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::GccAna_Circ2d3Tan(GccEnt_QualifiedLin, GccEnt_QualifiedLin, gp_Pnt2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point3", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "GccAna_Circ2d3Tan", 
+          "return": {
+            "type": "GccAna_Circ2d3Tan", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::GccAna_Circ2d3Tan(GccEnt_QualifiedCirc, gp_Pnt2d, gp_Pnt2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point3", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "GccAna_Circ2d3Tan", 
+          "return": {
+            "type": "GccAna_Circ2d3Tan", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::GccAna_Circ2d3Tan(GccEnt_QualifiedLin, gp_Pnt2d, gp_Pnt2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point3", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "GccAna_Circ2d3Tan", 
+          "return": {
+            "type": "GccAna_Circ2d3Tan", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::GccAna_Circ2d3Tan(gp_Pnt2d, gp_Pnt2d, gp_Pnt2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point3", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "GccAna_Circ2d3Tan", 
+          "return": {
+            "type": "GccAna_Circ2d3Tan", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::GccAna_Circ2d3Tan(GccAna_Circ2d3Tan)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccAna_Circ2d3Tan", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "GccAna_Circ2d3Tan", 
+          "return": {
+            "type": "GccAna_Circ2d3Tan", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::NbSolutions()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "NbSolutions", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::ThisSolution(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "ThisSolution", 
+          "return": {
+            "type": "gp_Circ2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::WhichQualifier(Standard_Integer, GccEnt_Position, GccEnt_Position, GccEnt_Position)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "GccEnt_Position", 
+              "name": "Qualif1", 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_Position", 
+              "name": "Qualif2", 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_Position", 
+              "name": "Qualif3", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "WhichQualifier", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::Tangency1(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "Tangency1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::Tangency2(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "Tangency2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::Tangency3(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "Tangency3", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::IsTheSame1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "IsTheSame1", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::IsTheSame2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "IsTheSame2", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d3Tan::IsTheSame3(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d3Tan", 
+          "name": "IsTheSame3", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GccAna_Circ2d3Tan.hxx", 
+        61
+      ], 
+      "key": "GccAna_Circ2d3Tan"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccAna_Pnt2dBisec", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccAna_Pnt2dBisec::GccAna_Pnt2dBisec(gp_Pnt2d, gp_Pnt2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Pnt2dBisec", 
+          "name": "GccAna_Pnt2dBisec", 
+          "return": {
+            "type": "GccAna_Pnt2dBisec", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Pnt2dBisec::GccAna_Pnt2dBisec(GccAna_Pnt2dBisec)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccAna_Pnt2dBisec", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Pnt2dBisec", 
+          "name": "GccAna_Pnt2dBisec", 
+          "return": {
+            "type": "GccAna_Pnt2dBisec", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccAna_Pnt2dBisec::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Pnt2dBisec", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Pnt2dBisec::HasSolution()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Pnt2dBisec", 
+          "name": "HasSolution", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Pnt2dBisec::ThisSolution()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Pnt2dBisec", 
+          "name": "ThisSolution", 
+          "return": {
+            "type": "gp_Lin2d"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GccAna_Pnt2dBisec.hxx", 
+        40
+      ], 
+      "key": "GccAna_Pnt2dBisec"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccAna_CircPnt2dBisec", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccAna_CircPnt2dBisec::GccAna_CircPnt2dBisec(gp_Circ2d, gp_Pnt2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "Circle1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_CircPnt2dBisec", 
+          "name": "GccAna_CircPnt2dBisec", 
+          "return": {
+            "type": "GccAna_CircPnt2dBisec", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_CircPnt2dBisec::GccAna_CircPnt2dBisec(gp_Circ2d, gp_Pnt2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "Circle1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_CircPnt2dBisec", 
+          "name": "GccAna_CircPnt2dBisec", 
+          "return": {
+            "type": "GccAna_CircPnt2dBisec", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_CircPnt2dBisec::GccAna_CircPnt2dBisec(GccAna_CircPnt2dBisec)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccAna_CircPnt2dBisec", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_CircPnt2dBisec", 
+          "name": "GccAna_CircPnt2dBisec", 
+          "return": {
+            "type": "GccAna_CircPnt2dBisec", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccAna_CircPnt2dBisec::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_CircPnt2dBisec", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_CircPnt2dBisec::NbSolutions()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_CircPnt2dBisec", 
+          "name": "NbSolutions", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_CircPnt2dBisec::ThisSolution(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_CircPnt2dBisec", 
+          "name": "ThisSolution", 
+          "return": {
+            "type": "opencascade::handle<GccInt_Bisec>"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GccAna_CircPnt2dBisec.hxx", 
+        48
+      ], 
+      "key": "GccAna_CircPnt2dBisec"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccAna_Circ2dBisec", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccAna_Circ2dBisec::GccAna_Circ2dBisec(gp_Circ2d, gp_Circ2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "Circ1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "Circ2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dBisec", 
+          "name": "GccAna_Circ2dBisec", 
+          "return": {
+            "type": "GccAna_Circ2dBisec", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dBisec::GccAna_Circ2dBisec(GccAna_Circ2dBisec)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccAna_Circ2dBisec", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dBisec", 
+          "name": "GccAna_Circ2dBisec", 
+          "return": {
+            "type": "GccAna_Circ2dBisec", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccAna_Circ2dBisec::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Circ2dBisec", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dBisec::NbSolutions()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Circ2dBisec", 
+          "name": "NbSolutions", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dBisec::ThisSolution(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dBisec", 
+          "name": "ThisSolution", 
+          "return": {
+            "type": "opencascade::handle<GccInt_Bisec>"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GccAna_Circ2dBisec.hxx", 
+        43
+      ], 
+      "key": "GccAna_Circ2dBisec"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccAna_Lin2dTanPer", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccAna_Lin2dTanPer::GccAna_Lin2dTanPer(gp_Pnt2d, gp_Lin2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "ThePnt", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "TheLin", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanPer", 
+          "name": "GccAna_Lin2dTanPer", 
+          "return": {
+            "type": "GccAna_Lin2dTanPer", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPer::GccAna_Lin2dTanPer(gp_Pnt2d, gp_Circ2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "ThePnt", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "TheCircle", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanPer", 
+          "name": "GccAna_Lin2dTanPer", 
+          "return": {
+            "type": "GccAna_Lin2dTanPer", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPer::GccAna_Lin2dTanPer(GccEnt_QualifiedCirc, gp_Lin2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "TheLin", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanPer", 
+          "name": "GccAna_Lin2dTanPer", 
+          "return": {
+            "type": "GccAna_Lin2dTanPer", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPer::GccAna_Lin2dTanPer(GccEnt_QualifiedCirc, gp_Circ2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "TheCircle", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanPer", 
+          "name": "GccAna_Lin2dTanPer", 
+          "return": {
+            "type": "GccAna_Lin2dTanPer", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPer::GccAna_Lin2dTanPer(GccAna_Lin2dTanPer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccAna_Lin2dTanPer", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanPer", 
+          "name": "GccAna_Lin2dTanPer", 
+          "return": {
+            "type": "GccAna_Lin2dTanPer", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPer::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Lin2dTanPer", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPer::NbSolutions()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Lin2dTanPer", 
+          "name": "NbSolutions", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPer::WhichQualifier(Standard_Integer, GccEnt_Position)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "GccEnt_Position", 
+              "name": "Qualif1", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanPer", 
+          "name": "WhichQualifier", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPer::ThisSolution(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanPer", 
+          "name": "ThisSolution", 
+          "return": {
+            "type": "gp_Lin2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPer::Tangency1(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Pnt", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanPer", 
+          "name": "Tangency1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPer::Intersection2(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanPer", 
+          "name": "Intersection2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GccAna_Lin2dTanPer.hxx", 
+        53
+      ], 
+      "key": "GccAna_Lin2dTanPer"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccAna_Circ2dTanCen", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccAna_Circ2dTanCen::GccAna_Circ2dTanCen(GccEnt_QualifiedCirc, gp_Pnt2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Pcenter", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanCen", 
+          "name": "GccAna_Circ2dTanCen", 
+          "return": {
+            "type": "GccAna_Circ2dTanCen", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanCen::GccAna_Circ2dTanCen(gp_Lin2d, gp_Pnt2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "Linetan", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Pcenter", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanCen", 
+          "name": "GccAna_Circ2dTanCen", 
+          "return": {
+            "type": "GccAna_Circ2dTanCen", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanCen::GccAna_Circ2dTanCen(gp_Pnt2d, gp_Pnt2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Pcenter", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanCen", 
+          "name": "GccAna_Circ2dTanCen", 
+          "return": {
+            "type": "GccAna_Circ2dTanCen", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanCen::GccAna_Circ2dTanCen(GccAna_Circ2dTanCen)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccAna_Circ2dTanCen", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanCen", 
+          "name": "GccAna_Circ2dTanCen", 
+          "return": {
+            "type": "GccAna_Circ2dTanCen", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanCen::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Circ2dTanCen", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanCen::NbSolutions()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Circ2dTanCen", 
+          "name": "NbSolutions", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanCen::ThisSolution(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanCen", 
+          "name": "ThisSolution", 
+          "return": {
+            "type": "gp_Circ2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanCen::WhichQualifier(Standard_Integer, GccEnt_Position)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "GccEnt_Position", 
+              "name": "Qualif1", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanCen", 
+          "name": "WhichQualifier", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanCen::Tangency1(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanCen", 
+          "name": "Tangency1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanCen::IsTheSame1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanCen", 
+          "name": "IsTheSame1", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GccAna_Circ2dTanCen.hxx", 
+        60
+      ], 
+      "key": "GccAna_Circ2dTanCen"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccAna_NoSolution", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccAna_NoSolution::GccAna_NoSolution()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "GccAna_NoSolution", 
+          "name": "GccAna_NoSolution", 
+          "return": {
+            "type": "GccAna_NoSolution", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_NoSolution::GccAna_NoSolution(Standard_CString)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_NoSolution", 
+          "name": "GccAna_NoSolution", 
+          "return": {
+            "type": "GccAna_NoSolution", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_NoSolution::GccAna_NoSolution(GccAna_NoSolution)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccAna_NoSolution", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_NoSolution", 
+          "name": "GccAna_NoSolution", 
+          "return": {
+            "type": "GccAna_NoSolution", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccAna_NoSolution::Raise(Standard_CString)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\"", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_NoSolution", 
+          "name": "Raise", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_NoSolution::Raise(Standard_SStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_SStream", 
+              "name": "theMessage", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_NoSolution", 
+          "name": "Raise", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_NoSolution::NewInstance(Standard_CString)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\"", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_NoSolution", 
+          "name": "NewInstance", 
+          "return": {
+            "type": "opencascade::handle<GccAna_NoSolution>"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_NoSolution::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_NoSolution", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_NoSolution::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_NoSolution", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_NoSolution::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_NoSolution", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_Failure"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GccAna_NoSolution.hxx", 
+        35
+      ], 
+      "key": "GccAna_NoSolution"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccAna_Circ2d2TanOn", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccAna_Circ2d2TanOn::GccAna_Circ2d2TanOn(GccEnt_QualifiedCirc, GccEnt_QualifiedCirc, gp_Lin2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "OnLine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "GccAna_Circ2d2TanOn", 
+          "return": {
+            "type": "GccAna_Circ2d2TanOn", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::GccAna_Circ2d2TanOn(GccEnt_QualifiedCirc, GccEnt_QualifiedLin, gp_Lin2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "OnLine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "GccAna_Circ2d2TanOn", 
+          "return": {
+            "type": "GccAna_Circ2d2TanOn", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::GccAna_Circ2d2TanOn(GccEnt_QualifiedLin, GccEnt_QualifiedLin, gp_Lin2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "OnLine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "GccAna_Circ2d2TanOn", 
+          "return": {
+            "type": "GccAna_Circ2d2TanOn", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::GccAna_Circ2d2TanOn(GccEnt_QualifiedCirc, gp_Pnt2d, gp_Lin2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "OnLine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "GccAna_Circ2d2TanOn", 
+          "return": {
+            "type": "GccAna_Circ2d2TanOn", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::GccAna_Circ2d2TanOn(GccEnt_QualifiedLin, gp_Pnt2d, gp_Lin2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "OnLine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "GccAna_Circ2d2TanOn", 
+          "return": {
+            "type": "GccAna_Circ2d2TanOn", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::GccAna_Circ2d2TanOn(gp_Pnt2d, gp_Pnt2d, gp_Lin2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "OnLine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "GccAna_Circ2d2TanOn", 
+          "return": {
+            "type": "GccAna_Circ2d2TanOn", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::GccAna_Circ2d2TanOn(GccEnt_QualifiedCirc, GccEnt_QualifiedCirc, gp_Circ2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "OnCirc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "GccAna_Circ2d2TanOn", 
+          "return": {
+            "type": "GccAna_Circ2d2TanOn", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::GccAna_Circ2d2TanOn(GccEnt_QualifiedCirc, GccEnt_QualifiedLin, gp_Circ2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "OnCirc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "GccAna_Circ2d2TanOn", 
+          "return": {
+            "type": "GccAna_Circ2d2TanOn", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::GccAna_Circ2d2TanOn(GccEnt_QualifiedCirc, gp_Pnt2d, gp_Circ2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "OnCirc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "GccAna_Circ2d2TanOn", 
+          "return": {
+            "type": "GccAna_Circ2d2TanOn", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::GccAna_Circ2d2TanOn(GccEnt_QualifiedLin, GccEnt_QualifiedLin, gp_Circ2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "OnCirc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "GccAna_Circ2d2TanOn", 
+          "return": {
+            "type": "GccAna_Circ2d2TanOn", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::GccAna_Circ2d2TanOn(GccEnt_QualifiedLin, gp_Pnt2d, gp_Circ2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "OnCirc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "GccAna_Circ2d2TanOn", 
+          "return": {
+            "type": "GccAna_Circ2d2TanOn", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::GccAna_Circ2d2TanOn(gp_Pnt2d, gp_Pnt2d, gp_Circ2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "OnCirc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "GccAna_Circ2d2TanOn", 
+          "return": {
+            "type": "GccAna_Circ2d2TanOn", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::GccAna_Circ2d2TanOn(GccAna_Circ2d2TanOn)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccAna_Circ2d2TanOn", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "GccAna_Circ2d2TanOn", 
+          "return": {
+            "type": "GccAna_Circ2d2TanOn", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::NbSolutions()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "NbSolutions", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::ThisSolution(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "ThisSolution", 
+          "return": {
+            "type": "gp_Circ2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::WhichQualifier(Standard_Integer, GccEnt_Position, GccEnt_Position)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "GccEnt_Position", 
+              "name": "Qualif1", 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_Position", 
+              "name": "Qualif2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "WhichQualifier", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::Tangency1(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "Tangency1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::Tangency2(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "Tangency2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::CenterOn3(Standard_Integer, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntArg", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "CenterOn3", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::IsTheSame1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "IsTheSame1", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanOn::IsTheSame2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanOn", 
+          "name": "IsTheSame2", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GccAna_Circ2d2TanOn.hxx", 
+        53
+      ], 
+      "key": "GccAna_Circ2d2TanOn"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccAna_Circ2d2TanRad", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccAna_Circ2d2TanRad::GccAna_Circ2d2TanRad(GccEnt_QualifiedCirc, GccEnt_QualifiedCirc, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanRad", 
+          "name": "GccAna_Circ2d2TanRad", 
+          "return": {
+            "type": "GccAna_Circ2d2TanRad", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanRad::GccAna_Circ2d2TanRad(GccEnt_QualifiedCirc, GccEnt_QualifiedLin, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanRad", 
+          "name": "GccAna_Circ2d2TanRad", 
+          "return": {
+            "type": "GccAna_Circ2d2TanRad", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanRad::GccAna_Circ2d2TanRad(GccEnt_QualifiedCirc, gp_Pnt2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanRad", 
+          "name": "GccAna_Circ2d2TanRad", 
+          "return": {
+            "type": "GccAna_Circ2d2TanRad", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanRad::GccAna_Circ2d2TanRad(GccEnt_QualifiedLin, gp_Pnt2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanRad", 
+          "name": "GccAna_Circ2d2TanRad", 
+          "return": {
+            "type": "GccAna_Circ2d2TanRad", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanRad::GccAna_Circ2d2TanRad(GccEnt_QualifiedLin, GccEnt_QualifiedLin, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanRad", 
+          "name": "GccAna_Circ2d2TanRad", 
+          "return": {
+            "type": "GccAna_Circ2d2TanRad", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanRad::GccAna_Circ2d2TanRad(gp_Pnt2d, gp_Pnt2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanRad", 
+          "name": "GccAna_Circ2d2TanRad", 
+          "return": {
+            "type": "GccAna_Circ2d2TanRad", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanRad::GccAna_Circ2d2TanRad(GccAna_Circ2d2TanRad)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccAna_Circ2d2TanRad", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanRad", 
+          "name": "GccAna_Circ2d2TanRad", 
+          "return": {
+            "type": "GccAna_Circ2d2TanRad", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanRad::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Circ2d2TanRad", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanRad::NbSolutions()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Circ2d2TanRad", 
+          "name": "NbSolutions", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanRad::ThisSolution(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanRad", 
+          "name": "ThisSolution", 
+          "return": {
+            "type": "gp_Circ2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanRad::WhichQualifier(Standard_Integer, GccEnt_Position, GccEnt_Position)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "GccEnt_Position", 
+              "name": "Qualif1", 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_Position", 
+              "name": "Qualif2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanRad", 
+          "name": "WhichQualifier", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanRad::Tangency1(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanRad", 
+          "name": "Tangency1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanRad::Tangency2(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanRad", 
+          "name": "Tangency2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanRad::IsTheSame1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanRad", 
+          "name": "IsTheSame1", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2d2TanRad::IsTheSame2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2d2TanRad", 
+          "name": "IsTheSame2", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GccAna_Circ2d2TanRad.hxx", 
+        64
+      ], 
+      "key": "GccAna_Circ2d2TanRad"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccAna_LinPnt2dBisec", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccAna_LinPnt2dBisec::GccAna_LinPnt2dBisec(gp_Lin2d, gp_Pnt2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "Line1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_LinPnt2dBisec", 
+          "name": "GccAna_LinPnt2dBisec", 
+          "return": {
+            "type": "GccAna_LinPnt2dBisec", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_LinPnt2dBisec::GccAna_LinPnt2dBisec(GccAna_LinPnt2dBisec)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccAna_LinPnt2dBisec", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_LinPnt2dBisec", 
+          "name": "GccAna_LinPnt2dBisec", 
+          "return": {
+            "type": "GccAna_LinPnt2dBisec", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccAna_LinPnt2dBisec::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_LinPnt2dBisec", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_LinPnt2dBisec::ThisSolution()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_LinPnt2dBisec", 
+          "name": "ThisSolution", 
+          "return": {
+            "type": "opencascade::handle<GccInt_Bisec>"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GccAna_LinPnt2dBisec.hxx", 
+        42
+      ], 
+      "key": "GccAna_LinPnt2dBisec"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccAna_Lin2d2Tan", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccAna_Lin2d2Tan::GccAna_Lin2d2Tan(gp_Pnt2d, gp_Pnt2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "ThePoint1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "ThePoint2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Lin2d2Tan", 
+          "name": "GccAna_Lin2d2Tan", 
+          "return": {
+            "type": "GccAna_Lin2d2Tan", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2d2Tan::GccAna_Lin2d2Tan(GccEnt_QualifiedCirc, gp_Pnt2d, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "ThePoint", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Lin2d2Tan", 
+          "name": "GccAna_Lin2d2Tan", 
+          "return": {
+            "type": "GccAna_Lin2d2Tan", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2d2Tan::GccAna_Lin2d2Tan(GccEnt_QualifiedCirc, GccEnt_QualifiedCirc, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Lin2d2Tan", 
+          "name": "GccAna_Lin2d2Tan", 
+          "return": {
+            "type": "GccAna_Lin2d2Tan", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2d2Tan::GccAna_Lin2d2Tan(GccAna_Lin2d2Tan)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccAna_Lin2d2Tan", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2d2Tan", 
+          "name": "GccAna_Lin2d2Tan", 
+          "return": {
+            "type": "GccAna_Lin2d2Tan", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccAna_Lin2d2Tan::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Lin2d2Tan", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2d2Tan::NbSolutions()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Lin2d2Tan", 
+          "name": "NbSolutions", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2d2Tan::ThisSolution(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Lin2d2Tan", 
+          "name": "ThisSolution", 
+          "return": {
+            "type": "gp_Lin2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2d2Tan::WhichQualifier(Standard_Integer, GccEnt_Position, GccEnt_Position)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "GccEnt_Position", 
+              "name": "Qualif1", 
+              "ref": true
+            }, 
+            {
+              "type": "GccEnt_Position", 
+              "name": "Qualif2", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2d2Tan", 
+          "name": "WhichQualifier", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2d2Tan::Tangency1(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2d2Tan", 
+          "name": "Tangency1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2d2Tan::Tangency2(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2d2Tan", 
+          "name": "Tangency2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GccAna_Lin2d2Tan.hxx", 
+        55
+      ], 
+      "key": "GccAna_Lin2d2Tan"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccAna_Lin2dTanPar", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccAna_Lin2dTanPar::GccAna_Lin2dTanPar(gp_Pnt2d, gp_Lin2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "ThePoint", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "Lin1", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanPar", 
+          "name": "GccAna_Lin2dTanPar", 
+          "return": {
+            "type": "GccAna_Lin2dTanPar", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPar::GccAna_Lin2dTanPar(GccEnt_QualifiedCirc, gp_Lin2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "Lin1", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanPar", 
+          "name": "GccAna_Lin2dTanPar", 
+          "return": {
+            "type": "GccAna_Lin2dTanPar", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPar::GccAna_Lin2dTanPar(GccAna_Lin2dTanPar)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccAna_Lin2dTanPar", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanPar", 
+          "name": "GccAna_Lin2dTanPar", 
+          "return": {
+            "type": "GccAna_Lin2dTanPar", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPar::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Lin2dTanPar", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPar::NbSolutions()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Lin2dTanPar", 
+          "name": "NbSolutions", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPar::ThisSolution(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanPar", 
+          "name": "ThisSolution", 
+          "return": {
+            "type": "gp_Lin2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPar::WhichQualifier(Standard_Integer, GccEnt_Position)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "GccEnt_Position", 
+              "name": "Qualif1", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanPar", 
+          "name": "WhichQualifier", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dTanPar::Tangency1(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Pnt", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dTanPar", 
+          "name": "Tangency1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GccAna_Lin2dTanPar.hxx", 
+        51
+      ], 
+      "key": "GccAna_Lin2dTanPar"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccAna_Circ2dTanOnRad", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccAna_Circ2dTanOnRad::GccAna_Circ2dTanOnRad(GccEnt_QualifiedCirc, gp_Lin2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "OnLine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanOnRad", 
+          "name": "GccAna_Circ2dTanOnRad", 
+          "return": {
+            "type": "GccAna_Circ2dTanOnRad", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanOnRad::GccAna_Circ2dTanOnRad(GccEnt_QualifiedLin, gp_Lin2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "OnLine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanOnRad", 
+          "name": "GccAna_Circ2dTanOnRad", 
+          "return": {
+            "type": "GccAna_Circ2dTanOnRad", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanOnRad::GccAna_Circ2dTanOnRad(gp_Pnt2d, gp_Lin2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "OnLine", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanOnRad", 
+          "name": "GccAna_Circ2dTanOnRad", 
+          "return": {
+            "type": "GccAna_Circ2dTanOnRad", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanOnRad::GccAna_Circ2dTanOnRad(GccEnt_QualifiedCirc, gp_Circ2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedCirc", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "OnCirc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanOnRad", 
+          "name": "GccAna_Circ2dTanOnRad", 
+          "return": {
+            "type": "GccAna_Circ2dTanOnRad", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanOnRad::GccAna_Circ2dTanOnRad(GccEnt_QualifiedLin, gp_Circ2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccEnt_QualifiedLin", 
+              "name": "Qualified1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "OnCirc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanOnRad", 
+          "name": "GccAna_Circ2dTanOnRad", 
+          "return": {
+            "type": "GccAna_Circ2dTanOnRad", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanOnRad::GccAna_Circ2dTanOnRad(gp_Pnt2d, gp_Circ2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Circ2d", 
+              "name": "OnCirc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanOnRad", 
+          "name": "GccAna_Circ2dTanOnRad", 
+          "return": {
+            "type": "GccAna_Circ2dTanOnRad", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanOnRad::GccAna_Circ2dTanOnRad(GccAna_Circ2dTanOnRad)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccAna_Circ2dTanOnRad", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanOnRad", 
+          "name": "GccAna_Circ2dTanOnRad", 
+          "return": {
+            "type": "GccAna_Circ2dTanOnRad", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanOnRad::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Circ2dTanOnRad", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanOnRad::NbSolutions()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Circ2dTanOnRad", 
+          "name": "NbSolutions", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanOnRad::ThisSolution(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanOnRad", 
+          "name": "ThisSolution", 
+          "return": {
+            "type": "gp_Circ2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanOnRad::WhichQualifier(Standard_Integer, GccEnt_Position)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "GccEnt_Position", 
+              "name": "Qualif1", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanOnRad", 
+          "name": "WhichQualifier", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanOnRad::Tangency1(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanOnRad", 
+          "name": "Tangency1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanOnRad::CenterOn3(Standard_Integer, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanOnRad", 
+          "name": "CenterOn3", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Circ2dTanOnRad::IsTheSame1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Circ2dTanOnRad", 
+          "name": "IsTheSame1", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GccAna_Circ2dTanOnRad.hxx", 
+        65
+      ], 
+      "key": "GccAna_Circ2dTanOnRad"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccAna_CircLin2dBisec", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccAna_CircLin2dBisec::GccAna_CircLin2dBisec(gp_Circ2d, gp_Lin2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "Circle", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "Line", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_CircLin2dBisec", 
+          "name": "GccAna_CircLin2dBisec", 
+          "return": {
+            "type": "GccAna_CircLin2dBisec", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_CircLin2dBisec::GccAna_CircLin2dBisec(GccAna_CircLin2dBisec)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccAna_CircLin2dBisec", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_CircLin2dBisec", 
+          "name": "GccAna_CircLin2dBisec", 
+          "return": {
+            "type": "GccAna_CircLin2dBisec", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccAna_CircLin2dBisec::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_CircLin2dBisec", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_CircLin2dBisec::NbSolutions()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_CircLin2dBisec", 
+          "name": "NbSolutions", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_CircLin2dBisec::ThisSolution(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_CircLin2dBisec", 
+          "name": "ThisSolution", 
+          "return": {
+            "type": "opencascade::handle<GccInt_Bisec>"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GccAna_CircLin2dBisec.hxx", 
+        45
+      ], 
+      "key": "GccAna_CircLin2dBisec"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccAna_Lin2dBisec", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccAna_Lin2dBisec::GccAna_Lin2dBisec(gp_Lin2d, gp_Lin2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "Lin1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Lin2d", 
+              "name": "Lin2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dBisec", 
+          "name": "GccAna_Lin2dBisec", 
+          "return": {
+            "type": "GccAna_Lin2dBisec", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dBisec::GccAna_Lin2dBisec(GccAna_Lin2dBisec)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccAna_Lin2dBisec", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dBisec", 
+          "name": "GccAna_Lin2dBisec", 
+          "return": {
+            "type": "GccAna_Lin2dBisec", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccAna_Lin2dBisec::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Lin2dBisec", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dBisec::NbSolutions()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccAna_Lin2dBisec", 
+          "name": "NbSolutions", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dBisec::ThisSolution(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dBisec", 
+          "name": "ThisSolution", 
+          "return": {
+            "type": "gp_Lin2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dBisec::Intersection1(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dBisec", 
+          "name": "Intersection1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccAna_Lin2dBisec::Intersection2(Standard_Integer, Standard_Real, Standard_Real, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParSol", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParArg", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "PntSol", 
+              "ref": true
+            }
+          ], 
+          "parent": "GccAna_Lin2dBisec", 
+          "name": "Intersection2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/GccAna_Lin2dBisec.hxx", 
+        54
+      ], 
+      "key": "GccAna_Lin2dBisec"
+    }, 
+    {
+      "type": "opencascade::handle<GccAna_NoSolution>", 
+      "declType": "typedef", 
+      "name": "Handle_GccAna_NoSolution", 
+      "key": "Handle_GccAna_NoSolution"
+    }
+  ], 
+  "name": "GccAna"
+}

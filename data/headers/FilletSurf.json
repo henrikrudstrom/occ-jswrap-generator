@@ -1,0 +1,921 @@
+{
+  "headers": [
+    "FilletSurf_Builder.hxx", 
+    "FilletSurf_ErrorTypeStatus.hxx", 
+    "FilletSurf_StatusType.hxx", 
+    "FilletSurf_InternalBuilder.hxx", 
+    "FilletSurf_StatusDone.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "FilletSurf_InternalBuilder", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "FilletSurf_InternalBuilder::FilletSurf_InternalBuilder(TopoDS_Shape, ChFi3d_FilletShape, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "ChFi3d_FilletShape", 
+              "name": "FShape", 
+              "default": "::ChFi3d_FilletShape::ChFi3d_Polynomial", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Ta", 
+              "default": "0.01", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tapp3d", 
+              "default": "1.0E-4", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tapp2d", 
+              "default": "1.0000000000000001E-5", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "FilletSurf_InternalBuilder", 
+          "return": {
+            "type": "FilletSurf_InternalBuilder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::FilletSurf_InternalBuilder(FilletSurf_InternalBuilder)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "FilletSurf_InternalBuilder", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "FilletSurf_InternalBuilder", 
+          "return": {
+            "type": "FilletSurf_InternalBuilder", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::Add(TopTools_ListOfShape, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopTools_ListOfShape", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "Add", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::Perform()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::Done()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "Done", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::NbSurface()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "NbSurface", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::SurfaceFillet(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "SurfaceFillet", 
+          "return": {
+            "type": "opencascade::handle<Geom_Surface>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::TolApp3d(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "TolApp3d", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::SupportFace1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "SupportFace1", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::SupportFace2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "SupportFace2", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::CurveOnFace1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "CurveOnFace1", 
+          "return": {
+            "type": "opencascade::handle<Geom_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::CurveOnFace2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "CurveOnFace2", 
+          "return": {
+            "type": "opencascade::handle<Geom_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::PCurveOnFace1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "PCurveOnFace1", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::PCurve1OnFillet(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "PCurve1OnFillet", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::PCurveOnFace2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "PCurveOnFace2", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::PCurve2OnFillet(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "PCurve2OnFillet", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::FirstParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::LastParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::StartSectionStatus()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "StartSectionStatus", 
+          "return": {
+            "type": "FilletSurf_StatusType"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::EndSectionStatus()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "EndSectionStatus", 
+          "return": {
+            "type": "FilletSurf_StatusType"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::Simulate()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "Simulate", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::NbSection(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexSurf", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "NbSection", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_InternalBuilder::Section(Standard_Integer, Standard_Integer, opencascade::handle<Geom_TrimmedCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexSurf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexSec", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_TrimmedCurve>", 
+              "name": "Circ", 
+              "ref": true
+            }
+          ], 
+          "parent": "FilletSurf_InternalBuilder", 
+          "name": "Section", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "ChFi3d_FilBuilder"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FilletSurf_InternalBuilder.hxx", 
+        49
+      ], 
+      "key": "FilletSurf_InternalBuilder"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FilletSurf_Builder", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "FilletSurf_Builder::FilletSurf_Builder(TopoDS_Shape, TopTools_ListOfShape, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopTools_ListOfShape", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "R", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Ta", 
+              "default": "0.01", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tapp3d", 
+              "default": "1.0E-4", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tapp2d", 
+              "default": "1.0000000000000001E-5", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_Builder", 
+          "name": "FilletSurf_Builder", 
+          "return": {
+            "type": "FilletSurf_Builder", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::FilletSurf_Builder(FilletSurf_Builder)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "FilletSurf_Builder", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "FilletSurf_Builder", 
+          "name": "FilletSurf_Builder", 
+          "return": {
+            "type": "FilletSurf_Builder", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::Perform()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_Builder", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::Simulate()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_Builder", 
+          "name": "Simulate", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_Builder", 
+          "name": "IsDone", 
+          "return": {
+            "type": "FilletSurf_StatusDone"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::StatusError()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_Builder", 
+          "name": "StatusError", 
+          "return": {
+            "type": "FilletSurf_ErrorTypeStatus"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::NbSurface()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_Builder", 
+          "name": "NbSurface", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::SurfaceFillet(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_Builder", 
+          "name": "SurfaceFillet", 
+          "return": {
+            "type": "opencascade::handle<Geom_Surface>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::TolApp3d(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_Builder", 
+          "name": "TolApp3d", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::SupportFace1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_Builder", 
+          "name": "SupportFace1", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::SupportFace2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_Builder", 
+          "name": "SupportFace2", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::CurveOnFace1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_Builder", 
+          "name": "CurveOnFace1", 
+          "return": {
+            "type": "opencascade::handle<Geom_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::CurveOnFace2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_Builder", 
+          "name": "CurveOnFace2", 
+          "return": {
+            "type": "opencascade::handle<Geom_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::PCurveOnFace1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_Builder", 
+          "name": "PCurveOnFace1", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::PCurve1OnFillet(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_Builder", 
+          "name": "PCurve1OnFillet", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::PCurveOnFace2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_Builder", 
+          "name": "PCurveOnFace2", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::PCurve2OnFillet(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_Builder", 
+          "name": "PCurve2OnFillet", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::FirstParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_Builder", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::LastParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_Builder", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::StartSectionStatus()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_Builder", 
+          "name": "StartSectionStatus", 
+          "return": {
+            "type": "FilletSurf_StatusType"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::EndSectionStatus()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FilletSurf_Builder", 
+          "name": "EndSectionStatus", 
+          "return": {
+            "type": "FilletSurf_StatusType"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::NbSection(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexSurf", 
+              "const": true
+            }
+          ], 
+          "parent": "FilletSurf_Builder", 
+          "name": "NbSection", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FilletSurf_Builder::Section(Standard_Integer, Standard_Integer, opencascade::handle<Geom_TrimmedCurve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexSurf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexSec", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_TrimmedCurve>", 
+              "name": "Circ", 
+              "ref": true
+            }
+          ], 
+          "parent": "FilletSurf_Builder", 
+          "name": "Section", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/FilletSurf_Builder.hxx", 
+        49
+      ], 
+      "key": "FilletSurf_Builder"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "FilletSurf_TwoExtremityOnEdge", 
+          0
+        ], 
+        [
+          "FilletSurf_OneExtremityOnEdge", 
+          1
+        ], 
+        [
+          "FilletSurf_NoExtremityOnEdge", 
+          2
+        ]
+      ], 
+      "name": "FilletSurf_StatusType", 
+      "key": "FilletSurf_StatusType"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "FilletSurf_IsOk", 
+          0
+        ], 
+        [
+          "FilletSurf_IsNotOk", 
+          1
+        ], 
+        [
+          "FilletSurf_IsPartial", 
+          2
+        ]
+      ], 
+      "name": "FilletSurf_StatusDone", 
+      "key": "FilletSurf_StatusDone"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "FilletSurf_EmptyList", 
+          0
+        ], 
+        [
+          "FilletSurf_EdgeNotG1", 
+          1
+        ], 
+        [
+          "FilletSurf_FacesNotG1", 
+          2
+        ], 
+        [
+          "FilletSurf_EdgeNotOnShape", 
+          3
+        ], 
+        [
+          "FilletSurf_NotSharpEdge", 
+          4
+        ], 
+        [
+          "FilletSurf_PbFilletCompute", 
+          5
+        ]
+      ], 
+      "name": "FilletSurf_ErrorTypeStatus", 
+      "key": "FilletSurf_ErrorTypeStatus"
+    }
+  ], 
+  "name": "FilletSurf"
+}

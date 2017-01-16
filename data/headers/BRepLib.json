@@ -1,0 +1,5834 @@
+{
+  "headers": [
+    "BRepLib_MakeVertex.hxx", 
+    "BRepLib_EdgeError.hxx", 
+    "BRepLib_ShellError.hxx", 
+    "BRepLib_MakeShape.hxx", 
+    "BRepLib_MakePolygon.hxx", 
+    "BRepLib_MakeSolid.hxx", 
+    "BRepLib_Command.hxx", 
+    "BRepLib_FuseEdges.hxx", 
+    "BRepLib_MakeWire.hxx", 
+    "BRepLib_FaceError.hxx", 
+    "BRepLib_MakeShell.hxx", 
+    "BRepLib_MakeFace.hxx", 
+    "BRepLib_MakeEdge2d.hxx", 
+    "BRepLib_ShapeModification.hxx", 
+    "BRepLib_CheckCurveOnSurface.hxx", 
+    "BRepLib_FindSurface.hxx", 
+    "BRepLib_MakeEdge.hxx", 
+    "BRepLib_WireError.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "BRepLib_Command", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepLib_Command::BRepLib_Command(BRepLib_Command)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepLib_Command", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_Command", 
+          "name": "BRepLib_Command", 
+          "return": {
+            "type": "BRepLib_Command", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepLib_Command::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_Command", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_Command::Check()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_Command", 
+          "name": "Check", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepLib_Command.hxx", 
+        37
+      ], 
+      "key": "BRepLib_Command"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepLib_MakeShape", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepLib_MakeShape::BRepLib_MakeShape(BRepLib_MakeShape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepLib_MakeShape", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeShape", 
+          "name": "BRepLib_MakeShape", 
+          "return": {
+            "type": "BRepLib_MakeShape", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepLib_MakeShape::Build()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeShape", 
+          "name": "Build", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeShape::Shape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeShape", 
+          "name": "Shape", 
+          "return": {
+            "type": "TopoDS_Shape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeShape::FaceStatus(TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeShape", 
+          "name": "FaceStatus", 
+          "return": {
+            "type": "BRepLib_ShapeModification"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepLib_MakeShape::HasDescendants(TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeShape", 
+          "name": "HasDescendants", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepLib_MakeShape::DescendantFaces(TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeShape", 
+          "name": "DescendantFaces", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepLib_MakeShape::NbSurfaces()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeShape", 
+          "name": "NbSurfaces", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepLib_MakeShape::NewFaces(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeShape", 
+          "name": "NewFaces", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepLib_MakeShape::FacesFromEdges(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeShape", 
+          "name": "FacesFromEdges", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepLib_Command"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepLib_MakeShape.hxx", 
+        41
+      ], 
+      "key": "BRepLib_MakeShape"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepLib_MakeVertex", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepLib_MakeVertex::BRepLib_MakeVertex(gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeVertex", 
+          "name": "BRepLib_MakeVertex", 
+          "return": {
+            "type": "BRepLib_MakeVertex", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeVertex::BRepLib_MakeVertex(BRepLib_MakeVertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepLib_MakeVertex", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeVertex", 
+          "name": "BRepLib_MakeVertex", 
+          "return": {
+            "type": "BRepLib_MakeVertex", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepLib_MakeVertex::Vertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeVertex", 
+          "name": "Vertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepLib_MakeShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepLib_MakeVertex.hxx", 
+        30
+      ], 
+      "key": "BRepLib_MakeVertex"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepLib_MakePolygon", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepLib_MakePolygon::BRepLib_MakePolygon()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepLib_MakePolygon", 
+          "name": "BRepLib_MakePolygon", 
+          "return": {
+            "type": "BRepLib_MakePolygon", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakePolygon::BRepLib_MakePolygon(gp_Pnt, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakePolygon", 
+          "name": "BRepLib_MakePolygon", 
+          "return": {
+            "type": "BRepLib_MakePolygon", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakePolygon::BRepLib_MakePolygon(gp_Pnt, gp_Pnt, gp_Pnt, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P3", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Close", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakePolygon", 
+          "name": "BRepLib_MakePolygon", 
+          "return": {
+            "type": "BRepLib_MakePolygon", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakePolygon::BRepLib_MakePolygon(gp_Pnt, gp_Pnt, gp_Pnt, gp_Pnt, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P3", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P4", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Close", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakePolygon", 
+          "name": "BRepLib_MakePolygon", 
+          "return": {
+            "type": "BRepLib_MakePolygon", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakePolygon::BRepLib_MakePolygon(TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakePolygon", 
+          "name": "BRepLib_MakePolygon", 
+          "return": {
+            "type": "BRepLib_MakePolygon", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakePolygon::BRepLib_MakePolygon(TopoDS_Vertex, TopoDS_Vertex, TopoDS_Vertex, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V3", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Close", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakePolygon", 
+          "name": "BRepLib_MakePolygon", 
+          "return": {
+            "type": "BRepLib_MakePolygon", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakePolygon::BRepLib_MakePolygon(TopoDS_Vertex, TopoDS_Vertex, TopoDS_Vertex, TopoDS_Vertex, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V3", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V4", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Close", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakePolygon", 
+          "name": "BRepLib_MakePolygon", 
+          "return": {
+            "type": "BRepLib_MakePolygon", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakePolygon::BRepLib_MakePolygon(BRepLib_MakePolygon)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepLib_MakePolygon", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakePolygon", 
+          "name": "BRepLib_MakePolygon", 
+          "return": {
+            "type": "BRepLib_MakePolygon", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepLib_MakePolygon::Add(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakePolygon", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakePolygon::Add(TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakePolygon", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakePolygon::Added()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakePolygon", 
+          "name": "Added", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakePolygon::Close()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakePolygon", 
+          "name": "Close", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakePolygon::FirstVertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakePolygon", 
+          "name": "FirstVertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakePolygon::LastVertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakePolygon", 
+          "name": "LastVertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakePolygon::Edge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakePolygon", 
+          "name": "Edge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakePolygon::Wire()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakePolygon", 
+          "name": "Wire", 
+          "return": {
+            "type": "TopoDS_Wire", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepLib_MakeShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepLib_MakePolygon.hxx", 
+        50
+      ], 
+      "key": "BRepLib_MakePolygon"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepLib_MakeSolid", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepLib_MakeSolid::BRepLib_MakeSolid()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeSolid", 
+          "name": "BRepLib_MakeSolid", 
+          "return": {
+            "type": "BRepLib_MakeSolid", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeSolid::BRepLib_MakeSolid(TopoDS_CompSolid)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_CompSolid", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeSolid", 
+          "name": "BRepLib_MakeSolid", 
+          "return": {
+            "type": "BRepLib_MakeSolid", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeSolid::BRepLib_MakeSolid(TopoDS_Shell)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shell", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeSolid", 
+          "name": "BRepLib_MakeSolid", 
+          "return": {
+            "type": "BRepLib_MakeSolid", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeSolid::BRepLib_MakeSolid(TopoDS_Shell, TopoDS_Shell)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shell", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shell", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeSolid", 
+          "name": "BRepLib_MakeSolid", 
+          "return": {
+            "type": "BRepLib_MakeSolid", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeSolid::BRepLib_MakeSolid(TopoDS_Shell, TopoDS_Shell, TopoDS_Shell)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shell", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shell", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shell", 
+              "name": "S3", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeSolid", 
+          "name": "BRepLib_MakeSolid", 
+          "return": {
+            "type": "BRepLib_MakeSolid", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeSolid::BRepLib_MakeSolid(TopoDS_Solid)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Solid", 
+              "name": "So", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeSolid", 
+          "name": "BRepLib_MakeSolid", 
+          "return": {
+            "type": "BRepLib_MakeSolid", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeSolid::BRepLib_MakeSolid(TopoDS_Solid, TopoDS_Shell)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Solid", 
+              "name": "So", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shell", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeSolid", 
+          "name": "BRepLib_MakeSolid", 
+          "return": {
+            "type": "BRepLib_MakeSolid", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeSolid::BRepLib_MakeSolid(BRepLib_MakeSolid)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepLib_MakeSolid", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeSolid", 
+          "name": "BRepLib_MakeSolid", 
+          "return": {
+            "type": "BRepLib_MakeSolid", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepLib_MakeSolid::Add(TopoDS_Shell)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shell", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeSolid", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeSolid::Solid()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeSolid", 
+          "name": "Solid", 
+          "return": {
+            "type": "TopoDS_Solid", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeSolid::FaceStatus(TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeSolid", 
+          "name": "FaceStatus", 
+          "return": {
+            "type": "BRepLib_ShapeModification"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepLib_MakeShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepLib_MakeSolid.hxx", 
+        35
+      ], 
+      "key": "BRepLib_MakeSolid"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepLib_FuseEdges", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepLib_FuseEdges::BRepLib_FuseEdges(TopoDS_Shape, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "theShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "PerformNow", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_FuseEdges", 
+          "name": "BRepLib_FuseEdges", 
+          "return": {
+            "type": "BRepLib_FuseEdges", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_FuseEdges::BRepLib_FuseEdges(BRepLib_FuseEdges)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepLib_FuseEdges", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_FuseEdges", 
+          "name": "BRepLib_FuseEdges", 
+          "return": {
+            "type": "BRepLib_FuseEdges", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepLib_FuseEdges::AvoidEdges(TopTools_IndexedMapOfShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopTools_IndexedMapOfShape", 
+              "name": "theMapEdg", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_FuseEdges", 
+          "name": "AvoidEdges", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_FuseEdges::SetConcatBSpl(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "theConcatBSpl", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_FuseEdges", 
+          "name": "SetConcatBSpl", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_FuseEdges::Edges(TopTools_DataMapOfIntegerListOfShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopTools_DataMapOfIntegerListOfShape", 
+              "name": "theMapLstEdg", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_FuseEdges", 
+          "name": "Edges", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_FuseEdges::ResultEdges(TopTools_DataMapOfIntegerShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopTools_DataMapOfIntegerShape", 
+              "name": "theMapEdg", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_FuseEdges", 
+          "name": "ResultEdges", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_FuseEdges::Faces(TopTools_DataMapOfShapeShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopTools_DataMapOfShapeShape", 
+              "name": "theMapFac", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_FuseEdges", 
+          "name": "Faces", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_FuseEdges::Shape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_FuseEdges", 
+          "name": "Shape", 
+          "return": {
+            "type": "TopoDS_Shape", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_FuseEdges::NbVertices()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_FuseEdges", 
+          "name": "NbVertices", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_FuseEdges::Perform()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_FuseEdges", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepLib_FuseEdges.hxx", 
+        50
+      ], 
+      "key": "BRepLib_FuseEdges"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepLib_MakeWire", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepLib_MakeWire::BRepLib_MakeWire()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "BRepLib_MakeWire", 
+          "return": {
+            "type": "BRepLib_MakeWire", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::BRepLib_MakeWire(TopoDS_Edge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "BRepLib_MakeWire", 
+          "return": {
+            "type": "BRepLib_MakeWire", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::BRepLib_MakeWire(TopoDS_Edge, TopoDS_Edge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "BRepLib_MakeWire", 
+          "return": {
+            "type": "BRepLib_MakeWire", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::BRepLib_MakeWire(TopoDS_Edge, TopoDS_Edge, TopoDS_Edge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E3", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "BRepLib_MakeWire", 
+          "return": {
+            "type": "BRepLib_MakeWire", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::BRepLib_MakeWire(TopoDS_Edge, TopoDS_Edge, TopoDS_Edge, TopoDS_Edge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E3", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E4", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "BRepLib_MakeWire", 
+          "return": {
+            "type": "BRepLib_MakeWire", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::BRepLib_MakeWire(TopoDS_Wire)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "BRepLib_MakeWire", 
+          "return": {
+            "type": "BRepLib_MakeWire", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::BRepLib_MakeWire(TopoDS_Wire, TopoDS_Edge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "BRepLib_MakeWire", 
+          "return": {
+            "type": "BRepLib_MakeWire", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::BRepLib_MakeWire(BRepLib_MakeWire)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepLib_MakeWire", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "BRepLib_MakeWire", 
+          "return": {
+            "type": "BRepLib_MakeWire", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::BRepLib_BndBoxVertexSelector(TopTools_IndexedMapOfShape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopTools_IndexedMapOfShape", 
+              "name": "theMapOfShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "BRepLib_BndBoxVertexSelector", 
+          "return": {
+            "type": "BRepLib_MakeWire", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::Add(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::Add(TopoDS_Wire)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::Add(TopTools_ListOfShape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopTools_ListOfShape", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::Error()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "Error", 
+          "return": {
+            "type": "BRepLib_WireError"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::Wire()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "Wire", 
+          "return": {
+            "type": "TopoDS_Wire", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::Edge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "Edge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::Vertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "Vertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::Reject(Bnd_Box)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Bnd_Box", 
+              "name": "theBox", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "Reject", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepLib_MakeWire::Accept(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theObj", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "Accept", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepLib_MakeWire::SetCurrentVertex(gp_Pnt, Standard_Real, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "theP", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTol"
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "theVInd"
+            }
+          ], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "SetCurrentVertex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::GetResultInds()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "GetResultInds", 
+          "return": {
+            "type": "NCollection_List<int>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeWire::ClearResInds()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeWire", 
+          "name": "ClearResInds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepLib_MakeShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepLib_MakeWire.hxx", 
+        82
+      ], 
+      "key": "BRepLib_MakeWire"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepLib_BndBoxVertexSelector", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepLib_BndBoxVertexSelector::BRepLib_BndBoxVertexSelector(TopTools_IndexedMapOfShape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopTools_IndexedMapOfShape", 
+              "name": "theMapOfShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_BndBoxVertexSelector", 
+          "name": "BRepLib_BndBoxVertexSelector", 
+          "return": {
+            "type": "BRepLib_BndBoxVertexSelector", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_BndBoxVertexSelector::Reject(Bnd_Box)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Bnd_Box", 
+              "name": "theBox", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_BndBoxVertexSelector", 
+          "name": "Reject", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepLib_BndBoxVertexSelector::Accept(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theObj", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_BndBoxVertexSelector", 
+          "name": "Accept", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepLib_BndBoxVertexSelector::SetCurrentVertex(gp_Pnt, Standard_Real, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "theP", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTol"
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "theVInd"
+            }
+          ], 
+          "parent": "BRepLib_BndBoxVertexSelector", 
+          "name": "SetCurrentVertex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_BndBoxVertexSelector::GetResultInds()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_BndBoxVertexSelector", 
+          "name": "GetResultInds", 
+          "return": {
+            "type": "NCollection_List<int>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_BndBoxVertexSelector::ClearResInds()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_BndBoxVertexSelector", 
+          "name": "ClearResInds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Selector"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepLib_MakeWire.hxx", 
+        134
+      ], 
+      "key": "BRepLib_BndBoxVertexSelector"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepLib_MakeShell", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepLib_MakeShell::BRepLib_MakeShell()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeShell", 
+          "name": "BRepLib_MakeShell", 
+          "return": {
+            "type": "BRepLib_MakeShell", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeShell::BRepLib_MakeShell(opencascade::handle<Geom_Surface>, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Segment", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeShell", 
+          "name": "BRepLib_MakeShell", 
+          "return": {
+            "type": "BRepLib_MakeShell", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeShell::BRepLib_MakeShell(opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Segment", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeShell", 
+          "name": "BRepLib_MakeShell", 
+          "return": {
+            "type": "BRepLib_MakeShell", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeShell::BRepLib_MakeShell(BRepLib_MakeShell)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepLib_MakeShell", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeShell", 
+          "name": "BRepLib_MakeShell", 
+          "return": {
+            "type": "BRepLib_MakeShell", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepLib_MakeShell::Init(opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Segment", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeShell", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeShell::Error()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeShell", 
+          "name": "Error", 
+          "return": {
+            "type": "BRepLib_ShellError"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeShell::Shell()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeShell", 
+          "name": "Shell", 
+          "return": {
+            "type": "TopoDS_Shell", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepLib_MakeShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepLib_MakeShell.hxx", 
+        38
+      ], 
+      "key": "BRepLib_MakeShell"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepLib_MakeFace", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(TopoDS_Face)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(gp_Pln)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pln", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(gp_Cylinder)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Cylinder", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(gp_Cone)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Cone", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(gp_Sphere)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Sphere", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(gp_Torus)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Torus", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(opencascade::handle<Geom_Surface>, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolDegen", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(gp_Pln, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pln", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(gp_Cylinder, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Cylinder", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(gp_Cone, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Cone", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(gp_Sphere, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Sphere", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(gp_Torus, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Torus", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolDegen", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(TopoDS_Wire, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "OnlyPlane", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(gp_Pln, TopoDS_Wire, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pln", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Inside", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(gp_Cylinder, TopoDS_Wire, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Cylinder", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Inside", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(gp_Cone, TopoDS_Wire, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Cone", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Inside", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(gp_Sphere, TopoDS_Wire, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Sphere", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Inside", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(gp_Torus, TopoDS_Wire, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Torus", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Inside", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(opencascade::handle<Geom_Surface>, TopoDS_Wire, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Inside", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(TopoDS_Face, TopoDS_Wire)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::BRepLib_MakeFace(BRepLib_MakeFace)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepLib_MakeFace", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "BRepLib_MakeFace", 
+          "return": {
+            "type": "BRepLib_MakeFace", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::Init(TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::Init(opencascade::handle<Geom_Surface>, Standard_Boolean, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Bound", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolDegen", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::Init(opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "VMax", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "TolDegen", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::Add(TopoDS_Wire)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Wire", 
+              "name": "W", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::Error()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "Error", 
+          "return": {
+            "type": "BRepLib_FaceError"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::Face()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "Face", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeFace::IsDegenerated(opencascade::handle<Geom_Curve>, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "theCurve", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theMaxTol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theActTol", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeFace", 
+          "name": "IsDegenerated", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepLib_MakeShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepLib_MakeFace.hxx", 
+        65
+      ], 
+      "key": "BRepLib_MakeFace"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepLib_MakeEdge2d", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Pnt2d, gp_Pnt2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Lin2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Lin2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Lin2d, gp_Pnt2d, gp_Pnt2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Lin2d, TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Circ2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Circ2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Circ2d, gp_Pnt2d, gp_Pnt2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Circ2d, TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Elips2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Elips2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Elips2d, gp_Pnt2d, gp_Pnt2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Elips2d, TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Hypr2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Hypr2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Hypr2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Hypr2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Hypr2d, gp_Pnt2d, gp_Pnt2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Hypr2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Hypr2d, TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Hypr2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Parab2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Parab2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Parab2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Parab2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Parab2d, gp_Pnt2d, gp_Pnt2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Parab2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(gp_Parab2d, TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Parab2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(opencascade::handle<Geom2d_Curve>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(opencascade::handle<Geom2d_Curve>, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(opencascade::handle<Geom2d_Curve>, gp_Pnt2d, gp_Pnt2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(opencascade::handle<Geom2d_Curve>, TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(opencascade::handle<Geom2d_Curve>, gp_Pnt2d, gp_Pnt2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(opencascade::handle<Geom2d_Curve>, TopoDS_Vertex, TopoDS_Vertex, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::BRepLib_MakeEdge2d(BRepLib_MakeEdge2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepLib_MakeEdge2d", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "BRepLib_MakeEdge2d", 
+          "return": {
+            "type": "BRepLib_MakeEdge2d", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::Init(opencascade::handle<Geom2d_Curve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::Init(opencascade::handle<Geom2d_Curve>, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::Init(opencascade::handle<Geom2d_Curve>, gp_Pnt2d, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::Init(opencascade::handle<Geom2d_Curve>, TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::Init(opencascade::handle<Geom2d_Curve>, gp_Pnt2d, gp_Pnt2d, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::Init(opencascade::handle<Geom2d_Curve>, TopoDS_Vertex, TopoDS_Vertex, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::Error()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "Error", 
+          "return": {
+            "type": "BRepLib_EdgeError"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::Edge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "Edge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::Vertex1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "Vertex1", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge2d::Vertex2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeEdge2d", 
+          "name": "Vertex2", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepLib_MakeShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepLib_MakeEdge2d.hxx", 
+        71
+      ], 
+      "key": "BRepLib_MakeEdge2d"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepLib_CheckCurveOnSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepLib_CheckCurveOnSurface::BRepLib_CheckCurveOnSurface()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepLib_CheckCurveOnSurface", 
+          "name": "BRepLib_CheckCurveOnSurface", 
+          "return": {
+            "type": "BRepLib_CheckCurveOnSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_CheckCurveOnSurface::BRepLib_CheckCurveOnSurface(TopoDS_Edge, TopoDS_Face)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "theFace", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_CheckCurveOnSurface", 
+          "name": "BRepLib_CheckCurveOnSurface", 
+          "return": {
+            "type": "BRepLib_CheckCurveOnSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_CheckCurveOnSurface::BRepLib_CheckCurveOnSurface(BRepLib_CheckCurveOnSurface)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepLib_CheckCurveOnSurface", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_CheckCurveOnSurface", 
+          "name": "BRepLib_CheckCurveOnSurface", 
+          "return": {
+            "type": "BRepLib_CheckCurveOnSurface", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepLib_CheckCurveOnSurface::Init(TopoDS_Edge, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "theFace", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_CheckCurveOnSurface", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_CheckCurveOnSurface::Perform(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "isTheMultyTheradDisabled", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_CheckCurveOnSurface", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_CheckCurveOnSurface::Curve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_CheckCurveOnSurface", 
+          "name": "Curve", 
+          "return": {
+            "type": "opencascade::handle<Geom_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_CheckCurveOnSurface::PCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_CheckCurveOnSurface", 
+          "name": "PCurve", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_CheckCurveOnSurface::PCurve2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_CheckCurveOnSurface", 
+          "name": "PCurve2", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_CheckCurveOnSurface::Surface()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_CheckCurveOnSurface", 
+          "name": "Surface", 
+          "return": {
+            "type": "opencascade::handle<Geom_Surface>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_CheckCurveOnSurface::Range(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theFirst", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theLast", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_CheckCurveOnSurface", 
+          "name": "Range", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_CheckCurveOnSurface::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_CheckCurveOnSurface", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_CheckCurveOnSurface::ErrorStatus()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_CheckCurveOnSurface", 
+          "name": "ErrorStatus", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_CheckCurveOnSurface::MaxDistance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_CheckCurveOnSurface", 
+          "name": "MaxDistance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_CheckCurveOnSurface::MaxParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_CheckCurveOnSurface", 
+          "name": "MaxParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepLib_CheckCurveOnSurface.hxx", 
+        23
+      ], 
+      "key": "BRepLib_CheckCurveOnSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepLib_FindSurface", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepLib_FindSurface::BRepLib_FindSurface()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepLib_FindSurface", 
+          "name": "BRepLib_FindSurface", 
+          "return": {
+            "type": "BRepLib_FindSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_FindSurface::BRepLib_FindSurface(TopoDS_Shape, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "default": "-1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "OnlyPlane", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "OnlyClosed", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_FindSurface", 
+          "name": "BRepLib_FindSurface", 
+          "return": {
+            "type": "BRepLib_FindSurface", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_FindSurface::BRepLib_FindSurface(BRepLib_FindSurface)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepLib_FindSurface", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_FindSurface", 
+          "name": "BRepLib_FindSurface", 
+          "return": {
+            "type": "BRepLib_FindSurface", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepLib_FindSurface::Init(TopoDS_Shape, Standard_Real, Standard_Boolean, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "default": "-1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "OnlyPlane", 
+              "default": "false", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "OnlyClosed", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_FindSurface", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_FindSurface::Found()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_FindSurface", 
+          "name": "Found", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_FindSurface::Surface()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_FindSurface", 
+          "name": "Surface", 
+          "return": {
+            "type": "opencascade::handle<Geom_Surface>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_FindSurface::Tolerance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_FindSurface", 
+          "name": "Tolerance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_FindSurface::ToleranceReached()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_FindSurface", 
+          "name": "ToleranceReached", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_FindSurface::Existed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_FindSurface", 
+          "name": "Existed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_FindSurface::Location()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_FindSurface", 
+          "name": "Location", 
+          "return": {
+            "type": "TopLoc_Location"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepLib_FindSurface.hxx", 
+        53
+      ], 
+      "key": "BRepLib_FindSurface"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepLib_MakeEdge", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Pnt, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Lin)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Lin, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Lin, gp_Pnt, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Lin, TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Circ)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Circ, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Circ, gp_Pnt, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Circ, TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Elips)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Elips", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Elips, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Elips", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Elips, gp_Pnt, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Elips", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Elips, TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Elips", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Hypr)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Hypr", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Hypr, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Hypr", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Hypr, gp_Pnt, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Hypr", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Hypr, TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Hypr", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Parab)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Parab", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Parab, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Parab", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Parab, gp_Pnt, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Parab", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(gp_Parab, TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Parab", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(opencascade::handle<Geom_Curve>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(opencascade::handle<Geom_Curve>, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(opencascade::handle<Geom_Curve>, gp_Pnt, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(opencascade::handle<Geom_Curve>, TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(opencascade::handle<Geom_Curve>, gp_Pnt, gp_Pnt, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(opencascade::handle<Geom_Curve>, TopoDS_Vertex, TopoDS_Vertex, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom_Surface>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom_Surface>, gp_Pnt, gp_Pnt)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom_Surface>, TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom_Surface>, gp_Pnt, gp_Pnt, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom_Surface>, TopoDS_Vertex, TopoDS_Vertex, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::BRepLib_MakeEdge(BRepLib_MakeEdge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepLib_MakeEdge", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "BRepLib_MakeEdge", 
+          "return": {
+            "type": "BRepLib_MakeEdge", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::Init(opencascade::handle<Geom_Curve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::Init(opencascade::handle<Geom_Curve>, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::Init(opencascade::handle<Geom_Curve>, gp_Pnt, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::Init(opencascade::handle<Geom_Curve>, TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::Init(opencascade::handle<Geom_Curve>, gp_Pnt, gp_Pnt, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::Init(opencascade::handle<Geom_Curve>, TopoDS_Vertex, TopoDS_Vertex, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::Init(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom_Surface>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::Init(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom_Surface>, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::Init(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom_Surface>, gp_Pnt, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::Init(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom_Surface>, TopoDS_Vertex, TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::Init(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom_Surface>, gp_Pnt, gp_Pnt, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::Init(opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom_Surface>, TopoDS_Vertex, TopoDS_Vertex, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "p2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::Error()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "Error", 
+          "return": {
+            "type": "BRepLib_EdgeError"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::Edge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "Edge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::Vertex1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "Vertex1", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepLib_MakeEdge::Vertex2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepLib_MakeEdge", 
+          "name": "Vertex2", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepLib_MakeShape"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepLib_MakeEdge.hxx", 
+        73
+      ], 
+      "key": "BRepLib_MakeEdge"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "BRepLib_Preserved", 
+          0
+        ], 
+        [
+          "BRepLib_Deleted", 
+          1
+        ], 
+        [
+          "BRepLib_Trimmed", 
+          2
+        ], 
+        [
+          "BRepLib_Merged", 
+          3
+        ], 
+        [
+          "BRepLib_BoundaryModified", 
+          4
+        ]
+      ], 
+      "name": "BRepLib_ShapeModification", 
+      "key": "BRepLib_ShapeModification"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "BRepLib_EdgeDone", 
+          0
+        ], 
+        [
+          "BRepLib_PointProjectionFailed", 
+          1
+        ], 
+        [
+          "BRepLib_ParameterOutOfRange", 
+          2
+        ], 
+        [
+          "BRepLib_DifferentPointsOnClosedCurve", 
+          3
+        ], 
+        [
+          "BRepLib_PointWithInfiniteParameter", 
+          4
+        ], 
+        [
+          "BRepLib_DifferentsPointAndParameter", 
+          5
+        ], 
+        [
+          "BRepLib_LineThroughIdenticPoints", 
+          6
+        ]
+      ], 
+      "name": "BRepLib_EdgeError", 
+      "key": "BRepLib_EdgeError"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "BRepLib_ShellDone", 
+          0
+        ], 
+        [
+          "BRepLib_EmptyShell", 
+          1
+        ], 
+        [
+          "BRepLib_DisconnectedShell", 
+          2
+        ], 
+        [
+          "BRepLib_ShellParametersOutOfRange", 
+          3
+        ]
+      ], 
+      "name": "BRepLib_ShellError", 
+      "key": "BRepLib_ShellError"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "BRepLib_WireDone", 
+          0
+        ], 
+        [
+          "BRepLib_EmptyWire", 
+          1
+        ], 
+        [
+          "BRepLib_DisconnectedWire", 
+          2
+        ], 
+        [
+          "BRepLib_NonManifoldWire", 
+          3
+        ]
+      ], 
+      "name": "BRepLib_WireError", 
+      "key": "BRepLib_WireError"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "BRepLib_FaceDone", 
+          0
+        ], 
+        [
+          "BRepLib_NoFace", 
+          1
+        ], 
+        [
+          "BRepLib_NotPlanar", 
+          2
+        ], 
+        [
+          "BRepLib_CurveProjectionFailed", 
+          3
+        ], 
+        [
+          "BRepLib_ParametersOutOfRange", 
+          4
+        ]
+      ], 
+      "name": "BRepLib_FaceError", 
+      "key": "BRepLib_FaceError"
+    }
+  ], 
+  "name": "BRepLib"
+}

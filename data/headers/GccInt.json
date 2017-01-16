@@ -1,0 +1,983 @@
+{
+  "headers": [
+    "GccInt_IType.hxx", 
+    "GccInt_Bisec.hxx", 
+    "GccInt_BPoint.hxx", 
+    "GccInt_BParab.hxx", 
+    "GccInt_BHyper.hxx", 
+    "GccInt_BLine.hxx", 
+    "GccInt_BCirc.hxx", 
+    "GccInt_BElips.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "GccInt_Bisec", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "GccInt_Bisec::ArcType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_Bisec", 
+          "name": "ArcType", 
+          "return": {
+            "type": "GccInt_IType"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "GccInt_Bisec::Point()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_Bisec", 
+          "name": "Point", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_Bisec::Line()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_Bisec", 
+          "name": "Line", 
+          "return": {
+            "type": "gp_Lin2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_Bisec::Circle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_Bisec", 
+          "name": "Circle", 
+          "return": {
+            "type": "gp_Circ2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_Bisec::Hyperbola()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_Bisec", 
+          "name": "Hyperbola", 
+          "return": {
+            "type": "gp_Hypr2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_Bisec::Parabola()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_Bisec", 
+          "name": "Parabola", 
+          "return": {
+            "type": "gp_Parab2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_Bisec::Ellipse()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_Bisec", 
+          "name": "Ellipse", 
+          "return": {
+            "type": "gp_Elips2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_Bisec::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_Bisec", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_Bisec::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_Bisec", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_Bisec::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_Bisec", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GccInt_Bisec.hxx", 
+        56
+      ], 
+      "key": "GccInt_Bisec"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccInt_BPoint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccInt_BPoint::GccInt_BPoint(gp_Pnt2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Point", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccInt_BPoint", 
+          "name": "GccInt_BPoint", 
+          "return": {
+            "type": "GccInt_BPoint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BPoint::GccInt_BPoint(GccInt_BPoint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccInt_BPoint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccInt_BPoint", 
+          "name": "GccInt_BPoint", 
+          "return": {
+            "type": "GccInt_BPoint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccInt_BPoint::Point()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BPoint", 
+          "name": "Point", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_BPoint::ArcType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BPoint", 
+          "name": "ArcType", 
+          "return": {
+            "type": "GccInt_IType"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_BPoint::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BPoint", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BPoint::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BPoint", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BPoint::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BPoint", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GccInt_Bisec"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GccInt_BPoint.hxx", 
+        33
+      ], 
+      "key": "GccInt_BPoint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccInt_BParab", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccInt_BParab::GccInt_BParab(gp_Parab2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Parab2d", 
+              "name": "Parab", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccInt_BParab", 
+          "name": "GccInt_BParab", 
+          "return": {
+            "type": "GccInt_BParab", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BParab::GccInt_BParab(GccInt_BParab)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccInt_BParab", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccInt_BParab", 
+          "name": "GccInt_BParab", 
+          "return": {
+            "type": "GccInt_BParab", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccInt_BParab::Parabola()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BParab", 
+          "name": "Parabola", 
+          "return": {
+            "type": "gp_Parab2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_BParab::ArcType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BParab", 
+          "name": "ArcType", 
+          "return": {
+            "type": "GccInt_IType"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_BParab::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BParab", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BParab::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BParab", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BParab::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BParab", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GccInt_Bisec"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GccInt_BParab.hxx", 
+        34
+      ], 
+      "key": "GccInt_BParab"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccInt_BHyper", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccInt_BHyper::GccInt_BHyper(gp_Hypr2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Hypr2d", 
+              "name": "Hyper", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccInt_BHyper", 
+          "name": "GccInt_BHyper", 
+          "return": {
+            "type": "GccInt_BHyper", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BHyper::GccInt_BHyper(GccInt_BHyper)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccInt_BHyper", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccInt_BHyper", 
+          "name": "GccInt_BHyper", 
+          "return": {
+            "type": "GccInt_BHyper", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccInt_BHyper::Hyperbola()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BHyper", 
+          "name": "Hyperbola", 
+          "return": {
+            "type": "gp_Hypr2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_BHyper::ArcType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BHyper", 
+          "name": "ArcType", 
+          "return": {
+            "type": "GccInt_IType"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_BHyper::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BHyper", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BHyper::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BHyper", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BHyper::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BHyper", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GccInt_Bisec"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GccInt_BHyper.hxx", 
+        34
+      ], 
+      "key": "GccInt_BHyper"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccInt_BLine", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccInt_BLine::GccInt_BLine(gp_Lin2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "Line", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccInt_BLine", 
+          "name": "GccInt_BLine", 
+          "return": {
+            "type": "GccInt_BLine", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BLine::GccInt_BLine(GccInt_BLine)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccInt_BLine", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccInt_BLine", 
+          "name": "GccInt_BLine", 
+          "return": {
+            "type": "GccInt_BLine", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccInt_BLine::Line()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BLine", 
+          "name": "Line", 
+          "return": {
+            "type": "gp_Lin2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_BLine::ArcType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BLine", 
+          "name": "ArcType", 
+          "return": {
+            "type": "GccInt_IType"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_BLine::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BLine", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BLine::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BLine", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BLine::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BLine", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GccInt_Bisec"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GccInt_BLine.hxx", 
+        34
+      ], 
+      "key": "GccInt_BLine"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccInt_BCirc", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccInt_BCirc::GccInt_BCirc(gp_Circ2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Circ2d", 
+              "name": "Circ", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccInt_BCirc", 
+          "name": "GccInt_BCirc", 
+          "return": {
+            "type": "GccInt_BCirc", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BCirc::GccInt_BCirc(GccInt_BCirc)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccInt_BCirc", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccInt_BCirc", 
+          "name": "GccInt_BCirc", 
+          "return": {
+            "type": "GccInt_BCirc", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccInt_BCirc::Circle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BCirc", 
+          "name": "Circle", 
+          "return": {
+            "type": "gp_Circ2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_BCirc::ArcType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BCirc", 
+          "name": "ArcType", 
+          "return": {
+            "type": "GccInt_IType"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_BCirc::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BCirc", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BCirc::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BCirc", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BCirc::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BCirc", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GccInt_Bisec"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GccInt_BCirc.hxx", 
+        34
+      ], 
+      "key": "GccInt_BCirc"
+    }, 
+    {
+      "declType": "class", 
+      "name": "GccInt_BElips", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "GccInt_BElips::GccInt_BElips(gp_Elips2d)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Elips2d", 
+              "name": "Ellipse", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccInt_BElips", 
+          "name": "GccInt_BElips", 
+          "return": {
+            "type": "GccInt_BElips", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BElips::GccInt_BElips(GccInt_BElips)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "GccInt_BElips", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "GccInt_BElips", 
+          "name": "GccInt_BElips", 
+          "return": {
+            "type": "GccInt_BElips", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "GccInt_BElips::Ellipse()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BElips", 
+          "name": "Ellipse", 
+          "return": {
+            "type": "gp_Elips2d"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_BElips::ArcType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BElips", 
+          "name": "ArcType", 
+          "return": {
+            "type": "GccInt_IType"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "GccInt_BElips::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BElips", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BElips::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BElips", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "GccInt_BElips::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "GccInt_BElips", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "GccInt_Bisec"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/GccInt_BElips.hxx", 
+        34
+      ], 
+      "key": "GccInt_BElips"
+    }, 
+    {
+      "type": "opencascade::handle<GccInt_Bisec>", 
+      "declType": "typedef", 
+      "name": "Handle_GccInt_Bisec", 
+      "key": "Handle_GccInt_Bisec"
+    }, 
+    {
+      "type": "opencascade::handle<GccInt_BPoint>", 
+      "declType": "typedef", 
+      "name": "Handle_GccInt_BPoint", 
+      "key": "Handle_GccInt_BPoint"
+    }, 
+    {
+      "type": "opencascade::handle<GccInt_BParab>", 
+      "declType": "typedef", 
+      "name": "Handle_GccInt_BParab", 
+      "key": "Handle_GccInt_BParab"
+    }, 
+    {
+      "type": "opencascade::handle<GccInt_BHyper>", 
+      "declType": "typedef", 
+      "name": "Handle_GccInt_BHyper", 
+      "key": "Handle_GccInt_BHyper"
+    }, 
+    {
+      "type": "opencascade::handle<GccInt_BLine>", 
+      "declType": "typedef", 
+      "name": "Handle_GccInt_BLine", 
+      "key": "Handle_GccInt_BLine"
+    }, 
+    {
+      "type": "opencascade::handle<GccInt_BCirc>", 
+      "declType": "typedef", 
+      "name": "Handle_GccInt_BCirc", 
+      "key": "Handle_GccInt_BCirc"
+    }, 
+    {
+      "type": "opencascade::handle<GccInt_BElips>", 
+      "declType": "typedef", 
+      "name": "Handle_GccInt_BElips", 
+      "key": "Handle_GccInt_BElips"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "GccInt_Lin", 
+          0
+        ], 
+        [
+          "GccInt_Cir", 
+          1
+        ], 
+        [
+          "GccInt_Ell", 
+          2
+        ], 
+        [
+          "GccInt_Par", 
+          3
+        ], 
+        [
+          "GccInt_Hpr", 
+          4
+        ], 
+        [
+          "GccInt_Pnt", 
+          5
+        ]
+      ], 
+      "name": "GccInt_IType", 
+      "key": "GccInt_IType"
+    }
+  ], 
+  "name": "GccInt"
+}

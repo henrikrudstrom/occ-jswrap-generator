@@ -1,0 +1,6285 @@
+{
+  "headers": [
+    "ChFiDS_Spine.hxx", 
+    "ChFiDS_IndexedDataMapOfVertexListOfStripe.hxx", 
+    "ChFiDS_ListIteratorOfRegularities.hxx", 
+    "ChFiDS_SequenceOfSpine.hxx", 
+    "ChFiDS_Regularities.hxx", 
+    "ChFiDS_HData.hxx", 
+    "ChFiDS_CircSection.hxx", 
+    "ChFiDS_HElSpine.hxx", 
+    "ChFiDS_ListIteratorOfListOfStripe.hxx", 
+    "ChFiDS_Regul.hxx", 
+    "ChFiDS_Map.hxx", 
+    "ChFiDS_ChamfMethod.hxx", 
+    "ChFiDS_FaceInterference.hxx", 
+    "ChFiDS_ErrorStatus.hxx", 
+    "ChFiDS_ListOfHElSpine.hxx", 
+    "ChFiDS_CommonPoint.hxx", 
+    "ChFiDS_SequenceOfSurfData.hxx", 
+    "ChFiDS_SurfData.hxx", 
+    "ChFiDS_SecArray1.hxx", 
+    "ChFiDS_State.hxx", 
+    "ChFiDS_ElSpine.hxx", 
+    "ChFiDS_ChamfSpine.hxx", 
+    "ChFiDS_Stripe.hxx", 
+    "ChFiDS_SecHArray1.hxx", 
+    "ChFiDS_ListIteratorOfListOfHElSpine.hxx", 
+    "ChFiDS_FilSpine.hxx", 
+    "ChFiDS_ListOfStripe.hxx", 
+    "ChFiDS_StripeArray1.hxx", 
+    "ChFiDS_StripeMap.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "ChFiDS_SurfData", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFiDS_SurfData::ChFiDS_SurfData()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "ChFiDS_SurfData", 
+          "return": {
+            "type": "ChFiDS_SurfData", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::ChFiDS_SurfData(ChFiDS_SurfData)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_SurfData", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "ChFiDS_SurfData", 
+          "return": {
+            "type": "ChFiDS_SurfData", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::Copy(opencascade::handle<ChFiDS_SurfData>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<ChFiDS_SurfData>", 
+              "name": "Other", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "Copy", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::IndexOfS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "IndexOfS1", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::IndexOfS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "IndexOfS2", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::IsOnCurve1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "IsOnCurve1", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::IsOnCurve2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "IsOnCurve2", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::IndexOfC1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "IndexOfC1", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::IndexOfC2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "IndexOfC2", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::Surf()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "Surf", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::Orientation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "Orientation", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::InterferenceOnS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "InterferenceOnS1", 
+          "return": {
+            "type": "ChFiDS_FaceInterference", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::InterferenceOnS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "InterferenceOnS2", 
+          "return": {
+            "type": "ChFiDS_FaceInterference", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::VertexFirstOnS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "VertexFirstOnS1", 
+          "return": {
+            "type": "ChFiDS_CommonPoint", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::VertexFirstOnS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "VertexFirstOnS2", 
+          "return": {
+            "type": "ChFiDS_CommonPoint", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::VertexLastOnS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "VertexLastOnS1", 
+          "return": {
+            "type": "ChFiDS_CommonPoint", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::VertexLastOnS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "VertexLastOnS2", 
+          "return": {
+            "type": "ChFiDS_CommonPoint", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::ChangeIndexOfS1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "ChangeIndexOfS1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::ChangeIndexOfS2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "ChangeIndexOfS2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::ChangeSurf(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "ChangeSurf", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::SetIndexOfC1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "SetIndexOfC1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::SetIndexOfC2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "SetIndexOfC2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::ChangeOrientation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "ChangeOrientation", 
+          "return": {
+            "type": "TopAbs_Orientation", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::ChangeInterferenceOnS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "ChangeInterferenceOnS1", 
+          "return": {
+            "type": "ChFiDS_FaceInterference", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::ChangeInterferenceOnS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "ChangeInterferenceOnS2", 
+          "return": {
+            "type": "ChFiDS_FaceInterference", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::ChangeVertexFirstOnS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "ChangeVertexFirstOnS1", 
+          "return": {
+            "type": "ChFiDS_CommonPoint", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::ChangeVertexFirstOnS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "ChangeVertexFirstOnS2", 
+          "return": {
+            "type": "ChFiDS_CommonPoint", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::ChangeVertexLastOnS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "ChangeVertexLastOnS1", 
+          "return": {
+            "type": "ChFiDS_CommonPoint", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::ChangeVertexLastOnS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "ChangeVertexLastOnS2", 
+          "return": {
+            "type": "ChFiDS_CommonPoint", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::Interference(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "OnS", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "Interference", 
+          "return": {
+            "type": "ChFiDS_FaceInterference", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::ChangeInterference(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "OnS", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "ChangeInterference", 
+          "return": {
+            "type": "ChFiDS_FaceInterference", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::Index(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "OfS", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "Index", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::Vertex(Standard_Boolean, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "OnS", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "Vertex", 
+          "return": {
+            "type": "ChFiDS_CommonPoint", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::ChangeVertex(Standard_Boolean, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "OnS", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "ChangeVertex", 
+          "return": {
+            "type": "ChFiDS_CommonPoint", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::IsOnCurve(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "OnS", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "IsOnCurve", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::IndexOfC(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "OnS", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "IndexOfC", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::FirstSpineParam()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "FirstSpineParam", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::LastSpineParam()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "LastSpineParam", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::FirstSpineParam(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "FirstSpineParam", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::LastSpineParam(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "LastSpineParam", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::FirstExtensionValue()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "FirstExtensionValue", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::LastExtensionValue()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "LastExtensionValue", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::FirstExtensionValue(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Extend", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "FirstExtensionValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::LastExtensionValue(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Extend", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "LastExtensionValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::Simul()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "Simul", 
+          "return": {
+            "type": "opencascade::handle<MMgt_TShared>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::SetSimul(opencascade::handle<MMgt_TShared>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MMgt_TShared>", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "SetSimul", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::ResetSimul()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "ResetSimul", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::Get2dPoints(Standard_Boolean, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "OnS", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "Get2dPoints", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::Get2dPoints(gp_Pnt2d, gp_Pnt2d, gp_Pnt2d, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2df1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2dl1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2df2", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2dl2", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "Get2dPoints", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::Set2dPoints(gp_Pnt2d, gp_Pnt2d, gp_Pnt2d, gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2df1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2dl1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2df2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2dl2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "Set2dPoints", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::TwistOnS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "TwistOnS1", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::TwistOnS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "TwistOnS2", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::TwistOnS1(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "T", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "TwistOnS1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::TwistOnS2(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "T", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "TwistOnS2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SurfData::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SurfData", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ChFiDS_SurfData.hxx", 
+        42
+      ], 
+      "key": "ChFiDS_SurfData"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFiDS_ElSpine", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFiDS_ElSpine::ChFiDS_ElSpine()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "ChFiDS_ElSpine", 
+          "return": {
+            "type": "ChFiDS_ElSpine", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::ChFiDS_ElSpine(ChFiDS_ElSpine)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_ElSpine", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "ChFiDS_ElSpine", 
+          "return": {
+            "type": "ChFiDS_ElSpine", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::FirstParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::LastParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::GetSavedFirstParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "GetSavedFirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::GetSavedLastParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "GetSavedLastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::Continuity()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "Continuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::NbIntervals(GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "Intervals", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::Trim(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Last", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "Trim", 
+          "return": {
+            "type": "opencascade::handle<Adaptor3d_HCurve>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::Resolution(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R3d", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "Resolution", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::GetType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "GetType", 
+          "return": {
+            "type": "GeomAbs_CurveType"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::IsPeriodic()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "IsPeriodic", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::SetPeriodic(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "SetPeriodic", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::Period()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "Period", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::Value(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "AbsC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "Value", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::D0(Standard_Real, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "AbsC", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "D0", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::D1(Standard_Real, gp_Pnt, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "AbsC", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V1", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::D2(Standard_Real, gp_Pnt, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "AbsC", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::D3(Standard_Real, gp_Pnt, gp_Vec, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "AbsC", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V2", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V3", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "D3", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::FirstParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::LastParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::SaveFirstParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "SaveFirstParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::SaveLastParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "SaveLastParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::SetOrigin(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "O", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "SetOrigin", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::FirstPointAndTgt(gp_Pnt, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "T", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "FirstPointAndTgt", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::LastPointAndTgt(gp_Pnt, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "T", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "LastPointAndTgt", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::NbVertices()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "NbVertices", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::VertexWithTangent(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "VertexWithTangent", 
+          "return": {
+            "type": "gp_Ax1", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::SetFirstPointAndTgt(gp_Pnt, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "SetFirstPointAndTgt", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::SetLastPointAndTgt(gp_Pnt, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "SetLastPointAndTgt", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::AddVertexWithTangent(gp_Ax1)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Ax1", 
+              "name": "anAx1", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "AddVertexWithTangent", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::SetCurve(opencascade::handle<Geom_Curve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Curve>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "SetCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::Previous()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "Previous", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_SurfData>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::ChangePrevious()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "ChangePrevious", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_SurfData>", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::Next()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "Next", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_SurfData>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::ChangeNext()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "ChangeNext", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_SurfData>", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::Line()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "Line", 
+          "return": {
+            "type": "gp_Lin"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::Circle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "Circle", 
+          "return": {
+            "type": "gp_Circ"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::Ellipse()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "Ellipse", 
+          "return": {
+            "type": "gp_Elips"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::Hyperbola()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "Hyperbola", 
+          "return": {
+            "type": "gp_Hypr"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::Parabola()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "Parabola", 
+          "return": {
+            "type": "gp_Parab"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::Bezier()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "Bezier", 
+          "return": {
+            "type": "opencascade::handle<Geom_BezierCurve>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_ElSpine::BSpline()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ElSpine", 
+          "name": "BSpline", 
+          "return": {
+            "type": "opencascade::handle<Geom_BSplineCurve>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor3d_Curve"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ChFiDS_ElSpine.hxx", 
+        54
+      ], 
+      "key": "ChFiDS_ElSpine"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFiDS_HElSpine", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFiDS_HElSpine::ChFiDS_HElSpine()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFiDS_HElSpine", 
+          "name": "ChFiDS_HElSpine", 
+          "return": {
+            "type": "ChFiDS_HElSpine", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_HElSpine::ChFiDS_HElSpine(ChFiDS_ElSpine)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_ElSpine", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_HElSpine", 
+          "name": "ChFiDS_HElSpine", 
+          "return": {
+            "type": "ChFiDS_HElSpine", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_HElSpine::ChFiDS_HElSpine(ChFiDS_HElSpine)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_HElSpine", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_HElSpine", 
+          "name": "ChFiDS_HElSpine", 
+          "return": {
+            "type": "ChFiDS_HElSpine", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFiDS_HElSpine::Set(ChFiDS_ElSpine)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "ChFiDS_ElSpine", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_HElSpine", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_HElSpine::Curve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_HElSpine", 
+          "name": "Curve", 
+          "return": {
+            "type": "Adaptor3d_Curve", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_HElSpine::GetCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_HElSpine", 
+          "name": "GetCurve", 
+          "return": {
+            "type": "Adaptor3d_Curve", 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_HElSpine::ChangeCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_HElSpine", 
+          "name": "ChangeCurve", 
+          "return": {
+            "type": "ChFiDS_ElSpine", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_HElSpine::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_HElSpine", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_HElSpine::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_HElSpine", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_HElSpine::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_HElSpine", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Adaptor3d_HCurve"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ChFiDS_HElSpine.hxx", 
+        36
+      ], 
+      "key": "ChFiDS_HElSpine"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFiDS_Spine", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFiDS_Spine::ChFiDS_Spine()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "ChFiDS_Spine", 
+          "return": {
+            "type": "ChFiDS_Spine", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::ChFiDS_Spine(Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "ChFiDS_Spine", 
+          "return": {
+            "type": "ChFiDS_Spine", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::ChFiDS_Spine(ChFiDS_Spine)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_Spine", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "ChFiDS_Spine", 
+          "return": {
+            "type": "ChFiDS_Spine", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::SetEdges(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "SetEdges", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::PutInFirst(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "PutInFirst", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::NbEdges()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "NbEdges", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Edges(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Edges", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::SetFirstStatus(ChFiDS_State)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "ChFiDS_State", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "SetFirstStatus", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::SetLastStatus(ChFiDS_State)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "ChFiDS_State", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "SetLastStatus", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::AppendElSpine(opencascade::handle<ChFiDS_HElSpine>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<ChFiDS_HElSpine>", 
+              "name": "Els", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "AppendElSpine", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_Spine::ElSpine(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IE", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "ElSpine", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_HElSpine>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::ElSpine(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "ElSpine", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_HElSpine>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::ElSpine(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "W", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "ElSpine", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_HElSpine>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::ChangeElSpines()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "ChangeElSpines", 
+          "return": {
+            "type": "ChFiDS_ListOfHElSpine", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Reset(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "AllData", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Reset", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_Spine::SplitDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "SplitDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::SplitDone(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "B", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "SplitDone", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Load()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Load", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Resolution(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "R3d", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Resolution", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::IsClosed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "IsClosed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::FirstParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::LastParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::SetFirstParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "SetFirstParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::SetLastParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "SetLastParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::FirstParameter(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexSpine", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::LastParameter(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexSpine", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Length(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexSpine", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Length", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::IsPeriodic()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "IsPeriodic", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Period()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Period", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Absc(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Absc", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Absc(Standard_Real, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Absc", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Parameter(Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "AbsC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Oriented", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Parameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Parameter(Standard_Integer, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "AbsC", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Oriented", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Parameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Value(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "AbsC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Value", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::D0(Standard_Real, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "AbsC", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "D0", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::D1(Standard_Real, gp_Pnt, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "AbsC", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V1", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::D2(Standard_Real, gp_Pnt, gp_Vec, gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "AbsC", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Vec", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::SetCurrent(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "SetCurrent", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::CurrentElementarySpine(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "CurrentElementarySpine", 
+          "return": {
+            "type": "BRepAdaptor_Curve", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::CurrentIndexOfElementarySpine()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "CurrentIndexOfElementarySpine", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::GetType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "GetType", 
+          "return": {
+            "type": "GeomAbs_CurveType"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Line()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Line", 
+          "return": {
+            "type": "gp_Lin"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Circle()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Circle", 
+          "return": {
+            "type": "gp_Circ"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::FirstStatus()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "FirstStatus", 
+          "return": {
+            "type": "ChFiDS_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::LastStatus()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "LastStatus", 
+          "return": {
+            "type": "ChFiDS_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Status(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsFirst", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Status", 
+          "return": {
+            "type": "ChFiDS_State"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::SetStatus(ChFiDS_State, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "ChFiDS_State", 
+              "name": "S", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsFirst", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "SetStatus", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::IsTangencyExtremity(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsFirst", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "IsTangencyExtremity", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::SetTangencyExtremity(Standard_Boolean, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsTangency", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsFirst", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "SetTangencyExtremity", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Absc(TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Absc", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::FirstVertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "FirstVertex", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::LastVertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "LastVertex", 
+          "return": {
+            "type": "TopoDS_Vertex"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::SetFirstTgt(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "W", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "SetFirstTgt", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::SetLastTgt(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "W", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "SetLastTgt", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::HasFirstTgt()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "HasFirstTgt", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::HasLastTgt()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "HasLastTgt", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::SetReference(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "W", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "SetReference", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::SetReference(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "SetReference", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Index(Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "W", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Forward", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Index", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::Index(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "Index", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::UnsetReference()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "UnsetReference", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::SetErrorStatus(ChFiDS_ErrorStatus)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "ChFiDS_ErrorStatus", 
+              "name": "state", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Spine", 
+          "name": "SetErrorStatus", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::ErrorStatus()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "ErrorStatus", 
+          "return": {
+            "type": "ChFiDS_ErrorStatus"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Spine::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Spine", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ChFiDS_Spine.hxx", 
+        72
+      ], 
+      "key": "ChFiDS_Spine"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFiDS_CommonPoint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFiDS_CommonPoint::ChFiDS_CommonPoint()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "ChFiDS_CommonPoint", 
+          "return": {
+            "type": "ChFiDS_CommonPoint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::ChFiDS_CommonPoint(ChFiDS_CommonPoint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_CommonPoint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "ChFiDS_CommonPoint", 
+          "return": {
+            "type": "ChFiDS_CommonPoint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::Reset()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "Reset", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::SetVertex(TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "SetVertex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::SetArc(Standard_Real, TopoDS_Edge, Standard_Real, TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "A", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "TArc", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "SetArc", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::SetParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Param", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "SetParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::SetPoint(gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt", 
+              "name": "Point", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "SetPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::SetVector(gp_Vec)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Vec", 
+              "name": "Vector", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "SetVector", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::SetTolerance(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "SetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::Tolerance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "Tolerance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::IsVertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "IsVertex", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::Vertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "Vertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::IsOnArc()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "IsOnArc", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::Arc()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "Arc", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::TransitionOnArc()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "TransitionOnArc", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::ParameterOnArc()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "ParameterOnArc", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::Parameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::Point()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "Point", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::HasVector()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "HasVector", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CommonPoint::Vector()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_CommonPoint", 
+          "name": "Vector", 
+          "return": {
+            "type": "gp_Vec", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ChFiDS_CommonPoint.hxx", 
+        42
+      ], 
+      "key": "ChFiDS_CommonPoint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFiDS_FaceInterference", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFiDS_FaceInterference::ChFiDS_FaceInterference()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "ChFiDS_FaceInterference", 
+          "return": {
+            "type": "ChFiDS_FaceInterference", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FaceInterference::ChFiDS_FaceInterference(ChFiDS_FaceInterference)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_FaceInterference", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "ChFiDS_FaceInterference", 
+          "return": {
+            "type": "ChFiDS_FaceInterference", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFiDS_FaceInterference::SetInterference(Standard_Integer, TopAbs_Orientation, opencascade::handle<Geom2d_Curve>, opencascade::handle<Geom2d_Curve>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "LineIndex", 
+              "const": true
+            }, 
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Trans", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "PCurv1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<Geom2d_Curve>", 
+              "name": "PCurv2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "SetInterference", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FaceInterference::SetTransition(TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Trans", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "SetTransition", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FaceInterference::SetFirstParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "SetFirstParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FaceInterference::SetLastParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "SetLastParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FaceInterference::SetParameter(Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsFirst", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "SetParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FaceInterference::LineIndex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "LineIndex", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FaceInterference::SetLineIndex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "SetLineIndex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FaceInterference::Transition()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "Transition", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FaceInterference::PCurveOnFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "PCurveOnFace", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FaceInterference::PCurveOnSurf()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "PCurveOnSurf", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FaceInterference::ChangePCurveOnFace()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "ChangePCurveOnFace", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FaceInterference::ChangePCurveOnSurf()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "ChangePCurveOnSurf", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FaceInterference::FirstParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FaceInterference::LastParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FaceInterference::Parameter(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsFirst", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_FaceInterference", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ChFiDS_FaceInterference.hxx", 
+        32
+      ], 
+      "key": "ChFiDS_FaceInterference"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFiDS_HData", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFiDS_HData::ChFiDS_HData()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFiDS_HData", 
+          "name": "ChFiDS_HData", 
+          "return": {
+            "type": "ChFiDS_HData", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_HData::ChFiDS_HData(ChFiDS_SequenceOfSurfData)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_SequenceOfSurfData", 
+              "name": "theOther", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_HData", 
+          "name": "ChFiDS_HData", 
+          "return": {
+            "type": "ChFiDS_HData", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_HData::ChFiDS_HData(ChFiDS_HData)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_HData", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_HData", 
+          "name": "ChFiDS_HData", 
+          "return": {
+            "type": "ChFiDS_HData", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFiDS_HData::Sequence()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_HData", 
+          "name": "Sequence", 
+          "return": {
+            "type": "ChFiDS_SequenceOfSurfData", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_HData::Append(NCollection_Sequence<opencascade::handle<ChFiDS_SurfData> >::value_type)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "NCollection_Sequence<opencascade::handle<ChFiDS_SurfData> >::value_type", 
+              "name": "theItem", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_HData", 
+          "name": "Append", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_HData::Append(ChFiDS_SequenceOfSurfData)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "ChFiDS_SequenceOfSurfData", 
+              "name": "theSequence", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_HData", 
+          "name": "Append", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_HData::ChangeSequence()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_HData", 
+          "name": "ChangeSequence", 
+          "return": {
+            "type": "ChFiDS_SequenceOfSurfData", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_HData::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_HData", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_HData::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_HData", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_HData::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_HData", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Sequence<opencascade::handle<ChFiDS_SurfData> >"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ChFiDS_HData.hxx", 
+        24
+      ], 
+      "key": "ChFiDS_HData"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFiDS_Stripe", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFiDS_Stripe::ChFiDS_Stripe()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "ChFiDS_Stripe", 
+          "return": {
+            "type": "ChFiDS_Stripe", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::ChFiDS_Stripe(ChFiDS_Stripe)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_Stripe", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "ChFiDS_Stripe", 
+          "return": {
+            "type": "ChFiDS_Stripe", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::Reset()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "Reset", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::SetOfSurfData()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "SetOfSurfData", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_HData>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::Spine()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "Spine", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_Spine>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::OrientationOnFace1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "OrientationOnFace1", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::OrientationOnFace2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "OrientationOnFace2", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::Choix()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "Choix", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::ChangeSetOfSurfData()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "ChangeSetOfSurfData", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_HData>", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::ChangeSpine()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "ChangeSpine", 
+          "return": {
+            "type": "opencascade::handle<ChFiDS_Spine>", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::OrientationOnFace1(TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or1", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "OrientationOnFace1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::OrientationOnFace2(TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or2", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "OrientationOnFace2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::Choix(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "C", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "Choix", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::FirstParameters(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Pdeb", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Pfin", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "FirstParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::LastParameters(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Pdeb", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Pfin", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "LastParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::ChangeFirstParameters(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Pdeb", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Pfin", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "ChangeFirstParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::ChangeLastParameters(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Pdeb", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Pfin", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "ChangeLastParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::FirstCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "FirstCurve", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::LastCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "LastCurve", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::ChangeFirstCurve(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "ChangeFirstCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::ChangeLastCurve(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "ChangeLastCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::FirstPCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "FirstPCurve", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::LastPCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "LastPCurve", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::ChangeFirstPCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "ChangeFirstPCurve", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::ChangeLastPCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "ChangeLastPCurve", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::FirstPCurveOrientation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "FirstPCurveOrientation", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::LastPCurveOrientation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "LastPCurveOrientation", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::FirstPCurveOrientation(TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "O", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "FirstPCurveOrientation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::LastPCurveOrientation(TopAbs_Orientation)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "O", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "LastPCurveOrientation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::IndexFirstPointOnS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "IndexFirstPointOnS1", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::IndexFirstPointOnS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "IndexFirstPointOnS2", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::IndexLastPointOnS1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "IndexLastPointOnS1", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::IndexLastPointOnS2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "IndexLastPointOnS2", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::ChangeIndexFirstPointOnS1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "ChangeIndexFirstPointOnS1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::ChangeIndexFirstPointOnS2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "ChangeIndexFirstPointOnS2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::ChangeIndexLastPointOnS1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "ChangeIndexLastPointOnS1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::ChangeIndexLastPointOnS2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "ChangeIndexLastPointOnS2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::Parameters(Standard_Boolean, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Pdeb", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Pfin", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "Parameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::SetParameters(Standard_Boolean, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Pdeb", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Pfin", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "SetParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::Curve(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "Curve", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::SetCurve(Standard_Integer, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "SetCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::PCurve(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "PCurve", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::ChangePCurve(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "ChangePCurve", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::Orientation(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "OnS", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "Orientation", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::SetOrientation(TopAbs_Orientation, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "OnS", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "SetOrientation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::Orientation(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "Orientation", 
+          "return": {
+            "type": "TopAbs_Orientation"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::SetOrientation(TopAbs_Orientation, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopAbs_Orientation", 
+              "name": "Or", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "SetOrientation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::IndexPoint(Standard_Boolean, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "OnS", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "IndexPoint", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::SetIndexPoint(Standard_Integer, Standard_Boolean, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "OnS", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "SetIndexPoint", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::SolidIndex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "SolidIndex", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::SetSolidIndex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "SetSolidIndex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::InDS(Standard_Boolean, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Nb", 
+              "default": "1", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "InDS", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::IsInDS(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "IsInDS", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Stripe::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Stripe", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ChFiDS_Stripe.hxx", 
+        37
+      ], 
+      "key": "ChFiDS_Stripe"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFiDS_Regul", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFiDS_Regul::ChFiDS_Regul()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFiDS_Regul", 
+          "name": "ChFiDS_Regul", 
+          "return": {
+            "type": "ChFiDS_Regul", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Regul::ChFiDS_Regul(ChFiDS_Regul)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_Regul", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Regul", 
+          "name": "ChFiDS_Regul", 
+          "return": {
+            "type": "ChFiDS_Regul", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFiDS_Regul::SetCurve(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Regul", 
+          "name": "SetCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Regul::SetS1(Standard_Integer, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IS1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsFace", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Regul", 
+          "name": "SetS1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Regul::SetS2(Standard_Integer, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IS2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsFace", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Regul", 
+          "name": "SetS2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Regul::IsSurface1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Regul", 
+          "name": "IsSurface1", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Regul::IsSurface2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Regul", 
+          "name": "IsSurface2", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Regul::Curve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Regul", 
+          "name": "Curve", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Regul::S1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Regul", 
+          "name": "S1", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Regul::S2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_Regul", 
+          "name": "S2", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ChFiDS_Regul.hxx", 
+        29
+      ], 
+      "key": "ChFiDS_Regul"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFiDS_CircSection", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFiDS_CircSection::ChFiDS_CircSection()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFiDS_CircSection", 
+          "name": "ChFiDS_CircSection", 
+          "return": {
+            "type": "ChFiDS_CircSection", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CircSection::ChFiDS_CircSection(ChFiDS_CircSection)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_CircSection", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_CircSection", 
+          "name": "ChFiDS_CircSection", 
+          "return": {
+            "type": "ChFiDS_CircSection", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFiDS_CircSection::Set(gp_Circ, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Circ", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "L", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_CircSection", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CircSection::Set(gp_Lin, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "L", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_CircSection", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CircSection::Get(gp_Circ, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Circ", 
+              "name": "C", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "L", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_CircSection", 
+          "name": "Get", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_CircSection::Get(gp_Lin, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin", 
+              "name": "C", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "L", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_CircSection", 
+          "name": "Get", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ChFiDS_CircSection.hxx", 
+        32
+      ], 
+      "key": "ChFiDS_CircSection"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFiDS_Map", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFiDS_Map::ChFiDS_Map()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFiDS_Map", 
+          "name": "ChFiDS_Map", 
+          "return": {
+            "type": "ChFiDS_Map", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Map::ChFiDS_Map(ChFiDS_Map)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_Map", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Map", 
+          "name": "ChFiDS_Map", 
+          "return": {
+            "type": "ChFiDS_Map", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFiDS_Map::Fill(TopoDS_Shape, TopAbs_ShapeEnum, TopAbs_ShapeEnum)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopAbs_ShapeEnum", 
+              "name": "T1", 
+              "const": true
+            }, 
+            {
+              "type": "TopAbs_ShapeEnum", 
+              "name": "T2", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Map", 
+          "name": "Fill", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Map::Contains(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Map", 
+          "name": "Contains", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Map::FindFromKey(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_Map", 
+          "name": "FindFromKey", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_Map::FindFromIndex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_Map", 
+          "name": "FindFromIndex", 
+          "return": {
+            "type": "TopTools_ListOfShape", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ChFiDS_Map.hxx", 
+        33
+      ], 
+      "key": "ChFiDS_Map"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFiDS_ChamfSpine", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFiDS_ChamfSpine::ChFiDS_ChamfSpine()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFiDS_ChamfSpine", 
+          "name": "ChFiDS_ChamfSpine", 
+          "return": {
+            "type": "ChFiDS_ChamfSpine", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ChamfSpine::ChFiDS_ChamfSpine(Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_ChamfSpine", 
+          "name": "ChFiDS_ChamfSpine", 
+          "return": {
+            "type": "ChFiDS_ChamfSpine", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ChamfSpine::ChFiDS_ChamfSpine(ChFiDS_ChamfSpine)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_ChamfSpine", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_ChamfSpine", 
+          "name": "ChFiDS_ChamfSpine", 
+          "return": {
+            "type": "ChFiDS_ChamfSpine", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFiDS_ChamfSpine::SetDist(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_ChamfSpine", 
+          "name": "SetDist", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ChamfSpine::GetDist(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_ChamfSpine", 
+          "name": "GetDist", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ChamfSpine::SetDists(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dis2", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_ChamfSpine", 
+          "name": "SetDists", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ChamfSpine::Dists(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dis2", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_ChamfSpine", 
+          "name": "Dists", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ChamfSpine::GetDistAngle(Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Angle", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "DisOnF1", 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_ChamfSpine", 
+          "name": "GetDistAngle", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ChamfSpine::SetDistAngle(Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Dis", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Angle", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "DisOnF1", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_ChamfSpine", 
+          "name": "SetDistAngle", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ChamfSpine::IsChamfer()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ChamfSpine", 
+          "name": "IsChamfer", 
+          "return": {
+            "type": "ChFiDS_ChamfMethod"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ChamfSpine::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ChamfSpine", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ChamfSpine::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ChamfSpine", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_ChamfSpine::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_ChamfSpine", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "ChFiDS_Spine"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ChFiDS_ChamfSpine.hxx", 
+        34
+      ], 
+      "key": "ChFiDS_ChamfSpine"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFiDS_SecHArray1", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFiDS_SecHArray1::ChFiDS_SecHArray1(Standard_Integer, Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theLower", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "theUpper", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_SecHArray1", 
+          "name": "ChFiDS_SecHArray1", 
+          "return": {
+            "type": "ChFiDS_SecHArray1", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SecHArray1::ChFiDS_SecHArray1(Standard_Integer, Standard_Integer, NCollection_Array1<ChFiDS_CircSection>::value_type)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theLower", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "theUpper", 
+              "const": true
+            }, 
+            {
+              "type": "NCollection_Array1<ChFiDS_CircSection>::value_type", 
+              "name": "theValue", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_SecHArray1", 
+          "name": "ChFiDS_SecHArray1", 
+          "return": {
+            "type": "ChFiDS_SecHArray1", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SecHArray1::ChFiDS_SecHArray1(ChFiDS_SecArray1)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_SecArray1", 
+              "name": "theOther", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_SecHArray1", 
+          "name": "ChFiDS_SecHArray1", 
+          "return": {
+            "type": "ChFiDS_SecHArray1", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SecHArray1::ChFiDS_SecHArray1(ChFiDS_SecHArray1)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_SecHArray1", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_SecHArray1", 
+          "name": "ChFiDS_SecHArray1", 
+          "return": {
+            "type": "ChFiDS_SecHArray1", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFiDS_SecHArray1::Array1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SecHArray1", 
+          "name": "Array1", 
+          "return": {
+            "type": "ChFiDS_SecArray1", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SecHArray1::ChangeArray1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SecHArray1", 
+          "name": "ChangeArray1", 
+          "return": {
+            "type": "ChFiDS_SecArray1", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SecHArray1::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SecHArray1", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SecHArray1::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SecHArray1", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_SecHArray1::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_SecHArray1", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NCollection_Array1<ChFiDS_CircSection>"
+        }, 
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ChFiDS_SecHArray1.hxx", 
+        24
+      ], 
+      "key": "ChFiDS_SecHArray1"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFiDS_FilSpine", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFiDS_FilSpine::ChFiDS_FilSpine()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "ChFiDS_FilSpine", 
+          "return": {
+            "type": "ChFiDS_FilSpine", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::ChFiDS_FilSpine(Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "ChFiDS_FilSpine", 
+          "return": {
+            "type": "ChFiDS_FilSpine", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::ChFiDS_FilSpine(ChFiDS_FilSpine)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_FilSpine", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "ChFiDS_FilSpine", 
+          "return": {
+            "type": "ChFiDS_FilSpine", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::Reset(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "AllData", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "Reset", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::SetRadius(Standard_Real, TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "SetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::UnSetRadius(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "UnSetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::SetRadius(Standard_Real, TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "SetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::UnSetRadius(TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "UnSetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::SetRadius(gp_XY, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_XY", 
+              "name": "UandR", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IinC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "SetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::SetRadius(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "SetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::SetRadius(opencascade::handle<Law_Function>, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Law_Function>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "IinC", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "SetRadius", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::IsConstant()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "IsConstant", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::IsConstant(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IE", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "IsConstant", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::Radius()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "Radius", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::Radius(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IE", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "Radius", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::Radius(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "Radius", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::AppendElSpine(opencascade::handle<ChFiDS_HElSpine>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<ChFiDS_HElSpine>", 
+              "name": "Els", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "AppendElSpine", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::Law(opencascade::handle<ChFiDS_HElSpine>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<ChFiDS_HElSpine>", 
+              "name": "Els", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "Law", 
+          "return": {
+            "type": "opencascade::handle<Law_Composite>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::ChangeLaw(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "ChangeLaw", 
+          "return": {
+            "type": "opencascade::handle<Law_Function>", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::MaxRadFromSeqAndLaws()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "MaxRadFromSeqAndLaws", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_FilSpine::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_FilSpine", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "ChFiDS_Spine"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/ChFiDS_FilSpine.hxx", 
+        42
+      ], 
+      "key": "ChFiDS_FilSpine"
+    }, 
+    {
+      "declType": "class", 
+      "name": "ChFiDS_StripeMap", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "ChFiDS_StripeMap::ChFiDS_StripeMap()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "ChFiDS_StripeMap", 
+          "name": "ChFiDS_StripeMap", 
+          "return": {
+            "type": "ChFiDS_StripeMap", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_StripeMap::ChFiDS_StripeMap(ChFiDS_StripeMap)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "ChFiDS_StripeMap", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_StripeMap", 
+          "name": "ChFiDS_StripeMap", 
+          "return": {
+            "type": "ChFiDS_StripeMap", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "ChFiDS_StripeMap::Add(TopoDS_Vertex, opencascade::handle<ChFiDS_Stripe>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<ChFiDS_Stripe>", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_StripeMap", 
+          "name": "Add", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_StripeMap::Extent()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_StripeMap", 
+          "name": "Extent", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_StripeMap::FindFromKey(TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "ChFiDS_StripeMap", 
+          "name": "FindFromKey", 
+          "return": {
+            "type": "ChFiDS_ListOfStripe", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_StripeMap::FindFromIndex(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_StripeMap", 
+          "name": "FindFromIndex", 
+          "return": {
+            "type": "ChFiDS_ListOfStripe", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_StripeMap::FindKey(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "ChFiDS_StripeMap", 
+          "name": "FindKey", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "ChFiDS_StripeMap::Clear()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "ChFiDS_StripeMap", 
+          "name": "Clear", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/ChFiDS_StripeMap.hxx", 
+        32
+      ], 
+      "key": "ChFiDS_StripeMap"
+    }, 
+    {
+      "type": "opencascade::handle<ChFiDS_HElSpine>", 
+      "declType": "typedef", 
+      "name": "Handle_ChFiDS_HElSpine", 
+      "key": "Handle_ChFiDS_HElSpine"
+    }, 
+    {
+      "type": "NCollection_List<opencascade::handle<ChFiDS_HElSpine> >", 
+      "declType": "typedef", 
+      "name": "ChFiDS_ListOfHElSpine", 
+      "key": "ChFiDS_ListOfHElSpine"
+    }, 
+    {
+      "type": "NCollection_List<opencascade::handle<ChFiDS_HElSpine> >::Iterator", 
+      "declType": "typedef", 
+      "name": "ChFiDS_ListIteratorOfListOfHElSpine", 
+      "key": "ChFiDS_ListIteratorOfListOfHElSpine"
+    }, 
+    {
+      "type": "opencascade::handle<ChFiDS_Spine>", 
+      "declType": "typedef", 
+      "name": "Handle_ChFiDS_Spine", 
+      "key": "Handle_ChFiDS_Spine"
+    }, 
+    {
+      "type": "opencascade::handle<ChFiDS_SurfData>", 
+      "declType": "typedef", 
+      "name": "Handle_ChFiDS_SurfData", 
+      "key": "Handle_ChFiDS_SurfData"
+    }, 
+    {
+      "type": "NCollection_Sequence<opencascade::handle<ChFiDS_SurfData> >", 
+      "declType": "typedef", 
+      "name": "ChFiDS_SequenceOfSurfData", 
+      "key": "ChFiDS_SequenceOfSurfData"
+    }, 
+    {
+      "type": "opencascade::handle<ChFiDS_HData>", 
+      "declType": "typedef", 
+      "name": "Handle_ChFiDS_HData", 
+      "key": "Handle_ChFiDS_HData"
+    }, 
+    {
+      "type": "opencascade::handle<ChFiDS_Stripe>", 
+      "declType": "typedef", 
+      "name": "Handle_ChFiDS_Stripe", 
+      "key": "Handle_ChFiDS_Stripe"
+    }, 
+    {
+      "type": "NCollection_List<opencascade::handle<ChFiDS_Stripe> >", 
+      "declType": "typedef", 
+      "name": "ChFiDS_ListOfStripe", 
+      "key": "ChFiDS_ListOfStripe"
+    }, 
+    {
+      "type": "NCollection_List<opencascade::handle<ChFiDS_Stripe> >::Iterator", 
+      "declType": "typedef", 
+      "name": "ChFiDS_ListIteratorOfListOfStripe", 
+      "key": "ChFiDS_ListIteratorOfListOfStripe"
+    }, 
+    {
+      "type": "NCollection_IndexedDataMap<TopoDS_Vertex, NCollection_List<opencascade::handle<ChFiDS_Stripe> >, TopTools_ShapeMapHasher>", 
+      "declType": "typedef", 
+      "name": "ChFiDS_IndexedDataMapOfVertexListOfStripe", 
+      "key": "ChFiDS_IndexedDataMapOfVertexListOfStripe"
+    }, 
+    {
+      "type": "NCollection_List<ChFiDS_Regul>", 
+      "declType": "typedef", 
+      "name": "ChFiDS_Regularities", 
+      "key": "ChFiDS_Regularities"
+    }, 
+    {
+      "type": "NCollection_List<ChFiDS_Regul>::Iterator", 
+      "declType": "typedef", 
+      "name": "ChFiDS_ListIteratorOfRegularities", 
+      "key": "ChFiDS_ListIteratorOfRegularities"
+    }, 
+    {
+      "type": "NCollection_Sequence<opencascade::handle<ChFiDS_Spine> >", 
+      "declType": "typedef", 
+      "name": "ChFiDS_SequenceOfSpine", 
+      "key": "ChFiDS_SequenceOfSpine"
+    }, 
+    {
+      "type": "NCollection_Array1<ChFiDS_CircSection>", 
+      "declType": "typedef", 
+      "name": "ChFiDS_SecArray1", 
+      "key": "ChFiDS_SecArray1"
+    }, 
+    {
+      "type": "opencascade::handle<ChFiDS_ChamfSpine>", 
+      "declType": "typedef", 
+      "name": "Handle_ChFiDS_ChamfSpine", 
+      "key": "Handle_ChFiDS_ChamfSpine"
+    }, 
+    {
+      "type": "opencascade::handle<ChFiDS_SecHArray1>", 
+      "declType": "typedef", 
+      "name": "Handle_ChFiDS_SecHArray1", 
+      "key": "Handle_ChFiDS_SecHArray1"
+    }, 
+    {
+      "type": "opencascade::handle<ChFiDS_FilSpine>", 
+      "declType": "typedef", 
+      "name": "Handle_ChFiDS_FilSpine", 
+      "key": "Handle_ChFiDS_FilSpine"
+    }, 
+    {
+      "type": "NCollection_Array1<opencascade::handle<ChFiDS_Stripe> >", 
+      "declType": "typedef", 
+      "name": "ChFiDS_StripeArray1", 
+      "key": "ChFiDS_StripeArray1"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "ChFiDS_OnSame", 
+          0
+        ], 
+        [
+          "ChFiDS_OnDiff", 
+          1
+        ], 
+        [
+          "ChFiDS_AllSame", 
+          2
+        ], 
+        [
+          "ChFiDS_BreakPoint", 
+          3
+        ], 
+        [
+          "ChFiDS_FreeBoundary", 
+          4
+        ], 
+        [
+          "ChFiDS_Closed", 
+          5
+        ], 
+        [
+          "ChFiDS_Tangent", 
+          6
+        ]
+      ], 
+      "name": "ChFiDS_State", 
+      "key": "ChFiDS_State"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "ChFiDS_Ok", 
+          0
+        ], 
+        [
+          "ChFiDS_Error", 
+          1
+        ], 
+        [
+          "ChFiDS_WalkingFailure", 
+          2
+        ], 
+        [
+          "ChFiDS_StartsolFailure", 
+          3
+        ], 
+        [
+          "ChFiDS_TwistedSurface", 
+          4
+        ]
+      ], 
+      "name": "ChFiDS_ErrorStatus", 
+      "key": "ChFiDS_ErrorStatus"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "ChFiDS_Sym", 
+          0
+        ], 
+        [
+          "ChFiDS_TwoDist", 
+          1
+        ], 
+        [
+          "ChFiDS_DistAngle", 
+          2
+        ]
+      ], 
+      "name": "ChFiDS_ChamfMethod", 
+      "key": "ChFiDS_ChamfMethod"
+    }
+  ], 
+  "name": "ChFiDS"
+}

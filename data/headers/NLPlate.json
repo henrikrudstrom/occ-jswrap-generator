@@ -1,0 +1,1924 @@
+{
+  "headers": [
+    "NLPlate_StackOfPlate.hxx", 
+    "NLPlate_HPG3Constraint.hxx", 
+    "NLPlate_HPG1Constraint.hxx", 
+    "NLPlate_ListIteratorOfStackOfPlate.hxx", 
+    "NLPlate_HPG2Constraint.hxx", 
+    "NLPlate_HPG0G3Constraint.hxx", 
+    "NLPlate_HGPPConstraint.hxx", 
+    "NLPlate_SequenceOfHGPPConstraint.hxx", 
+    "NLPlate_NLPlate.hxx", 
+    "NLPlate_HPG0Constraint.hxx", 
+    "NLPlate_HPG0G2Constraint.hxx", 
+    "NLPlate_HPG0G1Constraint.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "NLPlate_HGPPConstraint", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "NLPlate_HGPPConstraint::SetUVFreeSliding(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "UVFree", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "SetUVFreeSliding", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::SetIncrementalLoadAllowed(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "ILA", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "SetIncrementalLoadAllowed", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::SetActiveOrder(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "ActiveOrder", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "SetActiveOrder", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::SetUV(gp_XY)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_XY", 
+              "name": "UV", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "SetUV", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::SetOrientation(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Orient", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "SetOrientation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::SetG0Criterion(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "TolDist", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "SetG0Criterion", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::SetG1Criterion(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "TolAng", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "SetG1Criterion", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::SetG2Criterion(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "TolCurv", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "SetG2Criterion", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::SetG3Criterion(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "TolG3", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "SetG3Criterion", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::UVFreeSliding()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "UVFreeSliding", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::IncrementalLoadAllowed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "IncrementalLoadAllowed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::ActiveOrder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "ActiveOrder", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::UV()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "UV", 
+          "return": {
+            "type": "gp_XY", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::Orientation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "Orientation", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::IsG0()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "IsG0", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::G0Target()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "G0Target", 
+          "return": {
+            "type": "gp_XYZ", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::G1Target()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "G1Target", 
+          "return": {
+            "type": "Plate_D1", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::G2Target()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "G2Target", 
+          "return": {
+            "type": "Plate_D2", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::G3Target()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "G3Target", 
+          "return": {
+            "type": "Plate_D3", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::G0Criterion()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "G0Criterion", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::G1Criterion()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "G1Criterion", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::G2Criterion()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "G2Criterion", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::G3Criterion()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "G3Criterion", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HGPPConstraint::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HGPPConstraint", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/NLPlate_HGPPConstraint.hxx", 
+        39
+      ], 
+      "key": "NLPlate_HGPPConstraint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "NLPlate_HPG1Constraint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "NLPlate_HPG1Constraint::NLPlate_HPG1Constraint(gp_XY, Plate_D1)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_XY", 
+              "name": "UV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Plate_D1", 
+              "name": "D1T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_HPG1Constraint", 
+          "name": "NLPlate_HPG1Constraint", 
+          "return": {
+            "type": "NLPlate_HPG1Constraint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG1Constraint::NLPlate_HPG1Constraint(NLPlate_HPG1Constraint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "NLPlate_HPG1Constraint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_HPG1Constraint", 
+          "name": "NLPlate_HPG1Constraint", 
+          "return": {
+            "type": "NLPlate_HPG1Constraint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "NLPlate_HPG1Constraint::SetIncrementalLoadAllowed(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "ILA", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_HPG1Constraint", 
+          "name": "SetIncrementalLoadAllowed", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG1Constraint::SetOrientation(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Orient", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_HPG1Constraint", 
+          "name": "SetOrientation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG1Constraint::IncrementalLoadAllowed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG1Constraint", 
+          "name": "IncrementalLoadAllowed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG1Constraint::ActiveOrder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG1Constraint", 
+          "name": "ActiveOrder", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG1Constraint::IsG0()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG1Constraint", 
+          "name": "IsG0", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG1Constraint::Orientation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG1Constraint", 
+          "name": "Orientation", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG1Constraint::G1Target()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG1Constraint", 
+          "name": "G1Target", 
+          "return": {
+            "type": "Plate_D1", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG1Constraint::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG1Constraint", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG1Constraint::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG1Constraint", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG1Constraint::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG1Constraint", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NLPlate_HGPPConstraint"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/NLPlate_HPG1Constraint.hxx", 
+        36
+      ], 
+      "key": "NLPlate_HPG1Constraint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "NLPlate_HPG2Constraint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "NLPlate_HPG2Constraint::NLPlate_HPG2Constraint(gp_XY, Plate_D1, Plate_D2)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_XY", 
+              "name": "UV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Plate_D1", 
+              "name": "D1T", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Plate_D2", 
+              "name": "D2T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_HPG2Constraint", 
+          "name": "NLPlate_HPG2Constraint", 
+          "return": {
+            "type": "NLPlate_HPG2Constraint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG2Constraint::NLPlate_HPG2Constraint(NLPlate_HPG2Constraint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "NLPlate_HPG2Constraint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_HPG2Constraint", 
+          "name": "NLPlate_HPG2Constraint", 
+          "return": {
+            "type": "NLPlate_HPG2Constraint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "NLPlate_HPG2Constraint::ActiveOrder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG2Constraint", 
+          "name": "ActiveOrder", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG2Constraint::G2Target()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG2Constraint", 
+          "name": "G2Target", 
+          "return": {
+            "type": "Plate_D2", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG2Constraint::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG2Constraint", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG2Constraint::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG2Constraint", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG2Constraint::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG2Constraint", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NLPlate_HPG1Constraint"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/NLPlate_HPG2Constraint.hxx", 
+        36
+      ], 
+      "key": "NLPlate_HPG2Constraint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "NLPlate_HPG3Constraint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "NLPlate_HPG3Constraint::NLPlate_HPG3Constraint(gp_XY, Plate_D1, Plate_D2, Plate_D3)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_XY", 
+              "name": "UV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Plate_D1", 
+              "name": "D1T", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Plate_D2", 
+              "name": "D2T", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Plate_D3", 
+              "name": "D3T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_HPG3Constraint", 
+          "name": "NLPlate_HPG3Constraint", 
+          "return": {
+            "type": "NLPlate_HPG3Constraint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG3Constraint::NLPlate_HPG3Constraint(NLPlate_HPG3Constraint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "NLPlate_HPG3Constraint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_HPG3Constraint", 
+          "name": "NLPlate_HPG3Constraint", 
+          "return": {
+            "type": "NLPlate_HPG3Constraint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "NLPlate_HPG3Constraint::ActiveOrder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG3Constraint", 
+          "name": "ActiveOrder", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG3Constraint::G3Target()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG3Constraint", 
+          "name": "G3Target", 
+          "return": {
+            "type": "Plate_D3", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG3Constraint::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG3Constraint", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG3Constraint::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG3Constraint", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG3Constraint::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG3Constraint", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NLPlate_HPG2Constraint"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/NLPlate_HPG3Constraint.hxx", 
+        37
+      ], 
+      "key": "NLPlate_HPG3Constraint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "NLPlate_HPG0Constraint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "NLPlate_HPG0Constraint::NLPlate_HPG0Constraint(gp_XY, gp_XYZ)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_XY", 
+              "name": "UV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_XYZ", 
+              "name": "Value", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_HPG0Constraint", 
+          "name": "NLPlate_HPG0Constraint", 
+          "return": {
+            "type": "NLPlate_HPG0Constraint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG0Constraint::NLPlate_HPG0Constraint(NLPlate_HPG0Constraint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "NLPlate_HPG0Constraint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_HPG0Constraint", 
+          "name": "NLPlate_HPG0Constraint", 
+          "return": {
+            "type": "NLPlate_HPG0Constraint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "NLPlate_HPG0Constraint::SetUVFreeSliding(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "UVFree", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_HPG0Constraint", 
+          "name": "SetUVFreeSliding", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG0Constraint::SetIncrementalLoadAllowed(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "ILA", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_HPG0Constraint", 
+          "name": "SetIncrementalLoadAllowed", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG0Constraint::UVFreeSliding()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0Constraint", 
+          "name": "UVFreeSliding", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG0Constraint::IncrementalLoadAllowed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0Constraint", 
+          "name": "IncrementalLoadAllowed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG0Constraint::ActiveOrder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0Constraint", 
+          "name": "ActiveOrder", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG0Constraint::IsG0()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0Constraint", 
+          "name": "IsG0", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG0Constraint::G0Target()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0Constraint", 
+          "name": "G0Target", 
+          "return": {
+            "type": "gp_XYZ", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG0Constraint::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0Constraint", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG0Constraint::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0Constraint", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG0Constraint::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0Constraint", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NLPlate_HGPPConstraint"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/NLPlate_HPG0Constraint.hxx", 
+        36
+      ], 
+      "key": "NLPlate_HPG0Constraint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "NLPlate_HPG0G1Constraint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "NLPlate_HPG0G1Constraint::NLPlate_HPG0G1Constraint(gp_XY, gp_XYZ, Plate_D1)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_XY", 
+              "name": "UV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_XYZ", 
+              "name": "Value", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Plate_D1", 
+              "name": "D1T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_HPG0G1Constraint", 
+          "name": "NLPlate_HPG0G1Constraint", 
+          "return": {
+            "type": "NLPlate_HPG0G1Constraint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG0G1Constraint::NLPlate_HPG0G1Constraint(NLPlate_HPG0G1Constraint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "NLPlate_HPG0G1Constraint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_HPG0G1Constraint", 
+          "name": "NLPlate_HPG0G1Constraint", 
+          "return": {
+            "type": "NLPlate_HPG0G1Constraint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "NLPlate_HPG0G1Constraint::SetOrientation(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Orient", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_HPG0G1Constraint", 
+          "name": "SetOrientation", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG0G1Constraint::ActiveOrder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0G1Constraint", 
+          "name": "ActiveOrder", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG0G1Constraint::Orientation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0G1Constraint", 
+          "name": "Orientation", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG0G1Constraint::G1Target()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0G1Constraint", 
+          "name": "G1Target", 
+          "return": {
+            "type": "Plate_D1", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG0G1Constraint::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0G1Constraint", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG0G1Constraint::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0G1Constraint", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG0G1Constraint::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0G1Constraint", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NLPlate_HPG0Constraint"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/NLPlate_HPG0G1Constraint.hxx", 
+        36
+      ], 
+      "key": "NLPlate_HPG0G1Constraint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "NLPlate_HPG0G2Constraint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "NLPlate_HPG0G2Constraint::NLPlate_HPG0G2Constraint(gp_XY, gp_XYZ, Plate_D1, Plate_D2)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_XY", 
+              "name": "UV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_XYZ", 
+              "name": "Value", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Plate_D1", 
+              "name": "D1T", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Plate_D2", 
+              "name": "D2T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_HPG0G2Constraint", 
+          "name": "NLPlate_HPG0G2Constraint", 
+          "return": {
+            "type": "NLPlate_HPG0G2Constraint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG0G2Constraint::NLPlate_HPG0G2Constraint(NLPlate_HPG0G2Constraint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "NLPlate_HPG0G2Constraint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_HPG0G2Constraint", 
+          "name": "NLPlate_HPG0G2Constraint", 
+          "return": {
+            "type": "NLPlate_HPG0G2Constraint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "NLPlate_HPG0G2Constraint::ActiveOrder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0G2Constraint", 
+          "name": "ActiveOrder", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG0G2Constraint::G2Target()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0G2Constraint", 
+          "name": "G2Target", 
+          "return": {
+            "type": "Plate_D2", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG0G2Constraint::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0G2Constraint", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG0G2Constraint::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0G2Constraint", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG0G2Constraint::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0G2Constraint", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NLPlate_HPG0G1Constraint"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/NLPlate_HPG0G2Constraint.hxx", 
+        37
+      ], 
+      "key": "NLPlate_HPG0G2Constraint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "NLPlate_HPG0G3Constraint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "NLPlate_HPG0G3Constraint::NLPlate_HPG0G3Constraint(gp_XY, gp_XYZ, Plate_D1, Plate_D2, Plate_D3)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_XY", 
+              "name": "UV", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_XYZ", 
+              "name": "Value", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Plate_D1", 
+              "name": "D1T", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Plate_D2", 
+              "name": "D2T", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Plate_D3", 
+              "name": "D3T", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_HPG0G3Constraint", 
+          "name": "NLPlate_HPG0G3Constraint", 
+          "return": {
+            "type": "NLPlate_HPG0G3Constraint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG0G3Constraint::NLPlate_HPG0G3Constraint(NLPlate_HPG0G3Constraint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "NLPlate_HPG0G3Constraint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_HPG0G3Constraint", 
+          "name": "NLPlate_HPG0G3Constraint", 
+          "return": {
+            "type": "NLPlate_HPG0G3Constraint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "NLPlate_HPG0G3Constraint::ActiveOrder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0G3Constraint", 
+          "name": "ActiveOrder", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG0G3Constraint::G3Target()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0G3Constraint", 
+          "name": "G3Target", 
+          "return": {
+            "type": "Plate_D3", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "NLPlate_HPG0G3Constraint::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0G3Constraint", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG0G3Constraint::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0G3Constraint", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_HPG0G3Constraint::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_HPG0G3Constraint", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "NLPlate_HPG0G2Constraint"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/NLPlate_HPG0G3Constraint.hxx", 
+        38
+      ], 
+      "key": "NLPlate_HPG0G3Constraint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "NLPlate_NLPlate", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "NLPlate_NLPlate::NLPlate_NLPlate(opencascade::handle<Geom_Surface>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Geom_Surface>", 
+              "name": "InitialSurface", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_NLPlate", 
+          "name": "NLPlate_NLPlate", 
+          "return": {
+            "type": "NLPlate_NLPlate", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_NLPlate::NLPlate_NLPlate(NLPlate_NLPlate)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "NLPlate_NLPlate", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_NLPlate", 
+          "name": "NLPlate_NLPlate", 
+          "return": {
+            "type": "NLPlate_NLPlate", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "NLPlate_NLPlate::Load(opencascade::handle<NLPlate_HGPPConstraint>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<NLPlate_HGPPConstraint>", 
+              "name": "GConst", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_NLPlate", 
+          "name": "Load", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_NLPlate::Solve(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "ord", 
+              "default": "2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "InitialConsraintOrder", 
+              "default": "1", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_NLPlate", 
+          "name": "Solve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_NLPlate::Solve2(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "ord", 
+              "default": "2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "InitialConsraintOrder", 
+              "default": "1", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_NLPlate", 
+          "name": "Solve2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_NLPlate::IncrementalSolve(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "ord", 
+              "default": "2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "InitialConsraintOrder", 
+              "default": "1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbIncrements", 
+              "default": "4", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "UVSliding", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_NLPlate", 
+          "name": "IncrementalSolve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_NLPlate::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_NLPlate", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_NLPlate::destroy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_NLPlate", 
+          "name": "destroy", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_NLPlate::Init()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_NLPlate", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_NLPlate::Evaluate(gp_XY)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_XY", 
+              "name": "point2d", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "NLPlate_NLPlate", 
+          "name": "Evaluate", 
+          "return": {
+            "type": "gp_XYZ"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_NLPlate::EvaluateDerivative(gp_XY, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_XY", 
+              "name": "point2d", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "iu", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "iv", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_NLPlate", 
+          "name": "EvaluateDerivative", 
+          "return": {
+            "type": "gp_XYZ"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_NLPlate::Continuity()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_NLPlate", 
+          "name": "Continuity", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_NLPlate::ConstraintsSliding(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "NbIterations", 
+              "default": "3", 
+              "const": true
+            }
+          ], 
+          "parent": "NLPlate_NLPlate", 
+          "name": "ConstraintsSliding", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "NLPlate_NLPlate::MaxActiveConstraintOrder()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "NLPlate_NLPlate", 
+          "name": "MaxActiveConstraintOrder", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/NLPlate_NLPlate.hxx", 
+        36
+      ], 
+      "key": "NLPlate_NLPlate"
+    }, 
+    {
+      "type": "NCollection_List<Plate_Plate>", 
+      "declType": "typedef", 
+      "name": "NLPlate_StackOfPlate", 
+      "key": "NLPlate_StackOfPlate"
+    }, 
+    {
+      "type": "NCollection_List<Plate_Plate>::Iterator", 
+      "declType": "typedef", 
+      "name": "NLPlate_ListIteratorOfStackOfPlate", 
+      "key": "NLPlate_ListIteratorOfStackOfPlate"
+    }, 
+    {
+      "type": "opencascade::handle<NLPlate_HGPPConstraint>", 
+      "declType": "typedef", 
+      "name": "Handle_NLPlate_HGPPConstraint", 
+      "key": "Handle_NLPlate_HGPPConstraint"
+    }, 
+    {
+      "type": "opencascade::handle<NLPlate_HPG1Constraint>", 
+      "declType": "typedef", 
+      "name": "Handle_NLPlate_HPG1Constraint", 
+      "key": "Handle_NLPlate_HPG1Constraint"
+    }, 
+    {
+      "type": "opencascade::handle<NLPlate_HPG2Constraint>", 
+      "declType": "typedef", 
+      "name": "Handle_NLPlate_HPG2Constraint", 
+      "key": "Handle_NLPlate_HPG2Constraint"
+    }, 
+    {
+      "type": "opencascade::handle<NLPlate_HPG3Constraint>", 
+      "declType": "typedef", 
+      "name": "Handle_NLPlate_HPG3Constraint", 
+      "key": "Handle_NLPlate_HPG3Constraint"
+    }, 
+    {
+      "type": "opencascade::handle<NLPlate_HPG0Constraint>", 
+      "declType": "typedef", 
+      "name": "Handle_NLPlate_HPG0Constraint", 
+      "key": "Handle_NLPlate_HPG0Constraint"
+    }, 
+    {
+      "type": "opencascade::handle<NLPlate_HPG0G1Constraint>", 
+      "declType": "typedef", 
+      "name": "Handle_NLPlate_HPG0G1Constraint", 
+      "key": "Handle_NLPlate_HPG0G1Constraint"
+    }, 
+    {
+      "type": "opencascade::handle<NLPlate_HPG0G2Constraint>", 
+      "declType": "typedef", 
+      "name": "Handle_NLPlate_HPG0G2Constraint", 
+      "key": "Handle_NLPlate_HPG0G2Constraint"
+    }, 
+    {
+      "type": "opencascade::handle<NLPlate_HPG0G3Constraint>", 
+      "declType": "typedef", 
+      "name": "Handle_NLPlate_HPG0G3Constraint", 
+      "key": "Handle_NLPlate_HPG0G3Constraint"
+    }, 
+    {
+      "type": "NCollection_Sequence<opencascade::handle<NLPlate_HGPPConstraint> >", 
+      "declType": "typedef", 
+      "name": "NLPlate_SequenceOfHGPPConstraint", 
+      "key": "NLPlate_SequenceOfHGPPConstraint"
+    }
+  ], 
+  "name": "NLPlate"
+}

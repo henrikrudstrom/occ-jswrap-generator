@@ -1,0 +1,3571 @@
+{
+  "headers": [
+    "BRepExtrema_SupportType.hxx", 
+    "BRepExtrema_ExtPF.hxx", 
+    "BRepExtrema_SolutionElem.hxx", 
+    "BRepExtrema_SelfIntersection.hxx", 
+    "BRepExtrema_OverlapTool.hxx", 
+    "BRepExtrema_ShapeProximity.hxx", 
+    "BRepExtrema_DistShapeShape.hxx", 
+    "BRepExtrema_ElementFilter.hxx", 
+    "BRepExtrema_MapOfIntegerPackedMapOfInteger.hxx", 
+    "BRepExtrema_ExtCC.hxx", 
+    "BRepExtrema_ExtFF.hxx", 
+    "BRepExtrema_SeqOfSolution.hxx", 
+    "BRepExtrema_TriangleSet.hxx", 
+    "BRepExtrema_ExtCF.hxx", 
+    "BRepExtrema_ExtPC.hxx", 
+    "BRepExtrema_UnCompatibleShape.hxx", 
+    "BRepExtrema_DistanceSS.hxx", 
+    "BRepExtrema_Poly.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "BRepExtrema_ExtPF", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepExtrema_ExtPF::BRepExtrema_ExtPF()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtPF", 
+          "name": "BRepExtrema_ExtPF", 
+          "return": {
+            "type": "BRepExtrema_ExtPF", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPF::BRepExtrema_ExtPF(TopoDS_Vertex, TopoDS_Face, Extrema_ExtFlag, Extrema_ExtAlgo)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "TheVertex", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "TheFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Extrema_ExtFlag", 
+              "name": "TheFlag", 
+              "default": "::Extrema_ExtFlag::Extrema_ExtFlag_MINMAX", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "TheAlgo", 
+              "default": "::Extrema_ExtAlgo::Extrema_ExtAlgo_Grad", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPF", 
+          "name": "BRepExtrema_ExtPF", 
+          "return": {
+            "type": "BRepExtrema_ExtPF", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPF::BRepExtrema_ExtPF(BRepExtrema_ExtPF)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_ExtPF", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPF", 
+          "name": "BRepExtrema_ExtPF", 
+          "return": {
+            "type": "BRepExtrema_ExtPF", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPF::Initialize(TopoDS_Face, Extrema_ExtFlag, Extrema_ExtAlgo)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "TheFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Extrema_ExtFlag", 
+              "name": "TheFlag", 
+              "default": "::Extrema_ExtFlag::Extrema_ExtFlag_MINMAX", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "TheAlgo", 
+              "default": "::Extrema_ExtAlgo::Extrema_ExtAlgo_Grad", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPF", 
+          "name": "Initialize", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPF::Perform(TopoDS_Vertex, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "TheVertex", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "TheFace", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPF", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPF::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtPF", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPF::NbExt()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtPF", 
+          "name": "NbExt", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPF::SquareDistance(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPF", 
+          "name": "SquareDistance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPF::Parameter(Standard_Integer, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPF", 
+          "name": "Parameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPF::Point(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPF", 
+          "name": "Point", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPF::SetFlag(Extrema_ExtFlag)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Extrema_ExtFlag", 
+              "name": "F", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPF", 
+          "name": "SetFlag", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPF::SetAlgo(Extrema_ExtAlgo)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "A", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPF", 
+          "name": "SetAlgo", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepExtrema_ExtPF.hxx", 
+        31
+      ], 
+      "key": "BRepExtrema_ExtPF"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepExtrema_SolutionElem", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepExtrema_SolutionElem::BRepExtrema_SolutionElem()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepExtrema_SolutionElem", 
+          "name": "BRepExtrema_SolutionElem", 
+          "return": {
+            "type": "BRepExtrema_SolutionElem", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SolutionElem::BRepExtrema_SolutionElem(Standard_Real, gp_Pnt, BRepExtrema_SupportType, TopoDS_Vertex)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theDist", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "thePoint", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "BRepExtrema_SupportType", 
+              "name": "theSolType", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "theVertex", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_SolutionElem", 
+          "name": "BRepExtrema_SolutionElem", 
+          "return": {
+            "type": "BRepExtrema_SolutionElem", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SolutionElem::BRepExtrema_SolutionElem(Standard_Real, gp_Pnt, BRepExtrema_SupportType, TopoDS_Edge, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theDist", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "thePoint", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "BRepExtrema_SupportType", 
+              "name": "theSolType", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "theEdge", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theParam", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_SolutionElem", 
+          "name": "BRepExtrema_SolutionElem", 
+          "return": {
+            "type": "BRepExtrema_SolutionElem", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SolutionElem::BRepExtrema_SolutionElem(Standard_Real, gp_Pnt, BRepExtrema_SupportType, TopoDS_Face, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theDist", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "thePoint", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "BRepExtrema_SupportType", 
+              "name": "theSolType", 
+              "const": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "theFace", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theU", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theV", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_SolutionElem", 
+          "name": "BRepExtrema_SolutionElem", 
+          "return": {
+            "type": "BRepExtrema_SolutionElem", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SolutionElem::BRepExtrema_SolutionElem(BRepExtrema_SolutionElem)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_SolutionElem", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_SolutionElem", 
+          "name": "BRepExtrema_SolutionElem", 
+          "return": {
+            "type": "BRepExtrema_SolutionElem", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepExtrema_SolutionElem::Dist()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_SolutionElem", 
+          "name": "Dist", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SolutionElem::Point()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_SolutionElem", 
+          "name": "Point", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SolutionElem::SupportKind()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_SolutionElem", 
+          "name": "SupportKind", 
+          "return": {
+            "type": "BRepExtrema_SupportType"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SolutionElem::Vertex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_SolutionElem", 
+          "name": "Vertex", 
+          "return": {
+            "type": "TopoDS_Vertex", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SolutionElem::Edge()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_SolutionElem", 
+          "name": "Edge", 
+          "return": {
+            "type": "TopoDS_Edge", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SolutionElem::Face()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_SolutionElem", 
+          "name": "Face", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SolutionElem::EdgeParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theParam", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_SolutionElem", 
+          "name": "EdgeParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SolutionElem::FaceParameter(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theU", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theV", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_SolutionElem", 
+          "name": "FaceParameter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepExtrema_SolutionElem.hxx", 
+        24
+      ], 
+      "key": "BRepExtrema_SolutionElem"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepExtrema_TriangleSet", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepExtrema_TriangleSet::BRepExtrema_TriangleSet()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepExtrema_TriangleSet", 
+          "name": "BRepExtrema_TriangleSet", 
+          "return": {
+            "type": "BRepExtrema_TriangleSet", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_TriangleSet::BRepExtrema_TriangleSet(BRepExtrema_ShapeList)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_ShapeList", 
+              "name": "theFaces", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_TriangleSet", 
+          "name": "BRepExtrema_TriangleSet", 
+          "return": {
+            "type": "BRepExtrema_TriangleSet", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_TriangleSet::BRepExtrema_TriangleSet(BRepExtrema_TriangleSet)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_TriangleSet", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_TriangleSet", 
+          "name": "BRepExtrema_TriangleSet", 
+          "return": {
+            "type": "BRepExtrema_TriangleSet", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepExtrema_TriangleSet::Size()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_TriangleSet", 
+          "name": "Size", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepExtrema_TriangleSet::Box(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theIndex", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_TriangleSet", 
+          "name": "Box", 
+          "return": {
+            "type": "BVH_Box<double, 3>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepExtrema_TriangleSet::Center(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theIndex", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "theAxis", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_TriangleSet", 
+          "name": "Center", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepExtrema_TriangleSet::Swap(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theIndex1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "theIndex2", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_TriangleSet", 
+          "name": "Swap", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "BRepExtrema_TriangleSet::Clear()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_TriangleSet", 
+          "name": "Clear", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_TriangleSet::Init(BRepExtrema_ShapeList)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_ShapeList", 
+              "name": "theFaces", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_TriangleSet", 
+          "name": "Init", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_TriangleSet::GetVertices(Standard_Integer, BVH_Vec3d, BVH_Vec3d, BVH_Vec3d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theIndex", 
+              "const": true
+            }, 
+            {
+              "type": "BVH_Vec3d", 
+              "name": "theVertex1", 
+              "ref": true
+            }, 
+            {
+              "type": "BVH_Vec3d", 
+              "name": "theVertex2", 
+              "ref": true
+            }, 
+            {
+              "type": "BVH_Vec3d", 
+              "name": "theVertex3", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_TriangleSet", 
+          "name": "GetVertices", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_TriangleSet::GetFaceID(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theIndex", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_TriangleSet", 
+          "name": "GetFaceID", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_TriangleSet::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_TriangleSet", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_TriangleSet::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_TriangleSet", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_TriangleSet::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_TriangleSet", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BVH_PrimitiveSet<double, 3>"
+        }, 
+        {
+          "access": "public", 
+          "name": "Standard_Transient"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepExtrema_TriangleSet.hxx", 
+        26
+      ], 
+      "key": "BRepExtrema_TriangleSet"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepExtrema_ElementFilter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepExtrema_ElementFilter::BRepExtrema_ElementFilter(BRepExtrema_ElementFilter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_ElementFilter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ElementFilter", 
+          "name": "BRepExtrema_ElementFilter", 
+          "return": {
+            "type": "BRepExtrema_ElementFilter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepExtrema_ElementFilter::BRepExtrema_ElementFilter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ElementFilter", 
+          "name": "BRepExtrema_ElementFilter", 
+          "return": {
+            "type": "BRepExtrema_ElementFilter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ElementFilter::PreCheckElements(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "arg0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "arg1", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ElementFilter", 
+          "name": "PreCheckElements", 
+          "return": {
+            "type": "BRepExtrema_ElementFilter::FilterResult"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepExtrema_ElementFilter.hxx", 
+        23
+      ], 
+      "key": "BRepExtrema_ElementFilter"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepExtrema_OverlapTool", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepExtrema_OverlapTool::BRepExtrema_OverlapTool()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepExtrema_OverlapTool", 
+          "name": "BRepExtrema_OverlapTool", 
+          "return": {
+            "type": "BRepExtrema_OverlapTool", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_OverlapTool::BRepExtrema_OverlapTool(opencascade::handle<BRepExtrema_TriangleSet>, opencascade::handle<BRepExtrema_TriangleSet>)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<BRepExtrema_TriangleSet>", 
+              "name": "theSet1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepExtrema_TriangleSet>", 
+              "name": "theSet2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_OverlapTool", 
+          "name": "BRepExtrema_OverlapTool", 
+          "return": {
+            "type": "BRepExtrema_OverlapTool", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_OverlapTool::BRepExtrema_OverlapTool(BRepExtrema_OverlapTool)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_OverlapTool", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_OverlapTool", 
+          "name": "BRepExtrema_OverlapTool", 
+          "return": {
+            "type": "BRepExtrema_OverlapTool", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepExtrema_OverlapTool::LoadTriangleSets(opencascade::handle<BRepExtrema_TriangleSet>, opencascade::handle<BRepExtrema_TriangleSet>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<BRepExtrema_TriangleSet>", 
+              "name": "theSet1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<BRepExtrema_TriangleSet>", 
+              "name": "theSet2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_OverlapTool", 
+          "name": "LoadTriangleSets", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_OverlapTool::Perform(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_OverlapTool", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_OverlapTool::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_OverlapTool", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_OverlapTool::MarkDirty()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_OverlapTool", 
+          "name": "MarkDirty", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_OverlapTool::OverlapSubShapes1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_OverlapTool", 
+          "name": "OverlapSubShapes1", 
+          "return": {
+            "type": "BRepExtrema_MapOfIntegerPackedMapOfInteger", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_OverlapTool::OverlapSubShapes2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_OverlapTool", 
+          "name": "OverlapSubShapes2", 
+          "return": {
+            "type": "BRepExtrema_MapOfIntegerPackedMapOfInteger", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_OverlapTool::SetElementFilter(BRepExtrema_ElementFilter)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_ElementFilter", 
+              "name": "theFilter", 
+              "ptr": true
+            }
+          ], 
+          "parent": "BRepExtrema_OverlapTool", 
+          "name": "SetElementFilter", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepExtrema_OverlapTool.hxx", 
+        38
+      ], 
+      "key": "BRepExtrema_OverlapTool"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepExtrema_SelfIntersection", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepExtrema_SelfIntersection::BRepExtrema_SelfIntersection(Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_SelfIntersection", 
+          "name": "BRepExtrema_SelfIntersection", 
+          "return": {
+            "type": "BRepExtrema_SelfIntersection", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SelfIntersection::BRepExtrema_SelfIntersection(TopoDS_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "theShape", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_SelfIntersection", 
+          "name": "BRepExtrema_SelfIntersection", 
+          "return": {
+            "type": "BRepExtrema_SelfIntersection", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SelfIntersection::BRepExtrema_SelfIntersection(BRepExtrema_SelfIntersection)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_SelfIntersection", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_SelfIntersection", 
+          "name": "BRepExtrema_SelfIntersection", 
+          "return": {
+            "type": "BRepExtrema_SelfIntersection", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepExtrema_SelfIntersection::Tolerance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_SelfIntersection", 
+          "name": "Tolerance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SelfIntersection::SetTolerance(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_SelfIntersection", 
+          "name": "SetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SelfIntersection::LoadShape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "theShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_SelfIntersection", 
+          "name": "LoadShape", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SelfIntersection::Perform()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_SelfIntersection", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SelfIntersection::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_SelfIntersection", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SelfIntersection::OverlapElements()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_SelfIntersection", 
+          "name": "OverlapElements", 
+          "return": {
+            "type": "BRepExtrema_MapOfIntegerPackedMapOfInteger", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SelfIntersection::GetSubShape(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theID", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_SelfIntersection", 
+          "name": "GetSubShape", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_SelfIntersection::ElementSet()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_SelfIntersection", 
+          "name": "ElementSet", 
+          "return": {
+            "type": "opencascade::handle<BRepExtrema_TriangleSet>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "BRepExtrema_ElementFilter"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepExtrema_SelfIntersection.hxx", 
+        32
+      ], 
+      "key": "BRepExtrema_SelfIntersection"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepExtrema_ShapeProximity", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepExtrema_ShapeProximity::BRepExtrema_ShapeProximity(Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ShapeProximity", 
+          "name": "BRepExtrema_ShapeProximity", 
+          "return": {
+            "type": "BRepExtrema_ShapeProximity", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ShapeProximity::BRepExtrema_ShapeProximity(TopoDS_Shape, TopoDS_Shape, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "theShape1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "theShape2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "default": "0.", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ShapeProximity", 
+          "name": "BRepExtrema_ShapeProximity", 
+          "return": {
+            "type": "BRepExtrema_ShapeProximity", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ShapeProximity::BRepExtrema_ShapeProximity(BRepExtrema_ShapeProximity)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_ShapeProximity", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ShapeProximity", 
+          "name": "BRepExtrema_ShapeProximity", 
+          "return": {
+            "type": "BRepExtrema_ShapeProximity", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepExtrema_ShapeProximity::Tolerance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ShapeProximity", 
+          "name": "Tolerance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ShapeProximity::SetTolerance(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theTolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ShapeProximity", 
+          "name": "SetTolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ShapeProximity::LoadShape1(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "theShape1", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ShapeProximity", 
+          "name": "LoadShape1", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ShapeProximity::LoadShape2(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "theShape2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ShapeProximity", 
+          "name": "LoadShape2", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ShapeProximity::Perform()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ShapeProximity", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ShapeProximity::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ShapeProximity", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ShapeProximity::OverlapSubShapes1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ShapeProximity", 
+          "name": "OverlapSubShapes1", 
+          "return": {
+            "type": "BRepExtrema_MapOfIntegerPackedMapOfInteger", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ShapeProximity::OverlapSubShapes2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ShapeProximity", 
+          "name": "OverlapSubShapes2", 
+          "return": {
+            "type": "BRepExtrema_MapOfIntegerPackedMapOfInteger", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ShapeProximity::GetSubShape1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theID", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ShapeProximity", 
+          "name": "GetSubShape1", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ShapeProximity::GetSubShape2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "theID", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ShapeProximity", 
+          "name": "GetSubShape2", 
+          "return": {
+            "type": "TopoDS_Face", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ShapeProximity::ElementSet1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ShapeProximity", 
+          "name": "ElementSet1", 
+          "return": {
+            "type": "opencascade::handle<BRepExtrema_TriangleSet>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ShapeProximity::ElementSet2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ShapeProximity", 
+          "name": "ElementSet2", 
+          "return": {
+            "type": "opencascade::handle<BRepExtrema_TriangleSet>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepExtrema_ShapeProximity.hxx", 
+        38
+      ], 
+      "key": "BRepExtrema_ShapeProximity"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepExtrema_DistShapeShape", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepExtrema_DistShapeShape::BRepExtrema_DistShapeShape()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "BRepExtrema_DistShapeShape", 
+          "return": {
+            "type": "BRepExtrema_DistShapeShape", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::BRepExtrema_DistShapeShape(TopoDS_Shape, TopoDS_Shape, Extrema_ExtFlag, Extrema_ExtAlgo)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "Shape1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "Shape2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Extrema_ExtFlag", 
+              "name": "F", 
+              "default": "::Extrema_ExtFlag::Extrema_ExtFlag_MINMAX", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "A", 
+              "default": "::Extrema_ExtAlgo::Extrema_ExtAlgo_Grad", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "BRepExtrema_DistShapeShape", 
+          "return": {
+            "type": "BRepExtrema_DistShapeShape", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::BRepExtrema_DistShapeShape(TopoDS_Shape, TopoDS_Shape, Standard_Real, Extrema_ExtFlag, Extrema_ExtAlgo)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "Shape1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "Shape2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theDeflection", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtFlag", 
+              "name": "F", 
+              "default": "::Extrema_ExtFlag::Extrema_ExtFlag_MINMAX", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "A", 
+              "default": "::Extrema_ExtAlgo::Extrema_ExtAlgo_Grad", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "BRepExtrema_DistShapeShape", 
+          "return": {
+            "type": "BRepExtrema_DistShapeShape", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::BRepExtrema_DistShapeShape(BRepExtrema_DistShapeShape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_DistShapeShape", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "BRepExtrema_DistShapeShape", 
+          "return": {
+            "type": "BRepExtrema_DistShapeShape", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::SetDeflection(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "theDeflection", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "SetDeflection", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::LoadS1(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "Shape1", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "LoadS1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::LoadS2(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "Shape1", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "LoadS2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::Perform()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "Perform", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::NbSolution()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "NbSolution", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::InnerSolution()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "InnerSolution", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::PointOnShape1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "PointOnShape1", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::PointOnShape2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "PointOnShape2", 
+          "return": {
+            "type": "gp_Pnt", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::SupportTypeShape1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "SupportTypeShape1", 
+          "return": {
+            "type": "BRepExtrema_SupportType"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::SupportTypeShape2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "SupportTypeShape2", 
+          "return": {
+            "type": "BRepExtrema_SupportType"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::SupportOnShape1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "SupportOnShape1", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::SupportOnShape2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "SupportOnShape2", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::ParOnEdgeS1(Standard_Integer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "t", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "ParOnEdgeS1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::ParOnEdgeS2(Standard_Integer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "t", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "ParOnEdgeS2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::ParOnFaceS1(Standard_Integer, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "ParOnFaceS1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::ParOnFaceS2(Standard_Integer, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "u", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "v", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "ParOnFaceS2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::Dump(Standard_OStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_OStream", 
+              "name": "o", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::SetFlag(Extrema_ExtFlag)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Extrema_ExtFlag", 
+              "name": "F", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "SetFlag", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistShapeShape::SetAlgo(Extrema_ExtAlgo)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "A", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistShapeShape", 
+          "name": "SetAlgo", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepExtrema_DistShapeShape.hxx", 
+        32
+      ], 
+      "key": "BRepExtrema_DistShapeShape"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepExtrema_ExtCC", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepExtrema_ExtCC::BRepExtrema_ExtCC()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtCC", 
+          "name": "BRepExtrema_ExtCC", 
+          "return": {
+            "type": "BRepExtrema_ExtCC", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCC::BRepExtrema_ExtCC(TopoDS_Edge, TopoDS_Edge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCC", 
+          "name": "BRepExtrema_ExtCC", 
+          "return": {
+            "type": "BRepExtrema_ExtCC", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCC::BRepExtrema_ExtCC(BRepExtrema_ExtCC)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_ExtCC", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCC", 
+          "name": "BRepExtrema_ExtCC", 
+          "return": {
+            "type": "BRepExtrema_ExtCC", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCC::Initialize(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCC", 
+          "name": "Initialize", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCC::Perform(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E1", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCC", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCC::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtCC", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCC::NbExt()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtCC", 
+          "name": "NbExt", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCC::IsParallel()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtCC", 
+          "name": "IsParallel", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCC::SquareDistance(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCC", 
+          "name": "SquareDistance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCC::ParameterOnE1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCC", 
+          "name": "ParameterOnE1", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCC::PointOnE1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCC", 
+          "name": "PointOnE1", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCC::ParameterOnE2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCC", 
+          "name": "ParameterOnE2", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCC::PointOnE2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCC", 
+          "name": "PointOnE2", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCC::TrimmedSquareDistances(Standard_Real, Standard_Real, Standard_Real, Standard_Real, gp_Pnt, gp_Pnt, gp_Pnt, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "dist11", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "distP12", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "distP21", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "distP22", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P11", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P12", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P21", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P22", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCC", 
+          "name": "TrimmedSquareDistances", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepExtrema_ExtCC.hxx", 
+        26
+      ], 
+      "key": "BRepExtrema_ExtCC"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepExtrema_ExtFF", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepExtrema_ExtFF::BRepExtrema_ExtFF()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtFF", 
+          "name": "BRepExtrema_ExtFF", 
+          "return": {
+            "type": "BRepExtrema_ExtFF", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtFF::BRepExtrema_ExtFF(TopoDS_Face, TopoDS_Face)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtFF", 
+          "name": "BRepExtrema_ExtFF", 
+          "return": {
+            "type": "BRepExtrema_ExtFF", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtFF::BRepExtrema_ExtFF(BRepExtrema_ExtFF)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_ExtFF", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtFF", 
+          "name": "BRepExtrema_ExtFF", 
+          "return": {
+            "type": "BRepExtrema_ExtFF", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtFF::Initialize(TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtFF", 
+          "name": "Initialize", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtFF::Perform(TopoDS_Face, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "F1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtFF", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtFF::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtFF", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtFF::IsParallel()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtFF", 
+          "name": "IsParallel", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtFF::NbExt()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtFF", 
+          "name": "NbExt", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtFF::SquareDistance(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtFF", 
+          "name": "SquareDistance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtFF::ParameterOnFace1(Standard_Integer, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtFF", 
+          "name": "ParameterOnFace1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtFF::ParameterOnFace2(Standard_Integer, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtFF", 
+          "name": "ParameterOnFace2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtFF::PointOnFace1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtFF", 
+          "name": "PointOnFace1", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtFF::PointOnFace2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtFF", 
+          "name": "PointOnFace2", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepExtrema_ExtFF.hxx", 
+        30
+      ], 
+      "key": "BRepExtrema_ExtFF"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepExtrema_ExtCF", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepExtrema_ExtCF::BRepExtrema_ExtCF()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtCF", 
+          "name": "BRepExtrema_ExtCF", 
+          "return": {
+            "type": "BRepExtrema_ExtCF", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCF::BRepExtrema_ExtCF(TopoDS_Edge, TopoDS_Face)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCF", 
+          "name": "BRepExtrema_ExtCF", 
+          "return": {
+            "type": "BRepExtrema_ExtCF", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCF::BRepExtrema_ExtCF(BRepExtrema_ExtCF)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_ExtCF", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCF", 
+          "name": "BRepExtrema_ExtCF", 
+          "return": {
+            "type": "BRepExtrema_ExtCF", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCF::Initialize(TopoDS_Edge, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCF", 
+          "name": "Initialize", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCF::Perform(TopoDS_Edge, TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Face", 
+              "name": "F", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCF", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCF::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtCF", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCF::NbExt()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtCF", 
+          "name": "NbExt", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCF::SquareDistance(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCF", 
+          "name": "SquareDistance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCF::IsParallel()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtCF", 
+          "name": "IsParallel", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCF::ParameterOnEdge(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCF", 
+          "name": "ParameterOnEdge", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCF::ParameterOnFace(Standard_Integer, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCF", 
+          "name": "ParameterOnFace", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCF::PointOnEdge(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCF", 
+          "name": "PointOnEdge", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtCF::PointOnFace(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtCF", 
+          "name": "PointOnFace", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepExtrema_ExtCF.hxx", 
+        32
+      ], 
+      "key": "BRepExtrema_ExtCF"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepExtrema_ExtPC", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepExtrema_ExtPC::BRepExtrema_ExtPC()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtPC", 
+          "name": "BRepExtrema_ExtPC", 
+          "return": {
+            "type": "BRepExtrema_ExtPC", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPC::BRepExtrema_ExtPC(TopoDS_Vertex, TopoDS_Edge)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPC", 
+          "name": "BRepExtrema_ExtPC", 
+          "return": {
+            "type": "BRepExtrema_ExtPC", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPC::BRepExtrema_ExtPC(BRepExtrema_ExtPC)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_ExtPC", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPC", 
+          "name": "BRepExtrema_ExtPC", 
+          "return": {
+            "type": "BRepExtrema_ExtPC", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPC::Initialize(TopoDS_Edge)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Edge", 
+              "name": "E", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPC", 
+          "name": "Initialize", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPC::Perform(TopoDS_Vertex)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Vertex", 
+              "name": "V", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPC", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPC::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtPC", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPC::NbExt()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_ExtPC", 
+          "name": "NbExt", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPC::IsMin(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPC", 
+          "name": "IsMin", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPC::SquareDistance(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPC", 
+          "name": "SquareDistance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPC::Parameter(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPC", 
+          "name": "Parameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPC::Point(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPC", 
+          "name": "Point", 
+          "return": {
+            "type": "gp_Pnt"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_ExtPC::TrimmedSquareDistances(Standard_Real, Standard_Real, gp_Pnt, gp_Pnt)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "dist1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dist2", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "pnt1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "pnt2", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_ExtPC", 
+          "name": "TrimmedSquareDistances", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepExtrema_ExtPC.hxx", 
+        27
+      ], 
+      "key": "BRepExtrema_ExtPC"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepExtrema_UnCompatibleShape", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepExtrema_UnCompatibleShape::BRepExtrema_UnCompatibleShape()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepExtrema_UnCompatibleShape", 
+          "name": "BRepExtrema_UnCompatibleShape", 
+          "return": {
+            "type": "BRepExtrema_UnCompatibleShape", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_UnCompatibleShape::BRepExtrema_UnCompatibleShape(Standard_CString)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_UnCompatibleShape", 
+          "name": "BRepExtrema_UnCompatibleShape", 
+          "return": {
+            "type": "BRepExtrema_UnCompatibleShape", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_UnCompatibleShape::BRepExtrema_UnCompatibleShape(BRepExtrema_UnCompatibleShape)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_UnCompatibleShape", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_UnCompatibleShape", 
+          "name": "BRepExtrema_UnCompatibleShape", 
+          "return": {
+            "type": "BRepExtrema_UnCompatibleShape", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepExtrema_UnCompatibleShape::Raise(Standard_CString)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\"", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_UnCompatibleShape", 
+          "name": "Raise", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_UnCompatibleShape::Raise(Standard_SStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_SStream", 
+              "name": "theMessage", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_UnCompatibleShape", 
+          "name": "Raise", 
+          "return": {
+            "type": "void"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_UnCompatibleShape::NewInstance(Standard_CString)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_CString", 
+              "name": "theMessage", 
+              "default": "\"\"", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_UnCompatibleShape", 
+          "name": "NewInstance", 
+          "return": {
+            "type": "opencascade::handle<BRepExtrema_UnCompatibleShape>"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_UnCompatibleShape::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_UnCompatibleShape", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_UnCompatibleShape::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_UnCompatibleShape", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_UnCompatibleShape::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_UnCompatibleShape", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Standard_DomainError"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/BRepExtrema_UnCompatibleShape.hxx", 
+        35
+      ], 
+      "key": "BRepExtrema_UnCompatibleShape"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepExtrema_DistanceSS", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepExtrema_DistanceSS::BRepExtrema_DistanceSS(TopoDS_Shape, TopoDS_Shape, Bnd_Box, Bnd_Box, Standard_Real, Extrema_ExtFlag, Extrema_ExtAlgo)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Bnd_Box", 
+              "name": "B1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Bnd_Box", 
+              "name": "B2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "DstRef", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtFlag", 
+              "name": "F", 
+              "default": "::Extrema_ExtFlag::Extrema_ExtFlag_MINMAX", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "A", 
+              "default": "::Extrema_ExtAlgo::Extrema_ExtAlgo_Grad", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistanceSS", 
+          "name": "BRepExtrema_DistanceSS", 
+          "return": {
+            "type": "BRepExtrema_DistanceSS", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistanceSS::BRepExtrema_DistanceSS(TopoDS_Shape, TopoDS_Shape, Bnd_Box, Bnd_Box, Standard_Real, Standard_Real, Extrema_ExtFlag, Extrema_ExtAlgo)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Bnd_Box", 
+              "name": "B1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Bnd_Box", 
+              "name": "B2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "DstRef", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "aDeflection", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtFlag", 
+              "name": "F", 
+              "default": "::Extrema_ExtFlag::Extrema_ExtFlag_MINMAX", 
+              "const": true
+            }, 
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "A", 
+              "default": "::Extrema_ExtAlgo::Extrema_ExtAlgo_Grad", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistanceSS", 
+          "name": "BRepExtrema_DistanceSS", 
+          "return": {
+            "type": "BRepExtrema_DistanceSS", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistanceSS::BRepExtrema_DistanceSS(BRepExtrema_DistanceSS)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_DistanceSS", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistanceSS", 
+          "name": "BRepExtrema_DistanceSS", 
+          "return": {
+            "type": "BRepExtrema_DistanceSS", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepExtrema_DistanceSS::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_DistanceSS", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistanceSS::DistValue()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_DistanceSS", 
+          "name": "DistValue", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistanceSS::Seq1Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_DistanceSS", 
+          "name": "Seq1Value", 
+          "return": {
+            "type": "BRepExtrema_SeqOfSolution", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistanceSS::Seq2Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepExtrema_DistanceSS", 
+          "name": "Seq2Value", 
+          "return": {
+            "type": "BRepExtrema_SeqOfSolution", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistanceSS::SetFlag(Extrema_ExtFlag)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Extrema_ExtFlag", 
+              "name": "F", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistanceSS", 
+          "name": "SetFlag", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_DistanceSS::SetAlgo(Extrema_ExtAlgo)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Extrema_ExtAlgo", 
+              "name": "A", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepExtrema_DistanceSS", 
+          "name": "SetAlgo", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepExtrema_DistanceSS.hxx", 
+        32
+      ], 
+      "key": "BRepExtrema_DistanceSS"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepExtrema_Poly", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepExtrema_Poly::BRepExtrema_Poly()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepExtrema_Poly", 
+          "name": "BRepExtrema_Poly", 
+          "return": {
+            "type": "BRepExtrema_Poly", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "BRepExtrema_Poly::BRepExtrema_Poly(BRepExtrema_Poly)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepExtrema_Poly", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_Poly", 
+          "name": "BRepExtrema_Poly", 
+          "return": {
+            "type": "BRepExtrema_Poly", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepExtrema_Poly::Distance(TopoDS_Shape, TopoDS_Shape, gp_Pnt, gp_Pnt, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P1", 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt", 
+              "name": "P2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "dist", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepExtrema_Poly", 
+          "name": "Distance", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "static": "1", 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepExtrema_Poly.hxx", 
+        22
+      ], 
+      "key": "BRepExtrema_Poly"
+    }, 
+    {
+      "type": "NCollection_Vector<TopoDS_Face>", 
+      "declType": "typedef", 
+      "name": "BRepExtrema_ShapeList", 
+      "key": "BRepExtrema_ShapeList"
+    }, 
+    {
+      "type": "opencascade::handle<BRepExtrema_TriangleSet>", 
+      "declType": "typedef", 
+      "name": "Handle_BRepExtrema_TriangleSet", 
+      "key": "Handle_BRepExtrema_TriangleSet"
+    }, 
+    {
+      "type": "NCollection_DataMap<int, TColStd_PackedMapOfInteger, NCollection_DefaultHasher<int> >", 
+      "declType": "typedef", 
+      "name": "BRepExtrema_MapOfIntegerPackedMapOfInteger", 
+      "key": "BRepExtrema_MapOfIntegerPackedMapOfInteger"
+    }, 
+    {
+      "type": "NCollection_Sequence<BRepExtrema_SolutionElem>", 
+      "declType": "typedef", 
+      "name": "BRepExtrema_SeqOfSolution", 
+      "key": "BRepExtrema_SeqOfSolution"
+    }, 
+    {
+      "type": "opencascade::handle<BRepExtrema_UnCompatibleShape>", 
+      "declType": "typedef", 
+      "name": "Handle_BRepExtrema_UnCompatibleShape", 
+      "key": "Handle_BRepExtrema_UnCompatibleShape"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "BRepExtrema_IsVertex", 
+          0
+        ], 
+        [
+          "BRepExtrema_IsOnEdge", 
+          1
+        ], 
+        [
+          "BRepExtrema_IsInFace", 
+          2
+        ]
+      ], 
+      "name": "BRepExtrema_SupportType", 
+      "key": "BRepExtrema_SupportType"
+    }
+  ], 
+  "name": "BRepExtrema"
+}

@@ -1,0 +1,3756 @@
+{
+  "headers": [
+    "Law_S.hxx", 
+    "Law_ListIteratorOfLaws.hxx", 
+    "Law_BSpline.hxx", 
+    "Law_BSplineKnotSplitting.hxx", 
+    "Law_Function.hxx", 
+    "Law_Interpol.hxx", 
+    "Law_Composite.hxx", 
+    "Law_Laws.hxx", 
+    "Law_Constant.hxx", 
+    "Law_Interpolate.hxx", 
+    "Law_Linear.hxx", 
+    "Law_BSpFunc.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Law_Function", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "Law_Function::Continuity()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Function", 
+          "name": "Continuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Law_Function::NbIntervals(GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Function", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Law_Function::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Function", 
+          "name": "Intervals", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Law_Function::Value(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Function", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Law_Function::D1(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Function", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Law_Function::D2(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Function", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Law_Function::Trim(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "PFirst", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PLast", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Function", 
+          "name": "Trim", 
+          "return": {
+            "type": "opencascade::handle<Law_Function>"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Law_Function::Bounds(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "PFirst", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PLast", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Function", 
+          "name": "Bounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "pure virtual"
+        }, 
+        {
+          "key": "Law_Function::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Function", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Function::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Function", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Function::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Function", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Law_Function.hxx", 
+        35
+      ], 
+      "key": "Law_Function"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Law_BSpline", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Law_BSpline::Law_BSpline(TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfInteger, Standard_Integer, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Poles", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Knots", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfInteger", 
+              "name": "Multiplicities", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Degree", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Periodic", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "Law_BSpline", 
+          "return": {
+            "type": "Law_BSpline", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Law_BSpline(TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfReal, TColStd_Array1OfInteger, Standard_Integer, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Poles", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Weights", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Knots", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfInteger", 
+              "name": "Multiplicities", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Degree", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Periodic", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "Law_BSpline", 
+          "return": {
+            "type": "Law_BSpline", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Law_BSpline(Law_BSpline)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Law_BSpline", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "Law_BSpline", 
+          "return": {
+            "type": "Law_BSpline", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Law_BSpline::IncreaseDegree(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Degree", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "IncreaseDegree", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::IncreaseMultiplicity(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "M", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "IncreaseMultiplicity", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::IncreaseMultiplicity(Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "I2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "M", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "IncreaseMultiplicity", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::IncrementMultiplicity(Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "I2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "M", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "IncrementMultiplicity", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::InsertKnot(Standard_Real, Standard_Integer, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "M", 
+              "default": "1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParametricTolerance", 
+              "default": "0.", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Add", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "InsertKnot", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::InsertKnots(TColStd_Array1OfReal, TColStd_Array1OfInteger, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Knots", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "TColStd_Array1OfInteger", 
+              "name": "Mults", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParametricTolerance", 
+              "default": "0.", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Add", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "InsertKnots", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::RemoveKnot(Standard_Integer, Standard_Integer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "M", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "RemoveKnot", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Reverse()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "Reverse", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::ReversedParameter(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "ReversedParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Segment(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "U2", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "Segment", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::SetKnot(Standard_Integer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "K", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "SetKnot", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::SetKnots(TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "K", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "SetKnots", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::SetKnot(Standard_Integer, Standard_Real, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "K", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "M", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "SetKnot", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::PeriodicNormalization(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "PeriodicNormalization", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::SetPeriodic()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "SetPeriodic", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::SetOrigin(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "SetOrigin", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::SetNotPeriodic()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "SetNotPeriodic", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::SetPole(Standard_Integer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "SetPole", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::SetPole(Standard_Integer, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "SetPole", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::SetWeight(Standard_Integer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Weight", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "SetWeight", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::IsCN(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "IsCN", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::IsClosed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "IsClosed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::IsPeriodic()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "IsPeriodic", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::IsRational()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "IsRational", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Continuity()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "Continuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Degree()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "Degree", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Value(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::D0(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "D0", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::D1(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::D2(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::D3(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V3", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "D3", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::DN(Standard_Real, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "DN", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::LocalValue(Standard_Real, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "FromK1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ToK2", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "LocalValue", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::LocalD0(Standard_Real, Standard_Integer, Standard_Integer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "FromK1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ToK2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "LocalD0", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::LocalD1(Standard_Real, Standard_Integer, Standard_Integer, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "FromK1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ToK2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "LocalD1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::LocalD2(Standard_Real, Standard_Integer, Standard_Integer, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "FromK1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ToK2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "LocalD2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::LocalD3(Standard_Real, Standard_Integer, Standard_Integer, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "FromK1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ToK2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "P", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "V3", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "LocalD3", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::LocalDN(Standard_Real, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "FromK1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ToK2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "LocalDN", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::EndPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "EndPoint", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::FirstUKnotIndex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "FirstUKnotIndex", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::FirstParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Knot(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "Knot", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Knots(TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "K", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "Knots", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::KnotSequence(TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "K", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "KnotSequence", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::KnotDistribution()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "KnotDistribution", 
+          "return": {
+            "type": "GeomAbs_BSplKnotDistribution"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::LastUKnotIndex()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "LastUKnotIndex", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::LastParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::LocateU(Standard_Real, Standard_Real, Standard_Integer, Standard_Integer, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "ParametricTolerance", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "I1", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "I2", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "WithKnotRepetition", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "LocateU", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Multiplicity(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "Multiplicity", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Multiplicities(TColStd_Array1OfInteger)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfInteger", 
+              "name": "M", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "Multiplicities", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::NbKnots()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "NbKnots", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::NbPoles()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "NbPoles", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Pole(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "Pole", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Poles(TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "P", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "Poles", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::StartPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "StartPoint", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Weight(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "Weight", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Weights(TColStd_Array1OfReal)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "W", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "Weights", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::MaxDegree()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "MaxDegree", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::MovePointAndTangent(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Integer, Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "U", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "NewValue", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Derivative", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "StartingCondition", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "EndingCondition", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ErrorStatus", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "MovePointAndTangent", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Resolution(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance3D", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "UTolerance", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpline", 
+          "name": "Resolution", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::Copy()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "Copy", 
+          "return": {
+            "type": "opencascade::handle<Law_BSpline>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpline::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpline", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "MMgt_TShared"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Law_BSpline.hxx", 
+        96
+      ], 
+      "key": "Law_BSpline"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Law_BSpFunc", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Law_BSpFunc::Law_BSpFunc()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Law_BSpFunc", 
+          "name": "Law_BSpFunc", 
+          "return": {
+            "type": "Law_BSpFunc", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpFunc::Law_BSpFunc(opencascade::handle<Law_BSpline>, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Law_BSpline>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Last", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpFunc", 
+          "name": "Law_BSpFunc", 
+          "return": {
+            "type": "Law_BSpFunc", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpFunc::Law_BSpFunc(Law_BSpFunc)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Law_BSpFunc", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpFunc", 
+          "name": "Law_BSpFunc", 
+          "return": {
+            "type": "Law_BSpFunc", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Law_BSpFunc::Continuity()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpFunc", 
+          "name": "Continuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_BSpFunc::NbIntervals(GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpFunc", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_BSpFunc::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpFunc", 
+          "name": "Intervals", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_BSpFunc::Value(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpFunc", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_BSpFunc::D1(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpFunc", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_BSpFunc::D2(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpFunc", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_BSpFunc::Trim(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "PFirst", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PLast", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSpFunc", 
+          "name": "Trim", 
+          "return": {
+            "type": "opencascade::handle<Law_Function>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_BSpFunc::Bounds(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "PFirst", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PLast", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpFunc", 
+          "name": "Bounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_BSpFunc::Curve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpFunc", 
+          "name": "Curve", 
+          "return": {
+            "type": "opencascade::handle<Law_BSpline>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpFunc::SetCurve(opencascade::handle<Law_BSpline>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Law_BSpline>", 
+              "name": "C", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSpFunc", 
+          "name": "SetCurve", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpFunc::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpFunc", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpFunc::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpFunc", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSpFunc::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSpFunc", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Law_Function"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Law_BSpFunc.hxx", 
+        40
+      ], 
+      "key": "Law_BSpFunc"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Law_S", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Law_S::Law_S()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Law_S", 
+          "name": "Law_S", 
+          "return": {
+            "type": "Law_S", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_S::Law_S(Law_S)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Law_S", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_S", 
+          "name": "Law_S", 
+          "return": {
+            "type": "Law_S", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Law_S::Set(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Pdeb", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Valdeb", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Pfin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Valfin", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_S", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_S::Set(Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Pdeb", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Valdeb", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Ddeb", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Pfin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Valfin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dfin", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_S", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_S::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_S", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_S::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_S", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_S::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_S", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Law_BSpFunc"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Law_S.hxx", 
+        31
+      ], 
+      "key": "Law_S"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Law_BSplineKnotSplitting", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Law_BSplineKnotSplitting::Law_BSplineKnotSplitting(opencascade::handle<Law_BSpline>, Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<Law_BSpline>", 
+              "name": "BasisLaw", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ContinuityRange", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSplineKnotSplitting", 
+          "name": "Law_BSplineKnotSplitting", 
+          "return": {
+            "type": "Law_BSplineKnotSplitting", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSplineKnotSplitting::Law_BSplineKnotSplitting(Law_BSplineKnotSplitting)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Law_BSplineKnotSplitting", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSplineKnotSplitting", 
+          "name": "Law_BSplineKnotSplitting", 
+          "return": {
+            "type": "Law_BSplineKnotSplitting", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Law_BSplineKnotSplitting::NbSplits()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_BSplineKnotSplitting", 
+          "name": "NbSplits", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSplineKnotSplitting::Splitting(TColStd_Array1OfInteger)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfInteger", 
+              "name": "SplitValues", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_BSplineKnotSplitting", 
+          "name": "Splitting", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_BSplineKnotSplitting::SplitValue(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_BSplineKnotSplitting", 
+          "name": "SplitValue", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Law_BSplineKnotSplitting.hxx", 
+        52
+      ], 
+      "key": "Law_BSplineKnotSplitting"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Law_Interpol", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Law_Interpol::Law_Interpol()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Law_Interpol", 
+          "name": "Law_Interpol", 
+          "return": {
+            "type": "Law_Interpol", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Interpol::Law_Interpol(Law_Interpol)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Law_Interpol", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Interpol", 
+          "name": "Law_Interpol", 
+          "return": {
+            "type": "Law_Interpol", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Law_Interpol::Set(TColgp_Array1OfPnt2d, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "ParAndRad", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Periodic", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Interpol", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Interpol::SetInRelative(TColgp_Array1OfPnt2d, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "ParAndRad", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Ud", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Uf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Periodic", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Interpol", 
+          "name": "SetInRelative", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Interpol::Set(TColgp_Array1OfPnt2d, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "ParAndRad", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dd", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Df", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Periodic", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Interpol", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Interpol::SetInRelative(TColgp_Array1OfPnt2d, Standard_Real, Standard_Real, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColgp_Array1OfPnt2d", 
+              "name": "ParAndRad", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Ud", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Uf", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dd", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Df", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Periodic", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Interpol", 
+          "name": "SetInRelative", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Interpol::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Interpol", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Interpol::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Interpol", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Interpol::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Interpol", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Law_BSpFunc"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Law_Interpol.hxx", 
+        34
+      ], 
+      "key": "Law_Interpol"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Law_Composite", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Law_Composite::Law_Composite()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Law_Composite", 
+          "name": "Law_Composite", 
+          "return": {
+            "type": "Law_Composite", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Composite::Law_Composite(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Last", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Composite", 
+          "name": "Law_Composite", 
+          "return": {
+            "type": "Law_Composite", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Composite::Law_Composite(Law_Composite)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Law_Composite", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Composite", 
+          "name": "Law_Composite", 
+          "return": {
+            "type": "Law_Composite", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Law_Composite::Continuity()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Composite", 
+          "name": "Continuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Composite::NbIntervals(GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Composite", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Composite::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Composite", 
+          "name": "Intervals", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Composite::Value(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Composite", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Composite::D1(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Composite", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Composite::D2(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Composite", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Composite::Trim(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "PFirst", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PLast", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Composite", 
+          "name": "Trim", 
+          "return": {
+            "type": "opencascade::handle<Law_Function>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Composite::Bounds(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "PFirst", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PLast", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Composite", 
+          "name": "Bounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Composite::ChangeElementaryLaw(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "W", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Composite", 
+          "name": "ChangeElementaryLaw", 
+          "return": {
+            "type": "opencascade::handle<Law_Function>", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Composite::ChangeLaws()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Composite", 
+          "name": "ChangeLaws", 
+          "return": {
+            "type": "Law_Laws", 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Composite::IsPeriodic()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Composite", 
+          "name": "IsPeriodic", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Composite::SetPeriodic()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Composite", 
+          "name": "SetPeriodic", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Composite::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Composite", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Composite::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Composite", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Composite::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Composite", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Law_Function"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Law_Composite.hxx", 
+        46
+      ], 
+      "key": "Law_Composite"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Law_Constant", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Law_Constant::Law_Constant()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Law_Constant", 
+          "name": "Law_Constant", 
+          "return": {
+            "type": "Law_Constant", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Constant::Law_Constant(Law_Constant)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Law_Constant", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Constant", 
+          "name": "Law_Constant", 
+          "return": {
+            "type": "Law_Constant", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Law_Constant::Set(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Radius", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PFirst", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PLast", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Constant", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Constant::Continuity()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Constant", 
+          "name": "Continuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Constant::NbIntervals(GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Constant", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Constant::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Constant", 
+          "name": "Intervals", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Constant::Value(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Constant", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Constant::D1(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Constant", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Constant::D2(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Constant", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Constant::Trim(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "PFirst", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PLast", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Constant", 
+          "name": "Trim", 
+          "return": {
+            "type": "opencascade::handle<Law_Function>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Constant::Bounds(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "PFirst", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PLast", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Constant", 
+          "name": "Bounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Constant::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Constant", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Constant::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Constant", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Constant::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Constant", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Law_Function"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Law_Constant.hxx", 
+        36
+      ], 
+      "key": "Law_Constant"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Law_Interpolate", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Law_Interpolate::Law_Interpolate(opencascade::handle<TColStd_HArray1OfReal>, Standard_Boolean, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "PeriodicFlag", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Interpolate", 
+          "name": "Law_Interpolate", 
+          "return": {
+            "type": "Law_Interpolate", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Interpolate::Law_Interpolate(opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColStd_HArray1OfReal>, Standard_Boolean, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "Points", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "Parameters", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "PeriodicFlag", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Interpolate", 
+          "name": "Law_Interpolate", 
+          "return": {
+            "type": "Law_Interpolate", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Interpolate::Law_Interpolate(Law_Interpolate)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Law_Interpolate", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Interpolate", 
+          "name": "Law_Interpolate", 
+          "return": {
+            "type": "Law_Interpolate", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Law_Interpolate::Load(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "InitialTangent", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "FinalTangent", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Interpolate", 
+          "name": "Load", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Interpolate::Load(TColStd_Array1OfReal, opencascade::handle<TColStd_HArray1OfBoolean>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "Tangents", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfBoolean>", 
+              "name": "TangentFlags", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Interpolate", 
+          "name": "Load", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Interpolate::ClearTangents()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Interpolate", 
+          "name": "ClearTangents", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Interpolate::Perform()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Interpolate", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Interpolate::Curve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Interpolate", 
+          "name": "Curve", 
+          "return": {
+            "type": "opencascade::handle<Law_BSpline>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Interpolate::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Interpolate", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Law_Interpolate.hxx", 
+        41
+      ], 
+      "key": "Law_Interpolate"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Law_Linear", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Law_Linear::Law_Linear()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Law_Linear", 
+          "name": "Law_Linear", 
+          "return": {
+            "type": "Law_Linear", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Linear::Law_Linear(Law_Linear)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Law_Linear", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Linear", 
+          "name": "Law_Linear", 
+          "return": {
+            "type": "Law_Linear", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Law_Linear::Set(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Pdeb", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Valdeb", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Pfin", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Valfin", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Linear", 
+          "name": "Set", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Linear::Continuity()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Linear", 
+          "name": "Continuity", 
+          "return": {
+            "type": "GeomAbs_Shape"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Linear::NbIntervals(GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Linear", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Linear::Intervals(TColStd_Array1OfReal, GeomAbs_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TColStd_Array1OfReal", 
+              "name": "T", 
+              "ref": true
+            }, 
+            {
+              "type": "GeomAbs_Shape", 
+              "name": "S", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Linear", 
+          "name": "Intervals", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Linear::Value(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Linear", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Linear::D1(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Linear", 
+          "name": "D1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Linear::D2(Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "F", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "D2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Linear", 
+          "name": "D2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Linear::Trim(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "PFirst", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PLast", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Law_Linear", 
+          "name": "Trim", 
+          "return": {
+            "type": "opencascade::handle<Law_Function>"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Linear::Bounds(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "PFirst", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PLast", 
+              "ref": true
+            }
+          ], 
+          "parent": "Law_Linear", 
+          "name": "Bounds", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "Law_Linear::get_type_name()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Linear", 
+          "name": "get_type_name", 
+          "return": {
+            "type": "char", 
+            "const": true, 
+            "ptr": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Linear::get_type_descriptor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Linear", 
+          "name": "get_type_descriptor", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "static": "1", 
+          "throws": true
+        }, 
+        {
+          "key": "Law_Linear::DynamicType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Law_Linear", 
+          "name": "DynamicType", 
+          "return": {
+            "type": "opencascade::handle<Standard_Type>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "Law_Function"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/Law_Linear.hxx", 
+        36
+      ], 
+      "key": "Law_Linear"
+    }, 
+    {
+      "type": "opencascade::handle<Law_Function>", 
+      "declType": "typedef", 
+      "name": "Handle_Law_Function", 
+      "key": "Handle_Law_Function"
+    }, 
+    {
+      "type": "opencascade::handle<Law_BSpFunc>", 
+      "declType": "typedef", 
+      "name": "Handle_Law_BSpFunc", 
+      "key": "Handle_Law_BSpFunc"
+    }, 
+    {
+      "type": "opencascade::handle<Law_S>", 
+      "declType": "typedef", 
+      "name": "Handle_Law_S", 
+      "key": "Handle_Law_S"
+    }, 
+    {
+      "type": "NCollection_List<opencascade::handle<Law_Function> >", 
+      "declType": "typedef", 
+      "name": "Law_Laws", 
+      "key": "Law_Laws"
+    }, 
+    {
+      "type": "NCollection_List<opencascade::handle<Law_Function> >::Iterator", 
+      "declType": "typedef", 
+      "name": "Law_ListIteratorOfLaws", 
+      "key": "Law_ListIteratorOfLaws"
+    }, 
+    {
+      "type": "opencascade::handle<Law_BSpline>", 
+      "declType": "typedef", 
+      "name": "Handle_Law_BSpline", 
+      "key": "Handle_Law_BSpline"
+    }, 
+    {
+      "type": "opencascade::handle<Law_Interpol>", 
+      "declType": "typedef", 
+      "name": "Handle_Law_Interpol", 
+      "key": "Handle_Law_Interpol"
+    }, 
+    {
+      "type": "opencascade::handle<Law_Composite>", 
+      "declType": "typedef", 
+      "name": "Handle_Law_Composite", 
+      "key": "Handle_Law_Composite"
+    }, 
+    {
+      "type": "opencascade::handle<Law_Constant>", 
+      "declType": "typedef", 
+      "name": "Handle_Law_Constant", 
+      "key": "Handle_Law_Constant"
+    }, 
+    {
+      "type": "opencascade::handle<Law_Linear>", 
+      "declType": "typedef", 
+      "name": "Handle_Law_Linear", 
+      "key": "Handle_Law_Linear"
+    }
+  ], 
+  "name": "Law"
+}

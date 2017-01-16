@@ -1,0 +1,724 @@
+{
+  "headers": [
+    "Hatch_LineForm.hxx", 
+    "Hatch_SequenceOfLine.hxx", 
+    "Hatch_Hatcher.hxx", 
+    "Hatch_SequenceOfParameter.hxx", 
+    "Hatch_Line.hxx", 
+    "Hatch_Parameter.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "Hatch_Line", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Hatch_Line::Hatch_Line()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Hatch_Line", 
+          "name": "Hatch_Line", 
+          "return": {
+            "type": "Hatch_Line", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Line::Hatch_Line(gp_Lin2d, Hatch_LineForm)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Hatch_LineForm", 
+              "name": "T", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Line", 
+          "name": "Hatch_Line", 
+          "return": {
+            "type": "Hatch_Line", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Line::Hatch_Line(Hatch_Line)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Hatch_Line", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Hatch_Line", 
+          "name": "Hatch_Line", 
+          "return": {
+            "type": "Hatch_Line", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Hatch_Line::AddIntersection(Standard_Real, Standard_Boolean, Standard_Integer, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Par1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Start", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theToler", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Line", 
+          "name": "AddIntersection", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Hatch_Line.hxx", 
+        42
+      ], 
+      "key": "Hatch_Line"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Hatch_Hatcher", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Hatch_Hatcher::Hatch_Hatcher(Standard_Real, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Oriented", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "Hatch_Hatcher", 
+          "return": {
+            "type": "Hatch_Hatcher", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::Hatch_Hatcher(Hatch_Hatcher)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Hatch_Hatcher", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "Hatch_Hatcher", 
+          "return": {
+            "type": "Hatch_Hatcher", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::Tolerance(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "Tolerance", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::Tolerance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Hatch_Hatcher", 
+          "name": "Tolerance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::AddLine(gp_Lin2d, Hatch_LineForm)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Hatch_LineForm", 
+              "name": "T", 
+              "default": "::Hatch_LineForm::Hatch_ANYLINE", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "AddLine", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::AddLine(gp_Dir2d, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Dir2d", 
+              "name": "D", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Dist", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "AddLine", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::AddXLine(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "X", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "AddXLine", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::AddYLine(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Y", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "AddYLine", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::Trim(gp_Lin2d, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "Trim", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::Trim(gp_Lin2d, Standard_Real, Standard_Real, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Lin2d", 
+              "name": "L", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Start", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "End", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "Trim", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::Trim(gp_Pnt2d, gp_Pnt2d, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "Trim", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::NbIntervals()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Hatch_Hatcher", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::NbLines()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "Hatch_Hatcher", 
+          "name": "NbLines", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::Line(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "Line", 
+          "return": {
+            "type": "gp_Lin2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::LineForm(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "LineForm", 
+          "return": {
+            "type": "Hatch_LineForm"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::IsXLine(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "IsXLine", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::IsYLine(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "IsYLine", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::Coordinate(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "Coordinate", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::NbIntervals(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "NbIntervals", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::Start(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "J", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "Start", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::StartIndex(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "J", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "StartIndex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::End(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "J", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "End", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Hatcher::EndIndex(Standard_Integer, Standard_Integer, Standard_Integer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "I", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "J", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par2", 
+              "ref": true
+            }
+          ], 
+          "parent": "Hatch_Hatcher", 
+          "name": "EndIndex", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Hatch_Hatcher.hxx", 
+        68
+      ], 
+      "key": "Hatch_Hatcher"
+    }, 
+    {
+      "declType": "class", 
+      "name": "Hatch_Parameter", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "Hatch_Parameter::Hatch_Parameter()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "Hatch_Parameter", 
+          "name": "Hatch_Parameter", 
+          "return": {
+            "type": "Hatch_Parameter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Parameter::Hatch_Parameter(Standard_Real, Standard_Boolean, Standard_Integer, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Par1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Start", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "default": "0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par2", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "Hatch_Parameter", 
+          "name": "Hatch_Parameter", 
+          "return": {
+            "type": "Hatch_Parameter", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "Hatch_Parameter::Hatch_Parameter(Hatch_Parameter)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Hatch_Parameter", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "Hatch_Parameter", 
+          "name": "Hatch_Parameter", 
+          "return": {
+            "type": "Hatch_Parameter", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/Hatch_Parameter.hxx", 
+        36
+      ], 
+      "key": "Hatch_Parameter"
+    }, 
+    {
+      "type": "NCollection_Sequence<Hatch_Parameter>", 
+      "declType": "typedef", 
+      "name": "Hatch_SequenceOfParameter", 
+      "key": "Hatch_SequenceOfParameter"
+    }, 
+    {
+      "type": "NCollection_Sequence<Hatch_Line>", 
+      "declType": "typedef", 
+      "name": "Hatch_SequenceOfLine", 
+      "key": "Hatch_SequenceOfLine"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "Hatch_XLINE", 
+          0
+        ], 
+        [
+          "Hatch_YLINE", 
+          1
+        ], 
+        [
+          "Hatch_ANYLINE", 
+          2
+        ]
+      ], 
+      "name": "Hatch_LineForm", 
+      "key": "Hatch_LineForm"
+    }
+  ], 
+  "name": "Hatch"
+}

@@ -1,0 +1,1230 @@
+{
+  "headers": [
+    "IntRes2d_Domain.hxx", 
+    "IntRes2d_IntersectionPoint.hxx", 
+    "IntRes2d_TypeTrans.hxx", 
+    "IntRes2d_Position.hxx", 
+    "IntRes2d_SequenceOfIntersectionSegment.hxx", 
+    "IntRes2d_IntersectionSegment.hxx", 
+    "IntRes2d_Situation.hxx", 
+    "IntRes2d_Transition.hxx", 
+    "IntRes2d_SequenceOfIntersectionPoint.hxx", 
+    "IntRes2d_Intersection.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "IntRes2d_Domain", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntRes2d_Domain::IntRes2d_Domain()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntRes2d_Domain", 
+          "name": "IntRes2d_Domain", 
+          "return": {
+            "type": "IntRes2d_Domain", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::IntRes2d_Domain(gp_Pnt2d, Standard_Real, Standard_Real, gp_Pnt2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Pnt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol1", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Pnt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_Domain", 
+          "name": "IntRes2d_Domain", 
+          "return": {
+            "type": "IntRes2d_Domain", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::IntRes2d_Domain(gp_Pnt2d, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Pnt", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_Domain", 
+          "name": "IntRes2d_Domain", 
+          "return": {
+            "type": "IntRes2d_Domain", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::IntRes2d_Domain(IntRes2d_Domain)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntRes2d_Domain", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntRes2d_Domain", 
+          "name": "IntRes2d_Domain", 
+          "return": {
+            "type": "IntRes2d_Domain", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::SetValues(gp_Pnt2d, Standard_Real, Standard_Real, gp_Pnt2d, Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Pnt1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol1", 
+              "const": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Pnt2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par2", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol2", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_Domain", 
+          "name": "SetValues", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::SetValues()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Domain", 
+          "name": "SetValues", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::SetValues(gp_Pnt2d, Standard_Real, Standard_Real, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "Pnt", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Par", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tol", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_Domain", 
+          "name": "SetValues", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::SetEquivalentParameters(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "zero", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "period", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_Domain", 
+          "name": "SetEquivalentParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::HasFirstPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Domain", 
+          "name": "HasFirstPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::FirstParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Domain", 
+          "name": "FirstParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::FirstPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Domain", 
+          "name": "FirstPoint", 
+          "return": {
+            "type": "gp_Pnt2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::FirstTolerance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Domain", 
+          "name": "FirstTolerance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::HasLastPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Domain", 
+          "name": "HasLastPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::LastParameter()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Domain", 
+          "name": "LastParameter", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::LastPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Domain", 
+          "name": "LastPoint", 
+          "return": {
+            "type": "gp_Pnt2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::LastTolerance()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Domain", 
+          "name": "LastTolerance", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::IsClosed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Domain", 
+          "name": "IsClosed", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Domain::EquivalentParameters(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "zero", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "zeroplusperiod", 
+              "ref": true
+            }
+          ], 
+          "parent": "IntRes2d_Domain", 
+          "name": "EquivalentParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntRes2d_Domain.hxx", 
+        45
+      ], 
+      "key": "IntRes2d_Domain"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntRes2d_Transition", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntRes2d_Transition::IntRes2d_Transition()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntRes2d_Transition", 
+          "name": "IntRes2d_Transition", 
+          "return": {
+            "type": "IntRes2d_Transition", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Transition::IntRes2d_Transition(Standard_Boolean, IntRes2d_Position, IntRes2d_TypeTrans)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Tangent", 
+              "const": true
+            }, 
+            {
+              "type": "IntRes2d_Position", 
+              "name": "Pos", 
+              "const": true
+            }, 
+            {
+              "type": "IntRes2d_TypeTrans", 
+              "name": "Type", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_Transition", 
+          "name": "IntRes2d_Transition", 
+          "return": {
+            "type": "IntRes2d_Transition", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Transition::IntRes2d_Transition(Standard_Boolean, IntRes2d_Position, IntRes2d_Situation, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Tangent", 
+              "const": true
+            }, 
+            {
+              "type": "IntRes2d_Position", 
+              "name": "Pos", 
+              "const": true
+            }, 
+            {
+              "type": "IntRes2d_Situation", 
+              "name": "Situ", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Oppos", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_Transition", 
+          "name": "IntRes2d_Transition", 
+          "return": {
+            "type": "IntRes2d_Transition", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Transition::IntRes2d_Transition(IntRes2d_Position)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntRes2d_Position", 
+              "name": "Pos", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_Transition", 
+          "name": "IntRes2d_Transition", 
+          "return": {
+            "type": "IntRes2d_Transition", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Transition::IntRes2d_Transition(IntRes2d_Transition)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntRes2d_Transition", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntRes2d_Transition", 
+          "name": "IntRes2d_Transition", 
+          "return": {
+            "type": "IntRes2d_Transition", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntRes2d_Transition::SetValue(Standard_Boolean, IntRes2d_Position, IntRes2d_TypeTrans)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Tangent", 
+              "const": true
+            }, 
+            {
+              "type": "IntRes2d_Position", 
+              "name": "Pos", 
+              "const": true
+            }, 
+            {
+              "type": "IntRes2d_TypeTrans", 
+              "name": "Type", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_Transition", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Transition::SetValue(Standard_Boolean, IntRes2d_Position, IntRes2d_Situation, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Tangent", 
+              "const": true
+            }, 
+            {
+              "type": "IntRes2d_Position", 
+              "name": "Pos", 
+              "const": true
+            }, 
+            {
+              "type": "IntRes2d_Situation", 
+              "name": "Situ", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Oppos", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_Transition", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Transition::SetValue(IntRes2d_Position)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntRes2d_Position", 
+              "name": "Pos", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_Transition", 
+          "name": "SetValue", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Transition::SetPosition(IntRes2d_Position)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "IntRes2d_Position", 
+              "name": "Pos", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_Transition", 
+          "name": "SetPosition", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Transition::PositionOnCurve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Transition", 
+          "name": "PositionOnCurve", 
+          "return": {
+            "type": "IntRes2d_Position"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Transition::TransitionType()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Transition", 
+          "name": "TransitionType", 
+          "return": {
+            "type": "IntRes2d_TypeTrans"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Transition::IsTangent()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Transition", 
+          "name": "IsTangent", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Transition::Situation()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Transition", 
+          "name": "Situation", 
+          "return": {
+            "type": "IntRes2d_Situation"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Transition::IsOpposite()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Transition", 
+          "name": "IsOpposite", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntRes2d_Transition.hxx", 
+        39
+      ], 
+      "key": "IntRes2d_Transition"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntRes2d_IntersectionPoint", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntRes2d_IntersectionPoint::IntRes2d_IntersectionPoint()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntRes2d_IntersectionPoint", 
+          "name": "IntRes2d_IntersectionPoint", 
+          "return": {
+            "type": "IntRes2d_IntersectionPoint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionPoint::IntRes2d_IntersectionPoint(gp_Pnt2d, Standard_Real, Standard_Real, IntRes2d_Transition, IntRes2d_Transition, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Uc1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Uc2", 
+              "const": true
+            }, 
+            {
+              "type": "IntRes2d_Transition", 
+              "name": "Trans1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Transition", 
+              "name": "Trans2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "ReversedFlag", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_IntersectionPoint", 
+          "name": "IntRes2d_IntersectionPoint", 
+          "return": {
+            "type": "IntRes2d_IntersectionPoint", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionPoint::IntRes2d_IntersectionPoint(IntRes2d_IntersectionPoint)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntRes2d_IntersectionPoint", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntRes2d_IntersectionPoint", 
+          "name": "IntRes2d_IntersectionPoint", 
+          "return": {
+            "type": "IntRes2d_IntersectionPoint", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionPoint::SetValues(gp_Pnt2d, Standard_Real, Standard_Real, IntRes2d_Transition, IntRes2d_Transition, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Uc1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Uc2", 
+              "const": true
+            }, 
+            {
+              "type": "IntRes2d_Transition", 
+              "name": "Trans1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_Transition", 
+              "name": "Trans2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "ReversedFlag", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_IntersectionPoint", 
+          "name": "SetValues", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionPoint::Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_IntersectionPoint", 
+          "name": "Value", 
+          "return": {
+            "type": "gp_Pnt2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionPoint::ParamOnFirst()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_IntersectionPoint", 
+          "name": "ParamOnFirst", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionPoint::ParamOnSecond()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_IntersectionPoint", 
+          "name": "ParamOnSecond", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionPoint::TransitionOfFirst()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_IntersectionPoint", 
+          "name": "TransitionOfFirst", 
+          "return": {
+            "type": "IntRes2d_Transition", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionPoint::TransitionOfSecond()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_IntersectionPoint", 
+          "name": "TransitionOfSecond", 
+          "return": {
+            "type": "IntRes2d_Transition", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntRes2d_IntersectionPoint.hxx", 
+        34
+      ], 
+      "key": "IntRes2d_IntersectionPoint"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntRes2d_IntersectionSegment", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntRes2d_IntersectionSegment::IntRes2d_IntersectionSegment()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "IntRes2d_IntersectionSegment", 
+          "name": "IntRes2d_IntersectionSegment", 
+          "return": {
+            "type": "IntRes2d_IntersectionSegment", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionSegment::IntRes2d_IntersectionSegment(IntRes2d_IntersectionPoint, IntRes2d_IntersectionPoint, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntRes2d_IntersectionPoint", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "IntRes2d_IntersectionPoint", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Oppos", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "ReverseFlag", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_IntersectionSegment", 
+          "name": "IntRes2d_IntersectionSegment", 
+          "return": {
+            "type": "IntRes2d_IntersectionSegment", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionSegment::IntRes2d_IntersectionSegment(IntRes2d_IntersectionPoint, Standard_Boolean, Standard_Boolean, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntRes2d_IntersectionPoint", 
+              "name": "P", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "First", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Oppos", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "ReverseFlag", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_IntersectionSegment", 
+          "name": "IntRes2d_IntersectionSegment", 
+          "return": {
+            "type": "IntRes2d_IntersectionSegment", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionSegment::IntRes2d_IntersectionSegment(Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Oppos", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_IntersectionSegment", 
+          "name": "IntRes2d_IntersectionSegment", 
+          "return": {
+            "type": "IntRes2d_IntersectionSegment", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionSegment::IntRes2d_IntersectionSegment(IntRes2d_IntersectionSegment)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "IntRes2d_IntersectionSegment", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "IntRes2d_IntersectionSegment", 
+          "name": "IntRes2d_IntersectionSegment", 
+          "return": {
+            "type": "IntRes2d_IntersectionSegment", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionSegment::IsOpposite()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_IntersectionSegment", 
+          "name": "IsOpposite", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionSegment::HasFirstPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_IntersectionSegment", 
+          "name": "HasFirstPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionSegment::FirstPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_IntersectionSegment", 
+          "name": "FirstPoint", 
+          "return": {
+            "type": "IntRes2d_IntersectionPoint", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionSegment::HasLastPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_IntersectionSegment", 
+          "name": "HasLastPoint", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_IntersectionSegment::LastPoint()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_IntersectionSegment", 
+          "name": "LastPoint", 
+          "return": {
+            "type": "IntRes2d_IntersectionPoint", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntRes2d_IntersectionSegment.hxx", 
+        32
+      ], 
+      "key": "IntRes2d_IntersectionSegment"
+    }, 
+    {
+      "declType": "class", 
+      "name": "IntRes2d_Intersection", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "IntRes2d_Intersection::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Intersection", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Intersection::IsEmpty()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Intersection", 
+          "name": "IsEmpty", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Intersection::NbPoints()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Intersection", 
+          "name": "NbPoints", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Intersection::Point(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_Intersection", 
+          "name": "Point", 
+          "return": {
+            "type": "IntRes2d_IntersectionPoint", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Intersection::NbSegments()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "IntRes2d_Intersection", 
+          "name": "NbSegments", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Intersection::Segment(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "N", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_Intersection", 
+          "name": "Segment", 
+          "return": {
+            "type": "IntRes2d_IntersectionSegment", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "IntRes2d_Intersection::SetReversedParameters(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "Reverseflag", 
+              "const": true
+            }
+          ], 
+          "parent": "IntRes2d_Intersection", 
+          "name": "SetReversedParameters", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/IntRes2d_Intersection.hxx", 
+        38
+      ], 
+      "key": "IntRes2d_Intersection"
+    }, 
+    {
+      "type": "NCollection_Sequence<IntRes2d_IntersectionSegment>", 
+      "declType": "typedef", 
+      "name": "IntRes2d_SequenceOfIntersectionSegment", 
+      "key": "IntRes2d_SequenceOfIntersectionSegment"
+    }, 
+    {
+      "type": "NCollection_Sequence<IntRes2d_IntersectionPoint>", 
+      "declType": "typedef", 
+      "name": "IntRes2d_SequenceOfIntersectionPoint", 
+      "key": "IntRes2d_SequenceOfIntersectionPoint"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "IntRes2d_Head", 
+          0
+        ], 
+        [
+          "IntRes2d_Middle", 
+          1
+        ], 
+        [
+          "IntRes2d_End", 
+          2
+        ]
+      ], 
+      "name": "IntRes2d_Position", 
+      "key": "IntRes2d_Position"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "IntRes2d_In", 
+          0
+        ], 
+        [
+          "IntRes2d_Out", 
+          1
+        ], 
+        [
+          "IntRes2d_Touch", 
+          2
+        ], 
+        [
+          "IntRes2d_Undecided", 
+          3
+        ]
+      ], 
+      "name": "IntRes2d_TypeTrans", 
+      "key": "IntRes2d_TypeTrans"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "IntRes2d_Inside", 
+          0
+        ], 
+        [
+          "IntRes2d_Outside", 
+          1
+        ], 
+        [
+          "IntRes2d_Unknown", 
+          2
+        ]
+      ], 
+      "name": "IntRes2d_Situation", 
+      "key": "IntRes2d_Situation"
+    }
+  ], 
+  "name": "IntRes2d"
+}

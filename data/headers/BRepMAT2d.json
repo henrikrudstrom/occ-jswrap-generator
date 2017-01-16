@@ -1,0 +1,696 @@
+{
+  "headers": [
+    "BRepMAT2d_Explorer.hxx", 
+    "BRepMAT2d_BisectingLocus.hxx", 
+    "BRepMAT2d_DataMapIteratorOfDataMapOfShapeSequenceOfBasicElt.hxx", 
+    "BRepMAT2d_DataMapOfShapeSequenceOfBasicElt.hxx", 
+    "BRepMAT2d_LinkTopoBilo.hxx", 
+    "BRepMAT2d_DataMapIteratorOfDataMapOfBasicEltShape.hxx", 
+    "BRepMAT2d_DataMapOfBasicEltShape.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "BRepMAT2d_Explorer", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepMAT2d_Explorer::BRepMAT2d_Explorer()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepMAT2d_Explorer", 
+          "name": "BRepMAT2d_Explorer", 
+          "return": {
+            "type": "BRepMAT2d_Explorer", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_Explorer::BRepMAT2d_Explorer(TopoDS_Face)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "aFace", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepMAT2d_Explorer", 
+          "name": "BRepMAT2d_Explorer", 
+          "return": {
+            "type": "BRepMAT2d_Explorer", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_Explorer::BRepMAT2d_Explorer(BRepMAT2d_Explorer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepMAT2d_Explorer", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepMAT2d_Explorer", 
+          "name": "BRepMAT2d_Explorer", 
+          "return": {
+            "type": "BRepMAT2d_Explorer", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepMAT2d_Explorer::Clear()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepMAT2d_Explorer", 
+          "name": "Clear", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_Explorer::Perform(TopoDS_Face)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Face", 
+              "name": "aFace", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepMAT2d_Explorer", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_Explorer::NumberOfContours()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepMAT2d_Explorer", 
+          "name": "NumberOfContours", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_Explorer::NumberOfCurves(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexContour", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepMAT2d_Explorer", 
+          "name": "NumberOfCurves", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_Explorer::Init(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexContour", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepMAT2d_Explorer", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_Explorer::More()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepMAT2d_Explorer", 
+          "name": "More", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_Explorer::Next()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepMAT2d_Explorer", 
+          "name": "Next", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_Explorer::Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepMAT2d_Explorer", 
+          "name": "Value", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Curve>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_Explorer::Shape()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepMAT2d_Explorer", 
+          "name": "Shape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_Explorer::Contour(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndexContour", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepMAT2d_Explorer", 
+          "name": "Contour", 
+          "return": {
+            "type": "TColGeom2d_SequenceOfCurve", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_Explorer::IsModified(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepMAT2d_Explorer", 
+          "name": "IsModified", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_Explorer::ModifiedShape(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "aShape", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepMAT2d_Explorer", 
+          "name": "ModifiedShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_Explorer::GetIsClosed()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepMAT2d_Explorer", 
+          "name": "GetIsClosed", 
+          "return": {
+            "type": "TColStd_SequenceOfBoolean", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepMAT2d_Explorer.hxx", 
+        39
+      ], 
+      "key": "BRepMAT2d_Explorer"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepMAT2d_BisectingLocus", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepMAT2d_BisectingLocus::BRepMAT2d_BisectingLocus()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepMAT2d_BisectingLocus", 
+          "name": "BRepMAT2d_BisectingLocus", 
+          "return": {
+            "type": "BRepMAT2d_BisectingLocus", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_BisectingLocus::BRepMAT2d_BisectingLocus(BRepMAT2d_BisectingLocus)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepMAT2d_BisectingLocus", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepMAT2d_BisectingLocus", 
+          "name": "BRepMAT2d_BisectingLocus", 
+          "return": {
+            "type": "BRepMAT2d_BisectingLocus", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepMAT2d_BisectingLocus::Compute(BRepMAT2d_Explorer, Standard_Integer, MAT_Side, GeomAbs_JoinType, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepMAT2d_Explorer", 
+              "name": "anExplo", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "LineIndex", 
+              "default": "1", 
+              "const": true
+            }, 
+            {
+              "type": "MAT_Side", 
+              "name": "aSide", 
+              "default": "::MAT_Side::MAT_Left", 
+              "const": true
+            }, 
+            {
+              "type": "GeomAbs_JoinType", 
+              "name": "aJoinType", 
+              "default": "::GeomAbs_JoinType::GeomAbs_Arc", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "IsOpenResult", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepMAT2d_BisectingLocus", 
+          "name": "Compute", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_BisectingLocus::IsDone()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepMAT2d_BisectingLocus", 
+          "name": "IsDone", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_BisectingLocus::Graph()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepMAT2d_BisectingLocus", 
+          "name": "Graph", 
+          "return": {
+            "type": "opencascade::handle<MAT_Graph>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_BisectingLocus::NumberOfContours()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepMAT2d_BisectingLocus", 
+          "name": "NumberOfContours", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_BisectingLocus::NumberOfElts(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndLine", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepMAT2d_BisectingLocus", 
+          "name": "NumberOfElts", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_BisectingLocus::NumberOfSections(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndLine", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepMAT2d_BisectingLocus", 
+          "name": "NumberOfSections", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_BisectingLocus::BasicElt(Standard_Integer, Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "IndLine", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "Index", 
+              "const": true
+            }
+          ], 
+          "parent": "BRepMAT2d_BisectingLocus", 
+          "name": "BasicElt", 
+          "return": {
+            "type": "opencascade::handle<MAT_BasicElt>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_BisectingLocus::GeomElt(opencascade::handle<MAT_BasicElt>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_BasicElt>", 
+              "name": "aBasicElt", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepMAT2d_BisectingLocus", 
+          "name": "GeomElt", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_Geometry>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_BisectingLocus::GeomElt(opencascade::handle<MAT_Node>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Node>", 
+              "name": "aNode", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepMAT2d_BisectingLocus", 
+          "name": "GeomElt", 
+          "return": {
+            "type": "gp_Pnt2d"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_BisectingLocus::GeomBis(opencascade::handle<MAT_Arc>, Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_Arc>", 
+              "name": "anArc", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Reverse", 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepMAT2d_BisectingLocus", 
+          "name": "GeomBis", 
+          "return": {
+            "type": "Bisector_Bisec"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepMAT2d_BisectingLocus.hxx", 
+        75
+      ], 
+      "key": "BRepMAT2d_BisectingLocus"
+    }, 
+    {
+      "declType": "class", 
+      "name": "BRepMAT2d_LinkTopoBilo", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "BRepMAT2d_LinkTopoBilo::BRepMAT2d_LinkTopoBilo()", 
+          "declType": "constructor", 
+          "arguments": [], 
+          "parent": "BRepMAT2d_LinkTopoBilo", 
+          "name": "BRepMAT2d_LinkTopoBilo", 
+          "return": {
+            "type": "BRepMAT2d_LinkTopoBilo", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_LinkTopoBilo::BRepMAT2d_LinkTopoBilo(BRepMAT2d_Explorer, BRepMAT2d_BisectingLocus)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepMAT2d_Explorer", 
+              "name": "Explo", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "BRepMAT2d_BisectingLocus", 
+              "name": "BiLo", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepMAT2d_LinkTopoBilo", 
+          "name": "BRepMAT2d_LinkTopoBilo", 
+          "return": {
+            "type": "BRepMAT2d_LinkTopoBilo", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_LinkTopoBilo::BRepMAT2d_LinkTopoBilo(BRepMAT2d_LinkTopoBilo)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "BRepMAT2d_LinkTopoBilo", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepMAT2d_LinkTopoBilo", 
+          "name": "BRepMAT2d_LinkTopoBilo", 
+          "return": {
+            "type": "BRepMAT2d_LinkTopoBilo", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "BRepMAT2d_LinkTopoBilo::Perform(BRepMAT2d_Explorer, BRepMAT2d_BisectingLocus)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "BRepMAT2d_Explorer", 
+              "name": "Explo", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "BRepMAT2d_BisectingLocus", 
+              "name": "BiLo", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepMAT2d_LinkTopoBilo", 
+          "name": "Perform", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_LinkTopoBilo::Init(TopoDS_Shape)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "TopoDS_Shape", 
+              "name": "S", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepMAT2d_LinkTopoBilo", 
+          "name": "Init", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_LinkTopoBilo::More()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepMAT2d_LinkTopoBilo", 
+          "name": "More", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_LinkTopoBilo::Next()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepMAT2d_LinkTopoBilo", 
+          "name": "Next", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_LinkTopoBilo::Value()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "BRepMAT2d_LinkTopoBilo", 
+          "name": "Value", 
+          "return": {
+            "type": "opencascade::handle<MAT_BasicElt>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "BRepMAT2d_LinkTopoBilo::GeneratingShape(opencascade::handle<MAT_BasicElt>)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "opencascade::handle<MAT_BasicElt>", 
+              "name": "aBE", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "BRepMAT2d_LinkTopoBilo", 
+          "name": "GeneratingShape", 
+          "return": {
+            "type": "TopoDS_Shape"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/BRepMAT2d_LinkTopoBilo.hxx", 
+        39
+      ], 
+      "key": "BRepMAT2d_LinkTopoBilo"
+    }, 
+    {
+      "type": "NCollection_DataMap<TopoDS_Shape, NCollection_Sequence<opencascade::handle<MAT_BasicElt> >, TopTools_ShapeMapHasher>", 
+      "declType": "typedef", 
+      "name": "BRepMAT2d_DataMapOfShapeSequenceOfBasicElt", 
+      "key": "BRepMAT2d_DataMapOfShapeSequenceOfBasicElt"
+    }, 
+    {
+      "type": "NCollection_DataMap<TopoDS_Shape, NCollection_Sequence<opencascade::handle<MAT_BasicElt> >, TopTools_ShapeMapHasher>::Iterator", 
+      "declType": "typedef", 
+      "name": "BRepMAT2d_DataMapIteratorOfDataMapOfShapeSequenceOfBasicElt", 
+      "key": "BRepMAT2d_DataMapIteratorOfDataMapOfShapeSequenceOfBasicElt"
+    }, 
+    {
+      "type": "NCollection_DataMap<opencascade::handle<MAT_BasicElt>, TopoDS_Shape, NCollection_DefaultHasher<opencascade::handle<Standard_Transient> > >", 
+      "declType": "typedef", 
+      "name": "BRepMAT2d_DataMapOfBasicEltShape", 
+      "key": "BRepMAT2d_DataMapOfBasicEltShape"
+    }, 
+    {
+      "type": "NCollection_DataMap<opencascade::handle<MAT_BasicElt>, TopoDS_Shape, NCollection_DefaultHasher<opencascade::handle<Standard_Transient> > >::Iterator", 
+      "declType": "typedef", 
+      "name": "BRepMAT2d_DataMapIteratorOfDataMapOfBasicEltShape", 
+      "key": "BRepMAT2d_DataMapIteratorOfDataMapOfBasicEltShape"
+    }
+  ], 
+  "name": "BRepMAT2d"
+}

@@ -1,0 +1,1835 @@
+{
+  "headers": [
+    "FairCurve_DistributionOfTension.hxx", 
+    "FairCurve_EnergyOfBatten.hxx", 
+    "FairCurve_BattenLaw.hxx", 
+    "FairCurve_Newton.hxx", 
+    "FairCurve_Energy.hxx", 
+    "FairCurve_Batten.hxx", 
+    "FairCurve_DistributionOfSagging.hxx", 
+    "FairCurve_DistributionOfJerk.hxx", 
+    "FairCurve_MinimalVariation.hxx", 
+    "FairCurve_AnalysisCode.hxx", 
+    "FairCurve_EnergyOfMVC.hxx", 
+    "FairCurve_DistributionOfEnergy.hxx"
+  ], 
+  "declarations": [
+    {
+      "declType": "class", 
+      "name": "FairCurve_BattenLaw", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "FairCurve_BattenLaw::FairCurve_BattenLaw(Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Heigth", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Slope", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Sliding", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_BattenLaw", 
+          "name": "FairCurve_BattenLaw", 
+          "return": {
+            "type": "FairCurve_BattenLaw", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_BattenLaw::FairCurve_BattenLaw(FairCurve_BattenLaw)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "FairCurve_BattenLaw", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_BattenLaw", 
+          "name": "FairCurve_BattenLaw", 
+          "return": {
+            "type": "FairCurve_BattenLaw", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "FairCurve_BattenLaw::SetSliding(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Sliding", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_BattenLaw", 
+          "name": "SetSliding", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_BattenLaw::SetHeigth(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Heigth", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_BattenLaw", 
+          "name": "SetHeigth", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_BattenLaw::SetSlope(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Slope", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_BattenLaw", 
+          "name": "SetSlope", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_BattenLaw::Value(Standard_Real, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "T", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "THeigth", 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_BattenLaw", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_Function"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FairCurve_BattenLaw.hxx", 
+        30
+      ], 
+      "key": "FairCurve_BattenLaw"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FairCurve_DistributionOfEnergy", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "FairCurve_DistributionOfEnergy::NbVariables()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_DistributionOfEnergy", 
+          "name": "NbVariables", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "FairCurve_DistributionOfEnergy::NbEquations()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_DistributionOfEnergy", 
+          "name": "NbEquations", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "FairCurve_DistributionOfEnergy::SetDerivativeOrder(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "DerivativeOrder", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_DistributionOfEnergy", 
+          "name": "SetDerivativeOrder", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_FunctionSet"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FairCurve_DistributionOfEnergy.hxx", 
+        31
+      ], 
+      "key": "FairCurve_DistributionOfEnergy"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FairCurve_DistributionOfTension", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "FairCurve_DistributionOfTension::FairCurve_DistributionOfTension(Standard_Integer, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColgp_HArray1OfPnt2d>, Standard_Integer, Standard_Real, FairCurve_BattenLaw, Standard_Integer, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "BSplOrder", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "FlatKnots", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<TColgp_HArray1OfPnt2d>", 
+              "name": "Poles", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DerivativeOrder", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "LengthSliding", 
+              "const": true
+            }, 
+            {
+              "type": "FairCurve_BattenLaw", 
+              "name": "Law", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbValAux", 
+              "default": "0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "Uniform", 
+              "default": "false", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_DistributionOfTension", 
+          "name": "FairCurve_DistributionOfTension", 
+          "return": {
+            "type": "FairCurve_DistributionOfTension", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_DistributionOfTension::FairCurve_DistributionOfTension(FairCurve_DistributionOfTension)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "FairCurve_DistributionOfTension", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_DistributionOfTension", 
+          "name": "FairCurve_DistributionOfTension", 
+          "return": {
+            "type": "FairCurve_DistributionOfTension", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "FairCurve_DistributionOfTension::SetLengthSliding(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "LengthSliding", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_DistributionOfTension", 
+          "name": "SetLengthSliding", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_DistributionOfTension::Value(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_DistributionOfTension", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "FairCurve_DistributionOfEnergy"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FairCurve_DistributionOfTension.hxx", 
+        36
+      ], 
+      "key": "FairCurve_DistributionOfTension"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FairCurve_DistributionOfSagging", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "FairCurve_DistributionOfSagging::FairCurve_DistributionOfSagging(Standard_Integer, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColgp_HArray1OfPnt2d>, Standard_Integer, FairCurve_BattenLaw, Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "BSplOrder", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "FlatKnots", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<TColgp_HArray1OfPnt2d>", 
+              "name": "Poles", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DerivativeOrder", 
+              "const": true
+            }, 
+            {
+              "type": "FairCurve_BattenLaw", 
+              "name": "Law", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbValAux", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_DistributionOfSagging", 
+          "name": "FairCurve_DistributionOfSagging", 
+          "return": {
+            "type": "FairCurve_DistributionOfSagging", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_DistributionOfSagging::FairCurve_DistributionOfSagging(FairCurve_DistributionOfSagging)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "FairCurve_DistributionOfSagging", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_DistributionOfSagging", 
+          "name": "FairCurve_DistributionOfSagging", 
+          "return": {
+            "type": "FairCurve_DistributionOfSagging", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "FairCurve_DistributionOfSagging::Value(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_DistributionOfSagging", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "FairCurve_DistributionOfEnergy"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FairCurve_DistributionOfSagging.hxx", 
+        35
+      ], 
+      "key": "FairCurve_DistributionOfSagging"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FairCurve_Energy", 
+      "abstract": true, 
+      "declarations": [
+        {
+          "key": "FairCurve_Energy::NbVariables()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_Energy", 
+          "name": "NbVariables", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "FairCurve_Energy::Value(math_Vector, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "E", 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_Energy", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "FairCurve_Energy::Gradient(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "G", 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_Energy", 
+          "name": "Gradient", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "FairCurve_Energy::Values(math_Vector, Standard_Real, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "E", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "G", 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_Energy", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "FairCurve_Energy::Values(math_Vector, Standard_Real, math_Vector, math_Matrix)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "E", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "G", 
+              "ref": true
+            }, 
+            {
+              "type": "math_Matrix", 
+              "name": "H", 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_Energy", 
+          "name": "Values", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "FairCurve_Energy::Variable(math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_Energy", 
+          "name": "Variable", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "FairCurve_Energy::Poles()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_Energy", 
+          "name": "Poles", 
+          "return": {
+            "type": "opencascade::handle<TColgp_HArray1OfPnt2d>", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_MultipleVarFunctionWithHessian"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FairCurve_Energy.hxx", 
+        36
+      ], 
+      "key": "FairCurve_Energy"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FairCurve_EnergyOfBatten", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "FairCurve_EnergyOfBatten::FairCurve_EnergyOfBatten(Standard_Integer, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColgp_HArray1OfPnt2d>, Standard_Integer, Standard_Integer, FairCurve_BattenLaw, Standard_Real, Standard_Boolean, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "BSplOrder", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "FlatKnots", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<TColgp_HArray1OfPnt2d>", 
+              "name": "Poles", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ContrOrder1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ContrOrder2", 
+              "const": true
+            }, 
+            {
+              "type": "FairCurve_BattenLaw", 
+              "name": "Law", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "LengthSliding", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "FreeSliding", 
+              "default": "true", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Angle1", 
+              "default": "0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Angle2", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_EnergyOfBatten", 
+          "name": "FairCurve_EnergyOfBatten", 
+          "return": {
+            "type": "FairCurve_EnergyOfBatten", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_EnergyOfBatten::FairCurve_EnergyOfBatten(FairCurve_EnergyOfBatten)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "FairCurve_EnergyOfBatten", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_EnergyOfBatten", 
+          "name": "FairCurve_EnergyOfBatten", 
+          "return": {
+            "type": "FairCurve_EnergyOfBatten", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "FairCurve_EnergyOfBatten::LengthSliding()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_EnergyOfBatten", 
+          "name": "LengthSliding", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_EnergyOfBatten::Status()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_EnergyOfBatten", 
+          "name": "Status", 
+          "return": {
+            "type": "FairCurve_AnalysisCode"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_EnergyOfBatten::Variable(math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_EnergyOfBatten", 
+          "name": "Variable", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "FairCurve_Energy"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FairCurve_EnergyOfBatten.hxx", 
+        39
+      ], 
+      "key": "FairCurve_EnergyOfBatten"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FairCurve_Newton", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "FairCurve_Newton::FairCurve_Newton(math_MultipleVarFunctionWithHessian, Standard_Real, Standard_Real, Standard_Integer, Standard_Real, Standard_Boolean)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "math_MultipleVarFunctionWithHessian", 
+              "name": "theFunction", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theSpatialTolerance", 
+              "default": "9.9999999999999995E-8", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theCriteriumTolerance", 
+              "default": "9.9999999999999995E-8", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "theNbIterations", 
+              "default": "40", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "theConvexity", 
+              "default": "9.9999999999999995E-7", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "theWithSingularity", 
+              "default": "true", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_Newton", 
+          "name": "FairCurve_Newton", 
+          "return": {
+            "type": "FairCurve_Newton", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Newton::FairCurve_Newton(FairCurve_Newton)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "FairCurve_Newton", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_Newton", 
+          "name": "FairCurve_Newton", 
+          "return": {
+            "type": "FairCurve_Newton", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "FairCurve_Newton::IsConverged()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_Newton", 
+          "name": "IsConverged", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "math_NewtonMinimum"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FairCurve_Newton.hxx", 
+        32
+      ], 
+      "key": "FairCurve_Newton"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FairCurve_Batten", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "FairCurve_Batten::FairCurve_Batten(gp_Pnt2d, gp_Pnt2d, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Height", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Slope", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_Batten", 
+          "name": "FairCurve_Batten", 
+          "return": {
+            "type": "FairCurve_Batten", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::FairCurve_Batten(FairCurve_Batten)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "FairCurve_Batten", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_Batten", 
+          "name": "FairCurve_Batten", 
+          "return": {
+            "type": "FairCurve_Batten", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "FairCurve_Batten::SetFreeSliding(Standard_Boolean)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Boolean", 
+              "name": "FreeSliding", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_Batten", 
+          "name": "SetFreeSliding", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::SetConstraintOrder1(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "ConstraintOrder", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_Batten", 
+          "name": "SetConstraintOrder1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::SetConstraintOrder2(Standard_Integer)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "ConstraintOrder", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_Batten", 
+          "name": "SetConstraintOrder2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::SetP1(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_Batten", 
+          "name": "SetP1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::SetP2(gp_Pnt2d)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_Batten", 
+          "name": "SetP2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::SetAngle1(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Angle1", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_Batten", 
+          "name": "SetAngle1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::SetAngle2(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Angle2", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_Batten", 
+          "name": "SetAngle2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::SetHeight(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Height", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_Batten", 
+          "name": "SetHeight", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::SetSlope(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Slope", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_Batten", 
+          "name": "SetSlope", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::SetSlidingFactor(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "SlidingFactor", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_Batten", 
+          "name": "SetSlidingFactor", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::Compute(FairCurve_AnalysisCode, Standard_Integer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "FairCurve_AnalysisCode", 
+              "name": "Code", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbIterations", 
+              "default": "50", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_Batten", 
+          "name": "Compute", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "FairCurve_Batten::SlidingOfReference()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_Batten", 
+          "name": "SlidingOfReference", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::GetFreeSliding()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_Batten", 
+          "name": "GetFreeSliding", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::GetConstraintOrder1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_Batten", 
+          "name": "GetConstraintOrder1", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::GetConstraintOrder2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_Batten", 
+          "name": "GetConstraintOrder2", 
+          "return": {
+            "type": "Standard_Integer"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::GetP1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_Batten", 
+          "name": "GetP1", 
+          "return": {
+            "type": "gp_Pnt2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::GetP2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_Batten", 
+          "name": "GetP2", 
+          "return": {
+            "type": "gp_Pnt2d", 
+            "const": true, 
+            "ref": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::GetAngle1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_Batten", 
+          "name": "GetAngle1", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::GetAngle2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_Batten", 
+          "name": "GetAngle2", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::GetHeight()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_Batten", 
+          "name": "GetHeight", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::GetSlope()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_Batten", 
+          "name": "GetSlope", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::GetSlidingFactor()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_Batten", 
+          "name": "GetSlidingFactor", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::Curve()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_Batten", 
+          "name": "Curve", 
+          "return": {
+            "type": "opencascade::handle<Geom2d_BSplineCurve>"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_Batten::Dump(Standard_OStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_OStream", 
+              "name": "o", 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_Batten", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [], 
+      "location": [
+        "/usr/local/include/opencascade/FairCurve_Batten.hxx", 
+        44
+      ], 
+      "key": "FairCurve_Batten"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FairCurve_DistributionOfJerk", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "FairCurve_DistributionOfJerk::FairCurve_DistributionOfJerk(Standard_Integer, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColgp_HArray1OfPnt2d>, Standard_Integer, FairCurve_BattenLaw, Standard_Integer)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "BSplOrder", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "FlatKnots", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<TColgp_HArray1OfPnt2d>", 
+              "name": "Poles", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "DerivativeOrder", 
+              "const": true
+            }, 
+            {
+              "type": "FairCurve_BattenLaw", 
+              "name": "Law", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbValAux", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_DistributionOfJerk", 
+          "name": "FairCurve_DistributionOfJerk", 
+          "return": {
+            "type": "FairCurve_DistributionOfJerk", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_DistributionOfJerk::FairCurve_DistributionOfJerk(FairCurve_DistributionOfJerk)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "FairCurve_DistributionOfJerk", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_DistributionOfJerk", 
+          "name": "FairCurve_DistributionOfJerk", 
+          "return": {
+            "type": "FairCurve_DistributionOfJerk", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "FairCurve_DistributionOfJerk::Value(math_Vector, math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "math_Vector", 
+              "name": "F", 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_DistributionOfJerk", 
+          "name": "Value", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "FairCurve_DistributionOfEnergy"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FairCurve_DistributionOfJerk.hxx", 
+        35
+      ], 
+      "key": "FairCurve_DistributionOfJerk"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FairCurve_MinimalVariation", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "FairCurve_MinimalVariation::FairCurve_MinimalVariation(gp_Pnt2d, gp_Pnt2d, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P1", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "gp_Pnt2d", 
+              "name": "P2", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Heigth", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Slope", 
+              "default": "0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PhysicalRatio", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_MinimalVariation", 
+          "name": "FairCurve_MinimalVariation", 
+          "return": {
+            "type": "FairCurve_MinimalVariation", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_MinimalVariation::FairCurve_MinimalVariation(FairCurve_MinimalVariation)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "FairCurve_MinimalVariation", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_MinimalVariation", 
+          "name": "FairCurve_MinimalVariation", 
+          "return": {
+            "type": "FairCurve_MinimalVariation", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "FairCurve_MinimalVariation::SetCurvature1(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Curvature", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_MinimalVariation", 
+          "name": "SetCurvature1", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_MinimalVariation::SetCurvature2(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Curvature", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_MinimalVariation", 
+          "name": "SetCurvature2", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_MinimalVariation::SetPhysicalRatio(Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_Real", 
+              "name": "Ratio", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_MinimalVariation", 
+          "name": "SetPhysicalRatio", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_MinimalVariation::Compute(FairCurve_AnalysisCode, Standard_Integer, Standard_Real)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "FairCurve_AnalysisCode", 
+              "name": "ACode", 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "NbIterations", 
+              "default": "50", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Tolerance", 
+              "default": "0.001", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_MinimalVariation", 
+          "name": "Compute", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }, 
+        {
+          "key": "FairCurve_MinimalVariation::GetCurvature1()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_MinimalVariation", 
+          "name": "GetCurvature1", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_MinimalVariation::GetCurvature2()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_MinimalVariation", 
+          "name": "GetCurvature2", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_MinimalVariation::GetPhysicalRatio()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_MinimalVariation", 
+          "name": "GetPhysicalRatio", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_MinimalVariation::Dump(Standard_OStream)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "Standard_OStream", 
+              "name": "o", 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_MinimalVariation", 
+          "name": "Dump", 
+          "return": {
+            "type": "void"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "FairCurve_Batten"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FairCurve_MinimalVariation.hxx", 
+        44
+      ], 
+      "key": "FairCurve_MinimalVariation"
+    }, 
+    {
+      "declType": "class", 
+      "name": "FairCurve_EnergyOfMVC", 
+      "abstract": false, 
+      "declarations": [
+        {
+          "key": "FairCurve_EnergyOfMVC::FairCurve_EnergyOfMVC(Standard_Integer, opencascade::handle<TColStd_HArray1OfReal>, opencascade::handle<TColgp_HArray1OfPnt2d>, Standard_Integer, Standard_Integer, FairCurve_BattenLaw, Standard_Real, Standard_Real, Standard_Boolean, Standard_Real, Standard_Real, Standard_Real, Standard_Real)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "Standard_Integer", 
+              "name": "BSplOrder", 
+              "const": true
+            }, 
+            {
+              "type": "opencascade::handle<TColStd_HArray1OfReal>", 
+              "name": "FlatKnots", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "opencascade::handle<TColgp_HArray1OfPnt2d>", 
+              "name": "Poles", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ContrOrder1", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Integer", 
+              "name": "ContrOrder2", 
+              "const": true
+            }, 
+            {
+              "type": "FairCurve_BattenLaw", 
+              "name": "Law", 
+              "const": true, 
+              "ref": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "PhysicalRatio", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "LengthSliding", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Boolean", 
+              "name": "FreeSliding", 
+              "default": "true", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Angle1", 
+              "default": "0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Angle2", 
+              "default": "0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Curvature1", 
+              "default": "0", 
+              "const": true
+            }, 
+            {
+              "type": "Standard_Real", 
+              "name": "Curvature2", 
+              "default": "0", 
+              "const": true
+            }
+          ], 
+          "parent": "FairCurve_EnergyOfMVC", 
+          "name": "FairCurve_EnergyOfMVC", 
+          "return": {
+            "type": "FairCurve_EnergyOfMVC", 
+            "ptr": true
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_EnergyOfMVC::FairCurve_EnergyOfMVC(FairCurve_EnergyOfMVC)", 
+          "declType": "constructor", 
+          "arguments": [
+            {
+              "type": "FairCurve_EnergyOfMVC", 
+              "name": "arg0", 
+              "const": true, 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_EnergyOfMVC", 
+          "name": "FairCurve_EnergyOfMVC", 
+          "return": {
+            "type": "FairCurve_EnergyOfMVC", 
+            "ptr": true
+          }, 
+          "artificial": "1", 
+          "throws": true, 
+          "copyConstructor": true
+        }, 
+        {
+          "key": "FairCurve_EnergyOfMVC::LengthSliding()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_EnergyOfMVC", 
+          "name": "LengthSliding", 
+          "return": {
+            "type": "Standard_Real"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_EnergyOfMVC::Status()", 
+          "declType": "method", 
+          "arguments": [], 
+          "parent": "FairCurve_EnergyOfMVC", 
+          "name": "Status", 
+          "return": {
+            "type": "FairCurve_AnalysisCode"
+          }, 
+          "throws": true
+        }, 
+        {
+          "key": "FairCurve_EnergyOfMVC::Variable(math_Vector)", 
+          "declType": "method", 
+          "arguments": [
+            {
+              "type": "math_Vector", 
+              "name": "X", 
+              "ref": true
+            }
+          ], 
+          "parent": "FairCurve_EnergyOfMVC", 
+          "name": "Variable", 
+          "return": {
+            "type": "Standard_Boolean"
+          }, 
+          "throws": true, 
+          "virtuality": "virtual"
+        }
+      ], 
+      "artificial": false, 
+      "bases": [
+        {
+          "access": "public", 
+          "name": "FairCurve_Energy"
+        }
+      ], 
+      "location": [
+        "/usr/local/include/opencascade/FairCurve_EnergyOfMVC.hxx", 
+        41
+      ], 
+      "key": "FairCurve_EnergyOfMVC"
+    }, 
+    {
+      "declType": "enum", 
+      "values": [
+        [
+          "FairCurve_OK", 
+          0
+        ], 
+        [
+          "FairCurve_NotConverged", 
+          1
+        ], 
+        [
+          "FairCurve_InfiniteSliding", 
+          2
+        ], 
+        [
+          "FairCurve_NullHeight", 
+          3
+        ]
+      ], 
+      "name": "FairCurve_AnalysisCode", 
+      "key": "FairCurve_AnalysisCode"
+    }
+  ], 
+  "name": "FairCurve"
+}
