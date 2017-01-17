@@ -15,7 +15,8 @@ class Array1 : public Nan::ObjectWrap {
     static NAN_MODULE_INIT(Init);
     Array1(int length);
     Array1(v8::Local<v8::Array> jsarray);
-
+    static Nan::Persistent<v8::Object> prototype;
+    static Nan::Persistent<v8::FunctionTemplate> constructor;
     NCollection_Array1<WrappedT> array;
 
    private:
@@ -29,11 +30,27 @@ class Array1 : public Nan::ObjectWrap {
     static NAN_METHOD(toArray);
 };
 
+
+Nan::Persistent<v8::FunctionTemplate> Array<T>::constructor;
+Nan::Persistent<v8::Object> Array<T>::prototype;
+
 template <class T>
 NAN_METHOD(Array1<T>::__cptr__) {
   auto wrapped = Nan::ObjectWrap::Unwrap<Array1<T>>(info.Holder());
   int addr = reinterpret_cast<std::uintptr_t>(&wrapped->array);
   info.GetReturnValue().Set(Nan::New<v8::Int32>(addr));
+}
+
+v8::Local<v8::Object> Array<T>::BuildWrapper(void * res){
+  Nan::EscapableHandleScope  scope;
+  v8::TryCatch errorHandler;
+
+  v8::Local<v8::Function> func = Nan::GetFunction(Nan::New(constructor)).ToLocalChecked();
+  v8::Local<v8::Value> args[1];
+  args[0] = Nan::New<v8::External>(res);
+  v8::MaybeLocal<v8::Object> maybeVal = Nan::NewInstance(func, 1, args);
+
+  return scope.Escape(maybeVal.ToLocalChecked());
 }
 
 template <class T>
@@ -152,6 +169,11 @@ NAN_MODULE_INIT(Array1<T>::Init) {
     Nan::SetPrototypeMethod(ctor, "__cptr__", __cptr__);
     Nan::SetIndexedPropertyHandler(ctorInst, GetIndex, SetIndex);
     Nan::SetAccessor(ctorInst, Nan::New("length").ToLocalChecked(), length);
+
+    prototype.Reset(obj);
+    constructor.Reset(ctor);
+
+    DynamicCastMap::Register("Array1Of" + tname, &BuildWrapper);
 
     Nan::Set(target, cname, Nan::GetFunction(ctor).ToLocalChecked());
 }

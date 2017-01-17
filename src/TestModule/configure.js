@@ -73,6 +73,12 @@ module.exports = function (mod) {
     cls.wrapBuilder('GC_MakeLine', 'makeLine', { name: 'value', method: 'Value' });
   });
 
+  mod.wrapClass('Geom_BezierCurve', 'BezierCurve', (cls) => {
+    cls.customBuilder = true;
+    cls.wrapMethod('Poles', 'poles');
+    cls.wrapMethod('Weights', 'weights');
+  });
+
   mod.wrapCollection('TColgp_Array1OfPnt', 'Array1OfPnt', 'Array1', 'gp_Pnt');
   mod.wrapCollection('TColStd_Array1OfReal', 'Array1OfReal', 'Array1', 'Standard_Real');
 
