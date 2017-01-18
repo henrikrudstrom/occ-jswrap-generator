@@ -26,7 +26,7 @@ describe('Wrapper configuration', () => {
   it('can define many wrapped classes with a naming function', () => {
     configurator.configure((mod) => {
       mod.wrapClass('gp_*', util.renameClass);
-      expect(mod.getMemberByKey('gp_Pnt').name).to.equal('Pnt');
+      expect(mod.getMember('Pnt').name).to.equal('Pnt');
       expect(mod.members.length).to.equal(41);
     });
   });
@@ -34,9 +34,9 @@ describe('Wrapper configuration', () => {
   it('can exclude or override already wrapped classes', () => {
     configurator.configure((mod) => {
       mod.wrapClass('gp_*', util.renameClass);
-      mod.excludeByKey('gp_XYZ');
+      mod.exclude('XYZ');
       expect(mod.members.length).to.equal(40);
-      expect(mod.getMemberByKey('gp_XYZ')).to.equal(undefined);
+      expect(mod.getMember('XYZ')).to.equal(undefined);
     });
   });
 
@@ -45,7 +45,8 @@ describe('Wrapper configuration', () => {
       mod.wrapClass('gp_*', util.renameClass);
       mod.rename('Pnt', 'Point');
       expect(mod.members.length).to.equal(41);
-      expect(mod.getMemberByKey('gp_Pnt').name).to.equal('Point');
+      expect(mod.getMember('Point')).to.not.equal(undefined);
+      expect(mod.getMember('Pnt')).to.equal(undefined);
     });
   });
 

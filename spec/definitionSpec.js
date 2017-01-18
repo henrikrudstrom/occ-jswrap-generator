@@ -265,7 +265,7 @@ describe('Wrapper definition', () => {
     });
     var mod = configurator.createModel(conf).getMember('test');
     var ax1 = mod.getMember('Ax1');
-    console.log(ax1.getMember('direction').overloads);
+
     expect(ax1.getMember('direction').canBeWrapped()).to.equal(true);
     expect(ax1.getMember('direction').overloads.every(overload => overload.canBeWrapped())).to.equal(true);
   })
@@ -291,7 +291,7 @@ describe('Wrapper definition', () => {
 
     expect(curve.getAllMembers().map(mem => mem.name)).to.include('mirrored');
     expect(line.getAllMembers().map(mem => mem.name)).to.include('mirrored');
-    console.log(line.getAllMembers().map(mem => mem.name))
+
     expect(line.getAllMembers().map(mem => mem.name)).to.include('reverse');
     expect(line.getAllMembers().filter(mem => mem.name === 'reverse').length).to.equal(1);
     expect(line.getAllMembers().map(mem => mem.name)).to.include('firstParameter');
