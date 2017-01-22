@@ -1,4 +1,5 @@
 const settings = require('../lib/settings.js');
+
 settings.initialize();
 
 const yargs = require('yargs');
@@ -21,7 +22,7 @@ function getSources() {
 
 gulp.task('test', function() {
   gulp.src(getSources())
-    .pipe(mocha({ reporter: 'spec' }));
+    .pipe(mocha({ reporter: 'spec', bail: yargs.argv.bail }));
 });
 
 gulp.task('test-cover', ['pre-test'], function() {

@@ -60,6 +60,7 @@ def parse_files(path, files):
 
 
 def ignore(header):
+    print header
     header = os.path.splitext(header)[0]
     header = re.sub("<\w+>", "", header)
     header = header.replace(oce_include + "/", "")
@@ -229,6 +230,8 @@ def s_enum(module):
     return lambda obj: select_module(module, obj.name) and not ignore(obj.name)
 
 
+
+
 def w_base(info):
     d = Dict(
     name=info.related_class.name,
@@ -262,6 +265,8 @@ def w_module(ns, name):
     classes = map(w_class, ns.classes(s_class(name), allow_empty=True))
     typedefs = iter(ns.typedefs(s_typedef(name), allow_empty=True), w_typedef)
     enums = iter(ns.enums(s_enum(name), allow_empty=True), w_enum)
+    #templates = ns.templates()
+    #print templates
 
     return Dict(
         name=name,

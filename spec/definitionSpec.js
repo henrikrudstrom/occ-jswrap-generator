@@ -11,6 +11,9 @@ describe('Wrapper definition', () => {
 
     expect(mod).to.not.equal(undefined);
     expect(mod.members.length).to.equal(3);
+    expect(mod.getMember('double').jsname).to.equal('Number');
+    expect(mod.getMember('uint32_t').jsname).to.equal('Number');
+    expect(mod.getMember('bool').jsname).to.equal('Boolean');
   });
 
   it('it can deduce base classes', () => {
@@ -342,12 +345,14 @@ describe('Wrapper definition', () => {
         cls.wrapMethod('Poles', 'poles');
         cls.wrapMethod('Weights', 'weights');
       });
-      mod.wrapCollection('TColgp_Array1OfPnt', 'Array1OfPnt', 'Array1', 'Pnt');
-      mod.wrapCollection('TColStd_Array1OfReal', 'Array1OfReal', 'Array1', 'double');
+      mod.wrapArray1('TColgp_Array1OfPnt', 'gp_Pnt');
+      mod.wrapArray1('TColStd_Array1OfReal', 'Standard_Real');
     });
     var mod = configurator.createModel(conf).getMember('test');
     expect(mod.getMember('Array1OfPnt')).not.to.equal(undefined);
     expect(mod.getMember('Array1OfReal')).not.to.equal(undefined);
+    expect(mod.getMember('Array1OfReal').containedType).to.equal('Standard_Real');
+    expect(mod.getMember('Array1OfPnt').containedType).to.equal('gp_Pnt');
     var bezier = mod.getMember('BezierCurve');
 
     expect(bezier.getMember('poles').canBeWrapped()).to.equal(true);

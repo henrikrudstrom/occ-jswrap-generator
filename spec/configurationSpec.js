@@ -1,7 +1,5 @@
 const chai = require('chai');
 const configurator = require('../lib/configurator.js');
-const util = require('../lib/util.js');
-const definition = require('../lib/definition');
 
 const expect = chai.expect;
 chai.use(require('chai-things'));
@@ -25,7 +23,7 @@ describe('Wrapper configuration', () => {
 
   it('can define many wrapped classes with a naming function', () => {
     configurator.configure((mod) => {
-      mod.wrapClass('gp_*', util.renameClass);
+      mod.wrapClass('gp_*');
       expect(mod.getMember('Pnt').name).to.equal('Pnt');
       expect(mod.members.length).to.equal(41);
     });
@@ -33,7 +31,7 @@ describe('Wrapper configuration', () => {
 
   it('can exclude or override already wrapped classes', () => {
     configurator.configure((mod) => {
-      mod.wrapClass('gp_*', util.renameClass);
+      mod.wrapClass('gp_*');
       mod.exclude('XYZ');
       expect(mod.members.length).to.equal(40);
       expect(mod.getMember('XYZ')).to.equal(undefined);
@@ -42,7 +40,7 @@ describe('Wrapper configuration', () => {
 
   it('can override already wrapped classes', () => {
     configurator.configure((mod) => {
-      mod.wrapClass('gp_*', util.renameClass);
+      mod.wrapClass('gp_*');
       mod.rename('Pnt', 'Point');
       expect(mod.members.length).to.equal(41);
       expect(mod.getMember('Point')).to.not.equal(undefined);
@@ -65,7 +63,7 @@ describe('Wrapper configuration', () => {
   it('can define many wrapped methods at once', () => {
     configurator.configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Point', (cls) => {
-        cls.wrapMethod('Set*', util.renameMember);
+        cls.wrapMethod('Set*');
       });
       var cls = mod.getMember('Point');
       expect(cls.members.length).to.equal(5);
@@ -76,7 +74,7 @@ describe('Wrapper configuration', () => {
   it('can override specific methods', () => {
     configurator.configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Point', (cls) => {
-        cls.wrapMethod('Set*', util.renameMember)
+        cls.wrapMethod('Set*')
           .rename('setX', 'specialName');
       });
 
@@ -90,7 +88,7 @@ describe('Wrapper configuration', () => {
   it('can exclude wrapped methods', () => {
     configurator.configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Point', (cls) => {
-        cls.wrapMethod('Set*', util.renameMember)
+        cls.wrapMethod('Set*')
           .exclude('setX');
       });
 
@@ -142,7 +140,7 @@ describe('Wrapper configuration', () => {
   it('removes methods that are accessors to property', () => {
     configurator.configure((mod) => {
       mod.wrapClass('gp_Pnt', 'Pnt', (cls) => {
-        cls.wrapMethod('*', util.renameMember)
+        cls.wrapMethod('*')
           .wrapProperty('X', 'SetX', 'x');
       });
 
@@ -170,7 +168,7 @@ describe('Wrapper configuration', () => {
       expect(pointCtor.overloads[0].declType).to.equal('constructorOverload');
       var pntCtor = pnt.getMember('New');
       expect(pntCtor.declType).to.equal('constructor');
-      expect(pntCtor.overloads.length).to.equal(3);
+      expect(pntCtor.overloads.length).to.equal(1);
     });
   });
 
@@ -204,11 +202,27 @@ describe('Wrapper configuration', () => {
       var curve = mod.getMember('Curve');
       var methodD0 = curve.getMember('d0').overloads[0];
       var methodD1 = curve.getMember('d1').overloads[0];
-      expect(!methodD0.arguments[0].out).to.equal(true);
-      expect(methodD0.arguments[1].out).to.equal(true);
-      expect(methodD1.arguments[1].out).to.equal(true);
-      expect(methodD1.arguments[2].out).to.equal(true);
-      expect(methodD1.arguments[1].name).to.equal('customNameForP');
+      expect(!methodD0.args[0].out).to.equal(true);
+      expect(methodD0.args[1].out).to.equal(true);
+      expect(methodD1.args[1].out).to.equal(true);
+      expect(methodD1.args[2].out).to.equal(true);
+      expect(methodD1.args[1].name).to.equal('customNameForP');
+    });
+  });
+
+  it('can configure collections', () => {
+    configurator.configure((mod) => {
+      mod.wrapClass('gp_Pnt', 'Pnt');
+      mod.wrapArray1('TColgp_Array1OfPnt', 'gp_Pnt');
+
+      var coll = mod.getMember('Array1OfPnt');
+      expect(coll.containedType).to.equal('gp_Pnt');
+      var getter = coll.getMember('value');
+      var setter = coll.getMember('setValue');
+      expect(getter.declType).to.equal('indexedGetter');
+      expect(setter.declType).to.equal('indexedSetter');
+      expect(getter.overloads[0].args.length).to.equal(0);
+      expect(setter.overloads[0].args.length).to.equal(1);
     });
   });
 });

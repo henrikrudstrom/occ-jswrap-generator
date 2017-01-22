@@ -79,8 +79,8 @@ module.exports = function (mod) {
   //   cls.wrapMethod('Weights', 'weights');
   // });
 
-  mod.wrapCollection('TColgp_Array1OfPnt', 'Array1OfPnt', 'Array1', 'gp_Pnt');
-  mod.wrapCollection('TColStd_Array1OfReal', 'Array1OfReal', 'Array1', 'Standard_Real');
+  mod.wrapArray1('TColgp_Array1OfPnt', 'gp_Pnt');
+  mod.wrapArray1('TColStd_Array1OfReal', 'Standard_Real');
 
   mod.wrapEnum('TopAbs_Orientation', 'Orientation');
 
