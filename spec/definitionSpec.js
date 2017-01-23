@@ -10,7 +10,7 @@ describe('Wrapper definition', () => {
     var mod = configurator.createModel(conf).getMember('builtins');
 
     expect(mod).to.not.equal(undefined);
-    expect(mod.members.length).to.equal(3);
+    expect(mod.members.length).to.equal(4);
     expect(mod.getMember('double').jsname).to.equal('Number');
     expect(mod.getMember('uint32_t').jsname).to.equal('Number');
     expect(mod.getMember('bool').jsname).to.equal('Boolean');
@@ -353,6 +353,9 @@ describe('Wrapper definition', () => {
     expect(mod.getMember('Array1OfReal')).not.to.equal(undefined);
     expect(mod.getMember('Array1OfReal').containedType).to.equal('Standard_Real');
     expect(mod.getMember('Array1OfPnt').containedType).to.equal('gp_Pnt');
+    var ctor = mod.getMember('Array1OfPnt').getMember('New');
+    expect(ctor.overloads[0].canBeWrapped()).to.equal(true);
+    expect(ctor.overloads[1].canBeWrapped()).to.equal(true);
     var bezier = mod.getMember('BezierCurve');
 
     expect(bezier.getMember('poles').canBeWrapped()).to.equal(true);

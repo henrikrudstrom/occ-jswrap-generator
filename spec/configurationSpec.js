@@ -8,7 +8,7 @@ describe('Wrapper configuration', () => {
   it('includes builtin types by default', () => {
     var conf = configurator.configure(() => {});
     expect(conf.getMember('builtins')).to.not.equal(undefined);
-    expect(conf.getMember('builtins').members.length).to.equal(3);
+    expect(conf.getMember('builtins').members.length).to.equal(4);
   });
 
   it('can define specific classes to be wrapped', () => {
@@ -168,7 +168,7 @@ describe('Wrapper configuration', () => {
       expect(pointCtor.overloads[0].declType).to.equal('constructorOverload');
       var pntCtor = pnt.getMember('New');
       expect(pntCtor.declType).to.equal('constructor');
-      expect(pntCtor.overloads.length).to.equal(1);
+      expect(pntCtor.overloads.length).to.equal(2);
     });
   });
 
@@ -223,6 +223,11 @@ describe('Wrapper configuration', () => {
       expect(setter.declType).to.equal('indexedSetter');
       expect(getter.overloads[0].args.length).to.equal(0);
       expect(setter.overloads[0].args.length).to.equal(1);
+      console.log(coll)
+      var ctor = coll.getMember('New');
+      console.log(ctor)
+      expect(ctor.overloads.length).to.equal(2);
+      expect(ctor.overloads[0].declType).to.equal('jsArrayConstructorOverload');
     });
   });
 });
