@@ -21,4 +21,5 @@ changes to `parse_headers.py`
 `cmake-js` build the wrapper
  
 
-
+## Output
+Generated c++ output from this project is found in [OpenCascade.js](https://github.com/henrikrudstrom/opencascade-js)
